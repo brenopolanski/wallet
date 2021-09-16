@@ -52,11 +52,11 @@ export const useProfileJobs = (profile?: Contracts.IProfile): Record<string, any
 		}
 
 		const syncProfileWallets = {
-			callback: async ({ reset = false }: { reset?: boolean }) => {
+			callback: async (options: { reset?: boolean }) => {
 				try {
 					setConfiguration({
 						profileIsSyncingWallets: true,
-						...(reset && { shouldResetProfileSyncStatus: true }),
+						...(options?.reset && { isProfileInitialSync: true }),
 					});
 
 					await env.wallets().syncByProfile(profile);
@@ -311,12 +311,11 @@ export const useProfileStatusWatcher = ({
 		profileIsSyncingWallets,
 		profileHasSyncedOnce,
 		profileErroredNetworks,
-		shouldResetProfileSyncStatus,
+		isProfileInitialSync,
 	} = useConfiguration();
 
 	const { getErroredNetworks } = useProfileUtils(env);
 	const previousErroredNetworks = usePrevious(profileErroredNetworks) || [];
-	const [isInitialSync, setIsInitialSync] = useState(true);
 
 	const walletsCount = profile?.wallets().count();
 
@@ -334,7 +333,7 @@ export const useProfileStatusWatcher = ({
 
 		// Prevent from showing network status toasts on every sync.
 		// Show them only on the initial sync and then when failed networks change.
-		if (!shouldResetProfileSyncStatus && !isInitialSync && !isStatusChanged) {
+		if (!isProfileInitialSync && !isStatusChanged) {
 			return;
 		}
 
@@ -342,7 +341,7 @@ export const useProfileStatusWatcher = ({
 
 		if (erroredNetworks.length > 0) {
 			onProfileSyncError?.(erroredNetworks, () => {
-				setIsInitialSync(true);
+				setConfiguration({ isProfileInitialSync: true });
 			});
 		}
 
@@ -350,7 +349,7 @@ export const useProfileStatusWatcher = ({
 			onProfileSyncComplete?.();
 		}
 
-		setIsInitialSync(false);
+		setConfiguration({ isProfileInitialSync: false });
 	}, [profileIsSyncingWallets, profileIsSyncing, profileHasSyncedOnce, getErroredNetworks, profile, walletsCount]); // eslint-disable-line react-hooks/exhaustive-deps
 };
 

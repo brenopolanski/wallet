@@ -21,7 +21,7 @@ export const ConfigurationProvider = ({ children, defaultConfiguration }: Proper
 		profileErroredNetworks: [],
 
 		profileHasSyncedOnce: false,
-		shouldResetProfileSyncStatus: false,
+		isProfileInitialSync: true,
 
 		profileIsRestoring: false,
 
