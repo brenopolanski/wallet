@@ -52,9 +52,13 @@ export const useProfileJobs = (profile?: Contracts.IProfile): Record<string, any
 		}
 
 		const syncProfileWallets = {
-			callback: async () => {
+			callback: async ({ reset = false }: { reset?: boolean }) => {
 				try {
-					setConfiguration({ profileIsSyncingWallets: true });
+					setConfiguration({
+						profileIsSyncingWallets: true,
+						...(reset && { profileHasSyncedOnce: false }),
+					});
+
 					await env.wallets().syncByProfile(profile);
 					await profile.sync();
 

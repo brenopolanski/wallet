@@ -2,8 +2,7 @@ import { Contracts } from "@payvo/profiles";
 import { Alert } from "app/components/Alert";
 import { Page, Section } from "app/components/Layout";
 import { useEnvironmentContext } from "app/contexts";
-import { useActiveProfile, useActiveWallet, useProfileUtils } from "app/hooks";
-import { toasts } from "app/services";
+import { useActiveProfile, useActiveWallet, useProfileJobs, useProfileUtils } from "app/hooks";
 import { DelegateTable } from "domains/vote/components/DelegateTable";
 import { VotesEmpty } from "domains/vote/components/VotesEmpty";
 import { VotesHeader } from "domains/vote/components/VotesHeader";
@@ -26,8 +25,8 @@ export const Votes = () => {
 	const activeWallet = useActiveWallet();
 	const [selectedWallet, setSelectedWallet] = useState<Contracts.IReadWriteWallet>(activeWallet);
 
-	const { getErroredNetworks } = useProfileUtils(env);
 	const { filter, voteDelegates, unvoteDelegates } = useVoteQueryParameters();
+	const { syncProfileWallets } = useProfileJobs(activeProfile);
 
 	const {
 		filterProperties,
@@ -91,19 +90,8 @@ export const Votes = () => {
 	}, [votes, setVoteFilter]);
 
 	useEffect(() => {
-		const { hasErroredNetworks, erroredNetworks } = getErroredNetworks(activeProfile);
-		if (!hasErroredNetworks) {
-			return;
-		}
-
-		toasts.warning(
-			<Trans
-				i18nKey="COMMON.ERRORS.NETWORK_ERROR"
-				values={{ network: erroredNetworks.join(", ") }}
-				components={{ bold: <strong /> }}
-			/>,
-		);
-	}, [getErroredNetworks, activeProfile, t]);
+		syncProfileWallets({ reset: true });
+	}, []);
 
 	const handleSelectAddress = (address: string) => {
 		const wallet = activeProfile.wallets().findByAddress(address);
