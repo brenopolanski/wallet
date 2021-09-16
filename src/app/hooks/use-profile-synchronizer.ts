@@ -56,7 +56,7 @@ export const useProfileJobs = (profile?: Contracts.IProfile): Record<string, any
 				try {
 					setConfiguration({
 						profileIsSyncingWallets: true,
-						...(reset && { profileHasSyncedOnce: false }),
+						...(reset && { shouldResetProfileSyncStatus: true }),
 					});
 
 					await env.wallets().syncByProfile(profile);
@@ -311,6 +311,7 @@ export const useProfileStatusWatcher = ({
 		profileIsSyncingWallets,
 		profileHasSyncedOnce,
 		profileErroredNetworks,
+		shouldResetProfileSyncStatus,
 	} = useConfiguration();
 
 	const { getErroredNetworks } = useProfileUtils(env);
@@ -333,7 +334,7 @@ export const useProfileStatusWatcher = ({
 
 		// Prevent from showing network status toasts on every sync.
 		// Show them only on the initial sync and then when failed networks change.
-		if (!isInitialSync && !isStatusChanged) {
+		if (!shouldResetProfileSyncStatus && !isInitialSync && !isStatusChanged) {
 			return;
 		}
 
