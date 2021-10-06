@@ -27,6 +27,8 @@ export const FormStep = ({
 		? t("WALLETS.MODAL_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_ENCRYPTION_PASSWORD")
 		: t("WALLETS.MODAL_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_MNEMONIC");
 
+	const requireMnemonic = wallet.actsWithMnemonic() || wallet.actsWithAddress() || wallet.actsWithPublicKey();
+
 	return (
 		<section className="space-y-5">
 			<Header title={t("WALLETS.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE")} subtitle={subtitle} />
@@ -64,7 +66,7 @@ export const FormStep = ({
 				/>
 			</FormField>
 
-			{!wallet.isLedger() && !wallet.signingKey().exists() && wallet.actsWithMnemonic() && (
+			{!wallet.isLedger() && !wallet.signingKey().exists() && requireMnemonic && (
 				<FormField name="mnemonic">
 					<FormLabel label={t("COMMON.MNEMONIC")} />
 					<InputPassword

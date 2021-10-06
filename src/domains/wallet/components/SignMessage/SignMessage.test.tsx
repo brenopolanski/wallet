@@ -29,6 +29,7 @@ let walletUrl: string;
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
+let secondWallet: Contracts.IReadWriteWallet;
 
 const mnemonic = MNEMONICS[0];
 
@@ -44,6 +45,13 @@ describe("SignMessage", () => {
 			network: "ark.devnet",
 		});
 		profile.wallets().push(wallet);
+
+		secondWallet = await profile.walletFactory().fromAddress({
+			address: "DCX2kvwgL2mrd9GjyYAbfXLGGXWwgN3Px7",
+			coin: "ARK",
+			network: "ark.devnet",
+		});
+		profile.wallets().push(secondWallet);
 
 		walletUrl = `/profiles/${profile.id()}/wallets/${wallet.id()}`;
 		history.push(walletUrl);
@@ -61,7 +69,7 @@ describe("SignMessage", () => {
 
 	it("should render", async () => {
 		await wallet.synchroniser().identity();
-		const { asFragment, getByText } = renderWithRouter(
+		const { asFragment } = renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/:walletId">
 				<LedgerProvider transport={transport}>
 					<SignMessage profile={profile} walletId={wallet.id()} isOpen={true} />
@@ -73,7 +81,11 @@ describe("SignMessage", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).toBeTruthy());
+		await waitFor(() =>
+			expect(screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).toBeTruthy(),
+		);
+
+		expect(screen.getByTestId("SignMessage__mnemonic-input")).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -81,7 +93,7 @@ describe("SignMessage", () => {
 	it("should render for ledger wallets", async () => {
 		const isLedgerMock = jest.spyOn(wallet, "isLedger").mockReturnValue(true);
 
-		const { asFragment, getByText } = renderWithRouter(
+		const { asFragment } = renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/:walletId">
 				<LedgerProvider transport={transport}>
 					<SignMessage profile={profile} walletId={wallet.id()} isOpen={true} />
@@ -93,11 +105,37 @@ describe("SignMessage", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).toBeTruthy());
+		await waitFor(() =>
+			expect(screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).toBeTruthy(),
+		);
 
 		expect(asFragment()).toMatchSnapshot();
 
 		isLedgerMock.mockRestore();
+	});
+
+	it("should render with mnemonic field for a wallet that import with address", async () => {
+		const secondWalletUrl = `/profiles/${profile.id()}/wallets/${secondWallet.id()}`;
+		history.push(secondWalletUrl);
+
+		await secondWallet.synchroniser().identity();
+		renderWithRouter(
+			<Route path="/profiles/:profileId/wallets/:walletId">
+				<LedgerProvider transport={transport}>
+					<SignMessage profile={profile} walletId={secondWallet.id()} isOpen={true} />
+				</LedgerProvider>
+			</Route>,
+			{
+				history,
+				routes: [secondWalletUrl],
+			},
+		);
+
+		await waitFor(() =>
+			expect(screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).toBeTruthy(),
+		);
+
+		expect(screen.getByTestId("SignMessage__mnemonic-input")).toBeInTheDocument();
 	});
 
 	it("should render signed step with wallet alias", () => {
@@ -109,9 +147,9 @@ describe("SignMessage", () => {
 				"e16e8badc6475e2eb4eb814fa0ae434e9ca2240b6131f3bf560969989366baa270786fb87ae2fe2945d60408cedc0a757768ebc768b03bf78e5e9b7a20291ac6",
 		};
 
-		const { container, getByText } = render(<SignedStep wallet={wallet} signedMessage={signedMessage} />);
+		const { container } = render(<SignedStep wallet={wallet} signedMessage={signedMessage} />);
 
-		expect(getByText("my-alias")).toBeInTheDocument();
+		expect(screen.getByText("my-alias")).toBeInTheDocument();
 		expect(container).toMatchSnapshot();
 
 		aliasMock.mockRestore();
@@ -127,7 +165,7 @@ describe("SignMessage", () => {
 
 		const onSign = jest.fn();
 
-		const { getByTestId, getByText } = renderWithRouter(
+		renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/:walletId">
 				<LedgerProvider transport={transport}>
 					<SignMessage profile={profile} onSign={onSign} walletId={wallet.id()} isOpen={true} />
@@ -139,27 +177,31 @@ describe("SignMessage", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).toBeTruthy());
+		await waitFor(() =>
+			expect(screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).toBeTruthy(),
+		);
 
-		const messageInput = getByTestId("SignMessage__message-input");
+		const messageInput = screen.getByTestId("SignMessage__message-input");
 
 		act(() => {
 			fireEvent.input(messageInput, { target: { value: "Hello World" } });
 		});
 
-		const mnemonicInput = getByTestId("SignMessage__mnemonic-input");
+		const mnemonicInput = screen.getByTestId("SignMessage__mnemonic-input");
 
 		act(() => {
 			fireEvent.input(mnemonicInput, { target: { value: mnemonic } });
 		});
 
-		await waitFor(() => expect(getByTestId("SignMessage__submit-button")).toBeEnabled());
+		await waitFor(() => expect(screen.getByTestId("SignMessage__submit-button")).toBeEnabled());
 
 		act(() => {
-			fireEvent.click(getByTestId("SignMessage__submit-button"));
+			fireEvent.click(screen.getByTestId("SignMessage__submit-button"));
 		});
 
-		await waitFor(() => expect(getByText(walletTranslations.MODAL_SIGN_MESSAGE.SIGNED_STEP.TITLE)).toBeTruthy());
+		await waitFor(() =>
+			expect(screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.SIGNED_STEP.TITLE)).toBeTruthy(),
+		);
 
 		const writeTextMock = jest.fn();
 		const clipboardOriginal = navigator.clipboard;
@@ -168,7 +210,7 @@ describe("SignMessage", () => {
 		navigator.clipboard = { writeText: writeTextMock };
 
 		act(() => {
-			fireEvent.click(getByTestId("SignMessage__copy-button"));
+			fireEvent.click(screen.getByTestId("SignMessage__copy-button"));
 		});
 
 		await waitFor(() => expect(writeTextMock).toHaveBeenCalledWith(JSON.stringify(signedMessage)));
@@ -180,7 +222,7 @@ describe("SignMessage", () => {
 	});
 
 	it("should return to form step", async () => {
-		const { getByTestId, getByText } = renderWithRouter(
+		renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/:walletId">
 				<LedgerProvider transport={transport}>
 					<SignMessage profile={profile} walletId={wallet.id()} isOpen={true} />
@@ -192,33 +234,39 @@ describe("SignMessage", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).toBeTruthy());
+		await waitFor(() =>
+			expect(screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).toBeTruthy(),
+		);
 
-		const messageInput = getByTestId("SignMessage__message-input");
+		const messageInput = screen.getByTestId("SignMessage__message-input");
 
 		act(() => {
 			fireEvent.input(messageInput, { target: { value: "Hello World" } });
 		});
 
-		const mnemonicInput = getByTestId("SignMessage__mnemonic-input");
+		const mnemonicInput = screen.getByTestId("SignMessage__mnemonic-input");
 
 		act(() => {
 			fireEvent.input(mnemonicInput, { target: { value: mnemonic } });
 		});
 
-		await waitFor(() => expect(getByTestId("SignMessage__submit-button")).toBeEnabled());
+		await waitFor(() => expect(screen.getByTestId("SignMessage__submit-button")).toBeEnabled());
 
 		act(() => {
-			fireEvent.click(getByTestId("SignMessage__submit-button"));
+			fireEvent.click(screen.getByTestId("SignMessage__submit-button"));
 		});
 
-		await waitFor(() => expect(getByText(walletTranslations.MODAL_SIGN_MESSAGE.SIGNED_STEP.TITLE)).toBeTruthy());
+		await waitFor(() =>
+			expect(screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.SIGNED_STEP.TITLE)).toBeTruthy(),
+		);
 
 		act(() => {
-			fireEvent.click(getByTestId("SignMessage__back-button"));
+			fireEvent.click(screen.getByTestId("SignMessage__back-button"));
 		});
 
-		await waitFor(() => expect(getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).toBeTruthy());
+		await waitFor(() =>
+			expect(screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).toBeTruthy(),
+		);
 	});
 
 	it("should sign message with encryption password", async () => {
@@ -234,7 +282,7 @@ describe("SignMessage", () => {
 
 		const onSign = jest.fn();
 
-		const { getByTestId, getByText } = renderWithRouter(
+		renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/:walletId">
 				<LedgerProvider transport={transport}>
 					<SignMessage profile={profile} onSign={onSign} walletId={wallet.id()} isOpen={true} />
@@ -246,27 +294,31 @@ describe("SignMessage", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).toBeTruthy());
+		await waitFor(() =>
+			expect(screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).toBeTruthy(),
+		);
 
-		const messageInput = getByTestId("SignMessage__message-input");
+		const messageInput = screen.getByTestId("SignMessage__message-input");
 
 		act(() => {
 			fireEvent.input(messageInput, { target: { value: "Hello World" } });
 		});
 
-		const passwordInput = getByTestId("SignMessage__encryption-password");
+		const passwordInput = screen.getByTestId("SignMessage__encryption-password");
 
 		act(() => {
 			fireEvent.input(passwordInput, { target: { value: "password" } });
 		});
 
-		await waitFor(() => expect(getByTestId("SignMessage__submit-button")).toBeEnabled());
+		await waitFor(() => expect(screen.getByTestId("SignMessage__submit-button")).toBeEnabled());
 
 		act(() => {
-			fireEvent.click(getByTestId("SignMessage__submit-button"));
+			fireEvent.click(screen.getByTestId("SignMessage__submit-button"));
 		});
 
-		await waitFor(() => expect(getByText(walletTranslations.MODAL_SIGN_MESSAGE.SIGNED_STEP.TITLE)).toBeTruthy());
+		await waitFor(() =>
+			expect(screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.SIGNED_STEP.TITLE)).toBeTruthy(),
+		);
 
 		expect(onSign).toHaveBeenCalledWith(signedMessage);
 
@@ -292,7 +344,7 @@ describe("SignMessage", () => {
 
 		const onSign = jest.fn();
 
-		const { getByTestId, getByText } = renderWithRouter(
+		renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/:walletId">
 				<LedgerProvider transport={transport}>
 					<SignMessage profile={profile} onSign={onSign} walletId={wallet.id()} isOpen={true} />
@@ -304,27 +356,31 @@ describe("SignMessage", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).toBeTruthy());
+		await waitFor(() =>
+			expect(screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).toBeTruthy(),
+		);
 
-		const messageInput = getByTestId("SignMessage__message-input");
+		const messageInput = screen.getByTestId("SignMessage__message-input");
 
 		act(() => {
 			fireEvent.input(messageInput, { target: { value: "Hello World" } });
 		});
 
-		const secretInput = getByTestId("SignMessage__secret-input");
+		const secretInput = screen.getByTestId("SignMessage__secret-input");
 
 		act(() => {
 			fireEvent.input(secretInput, { target: { value: "secret" } });
 		});
 
-		await waitFor(() => expect(getByTestId("SignMessage__submit-button")).toBeEnabled());
+		await waitFor(() => expect(screen.getByTestId("SignMessage__submit-button")).toBeEnabled());
 
 		act(() => {
-			fireEvent.click(getByTestId("SignMessage__submit-button"));
+			fireEvent.click(screen.getByTestId("SignMessage__submit-button"));
 		});
 
-		await waitFor(() => expect(getByText(walletTranslations.MODAL_SIGN_MESSAGE.SIGNED_STEP.TITLE)).toBeTruthy());
+		await waitFor(() =>
+			expect(screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.SIGNED_STEP.TITLE)).toBeTruthy(),
+		);
 
 		expect(onSign).toHaveBeenCalledWith(signedMessage);
 
@@ -350,7 +406,7 @@ describe("SignMessage", () => {
 			.spyOn(wallet.coin().ledger(), "signMessage")
 			.mockImplementation(() => new Promise((resolve) => setTimeout(() => resolve("signature"), 300)));
 
-		const { getByTestId, getByText } = renderWithRouter(
+		renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/:walletId">
 				<LedgerProvider transport={transport}>
 					<SignMessage profile={profile} walletId={wallet.id()} isOpen={true} />
@@ -362,27 +418,29 @@ describe("SignMessage", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).toBeTruthy());
+		await waitFor(() =>
+			expect(screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).toBeTruthy(),
+		);
 
-		const messageInput = getByTestId("SignMessage__message-input");
+		const messageInput = screen.getByTestId("SignMessage__message-input");
 
 		act(() => {
 			fireEvent.input(messageInput, { target: { value: "Hello World" } });
 		});
 
-		await waitFor(() => expect(getByTestId("SignMessage__submit-button")).toBeEnabled());
+		await waitFor(() => expect(screen.getByTestId("SignMessage__submit-button")).toBeEnabled());
 
 		act(() => {
-			fireEvent.click(getByTestId("SignMessage__submit-button"));
+			fireEvent.click(screen.getByTestId("SignMessage__submit-button"));
 		});
 
-		await waitFor(() => expect(getByTestId("LedgerWaitingDevice-loading_message")).toBeTruthy());
+		await waitFor(() => expect(screen.getByTestId("LedgerWaitingDevice-loading_message")).toBeTruthy());
 
 		act(() => {
 			observer!.next({ descriptor: "", type: "add" });
 		});
 
-		await waitFor(() => expect(getByTestId("LedgerWaitingApp-loading_message")).toBeTruthy());
+		await waitFor(() => expect(screen.getByTestId("LedgerWaitingApp-loading_message")).toBeTruthy());
 
 		const getPublicKeySpy = jest.spyOn(wallet.coin(), "ledger").mockImplementation(() => ({
 			getPublicKey: () => Promise.resolve(wallet.publicKey()),
@@ -419,7 +477,7 @@ describe("SignMessage", () => {
 					),
 			);
 
-		const { getByTestId, getByText } = renderWithRouter(
+		renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/:walletId">
 				<LedgerProvider transport={transport}>
 					<SignMessage profile={profile} walletId={wallet.id()} isOpen={true} />
@@ -431,29 +489,32 @@ describe("SignMessage", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).toBeTruthy(), {
-			timeout: 4000,
-		});
+		await waitFor(
+			() => expect(screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).toBeTruthy(),
+			{
+				timeout: 4000,
+			},
+		);
 
-		const messageInput = getByTestId("SignMessage__message-input");
+		const messageInput = screen.getByTestId("SignMessage__message-input");
 
 		act(() => {
 			fireEvent.input(messageInput, { target: { value: "Hello World" } });
 		});
 
-		await waitFor(() => expect(getByTestId("SignMessage__submit-button")).toBeEnabled());
+		await waitFor(() => expect(screen.getByTestId("SignMessage__submit-button")).toBeEnabled());
 
 		act(() => {
-			fireEvent.click(getByTestId("SignMessage__submit-button"));
+			fireEvent.click(screen.getByTestId("SignMessage__submit-button"));
 		});
 
-		await waitFor(() => expect(getByTestId("LedgerWaitingDevice-loading_message")).toBeTruthy());
+		await waitFor(() => expect(screen.getByTestId("LedgerWaitingDevice-loading_message")).toBeTruthy());
 
 		act(() => {
 			observer!.next({ descriptor: "", type: "add" });
 		});
 
-		await waitFor(() => expect(getByTestId("LedgerWaitingApp-loading_message")).toBeTruthy());
+		await waitFor(() => expect(screen.getByTestId("LedgerWaitingApp-loading_message")).toBeTruthy());
 
 		const getPublicKeySpy = jest
 			.spyOn(wallet.coin().ledger(), "getPublicKey")
@@ -480,7 +541,7 @@ describe("SignMessage", () => {
 
 		const listenSpy = jest.spyOn(transport, "listen").mockImplementationOnce(() => ({ unsubscribe }));
 
-		const { getByTestId, getByText } = renderWithRouter(
+		renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/:walletId">
 				<LedgerProvider transport={transport}>
 					<SignMessage profile={profile} walletId={wallet.id()} isOpen={true} />
@@ -498,18 +559,20 @@ describe("SignMessage", () => {
 				() => new Promise((_, reject) => setTimeout(() => reject(new Error("no device found")), 300)),
 			);
 
-		await waitFor(() => expect(getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).toBeTruthy());
+		await waitFor(() =>
+			expect(screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).toBeTruthy(),
+		);
 
-		const messageInput = getByTestId("SignMessage__message-input");
+		const messageInput = screen.getByTestId("SignMessage__message-input");
 
 		act(() => {
 			fireEvent.input(messageInput, { target: { value: "Hello World" } });
 		});
 
-		await waitFor(() => expect(getByTestId("SignMessage__submit-button")).toBeEnabled());
+		await waitFor(() => expect(screen.getByTestId("SignMessage__submit-button")).toBeEnabled());
 
 		act(() => {
-			fireEvent.click(getByTestId("SignMessage__submit-button"));
+			fireEvent.click(screen.getByTestId("SignMessage__submit-button"));
 		});
 
 		await waitFor(
