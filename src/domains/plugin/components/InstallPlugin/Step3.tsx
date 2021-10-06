@@ -30,7 +30,7 @@ export const ThirdStep = ({ plugin }: Properties) => {
 						<div className="flex justify-between">
 							<span>
 								<p className="text-sm font-semibold text-theme-secondary-400">
-									{t("COMMON.DOWNLOADED")}
+									{t("COMMON.DOWNLOAD_STATUS")}
 								</p>
 								<p className="font-bold text-theme-secondary-text">{t("COMMON.COMPLETED")}</p>
 							</span>

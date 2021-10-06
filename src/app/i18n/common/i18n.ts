@@ -91,6 +91,7 @@ export const translations: { [key: string]: any } = {
 	DOWNLOAD: "Download",
 	DOWNLOADED: "Downloaded",
 	DOWNLOADING: "Downloading",
+	DOWNLOAD_STATUS: "Download Status",
 	DO_NOT_SHOW_AGAIN: "Do not show this message again",
 	EDIT: "Edit",
 	EMPTY_RESULTS: {

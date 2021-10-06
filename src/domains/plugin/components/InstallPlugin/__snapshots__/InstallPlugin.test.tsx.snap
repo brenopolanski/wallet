@@ -299,7 +299,7 @@ exports[`InstallPlugin should render 3st step 1`] = `
               <p
                 class="text-sm font-semibold text-theme-secondary-400"
               >
-                Downloaded
+                Download Status
               </p>
               <p
                 class="font-bold text-theme-secondary-text"
@@ -388,7 +388,7 @@ exports[`InstallPlugin should render 3st step with plugin logo 1`] = `
               <p
                 class="text-sm font-semibold text-theme-secondary-400"
               >
-                Downloaded
+                Download Status
               </p>
               <p
                 class="font-bold text-theme-secondary-text"
