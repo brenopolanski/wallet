@@ -18,7 +18,7 @@ import { useHistory, useParams } from "react-router-dom";
 export const Votes = () => {
 	const { t } = useTranslation();
 	const history = useHistory();
-	const { walletId: hasWalletId } = useParams();
+	const { walletId: hasWalletId } = useParams<{ walletId: string }>();
 	const { env } = useEnvironmentContext();
 
 	const activeProfile = useActiveProfile();
@@ -46,7 +46,7 @@ export const Votes = () => {
 		setMaxVotes,
 	} = useVoteFilters({
 		filter,
-		hasWalletId,
+		hasWalletId: !!hasWalletId,
 		profile: activeProfile,
 		wallet: activeWallet,
 	});
@@ -67,7 +67,7 @@ export const Votes = () => {
 	});
 
 	const { navigateToSendVote } = useVoteActions({
-		hasWalletId,
+		hasWalletId: !!hasWalletId,
 		profile: activeProfile,
 		selectedAddress,
 		wallet: activeWallet,

@@ -94,6 +94,6 @@ export class ToastService {
 
 	public dismiss(id?: ToastId) {
 		toast.dismiss(id);
-		return new Promise((resolve) => setTimeout(() => resolve(), this.#toastAnimationDuration));
+		return new Promise((resolve) => setTimeout(() => resolve(""), this.#toastAnimationDuration));
 	}
 }

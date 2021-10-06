@@ -37,7 +37,7 @@ export const SendRegistration = () => {
 	const [registrationForm, setRegistrationForm] = useState<SendRegistrationForm>();
 	const [errorMessage, setErrorMessage] = useState<string | undefined>();
 
-	const { registrationType } = useParams();
+	const { registrationType } = useParams<{ registrationType: string }>();
 
 	const { env } = useEnvironmentContext();
 	const activeProfile = useActiveProfile();

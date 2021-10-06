@@ -3,11 +3,11 @@ import { ButtonVariant } from "types";
 
 import { getStyles } from "./ButtonSpinner.styles";
 
-interface ButtonSpinner {
+interface ButtonSpinnerType {
 	variant: ButtonVariant | undefined;
 }
 
-export const ButtonSpinner = styled.div<ButtonSpinner>(getStyles);
+export const ButtonSpinner = styled.div<ButtonSpinnerType>(getStyles);
 
 ButtonSpinner.defaultProps = {
 	variant: "primary",

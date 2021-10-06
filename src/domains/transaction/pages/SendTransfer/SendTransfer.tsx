@@ -43,7 +43,7 @@ enum Step {
 
 export const SendTransfer = () => {
 	const history = useHistory();
-	const { walletId: hasWalletId } = useParams();
+	const { walletId: hasWalletId } = useParams<{ walletId: string }>();
 	const [errorMessage, setErrorMessage] = useState<string | undefined>();
 
 	const queryParameters = useQueryParams();

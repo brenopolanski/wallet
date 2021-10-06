@@ -197,7 +197,7 @@ export const SendVote = () => {
 				/* istanbul ignore else */
 				if (isConfirmed) {
 					clearInterval(interval);
-					resolve();
+					resolve("");
 				}
 			}, 1000);
 		});
