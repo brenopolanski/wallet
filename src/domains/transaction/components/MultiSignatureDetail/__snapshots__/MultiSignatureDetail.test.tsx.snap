@@ -6228,7 +6228,10 @@ exports[`MultiSignatureDetail should sign transaction with a ledger wallet 1`] =
                 <div
                   data-testid="tab-pabel__active-panel"
                 >
-                  <section>
+                  <div
+                    class="space-y-8"
+                    data-testid="AuthenticationStep"
+                  >
                     <div
                       class="flex justify-between items-end bg-theme-background"
                     >
@@ -6239,130 +6242,62 @@ exports[`MultiSignatureDetail should sign transaction with a ledger wallet 1`] =
                           class="mb-0 text-2xl"
                           data-testid="header__title"
                         >
-                          Transaction Signed
+                          Confirm Your Transaction
                         </h1>
                       </div>
                     </div>
                     <svg
-                      class="my-4 w-full"
+                      class="my-8"
                     >
-                      transaction-signed-banner-dark-green.svg
+                      confirm-transaction-ledger-banner-dark-green.svg
                     </svg>
-                    <p
-                      class="text-theme-secondary-700"
-                    >
-                      Your signature was successfully confirmed and sent.
-                    </p>
                     <div
-                      class="mt-4"
+                      class="mt-8 text-theme-secondary-text"
+                      data-testid="LedgerConfirmation-description"
+                    >
+                      Please review and verify the information on your Ledger device. Choose Accept to complete your transaction.
+                    </div>
+                    <div
+                      class="inline-flex justify-center items-center mt-8 space-x-3 w-full"
                     >
                       <div
-                        data-testid="Signatures"
+                        class="Spinner-sc-1rpx65r-0 jouzuN"
+                        color="info"
+                      />
+                      <span
+                        class="font-semibold text-theme-secondary-900 dark:text-theme-secondary-600"
+                        data-testid="LedgerConfirmation-loading_message"
                       >
-                        <h3>
-                          Signatures
-                        </h3>
-                        <div
-                          class="flex"
-                        >
-                          <div>
-                            <div
-                              class="mb-2 text-sm font-semibold text-theme-secondary-500"
-                            >
-                              You
-                            </div>
-                            <div
-                              class="pr-6 mr-2 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
-                            >
-                              <div
-                                class="relative"
-                                data-testid="Signatures__participant-status"
-                              >
-                                <div>
-                                  <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
-                                    data-testid="Avatar"
-                                  >
-                                    <div
-                                      class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
-                                    >
-                                      <img
-                                        alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
-                                        title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                                      />
-                                    </div>
-                                  </div>
-                                </div>
-                                <span
-                                  class="Badge__Wrapper-sc-w9wbbm-0 iNGskz flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400"
-                                  data-testid="Signatures__waiting-badge"
-                                >
-                                  <div
-                                    class="sc-bdnxRM AkeAK"
-                                    height="10"
-                                    width="10"
-                                  >
-                                    <svg>
-                                      clock-small.svg
-                                    </svg>
-                                  </div>
-                                  <span />
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                          <div>
-                            <div
-                              class="mb-2 ml-2 text-sm font-semibold text-theme-secondary-500"
-                            >
-                              Other
-                            </div>
-                            <div
-                              class="flex ml-2 space-x-4"
-                            >
-                              <div
-                                class="relative"
-                                data-testid="Signatures__participant-status"
-                              >
-                                <div>
-                                  <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
-                                    data-testid="Avatar"
-                                  >
-                                    <div
-                                      class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
-                                    >
-                                      <img
-                                        alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(244, 67, 54)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"50\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"55\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/></svg>"
-                                        title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                                      />
-                                    </div>
-                                  </div>
-                                </div>
-                                <span
-                                  class="Badge__Wrapper-sc-w9wbbm-0 iNGskz flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400"
-                                  data-testid="Signatures__waiting-badge"
-                                >
-                                  <div
-                                    class="sc-bdnxRM AkeAK"
-                                    height="10"
-                                    width="10"
-                                  >
-                                    <svg>
-                                      clock-small.svg
-                                    </svg>
-                                  </div>
-                                  <span />
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                        Waiting for confirmation …
+                      </span>
                     </div>
-                  </section>
+                  </div>
+                </div>
+                <div
+                  class="flex justify-end mt-8 space-x-3"
+                >
+                  <button
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
+                    data-testid="Paginator__back"
+                    type="button"
+                  >
+                    <div
+                      class="flex items-center space-x-2"
+                    >
+                      Back
+                    </div>
+                  </button>
+                  <button
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
+                    data-testid="Paginator__continue"
+                    type="button"
+                  >
+                    <div
+                      class="flex items-center space-x-2"
+                    >
+                      Continue
+                    </div>
+                  </button>
                 </div>
               </div>
             </form>
