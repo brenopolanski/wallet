@@ -91,14 +91,14 @@ export const MultiSignatureDetail = ({
 					wif,
 				});
 
-				await addSignature({ signatory, transactionId: transaction.id(), wallet });
+				const { accepted } = await addSignature({ signatory, transactionId: transaction.id(), wallet });
 				await wallet.transaction().sync();
 
 				if (isAwaitingFinalSignature) {
 					return broadcastMultiSignature();
 				}
 
-				const sentTransaction = wallet.transaction().transaction(transaction.id());
+				const sentTransaction = wallet.transaction().transaction(accepted[0]);
 				setActiveTransaction(sentTransaction);
 
 				setActiveStep(MultiSignatureDetailStep.SentStep);
