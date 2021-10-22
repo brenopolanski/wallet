@@ -23,7 +23,7 @@ exports[`NavigationBar should not render if no active profile 1`] = `
         </div>
       </button>
       <div
-        class="flex flex-1 px-8 "
+        class="flex flex-1 px-8"
       >
         <div
           class="flex items-center my-auto"
@@ -257,7 +257,7 @@ exports[`NavigationBar should render 1`] = `
         </div>
       </button>
       <div
-        class="flex flex-1 px-8 "
+        class="flex flex-1 px-8"
       >
         <div
           class="flex items-center my-auto"
@@ -528,7 +528,7 @@ exports[`NavigationBar should render with custom menu 1`] = `
         </div>
       </button>
       <div
-        class="flex flex-1 px-8 "
+        class="flex flex-1 px-8"
       >
         <div
           class="flex items-center my-auto"
@@ -762,7 +762,7 @@ exports[`NavigationBar should render with shadow if there is a scroll 1`] = `
         </div>
       </button>
       <div
-        class="flex flex-1 px-8 "
+        class="flex flex-1 px-8"
       >
         <div
           class="flex items-center my-auto"
@@ -928,7 +928,7 @@ exports[`NavigationBar should render with title 1`] = `
         </div>
       </button>
       <div
-        class="flex flex-1 px-8 "
+        class="flex flex-1 px-8"
       >
         <div
           class="flex items-center my-auto"

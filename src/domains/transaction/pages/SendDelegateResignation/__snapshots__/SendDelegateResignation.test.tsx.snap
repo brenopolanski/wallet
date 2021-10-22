@@ -26,7 +26,7 @@ exports[`SendDelegateResignation Delegate Resignation should change fee 1`] = `
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -638,7 +638,7 @@ exports[`SendDelegateResignation Delegate Resignation should render 1st step 1`]
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -1257,7 +1257,7 @@ exports[`SendDelegateResignation Delegate Resignation should render 2nd step 1`]
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -1801,7 +1801,7 @@ exports[`SendDelegateResignation Delegate Resignation should render 3rd step 1`]
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -2271,7 +2271,7 @@ exports[`SendDelegateResignation Delegate Resignation should show error step and
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -2684,7 +2684,7 @@ exports[`SendDelegateResignation Delegate Resignation should show mnemonic authe
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -3167,7 +3167,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -3759,7 +3759,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -4351,7 +4351,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"

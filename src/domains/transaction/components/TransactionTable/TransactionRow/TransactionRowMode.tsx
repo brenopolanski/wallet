@@ -1,5 +1,4 @@
 import { DTO } from "@payvo/profiles";
-import { Contracts } from "@payvo/sdk";
 import { Circle } from "app/components/Circle";
 import { Icon } from "app/components/Icon";
 import { Tooltip } from "app/components/Tooltip";
@@ -76,14 +75,14 @@ export const TransactionRowMode = ({
 	transactionType,
 	isCompact,
 }: {
-	transaction: DTO.ExtendedConfirmedTransactionData | Contracts.ConfirmedTransactionData;
+	transaction: DTO.ExtendedConfirmedTransactionData;
 	transactionType?: string;
 	isCompact: boolean;
 }) => (
 	<BaseTransactionRowMode
 		isCompact={isCompact}
 		isSent={transaction.isSent()}
-		isReturn={transaction.isReturn()}
+		isReturn={transaction.sender() === transaction.wallet().address() && transaction.isReturn()}
 		type={transactionType || transaction.type()}
 		address={transaction.sender()}
 	/>

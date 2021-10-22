@@ -83,7 +83,10 @@ export const SendTransfer = () => {
 		for (const wallet of activeProfile.wallets().values()) {
 			results[wallet.networkId()] = wallet.network();
 		}
-		return Object.values(results);
+
+		return Object.entries(results)
+			.sort()
+			.flatMap((result) => result[1]);
 	}, [activeProfile]);
 
 	const defaultValues = {

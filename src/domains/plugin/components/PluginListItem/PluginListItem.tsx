@@ -4,11 +4,12 @@ import { TableCell, TableRow } from "app/components/Table";
 import { Tooltip } from "app/components/Tooltip";
 import cn from "classnames";
 import { OfficialPluginIcon } from "domains/plugin/components/OfficialPluginIcon";
+import { PluginDropdown } from "domains/plugin/components/PluginDropdown";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
 import { PluginImage } from "../PluginImage";
-import { PluginLaunchButton, PluginMenu } from "./PluginListItem.blocks";
+import { PluginLaunchButton } from "./PluginListItem.blocks";
 
 interface PluginListItemProperties {
 	onDelete?: (plugin: any) => void;
@@ -66,7 +67,7 @@ export const PluginListItem = ({
 		return (
 			<div className={cn("flex items-center justify-end w-full space-x-2")}>
 				<PluginLaunchButton plugin={plugin} onLaunch={onLaunch} isCompact={isCompact} />
-				<PluginMenu
+				<PluginDropdown
 					plugin={plugin}
 					onDelete={onDelete}
 					onEnable={onEnable}

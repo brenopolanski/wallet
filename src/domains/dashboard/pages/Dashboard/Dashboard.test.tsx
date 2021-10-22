@@ -38,12 +38,15 @@ const transport: typeof Transport = createTransportReplayer(RecordStore.fromStri
 beforeAll(async () => {
 	useDefaultNetMocks();
 
-	nock("https://ark-test.payvo.com/api")
-		.get("/transactions")
+	nock("https://ark-test.payvo.com")
+		.get("/api/transactions")
 		.query(true)
-		.reply(200, {
-			data: require("tests/fixtures/coins/ark/devnet/notification-transactions.json").data,
-			meta: require("tests/fixtures/coins/ark/devnet/transactions.json").meta,
+		.reply(200, () => {
+			const { meta, data } = require("tests/fixtures/coins/ark/devnet/transactions.json");
+			return {
+				data: data.slice(0, 2),
+				meta,
+			};
 		})
 		.persist();
 
@@ -54,8 +57,6 @@ beforeAll(async () => {
 	profile = env.profiles().findById(fixtureProfileId);
 	await env.profiles().restore(profile);
 	await profile.sync();
-
-	await profile.notifications().transactions().sync();
 
 	const wallet = await profile.walletFactory().fromAddress({
 		address: "AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX",
@@ -92,7 +93,7 @@ describe("Dashboard", () => {
 		);
 
 		await waitFor(
-			() => expect(within(getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(3),
+			() => expect(within(getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4),
 			{ timeout: 4000 },
 		);
 
@@ -117,7 +118,7 @@ describe("Dashboard", () => {
 		);
 
 		await waitFor(
-			() => expect(within(getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(3),
+			() => expect(within(getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4),
 			{ timeout: 4000 },
 		);
 
@@ -197,7 +198,7 @@ describe("Dashboard", () => {
 		);
 
 		await waitFor(
-			() => expect(within(getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(3),
+			() => expect(within(getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4),
 			{ timeout: 5000 },
 		);
 
@@ -220,7 +221,7 @@ describe("Dashboard", () => {
 		);
 
 		await waitFor(
-			() => expect(within(getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(3),
+			() => expect(within(getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4),
 			{ timeout: 5000 },
 		);
 
@@ -233,8 +234,6 @@ describe("Dashboard", () => {
 	});
 
 	it("should render loading state when profile is syncing", async () => {
-		const transactionsMock = jest.spyOn(profile.notifications().transactions(), "transactions").mockReturnValue([]);
-
 		const { asFragment, getByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/dashboard">
 				<Dashboard />
@@ -251,12 +250,16 @@ describe("Dashboard", () => {
 		);
 
 		expect(asFragment()).toMatchSnapshot();
-
-		transactionsMock.mockRestore();
 	});
 
 	it("should display empty block when there are no transactions", async () => {
-		const transactionsMock = jest.spyOn(profile.notifications().transactions(), "transactions").mockReturnValue([]);
+		const mockTransactionsAggregate = jest.spyOn(profile.transactionAggregate(), "all").mockImplementation(() => {
+			const response = {
+				hasMorePages: () => false,
+				items: () => [],
+			};
+			return Promise.resolve(response);
+		});
 
 		const { asFragment } = renderWithRouter(
 			<Route path="/profiles/:profileId/dashboard">
@@ -273,7 +276,7 @@ describe("Dashboard", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 
-		transactionsMock.mockRestore();
+		mockTransactionsAggregate.mockRestore();
 	});
 
 	it("should open modal when click on a transaction", async () => {
@@ -289,7 +292,7 @@ describe("Dashboard", () => {
 		);
 
 		await waitFor(
-			() => expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(3),
+			() => expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4),
 			{ timeout: 4000 },
 		);
 

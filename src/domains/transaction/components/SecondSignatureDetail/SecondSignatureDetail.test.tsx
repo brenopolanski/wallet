@@ -54,25 +54,4 @@ describe("SecondSignatureDetail", () => {
 		expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SECOND_SIGNATURE_DETAIL.TITLE);
 		expect(asFragment()).toMatchSnapshot();
 	});
-
-	it("should render as confirmed", () => {
-		const { asFragment, getByText, getByTestId } = renderWithRouter(
-			<Route path="/profiles/:profileId">
-				<SecondSignatureDetail
-					isOpen={true}
-					transaction={{
-						...TransactionFixture,
-						isConfirmed: () => true,
-					}}
-				/>
-			</Route>,
-			{
-				routes: [`/profiles/${fixtureProfileId}`],
-			},
-		);
-
-		expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SECOND_SIGNATURE_DETAIL.TITLE);
-		expect(getByText(translations.WELL_CONFIRMED)).toBeTruthy();
-		expect(asFragment()).toMatchSnapshot();
-	});
 });

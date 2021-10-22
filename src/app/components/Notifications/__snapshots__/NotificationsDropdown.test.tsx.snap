@@ -1712,27 +1712,25 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                   <div
                     class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                   >
-                    Confirmations
+                    Status
                   </div>
                   <div
                     class="flex items-center font-semibold"
                   >
                     <div
-                      class="flex items-center space-x-3"
+                      class="flex items-center space-x-2"
                     >
+                      <div
+                        class="sc-bdnxRM NjstW text-theme-success-600"
+                        height="20"
+                        width="20"
+                      >
+                        <svg>
+                          circle-check-mark.svg
+                        </svg>
+                      </div>
                       <span>
-                        Well confirmed
-                      </span>
-                      <span>
-                        <div
-                          class="sc-bdnxRM NjstW text-theme-success-600"
-                          height="20"
-                          width="20"
-                        >
-                          <svg>
-                            circle-check-mark.svg
-                          </svg>
-                        </div>
+                        Confirmed
                       </span>
                     </div>
                   </div>

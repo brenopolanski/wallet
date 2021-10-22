@@ -4,6 +4,7 @@ import { Page, Section } from "app/components/Layout";
 import { useConfiguration, useEnvironmentContext } from "app/contexts";
 import { useActiveProfile } from "app/hooks";
 import { Wallets } from "domains/dashboard/components/Wallets";
+import { useLatestTransactions } from "domains/dashboard/hooks/use-latest-transactions";
 import { WelcomeModal } from "domains/profile/components/WelcomeModal";
 import { TransactionDetailModal } from "domains/transaction/components/TransactionDetailModal";
 import { TransactionTable } from "domains/transaction/components/TransactionTable";
@@ -21,10 +22,12 @@ export const Dashboard = () => {
 
 	const profileWalletsCount = activeProfile.wallets().count();
 	const showTransactions = activeProfile.appearance().get("dashboardTransactionHistory");
-	const isLoadingTransactions = !!profileIsSyncing || activeProfile.notifications().transactions().isSyncing();
 	const exchangeCurrency = activeProfile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency);
 
-	const transactions = activeProfile.notifications().transactions().transactions(10);
+	const { isLoadingTransactions, latestTransactions } = useLatestTransactions({
+		profile: activeProfile,
+		profileIsSyncing,
+	});
 
 	const [transactionModalItem, setTransactionModalItem] = useState<DTO.ExtendedConfirmedTransactionData | undefined>(
 		undefined,
@@ -49,16 +52,16 @@ export const Dashboard = () => {
 						<h2 className="mb-6 text-2xl font-bold">{t("DASHBOARD.LATEST_TRANSACTIONS.TITLE")}</h2>
 
 						<TransactionTable
-							transactions={transactions}
+							transactions={latestTransactions}
 							exchangeCurrency={exchangeCurrency}
-							hideHeader={!isLoadingTransactions && transactions.length === 0}
-							isLoading={isLoadingTransactions && transactions.length === 0}
+							hideHeader={!isLoadingTransactions && latestTransactions.length === 0}
+							isLoading={isLoadingTransactions && latestTransactions.length === 0}
 							skeletonRowsLimit={8}
 							onRowClick={setTransactionModalItem}
 							profile={activeProfile}
 						/>
 
-						{transactions.length === 0 && !isLoadingTransactions && (
+						{latestTransactions.length === 0 && !isLoadingTransactions && (
 							<EmptyBlock>{t("DASHBOARD.LATEST_TRANSACTIONS.EMPTY_MESSAGE")}</EmptyBlock>
 						)}
 					</Section>

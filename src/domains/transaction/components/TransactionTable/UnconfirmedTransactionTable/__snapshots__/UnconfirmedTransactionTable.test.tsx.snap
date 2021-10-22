@@ -107,7 +107,7 @@ exports[`Unconfirmed transaction table should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC space-x-3 text-theme-secondary-500 whitespace-nowrap"
               >
                 <span
-                  data-testid="timeago"
+                  data-testid="TimeAgo"
                 >
                   A few seconds ago
                 </span>
@@ -189,7 +189,7 @@ exports[`Unconfirmed transaction table should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC space-x-3 text-theme-secondary-500 whitespace-nowrap"
               >
                 <span
-                  data-testid="timeago"
+                  data-testid="TimeAgo"
                 >
                   A few seconds ago
                 </span>

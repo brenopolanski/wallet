@@ -14,6 +14,8 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
+const EXTENSION = "dwe";
+
 export const ExportSettings = () => {
 	const { t } = useTranslation();
 
@@ -60,8 +62,16 @@ export const ExportSettings = () => {
 			...form.getValues(["excludeEmptyWallets", "excludeLedgerWallets"]),
 		});
 
-		const defaultPath = `profile-${profile.id()}.dwe`;
-		const { filePath } = await electron.remote.dialog.showSaveDialog({ defaultPath });
+		const defaultPath = `profile-${profile.id()}.${EXTENSION}`;
+		const { filePath } = await electron.remote.dialog.showSaveDialog({
+			defaultPath,
+			filters: [
+				{
+					extensions: [EXTENSION],
+					name: "Desktop Wallet Export",
+				},
+			],
+		});
 
 		/* istanbul ignore next */
 		if (!filePath) {

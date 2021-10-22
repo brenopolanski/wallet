@@ -27,7 +27,7 @@ exports[`Dashboard should display empty block when there are no transactions 1`]
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -919,7 +919,7 @@ exports[`Dashboard should render 1`] = `
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -1897,7 +1897,7 @@ exports[`Dashboard should render 1`] = `
                           data-testid="TransactionRow__ID"
                           href="#"
                           rel="noopener noreferrer"
-                          to="https://dexplorer.ark.io/transaction/127d323ff3c3a40cb7abec8aa3b045e8c45c72c8feb7dc667d2f85978f8b10cd"
+                          to="https://dexplorer.ark.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
                         >
                           <span
                             class="Link__Content-sc-ec014t-1 hUiuRR"
@@ -1923,7 +1923,7 @@ exports[`Dashboard should render 1`] = `
                           class="whitespace-nowrap"
                           data-testid="TransactionRow__timestamp"
                         >
-                          02.10.2020 12:48 PM
+                          23.07.2020 8:03 AM
                         </span>
                       </div>
                     </td>
@@ -1956,9 +1956,9 @@ exports[`Dashboard should render 1`] = `
                               class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
                             >
                               <img
-                                alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                                src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(244, 67, 54)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"50\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"55\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/></svg>"
-                                title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
+                                alt="D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax"
+                                src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 87, 34)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"35\\" cx=\\"70\\" cy=\\"50\\" fill=\\"rgb(244, 67, 54)\\"/><circle r=\\"45\\" cx=\\"30\\" cy=\\"40\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"40\\" cx=\\"20\\" cy=\\"60\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                                title="D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax"
                               />
                             </div>
                           </div>
@@ -1970,21 +1970,10 @@ exports[`Dashboard should render 1`] = `
                             class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                           >
                             <span
-                              class="font-semibold text-base text-theme-text"
-                              data-testid="Address__alias"
-                            >
-                              <span
-                                class="TruncateEnd__Wrapper-sc-1hhdnni-0"
-                                data-testid="TruncateEnd"
-                              >
-                                ARK Wallet 2
-                              </span>
-                            </span>
-                            <span
-                              class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                              class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
                               data-testid="Address__address"
                             >
-                              D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
                             </span>
                           </div>
                         </div>
@@ -2002,9 +1991,9 @@ exports[`Dashboard should render 1`] = `
                             class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
-                              alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(244, 67, 54)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"50\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"55\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/></svg>"
-                              title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
+                              alt="D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv"
+                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(33, 150, 243)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(255, 87, 34)\\"/><circle r=\\"60\\" cx=\\"70\\" cy=\\"50\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"55\\" cx=\\"100\\" cy=\\"70\\" fill=\\"rgb(0, 150, 136)\\"/></svg>"
+                              title="D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv"
                             />
                           </div>
                         </div>
@@ -2015,21 +2004,10 @@ exports[`Dashboard should render 1`] = `
                             class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                           >
                             <span
-                              class="font-semibold text-base text-theme-text"
-                              data-testid="Address__alias"
-                            >
-                              <span
-                                class="TruncateEnd__Wrapper-sc-1hhdnni-0"
-                                data-testid="TruncateEnd"
-                              >
-                                ARK Wallet 2
-                              </span>
-                            </span>
-                            <span
-                              class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                              class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
                               data-testid="Address__address"
                             >
-                              D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                              D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
                             </span>
                           </div>
                         </div>
@@ -2054,7 +2032,7 @@ exports[`Dashboard should render 1`] = `
                                 class="whitespace-nowrap"
                                 data-testid="AmountCrypto"
                               >
-                                + 1 DARK
+                                + 400,000 DARK
                               </span>
                             </div>
                           </div>
@@ -2090,7 +2068,7 @@ exports[`Dashboard should render 1`] = `
                           data-testid="TransactionRow__ID"
                           href="#"
                           rel="noopener noreferrer"
-                          to="https://dexplorer.ark.io/transaction/ea63bf9a4b3eaf75a1dfff721967c45dce64eb7facf1aef29461868681b5c79b"
+                          to="https://dexplorer.ark.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
                         >
                           <span
                             class="Link__Content-sc-ec014t-1 hUiuRR"
@@ -2116,7 +2094,7 @@ exports[`Dashboard should render 1`] = `
                           class="whitespace-nowrap"
                           data-testid="TransactionRow__timestamp"
                         >
-                          26.04.2020 3:56 PM
+                          23.07.2020 8:03 AM
                         </span>
                       </div>
                     </td>
@@ -2149,9 +2127,9 @@ exports[`Dashboard should render 1`] = `
                               class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
                             >
                               <img
-                                alt="DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy"
-                                src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 193, 7)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"40\\" cy=\\"60\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"45\\" cx=\\"70\\" cy=\\"50\\" fill=\\"rgb(33, 150, 243)\\"/><circle r=\\"35\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/></svg>"
-                                title="DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy"
+                                alt="D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax"
+                                src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 87, 34)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"35\\" cx=\\"70\\" cy=\\"50\\" fill=\\"rgb(244, 67, 54)\\"/><circle r=\\"45\\" cx=\\"30\\" cy=\\"40\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"40\\" cx=\\"20\\" cy=\\"60\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                                title="D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax"
                               />
                             </div>
                           </div>
@@ -2166,7 +2144,7 @@ exports[`Dashboard should render 1`] = `
                               class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
                               data-testid="Address__address"
                             >
-                              DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
+                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
                             </span>
                           </div>
                         </div>
@@ -2184,9 +2162,9 @@ exports[`Dashboard should render 1`] = `
                             class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
-                              alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
-                              title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                              alt="D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv"
+                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(33, 150, 243)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(255, 87, 34)\\"/><circle r=\\"60\\" cx=\\"70\\" cy=\\"50\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"55\\" cx=\\"100\\" cy=\\"70\\" fill=\\"rgb(0, 150, 136)\\"/></svg>"
+                              title="D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv"
                             />
                           </div>
                         </div>
@@ -2197,21 +2175,10 @@ exports[`Dashboard should render 1`] = `
                             class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                           >
                             <span
-                              class="font-semibold text-base text-theme-text"
-                              data-testid="Address__alias"
-                            >
-                              <span
-                                class="TruncateEnd__Wrapper-sc-1hhdnni-0"
-                                data-testid="TruncateEnd"
-                              >
-                                ARK Wallet 1
-                              </span>
-                            </span>
-                            <span
-                              class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                              class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
                               data-testid="Address__address"
                             >
-                              D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                              D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
                             </span>
                           </div>
                         </div>
@@ -2236,7 +2203,7 @@ exports[`Dashboard should render 1`] = `
                                 class="whitespace-nowrap"
                                 data-testid="AmountCrypto"
                               >
-                                + 20 DARK
+                                + 400,000 DARK
                               </span>
                             </div>
                           </div>
@@ -2272,7 +2239,7 @@ exports[`Dashboard should render 1`] = `
                           data-testid="TransactionRow__ID"
                           href="#"
                           rel="noopener noreferrer"
-                          to="https://dexplorer.ark.io/transaction/1a767ebc0cc53246b9105a9f09b6c2ffa7baedcc7e632c8c1bac58f8f17389f6"
+                          to="https://dexplorer.ark.io/transaction/0d8d12d7980bf0183ef015e5938e56c44c3db4d3695cefd16ccec4a7bfd8a2cf"
                         >
                           <span
                             class="Link__Content-sc-ec014t-1 hUiuRR"
@@ -2298,7 +2265,7 @@ exports[`Dashboard should render 1`] = `
                           class="whitespace-nowrap"
                           data-testid="TransactionRow__timestamp"
                         >
-                          19.03.2020 9:02 AM
+                          23.07.2020 8:01 AM
                         </span>
                       </div>
                     </td>
@@ -2331,9 +2298,9 @@ exports[`Dashboard should render 1`] = `
                               class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
                             >
                               <img
-                                alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
-                                src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
-                                title="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
+                                alt="D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax"
+                                src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 87, 34)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"35\\" cx=\\"70\\" cy=\\"50\\" fill=\\"rgb(244, 67, 54)\\"/><circle r=\\"45\\" cx=\\"30\\" cy=\\"40\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"40\\" cx=\\"20\\" cy=\\"60\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                                title="D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax"
                               />
                             </div>
                           </div>
@@ -2348,7 +2315,7 @@ exports[`Dashboard should render 1`] = `
                               class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
                               data-testid="Address__address"
                             >
-                              DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
+                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
                             </span>
                           </div>
                         </div>
@@ -2366,9 +2333,9 @@ exports[`Dashboard should render 1`] = `
                             class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
-                              alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
-                              title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                              alt="DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A"
+                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(244, 67, 54)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"45\\" cx=\\"70\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"35\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"60\\" cx=\\"40\\" cy=\\"70\\" fill=\\"rgb(0, 150, 136)\\"/></svg>"
+                              title="DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A"
                             />
                           </div>
                         </div>
@@ -2379,21 +2346,10 @@ exports[`Dashboard should render 1`] = `
                             class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                           >
                             <span
-                              class="font-semibold text-base text-theme-text"
-                              data-testid="Address__alias"
-                            >
-                              <span
-                                class="TruncateEnd__Wrapper-sc-1hhdnni-0"
-                                data-testid="TruncateEnd"
-                              >
-                                ARK Wallet 1
-                              </span>
-                            </span>
-                            <span
-                              class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                              class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
                               data-testid="Address__address"
                             >
-                              D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                              DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A
                             </span>
                           </div>
                         </div>
@@ -2418,7 +2374,178 @@ exports[`Dashboard should render 1`] = `
                                 class="whitespace-nowrap"
                                 data-testid="AmountCrypto"
                               >
-                                + 0.0000001 DARK
+                                + 50,000 DARK
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td
+                      class="hidden xl:block"
+                    >
+                      <div
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
+                      >
+                        <span
+                          class="whitespace-nowrap text-theme-secondary-text"
+                          data-testid="TransactionRow__currency"
+                        >
+                          N/A
+                        </span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr
+                    class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
+                    data-testid="TableRow"
+                  >
+                    <td>
+                      <div
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC"
+                      >
+                        <a
+                          class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                          data-ring-focus-margin="-m-1"
+                          data-testid="TransactionRow__ID"
+                          href="#"
+                          rel="noopener noreferrer"
+                          to="https://dexplorer.ark.io/transaction/0d8d12d7980bf0183ef015e5938e56c44c3db4d3695cefd16ccec4a7bfd8a2cf"
+                        >
+                          <span
+                            class="Link__Content-sc-ec014t-1 hUiuRR"
+                          >
+                            <div
+                              class="sc-bdnxRM AFVmm"
+                              height="16"
+                              width="16"
+                            >
+                              <svg>
+                                magnifying-glass-id.svg
+                              </svg>
+                            </div>
+                          </span>
+                        </a>
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI text-theme-secondary-text"
+                      >
+                        <span
+                          class="whitespace-nowrap"
+                          data-testid="TransactionRow__timestamp"
+                        >
+                          23.07.2020 8:01 AM
+                        </span>
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI space-x-4"
+                      >
+                        <div
+                          class="flex items-center space-x-2"
+                          data-testid="TransactionRowMode"
+                        >
+                          <span
+                            class="w-5 h-5 flex items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
+                          >
+                            <div
+                              class="sc-bdnxRM NjstW"
+                              height="20"
+                              width="20"
+                            >
+                              <svg>
+                                received.svg
+                              </svg>
+                            </div>
+                          </span>
+                          <div
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                            data-testid="Avatar"
+                          >
+                            <div
+                              class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                            >
+                              <img
+                                alt="D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax"
+                                src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 87, 34)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"35\\" cx=\\"70\\" cy=\\"50\\" fill=\\"rgb(244, 67, 54)\\"/><circle r=\\"45\\" cx=\\"30\\" cy=\\"40\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"40\\" cx=\\"20\\" cy=\\"60\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                                title="D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="w-0 flex-1"
+                        >
+                          <div
+                            class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+                          >
+                            <span
+                              class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                              data-testid="Address__address"
+                            >
+                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI space-x-4"
+                      >
+                        <div
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                          data-testid="Avatar"
+                        >
+                          <div
+                            class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                          >
+                            <img
+                              alt="DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A"
+                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(244, 67, 54)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"45\\" cx=\\"70\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"35\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"60\\" cx=\\"40\\" cy=\\"70\\" fill=\\"rgb(0, 150, 136)\\"/></svg>"
+                              title="DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A"
+                            />
+                          </div>
+                        </div>
+                        <div
+                          class="w-0 flex-1"
+                        >
+                          <div
+                            class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+                          >
+                            <span
+                              class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                              data-testid="Address__address"
+                            >
+                              DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
+                      >
+                        <div
+                          class="flex items-center"
+                          data-testid="TransactionAmount__tooltip"
+                        >
+                          <div
+                            class="Label-sc-4akkzw-0 OOaVy"
+                            color="success"
+                          >
+                            <div
+                              class="flex space-x-1 items-center"
+                            >
+                              <span
+                                class="whitespace-nowrap"
+                                data-testid="AmountCrypto"
+                              >
+                                + 50,000 DARK
                               </span>
                             </div>
                           </div>
@@ -2478,7 +2605,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"

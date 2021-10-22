@@ -227,7 +227,7 @@ export const ImportWallet = () => {
 
 	const isNextDisabled = useMemo(() => {
 		if (activeTab < Step.EncryptPasswordStep) {
-			return !isDirty ? true : !isValid || isImporting;
+			return isDirty ? !isValid || isImporting : true;
 		}
 
 		if (activeTab === Step.EncryptPasswordStep) {

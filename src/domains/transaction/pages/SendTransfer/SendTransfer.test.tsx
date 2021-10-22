@@ -89,6 +89,8 @@ let getVersionSpy: jest.SpyInstance;
 
 describe("SendTransfer", () => {
 	beforeAll(async () => {
+		env.registerCoin("LSK", LSK);
+
 		profile = env.profiles().findById("b999d134-7a24-481e-a95d-bc47c543bfc9");
 
 		await env.profiles().restore(profile);
@@ -496,6 +498,48 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(getByTestId("SendTransfer__network-step")).toBeTruthy());
 
 		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should render network selection with sorted network", async () => {
+		const profile = env.profiles().create("test");
+		await env.profiles().restore(profile);
+
+		const { wallet: lskWallet } = await profile.walletFactory().generate({
+			coin: "LSK",
+			network: "lsk.testnet",
+		});
+		const { wallet: arkWallet } = await profile.walletFactory().generate({
+			coin: "ARK",
+			network: "ark.devnet",
+		});
+		profile.wallets().push(lskWallet);
+		profile.wallets().push(arkWallet);
+		await env.wallets().syncByProfile(profile);
+
+		profile.settings().set(Contracts.ProfileSetting.UseTestNetworks, true);
+
+		const transferURL = `/profiles/${profile.id()}/send-transfer`;
+
+		const history = createMemoryHistory();
+		history.push(transferURL);
+
+		renderWithRouter(
+			<Route path="/profiles/:profileId/send-transfer">
+				<LedgerProvider transport={getDefaultLedgerTransport()}>
+					<SendTransfer />
+				</LedgerProvider>
+			</Route>,
+			{
+				history,
+				routes: [transferURL],
+			},
+		);
+
+		await waitFor(() => expect(screen.getByTestId("SendTransfer__network-step")).toBeInTheDocument());
+
+		expect(screen.getAllByTestId("SelectNetwork__NetworkIcon--container")).toHaveLength(2);
+		expect(screen.getAllByTestId("SelectNetwork__NetworkIcon--container")[0]).toHaveTextContent("ark.svg");
+		expect(screen.getAllByTestId("SelectNetwork__NetworkIcon--container")[1]).toHaveTextContent("lsk.svg");
 	});
 
 	it("should render form and use location state", async () => {
@@ -1110,8 +1154,6 @@ describe("SendTransfer", () => {
 	});
 
 	it("should correctly handle fees when network's fee type is size", async () => {
-		env.registerCoin("LSK", LSK);
-
 		const { wallet: lskWallet } = await profile.walletFactory().generate({
 			coin: "LSK",
 			network: "lsk.testnet",

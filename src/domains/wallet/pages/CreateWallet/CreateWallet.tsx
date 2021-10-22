@@ -235,7 +235,7 @@ export const CreateWallet = () => {
 									{activeTab < Step.EncryptPasswordStep && (
 										<Button
 											data-testid="CreateWallet__continue-button"
-											disabled={!isDirty ? true : !isValid || isGeneratingWallet}
+											disabled={isDirty ? !isValid || isGeneratingWallet : true}
 											isLoading={isGeneratingWallet}
 											onClick={() => handleNext()}
 										>

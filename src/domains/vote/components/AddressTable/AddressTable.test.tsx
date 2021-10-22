@@ -41,7 +41,7 @@ describe("AddressTable", () => {
 
 		expect(container).toBeTruthy();
 
-		await waitFor(() => expect(screen.getByTestId("AddressRow__status")).toBeTruthy());
+		await waitFor(() => expect(screen.getByTestId("StatusIcon__icon")).toBeTruthy());
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -79,7 +79,7 @@ describe("AddressTable", () => {
 
 		expect(container).toBeTruthy();
 
-		await waitFor(() => expect(() => getByTestId("AddressRow__status")).toThrow());
+		await waitFor(() => expect(() => getByTestId("StatusIcon__icon")).toThrow());
 
 		expect(asFragment()).toMatchSnapshot();
 

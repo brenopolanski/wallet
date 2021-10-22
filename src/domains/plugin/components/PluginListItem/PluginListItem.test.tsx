@@ -90,7 +90,7 @@ describe("PluginListItem", () => {
 		fireEvent.click(getByTestId("dropdown__toggle"));
 		fireEvent.click(getByText(commonTranslations.UPDATE));
 
-		expect(getByTestId("PluginListItem__update-badge")).toBeInTheDocument();
+		expect(getByTestId("PluginDropdown__update-badge")).toBeInTheDocument();
 
 		expect(onUpdate).toHaveBeenCalledTimes(1);
 	});

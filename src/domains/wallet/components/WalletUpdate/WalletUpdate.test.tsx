@@ -73,16 +73,6 @@ describe("WalletUpdate", () => {
 		await waitFor(() => expect(onCancel).toHaveBeenCalled());
 	});
 
-	it("should handle cancel", async () => {
-		const onCancel = jest.fn();
-		const { getByTestId } = render(<WalletUpdate isOpen={true} onCancel={onCancel} />);
-		await waitFor(() => expect(getByTestId("WalletUpdate__first-step")).toBeTruthy());
-		act(() => {
-			fireEvent.click(getByTestId("WalletUpdate__cancel-button"));
-		});
-		await waitFor(() => expect(onCancel).toHaveBeenCalled());
-	});
-
 	it("should handle update", async () => {
 		const { getByTestId } = render(<WalletUpdate isOpen={true} />);
 		await waitFor(() => expect(getByTestId("WalletUpdate__first-step")).toBeTruthy());

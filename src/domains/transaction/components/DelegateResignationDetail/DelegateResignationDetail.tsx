@@ -2,11 +2,11 @@ import { Circle } from "app/components/Circle";
 import { Icon } from "app/components/Icon";
 import { Modal } from "app/components/Modal";
 import {
-	TransactionConfirmations,
 	TransactionDetail,
 	TransactionExplorerLink,
 	TransactionFee,
 	TransactionSender,
+	TransactionStatus,
 	TransactionTimestamp,
 } from "domains/transaction/components/TransactionDetail";
 import React, { useMemo } from "react";
@@ -43,7 +43,7 @@ export const DelegateResignationDetail = ({ isOpen, transaction, onClose }: Tran
 
 			<TransactionTimestamp timestamp={transaction.timestamp()} />
 
-			<TransactionConfirmations transaction={transaction} />
+			<TransactionStatus transaction={transaction} />
 		</Modal>
 	);
 };

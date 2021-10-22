@@ -81,9 +81,9 @@ export const DelegateRow = ({
 		}
 
 		if (voted) {
-			return !isSelectedUnvote
-				? "bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
-				: "bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400";
+			return isSelectedUnvote
+				? "bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
+				: "bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600";
 		}
 
 		if (isSelectedVote) {

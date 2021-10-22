@@ -3,12 +3,12 @@ import React from "react";
 import { render } from "testing-library";
 
 import { translations as transactionTranslations } from "../../../i18n";
-import { TransactionConfirmations } from "./TransactionConfirmations";
+import { TransactionStatus } from "./TransactionStatus";
 
-describe("TransactionConfirmations", () => {
+describe("TransactionStatus", () => {
 	it("should render when confirmed", () => {
 		const { container } = render(
-			<TransactionConfirmations
+			<TransactionStatus
 				// @ts-ignore
 				transaction={{
 					confirmations: () => BigNumber.ONE,
@@ -17,8 +17,8 @@ describe("TransactionConfirmations", () => {
 			/>,
 		);
 
-		expect(container).toHaveTextContent(transactionTranslations.WELL_CONFIRMED);
-		expect(container).not.toHaveTextContent(transactionTranslations.NOT_CONFIRMED);
+		expect(container).toHaveTextContent(transactionTranslations.CONFIRMED);
+		expect(container).not.toHaveTextContent(transactionTranslations.NOT_YET_CONFIRMED);
 		expect(container).toHaveTextContent("circle-check-mark.svg");
 
 		expect(container).toMatchSnapshot();
@@ -26,7 +26,7 @@ describe("TransactionConfirmations", () => {
 
 	it("should render when not confirmed", () => {
 		const { container } = render(
-			<TransactionConfirmations
+			<TransactionStatus
 				// @ts-ignore
 				transaction={{
 					confirmations: () => BigNumber.ONE,
@@ -35,8 +35,8 @@ describe("TransactionConfirmations", () => {
 			/>,
 		);
 
-		expect(container).not.toHaveTextContent(transactionTranslations.WELL_CONFIRMED);
-		expect(container).toHaveTextContent(transactionTranslations.NOT_CONFIRMED);
+		expect(container).not.toHaveTextContent(transactionTranslations.CONFIRMED);
+		expect(container).toHaveTextContent(transactionTranslations.NOT_YET_CONFIRMED);
 		expect(container).toHaveTextContent("clock.svg");
 
 		expect(container).toMatchSnapshot();

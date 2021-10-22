@@ -2,10 +2,10 @@ import { Contracts } from "@payvo/profiles";
 import { Modal } from "app/components/Modal";
 import { useEnvironmentContext } from "app/contexts";
 import {
-	TransactionConfirmations,
 	TransactionExplorerLink,
 	TransactionFee,
 	TransactionSender,
+	TransactionStatus,
 	TransactionTimestamp,
 	TransactionVotes,
 } from "domains/transaction/components/TransactionDetail";
@@ -61,7 +61,7 @@ export const VoteDetail = ({ isOpen, transaction, onClose }: TransactionDetailPr
 
 			<TransactionTimestamp timestamp={transaction.timestamp()} />
 
-			<TransactionConfirmations transaction={transaction} />
+			<TransactionStatus transaction={transaction} />
 		</Modal>
 	);
 };

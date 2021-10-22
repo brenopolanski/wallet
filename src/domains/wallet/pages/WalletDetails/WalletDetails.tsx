@@ -115,7 +115,6 @@ export const WalletDetails = () => {
 
 					<Transactions
 						title={t("COMMON.TRANSACTION_HISTORY")}
-						showUnconfirmed={false}
 						profile={activeProfile}
 						wallets={[activeWallet]}
 						isLoading={profileIsSyncing}

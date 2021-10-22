@@ -115,7 +115,7 @@ describe("TransactionRowRecipientLabel", () => {
 			expect(getByTestId("TransactionRowVoteLabel")).toHaveTextContent("delegate-0");
 		});
 
-		it("should show a vote label with counter", () => {
+		it("should show a vote label with counter if there are multiple votes", () => {
 			const { getByTestId } = render(
 				<TransactionRowRecipientLabel
 					transaction={{

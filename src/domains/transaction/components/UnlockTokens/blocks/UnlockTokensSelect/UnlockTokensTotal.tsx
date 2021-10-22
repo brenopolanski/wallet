@@ -32,7 +32,7 @@ export const UnlockTokensTotal: React.FC<Properties> = ({
 		}
 
 		return (
-			<div data-testid="UnlockTokensTotal" className={cn("flex flex-col", !isFee ? "items-start" : "items-end")}>
+			<div data-testid="UnlockTokensTotal" className={cn("flex flex-col", isFee ? "items-end" : "items-start")}>
 				<p className="text-theme-secondary-500 text-sm font-semibold mb-2">
 					{isFee ? t("TRANSACTION.TRANSACTION_FEE") : t("TRANSACTION.TOTAL_AMOUNT")}
 				</p>

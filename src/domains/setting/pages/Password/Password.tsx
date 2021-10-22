@@ -117,7 +117,7 @@ export const PasswordSettings = () => {
 					<div className="flex justify-end mt-8 w-full">
 						<Button
 							data-testid="Password-settings__submit-button"
-							disabled={!isDirty ? true : !isValid}
+							disabled={isDirty ? !isValid : true}
 							type="submit"
 						>
 							{usesPassword ? t("SETTINGS.PASSWORD.BUTTON.UPDATE") : t("SETTINGS.PASSWORD.BUTTON.CREATE")}

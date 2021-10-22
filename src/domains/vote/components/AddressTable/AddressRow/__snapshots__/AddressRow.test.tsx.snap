@@ -10,7 +10,7 @@ exports[`AddressRow should emit action on select button 1`] = `
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn font-bold space-x-4"
           >
             <div
               class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0 flex-shrink-0"
@@ -55,36 +55,34 @@ exports[`AddressRow should emit action on select button 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center text-sm font-bold text-center align-middle"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center space-x-2"
           >
             <div
-              class="inline-flex items-center space-x-2"
+              class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
+              data-testid="WalletIcon__Ledger"
             >
               <div
-                class="inline-block p-1 text-theme-secondary-600"
+                class="sc-bdnxRM NjstW"
+                height="20"
+                width="20"
               >
-                <div
-                  class="sc-bdnxRM NjstW"
-                  height="20"
-                  width="20"
-                >
-                  <svg>
-                    ledger.svg
-                  </svg>
-                </div>
+                <svg>
+                  ledger.svg
+                </svg>
               </div>
+            </div>
+            <div
+              class="inline-block p-1 text-theme-warning-400"
+              data-testid="WalletIcon__Starred"
+            >
               <div
-                class="inline-block p-1 text-theme-warning-400"
+                class="sc-bdnxRM NjstW"
+                height="20"
+                width="20"
               >
-                <div
-                  class="sc-bdnxRM NjstW"
-                  height="20"
-                  width="20"
-                >
-                  <svg>
-                    star-filled.svg
-                  </svg>
-                </div>
+                <svg>
+                  star-filled.svg
+                </svg>
               </div>
             </div>
           </div>
@@ -128,8 +126,10 @@ exports[`AddressRow should emit action on select button 1`] = `
           <div
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center font-bold text-theme-secondary-text"
           >
-            <span>
-              #
+            <span
+              class="text-theme-secondary-400"
+            >
+              N/A
             </span>
           </div>
         </td>
@@ -137,16 +137,18 @@ exports[`AddressRow should emit action on select button 1`] = `
           <div
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
           >
-            <div
-              class="sc-bdnxRM NjstW text-theme-success-600"
-              data-testid="AddressRow__status"
-              height="20"
-              width="20"
-            >
-              <svg>
-                circle-check-mark.svg
-              </svg>
-            </div>
+            <span>
+              <div
+                class="sc-bdnxRM NjstW text-theme-danger-400"
+                data-testid="StatusIcon__icon"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  circle-cross.svg
+                </svg>
+              </div>
+            </span>
           </div>
         </td>
         <td>
@@ -182,7 +184,7 @@ exports[`AddressRow should render for a multisignature wallet 1`] = `
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn font-bold space-x-4"
           >
             <div
               class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0 flex-shrink-0"
@@ -227,49 +229,48 @@ exports[`AddressRow should render for a multisignature wallet 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center text-sm font-bold text-center align-middle"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center space-x-2"
           >
             <div
-              class="inline-flex items-center space-x-2"
+              class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
+              data-testid="WalletIcon__Ledger"
             >
               <div
-                class="inline-block p-1 text-theme-secondary-600"
+                class="sc-bdnxRM NjstW"
+                height="20"
+                width="20"
               >
-                <div
-                  class="sc-bdnxRM NjstW"
-                  height="20"
-                  width="20"
-                >
-                  <svg>
-                    ledger.svg
-                  </svg>
-                </div>
+                <svg>
+                  ledger.svg
+                </svg>
               </div>
+            </div>
+            <div
+              class="inline-block p-1 text-theme-warning-400"
+              data-testid="WalletIcon__Starred"
+            >
               <div
-                class="inline-block p-1 text-theme-warning-400"
+                class="sc-bdnxRM NjstW"
+                height="20"
+                width="20"
               >
-                <div
-                  class="sc-bdnxRM NjstW"
-                  height="20"
-                  width="20"
-                >
-                  <svg>
-                    star-filled.svg
-                  </svg>
-                </div>
+                <svg>
+                  star-filled.svg
+                </svg>
               </div>
+            </div>
+            <div
+              class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
+              data-testid="WalletIcon__Multisignature"
+            >
               <div
-                class="inline-block p-1 text-theme-secondary-600"
+                class="sc-bdnxRM NjstW"
+                height="20"
+                width="20"
               >
-                <div
-                  class="sc-bdnxRM NjstW"
-                  height="20"
-                  width="20"
-                >
-                  <svg>
-                    multisignature.svg
-                  </svg>
-                </div>
+                <svg>
+                  multisignature.svg
+                </svg>
               </div>
             </div>
           </div>
@@ -313,8 +314,10 @@ exports[`AddressRow should render for a multisignature wallet 1`] = `
           <div
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center font-bold text-theme-secondary-text"
           >
-            <span>
-              #
+            <span
+              class="text-theme-secondary-400"
+            >
+              N/A
             </span>
           </div>
         </td>
@@ -322,16 +325,18 @@ exports[`AddressRow should render for a multisignature wallet 1`] = `
           <div
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
           >
-            <div
-              class="sc-bdnxRM NjstW text-theme-success-600"
-              data-testid="AddressRow__status"
-              height="20"
-              width="20"
-            >
-              <svg>
-                circle-check-mark.svg
-              </svg>
-            </div>
+            <span>
+              <div
+                class="sc-bdnxRM NjstW text-theme-danger-400"
+                data-testid="StatusIcon__icon"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  circle-cross.svg
+                </svg>
+              </div>
+            </span>
           </div>
         </td>
         <td>
@@ -367,7 +372,7 @@ exports[`AddressRow should render when isCompact = false 1`] = `
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn font-bold space-x-4"
           >
             <div
               class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0 flex-shrink-0"
@@ -412,36 +417,34 @@ exports[`AddressRow should render when isCompact = false 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center text-sm font-bold text-center align-middle"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center space-x-2"
           >
             <div
-              class="inline-flex items-center space-x-2"
+              class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
+              data-testid="WalletIcon__Ledger"
             >
               <div
-                class="inline-block p-1 text-theme-secondary-600"
+                class="sc-bdnxRM NjstW"
+                height="20"
+                width="20"
               >
-                <div
-                  class="sc-bdnxRM NjstW"
-                  height="20"
-                  width="20"
-                >
-                  <svg>
-                    ledger.svg
-                  </svg>
-                </div>
+                <svg>
+                  ledger.svg
+                </svg>
               </div>
+            </div>
+            <div
+              class="inline-block p-1 text-theme-warning-400"
+              data-testid="WalletIcon__Starred"
+            >
               <div
-                class="inline-block p-1 text-theme-warning-400"
+                class="sc-bdnxRM NjstW"
+                height="20"
+                width="20"
               >
-                <div
-                  class="sc-bdnxRM NjstW"
-                  height="20"
-                  width="20"
-                >
-                  <svg>
-                    star-filled.svg
-                  </svg>
-                </div>
+                <svg>
+                  star-filled.svg
+                </svg>
               </div>
             </div>
           </div>
@@ -485,8 +488,10 @@ exports[`AddressRow should render when isCompact = false 1`] = `
           <div
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center font-bold text-theme-secondary-text"
           >
-            <span>
-              #
+            <span
+              class="text-theme-secondary-400"
+            >
+              N/A
             </span>
           </div>
         </td>
@@ -494,16 +499,18 @@ exports[`AddressRow should render when isCompact = false 1`] = `
           <div
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
           >
-            <div
-              class="sc-bdnxRM NjstW text-theme-success-600"
-              data-testid="AddressRow__status"
-              height="20"
-              width="20"
-            >
-              <svg>
-                circle-check-mark.svg
-              </svg>
-            </div>
+            <span>
+              <div
+                class="sc-bdnxRM NjstW text-theme-danger-400"
+                data-testid="StatusIcon__icon"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  circle-cross.svg
+                </svg>
+              </div>
+            </span>
           </div>
         </td>
         <td>
@@ -539,7 +546,7 @@ exports[`AddressRow should render when isCompact = true 1`] = `
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC space-x-3"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC font-bold space-x-3"
           >
             <div
               class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk flex-shrink-0 flex-shrink-0"
@@ -584,36 +591,34 @@ exports[`AddressRow should render when isCompact = true 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center text-sm font-bold text-center align-middle"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center space-x-2"
           >
             <div
-              class="inline-flex items-center space-x-2"
+              class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
+              data-testid="WalletIcon__Ledger"
             >
               <div
-                class="inline-block p-1 text-theme-secondary-600"
+                class="sc-bdnxRM NjstW"
+                height="20"
+                width="20"
               >
-                <div
-                  class="sc-bdnxRM NjstW"
-                  height="20"
-                  width="20"
-                >
-                  <svg>
-                    ledger.svg
-                  </svg>
-                </div>
+                <svg>
+                  ledger.svg
+                </svg>
               </div>
+            </div>
+            <div
+              class="inline-block p-1 text-theme-warning-400"
+              data-testid="WalletIcon__Starred"
+            >
               <div
-                class="inline-block p-1 text-theme-warning-400"
+                class="sc-bdnxRM NjstW"
+                height="20"
+                width="20"
               >
-                <div
-                  class="sc-bdnxRM NjstW"
-                  height="20"
-                  width="20"
-                >
-                  <svg>
-                    star-filled.svg
-                  </svg>
-                </div>
+                <svg>
+                  star-filled.svg
+                </svg>
               </div>
             </div>
           </div>
@@ -657,8 +662,10 @@ exports[`AddressRow should render when isCompact = true 1`] = `
           <div
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center font-bold text-theme-secondary-text"
           >
-            <span>
-              #
+            <span
+              class="text-theme-secondary-400"
+            >
+              N/A
             </span>
           </div>
         </td>
@@ -666,16 +673,18 @@ exports[`AddressRow should render when isCompact = true 1`] = `
           <div
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center"
           >
-            <div
-              class="sc-bdnxRM NjstW text-theme-success-600"
-              data-testid="AddressRow__status"
-              height="20"
-              width="20"
-            >
-              <svg>
-                circle-check-mark.svg
-              </svg>
-            </div>
+            <span>
+              <div
+                class="sc-bdnxRM NjstW text-theme-danger-400"
+                data-testid="StatusIcon__icon"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  circle-cross.svg
+                </svg>
+              </div>
+            </span>
           </div>
         </td>
         <td>
@@ -711,7 +720,7 @@ exports[`AddressRow should render when wallet hasn't voted 1`] = `
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn font-bold space-x-4"
           >
             <div
               class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0 flex-shrink-0"
@@ -756,36 +765,34 @@ exports[`AddressRow should render when wallet hasn't voted 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center text-sm font-bold text-center align-middle"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center space-x-2"
           >
             <div
-              class="inline-flex items-center space-x-2"
+              class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
+              data-testid="WalletIcon__Ledger"
             >
               <div
-                class="inline-block p-1 text-theme-secondary-600"
+                class="sc-bdnxRM NjstW"
+                height="20"
+                width="20"
               >
-                <div
-                  class="sc-bdnxRM NjstW"
-                  height="20"
-                  width="20"
-                >
-                  <svg>
-                    ledger.svg
-                  </svg>
-                </div>
+                <svg>
+                  ledger.svg
+                </svg>
               </div>
+            </div>
+            <div
+              class="inline-block p-1 text-theme-warning-400"
+              data-testid="WalletIcon__Starred"
+            >
               <div
-                class="inline-block p-1 text-theme-warning-400"
+                class="sc-bdnxRM NjstW"
+                height="20"
+                width="20"
               >
-                <div
-                  class="sc-bdnxRM NjstW"
-                  height="20"
-                  width="20"
-                >
-                  <svg>
-                    star-filled.svg
-                  </svg>
-                </div>
+                <svg>
+                  star-filled.svg
+                </svg>
               </div>
             </div>
           </div>
@@ -829,8 +836,10 @@ exports[`AddressRow should render when wallet hasn't voted 1`] = `
           <div
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center font-bold text-theme-secondary-text"
           >
-            <span>
-              #
+            <span
+              class="text-theme-secondary-400"
+            >
+              N/A
             </span>
           </div>
         </td>
@@ -838,16 +847,18 @@ exports[`AddressRow should render when wallet hasn't voted 1`] = `
           <div
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
           >
-            <div
-              class="sc-bdnxRM NjstW text-theme-success-600"
-              data-testid="AddressRow__status"
-              height="20"
-              width="20"
-            >
-              <svg>
-                circle-check-mark.svg
-              </svg>
-            </div>
+            <span>
+              <div
+                class="sc-bdnxRM NjstW text-theme-danger-400"
+                data-testid="StatusIcon__icon"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  circle-cross.svg
+                </svg>
+              </div>
+            </span>
           </div>
         </td>
         <td>
@@ -874,7 +885,7 @@ exports[`AddressRow should render when wallet hasn't voted 1`] = `
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn font-bold space-x-4"
           >
             <div
               class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0 flex-shrink-0"
@@ -919,12 +930,8 @@ exports[`AddressRow should render when wallet hasn't voted 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center text-sm font-bold text-center align-middle"
-          >
-            <div
-              class="inline-flex items-center space-x-2"
-            />
-          </div>
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center space-x-2"
+          />
         </td>
         <td>
           <div
@@ -995,7 +1002,7 @@ exports[`AddressRow should render when wallet not found for votes 1`] = `
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn font-bold space-x-4"
           >
             <div
               class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0 flex-shrink-0"
@@ -1040,36 +1047,34 @@ exports[`AddressRow should render when wallet not found for votes 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center text-sm font-bold text-center align-middle"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center space-x-2"
           >
             <div
-              class="inline-flex items-center space-x-2"
+              class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
+              data-testid="WalletIcon__Ledger"
             >
               <div
-                class="inline-block p-1 text-theme-secondary-600"
+                class="sc-bdnxRM NjstW"
+                height="20"
+                width="20"
               >
-                <div
-                  class="sc-bdnxRM NjstW"
-                  height="20"
-                  width="20"
-                >
-                  <svg>
-                    ledger.svg
-                  </svg>
-                </div>
+                <svg>
+                  ledger.svg
+                </svg>
               </div>
+            </div>
+            <div
+              class="inline-block p-1 text-theme-warning-400"
+              data-testid="WalletIcon__Starred"
+            >
               <div
-                class="inline-block p-1 text-theme-warning-400"
+                class="sc-bdnxRM NjstW"
+                height="20"
+                width="20"
               >
-                <div
-                  class="sc-bdnxRM NjstW"
-                  height="20"
-                  width="20"
-                >
-                  <svg>
-                    star-filled.svg
-                  </svg>
-                </div>
+                <svg>
+                  star-filled.svg
+                </svg>
               </div>
             </div>
           </div>
@@ -1113,8 +1118,10 @@ exports[`AddressRow should render when wallet not found for votes 1`] = `
           <div
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center font-bold text-theme-secondary-text"
           >
-            <span>
-              #
+            <span
+              class="text-theme-secondary-400"
+            >
+              N/A
             </span>
           </div>
         </td>
@@ -1122,16 +1129,18 @@ exports[`AddressRow should render when wallet not found for votes 1`] = `
           <div
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
           >
-            <div
-              class="sc-bdnxRM NjstW text-theme-success-600"
-              data-testid="AddressRow__status"
-              height="20"
-              width="20"
-            >
-              <svg>
-                circle-check-mark.svg
-              </svg>
-            </div>
+            <span>
+              <div
+                class="sc-bdnxRM NjstW text-theme-danger-400"
+                data-testid="StatusIcon__icon"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  circle-cross.svg
+                </svg>
+              </div>
+            </span>
           </div>
         </td>
         <td>
@@ -1158,7 +1167,7 @@ exports[`AddressRow should render when wallet not found for votes 1`] = `
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn font-bold space-x-4"
           >
             <div
               class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0 flex-shrink-0"
@@ -1192,12 +1201,8 @@ exports[`AddressRow should render when wallet not found for votes 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center text-sm font-bold text-center align-middle"
-          >
-            <div
-              class="inline-flex items-center space-x-2"
-            />
-          </div>
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center space-x-2"
+          />
         </td>
         <td>
           <div
@@ -1259,7 +1264,7 @@ exports[`AddressRow should render when wallet not found for votes 1`] = `
 </DocumentFragment>
 `;
 
-exports[`AddressRow should render with isCompact = false when the maximum votes is greater than 1 1`] = `
+exports[`AddressRow should render with active delegate 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -1269,7 +1274,7 @@ exports[`AddressRow should render with isCompact = false when the maximum votes 
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn font-bold space-x-4"
           >
             <div
               class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0 flex-shrink-0"
@@ -1314,36 +1319,206 @@ exports[`AddressRow should render with isCompact = false when the maximum votes 
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center text-sm font-bold text-center align-middle"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center space-x-2"
           >
             <div
-              class="inline-flex items-center space-x-2"
+              class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
+              data-testid="WalletIcon__Ledger"
             >
               <div
-                class="inline-block p-1 text-theme-secondary-600"
+                class="sc-bdnxRM NjstW"
+                height="20"
+                width="20"
               >
-                <div
-                  class="sc-bdnxRM NjstW"
-                  height="20"
-                  width="20"
-                >
-                  <svg>
-                    ledger.svg
-                  </svg>
-                </div>
+                <svg>
+                  ledger.svg
+                </svg>
               </div>
+            </div>
+            <div
+              class="inline-block p-1 text-theme-warning-400"
+              data-testid="WalletIcon__Starred"
+            >
               <div
-                class="inline-block p-1 text-theme-warning-400"
+                class="sc-bdnxRM NjstW"
+                height="20"
+                width="20"
               >
-                <div
-                  class="sc-bdnxRM NjstW"
-                  height="20"
-                  width="20"
+                <svg>
+                  star-filled.svg
+                </svg>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end font-bold text-theme-secondary-text whitespace-nowrap"
+          >
+            <span
+              class="whitespace-nowrap"
+              data-testid="AmountCrypto"
+            >
+              33.75089801 DARK
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh font-bold space-x-4"
+          >
+            <div
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0"
+              data-testid="Avatar"
+            >
+              <div
+                class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+              >
+                <img
+                  alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                  title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                />
+              </div>
+            </div>
+            <span>
+              arkx
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center font-bold text-theme-secondary-text"
+          >
+            <span>
+              #1
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
+          >
+            <span>
+              <div
+                class="sc-bdnxRM NjstW text-theme-success-600"
+                data-testid="StatusIcon__icon"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  circle-check-mark.svg
+                </svg>
+              </div>
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
+          >
+            <button
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
+              data-testid="AddressRow__select-0"
+              type="button"
+            >
+              <div
+                class="flex items-center space-x-2"
+              >
+                Vote
+              </div>
+            </button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;
+
+exports[`AddressRow should render with isCompact = false when the maximum votes is greater than 1 1`] = `
+<DocumentFragment>
+  <table>
+    <tbody>
+      <tr
+        class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
+        data-testid="TableRow"
+      >
+        <td>
+          <div
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn font-bold space-x-4"
+          >
+            <div
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0 flex-shrink-0"
+              data-testid="Avatar"
+            >
+              <div
+                class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+              >
+                <img
+                  alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                  title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                />
+              </div>
+            </div>
+            <div
+              class="w-40 flex-1"
+            >
+              <div
+                class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+              >
+                <span
+                  class="font-semibold text-base text-theme-text"
+                  data-testid="Address__alias"
                 >
-                  <svg>
-                    star-filled.svg
-                  </svg>
-                </div>
+                  <span
+                    class="TruncateEnd__Wrapper-sc-1hhdnni-0"
+                    data-testid="TruncateEnd"
+                  >
+                    ARK Wallet 1
+                  </span>
+                </span>
+                <span
+                  class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  data-testid="Address__address"
+                >
+                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                </span>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center space-x-2"
+          >
+            <div
+              class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
+              data-testid="WalletIcon__Ledger"
+            >
+              <div
+                class="sc-bdnxRM NjstW"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  ledger.svg
+                </svg>
+              </div>
+            </div>
+            <div
+              class="inline-block p-1 text-theme-warning-400"
+              data-testid="WalletIcon__Starred"
+            >
+              <div
+                class="sc-bdnxRM NjstW"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  star-filled.svg
+                </svg>
               </div>
             </div>
           </div>
@@ -1368,7 +1543,7 @@ exports[`AddressRow should render with isCompact = false when the maximum votes 
               class="flex items-center -space-x-2"
             >
               <span
-                class="inline-block"
+                class="flex"
               >
                 <div
                   class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
@@ -1386,7 +1561,7 @@ exports[`AddressRow should render with isCompact = false when the maximum votes 
                 </div>
               </span>
               <span
-                class="inline-block"
+                class="flex"
               >
                 <div
                   class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
@@ -1404,7 +1579,7 @@ exports[`AddressRow should render with isCompact = false when the maximum votes 
                 </div>
               </span>
               <span
-                class="inline-block"
+                class="flex"
               >
                 <div
                   class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
@@ -1422,7 +1597,7 @@ exports[`AddressRow should render with isCompact = false when the maximum votes 
                 </div>
               </span>
               <span
-                class="inline-block"
+                class="flex"
               >
                 <div
                   class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
@@ -1493,7 +1668,7 @@ exports[`AddressRow should render with isCompact = false when the wallet has man
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn font-bold space-x-4"
           >
             <div
               class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0 flex-shrink-0"
@@ -1538,36 +1713,34 @@ exports[`AddressRow should render with isCompact = false when the wallet has man
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center text-sm font-bold text-center align-middle"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center space-x-2"
           >
             <div
-              class="inline-flex items-center space-x-2"
+              class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
+              data-testid="WalletIcon__Ledger"
             >
               <div
-                class="inline-block p-1 text-theme-secondary-600"
+                class="sc-bdnxRM NjstW"
+                height="20"
+                width="20"
               >
-                <div
-                  class="sc-bdnxRM NjstW"
-                  height="20"
-                  width="20"
-                >
-                  <svg>
-                    ledger.svg
-                  </svg>
-                </div>
+                <svg>
+                  ledger.svg
+                </svg>
               </div>
+            </div>
+            <div
+              class="inline-block p-1 text-theme-warning-400"
+              data-testid="WalletIcon__Starred"
+            >
               <div
-                class="inline-block p-1 text-theme-warning-400"
+                class="sc-bdnxRM NjstW"
+                height="20"
+                width="20"
               >
-                <div
-                  class="sc-bdnxRM NjstW"
-                  height="20"
-                  width="20"
-                >
-                  <svg>
-                    star-filled.svg
-                  </svg>
-                </div>
+                <svg>
+                  star-filled.svg
+                </svg>
               </div>
             </div>
           </div>
@@ -1592,7 +1765,7 @@ exports[`AddressRow should render with isCompact = false when the wallet has man
               class="flex items-center -space-x-2"
             >
               <span
-                class="inline-block"
+                class="flex"
               >
                 <div
                   class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
@@ -1610,7 +1783,7 @@ exports[`AddressRow should render with isCompact = false when the wallet has man
                 </div>
               </span>
               <span
-                class="inline-block"
+                class="flex"
               >
                 <div
                   class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
@@ -1628,7 +1801,7 @@ exports[`AddressRow should render with isCompact = false when the wallet has man
                 </div>
               </span>
               <span
-                class="inline-block"
+                class="flex"
               >
                 <div
                   class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
@@ -1708,7 +1881,7 @@ exports[`AddressRow should render with isCompact = true when the maximum votes i
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC space-x-3"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC font-bold space-x-3"
           >
             <div
               class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk flex-shrink-0 flex-shrink-0"
@@ -1753,36 +1926,34 @@ exports[`AddressRow should render with isCompact = true when the maximum votes i
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center text-sm font-bold text-center align-middle"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center space-x-2"
           >
             <div
-              class="inline-flex items-center space-x-2"
+              class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
+              data-testid="WalletIcon__Ledger"
             >
               <div
-                class="inline-block p-1 text-theme-secondary-600"
+                class="sc-bdnxRM NjstW"
+                height="20"
+                width="20"
               >
-                <div
-                  class="sc-bdnxRM NjstW"
-                  height="20"
-                  width="20"
-                >
-                  <svg>
-                    ledger.svg
-                  </svg>
-                </div>
+                <svg>
+                  ledger.svg
+                </svg>
               </div>
+            </div>
+            <div
+              class="inline-block p-1 text-theme-warning-400"
+              data-testid="WalletIcon__Starred"
+            >
               <div
-                class="inline-block p-1 text-theme-warning-400"
+                class="sc-bdnxRM NjstW"
+                height="20"
+                width="20"
               >
-                <div
-                  class="sc-bdnxRM NjstW"
-                  height="20"
-                  width="20"
-                >
-                  <svg>
-                    star-filled.svg
-                  </svg>
-                </div>
+                <svg>
+                  star-filled.svg
+                </svg>
               </div>
             </div>
           </div>
@@ -1807,7 +1978,7 @@ exports[`AddressRow should render with isCompact = true when the maximum votes i
               class="flex items-center -space-x-1"
             >
               <span
-                class="inline-block"
+                class="flex"
               >
                 <div
                   class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-2 ring-theme-background flex-shrink-0"
@@ -1825,7 +1996,7 @@ exports[`AddressRow should render with isCompact = true when the maximum votes i
                 </div>
               </span>
               <span
-                class="inline-block"
+                class="flex"
               >
                 <div
                   class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-2 ring-theme-background flex-shrink-0"
@@ -1843,7 +2014,7 @@ exports[`AddressRow should render with isCompact = true when the maximum votes i
                 </div>
               </span>
               <span
-                class="inline-block"
+                class="flex"
               >
                 <div
                   class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-2 ring-theme-background flex-shrink-0"
@@ -1861,7 +2032,7 @@ exports[`AddressRow should render with isCompact = true when the maximum votes i
                 </div>
               </span>
               <span
-                class="inline-block"
+                class="flex"
               >
                 <div
                   class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-2 ring-theme-background flex-shrink-0"
@@ -1932,7 +2103,7 @@ exports[`AddressRow should render with isCompact = true when the wallet has many
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC space-x-3"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC font-bold space-x-3"
           >
             <div
               class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk flex-shrink-0 flex-shrink-0"
@@ -1977,36 +2148,34 @@ exports[`AddressRow should render with isCompact = true when the wallet has many
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center text-sm font-bold text-center align-middle"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center space-x-2"
           >
             <div
-              class="inline-flex items-center space-x-2"
+              class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
+              data-testid="WalletIcon__Ledger"
             >
               <div
-                class="inline-block p-1 text-theme-secondary-600"
+                class="sc-bdnxRM NjstW"
+                height="20"
+                width="20"
               >
-                <div
-                  class="sc-bdnxRM NjstW"
-                  height="20"
-                  width="20"
-                >
-                  <svg>
-                    ledger.svg
-                  </svg>
-                </div>
+                <svg>
+                  ledger.svg
+                </svg>
               </div>
+            </div>
+            <div
+              class="inline-block p-1 text-theme-warning-400"
+              data-testid="WalletIcon__Starred"
+            >
               <div
-                class="inline-block p-1 text-theme-warning-400"
+                class="sc-bdnxRM NjstW"
+                height="20"
+                width="20"
               >
-                <div
-                  class="sc-bdnxRM NjstW"
-                  height="20"
-                  width="20"
-                >
-                  <svg>
-                    star-filled.svg
-                  </svg>
-                </div>
+                <svg>
+                  star-filled.svg
+                </svg>
               </div>
             </div>
           </div>
@@ -2031,7 +2200,7 @@ exports[`AddressRow should render with isCompact = true when the wallet has many
               class="flex items-center -space-x-1"
             >
               <span
-                class="inline-block"
+                class="flex"
               >
                 <div
                   class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-2 ring-theme-background flex-shrink-0"
@@ -2049,7 +2218,7 @@ exports[`AddressRow should render with isCompact = true when the wallet has many
                 </div>
               </span>
               <span
-                class="inline-block"
+                class="flex"
               >
                 <div
                   class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-2 ring-theme-background flex-shrink-0"
@@ -2067,7 +2236,7 @@ exports[`AddressRow should render with isCompact = true when the wallet has many
                 </div>
               </span>
               <span
-                class="inline-block"
+                class="flex"
               >
                 <div
                   class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-2 ring-theme-background flex-shrink-0"
@@ -2120,6 +2289,352 @@ exports[`AddressRow should render with isCompact = true when the wallet has many
           >
             <button
               class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm text-theme-primary-600 hover:text-theme-primary-700 -mr-3"
+              data-testid="AddressRow__select-0"
+              type="button"
+            >
+              <div
+                class="flex items-center space-x-2"
+              >
+                Vote
+              </div>
+            </button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;
+
+exports[`AddressRow should render with resigned delegate 1`] = `
+<DocumentFragment>
+  <table>
+    <tbody>
+      <tr
+        class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
+        data-testid="TableRow"
+      >
+        <td>
+          <div
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn font-bold space-x-4"
+          >
+            <div
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0 flex-shrink-0"
+              data-testid="Avatar"
+            >
+              <div
+                class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+              >
+                <img
+                  alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                  title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                />
+              </div>
+            </div>
+            <div
+              class="w-40 flex-1"
+            >
+              <div
+                class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+              >
+                <span
+                  class="font-semibold text-base text-theme-text"
+                  data-testid="Address__alias"
+                >
+                  <span
+                    class="TruncateEnd__Wrapper-sc-1hhdnni-0"
+                    data-testid="TruncateEnd"
+                  >
+                    ARK Wallet 1
+                  </span>
+                </span>
+                <span
+                  class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  data-testid="Address__address"
+                >
+                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                </span>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center space-x-2"
+          >
+            <div
+              class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
+              data-testid="WalletIcon__Ledger"
+            >
+              <div
+                class="sc-bdnxRM NjstW"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  ledger.svg
+                </svg>
+              </div>
+            </div>
+            <div
+              class="inline-block p-1 text-theme-warning-400"
+              data-testid="WalletIcon__Starred"
+            >
+              <div
+                class="sc-bdnxRM NjstW"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  star-filled.svg
+                </svg>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end font-bold text-theme-secondary-text whitespace-nowrap"
+          >
+            <span
+              class="whitespace-nowrap"
+              data-testid="AmountCrypto"
+            >
+              33.75089801 DARK
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh font-bold space-x-4"
+          >
+            <div
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0"
+              data-testid="Avatar"
+            >
+              <div
+                class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+              >
+                <img
+                  alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                  title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                />
+              </div>
+            </div>
+            <span>
+              arkx
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center font-bold text-theme-secondary-text"
+          >
+            <span
+              class="text-theme-secondary-400"
+            >
+              N/A
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
+          >
+            <span>
+              <div
+                class="sc-bdnxRM NjstW text-theme-danger-400"
+                data-testid="StatusIcon__icon"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  circle-cross.svg
+                </svg>
+              </div>
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
+          >
+            <button
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
+              data-testid="AddressRow__select-0"
+              type="button"
+            >
+              <div
+                class="flex items-center space-x-2"
+              >
+                Vote
+              </div>
+            </button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;
+
+exports[`AddressRow should render with standby delegate 1`] = `
+<DocumentFragment>
+  <table>
+    <tbody>
+      <tr
+        class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
+        data-testid="TableRow"
+      >
+        <td>
+          <div
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn font-bold space-x-4"
+          >
+            <div
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0 flex-shrink-0"
+              data-testid="Avatar"
+            >
+              <div
+                class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+              >
+                <img
+                  alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                  title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                />
+              </div>
+            </div>
+            <div
+              class="w-40 flex-1"
+            >
+              <div
+                class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+              >
+                <span
+                  class="font-semibold text-base text-theme-text"
+                  data-testid="Address__alias"
+                >
+                  <span
+                    class="TruncateEnd__Wrapper-sc-1hhdnni-0"
+                    data-testid="TruncateEnd"
+                  >
+                    ARK Wallet 1
+                  </span>
+                </span>
+                <span
+                  class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  data-testid="Address__address"
+                >
+                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                </span>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center space-x-2"
+          >
+            <div
+              class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
+              data-testid="WalletIcon__Ledger"
+            >
+              <div
+                class="sc-bdnxRM NjstW"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  ledger.svg
+                </svg>
+              </div>
+            </div>
+            <div
+              class="inline-block p-1 text-theme-warning-400"
+              data-testid="WalletIcon__Starred"
+            >
+              <div
+                class="sc-bdnxRM NjstW"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  star-filled.svg
+                </svg>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end font-bold text-theme-secondary-text whitespace-nowrap"
+          >
+            <span
+              class="whitespace-nowrap"
+              data-testid="AmountCrypto"
+            >
+              33.75089801 DARK
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh font-bold space-x-4"
+          >
+            <div
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0"
+              data-testid="Avatar"
+            >
+              <div
+                class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+              >
+                <img
+                  alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                  title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                />
+              </div>
+            </div>
+            <span>
+              arkx
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center font-bold text-theme-secondary-text"
+          >
+            <span>
+              #100
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
+          >
+            <span>
+              <div
+                class="sc-bdnxRM NjstW text-theme-warning-300"
+                data-testid="StatusIcon__icon"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  clock.svg
+                </svg>
+              </div>
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
+          >
+            <button
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
               data-testid="AddressRow__select-0"
               type="button"
             >

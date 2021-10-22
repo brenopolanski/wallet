@@ -1,4 +1,3 @@
-import { BigNumber } from "@payvo/helpers";
 import React from "react";
 import { Route } from "react-router-dom";
 import { TransactionFixture } from "tests/fixtures/transactions";
@@ -43,30 +42,6 @@ describe("TransferDetail", () => {
 		);
 
 		expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_TRANSFER_DETAIL.TITLE);
-		expect(asFragment()).toMatchSnapshot();
-	});
-
-	it("should render as confirmed", () => {
-		const { asFragment } = renderWithRouter(
-			<Route path="/profiles/:profileId/dashboard">
-				<TransferDetail
-					isOpen={true}
-					transaction={{
-						...TransactionFixture,
-						blockId: () => "adsad12312xsd1w312e1s13203e12",
-						confirmations: () => BigNumber.ONE,
-						isConfirmed: () => true,
-					}}
-					ticker="BTC"
-				/>
-			</Route>,
-			{
-				routes: [`/profiles/${fixtureProfileId}/dashboard`],
-			},
-		);
-
-		expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_TRANSFER_DETAIL.TITLE);
-		expect(screen.getByText("Well confirmed")).toBeTruthy();
 		expect(asFragment()).toMatchSnapshot();
 	});
 

@@ -7,7 +7,7 @@ import { getOrdinalIndicator } from "./utils/evaluateOrdinalIndicator";
 import { shuffleOptions } from "./utils/shuffleOptions";
 
 export const OptionButton = styled(motion.button)`
-	${tw`font-medium rounded-lg transition-colors duration-100 border-2 border-theme-primary-100 dark:border-theme-secondary-800 p-3 focus:outline-none focus:shadow-outline hover:border-theme-primary-200 hover:dark:border-theme-secondary-700`}
+	${tw`h-14 rounded-xl transition-colors duration-100 border-2 border-theme-primary-100 dark:border-theme-secondary-800 p-3 focus:outline-none focus:shadow-outline hover:border-theme-primary-200 hover:dark:border-theme-secondary-700`}
 	will-change: transform;
 `;
 
@@ -53,7 +53,7 @@ export const MnemonicVerificationOptions = ({ handleChange, options, limit, answ
 					position,
 				})}
 			</p>
-			<div className="grid grid-cols-3 gap-2">
+			<div className="grid grid-cols-3 gap-3">
 				{shuffled.map((item, index) => (
 					<OptionButton
 						data-testid="MnemonicVerificationOptions__button"

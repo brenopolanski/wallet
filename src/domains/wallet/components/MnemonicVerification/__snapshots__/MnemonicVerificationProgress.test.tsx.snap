@@ -3,10 +3,10 @@
 exports[`MnemonicVerificationProgress should render tabs 1`] = `
 <DocumentFragment>
   <ul
-    class="flex space-x-2"
+    class="flex space-x-3"
   >
     <button
-      class="MnemonicVerificationOptions__OptionButton-sc-qja4fq-0 MnemonicVerificationProgress__TabStyled-sc-m908j-0 jZkmlH jwPopZ"
+      class="MnemonicVerificationOptions__OptionButton-sc-qja4fq-0 MnemonicVerificationProgress__TabStyled-sc-m908j-0 fzvkGS bBMKbA"
       data-testid="MnemonicVerificationProgress__Tab"
       disabled=""
     >
@@ -25,21 +25,21 @@ exports[`MnemonicVerificationProgress should render tabs 1`] = `
       </span>
     </button>
     <button
-      class="MnemonicVerificationOptions__OptionButton-sc-qja4fq-0 MnemonicVerificationProgress__TabStyled-sc-m908j-0 jZkmlH ktTrxW"
+      class="MnemonicVerificationOptions__OptionButton-sc-qja4fq-0 MnemonicVerificationProgress__TabStyled-sc-m908j-0 fzvkGS hhHogX"
       data-testid="MnemonicVerificationProgress__Tab"
       disabled=""
     >
       <span>
-        The 2nd word
+        The 2nd Word
       </span>
     </button>
     <button
-      class="MnemonicVerificationOptions__OptionButton-sc-qja4fq-0 MnemonicVerificationProgress__TabStyled-sc-m908j-0 jZkmlH dowRlk"
+      class="MnemonicVerificationOptions__OptionButton-sc-qja4fq-0 MnemonicVerificationProgress__TabStyled-sc-m908j-0 fzvkGS fnZKrA"
       data-testid="MnemonicVerificationProgress__Tab"
       disabled=""
     >
       <span>
-        The 3rd word
+        The 3rd Word
       </span>
     </button>
   </ul>

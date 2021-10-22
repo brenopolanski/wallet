@@ -1,10 +1,10 @@
 import { Modal } from "app/components/Modal";
 import {
 	TransactionAmount,
-	TransactionConfirmations,
 	TransactionExplorerLink,
 	TransactionFee,
 	TransactionSender,
+	TransactionStatus,
 	TransactionTimestamp,
 } from "domains/transaction/components/TransactionDetail";
 import { TransactionDetailProperties } from "domains/transaction/components/TransactionDetailModal/TransactionDetailModal.models";
@@ -40,7 +40,7 @@ export const UnlockTokenDetail = ({ isOpen, transaction, onClose }: TransactionD
 
 			{!!timestamp && <TransactionTimestamp timestamp={timestamp} />}
 
-			<TransactionConfirmations transaction={transaction} />
+			<TransactionStatus transaction={transaction} />
 		</Modal>
 	);
 };

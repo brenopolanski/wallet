@@ -74,10 +74,10 @@ describe("RecipientList", () => {
 		const removeButtons = screen.getAllByTestId("recipient-list__remove-recipient");
 
 		for (const [index, removeButton] of removeButtons.entries()) {
-			if (!index) {
-				expect(removeButton).toBeDisabled();
-			} else {
+			if (index) {
 				expect(removeButton).not.toBeDisabled();
+			} else {
+				expect(removeButton).toBeDisabled();
 			}
 		}
 

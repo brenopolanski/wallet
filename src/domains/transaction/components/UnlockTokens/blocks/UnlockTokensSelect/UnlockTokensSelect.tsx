@@ -23,7 +23,7 @@ interface Properties {
 	isFirstLoad?: boolean;
 }
 
-const SKELETON_ROWS = new Array<UnlockableBalanceSkeleton>(3).fill({});
+const SKELETON_ROWS = Array.from<UnlockableBalanceSkeleton>({ length: 3 }).fill({});
 
 export const UnlockTokensSelect: React.FC<Properties> = ({
 	wallet,
@@ -110,10 +110,10 @@ export const UnlockTokensSelect: React.FC<Properties> = ({
 	};
 
 	const onToggleAll = (): void => {
-		if (!selectableObjects.some((item) => selectedIds.includes(item.id))) {
-			setSelectedIds(selectableObjects.map((item) => item.id));
-		} else {
+		if (selectableObjects.some((item) => selectedIds.includes(item.id))) {
 			setSelectedIds([]);
+		} else {
+			setSelectedIds(selectableObjects.map((item) => item.id));
 		}
 	};
 

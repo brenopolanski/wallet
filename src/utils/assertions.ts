@@ -1,4 +1,5 @@
 import { Contracts, Profile } from "@payvo/profiles";
+import { ReadOnlyWallet } from "@payvo/profiles/distribution/read-only-wallet";
 import { Wallet } from "@payvo/profiles/distribution/wallet";
 import { Coins, Networks } from "@payvo/sdk";
 import { AssertionError } from "assert";
@@ -16,6 +17,14 @@ export function assertWallet(wallet?: Contracts.IReadWriteWallet): asserts walle
 	if (!(wallet instanceof Wallet)) {
 		throw new AssertionError({
 			message: `Expected 'wallet' to be Contracts.IReadWriteWallet, but received ${wallet}`,
+		});
+	}
+}
+
+export function assertReadOnlyWallet(wallet?: Contracts.IReadOnlyWallet): asserts wallet is ReadOnlyWallet {
+	if (!(wallet instanceof ReadOnlyWallet)) {
+		throw new AssertionError({
+			message: `Expected 'wallet' to be Contracts.IReadOnlyWallet, but received ${wallet}`,
 		});
 	}
 }

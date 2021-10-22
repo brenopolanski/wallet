@@ -26,7 +26,7 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -813,7 +813,7 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                                     class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC space-x-3 text-theme-secondary-500 whitespace-nowrap"
                                   >
                                     <span
-                                      data-testid="timeago"
+                                      data-testid="TimeAgo"
                                     >
                                       A few seconds ago
                                     </span>
@@ -955,7 +955,7 @@ exports[`SendTransfer should error if wrong mnemonic 1`] = `
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -2027,7 +2027,7 @@ exports[`SendTransfer should render form and use location state 1`] = `
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -3020,7 +3020,7 @@ exports[`SendTransfer should render form and use location state without memo 1`]
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -5355,6 +5355,27 @@ exports[`SendTransfer should render form step without test networks 1`] = `
                     </div>
                   </div>
                 </li>
+                <li
+                  class="inline-block cursor-pointer h-18 cursor-not-allowed"
+                  data-testid="SelectNetwork__NetworkIcon--container"
+                >
+                  <div
+                    aria-label="Lisk"
+                    class="w-full h-full flex justify-center items-center border-2 rounded-xl border-theme-primary-100 dark:border-theme-secondary-800 text-theme-primary-600"
+                    data-testid="NetworkIcon-LSK-lsk.mainnet"
+                  >
+                    <div
+                      class="sc-bdnxRM NjstW"
+                      data-testid="NetworkIcon__icon"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        lsk.svg
+                      </svg>
+                    </div>
+                  </div>
+                </li>
               </ul>
             </div>
             <div
@@ -5437,6 +5458,27 @@ exports[`SendTransfer should render form step without test networks 1`] = `
                     >
                       <svg>
                         bind.svg
+                      </svg>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="inline-block cursor-pointer h-18 cursor-not-allowed"
+                  data-testid="SelectNetwork__NetworkIcon--container"
+                >
+                  <div
+                    aria-label="Lisk Testnet"
+                    class="w-full h-full flex justify-center items-center border-2 rounded-xl border-theme-primary-100 dark:border-theme-secondary-800 text-theme-secondary-700"
+                    data-testid="NetworkIcon-LSK-lsk.testnet"
+                  >
+                    <div
+                      class="sc-bdnxRM NjstW"
+                      data-testid="NetworkIcon__icon"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        lsk.svg
                       </svg>
                     </div>
                   </div>
@@ -5949,7 +5991,7 @@ exports[`SendTransfer should render network selection without selected wallet 1`
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -6518,6 +6560,27 @@ exports[`SendTransfer should render network step without test networks 1`] = `
                   >
                     <svg>
                       bind.svg
+                    </svg>
+                  </div>
+                </div>
+              </li>
+              <li
+                class="inline-block cursor-pointer h-18"
+                data-testid="SelectNetwork__NetworkIcon--container"
+              >
+                <div
+                  aria-label="Lisk"
+                  class="w-full h-full flex justify-center items-center border-2 rounded-xl border-theme-primary-100 dark:border-theme-secondary-800 text-theme-primary-600"
+                  data-testid="NetworkIcon-LSK-lsk.mainnet"
+                >
+                  <div
+                    class="sc-bdnxRM NjstW"
+                    data-testid="NetworkIcon__icon"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      lsk.svg
                     </svg>
                   </div>
                 </div>
@@ -8264,7 +8327,7 @@ exports[`SendTransfer should select a cryptoasset and select sender without wall
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -9255,7 +9318,7 @@ exports[`SendTransfer should select cryptoasset 1`] = `
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -9726,7 +9789,7 @@ exports[`SendTransfer should send a single transfer 1`] = `
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -10391,7 +10454,7 @@ exports[`SendTransfer should send a single transfer 2`] = `
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -11056,7 +11119,7 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -11721,7 +11784,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -12508,7 +12571,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                                     class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC space-x-3 text-theme-secondary-500 whitespace-nowrap"
                                   >
                                     <span
-                                      data-testid="timeago"
+                                      data-testid="TimeAgo"
                                     >
                                       A few seconds ago
                                     </span>
@@ -12590,7 +12653,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                                     class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC space-x-3 text-theme-secondary-500 whitespace-nowrap"
                                   >
                                     <span
-                                      data-testid="timeago"
+                                      data-testid="TimeAgo"
                                     >
                                       A few seconds ago
                                     </span>
@@ -12724,7 +12787,7 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -13389,7 +13452,7 @@ exports[`SendTransfer should send a single transfer with a high fee by confirmin
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -14054,7 +14117,7 @@ exports[`SendTransfer should send a single transfer with a low fee by confirming
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -14719,7 +14782,7 @@ exports[`SendTransfer should show error step and go back 1`] = `
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"

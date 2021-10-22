@@ -3,7 +3,6 @@
 exports[`WalletOverviewStep Render step should render 1`] = `
 <DocumentFragment>
   <section
-    class="space-y-8"
     data-testid="CreateWallet__WalletOverviewStep"
   >
     <div
@@ -21,7 +20,7 @@ exports[`WalletOverviewStep Render step should render 1`] = `
       </div>
     </div>
     <div
-      class="flex overflow-hidden flex-col space-y-4 rounded-lg p-4 bg-theme-warning-50 dark:bg-theme-secondary-800 sm:space-y-0 sm:space-x-4 sm:flex-row sm:items-center"
+      class="flex overflow-hidden flex-col space-y-4 rounded-lg p-4 bg-theme-warning-50 dark:bg-theme-secondary-800 sm:space-y-0 sm:space-x-4 sm:flex-row sm:items-center mt-6"
     >
       <div
         class="h-11 w-11 flex flex-shrink-0 items-center justify-center rounded-lg text-white bg-theme-warning-600"
@@ -46,410 +45,388 @@ exports[`WalletOverviewStep Render step should render 1`] = `
         </div>
       </div>
     </div>
-    <ul
-      class="grid grid-cols-2 gap-x-3 gap-y-5 md:grid-cols-3 lg:grid-cols-4"
-    >
-      <li
-        class="relative p-4 rounded border border-theme-secondary-400 dark:border-theme-secondary-700"
-        data-testid="MnemonicList__item"
-      >
-        <span
-          class="absolute top-0 left-0 px-1 text-xs font-medium transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
-        >
-          1
-        </span>
-        <span
-          class="font-medium"
-        >
-          skin
-        </span>
-      </li>
-      <li
-        class="relative p-4 rounded border border-theme-secondary-400 dark:border-theme-secondary-700"
-        data-testid="MnemonicList__item"
-      >
-        <span
-          class="absolute top-0 left-0 px-1 text-xs font-medium transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
-        >
-          2
-        </span>
-        <span
-          class="font-medium"
-        >
-          fortune
-        </span>
-      </li>
-      <li
-        class="relative p-4 rounded border border-theme-secondary-400 dark:border-theme-secondary-700"
-        data-testid="MnemonicList__item"
-      >
-        <span
-          class="absolute top-0 left-0 px-1 text-xs font-medium transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
-        >
-          3
-        </span>
-        <span
-          class="font-medium"
-        >
-          security
-        </span>
-      </li>
-      <li
-        class="relative p-4 rounded border border-theme-secondary-400 dark:border-theme-secondary-700"
-        data-testid="MnemonicList__item"
-      >
-        <span
-          class="absolute top-0 left-0 px-1 text-xs font-medium transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
-        >
-          4
-        </span>
-        <span
-          class="font-medium"
-        >
-          mom
-        </span>
-      </li>
-      <li
-        class="relative p-4 rounded border border-theme-secondary-400 dark:border-theme-secondary-700"
-        data-testid="MnemonicList__item"
-      >
-        <span
-          class="absolute top-0 left-0 px-1 text-xs font-medium transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
-        >
-          5
-        </span>
-        <span
-          class="font-medium"
-        >
-          coin
-        </span>
-      </li>
-      <li
-        class="relative p-4 rounded border border-theme-secondary-400 dark:border-theme-secondary-700"
-        data-testid="MnemonicList__item"
-      >
-        <span
-          class="absolute top-0 left-0 px-1 text-xs font-medium transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
-        >
-          6
-        </span>
-        <span
-          class="font-medium"
-        >
-          hurdle
-        </span>
-      </li>
-      <li
-        class="relative p-4 rounded border border-theme-secondary-400 dark:border-theme-secondary-700"
-        data-testid="MnemonicList__item"
-      >
-        <span
-          class="absolute top-0 left-0 px-1 text-xs font-medium transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
-        >
-          7
-        </span>
-        <span
-          class="font-medium"
-        >
-          click
-        </span>
-      </li>
-      <li
-        class="relative p-4 rounded border border-theme-secondary-400 dark:border-theme-secondary-700"
-        data-testid="MnemonicList__item"
-      >
-        <span
-          class="absolute top-0 left-0 px-1 text-xs font-medium transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
-        >
-          8
-        </span>
-        <span
-          class="font-medium"
-        >
-          emotion
-        </span>
-      </li>
-      <li
-        class="relative p-4 rounded border border-theme-secondary-400 dark:border-theme-secondary-700"
-        data-testid="MnemonicList__item"
-      >
-        <span
-          class="absolute top-0 left-0 px-1 text-xs font-medium transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
-        >
-          9
-        </span>
-        <span
-          class="font-medium"
-        >
-          heart
-        </span>
-      </li>
-      <li
-        class="relative p-4 rounded border border-theme-secondary-400 dark:border-theme-secondary-700"
-        data-testid="MnemonicList__item"
-      >
-        <span
-          class="absolute top-0 left-0 px-1 text-xs font-medium transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
-        >
-          10
-        </span>
-        <span
-          class="font-medium"
-        >
-          brisk
-        </span>
-      </li>
-      <li
-        class="relative p-4 rounded border border-theme-secondary-400 dark:border-theme-secondary-700"
-        data-testid="MnemonicList__item"
-      >
-        <span
-          class="absolute top-0 left-0 px-1 text-xs font-medium transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
-        >
-          11
-        </span>
-        <span
-          class="font-medium"
-        >
-          exact
-        </span>
-      </li>
-      <li
-        class="relative p-4 rounded border border-theme-secondary-400 dark:border-theme-secondary-700"
-        data-testid="MnemonicList__item"
-      >
-        <span
-          class="absolute top-0 left-0 px-1 text-xs font-medium transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
-        >
-          12
-        </span>
-        <span
-          class="font-medium"
-        >
-          rather
-        </span>
-      </li>
-      <li
-        class="relative p-4 rounded border border-theme-secondary-400 dark:border-theme-secondary-700"
-        data-testid="MnemonicList__item"
-      >
-        <span
-          class="absolute top-0 left-0 px-1 text-xs font-medium transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
-        >
-          13
-        </span>
-        <span
-          class="font-medium"
-        >
-          code
-        </span>
-      </li>
-      <li
-        class="relative p-4 rounded border border-theme-secondary-400 dark:border-theme-secondary-700"
-        data-testid="MnemonicList__item"
-      >
-        <span
-          class="absolute top-0 left-0 px-1 text-xs font-medium transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
-        >
-          14
-        </span>
-        <span
-          class="font-medium"
-        >
-          feature
-        </span>
-      </li>
-      <li
-        class="relative p-4 rounded border border-theme-secondary-400 dark:border-theme-secondary-700"
-        data-testid="MnemonicList__item"
-      >
-        <span
-          class="absolute top-0 left-0 px-1 text-xs font-medium transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
-        >
-          15
-        </span>
-        <span
-          class="font-medium"
-        >
-          era
-        </span>
-      </li>
-      <li
-        class="relative p-4 rounded border border-theme-secondary-400 dark:border-theme-secondary-700"
-        data-testid="MnemonicList__item"
-      >
-        <span
-          class="absolute top-0 left-0 px-1 text-xs font-medium transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
-        >
-          16
-        </span>
-        <span
-          class="font-medium"
-        >
-          leopard
-        </span>
-      </li>
-      <li
-        class="relative p-4 rounded border border-theme-secondary-400 dark:border-theme-secondary-700"
-        data-testid="MnemonicList__item"
-      >
-        <span
-          class="absolute top-0 left-0 px-1 text-xs font-medium transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
-        >
-          17
-        </span>
-        <span
-          class="font-medium"
-        >
-          grocery
-        </span>
-      </li>
-      <li
-        class="relative p-4 rounded border border-theme-secondary-400 dark:border-theme-secondary-700"
-        data-testid="MnemonicList__item"
-      >
-        <span
-          class="absolute top-0 left-0 px-1 text-xs font-medium transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
-        >
-          18
-        </span>
-        <span
-          class="font-medium"
-        >
-          tide
-        </span>
-      </li>
-      <li
-        class="relative p-4 rounded border border-theme-secondary-400 dark:border-theme-secondary-700"
-        data-testid="MnemonicList__item"
-      >
-        <span
-          class="absolute top-0 left-0 px-1 text-xs font-medium transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
-        >
-          19
-        </span>
-        <span
-          class="font-medium"
-        >
-          gift
-        </span>
-      </li>
-      <li
-        class="relative p-4 rounded border border-theme-secondary-400 dark:border-theme-secondary-700"
-        data-testid="MnemonicList__item"
-      >
-        <span
-          class="absolute top-0 left-0 px-1 text-xs font-medium transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
-        >
-          20
-        </span>
-        <span
-          class="font-medium"
-        >
-          power
-        </span>
-      </li>
-      <li
-        class="relative p-4 rounded border border-theme-secondary-400 dark:border-theme-secondary-700"
-        data-testid="MnemonicList__item"
-      >
-        <span
-          class="absolute top-0 left-0 px-1 text-xs font-medium transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
-        >
-          21
-        </span>
-        <span
-          class="font-medium"
-        >
-          lawsuit
-        </span>
-      </li>
-      <li
-        class="relative p-4 rounded border border-theme-secondary-400 dark:border-theme-secondary-700"
-        data-testid="MnemonicList__item"
-      >
-        <span
-          class="absolute top-0 left-0 px-1 text-xs font-medium transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
-        >
-          22
-        </span>
-        <span
-          class="font-medium"
-        >
-          sight
-        </span>
-      </li>
-      <li
-        class="relative p-4 rounded border border-theme-secondary-400 dark:border-theme-secondary-700"
-        data-testid="MnemonicList__item"
-      >
-        <span
-          class="absolute top-0 left-0 px-1 text-xs font-medium transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
-        >
-          23
-        </span>
-        <span
-          class="font-medium"
-        >
-          vehicle
-        </span>
-      </li>
-      <li
-        class="relative p-4 rounded border border-theme-secondary-400 dark:border-theme-secondary-700"
-        data-testid="MnemonicList__item"
-      >
-        <span
-          class="absolute top-0 left-0 px-1 text-xs font-medium transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
-        >
-          24
-        </span>
-        <span
-          class="font-medium"
-        >
-          coin
-        </span>
-      </li>
-    </ul>
     <div
-      class="Divider-sc-17ehhxk-0 hZpmpp border-theme-secondary-300 dark:border-theme-secondary-800"
-      type="horizontal"
-    />
-    <div
-      class="flex justify-between items-center"
+      class="mt-8 space-y-8"
     >
+      <ul
+        class="grid grid-cols-2 gap-x-3 gap-y-5 md:grid-cols-3 lg:grid-cols-4"
+      >
+        <li
+          class="relative p-4 rounded border border-theme-secondary-400 dark:border-theme-secondary-700"
+          data-testid="MnemonicList__item"
+        >
+          <span
+            class="absolute top-0 left-0 px-1 text-xs font-semibold transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
+          >
+            1
+          </span>
+          <span>
+            skin
+          </span>
+        </li>
+        <li
+          class="relative p-4 rounded border border-theme-secondary-400 dark:border-theme-secondary-700"
+          data-testid="MnemonicList__item"
+        >
+          <span
+            class="absolute top-0 left-0 px-1 text-xs font-semibold transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
+          >
+            2
+          </span>
+          <span>
+            fortune
+          </span>
+        </li>
+        <li
+          class="relative p-4 rounded border border-theme-secondary-400 dark:border-theme-secondary-700"
+          data-testid="MnemonicList__item"
+        >
+          <span
+            class="absolute top-0 left-0 px-1 text-xs font-semibold transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
+          >
+            3
+          </span>
+          <span>
+            security
+          </span>
+        </li>
+        <li
+          class="relative p-4 rounded border border-theme-secondary-400 dark:border-theme-secondary-700"
+          data-testid="MnemonicList__item"
+        >
+          <span
+            class="absolute top-0 left-0 px-1 text-xs font-semibold transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
+          >
+            4
+          </span>
+          <span>
+            mom
+          </span>
+        </li>
+        <li
+          class="relative p-4 rounded border border-theme-secondary-400 dark:border-theme-secondary-700"
+          data-testid="MnemonicList__item"
+        >
+          <span
+            class="absolute top-0 left-0 px-1 text-xs font-semibold transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
+          >
+            5
+          </span>
+          <span>
+            coin
+          </span>
+        </li>
+        <li
+          class="relative p-4 rounded border border-theme-secondary-400 dark:border-theme-secondary-700"
+          data-testid="MnemonicList__item"
+        >
+          <span
+            class="absolute top-0 left-0 px-1 text-xs font-semibold transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
+          >
+            6
+          </span>
+          <span>
+            hurdle
+          </span>
+        </li>
+        <li
+          class="relative p-4 rounded border border-theme-secondary-400 dark:border-theme-secondary-700"
+          data-testid="MnemonicList__item"
+        >
+          <span
+            class="absolute top-0 left-0 px-1 text-xs font-semibold transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
+          >
+            7
+          </span>
+          <span>
+            click
+          </span>
+        </li>
+        <li
+          class="relative p-4 rounded border border-theme-secondary-400 dark:border-theme-secondary-700"
+          data-testid="MnemonicList__item"
+        >
+          <span
+            class="absolute top-0 left-0 px-1 text-xs font-semibold transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
+          >
+            8
+          </span>
+          <span>
+            emotion
+          </span>
+        </li>
+        <li
+          class="relative p-4 rounded border border-theme-secondary-400 dark:border-theme-secondary-700"
+          data-testid="MnemonicList__item"
+        >
+          <span
+            class="absolute top-0 left-0 px-1 text-xs font-semibold transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
+          >
+            9
+          </span>
+          <span>
+            heart
+          </span>
+        </li>
+        <li
+          class="relative p-4 rounded border border-theme-secondary-400 dark:border-theme-secondary-700"
+          data-testid="MnemonicList__item"
+        >
+          <span
+            class="absolute top-0 left-0 px-1 text-xs font-semibold transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
+          >
+            10
+          </span>
+          <span>
+            brisk
+          </span>
+        </li>
+        <li
+          class="relative p-4 rounded border border-theme-secondary-400 dark:border-theme-secondary-700"
+          data-testid="MnemonicList__item"
+        >
+          <span
+            class="absolute top-0 left-0 px-1 text-xs font-semibold transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
+          >
+            11
+          </span>
+          <span>
+            exact
+          </span>
+        </li>
+        <li
+          class="relative p-4 rounded border border-theme-secondary-400 dark:border-theme-secondary-700"
+          data-testid="MnemonicList__item"
+        >
+          <span
+            class="absolute top-0 left-0 px-1 text-xs font-semibold transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
+          >
+            12
+          </span>
+          <span>
+            rather
+          </span>
+        </li>
+        <li
+          class="relative p-4 rounded border border-theme-secondary-400 dark:border-theme-secondary-700"
+          data-testid="MnemonicList__item"
+        >
+          <span
+            class="absolute top-0 left-0 px-1 text-xs font-semibold transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
+          >
+            13
+          </span>
+          <span>
+            code
+          </span>
+        </li>
+        <li
+          class="relative p-4 rounded border border-theme-secondary-400 dark:border-theme-secondary-700"
+          data-testid="MnemonicList__item"
+        >
+          <span
+            class="absolute top-0 left-0 px-1 text-xs font-semibold transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
+          >
+            14
+          </span>
+          <span>
+            feature
+          </span>
+        </li>
+        <li
+          class="relative p-4 rounded border border-theme-secondary-400 dark:border-theme-secondary-700"
+          data-testid="MnemonicList__item"
+        >
+          <span
+            class="absolute top-0 left-0 px-1 text-xs font-semibold transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
+          >
+            15
+          </span>
+          <span>
+            era
+          </span>
+        </li>
+        <li
+          class="relative p-4 rounded border border-theme-secondary-400 dark:border-theme-secondary-700"
+          data-testid="MnemonicList__item"
+        >
+          <span
+            class="absolute top-0 left-0 px-1 text-xs font-semibold transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
+          >
+            16
+          </span>
+          <span>
+            leopard
+          </span>
+        </li>
+        <li
+          class="relative p-4 rounded border border-theme-secondary-400 dark:border-theme-secondary-700"
+          data-testid="MnemonicList__item"
+        >
+          <span
+            class="absolute top-0 left-0 px-1 text-xs font-semibold transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
+          >
+            17
+          </span>
+          <span>
+            grocery
+          </span>
+        </li>
+        <li
+          class="relative p-4 rounded border border-theme-secondary-400 dark:border-theme-secondary-700"
+          data-testid="MnemonicList__item"
+        >
+          <span
+            class="absolute top-0 left-0 px-1 text-xs font-semibold transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
+          >
+            18
+          </span>
+          <span>
+            tide
+          </span>
+        </li>
+        <li
+          class="relative p-4 rounded border border-theme-secondary-400 dark:border-theme-secondary-700"
+          data-testid="MnemonicList__item"
+        >
+          <span
+            class="absolute top-0 left-0 px-1 text-xs font-semibold transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
+          >
+            19
+          </span>
+          <span>
+            gift
+          </span>
+        </li>
+        <li
+          class="relative p-4 rounded border border-theme-secondary-400 dark:border-theme-secondary-700"
+          data-testid="MnemonicList__item"
+        >
+          <span
+            class="absolute top-0 left-0 px-1 text-xs font-semibold transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
+          >
+            20
+          </span>
+          <span>
+            power
+          </span>
+        </li>
+        <li
+          class="relative p-4 rounded border border-theme-secondary-400 dark:border-theme-secondary-700"
+          data-testid="MnemonicList__item"
+        >
+          <span
+            class="absolute top-0 left-0 px-1 text-xs font-semibold transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
+          >
+            21
+          </span>
+          <span>
+            lawsuit
+          </span>
+        </li>
+        <li
+          class="relative p-4 rounded border border-theme-secondary-400 dark:border-theme-secondary-700"
+          data-testid="MnemonicList__item"
+        >
+          <span
+            class="absolute top-0 left-0 px-1 text-xs font-semibold transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
+          >
+            22
+          </span>
+          <span>
+            sight
+          </span>
+        </li>
+        <li
+          class="relative p-4 rounded border border-theme-secondary-400 dark:border-theme-secondary-700"
+          data-testid="MnemonicList__item"
+        >
+          <span
+            class="absolute top-0 left-0 px-1 text-xs font-semibold transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
+          >
+            23
+          </span>
+          <span>
+            vehicle
+          </span>
+        </li>
+        <li
+          class="relative p-4 rounded border border-theme-secondary-400 dark:border-theme-secondary-700"
+          data-testid="MnemonicList__item"
+        >
+          <span
+            class="absolute top-0 left-0 px-1 text-xs font-semibold transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
+          >
+            24
+          </span>
+          <span>
+            coin
+          </span>
+        </li>
+      </ul>
       <div
-        class="space-y-2"
+        class="Divider-sc-17ehhxk-0 hZpmpp border-theme-secondary-300 dark:border-theme-secondary-800"
+        type="horizontal"
+      />
+      <div
+        class="flex justify-between items-center"
       >
-        <span
-          class="text-lg font-semibold"
+        <div
+          class="space-y-2"
         >
-          Copy or Download Mnemonic Passphrase
-        </span>
-        <p
-          class="text-sm text-theme-secondary-text"
+          <span
+            class="text-lg font-semibold text-theme-secondary-text"
+          >
+            Copy or Download Mnemonic Passphrase
+          </span>
+          <p
+            class="text-sm text-theme-secondary-500"
+          >
+            You can copy or download your mnemonic, but store it safely.
+          </p>
+        </div>
+        <div
+          class="sc-bdnxRM cTrAIK text-black dark:text-theme-secondary-600"
+          height="40"
+          width="40"
         >
-          You can copy or download your mnemonic, but store it safely.
-        </p>
+          <svg>
+            frame-key.svg
+          </svg>
+        </div>
       </div>
       <div
-        class="sc-bdnxRM cTrAIK text-black dark:text-theme-secondary-600"
-        height="40"
-        width="40"
+        class="flex justify-end space-x-3 w-full"
       >
-        <svg>
-          frame-key.svg
-        </svg>
-      </div>
-    </div>
-    <div
-      class="flex justify-end space-x-3 w-full"
-    >
-      <div
-        class="relative"
-      >
+        <div
+          class="relative"
+        >
+          <button
+            class="ClipboardButton__StyledButton-sc-cammp1-0 dqAYlb"
+            data-testid="CreateWallet__copy"
+            type="button"
+          >
+            <div
+              class="flex items-center space-x-2"
+            >
+              <div
+                class="sc-bdnxRM AFVmm"
+                height="16"
+                width="16"
+              >
+                <svg>
+                  copy.svg
+                </svg>
+              </div>
+              <span>
+                Copy
+              </span>
+            </div>
+          </button>
+        </div>
         <button
-          class="ClipboardButton__StyledButton-sc-cammp1-0 dqAYlb"
-          data-testid="CreateWallet__copy"
+          class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL flex items-center space-x-2"
+          data-testid="CreateWallet__download"
           type="button"
         >
           <div
@@ -461,42 +438,20 @@ exports[`WalletOverviewStep Render step should render 1`] = `
               width="16"
             >
               <svg>
-                copy.svg
+                arrow-down-bracket.svg
               </svg>
             </div>
             <span>
-              Copy
+              Download
             </span>
           </div>
         </button>
       </div>
-      <button
-        class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL flex items-center space-x-2"
-        data-testid="CreateWallet__download"
-        type="button"
-      >
-        <div
-          class="flex items-center space-x-2"
-        >
-          <div
-            class="sc-bdnxRM AFVmm"
-            height="16"
-            width="16"
-          >
-            <svg>
-              arrow-down-bracket.svg
-            </svg>
-          </div>
-          <span>
-            Download
-          </span>
-        </div>
-      </button>
+      <div
+        class="Divider-sc-17ehhxk-0 hZpmpp border-theme-secondary-300 dark:border-theme-secondary-800"
+        type="horizontal"
+      />
     </div>
-    <div
-      class="Divider-sc-17ehhxk-0 hZpmpp border-theme-secondary-300 dark:border-theme-secondary-800"
-      type="horizontal"
-    />
   </section>
 </DocumentFragment>
 `;

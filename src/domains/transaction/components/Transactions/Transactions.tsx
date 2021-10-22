@@ -18,7 +18,6 @@ interface TransactionsProperties {
 	title?: React.ReactNode;
 	onLoading?: (status: boolean) => void;
 	isUpdatingWallet?: boolean;
-	showUnconfirmed?: boolean;
 }
 
 export const Transactions = memo(
@@ -31,7 +30,6 @@ export const Transactions = memo(
 		title,
 		isUpdatingWallet,
 		onLoading,
-		showUnconfirmed,
 	}: TransactionsProperties) => {
 		const { t } = useTranslation();
 
@@ -50,7 +48,7 @@ export const Transactions = memo(
 			activeTransactionType,
 			fetchMore,
 			hasMore,
-		} = useProfileTransactions({ profile, showUnconfirmed, wallets });
+		} = useProfileTransactions({ profile, wallets });
 
 		useEffect(() => {
 			if (isLoading) {

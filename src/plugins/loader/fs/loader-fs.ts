@@ -83,6 +83,13 @@ export class PluginLoaderFileSystem {
 		const isDev = require("electron-is-dev");
 		const isE2E = process.env.ELECTRON_IS_E2E;
 
+		let manifestGlob = `**/${profileId}/**/package.json`;
+
+		/* istanbul ignore next */
+		if (process.env.PLUGINS_DIR) {
+			manifestGlob = "**/package.json";
+		}
+
 		const files: string[] = [];
 
 		const options: IOptions = {
@@ -92,7 +99,7 @@ export class PluginLoaderFileSystem {
 			nodir: true,
 		};
 
-		const match = glob.sync(`**/${profileId}/**/package.json`, { ...options, cwd: this.#root });
+		const match = glob.sync(manifestGlob, { ...options, cwd: this.#root });
 
 		files.push(...match);
 

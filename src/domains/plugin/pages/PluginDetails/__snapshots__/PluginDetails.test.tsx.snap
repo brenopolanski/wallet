@@ -29,7 +29,7 @@ exports[`PluginDetails should render properly 1`] = `
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -344,7 +344,6 @@ exports[`PluginDetails should render properly 1`] = `
                           >
                             <button
                               class="OriginalButton__StyledButton-sc-o0fs2j-0 cpPdwA text-left"
-                              data-testid="PluginHeader__dropdown-toggle"
                               type="button"
                             >
                               <div
@@ -586,7 +585,7 @@ exports[`PluginDetails should render properly for remote package 1`] = `
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -1119,7 +1118,7 @@ exports[`PluginDetails should report plugin 1`] = `
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -1434,7 +1433,6 @@ exports[`PluginDetails should report plugin 1`] = `
                           >
                             <button
                               class="OriginalButton__StyledButton-sc-o0fs2j-0 cpPdwA text-left"
-                              data-testid="PluginHeader__dropdown-toggle"
                               type="button"
                             >
                               <div
@@ -1676,7 +1674,7 @@ exports[`PluginDetails should show configuration for plugins from npm 1`] = `
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -2299,7 +2297,7 @@ exports[`PluginDetails should update package 1`] = `
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -2612,15 +2610,8 @@ exports[`PluginDetails should update package 1`] = `
                           <div
                             class="relative"
                           >
-                            <span
-                              class="Badge__Wrapper-sc-w9wbbm-0 fstweE flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent bg-theme-danger-500"
-                              data-testid="PluginHeader__update-badge"
-                            >
-                              <span />
-                            </span>
                             <button
                               class="OriginalButton__StyledButton-sc-o0fs2j-0 cpPdwA text-left"
-                              data-testid="PluginHeader__dropdown-toggle"
                               type="button"
                             >
                               <div
@@ -2637,6 +2628,12 @@ exports[`PluginDetails should update package 1`] = `
                                 </div>
                               </div>
                             </button>
+                            <span
+                              class="Badge__Wrapper-sc-w9wbbm-0 fstweE flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent cursor-pointer bg-theme-danger-400"
+                              data-testid="PluginDropdown__update-badge"
+                            >
+                              <span />
+                            </span>
                           </div>
                         </span>
                       </div>

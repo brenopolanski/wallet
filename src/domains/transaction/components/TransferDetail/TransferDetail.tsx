@@ -1,12 +1,12 @@
 import { Modal } from "app/components/Modal";
 import {
 	TransactionAmount,
-	TransactionConfirmations,
 	TransactionExplorerLink,
 	TransactionFee,
 	TransactionMemo,
 	TransactionRecipients,
 	TransactionSender,
+	TransactionStatus,
 	TransactionTimestamp,
 } from "domains/transaction/components/TransactionDetail";
 import { TransactionDetailProperties } from "domains/transaction/components/TransactionDetailModal/TransactionDetailModal.models";
@@ -48,7 +48,7 @@ export const TransferDetail = ({ isOpen, aliases, transaction, onClose }: Transa
 
 			<TransactionTimestamp timestamp={transaction.timestamp()} />
 
-			<TransactionConfirmations transaction={transaction} />
+			<TransactionStatus transaction={transaction} />
 		</Modal>
 	);
 };

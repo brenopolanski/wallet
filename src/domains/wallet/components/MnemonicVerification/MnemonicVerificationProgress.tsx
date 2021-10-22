@@ -7,13 +7,12 @@ import { OptionButton } from "./MnemonicVerificationOptions";
 import { getOrdinalIndicator } from "./utils/evaluateOrdinalIndicator";
 
 const TabStyled = styled(OptionButton)<{ isActive: boolean; isComplete: boolean; isPending: boolean }>`
-	${tw`flex-1 flex items-center justify-center pointer-events-none transition-colors duration-200`};
+	${tw`flex flex-1 items-center justify-center pointer-events-none transition-colors duration-200`};
 	${({ isActive }) =>
-		isActive && tw`font-semibold bg-theme-success-100 dark:bg-theme-success-900 border-theme-success-600`};
-	${({ isComplete }) => isComplete && tw`border-transparent bg-theme-success-200 dark:bg-theme-success-600`};
+		isActive && tw`font-semibold bg-theme-success-50 dark:bg-theme-success-900 border-theme-success-500`};
+	${({ isComplete }) => isComplete && tw`border-transparent bg-theme-success-100 dark:bg-theme-success-600`};
 	${({ isPending }) =>
-		isPending && tw`font-medium border-theme-primary-100 dark:border-theme-secondary-800 text-theme-primary-600`};
-	min-height: 56px;
+		isPending && tw`border-theme-primary-100 dark:border-theme-secondary-800 text-theme-primary-600`};
 `;
 
 interface TabProperties {
@@ -64,7 +63,7 @@ interface Properties {
 }
 
 export const MnemonicVerificationProgress = ({ activeTab, wordPositions }: Properties) => (
-	<ul className="flex space-x-2">
+	<ul className="flex space-x-3">
 		{wordPositions.map((position, index) => (
 			<Tab key={index} activeTab={activeTab} tabId={index} wordPosition={position} />
 		))}

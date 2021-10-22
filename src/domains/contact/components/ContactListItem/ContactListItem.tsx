@@ -42,9 +42,9 @@ export const ContactListItem = ({ item, onAction, onSend, options, useTestNetwor
 		<>
 			{filteredAddresses.map((address: Contracts.IContactAddress, index: number) => {
 				const borderClasses = () =>
-					index !== filteredAddresses.length - 1
-						? "border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
-						: "";
+					index === filteredAddresses.length - 1
+						? ""
+						: "border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800";
 
 				const network = env
 					.availableNetworks()

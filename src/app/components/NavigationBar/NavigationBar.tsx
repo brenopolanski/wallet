@@ -9,6 +9,7 @@ import { Action } from "app/components/Notifications/contracts";
 import { Tooltip } from "app/components/Tooltip";
 import { useConfiguration } from "app/contexts";
 import { useScroll, useTheme } from "app/hooks";
+import cn from "classnames";
 import { ReceiveFunds } from "domains/wallet/components/ReceiveFunds";
 import { SearchWallet } from "domains/wallet/components/SearchWallet";
 import { SelectedWallet } from "domains/wallet/components/SearchWallet/SearchWallet.models";
@@ -178,17 +179,19 @@ const NavigationBar = ({
 
 	const scroll = useScroll();
 
+	const isVariantFull = variant === "full";
+
 	return (
 		<NavWrapper
 			aria-labelledby="main menu"
-			noBorder={noBorder !== undefined ? noBorder : variant !== "full"}
+			noBorder={noBorder === undefined ? !isVariantFull : noBorder}
 			noShadow={noShadow}
 			scroll={scroll}
 		>
 			<div className="flex relative h-21">
-				{variant === "full" && <BackButton className="flex w-12" disabled={isBackDisabled} />}
+				{isVariantFull && <BackButton className="flex w-12" disabled={isBackDisabled} />}
 
-				<div className={`flex flex-1 px-8 ${variant !== "full" ? "ml-12" : ""}`}>
+				<div className={cn("flex flex-1 px-8", { "ml-12": !isVariantFull })}>
 					<div className="flex items-center my-auto">
 						<LogoContainer>
 							<PayvoLogo height={28} />
@@ -197,7 +200,7 @@ const NavigationBar = ({
 						{title && <span className="text-2xl font-bold">{title}</span>}
 					</div>
 
-					{variant === "full" && (
+					{isVariantFull && (
 						<>
 							<ul className="flex mr-auto ml-4 space-x-8 h-21">{renderMenu()}</ul>
 

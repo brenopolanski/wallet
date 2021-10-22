@@ -10,13 +10,11 @@ exports[`MnemonicList should render 1`] = `
       data-testid="MnemonicList__item"
     >
       <span
-        class="absolute top-0 left-0 px-1 text-xs font-medium transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
+        class="absolute top-0 left-0 px-1 text-xs font-semibold transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
       >
         1
       </span>
-      <span
-        class="font-medium"
-      >
+      <span>
         stomach
       </span>
     </li>
@@ -25,13 +23,11 @@ exports[`MnemonicList should render 1`] = `
       data-testid="MnemonicList__item"
     >
       <span
-        class="absolute top-0 left-0 px-1 text-xs font-medium transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
+        class="absolute top-0 left-0 px-1 text-xs font-semibold transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
       >
         2
       </span>
-      <span
-        class="font-medium"
-      >
+      <span>
         practice
       </span>
     </li>
@@ -40,13 +36,11 @@ exports[`MnemonicList should render 1`] = `
       data-testid="MnemonicList__item"
     >
       <span
-        class="absolute top-0 left-0 px-1 text-xs font-medium transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
+        class="absolute top-0 left-0 px-1 text-xs font-semibold transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
       >
         3
       </span>
-      <span
-        class="font-medium"
-      >
+      <span>
         violin
       </span>
     </li>
@@ -55,13 +49,11 @@ exports[`MnemonicList should render 1`] = `
       data-testid="MnemonicList__item"
     >
       <span
-        class="absolute top-0 left-0 px-1 text-xs font-medium transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
+        class="absolute top-0 left-0 px-1 text-xs font-semibold transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
       >
         4
       </span>
-      <span
-        class="font-medium"
-      >
+      <span>
         later
       </span>
     </li>
@@ -70,13 +62,11 @@ exports[`MnemonicList should render 1`] = `
       data-testid="MnemonicList__item"
     >
       <span
-        class="absolute top-0 left-0 px-1 text-xs font-medium transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
+        class="absolute top-0 left-0 px-1 text-xs font-semibold transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
       >
         5
       </span>
-      <span
-        class="font-medium"
-      >
+      <span>
         term
       </span>
     </li>
@@ -85,13 +75,11 @@ exports[`MnemonicList should render 1`] = `
       data-testid="MnemonicList__item"
     >
       <span
-        class="absolute top-0 left-0 px-1 text-xs font-medium transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
+        class="absolute top-0 left-0 px-1 text-xs font-semibold transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
       >
         6
       </span>
-      <span
-        class="font-medium"
-      >
+      <span>
         trend
       </span>
     </li>
@@ -100,13 +88,11 @@ exports[`MnemonicList should render 1`] = `
       data-testid="MnemonicList__item"
     >
       <span
-        class="absolute top-0 left-0 px-1 text-xs font-medium transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
+        class="absolute top-0 left-0 px-1 text-xs font-semibold transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
       >
         7
       </span>
-      <span
-        class="font-medium"
-      >
+      <span>
         suit
       </span>
     </li>
@@ -115,13 +101,11 @@ exports[`MnemonicList should render 1`] = `
       data-testid="MnemonicList__item"
     >
       <span
-        class="absolute top-0 left-0 px-1 text-xs font-medium transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
+        class="absolute top-0 left-0 px-1 text-xs font-semibold transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
       >
         8
       </span>
-      <span
-        class="font-medium"
-      >
+      <span>
         switch
       </span>
     </li>
@@ -130,13 +114,11 @@ exports[`MnemonicList should render 1`] = `
       data-testid="MnemonicList__item"
     >
       <span
-        class="absolute top-0 left-0 px-1 text-xs font-medium transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
+        class="absolute top-0 left-0 px-1 text-xs font-semibold transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
       >
         9
       </span>
-      <span
-        class="font-medium"
-      >
+      <span>
         inch
       </span>
     </li>
@@ -145,13 +127,11 @@ exports[`MnemonicList should render 1`] = `
       data-testid="MnemonicList__item"
     >
       <span
-        class="absolute top-0 left-0 px-1 text-xs font-medium transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
+        class="absolute top-0 left-0 px-1 text-xs font-semibold transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
       >
         10
       </span>
-      <span
-        class="font-medium"
-      >
+      <span>
         theory
       </span>
     </li>
@@ -160,13 +140,11 @@ exports[`MnemonicList should render 1`] = `
       data-testid="MnemonicList__item"
     >
       <span
-        class="absolute top-0 left-0 px-1 text-xs font-medium transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
+        class="absolute top-0 left-0 px-1 text-xs font-semibold transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
       >
         11
       </span>
-      <span
-        class="font-medium"
-      >
+      <span>
         hundred
       </span>
     </li>
@@ -175,13 +153,11 @@ exports[`MnemonicList should render 1`] = `
       data-testid="MnemonicList__item"
     >
       <span
-        class="absolute top-0 left-0 px-1 text-xs font-medium transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
+        class="absolute top-0 left-0 px-1 text-xs font-semibold transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
       >
         12
       </span>
-      <span
-        class="font-medium"
-      >
+      <span>
         system
       </span>
     </li>
@@ -199,13 +175,11 @@ exports[`MnemonicList should render with special delimiter 1`] = `
       data-testid="MnemonicList__item"
     >
       <span
-        class="absolute top-0 left-0 px-1 text-xs font-medium transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
+        class="absolute top-0 left-0 px-1 text-xs font-semibold transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
       >
         1
       </span>
-      <span
-        class="font-medium"
-      >
+      <span>
         あさい
       </span>
     </li>
@@ -214,13 +188,11 @@ exports[`MnemonicList should render with special delimiter 1`] = `
       data-testid="MnemonicList__item"
     >
       <span
-        class="absolute top-0 left-0 px-1 text-xs font-medium transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
+        class="absolute top-0 left-0 px-1 text-xs font-semibold transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
       >
         2
       </span>
-      <span
-        class="font-medium"
-      >
+      <span>
         せつでん
       </span>
     </li>
@@ -229,13 +201,11 @@ exports[`MnemonicList should render with special delimiter 1`] = `
       data-testid="MnemonicList__item"
     >
       <span
-        class="absolute top-0 left-0 px-1 text-xs font-medium transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
+        class="absolute top-0 left-0 px-1 text-xs font-semibold transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
       >
         3
       </span>
-      <span
-        class="font-medium"
-      >
+      <span>
         さいかい
       </span>
     </li>
@@ -244,13 +214,11 @@ exports[`MnemonicList should render with special delimiter 1`] = `
       data-testid="MnemonicList__item"
     >
       <span
-        class="absolute top-0 left-0 px-1 text-xs font-medium transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
+        class="absolute top-0 left-0 px-1 text-xs font-semibold transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
       >
         4
       </span>
-      <span
-        class="font-medium"
-      >
+      <span>
         にんち
       </span>
     </li>
@@ -259,13 +227,11 @@ exports[`MnemonicList should render with special delimiter 1`] = `
       data-testid="MnemonicList__item"
     >
       <span
-        class="absolute top-0 left-0 px-1 text-xs font-medium transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
+        class="absolute top-0 left-0 px-1 text-xs font-semibold transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
       >
         5
       </span>
-      <span
-        class="font-medium"
-      >
+      <span>
         たんけん
       </span>
     </li>
@@ -274,13 +240,11 @@ exports[`MnemonicList should render with special delimiter 1`] = `
       data-testid="MnemonicList__item"
     >
       <span
-        class="absolute top-0 left-0 px-1 text-xs font-medium transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
+        class="absolute top-0 left-0 px-1 text-xs font-semibold transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
       >
         6
       </span>
-      <span
-        class="font-medium"
-      >
+      <span>
         ぬまえび
       </span>
     </li>
@@ -289,13 +253,11 @@ exports[`MnemonicList should render with special delimiter 1`] = `
       data-testid="MnemonicList__item"
     >
       <span
-        class="absolute top-0 left-0 px-1 text-xs font-medium transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
+        class="absolute top-0 left-0 px-1 text-xs font-semibold transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
       >
         7
       </span>
-      <span
-        class="font-medium"
-      >
+      <span>
         こうじ
       </span>
     </li>
@@ -304,13 +266,11 @@ exports[`MnemonicList should render with special delimiter 1`] = `
       data-testid="MnemonicList__item"
     >
       <span
-        class="absolute top-0 left-0 px-1 text-xs font-medium transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
+        class="absolute top-0 left-0 px-1 text-xs font-semibold transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
       >
         8
       </span>
-      <span
-        class="font-medium"
-      >
+      <span>
         こっか
       </span>
     </li>
@@ -319,13 +279,11 @@ exports[`MnemonicList should render with special delimiter 1`] = `
       data-testid="MnemonicList__item"
     >
       <span
-        class="absolute top-0 left-0 px-1 text-xs font-medium transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
+        class="absolute top-0 left-0 px-1 text-xs font-semibold transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
       >
         9
       </span>
-      <span
-        class="font-medium"
-      >
+      <span>
         はあく
       </span>
     </li>
@@ -334,13 +292,11 @@ exports[`MnemonicList should render with special delimiter 1`] = `
       data-testid="MnemonicList__item"
     >
       <span
-        class="absolute top-0 left-0 px-1 text-xs font-medium transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
+        class="absolute top-0 left-0 px-1 text-xs font-semibold transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
       >
         10
       </span>
-      <span
-        class="font-medium"
-      >
+      <span>
         げきか
       </span>
     </li>
@@ -349,13 +305,11 @@ exports[`MnemonicList should render with special delimiter 1`] = `
       data-testid="MnemonicList__item"
     >
       <span
-        class="absolute top-0 left-0 px-1 text-xs font-medium transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
+        class="absolute top-0 left-0 px-1 text-xs font-semibold transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
       >
         11
       </span>
-      <span
-        class="font-medium"
-      >
+      <span>
         ふめつ
       </span>
     </li>
@@ -364,13 +318,11 @@ exports[`MnemonicList should render with special delimiter 1`] = `
       data-testid="MnemonicList__item"
     >
       <span
-        class="absolute top-0 left-0 px-1 text-xs font-medium transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
+        class="absolute top-0 left-0 px-1 text-xs font-semibold transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
       >
         12
       </span>
-      <span
-        class="font-medium"
-      >
+      <span>
         ちらし
       </span>
     </li>

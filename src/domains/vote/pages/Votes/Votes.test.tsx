@@ -323,7 +323,7 @@ describe("Votes", () => {
 
 		expect(getByTestId("AddressTable")).toBeTruthy();
 
-		await waitFor(() => expect(getByTestId("AddressRow__status")).toBeTruthy());
+		await waitFor(() => expect(getByTestId("StatusIcon__icon")).toBeTruthy());
 
 		const selectAddressButton = getByTestId("AddressRow__select-0");
 
@@ -359,7 +359,7 @@ describe("Votes", () => {
 
 		expect(getByTestId("AddressTable")).toBeTruthy();
 
-		await waitFor(() => expect(getByTestId("AddressRow__status")).toBeTruthy());
+		await waitFor(() => expect(getByTestId("StatusIcon__icon")).toBeTruthy());
 
 		const selectAddressButton = getByTestId("AddressRow__select-1");
 
@@ -503,7 +503,7 @@ describe("Votes", () => {
 
 		expect(getByTestId("AddressTable")).toBeTruthy();
 
-		await waitFor(() => expect(getByTestId("AddressRow__status")).toBeTruthy());
+		await waitFor(() => expect(getByTestId("StatusIcon__icon")).toBeTruthy());
 
 		const selectAddressButton = getByTestId("AddressRow__select-1");
 

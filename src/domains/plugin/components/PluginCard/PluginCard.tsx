@@ -84,20 +84,7 @@ export const PluginCard = ({
 					<div className="flex items-center space-x-2">
 						{plugin.updateStatus.isAvailable && (
 							<>
-								{!plugin.updateStatus.isCompatible ? (
-									<Tooltip
-										content={t("PLUGINS.MINIMUM_VERSION_NOT_SATISFIED", {
-											minimumVersion: plugin.updateStatus.minimumVersion,
-										})}
-									>
-										<span
-											data-testid="PluginCard__minimum-version-warning"
-											className="ml-3 text-xl"
-										>
-											<Icon name="CircleExclamationMark" className="text-theme-warning-500" />
-										</span>
-									</Tooltip>
-								) : (
+								{plugin.updateStatus.isCompatible ? (
 									<Tooltip content={!isUpdating && t("PLUGINS.NEW_VERSION_AVAILABLE")}>
 										<span
 											data-testid="PluginCard__update-available"
@@ -117,6 +104,19 @@ export const PluginCard = ({
 											}}
 										>
 											<Icon className={cn({ "animate-spin": isUpdating })} name="ArrowsRotate" />
+										</span>
+									</Tooltip>
+								) : (
+									<Tooltip
+										content={t("PLUGINS.MINIMUM_VERSION_NOT_SATISFIED", {
+											minimumVersion: plugin.updateStatus.minimumVersion,
+										})}
+									>
+										<span
+											data-testid="PluginCard__minimum-version-warning"
+											className="ml-3 text-xl"
+										>
+											<Icon name="CircleExclamationMark" className="text-theme-warning-500" />
 										</span>
 									</Tooltip>
 								)}

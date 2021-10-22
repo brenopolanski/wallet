@@ -60,13 +60,11 @@ exports[`SecondSignatureRegistrationForm backup step should render 1`] = `
               data-testid="MnemonicList__item"
             >
               <span
-                class="absolute top-0 left-0 px-1 text-xs font-medium transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
+                class="absolute top-0 left-0 px-1 text-xs font-semibold transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
               >
                 1
               </span>
-              <span
-                class="font-medium"
-              >
+              <span>
                 test
               </span>
             </li>
@@ -75,13 +73,11 @@ exports[`SecondSignatureRegistrationForm backup step should render 1`] = `
               data-testid="MnemonicList__item"
             >
               <span
-                class="absolute top-0 left-0 px-1 text-xs font-medium transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
+                class="absolute top-0 left-0 px-1 text-xs font-semibold transform translate-x-2 -translate-y-2 bg-theme-background text-theme-secondary-700"
               >
                 2
               </span>
-              <span
-                class="font-medium"
-              >
+              <span>
                 mnemonic
               </span>
             </li>

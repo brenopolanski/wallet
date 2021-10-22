@@ -342,7 +342,7 @@ const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => v
 
 								<Button
 									data-testid="ExchangeForm__continue-button"
-									disabled={isSubmitting || (!isDirty ? true : !isValid)}
+									disabled={isSubmitting || (isDirty ? !isValid : true)}
 									isLoading={isSubmitting}
 									onClick={handleNext}
 								>

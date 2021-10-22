@@ -26,7 +26,7 @@ exports[`General Settings should disable submit button when profile is not resto
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -1464,7 +1464,7 @@ exports[`General Settings should not update the uploaded avatar when removing fo
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -2919,7 +2919,7 @@ exports[`General Settings should render 1`] = `
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -4356,7 +4356,7 @@ exports[`General Settings should show identicon when removing image if name is s
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -5793,7 +5793,7 @@ exports[`General Settings should update profile 1`] = `
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -7231,7 +7231,7 @@ exports[`General Settings should update the avatar when removing focus from name
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -8668,7 +8668,7 @@ exports[`General Settings should update the avatar when removing focus from name
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"

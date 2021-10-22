@@ -46,7 +46,7 @@ export const TransactionAmount: React.FC<TransactionAmountProperties> = ({
 		);
 	};
 
-	const hint = !returnedAmount ? undefined : t("TRANSACTION.HINT_AMOUNT", { amount: returnedAmount, currency });
+	const hint = returnedAmount ? t("TRANSACTION.HINT_AMOUNT", { amount: returnedAmount, currency }) : undefined;
 
 	return (
 		<TransactionDetail

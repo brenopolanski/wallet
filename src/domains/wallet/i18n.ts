@@ -1,8 +1,8 @@
 export const translations: { [key: string]: any } = {
 	MESSAGE: "Message",
 	MNEMONIC_VERIFICATION: {
-		SELECT_WORD: "Select the {{position}}{{ordinalIndicator}} word",
-		WORD_NUMBER: "The {{position}}{{ordinalIndicator}} word",
+		SELECT_WORD: "Select the {{position}}{{ordinalIndicator}} Word",
+		WORD_NUMBER: "The {{position}}{{ordinalIndicator}} Word",
 	},
 	MODAL_DELETE_WALLET: {
 		DESCRIPTION:
@@ -207,25 +207,25 @@ export const translations: { [key: string]: any } = {
 		UNSTAR_WALLET: "Unstar",
 
 		VOTES: {
-			ACTIVE: "Active",
 			ACTIVE_COUNT: "Active {{count}}",
-			ACTIVE_PLURAL: "All Active",
+			ACTIVE_one: "Active",
+			ACTIVE_other: "All Active",
 			DELEGATE_STATUS: "Delegate Status",
 			EMPTY_DESCRIPTION: "You have not voted for a Delegate yet.",
 			LOCKED_UNVOTES: "Locked Unvotes",
 			LOCKED_VOTES: "Locked Votes",
 			MULTIVOTE: "Multivote",
-			NOT_FORGING: "Your delegate is currently not in a forging position",
 			NOT_FORGING_COUNT: "{{count}} of your delegates are currently not in a forging position",
-			NOT_FORGING_PLURAL: "Your delegates are currently not in a forging position",
-			RESIGNED: "Resigned",
+			NOT_FORGING_one: "Your delegate is currently not in a forging position",
+			NOT_FORGING_other: "Your delegates are currently not in a forging position",
 			RESIGNED_COUNT: "Resigned {{count}}",
-			RESIGNED_PLURAL: "All Resigned",
-			STANDBY: "Standby",
+			RESIGNED_one: "Resigned",
+			RESIGNED_other: "All Resigned",
 			STANDBY_COUNT: "Standby {{count}}",
-			STANDBY_PLURAL: "All Standby",
-			TITLE: "My Vote",
-			TITLE_PLURAL: "My Votes",
+			STANDBY_one: "Standby",
+			STANDBY_other: "All Standby",
+			TITLE_one: "My Vote",
+			TITLE_other: "My Votes",
 			VOTING_FOR: "Voting for",
 		},
 
@@ -235,6 +235,12 @@ export const translations: { [key: string]: any } = {
 	SIGNATORY: "Signatory",
 
 	SIGNATURE: "Signature",
+
+	STATUS: {
+		ACTIVE: "Active",
+		RESIGNED: "Resigned",
+		STANDBY: "Standby",
+	},
 
 	UPDATE_WALLET_DATA: "Update Wallet Data",
 

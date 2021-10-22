@@ -1,5 +1,6 @@
 /* eslint-disable unicorn/no-null */
 import { Profile } from "@payvo/profiles";
+import { ReadOnlyWallet } from "@payvo/profiles/distribution/read-only-wallet";
 import { Wallet } from "@payvo/profiles/distribution/wallet";
 import { Coins, Networks } from "@payvo/sdk";
 import { PluginController } from "plugins";
@@ -11,6 +12,7 @@ import {
 	assertNumber,
 	assertPluginController,
 	assertProfile,
+	assertReadOnlyWallet,
 	assertString,
 	assertWallet,
 } from "./assertions";
@@ -71,6 +73,43 @@ describe("#assertWallet", () => {
 			"Expected 'wallet' to be Contracts.IReadWriteWallet, but received [object Object]",
 		);
 		expect(() => assertWallet([])).toThrow("Expected 'wallet' to be Contracts.IReadWriteWallet, but received ");
+	});
+});
+
+describe("#assertReadOnlyWallet", () => {
+	it("should pass with a ReadOnlyWallet instance", () => {
+		// @ts-ignore
+		expect(() => assertReadOnlyWallet(new ReadOnlyWallet())).not.toThrow();
+	});
+
+	it("should fail without a profile instance", () => {
+		expect(() => assertReadOnlyWallet(undefined)).toThrow(
+			"Expected 'wallet' to be Contracts.IReadOnlyWallet, but received undefined",
+		);
+		expect(() => assertReadOnlyWallet(null)).toThrow(
+			"Expected 'wallet' to be Contracts.IReadOnlyWallet, but received null",
+		);
+		expect(() => assertReadOnlyWallet(true)).toThrow(
+			"Expected 'wallet' to be Contracts.IReadOnlyWallet, but received true",
+		);
+		expect(() => assertReadOnlyWallet(false)).toThrow(
+			"Expected 'wallet' to be Contracts.IReadOnlyWallet, but received false",
+		);
+		expect(() => assertReadOnlyWallet("")).toThrow(
+			"Expected 'wallet' to be Contracts.IReadOnlyWallet, but received ",
+		);
+		expect(() => assertReadOnlyWallet("a")).toThrow(
+			"Expected 'wallet' to be Contracts.IReadOnlyWallet, but received a",
+		);
+		expect(() => assertReadOnlyWallet(1)).toThrow(
+			"Expected 'wallet' to be Contracts.IReadOnlyWallet, but received 1",
+		);
+		expect(() => assertReadOnlyWallet({})).toThrow(
+			"Expected 'wallet' to be Contracts.IReadOnlyWallet, but received [object Object]",
+		);
+		expect(() => assertReadOnlyWallet([])).toThrow(
+			"Expected 'wallet' to be Contracts.IReadOnlyWallet, but received ",
+		);
 	});
 });
 

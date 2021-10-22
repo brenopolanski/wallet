@@ -1,4 +1,3 @@
-import { BigNumber } from "@payvo/helpers";
 import React from "react";
 import { Route } from "react-router-dom";
 import { TransactionFixture } from "tests/fixtures/transactions";
@@ -51,28 +50,6 @@ describe("IpfsDetail", () => {
 		);
 
 		expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_IPFS_DETAIL.TITLE);
-		expect(asFragment()).toMatchSnapshot();
-	});
-
-	it("should render as confirmed", () => {
-		const { asFragment, getByText, getByTestId } = renderWithRouter(
-			<Route path="/profiles/:profileId">
-				<IpfsDetail
-					isOpen={true}
-					transaction={{
-						...TransactionFixture,
-						confirmations: () => BigNumber.ONE,
-						isConfirmed: () => true,
-					}}
-				/>
-			</Route>,
-			{
-				routes: [`/profiles/${fixtureProfileId}`],
-			},
-		);
-
-		expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_IPFS_DETAIL.TITLE);
-		expect(getByText(translations.WELL_CONFIRMED)).toBeTruthy();
 		expect(asFragment()).toMatchSnapshot();
 	});
 });

@@ -235,7 +235,7 @@ export const SendRegistration = () => {
 
 	const hideStepNavigation = activeTab === 10 || (isAuthenticationStep && activeWallet.isLedger());
 
-	const isNextDisabled = !isDirty ? true : !isValid || !!isLoading;
+	const isNextDisabled = isDirty ? !isValid || !!isLoading : true;
 
 	return (
 		<Page profile={activeProfile}>

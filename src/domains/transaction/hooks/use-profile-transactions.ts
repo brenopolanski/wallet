@@ -1,3 +1,4 @@
+import { sortByDesc } from "@arkecosystem/utils";
 import { Contracts, Contracts as ProfileContracts, DTO } from "@payvo/profiles";
 import { useSynchronizer } from "app/hooks";
 import { useCallback, useEffect, useRef, useState } from "react";
@@ -28,23 +29,20 @@ interface FetchTransactionProperties {
 }
 
 interface FilterTransactionProperties {
-	showUnconfirmed?: boolean;
 	transactions: DTO.ExtendedConfirmedTransactionDataCollection;
 }
 
-export const useProfileTransactions = ({
-	profile,
-	wallets,
-	showUnconfirmed = true,
-}: {
+interface ProfileTransactionsProperties {
 	profile: Contracts.IProfile;
 	wallets: Contracts.IReadWriteWallet[];
-	showUnconfirmed?: boolean;
-}) => {
+	limit?: number;
+}
+
+export const useProfileTransactions = ({ profile, wallets, limit = 30 }: ProfileTransactionsProperties) => {
 	const lastQuery = useRef<string>();
 	const isMounted = useRef(true);
 	const cursor = useRef(1);
-	const LIMIT = isUnit() ? 0 : 30;
+	const LIMIT = isUnit() ? 0 : limit;
 
 	const [
 		{ transactions, activeMode, activeTransactionType, isLoadingTransactions, isLoadingMore, hasMore, timestamp },
@@ -90,7 +88,7 @@ export const useProfileTransactions = ({
 				return;
 			}
 
-			const items = filterTransactions({ showUnconfirmed, transactions: response });
+			const items = filterTransactions({ transactions: response });
 
 			setState((state) => ({
 				...state,
@@ -167,19 +165,14 @@ export const useProfileTransactions = ({
 		[LIMIT, profile],
 	);
 
-	const filterTransactions = ({ showUnconfirmed, transactions }: FilterTransactionProperties) => {
-		if (!showUnconfirmed) {
-			return transactions.items().filter((transaction) => {
-				if (!transaction.isSent()) {
-					return true;
-				}
+	const filterTransactions = ({ transactions }: FilterTransactionProperties) =>
+		transactions.items().filter((transaction) => {
+			if (!transaction.isSent()) {
+				return true;
+			}
 
-				return transaction.isConfirmed();
-			});
-		}
-
-		return transactions.items();
-	};
+			return transaction.isConfirmed();
+		});
 
 	const fetchMore = useCallback(async () => {
 		cursor.current = cursor.current + 1;
@@ -193,7 +186,7 @@ export const useProfileTransactions = ({
 			wallets,
 		});
 
-		const items = filterTransactions({ showUnconfirmed, transactions: response });
+		const items = filterTransactions({ transactions: response });
 
 		setState((state) => ({
 			...state,
@@ -215,12 +208,12 @@ export const useProfileTransactions = ({
 			wallets,
 		});
 
-		const items = filterTransactions({ showUnconfirmed, transactions: response });
+		const items = filterTransactions({ transactions: response });
 
-		const firstTransaction = items[0];
+		const latestTransaction = sortByDesc(items, (transaction) => transaction.timestamp()?.toUNIX())[0];
 
 		const foundNew =
-			firstTransaction && !transactions.some((transaction) => firstTransaction.id() === transaction.id());
+			latestTransaction && !transactions.some((transaction) => latestTransaction.id() === transaction.id());
 
 		if (!foundNew) {
 			return;

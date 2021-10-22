@@ -55,6 +55,30 @@ export const WalletsList = memo(
 
 		const tableRows = isLoading ? skeletonRows : wallets;
 
+		const emptyBlockContent = () => {
+			if (walletsDisplayType !== "all") {
+				return (
+					<Trans
+						i18nKey={
+							hasWalletsMatchingOtherNetworks
+								? "DASHBOARD.WALLET_CONTROLS.EMPTY_MESSAGE_TYPE_FILTERED"
+								: "DASHBOARD.WALLET_CONTROLS.EMPTY_MESSAGE_TYPE"
+						}
+						values={{
+							type: walletsDisplayType === "starred" ? t("COMMON.STARRED") : t("COMMON.LEDGER"),
+						}}
+						components={{ bold: <strong /> }}
+					/>
+				);
+			}
+
+			if (hasWalletsMatchingOtherNetworks) {
+				return t("DASHBOARD.WALLET_CONTROLS.EMPTY_MESSAGE_FILTERED");
+			}
+
+			return t("DASHBOARD.WALLET_CONTROLS.EMPTY_MESSAGE");
+		};
+
 		return (
 			<div data-testid="WalletsList">
 				{(wallets.length > 0 || isLoading) && (
@@ -82,27 +106,7 @@ export const WalletsList = memo(
 					</div>
 				)}
 
-				{!isLoading && !hasMore && wallets.length === 0 && (
-					<EmptyBlock>
-						{walletsDisplayType !== "all" ? (
-							<Trans
-								i18nKey={
-									hasWalletsMatchingOtherNetworks
-										? "DASHBOARD.WALLET_CONTROLS.EMPTY_MESSAGE_TYPE_FILTERED"
-										: "DASHBOARD.WALLET_CONTROLS.EMPTY_MESSAGE_TYPE"
-								}
-								values={{
-									type: walletsDisplayType === "starred" ? t("COMMON.STARRED") : t("COMMON.LEDGER"),
-								}}
-								components={{ bold: <strong /> }}
-							/>
-						) : hasWalletsMatchingOtherNetworks ? (
-							t("DASHBOARD.WALLET_CONTROLS.EMPTY_MESSAGE_FILTERED")
-						) : (
-							t("DASHBOARD.WALLET_CONTROLS.EMPTY_MESSAGE")
-						)}
-					</EmptyBlock>
-				)}
+				{!isLoading && !hasMore && wallets.length === 0 && <EmptyBlock>{emptyBlockContent()}</EmptyBlock>}
 			</div>
 		);
 	},

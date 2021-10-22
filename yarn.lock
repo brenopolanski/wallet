@@ -4899,10 +4899,10 @@
     form-data "^3.0.0"
     got "^11.8.2"
 
-"@payvo/intl@^1.0.0", "@payvo/intl@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@payvo/intl/-/intl-1.0.1.tgz#c901ae8fe06b5e7432e5e06c9a8135b2505de777"
-  integrity sha512-UrwiDgidDhnt/4O+UFoO+45zp5VSvKhpd66/cQhG6Qi0gk9Yz+H09e71d8cq9tpVRd8uPAZiqRF3Sul/rCDF7g==
+"@payvo/intl@^1.0.0", "@payvo/intl@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@payvo/intl/-/intl-1.0.2.tgz#8f9adf6bc64317c20523b031b6a6cf7fd5fcc189"
+  integrity sha512-DCie5xg7SNANOa208Fy9GnoagpAA5nxAWTIG5sIDgqiM8Vr3mNnepOlk9uaqhuGjCnY0GqKlM+IJ3VxGdEMDdg==
   dependencies:
     dayjs "^1.10.4"
     dinero.js "^1.8.1"
@@ -4924,17 +4924,17 @@
     "@payvo/sdk-http" "^1.1.0"
     rss-parser "^3.9.0"
 
-"@payvo/profiles@^1.4.23":
-  version "1.4.23"
-  resolved "https://registry.yarnpkg.com/@payvo/profiles/-/profiles-1.4.23.tgz#d651800e58b7b7dc06f0734d4128930bff9c6089"
-  integrity sha512-b58AE7tJ9SNUw71fUqvvgMux3osGykRA1gv4O3Ry7/gXyuet4ITlYABajODQPJX6Cuq634qlb5mycs7uKZVDUg==
+"@payvo/profiles@^1.5.2":
+  version "1.5.2"
+  resolved "https://registry.yarnpkg.com/@payvo/profiles/-/profiles-1.5.2.tgz#3b75b9c8e1bfb88312a7279ac6eeb7937452317e"
+  integrity sha512-aO2KBGuAp2Odkfwxi+gz4x2R8PySj6vR4ZtEayW5+eayhFK/9TTFv50F4IOpIEDYzl0UJeNauvoc92p7iM/lzw==
   dependencies:
     "@arkecosystem/utils" "^1.3.0"
     "@payvo/cryptography" "^1.1.5"
     "@payvo/helpers" "^1.1.1"
-    "@payvo/intl" "^1.0.1"
+    "@payvo/intl" "^1.0.2"
     "@payvo/markets" "^1.0.0"
-    "@payvo/sdk" "^1.7.34"
+    "@payvo/sdk" "^1.8.4"
     "@payvo/sdk-http" "^1.1.20"
     "@sindresorhus/slugify" "^1.1.0"
     "@vechain/picasso" "^2.1.1"
@@ -4957,22 +4957,22 @@
     uuid "^8.3.2"
     wif "^2.0.6"
 
-"@payvo/sdk-ada@^1.7.34":
-  version "1.7.34"
-  resolved "https://registry.yarnpkg.com/@payvo/sdk-ada/-/sdk-ada-1.7.34.tgz#d8335ffd4b7f3dc8f79e36a159122339f3561900"
-  integrity sha512-8vzFE26pzi2wUoxTLiTMRZhXSGuAOxKrpxJhZwCQaOhoa5fLt/6FLBDi/K1e2PcHi9Nwm/hrTczw8N+Wce5noA==
+"@payvo/sdk-ada@^1.8.4":
+  version "1.8.4"
+  resolved "https://registry.yarnpkg.com/@payvo/sdk-ada/-/sdk-ada-1.8.4.tgz#c276b9f7a1705481dcc3f6334798a50d8ee2007a"
+  integrity sha512-ZFz39Dn9FbToyQy870ZzGrfCIzC377HewVOrbwXtIPHk7FdQAq/TIDPuWP481UW6x9MHVgbGW8eB3XYzltgRqQ==
   dependencies:
     "@emurgo/cardano-serialization-lib-nodejs" "^8.0.0"
     "@payvo/cryptography" "^1.1.5"
     "@payvo/helpers" "^1.1.1"
-    "@payvo/intl" "^1.0.1"
-    "@payvo/sdk" "1.7.34"
+    "@payvo/intl" "^1.0.2"
+    "@payvo/sdk" "1.8.4"
     bech32 "^2.0.0"
 
-"@payvo/sdk-ark@^1.7.34":
-  version "1.7.34"
-  resolved "https://registry.yarnpkg.com/@payvo/sdk-ark/-/sdk-ark-1.7.34.tgz#78742215518126b3aa25671120f96d651aceb68c"
-  integrity sha512-Jjx2aLc59+fqr627gQikZxaemgXJJTla+d6W2boO6pI8aj+4ztJFQK3S5sfclSMj+mt5YSobCGb0quqbzbzqpw==
+"@payvo/sdk-ark@^1.8.4":
+  version "1.8.4"
+  resolved "https://registry.yarnpkg.com/@payvo/sdk-ark/-/sdk-ark-1.8.4.tgz#d61d5c1e75e8cbc0dedac18e44d8eb55f2cbde43"
+  integrity sha512-eCrTjlI3N/hzJD1kT+Oxea4ZHnhItfXeAvrU54yrszxrdksU0jqNZFtwNtPj/tpUd47/42wouzX5AGsMvhbwDQ==
   dependencies:
     "@arkecosystem/crypto" "^3.0.0-next.23"
     "@arkecosystem/crypto-identities" "^1.2.0"
@@ -4981,52 +4981,52 @@
     "@ledgerhq/hw-transport-node-hid-singleton" "^6.3.0"
     "@payvo/cryptography" "^1.1.5"
     "@payvo/helpers" "^1.1.1"
-    "@payvo/intl" "^1.0.1"
-    "@payvo/sdk" "1.7.34"
+    "@payvo/intl" "^1.0.2"
+    "@payvo/sdk" "1.8.4"
     dot-prop "^6.0.1"
     is-url-superb "^6.0.0"
     lodash.orderby "^4.6.0"
     node-dotify "^1.1.0"
     semver "^7.3.5"
 
-"@payvo/sdk-atom@^1.7.34":
-  version "1.7.34"
-  resolved "https://registry.yarnpkg.com/@payvo/sdk-atom/-/sdk-atom-1.7.34.tgz#bd17d13f905fa325544a4d2f41b4ce36636ce113"
-  integrity sha512-75Ob1m6aLayCliCX1Cko+DC5s9v7CsCz373Yb1kBDmnGiLCJGOPVKRHRtmUyxvj9L/cB/l+RwZySz5MYJqtaiA==
+"@payvo/sdk-atom@^1.8.4":
+  version "1.8.4"
+  resolved "https://registry.yarnpkg.com/@payvo/sdk-atom/-/sdk-atom-1.8.4.tgz#e9ca90835d80ed5e9bdcec91dfda58ca0360cef1"
+  integrity sha512-EB39fVr90fAodAauqnpE7QBFTLe3QorNrWlbOAjhzEG3n9FymmdVeELISV9SDEoATG1CPThf4G+qjz3xU8ESSA==
   dependencies:
     "@payvo/cryptography" "^1.1.5"
     "@payvo/helpers" "^1.1.1"
-    "@payvo/intl" "^1.0.1"
-    "@payvo/sdk" "1.7.34"
+    "@payvo/intl" "^1.0.2"
+    "@payvo/sdk" "1.8.4"
     bcrypto "^5.4.0"
     bech32 "^2.0.0"
     ledger-cosmos-js "^2.1.8"
 
-"@payvo/sdk-avax@^1.7.34":
-  version "1.7.34"
-  resolved "https://registry.yarnpkg.com/@payvo/sdk-avax/-/sdk-avax-1.7.34.tgz#583771c7bc0a73c74a8fcdae7e78a2d729c8137f"
-  integrity sha512-pMfp5gt/l7Erx9mGpELKlrWZ4LhX4VkCMXMqpsHw25wORUAvDh7EIbwk14BIG5YPvfFoniVyfipTiHZtXV3luw==
+"@payvo/sdk-avax@^1.8.4":
+  version "1.8.4"
+  resolved "https://registry.yarnpkg.com/@payvo/sdk-avax/-/sdk-avax-1.8.4.tgz#1489e89294894787007775033a95291c48876cb5"
+  integrity sha512-IvJMX+eHZfRPYKM64clGJ1D7jjom4Cywdn5c3c8GRFtbZAiPqhqvvD1SsC1Od24YJocd56yja/IuiTKEC/O4fQ==
   dependencies:
     "@arkecosystem/utils" "^1.3.0"
     "@payvo/cryptography" "^1.1.5"
     "@payvo/helpers" "^1.1.1"
-    "@payvo/intl" "^1.0.1"
-    "@payvo/sdk" "1.7.34"
+    "@payvo/intl" "^1.0.2"
+    "@payvo/sdk" "1.8.4"
     avalanche "^3.8.5"
     hdkey "^2.0.1"
     isomorphic-dompurify "~0.15.0"
 
-"@payvo/sdk-btc@^1.7.34":
-  version "1.7.34"
-  resolved "https://registry.yarnpkg.com/@payvo/sdk-btc/-/sdk-btc-1.7.34.tgz#b816fa3e79d174c62147115e43fc23a39273c0d8"
-  integrity sha512-Qin2toQbKSG/1Avhon46T7fRpy+8r6H9M7uhgGHLTiTSq/8B1WJL6GYMAkpgYTNfnZfWYTOUPM2x+x0ZQJCAeA==
+"@payvo/sdk-btc@^1.8.4":
+  version "1.8.4"
+  resolved "https://registry.yarnpkg.com/@payvo/sdk-btc/-/sdk-btc-1.8.4.tgz#5d91afec5fd084957254a6fbfa24a91333fbce1a"
+  integrity sha512-gVTXQFouHRU7u/aRvZKRnWBEUFnMr/QHXfoKagJSoZcDbP6OofcYwRLBMx4Nf6KxkQy3MuppyLF33Ts3sbRchQ==
   dependencies:
     "@ledgerhq/hw-app-btc" "^6.3.0"
     "@ledgerhq/hw-transport-node-hid-singleton" "^6.3.0"
     "@payvo/cryptography" "^1.1.5"
     "@payvo/helpers" "^1.1.1"
-    "@payvo/intl" "^1.0.1"
-    "@payvo/sdk" "1.7.34"
+    "@payvo/intl" "^1.0.2"
+    "@payvo/sdk" "1.8.4"
     bignumber.js "^9.0.1"
     bip32 "^2.0.6"
     bitcoinjs-lib "^5.2.0"
@@ -5035,65 +5035,65 @@
     create-xpub "~2.1.0"
     xpub-converter "~1.0.2"
 
-"@payvo/sdk-dot@^1.7.34":
-  version "1.7.34"
-  resolved "https://registry.yarnpkg.com/@payvo/sdk-dot/-/sdk-dot-1.7.34.tgz#2dc27302a4d575f278a44d387a07b020a7eea5ac"
-  integrity sha512-PsRtEUX3vIiKf7HTddtbr81QWBokQ4+BYeW0Q2tRdpN0DCeKY5FNGhHdOAXECwT3uBejyZz2BXvgQw78F6SHWw==
+"@payvo/sdk-dot@^1.8.4":
+  version "1.8.4"
+  resolved "https://registry.yarnpkg.com/@payvo/sdk-dot/-/sdk-dot-1.8.4.tgz#c493a997d83c41215345b3e7764d864608506a92"
+  integrity sha512-cgpaWVmR6Ub2PNdwkmg0S693r5AcJJbGm6t3tRYvzfx19iRpbaXV6uVdgI6M5DiLfssnzloyZFzgH5e9/j+abA==
   dependencies:
     "@payvo/cryptography" "^1.1.5"
     "@payvo/helpers" "^1.1.1"
-    "@payvo/intl" "^1.0.1"
-    "@payvo/sdk" "1.7.34"
-    "@polkadot/api" "^5.6.1"
-    "@polkadot/keyring" "^7.2.1"
-    "@polkadot/rpc-provider" "^5.6.1"
-    "@polkadot/util" "^7.2.1"
-    "@polkadot/util-crypto" "^7.2.1"
-    "@polkadot/wasm-crypto" "^4.1.2"
-    "@polkadot/x-global" "^7.2.1"
-    "@polkadot/x-randomvalues" "^7.2.1"
+    "@payvo/intl" "^1.0.2"
+    "@payvo/sdk" "1.8.4"
+    "@polkadot/api" "^6.3.1"
+    "@polkadot/keyring" "^7.4.1"
+    "@polkadot/rpc-provider" "^6.3.1"
+    "@polkadot/util" "^7.4.1"
+    "@polkadot/util-crypto" "^7.4.1"
+    "@polkadot/wasm-crypto" "^4.2.1"
+    "@polkadot/x-global" "^7.4.1"
+    "@polkadot/x-randomvalues" "^7.4.1"
     "@zondax/ledger-polkadot" "^0.13.0"
 
-"@payvo/sdk-egld@^1.7.34":
-  version "1.7.34"
-  resolved "https://registry.yarnpkg.com/@payvo/sdk-egld/-/sdk-egld-1.7.34.tgz#2875526ad6ac4ed8ecf0456cc100bf14c72c173c"
-  integrity sha512-ufYIRqL6L5OV5jJp+v52+p3e1f/FRf1nIzk67AkhIubmLyXV4T1V0oL7IfEeYR7wUXRHDJgEcjh34Bx1oU1/VQ==
+"@payvo/sdk-egld@^1.8.4":
+  version "1.8.4"
+  resolved "https://registry.yarnpkg.com/@payvo/sdk-egld/-/sdk-egld-1.8.4.tgz#0aa0af5a57a3eaa76785b6b7457ccbd4d17467ce"
+  integrity sha512-l2QoAACEY7eELUj6Wg625yRaQGa3SKCPkONRrY4r8OkcsS9Nqxe65d+okvcTNsr2hvMN09o++1HXuud6Uzut6Q==
   dependencies:
     "@elrondnetwork/elrond-core-js" "^2.1.0"
     "@elrondnetwork/erdjs" "^7.0.0"
     "@payvo/cryptography" "^1.1.5"
     "@payvo/helpers" "^1.1.1"
-    "@payvo/intl" "^1.0.1"
-    "@payvo/sdk" "1.7.34"
+    "@payvo/intl" "^1.0.2"
+    "@payvo/sdk" "1.8.4"
     bech32 "^2.0.0"
     noble-ed25519 "~1.2.5"
 
-"@payvo/sdk-eos@^1.7.34":
-  version "1.7.34"
-  resolved "https://registry.yarnpkg.com/@payvo/sdk-eos/-/sdk-eos-1.7.34.tgz#cbd0f055e6644bb283fb51e62705c33258b0f6d5"
-  integrity sha512-cG2GjibNIMZiUvmoRQMCEArNok6fcZYISQ6P/uxsgowdc02bLUzfIGsVj/qRgISu2IPDf/52sdchwC6tiZzGcQ==
+"@payvo/sdk-eos@^1.8.4":
+  version "1.8.4"
+  resolved "https://registry.yarnpkg.com/@payvo/sdk-eos/-/sdk-eos-1.8.4.tgz#e42009a20cfd0bb42720c968e9feb313a37330bd"
+  integrity sha512-o2QaKyH2DfSiEgxqmBpKGwLCibq4DeEArmpCtLzORbzYAHm0KENAGRHKHJ4vNCFPdZ1wJ3SKuHG3aQ8G4PKA9A==
   dependencies:
     "@payvo/cryptography" "^1.1.5"
     "@payvo/helpers" "^1.1.1"
-    "@payvo/intl" "^1.0.1"
-    "@payvo/sdk" "1.7.34"
+    "@payvo/intl" "^1.0.2"
+    "@payvo/sdk" "1.8.4"
     bn.js "5.2.0"
     elliptic "^6.5.4"
     eosjs "^22.1.0"
     node-fetch "^2.6.1"
 
-"@payvo/sdk-eth@^1.7.34":
-  version "1.7.34"
-  resolved "https://registry.yarnpkg.com/@payvo/sdk-eth/-/sdk-eth-1.7.34.tgz#8e55ad7f5af2ce6678f54d19f4509bb4e440d247"
-  integrity sha512-FickHtn6w50kAQp4mIRuPpVNwm+G84tRADrriboiTBCZzGqhljX9QrLkqo4ZpG1dvXa8Leb4jhuNbO8xse++iw==
+"@payvo/sdk-eth@^1.8.4":
+  version "1.8.4"
+  resolved "https://registry.yarnpkg.com/@payvo/sdk-eth/-/sdk-eth-1.8.4.tgz#8951a28ce4a10440c764453c081129cf50dc2ee4"
+  integrity sha512-YNM2YCrGWxeTiXMyqR9CL00N52E6JaoATuqTQggIB4CbkpLF1bJaaqznPYO3MFem6xUaFytszKB/Z5v7PvUKlA==
   dependencies:
     "@ethereumjs/common" "^2.4.0"
     "@ethereumjs/tx" "^3.3.0"
     "@ledgerhq/hw-app-eth" "^6.5.0"
     "@payvo/cryptography" "^1.1.5"
     "@payvo/helpers" "^1.1.1"
-    "@payvo/intl" "^1.0.1"
-    "@payvo/sdk" "1.7.34"
+    "@payvo/intl" "^1.0.2"
+    "@payvo/sdk" "1.8.4"
     bip39 "^3.0.4"
     ethereumjs-wallet "^1.0.1"
     web3 "^1.5.2"
@@ -5108,115 +5108,115 @@
   resolved "https://registry.yarnpkg.com/@payvo/sdk-http/-/sdk-http-1.1.20.tgz#29ba510887e91f5fd33ee8920da1e35f48c30f2e"
   integrity sha512-+KbsZMd97P+C1t4b0b0ug1F/X8l67Wp1a0oOzuK7cb0G2NYymnKT4JzQw55GdIFsM/lo2RsyGTxdL1DSX9KGzw==
 
-"@payvo/sdk-lsk@^1.7.34":
-  version "1.7.34"
-  resolved "https://registry.yarnpkg.com/@payvo/sdk-lsk/-/sdk-lsk-1.7.34.tgz#dcb52115ba4b2a757f3a8e4b8a0c110bd836722c"
-  integrity sha512-MEs20iITrRGZ0IL+8rJag1/Oc/eUpe15jYOiXslzrRnIfUW/RphzTJ+6oCeYsrAWY1oRhoE84uF+9FmAxz3fFQ==
+"@payvo/sdk-lsk@^1.8.4":
+  version "1.8.4"
+  resolved "https://registry.yarnpkg.com/@payvo/sdk-lsk/-/sdk-lsk-1.8.4.tgz#5f6cc094d7dc9a65f44fa338fea90f273e6ad0fd"
+  integrity sha512-JyOJqFppqDQ347qD0CjiLtRbGq9ma8OUW0MalddLZJsZOcgQC2rhve8gzMDuyk8jMaKjZ01fUYBgRqYUHwCt1A==
   dependencies:
     "@ledgerhq/hw-transport-node-hid-singleton" "^6.3.0"
     "@liskhq/lisk-cryptography" "^3.1"
     "@liskhq/lisk-transactions" "^5.1"
     "@payvo/cryptography" "^1.1.5"
     "@payvo/helpers" "^1.1.1"
-    "@payvo/intl" "^1.0.1"
-    "@payvo/sdk" "1.7.34"
+    "@payvo/intl" "^1.0.2"
+    "@payvo/sdk" "1.8.4"
     dpos-ledger-api "^3.0.1"
 
-"@payvo/sdk-luna@^1.7.34":
-  version "1.7.34"
-  resolved "https://registry.yarnpkg.com/@payvo/sdk-luna/-/sdk-luna-1.7.34.tgz#cd95f0bdc22ea1615efe2b694f6162a2e75d7ca9"
-  integrity sha512-nh20efKoc02Hu0Tyysgmxsgw0aAuYT+hPGTrYruUHCyJqZZqdmrehNJBLrIuEBH6QK0WF2l1AXLdCOPriP+MYA==
+"@payvo/sdk-luna@^1.8.4":
+  version "1.8.4"
+  resolved "https://registry.yarnpkg.com/@payvo/sdk-luna/-/sdk-luna-1.8.4.tgz#2aef036c4244af6ae591269a109be99aca6ab1f7"
+  integrity sha512-stAC70hKzEAM1GXLGDHWjFNMbbLP2RVSnZIIiza0OsG4zKrQwMkBXv5VMcxxRyPH3gxmorktTJ1zupIg+ZBbLA==
   dependencies:
     "@payvo/cryptography" "^1.1.5"
     "@payvo/helpers" "^1.1.1"
-    "@payvo/intl" "^1.0.1"
-    "@payvo/sdk" "1.7.34"
+    "@payvo/intl" "^1.0.2"
+    "@payvo/sdk" "1.8.4"
     "@terra-money/terra.js" "~2.0.4"
 
-"@payvo/sdk-nano@^1.7.34":
-  version "1.7.34"
-  resolved "https://registry.yarnpkg.com/@payvo/sdk-nano/-/sdk-nano-1.7.34.tgz#cf7af0706e6aba89eed1bfec25e5233a8b9e11bb"
-  integrity sha512-BJG7G8jYiRWJOiiMvKAsuRDoOXF2G5suUlCU5YSlFC7ftxNsTEO9YHQZfknceeM0gOIADTsWGznJwAQwGce9Kg==
+"@payvo/sdk-nano@^1.8.4":
+  version "1.8.4"
+  resolved "https://registry.yarnpkg.com/@payvo/sdk-nano/-/sdk-nano-1.8.4.tgz#acb603aeab1c751848d19e779b66c61cf28ba7b5"
+  integrity sha512-7kqGpQgrmw27UYjSz0OW7v30nPuE2LYr7HoWlL8OwHQIOltN3qfXqM6Ttow1IZzKybmhYUbwGrbL0MAuTcsnEw==
   dependencies:
     "@payvo/cryptography" "^1.1.5"
     "@payvo/helpers" "^1.1.1"
-    "@payvo/intl" "^1.0.1"
-    "@payvo/sdk" "1.7.34"
+    "@payvo/intl" "^1.0.2"
+    "@payvo/sdk" "1.8.4"
     nanocurrency "~2.5.0"
     nanocurrency-web "~1.3.4"
     noble-ed25519 "~1.2.5"
 
-"@payvo/sdk-neo@^1.7.34":
-  version "1.7.34"
-  resolved "https://registry.yarnpkg.com/@payvo/sdk-neo/-/sdk-neo-1.7.34.tgz#7cbf3d440b1c2275c72290a835876ee24f633b49"
-  integrity sha512-oHQmurLQnbeBGwat9crXWmvbd1B4EqGrXySamrJVeY6tIHQxpqhIa6VvZ/VvYwgXEVZO9PgNSzmMn3EV1bbq7Q==
+"@payvo/sdk-neo@^1.8.4":
+  version "1.8.4"
+  resolved "https://registry.yarnpkg.com/@payvo/sdk-neo/-/sdk-neo-1.8.4.tgz#da64b67e851b1372b813fbe2bcdeb57f5f8bf74d"
+  integrity sha512-iw6H7fCQJ542sBMWgwrL2S4foAhk/bjiAEHO0QR+KFBuFpzHZUp7tFvU6zenU+BWxJEXnI5B8kuIOg/4KDuF9A==
   dependencies:
     "@cityofzion/neon-js" "^4.9.0"
     "@payvo/cryptography" "^1.1.5"
     "@payvo/helpers" "^1.1.1"
-    "@payvo/intl" "^1.0.1"
-    "@payvo/sdk" "1.7.34"
+    "@payvo/intl" "^1.0.2"
+    "@payvo/sdk" "1.8.4"
 
-"@payvo/sdk-trx@^1.7.34":
-  version "1.7.34"
-  resolved "https://registry.yarnpkg.com/@payvo/sdk-trx/-/sdk-trx-1.7.34.tgz#e0a360c96e2689031517c4266293075bd2165463"
-  integrity sha512-6Adu7spRMlo4MZF3c0kUihulv6QO52E0cuzEx5wXKaG5QKIbJpqW7bq5+09vDqVKwOhkBDWbL8pgN8Ni2YgZ3Q==
+"@payvo/sdk-trx@^1.8.4":
+  version "1.8.4"
+  resolved "https://registry.yarnpkg.com/@payvo/sdk-trx/-/sdk-trx-1.8.4.tgz#604d37573adaa039f6d3776d67e0753b4971cb39"
+  integrity sha512-OL3FVdxEBDqTuQuK+k3tTJ3PUy2ouWBVfIl4g19y2RJxz5UffpqhigAKR4DvP9yIg71vOcsofWy9sJoLoQ3hcg==
   dependencies:
     "@ledgerhq/hw-app-trx" "^6.3.0"
     "@payvo/cryptography" "^1.1.5"
     "@payvo/helpers" "^1.1.1"
-    "@payvo/intl" "^1.0.1"
-    "@payvo/sdk" "1.7.34"
+    "@payvo/intl" "^1.0.2"
+    "@payvo/sdk" "1.8.4"
     tronweb "^4.0.0"
 
-"@payvo/sdk-xlm@^1.7.34":
-  version "1.7.34"
-  resolved "https://registry.yarnpkg.com/@payvo/sdk-xlm/-/sdk-xlm-1.7.34.tgz#3b526a841696fd310f6a683030dca43e2eddcc0d"
-  integrity sha512-K2SVZT9XAaeEhIea/eWyzF04JRF8AZJ1lhhdW6D9V0DpWbUxIr3xoNtwIbyQZNUrsW52up7tuPfzC0HMKpQrJA==
+"@payvo/sdk-xlm@^1.8.4":
+  version "1.8.4"
+  resolved "https://registry.yarnpkg.com/@payvo/sdk-xlm/-/sdk-xlm-1.8.4.tgz#ef62d36c7c6629489ad0caa2192e0670219ddb92"
+  integrity sha512-w1lysVMhV2boFEmclF8X6UzCTMDyrInHVj5ljWEghD5nJsw2PO/Vwoo+2RI1XOpLWOW9/7CNgdVZlTjDTRZ4Wg==
   dependencies:
     "@ledgerhq/hw-app-str" "^6.3.0"
     "@payvo/cryptography" "^1.1.5"
     "@payvo/helpers" "^1.1.1"
-    "@payvo/intl" "^1.0.1"
-    "@payvo/sdk" "1.7.34"
+    "@payvo/intl" "^1.0.2"
+    "@payvo/sdk" "1.8.4"
     ed25519-hd-key "^1.2.0"
     stellar-sdk "^8.2.5"
 
-"@payvo/sdk-xrp@^1.7.34":
-  version "1.7.34"
-  resolved "https://registry.yarnpkg.com/@payvo/sdk-xrp/-/sdk-xrp-1.7.34.tgz#c7f007be3407636b25b8ea67a38a751e62eb9c89"
-  integrity sha512-0gaHnraaFsPC8ldCXppdLhapT46gKbdTxtCgXa2DVXw/9Z3G6cfsMBlx8lRjQt52+SnBewTn+oKrb1LJn91SaA==
+"@payvo/sdk-xrp@^1.8.4":
+  version "1.8.4"
+  resolved "https://registry.yarnpkg.com/@payvo/sdk-xrp/-/sdk-xrp-1.8.4.tgz#c4adb0fd2c3ece7c6866425421e9bf14a54d7310"
+  integrity sha512-L9/KegEhEHtjEIu2dekRUVlGYmPjhw5PoN96NFuT9cK4CR+dNbsPB1F3APN2g2GdVzOsVstMuXXJAg21ebXYYw==
   dependencies:
     "@ledgerhq/hw-app-xrp" "^6.3.0"
     "@payvo/cryptography" "^1.1.5"
     "@payvo/helpers" "^1.1.1"
-    "@payvo/intl" "^1.0.1"
-    "@payvo/sdk" "1.7.34"
+    "@payvo/intl" "^1.0.2"
+    "@payvo/sdk" "1.8.4"
     bignumber.js "^9.0.1"
     ripple-keypairs "^1.0.3"
     ripple-lib "^1.10.0"
 
-"@payvo/sdk-zil@^1.7.34":
-  version "1.7.34"
-  resolved "https://registry.yarnpkg.com/@payvo/sdk-zil/-/sdk-zil-1.7.34.tgz#1ad3f5476c570641a25233bd5a8233f28edf94e8"
-  integrity sha512-Nn+xtCqDRrD0C5xwNTvp3LniANwrS8COhzTcdjMQXCkPNxOOsqyFIsh/L8vWs46oQ7Gh6uPHryQRcfdm2wbvBw==
+"@payvo/sdk-zil@^1.8.4":
+  version "1.8.4"
+  resolved "https://registry.yarnpkg.com/@payvo/sdk-zil/-/sdk-zil-1.8.4.tgz#495acac476ecd07ddd04e60b0f1ee24f4a7f443c"
+  integrity sha512-088VEO9cf6reV9OdzdrUg/SPIOB8n7FYgsCvWgJbxghoBmE6k3hvqo/ENilQZaMjSN14c8orA0kaRjoxTEN0Rg==
   dependencies:
     "@payvo/cryptography" "^1.1.5"
     "@payvo/helpers" "^1.1.1"
-    "@payvo/intl" "^1.0.1"
-    "@payvo/sdk" "1.7.34"
+    "@payvo/intl" "^1.0.2"
+    "@payvo/sdk" "1.8.4"
     "@zilliqa-js/account" "^3.0.0"
     "@zilliqa-js/zilliqa" "^3.0.0"
 
-"@payvo/sdk@1.7.34", "@payvo/sdk@^1.7.34":
-  version "1.7.34"
-  resolved "https://registry.yarnpkg.com/@payvo/sdk/-/sdk-1.7.34.tgz#a3e1e8cef91aac0041a6ac5cef74a6ec120537e4"
-  integrity sha512-kSyNwuYPDNzFXjurQvM7N66PInsyCDFBTv68Ac7m/YZUjqYeSO2Bf2T4JYtTIjRkSJvqe2SYiE0boJRsZgl+3w==
+"@payvo/sdk@1.8.4", "@payvo/sdk@^1.8.4":
+  version "1.8.4"
+  resolved "https://registry.yarnpkg.com/@payvo/sdk/-/sdk-1.8.4.tgz#a796148b9cd0dfe3ab6dd3767103e8f87abdea5e"
+  integrity sha512-sa+4w4VhJleTUxyyHVnGoqOLJGzPUm3DoTokmd20n3fuox56ISCuHrCQoWx8w3Ge/8PR11Z6kAC03KCB5JqF9g==
   dependencies:
     "@arkecosystem/utils" "^1.3.0"
     "@payvo/helpers" "^1.1.1"
     "@payvo/http-got" "^1.0.0"
-    "@payvo/intl" "^1.0.1"
+    "@payvo/intl" "^1.0.2"
     bad-words "^3.0.4"
     bent "^7.3"
     bignumber.js "^9.0.1"
@@ -5225,7 +5225,8 @@
     censorify-it "^3.0.2"
     dayjs "^1.10.6"
     dot-prop "^6.0.1"
-    inversify "~5.1.1"
+    import-fresh "~3.3.0"
+    inversify "^6.0.0"
     joi "^17.4.2"
     node-emoji "^1.11.0"
     reflect-metadata "~0.1.13"
@@ -5255,107 +5256,107 @@
     reflect-metadata "~0.1.13"
     type-fest "^1.0.2"
 
-"@polkadot/api-derive@5.8.3":
-  version "5.8.3"
-  resolved "https://registry.yarnpkg.com/@polkadot/api-derive/-/api-derive-5.8.3.tgz#56915bddce9ebe09137d8999c1cd39447c4dda74"
-  integrity sha512-+bO8Dap3LknoxEP5X6IpIueU9wuLHC9EVNE/1PYIabiwOeMKA3TQR2yAPDnd6GhAc9mg/M0zl+zkzkYHfJ9X8g==
+"@polkadot/api-derive@6.4.2":
+  version "6.4.2"
+  resolved "https://registry.yarnpkg.com/@polkadot/api-derive/-/api-derive-6.4.2.tgz#1f63765285cc308beff20729e06b937b40d9a2c2"
+  integrity sha512-vz/ruz9NXPmr753nA3a6eCgif+Ftp8rrpwn9183mJImEgeZ3P95a90kQGHjiFf+KTxmt0mhU5FvBc3Cit8pxRw==
   dependencies:
     "@babel/runtime" "^7.15.4"
-    "@polkadot/api" "5.8.3"
-    "@polkadot/rpc-core" "5.8.3"
-    "@polkadot/types" "5.8.3"
-    "@polkadot/util" "^7.3.1"
-    "@polkadot/util-crypto" "^7.3.1"
-    rxjs "^7.3.0"
+    "@polkadot/api" "6.4.2"
+    "@polkadot/rpc-core" "6.4.2"
+    "@polkadot/types" "6.4.2"
+    "@polkadot/util" "^7.5.1"
+    "@polkadot/util-crypto" "^7.5.1"
+    rxjs "^7.4.0"
 
-"@polkadot/api@5.8.3", "@polkadot/api@^5.6.1":
-  version "5.8.3"
-  resolved "https://registry.yarnpkg.com/@polkadot/api/-/api-5.8.3.tgz#36440c47e6daf6bd71f5af66768fe6703f134028"
-  integrity sha512-O7sOUTNfMl0loHwK+WisJH36qw/EACeK9pPPh4bk9Gftda4j0JbGYSUnf59F9QjddkkwstOXbbQSRVM6JTQ7Yw==
+"@polkadot/api@6.4.2", "@polkadot/api@^6.3.1":
+  version "6.4.2"
+  resolved "https://registry.yarnpkg.com/@polkadot/api/-/api-6.4.2.tgz#60a13d07a97a65561e46b9abdde04531ed9f97fa"
+  integrity sha512-6SZ/RbSQtq7fclpFtL8rMCTEE1pWQoV5uVygVVHb9pckypq3su5EcUHHuMw6FUg4P4gOpAUSxwBZAJABzGXL3g==
   dependencies:
     "@babel/runtime" "^7.15.4"
-    "@polkadot/api-derive" "5.8.3"
-    "@polkadot/keyring" "^7.3.1"
-    "@polkadot/rpc-core" "5.8.3"
-    "@polkadot/rpc-provider" "5.8.3"
-    "@polkadot/types" "5.8.3"
-    "@polkadot/types-known" "5.8.3"
-    "@polkadot/util" "^7.3.1"
-    "@polkadot/util-crypto" "^7.3.1"
+    "@polkadot/api-derive" "6.4.2"
+    "@polkadot/keyring" "^7.5.1"
+    "@polkadot/rpc-core" "6.4.2"
+    "@polkadot/rpc-provider" "6.4.2"
+    "@polkadot/types" "6.4.2"
+    "@polkadot/types-known" "6.4.2"
+    "@polkadot/util" "^7.5.1"
+    "@polkadot/util-crypto" "^7.5.1"
     eventemitter3 "^4.0.7"
-    rxjs "^7.3.0"
+    rxjs "^7.4.0"
 
-"@polkadot/keyring@^7.2.1", "@polkadot/keyring@^7.3.1":
-  version "7.3.1"
-  resolved "https://registry.yarnpkg.com/@polkadot/keyring/-/keyring-7.3.1.tgz#bf36115cfb395567bec9cf13c8e3fc0fb39c802a"
-  integrity sha512-3lbwIjUql8yjs6AR2fMdCgmTc5D9ne7+y2jqHmGjyzVQFz1w1jiHb+N38L0pwl9/23UxmzC3aVvHLfl3gEGSIQ==
-  dependencies:
-    "@babel/runtime" "^7.15.3"
-    "@polkadot/util" "7.3.1"
-    "@polkadot/util-crypto" "7.3.1"
-
-"@polkadot/networks@7.3.1", "@polkadot/networks@^7.3.1":
-  version "7.3.1"
-  resolved "https://registry.yarnpkg.com/@polkadot/networks/-/networks-7.3.1.tgz#4d4f7269ff9c285363946175ca95d6aaa08bdacc"
-  integrity sha512-sK9TyVf1aAWy84usKjNqb6rNiy4UB6cK3iM+bfltzrLHdchjAMPdxMqULNBL8MXjrnuzPpTtsdkGFqp5P69oIQ==
-  dependencies:
-    "@babel/runtime" "^7.15.3"
-
-"@polkadot/rpc-core@5.8.3":
-  version "5.8.3"
-  resolved "https://registry.yarnpkg.com/@polkadot/rpc-core/-/rpc-core-5.8.3.tgz#a9a489c8ba1cf2779a7dc76b96195386c44d77f8"
-  integrity sha512-/QMPb1uCXJLxHTAG/KVr0TWkJ1tgwB8xOB0Fe57tFaFmQ8bq4e08iHUVH1nzpyKAS35kGhov+W7YqdJffFL9vQ==
+"@polkadot/keyring@^7.4.1", "@polkadot/keyring@^7.5.1":
+  version "7.5.1"
+  resolved "https://registry.yarnpkg.com/@polkadot/keyring/-/keyring-7.5.1.tgz#0394d476f49f346589687611f7c273c63c9db8b2"
+  integrity sha512-zpgm7Z80zJrdchwkCcXynFQuWzQYh6XphoN4Z+dROtrHjFCHL2nC59gaL1iaqKLHlO/nPHarVIZqMXqluJ6KHA==
   dependencies:
     "@babel/runtime" "^7.15.4"
-    "@polkadot/rpc-provider" "5.8.3"
-    "@polkadot/types" "5.8.3"
-    "@polkadot/util" "^7.3.1"
-    rxjs "^7.3.0"
+    "@polkadot/util" "7.5.1"
+    "@polkadot/util-crypto" "7.5.1"
 
-"@polkadot/rpc-provider@5.8.3", "@polkadot/rpc-provider@^5.6.1":
-  version "5.8.3"
-  resolved "https://registry.yarnpkg.com/@polkadot/rpc-provider/-/rpc-provider-5.8.3.tgz#7097e2a9e5a3dfa5e525dec030d6a5595ae7cd2a"
-  integrity sha512-wJ18uzwG6PpgZ3My6C3puqvxXGsTwFXzeYoGZOH1Yj6CEZIufiTedN6AUqoWx2OQIPj0QPf9ZX9bWahpjDhUSA==
+"@polkadot/networks@7.5.1", "@polkadot/networks@^7.5.1":
+  version "7.5.1"
+  resolved "https://registry.yarnpkg.com/@polkadot/networks/-/networks-7.5.1.tgz#9513981d65993fd02df9762840c7662eb84574c2"
+  integrity sha512-UaVTP9eWg+mkW+oiuxfrOyVtLuNQ0u/Rer3rdHKom+bkQPf+NPeo+3ekg7YsWoi/fJN/OYMnIIM6rbloxm0GKA==
   dependencies:
     "@babel/runtime" "^7.15.4"
-    "@polkadot/types" "5.8.3"
-    "@polkadot/util" "^7.3.1"
-    "@polkadot/util-crypto" "^7.3.1"
-    "@polkadot/x-fetch" "^7.3.1"
-    "@polkadot/x-global" "^7.3.1"
-    "@polkadot/x-ws" "^7.3.1"
+
+"@polkadot/rpc-core@6.4.2":
+  version "6.4.2"
+  resolved "https://registry.yarnpkg.com/@polkadot/rpc-core/-/rpc-core-6.4.2.tgz#fbef943b3d90bf3794e96b8877bc308f036503e8"
+  integrity sha512-CseygtMZhrvROieOtQhaB7SHz7LYmCtscGevHR8JtbKyoR9erAxD9LXHlWL427U9hVzLgdtLnIKp/h5wxa2y0A==
+  dependencies:
+    "@babel/runtime" "^7.15.4"
+    "@polkadot/rpc-provider" "6.4.2"
+    "@polkadot/types" "6.4.2"
+    "@polkadot/util" "^7.5.1"
+    rxjs "^7.4.0"
+
+"@polkadot/rpc-provider@6.4.2", "@polkadot/rpc-provider@^6.3.1":
+  version "6.4.2"
+  resolved "https://registry.yarnpkg.com/@polkadot/rpc-provider/-/rpc-provider-6.4.2.tgz#7324eb317e8dd267d93aa0692869b9a730470a4c"
+  integrity sha512-An2GwDBOorkyM+CPU2TyklYuVwFQty1nsV2U3FwkM2w06A9FPwxvvTWtjI4LQPMGJBGCn1HE0ZE7CqqczBftAg==
+  dependencies:
+    "@babel/runtime" "^7.15.4"
+    "@polkadot/types" "6.4.2"
+    "@polkadot/util" "^7.5.1"
+    "@polkadot/util-crypto" "^7.5.1"
+    "@polkadot/x-fetch" "^7.5.1"
+    "@polkadot/x-global" "^7.5.1"
+    "@polkadot/x-ws" "^7.5.1"
     eventemitter3 "^4.0.7"
 
-"@polkadot/types-known@5.8.3":
-  version "5.8.3"
-  resolved "https://registry.yarnpkg.com/@polkadot/types-known/-/types-known-5.8.3.tgz#c666ba5493bdca346f8bc4f690cbff62468ef1f9"
-  integrity sha512-C02xTOfr8u/hPszaGcBVhZdYgPw+rc3SMU9vbe4hziq5VGTinhfX0Sy6Ixa+GO7f31nJVIYyuLCeglCfN0rgFQ==
+"@polkadot/types-known@6.4.2":
+  version "6.4.2"
+  resolved "https://registry.yarnpkg.com/@polkadot/types-known/-/types-known-6.4.2.tgz#35cbc9e48b7d4488539424af00aad18180b65fdf"
+  integrity sha512-Oz8wk100TlToa2PD1lUzllksys3XjDS93Pg/gi7MBvpn896iFQbdn487ra9e9fj5m+jAfkFoOUusnSPk38VylA==
   dependencies:
     "@babel/runtime" "^7.15.4"
-    "@polkadot/networks" "^7.3.1"
-    "@polkadot/types" "5.8.3"
-    "@polkadot/util" "^7.3.1"
+    "@polkadot/networks" "^7.5.1"
+    "@polkadot/types" "6.4.2"
+    "@polkadot/util" "^7.5.1"
 
-"@polkadot/types@5.8.3":
-  version "5.8.3"
-  resolved "https://registry.yarnpkg.com/@polkadot/types/-/types-5.8.3.tgz#9f37fe9a2dc30491bae671ba4e31e6d1a3c626ed"
-  integrity sha512-iSVCk7Ja8WjLOpjPtZRo9Gaz9AS/b722LH3wWo91TSMT11Vz/lYCWlagNc1nVez6sRsJoEXjD7pKA0ga0t78Lw==
+"@polkadot/types@6.4.2":
+  version "6.4.2"
+  resolved "https://registry.yarnpkg.com/@polkadot/types/-/types-6.4.2.tgz#8df8caeceb17e9ad50094ee7a3af5f248519d4ad"
+  integrity sha512-Pb9KjYWUrhHGcgZjqK3N28OWMKbi3vth1evZY9tIW8sV+m5/L8UhbUhM5XvcKQkVCv9BV0Aqbd7GvWoq9yR2dg==
   dependencies:
     "@babel/runtime" "^7.15.4"
-    "@polkadot/util" "^7.3.1"
-    "@polkadot/util-crypto" "^7.3.1"
-    rxjs "^7.3.0"
+    "@polkadot/util" "^7.5.1"
+    "@polkadot/util-crypto" "^7.5.1"
+    rxjs "^7.4.0"
 
-"@polkadot/util-crypto@7.3.1", "@polkadot/util-crypto@^7.2.1", "@polkadot/util-crypto@^7.3.1":
-  version "7.3.1"
-  resolved "https://registry.yarnpkg.com/@polkadot/util-crypto/-/util-crypto-7.3.1.tgz#a597145b061eddaafd69adc6c1ce19224542307f"
-  integrity sha512-sR+BxlV2Da0xfQcCXQTz+ohTaagixM+qYHytaQzilytbKHgYIyvnOyk5wFrHDNFzcLuXo15AbULa3TCoNDvh5Q==
+"@polkadot/util-crypto@7.5.1", "@polkadot/util-crypto@^7.4.1", "@polkadot/util-crypto@^7.5.1":
+  version "7.5.1"
+  resolved "https://registry.yarnpkg.com/@polkadot/util-crypto/-/util-crypto-7.5.1.tgz#ff095262504a9f2829a41ff6b98ec3a537feb4ef"
+  integrity sha512-jghGTTMrGllf/TIKpWsphfXRfl0dzkn1/3PsiaFCKVLnZTmxeMv9FGH2Z6/L1XYeFheoBYmFIlKDNir45mZeiw==
   dependencies:
-    "@babel/runtime" "^7.15.3"
-    "@polkadot/networks" "7.3.1"
-    "@polkadot/util" "7.3.1"
+    "@babel/runtime" "^7.15.4"
+    "@polkadot/networks" "7.5.1"
+    "@polkadot/util" "7.5.1"
     "@polkadot/wasm-crypto" "^4.2.1"
-    "@polkadot/x-randomvalues" "7.3.1"
+    "@polkadot/x-randomvalues" "7.5.1"
     base-x "^3.0.8"
     base64-js "^1.5.1"
     blakejs "^1.1.1"
@@ -5369,14 +5370,14 @@
     tweetnacl "^1.0.3"
     xxhashjs "^0.2.2"
 
-"@polkadot/util@7.3.1", "@polkadot/util@^7.2.1", "@polkadot/util@^7.3.1":
-  version "7.3.1"
-  resolved "https://registry.yarnpkg.com/@polkadot/util/-/util-7.3.1.tgz#1a33a8d4ef2dcbc3e14a9a919f30bb16360a6fae"
-  integrity sha512-fjz5yjgZgfgRXZw9zMufmPBHhjAVtk/M2+lgl1a6Fck43Q4TG2Ux1haXMlaoe37cFeh8XgDAzDEQVIYBIPy6sg==
+"@polkadot/util@7.5.1", "@polkadot/util@^7.4.1", "@polkadot/util@^7.5.1":
+  version "7.5.1"
+  resolved "https://registry.yarnpkg.com/@polkadot/util/-/util-7.5.1.tgz#aa5db65bb543173afe9db6749475b40908d98b76"
+  integrity sha512-6ltZyYZg/eUnyB5IBIcFpFFfhDL/ZW57Nt8CVcZmKqiKTL1kF60HmIvWky/agEV7fa00Ibd/zpANoQitEqNE0Q==
   dependencies:
-    "@babel/runtime" "^7.15.3"
-    "@polkadot/x-textdecoder" "7.3.1"
-    "@polkadot/x-textencoder" "7.3.1"
+    "@babel/runtime" "^7.15.4"
+    "@polkadot/x-textdecoder" "7.5.1"
+    "@polkadot/x-textencoder" "7.5.1"
     "@types/bn.js" "^4.11.6"
     bn.js "^4.12.0"
     camelcase "^6.2.0"
@@ -5396,7 +5397,7 @@
   dependencies:
     "@babel/runtime" "^7.15.3"
 
-"@polkadot/wasm-crypto@^4.1.2", "@polkadot/wasm-crypto@^4.2.1":
+"@polkadot/wasm-crypto@^4.2.1":
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/@polkadot/wasm-crypto/-/wasm-crypto-4.2.1.tgz#4d09402f5ac71a90962fb58cbe4b1707772a4fb6"
   integrity sha512-C/A/QnemOilRTLnM0LfhPY2N/x3ZFd1ihm9sXYyuh98CxtekSVYI9h4IJ5Jrgz5imSUHgvt9oJLqJ5GbWQV/Zg==
@@ -5405,54 +5406,54 @@
     "@polkadot/wasm-crypto-asmjs" "^4.2.1"
     "@polkadot/wasm-crypto-wasm" "^4.2.1"
 
-"@polkadot/x-fetch@^7.3.1":
-  version "7.3.1"
-  resolved "https://registry.yarnpkg.com/@polkadot/x-fetch/-/x-fetch-7.3.1.tgz#d6a63d3bdebd3e058deb4507d6dbae782a44c8bf"
-  integrity sha512-QnwP2RxWEUtnHE+1Iy2T49D4s5F8XH4bCyGqhbpZZdMym+cc+9zifBRQ+B5BIpTqICFFFbbhUvnvBSC9nS8bvg==
+"@polkadot/x-fetch@^7.5.1":
+  version "7.5.1"
+  resolved "https://registry.yarnpkg.com/@polkadot/x-fetch/-/x-fetch-7.5.1.tgz#2329bfb749ad79fb0d631f98f81bbba2332e7036"
+  integrity sha512-bpKNPvT9yRQ6JRlLqezl7gAZQO8GGbAwx3eq+UUz/TaY7CHjld7T6CzVlXJgrOdAonCgTz9Rp0b1n1S21hyZWQ==
   dependencies:
-    "@babel/runtime" "^7.15.3"
-    "@polkadot/x-global" "7.3.1"
+    "@babel/runtime" "^7.15.4"
+    "@polkadot/x-global" "7.5.1"
     "@types/node-fetch" "^2.5.12"
-    node-fetch "^2.6.1"
+    node-fetch "^2.6.5"
 
-"@polkadot/x-global@7.3.1", "@polkadot/x-global@^7.2.1", "@polkadot/x-global@^7.3.1":
-  version "7.3.1"
-  resolved "https://registry.yarnpkg.com/@polkadot/x-global/-/x-global-7.3.1.tgz#6e6f9d3347748bd885754c7367f08441a6b7dc6d"
-  integrity sha512-Tx2xGyrNLsV+hjfKsAWA03VUnkQGyCeaff6vE7Fi9iZo/4L4BdrQKhJgQrX8PQuOhrcv1B1GDuaYiXr7dwBR1g==
+"@polkadot/x-global@7.5.1", "@polkadot/x-global@^7.4.1", "@polkadot/x-global@^7.5.1":
+  version "7.5.1"
+  resolved "https://registry.yarnpkg.com/@polkadot/x-global/-/x-global-7.5.1.tgz#d9723585d94c07807eab416ba92bcea65d21c3d5"
+  integrity sha512-SM5xbMgRAf/O5GTf8g1X9gwNaPVKGhIC6qj4ieN/pHQLAS2A5WcelmoQeJhHYrcW1JKR2m3kGKMMWuLKgMVWkw==
   dependencies:
-    "@babel/runtime" "^7.15.3"
+    "@babel/runtime" "^7.15.4"
 
-"@polkadot/x-randomvalues@7.3.1", "@polkadot/x-randomvalues@^7.2.1":
-  version "7.3.1"
-  resolved "https://registry.yarnpkg.com/@polkadot/x-randomvalues/-/x-randomvalues-7.3.1.tgz#120c64147ce9bebee9e18e6c72cb91cc4d91d7e1"
-  integrity sha512-WtOTsjpp0+VIV+GY7IrELVznv78+IQ96UW5rf2i3AUIoouB1z9VrzJu/MCN7zoRQ9OAWpNoGxdAwzRDm9UL3+g==
+"@polkadot/x-randomvalues@7.5.1", "@polkadot/x-randomvalues@^7.4.1":
+  version "7.5.1"
+  resolved "https://registry.yarnpkg.com/@polkadot/x-randomvalues/-/x-randomvalues-7.5.1.tgz#030dddd785b2fcf700be4273b885774361d0b4ff"
+  integrity sha512-qyyV8ZRif0U0Sr2DhU9h9j6AXb67ckgj+3JVPWC30bcOi0p/biu1XFR1MlSLyB6KmxwQZxJ4SKCK3eRxbGxtdw==
   dependencies:
-    "@babel/runtime" "^7.15.3"
-    "@polkadot/x-global" "7.3.1"
+    "@babel/runtime" "^7.15.4"
+    "@polkadot/x-global" "7.5.1"
 
-"@polkadot/x-textdecoder@7.3.1":
-  version "7.3.1"
-  resolved "https://registry.yarnpkg.com/@polkadot/x-textdecoder/-/x-textdecoder-7.3.1.tgz#e7ffc566483dce42b72c340bbaa1e76bbc5b2d3d"
-  integrity sha512-AkGrJ8C8kLvs7uxKMMqkBZmUbm8k3CBvq7FLnfUaQQXha4/3G3u+g3UqSTJ8+nETwRrfpjAVS77fmFx+6Nkxng==
+"@polkadot/x-textdecoder@7.5.1":
+  version "7.5.1"
+  resolved "https://registry.yarnpkg.com/@polkadot/x-textdecoder/-/x-textdecoder-7.5.1.tgz#cfed161b94edd1721a2ab6f9f9114eee3960e2e9"
+  integrity sha512-dX4SL1QWmQau+gJiT/u8Vgh4DnyeGLd1MSWIg6MdYUCzmFs5tJg6Iqd94We2r9Lo22M0PJwXKlqf+3Fbhd2R9w==
   dependencies:
-    "@babel/runtime" "^7.15.3"
-    "@polkadot/x-global" "7.3.1"
+    "@babel/runtime" "^7.15.4"
+    "@polkadot/x-global" "7.5.1"
 
-"@polkadot/x-textencoder@7.3.1":
-  version "7.3.1"
-  resolved "https://registry.yarnpkg.com/@polkadot/x-textencoder/-/x-textencoder-7.3.1.tgz#8c08dacdac677d7a8e021437ce2b31d90a041519"
-  integrity sha512-1yePbvbQ9U9ScRilQ/aH6CwgoSG8njH27XVzRR7WnulAMKbF3IvHgU56IlBZneHIojAy252yp2ldBG09PDIXeg==
+"@polkadot/x-textencoder@7.5.1":
+  version "7.5.1"
+  resolved "https://registry.yarnpkg.com/@polkadot/x-textencoder/-/x-textencoder-7.5.1.tgz#72d2c081c80dd30e594576d16b915a80ba77a0db"
+  integrity sha512-alzRtHXnydcCXK0JnmHF0W3DJMGgxGiFtGbTzvDorX6OefqjjqLYr8ALJka56xV04zsiCqAY6WqjRmu8BIBRYQ==
   dependencies:
-    "@babel/runtime" "^7.15.3"
-    "@polkadot/x-global" "7.3.1"
+    "@babel/runtime" "^7.15.4"
+    "@polkadot/x-global" "7.5.1"
 
-"@polkadot/x-ws@^7.3.1":
-  version "7.3.1"
-  resolved "https://registry.yarnpkg.com/@polkadot/x-ws/-/x-ws-7.3.1.tgz#bc4bcfd3a5ebec7c6b57bdbc718a68699b87f7ca"
-  integrity sha512-JltBHm2GqmS/hPIbak3wzqHRTz5k3yQOdYPOsj2gAs5twe7fJwJOJp0InfpNCknX4Cn9+WBIjNZUNLZ6bO+MkQ==
+"@polkadot/x-ws@^7.5.1":
+  version "7.5.1"
+  resolved "https://registry.yarnpkg.com/@polkadot/x-ws/-/x-ws-7.5.1.tgz#2d04dc84d47766e5313931b158ac538779a0d32e"
+  integrity sha512-+fBgPVExxUFR1WLpQls8i8GSw9zcYYEyWmGuzEvCeQ5HRYBlC0Of2coj8SNx17jKVIXVJ8Goyphs5c3Og0d7fQ==
   dependencies:
-    "@babel/runtime" "^7.15.3"
-    "@polkadot/x-global" "7.3.1"
+    "@babel/runtime" "^7.15.4"
+    "@polkadot/x-global" "7.5.1"
     "@types/websocket" "^1.0.4"
     websocket "^1.0.34"
 
@@ -15272,6 +15273,14 @@ import-fresh@^3.2.1:
     parent-module "^1.0.0"
     resolve-from "^4.0.0"
 
+import-fresh@~3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/import-fresh/-/import-fresh-3.3.0.tgz#37162c25fcb9ebaa2e6e53d5b4d88ce17d9e0c2b"
+  integrity sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw==
+  dependencies:
+    parent-module "^1.0.0"
+    resolve-from "^4.0.0"
+
 import-from@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/import-from/-/import-from-2.1.0.tgz#335db7f2a7affd53aaa471d4b8021dee36b7f3b1"
@@ -15471,6 +15480,11 @@ invariant@2, invariant@^2.2.2, invariant@^2.2.4:
   integrity sha512-phJfQVBuaJM5raOpJjSfkiD6BpbCE4Ns//LaXl6wGYtUBY83nWS6Rf9tXm2e8VaK60JEjYldbPif/A2B1C2gNA==
   dependencies:
     loose-envify "^1.0.0"
+
+inversify@^6.0.0:
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/inversify/-/inversify-6.0.1.tgz#b20d35425d5d8c5cd156120237aad0008d969f02"
+  integrity sha512-B3ex30927698TJENHR++8FfEaJGqoWOgI6ZY5Ht/nLUsFCwHn6akbwtnUAPCgUepAnTpe2qHxhDNjoKLyz6rgQ==
 
 inversify@~5.1.1:
   version "5.1.1"
@@ -18768,6 +18782,13 @@ node-fetch@2.6.1, node-fetch@^2.6.1:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.1.tgz#045bd323631f76ed2e2b55573394416b639a0052"
   integrity sha512-V4aYg89jEoVRxRb2fJdAg8FHvI7cEyYdVAh94HH0UIK8oJxUfkjlDQN9RbMx+bEjP7+ggMiFRprSti032Oipxw==
+
+node-fetch@^2.6.5:
+  version "2.6.5"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.5.tgz#42735537d7f080a7e5f78b6c549b7146be1742fd"
+  integrity sha512-mmlIVHJEu5rnIxgEgez6b9GgWXbkZj5YZ7fx+2r94a2E+Uirsp6HsPTPlomfdHtpt/B0cdKviwkoaM6pyvUOpQ==
+  dependencies:
+    whatwg-url "^5.0.0"
 
 node-forge@0.9.0:
   version "0.9.0"
@@ -22419,10 +22440,10 @@ rxjs@^6.6.6:
   dependencies:
     tslib "^1.9.0"
 
-rxjs@^7.3.0:
-  version "7.3.0"
-  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-7.3.0.tgz#39fe4f3461dc1e50be1475b2b85a0a88c1e938c6"
-  integrity sha512-p2yuGIg9S1epc3vrjKf6iVb3RCaAYjYskkO+jHIaV0IjOPlJop4UnodOoFb2xeNwlguqLYvGw1b1McillYb5Gw==
+rxjs@^7.4.0:
+  version "7.4.0"
+  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-7.4.0.tgz#a12a44d7eebf016f5ff2441b87f28c9a51cebc68"
+  integrity sha512-7SQDi7xeTMCJpqViXh8gL/lebcwlp3d831F05+9B44A4B0WfsEwUQHR64gsH1kvJ+Ep/J9K2+n1hVl1CsGN23w==
   dependencies:
     tslib "~2.1.0"
 
@@ -24535,6 +24556,11 @@ tr46@^2.1.0:
   dependencies:
     punycode "^2.1.1"
 
+tr46@~0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/tr46/-/tr46-0.0.3.tgz#8184fd347dac9cdc185992f3a6622e14b9d9ab6a"
+  integrity sha1-gYT9NH2snNwYWZLzpmIuFLnZq2o=
+
 trash@^7.2.0:
   version "7.2.0"
   resolved "https://registry.yarnpkg.com/trash/-/trash-7.2.0.tgz#c5ad0c9b13d7e7cad0b4187b3cfe38cd8b39abe2"
@@ -25642,6 +25668,11 @@ webauth@^1.1.0:
   resolved "https://registry.yarnpkg.com/webauth/-/webauth-1.1.0.tgz#64704f6b8026986605bc3ca629952e6e26fdd100"
   integrity sha1-ZHBPa4AmmGYFvDymKZUubib90QA=
 
+webidl-conversions@^3.0.0:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/webidl-conversions/-/webidl-conversions-3.0.1.tgz#24534275e2a7bc6be7bc86611cc16ae0a5654871"
+  integrity sha1-JFNCdeKnvGvnvIZhHMFq4KVlSHE=
+
 webidl-conversions@^4.0.2:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/webidl-conversions/-/webidl-conversions-4.0.2.tgz#a855980b1f0b6b359ba1d5d9fb39ae941faa63ad"
@@ -25906,6 +25937,14 @@ whatwg-mimetype@^2.1.0, whatwg-mimetype@^2.2.0, whatwg-mimetype@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/whatwg-mimetype/-/whatwg-mimetype-2.3.0.tgz#3d4b1e0312d2079879f826aff18dbeeca5960fbf"
   integrity sha512-M4yMwr6mAnQz76TbJm914+gPpB/nCwvZbJU28cUD6dR004SAxDLOOSUaB1JDRqLtaOV/vi0IC5lEAGFgrjGv/g==
+
+whatwg-url@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/whatwg-url/-/whatwg-url-5.0.0.tgz#966454e8765462e37644d3626f6742ce8b70965d"
+  integrity sha1-lmRU6HZUYuN2RNNib2dCzotwll0=
+  dependencies:
+    tr46 "~0.0.3"
+    webidl-conversions "^3.0.0"
 
 whatwg-url@^6.4.1:
   version "6.5.0"

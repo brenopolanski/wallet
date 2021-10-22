@@ -1,9 +1,9 @@
 import { Modal } from "app/components/Modal";
 import {
-	TransactionConfirmations,
 	TransactionExplorerLink,
 	TransactionFee,
 	TransactionSender,
+	TransactionStatus,
 	TransactionTimestamp,
 } from "domains/transaction/components/TransactionDetail";
 import { TransactionDetailProperties } from "domains/transaction/components/TransactionDetailModal/TransactionDetailModal.models";
@@ -25,7 +25,7 @@ export const LegacyMagistrateDetail = ({ isOpen, transaction, onClose }: Transac
 
 			<TransactionTimestamp timestamp={transaction.timestamp()} />
 
-			<TransactionConfirmations transaction={transaction} />
+			<TransactionStatus transaction={transaction} />
 		</Modal>
 	);
 };

@@ -209,7 +209,7 @@ exports[`AddressTable should render 1`] = `
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn font-bold space-x-4"
               >
                 <div
                   class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0 flex-shrink-0"
@@ -254,12 +254,8 @@ exports[`AddressTable should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center text-sm font-bold text-center align-middle"
-              >
-                <div
-                  class="inline-flex items-center space-x-2"
-                />
-              </div>
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center space-x-2"
+              />
             </td>
             <td>
               <div
@@ -300,8 +296,10 @@ exports[`AddressTable should render 1`] = `
               <div
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center font-bold text-theme-secondary-text"
               >
-                <span>
-                  #
+                <span
+                  class="text-theme-secondary-400"
+                >
+                  N/A
                 </span>
               </div>
             </td>
@@ -309,16 +307,18 @@ exports[`AddressTable should render 1`] = `
               <div
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
-                <div
-                  class="sc-bdnxRM NjstW text-theme-success-600"
-                  data-testid="AddressRow__status"
-                  height="20"
-                  width="20"
-                >
-                  <svg>
-                    circle-check-mark.svg
-                  </svg>
-                </div>
+                <span>
+                  <div
+                    class="sc-bdnxRM NjstW text-theme-danger-400"
+                    data-testid="StatusIcon__icon"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      circle-cross.svg
+                    </svg>
+                  </div>
+                </span>
               </div>
             </td>
             <td>
@@ -541,7 +541,7 @@ exports[`AddressTable should render when the maximum votes is greater than 1 1`]
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn font-bold space-x-4"
               >
                 <div
                   class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0 flex-shrink-0"
@@ -586,12 +586,8 @@ exports[`AddressTable should render when the maximum votes is greater than 1 1`]
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center text-sm font-bold text-center align-middle"
-              >
-                <div
-                  class="inline-flex items-center space-x-2"
-                />
-              </div>
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center space-x-2"
+              />
             </td>
             <td>
               <div
@@ -613,7 +609,7 @@ exports[`AddressTable should render when the maximum votes is greater than 1 1`]
                   class="flex items-center -space-x-2"
                 >
                   <span
-                    class="inline-block"
+                    class="flex"
                   >
                     <div
                       class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
@@ -885,7 +881,7 @@ exports[`AddressTable should render with voting delegates and handle exception 1
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn font-bold space-x-4"
               >
                 <div
                   class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0 flex-shrink-0"
@@ -930,12 +926,8 @@ exports[`AddressTable should render with voting delegates and handle exception 1
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center text-sm font-bold text-center align-middle"
-              >
-                <div
-                  class="inline-flex items-center space-x-2"
-                />
-              </div>
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center space-x-2"
+              />
             </td>
             <td>
               <div

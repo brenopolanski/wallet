@@ -12,7 +12,7 @@ import { LSK } from "@payvo/sdk-lsk";
 // import { XRP } from "@payvo/sdk-xrp";
 // import { ZIL } from "@payvo/sdk-zil";
 
-const createNetwork = (coin: Coins.CoinSpec, network: string) =>
+const createNetwork = (coin: Coins.CoinBundle, network: string) =>
 	new Networks.Network(coin.manifest, coin.manifest.networks[network]);
 
 export const availableNetworksMock: Networks.Network[] = [

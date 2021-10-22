@@ -133,16 +133,6 @@ describe("Authentication", () => {
 		fromWifMock.mockRestore();
 	});
 
-	it("should fail WIF validation", async () => {
-		const authWif = authentication(translationMock).wif(wallet);
-
-		const wif = "S9q9B5EUjVSFxKxGeJ7SG69YgCiGFfS29r5ZhfoSKZ2ALbPMyFoL";
-
-		await expect(authWif.validate.matchSenderAddress(wif)).resolves.toBe(
-			"COMMON.INPUT_PASSPHRASE.VALIDATION.WIF_NOT_MATCH_WALLET",
-		);
-	});
-
 	it("should validate private key", async () => {
 		const fromPrivateKeyMock = jest
 			.spyOn(wallet.coin().address(), "fromPrivateKey")

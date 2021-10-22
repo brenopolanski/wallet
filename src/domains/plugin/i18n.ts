@@ -140,13 +140,12 @@ export const translations: { [key: string]: any } = {
 
 	UPDATE_ALL: "Update All",
 
-	UPDATE_ALL_NOTICE: "There is {{count}} update available for your plugins. Would you like to update it?",
-	UPDATE_ALL_NOTICE_INCOMPATIBLE:
+	UPDATE_ALL_NOTICE_INCOMPATIBLE_one:
 		"There is {{count}} update available for your plugins, but your wallet version is incompatible. Please update the Payvo Wallet to continue.",
-
-	UPDATE_ALL_NOTICE_INCOMPATIBLE_PLURAL:
+	UPDATE_ALL_NOTICE_INCOMPATIBLE_other:
 		"There are {{count}} updates available for your plugins, but your wallet version is incompatible. Please update the Payvo Wallet to continue.",
-	UPDATE_ALL_NOTICE_PLURAL:
+	UPDATE_ALL_NOTICE_one: "There is {{count}} update available for your plugins. Would you like to update it?",
+	UPDATE_ALL_NOTICE_other:
 		"There are {{count}} updates available for your plugins. Would you like to update them all now?",
 
 	WARNING_DISCLAIMER:

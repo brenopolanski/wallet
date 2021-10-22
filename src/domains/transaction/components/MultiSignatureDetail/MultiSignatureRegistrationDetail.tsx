@@ -3,11 +3,11 @@ import { Modal } from "app/components/Modal";
 import { RecipientList } from "domains/transaction/components/RecipientList";
 import { RecipientListItem } from "domains/transaction/components/RecipientList/RecipientList.models";
 import {
-	TransactionConfirmations,
 	TransactionDetail,
 	TransactionExplorerLink,
 	TransactionFee,
 	TransactionSender,
+	TransactionStatus,
 	TransactionTimestamp,
 } from "domains/transaction/components/TransactionDetail";
 import React, { useEffect, useState } from "react";
@@ -58,7 +58,7 @@ export const MultiSignatureRegistrationDetail = ({ isOpen, transaction, onClose 
 
 			<TransactionTimestamp timestamp={transaction.timestamp()} />
 
-			<TransactionConfirmations transaction={transaction} />
+			<TransactionStatus transaction={transaction} />
 
 			<TransactionDetail label={t("TRANSACTION.MULTISIGNATURE.PARTICIPANTS")} paddingPosition="top">
 				<RecipientList showAmount={false} variant="condensed" recipients={participants} isEditable={false} />

@@ -27,7 +27,7 @@ exports[`News should filter results based on category query and asset 1`] = `
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -463,7 +463,7 @@ exports[`News should filter results based on category query and asset 1`] = `
                                   data-testid="NewsCard__date-created"
                                 >
                                   <span
-                                    data-testid="timeago"
+                                    data-testid="TimeAgo"
                                   >
                                     A few seconds ago
                                   </span>
@@ -948,7 +948,7 @@ exports[`News should render 1`] = `
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -1336,7 +1336,7 @@ exports[`News should render 1`] = `
                                   data-testid="NewsCard__date-created"
                                 >
                                   <span
-                                    data-testid="timeago"
+                                    data-testid="TimeAgo"
                                   >
                                     A few seconds ago
                                   </span>
@@ -1821,7 +1821,7 @@ exports[`News should show error toast if news cannot be fetched 1`] = `
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"

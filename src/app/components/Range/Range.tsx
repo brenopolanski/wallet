@@ -28,7 +28,7 @@ interface Properties {
 }
 
 export const Range = ({ values, min, max, step, onChange, isInvalid }: Properties) => {
-	const color = !isInvalid ? "var(--theme-color-primary-600)" : "var(--theme-color-danger-700)";
+	const color = isInvalid ? "var(--theme-color-danger-700)" : "var(--theme-color-primary-600)";
 
 	/*
 	 * Ensure at least one value on mount to properly render the thumb

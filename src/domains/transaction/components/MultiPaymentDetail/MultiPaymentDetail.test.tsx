@@ -1,7 +1,7 @@
 import React from "react";
 import { Route } from "react-router-dom";
 import { TransactionFixture } from "tests/fixtures/transactions";
-import { act, fireEvent, getDefaultProfileId, render, renderWithRouter, screen, waitFor } from "utils/testing-library";
+import { act, fireEvent, getDefaultProfileId, render, renderWithRouter, screen } from "utils/testing-library";
 
 import { translations } from "../../i18n";
 import { MultiPaymentDetail } from "./MultiPaymentDetail";
@@ -10,7 +10,7 @@ const fixtureProfileId = getDefaultProfileId();
 
 describe("MultiPaymentDetail", () => {
 	it("should not render if not open", () => {
-		const { asFragment, getByTestId } = render(
+		const { asFragment } = render(
 			<MultiPaymentDetail
 				isOpen={false}
 				transaction={{
@@ -20,12 +20,12 @@ describe("MultiPaymentDetail", () => {
 			/>,
 		);
 
-		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render a modal", () => {
-		const { asFragment, getByTestId } = renderWithRouter(
+		const { asFragment } = renderWithRouter(
 			<Route path="/profiles/:profileId">
 				<MultiPaymentDetail
 					isOpen={true}
@@ -40,12 +40,12 @@ describe("MultiPaymentDetail", () => {
 			},
 		);
 
-		expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_TRANSFER_DETAIL.TITLE);
+		expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_TRANSFER_DETAIL.TITLE);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render with recipients", async () => {
-		const { asFragment, getByText, getByTestId } = renderWithRouter(
+	it("should render with recipients", () => {
+		const { asFragment } = renderWithRouter(
 			<Route path="/profiles/:profileId">
 				<MultiPaymentDetail
 					isOpen={true}
@@ -75,9 +75,8 @@ describe("MultiPaymentDetail", () => {
 			},
 		);
 
-		expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_TRANSFER_DETAIL.TITLE);
-
-		await waitFor(() => expect(getByText(translations.WELL_CONFIRMED)).toBeTruthy());
+		expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_TRANSFER_DETAIL.TITLE);
+		expect(screen.getByTestId("MultiPaymentRecipients")).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});

@@ -15,6 +15,7 @@ import {
 	renderWithRouter,
 	screen,
 	waitFor,
+	within,
 } from "utils/testing-library";
 
 import { translations } from "../../i18n";
@@ -249,7 +250,7 @@ describe("PluginDetails", () => {
 
 		await waitFor(() => expect(screen.getAllByText("Test Plugin").length).toBeGreaterThan(0));
 
-		fireEvent.click(screen.getByTestId("PluginHeader__dropdown-toggle"));
+		fireEvent.click(within(screen.getByTestId("plugin-details__header")).getByTestId("dropdown__toggle"));
 		fireEvent.click(screen.getByText(commonTranslations.ENABLE));
 
 		await waitFor(() => expect(plugin.isEnabled(profile)).toBe(true));
@@ -293,7 +294,7 @@ describe("PluginDetails", () => {
 
 		await waitFor(() => expect(screen.getAllByText("Test Plugin").length).toBeGreaterThan(0));
 
-		fireEvent.click(screen.getByTestId("PluginHeader__dropdown-toggle"));
+		fireEvent.click(within(screen.getByTestId("plugin-details__header")).getByTestId("dropdown__toggle"));
 		fireEvent.click(screen.getByText(commonTranslations.ENABLE));
 
 		await waitFor(() => expect(toastSpy).toHaveBeenCalled());
@@ -334,7 +335,7 @@ describe("PluginDetails", () => {
 
 		await waitFor(() => expect(screen.getAllByText("Test Plugin").length).toBeGreaterThan(0));
 
-		fireEvent.click(screen.getByTestId("PluginHeader__dropdown-toggle"));
+		fireEvent.click(within(screen.getByTestId("plugin-details__header")).getByTestId("dropdown__toggle"));
 		fireEvent.click(screen.getByText(commonTranslations.DISABLE));
 
 		await waitFor(() => expect(plugin.isEnabled(profile)).toBe(false));
@@ -371,7 +372,7 @@ describe("PluginDetails", () => {
 
 		await waitFor(() => expect(screen.getAllByText("Test Plugin").length).toBeGreaterThan(0));
 
-		fireEvent.click(screen.getByTestId("PluginHeader__dropdown-toggle"));
+		fireEvent.click(within(screen.getByTestId("plugin-details__header")).getByTestId("dropdown__toggle"));
 		fireEvent.click(screen.getByText(commonTranslations.DELETE));
 
 		const invokeMock = jest.spyOn(ipcRenderer, "invoke").mockResolvedValue([]);
@@ -415,7 +416,7 @@ describe("PluginDetails", () => {
 
 		await waitFor(() => expect(screen.getAllByText("Test Plugin").length).toBeGreaterThan(0));
 
-		fireEvent.click(screen.getByTestId("PluginHeader__dropdown-toggle"));
+		fireEvent.click(within(screen.getByTestId("plugin-details__header")).getByTestId("dropdown__toggle"));
 		fireEvent.click(screen.getByText(commonTranslations.DELETE));
 
 		const invokeMock = jest.spyOn(ipcRenderer, "invoke").mockResolvedValue([]);
@@ -576,7 +577,7 @@ describe("PluginDetails", () => {
 
 		fireEvent.click(screen.getByText("Fetch Packages"));
 
-		fireEvent.click(screen.getByTestId("PluginHeader__dropdown-toggle"));
+		fireEvent.click(within(screen.getByTestId("plugin-details__header")).getByTestId("dropdown__toggle"));
 
 		await waitFor(() => expect(screen.getByText(commonTranslations.UPDATE)).toBeInTheDocument());
 		fireEvent.click(screen.getByText(commonTranslations.UPDATE));

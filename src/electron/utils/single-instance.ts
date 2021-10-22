@@ -11,23 +11,24 @@ export function handleSingleInstance({
 }) {
 	if (!gotTheLock) {
 		app.quit();
-	} else {
-		app.on("second-instance", (_, argv) => {
-			// Someone tried to run a second instance, we should focus our window.
-			// argv: An array of the second instance’s (command line / deep linked) arguments
-			for (const argument of argv) {
-				if (argument.startsWith("payvo:")) {
-					broadcastURL(argument);
-					break;
-				}
-			}
-
-			if (mainWindow) {
-				if (mainWindow.isMinimized()) {
-					mainWindow.restore();
-				}
-				mainWindow.focus();
-			}
-		});
+		return;
 	}
+
+	app.on("second-instance", (_, argv) => {
+		// Someone tried to run a second instance, we should focus our window.
+		// argv: An array of the second instance’s (command line / deep linked) arguments
+		for (const argument of argv) {
+			if (argument.startsWith("payvo:")) {
+				broadcastURL(argument);
+				break;
+			}
+		}
+
+		if (mainWindow) {
+			if (mainWindow.isMinimized()) {
+				mainWindow.restore();
+			}
+			mainWindow.focus();
+		}
+	});
 }

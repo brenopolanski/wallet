@@ -83,6 +83,7 @@ describe("TransactionRow", () => {
 							{
 								...fixture,
 								wallet: () => ({
+									...fixture.wallet(),
 									currency: () => "BTC",
 									isLedger: () => false,
 									network: () => ({ isTest: () => false }),
@@ -110,6 +111,7 @@ describe("TransactionRow", () => {
 							{
 								...fixture,
 								wallet: () => ({
+									...fixture.wallet(),
 									currency: () => "BTC",
 									isLedger: () => false,
 									network: () => ({ isTest: () => true }),

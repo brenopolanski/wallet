@@ -222,61 +222,6 @@ exports[`Modal should render a 5x large one 1`] = `
 </div>
 `;
 
-exports[`Modal should render a 5x large one 2`] = `
-<div>
-  <div
-    class="flex fixed inset-0 z-50 py-20 w-full h-full bg-opacity-60 dark:bg-opacity-80 bg-theme-secondary-900-rgba overflow-overlay dark:bg-black-rgba"
-    data-testid="modal__overlay"
-  >
-    <div
-      class="Modal__ModalContainer-sc-5lu2mc-0 qXMrO"
-      tabindex="-1"
-    >
-      <div
-        class="flex overflow-hidden relative flex-col p-10 shadow-2xl rounded-2.5xl bg-theme-background"
-        data-testid="modal__inner"
-      >
-        <div
-          class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
-        >
-          <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm w-11 h-11"
-            data-testid="modal__close-btn"
-            type="button"
-          >
-            <div
-              class="flex items-center space-x-2"
-            >
-              <div
-                class="sc-bdnxRM AFVmm"
-                height="16"
-                width="16"
-              >
-                <svg>
-                  cross.svg
-                </svg>
-              </div>
-            </div>
-          </button>
-        </div>
-        <div
-          class="relative space-y-4"
-        >
-          <h2
-            class="mb-0 text-2xl font-bold"
-          >
-            ark
-          </h2>
-          <div
-            class="flex-1"
-          />
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
 exports[`Modal should render a large one 1`] = `
 <div>
   <div

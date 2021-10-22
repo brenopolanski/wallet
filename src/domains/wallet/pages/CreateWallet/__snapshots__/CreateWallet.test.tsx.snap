@@ -26,7 +26,7 @@ exports[`CreateWallet should create a wallet 1`] = `
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -589,7 +589,7 @@ exports[`CreateWallet should create a wallet 2`] = `
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -1056,7 +1056,7 @@ exports[`CreateWallet should create a wallet with encryption 1`] = `
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -1619,7 +1619,7 @@ exports[`CreateWallet should create a wallet with encryption 2`] = `
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -2088,7 +2088,7 @@ exports[`CreateWallet should remove pending wallet if not submitted 1`] = `
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -2653,7 +2653,7 @@ exports[`CreateWallet should show an error message for duplicate name 1`] = `
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -3214,7 +3214,7 @@ exports[`CreateWallet should show an error message if wallet generation failed 1
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"

@@ -49,29 +49,4 @@ describe("DelegateResignationDetail", () => {
 		expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_DELEGATE_RESIGNATION_DETAIL.TITLE);
 		expect(asFragment()).toMatchSnapshot();
 	});
-
-	it("should render as confirmed", () => {
-		const { asFragment, getByTestId } = renderWithRouter(
-			<Route path="/profiles/:profileId">
-				<DelegateResignationDetail
-					isOpen={true}
-					transaction={{
-						...TransactionFixture,
-						isConfirmed: () => true,
-						username: () => "Ark Wallet",
-						wallet: () => ({
-							...TransactionFixture.wallet(),
-							username: () => "ARK Wallet",
-						}),
-					}}
-				/>
-			</Route>,
-			{
-				routes: [`/profiles/${fixtureProfileId}`],
-			},
-		);
-
-		expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_DELEGATE_RESIGNATION_DETAIL.TITLE);
-		expect(asFragment()).toMatchSnapshot();
-	});
 });

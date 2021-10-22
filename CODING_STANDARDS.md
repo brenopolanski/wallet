@@ -12,13 +12,13 @@ Names should **not** be _Obscure_ or _Abbreviated_. This excludes size units lik
 
 ### File Names
 
-| Name               | Convention                    | Example            |
-| :----------------- | :---------------------------- | :----------------- |
-| Index file         | `index.(tsx,ts)`              | `index.ts`         |
-| React component    | `ComponentName.(tsx,ts)`      | `Button.tsx`       |
-| Test file          | `ComponentName.test.(tsx,ts)` | `Button.test.tsx`  |
-| TypeScript types   | `File.models.ts`              | `Button.models.ts` |
-| Styles (CSS-in-JS) | `ComponentName.styles.ts`     | `Button.styles.ts` |
+| Name               | Convention                    | Example               |
+| :----------------- | :---------------------------- | :-------------------- |
+| Index file         | `index.(tsx,ts)`              | `index.ts`            |
+| React component    | `ComponentName.(tsx,ts)`      | `Button.tsx`          |
+| Test file          | `ComponentName.test.(tsx,ts)` | `Button.test.tsx`     |
+| TypeScript types   | `File.contracts.ts`           | `Button.contracts.ts` |
+| Styles (CSS-in-JS) | `ComponentName.styles.ts`     | `Button.styles.ts`    |
 
 ### HTML
 
@@ -182,7 +182,7 @@ Components should be grouped into folders logically. If they are only used once 
         ParentComponent.styles.ts
         /ChildComponent
             ChildComponent.tsx
-            ChildComponent.models.ts
+            ChildComponent.contracts.ts
             ChildComponent.styles.ts
             ChildComponent.test.tsx
             ChildComponent.validate.ts
@@ -210,6 +210,6 @@ Components should always be accompanied by tests which are named `ComponentName.
 
 Separate styles from the main code, styles should live in `ComponentName.styles.ts`.
 
-#### **Models**
+#### **Contracts**
 
-Separate interfaces and types from the main code, models should live in `ComponentName.models.ts`
+Separate interfaces and types from the main code, contracts should live in `ComponentName.contracts.ts`

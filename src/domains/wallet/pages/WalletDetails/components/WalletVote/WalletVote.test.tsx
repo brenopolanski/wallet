@@ -1,9 +1,9 @@
 import { Contracts } from "@payvo/profiles";
 // @README: This import is fine in tests but should be avoided in production code.
 import { ReadOnlyWallet } from "@payvo/profiles/distribution/read-only-wallet";
-import { translations as commonTranslations } from "app/i18n/common/i18n";
-import { translations as walletTranslations } from "domains/wallet/i18n";
+import { renderHook } from "@testing-library/react-hooks";
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { act, env, fireEvent, getDefaultProfileId, render, syncDelegates, waitFor } from "utils/testing-library";
 
 import { WalletVote } from "./WalletVote";
@@ -11,7 +11,14 @@ import { WalletVote } from "./WalletVote";
 let wallet: Contracts.IReadWriteWallet;
 let profile: Contracts.IProfile;
 
+let t: any;
+
 describe("WalletVote", () => {
+	beforeAll(() => {
+		const { result } = renderHook(() => useTranslation());
+		t = result.current.t;
+	});
+
 	beforeEach(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 		wallet = profile.wallets().findById("ac38fe6d-4b67-4ef1-85be-17c5f6841129");
@@ -39,7 +46,7 @@ describe("WalletVote", () => {
 
 		await waitFor(() => expect(getByTestId("WalletVote")).toBeTruthy());
 
-		expect(getByText(commonTranslations.LEARN_MORE)).toBeTruthy();
+		expect(getByText(t("COMMON.LEARN_MORE"))).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 
 		walletSpy.mockRestore();
@@ -90,7 +97,7 @@ describe("WalletVote", () => {
 
 		await waitFor(() => expect(getByTestId("WalletVote")).toBeTruthy());
 
-		expect(getByText(commonTranslations.LEARN_MORE)).toBeTruthy();
+		expect(getByText(t("COMMON.LEARN_MORE"))).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 
 		walletSpy.mockRestore();
@@ -108,7 +115,7 @@ describe("WalletVote", () => {
 
 		await waitFor(() => expect(getByTestId("WalletVote")).toBeTruthy());
 
-		expect(getByText(commonTranslations.LEARN_MORE)).toBeTruthy();
+		expect(getByText(t("COMMON.LEARN_MORE"))).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 
 		delegateSyncSpy.mockRestore();
@@ -157,7 +164,8 @@ describe("WalletVote", () => {
 
 			expect(getByText(delegate.wallet!.username()!)).toBeTruthy();
 			expect(getByText(`#${delegate.wallet!.rank()}`)).toBeTruthy();
-			expect(getByText(walletTranslations.PAGE_WALLET_DETAILS.VOTES.ACTIVE)).toBeTruthy();
+
+			expect(getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.ACTIVE", { count: 1 }))).toBeInTheDocument();
 
 			expect(asFragment()).toMatchSnapshot();
 
@@ -188,7 +196,8 @@ describe("WalletVote", () => {
 
 			expect(getByText(delegate.wallet!.username()!)).toBeTruthy();
 			expect(getByText(`#${delegate.wallet!.rank()}`)).toBeTruthy();
-			expect(getByText(walletTranslations.PAGE_WALLET_DETAILS.VOTES.STANDBY)).toBeTruthy();
+
+			expect(getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.STANDBY", { count: 1 }))).toBeInTheDocument();
 
 			expect(asFragment()).toMatchSnapshot();
 
@@ -219,8 +228,9 @@ describe("WalletVote", () => {
 			await waitFor(() => expect(getByTestId("WalletVote")).toBeTruthy());
 
 			expect(getByText(delegate.wallet!.username()!)).toBeTruthy();
-			expect(getByText(commonTranslations.NOT_AVAILABLE)).toBeTruthy();
-			expect(getByText(walletTranslations.PAGE_WALLET_DETAILS.VOTES.STANDBY)).toBeTruthy();
+			expect(getByText(t("COMMON.NOT_AVAILABLE"))).toBeInTheDocument();
+
+			expect(getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.STANDBY", { count: 1 }))).toBeInTheDocument();
 
 			expect(getByText("hint-small.svg")).toBeTruthy();
 			expect(asFragment()).toMatchSnapshot();
@@ -237,7 +247,7 @@ describe("WalletVote", () => {
 		afterEach(() => maxVotesSpy.mockRestore());
 
 		it("should render a vote for multiple active delegates", async () => {
-			const walletSpy = jest.spyOn(wallet.voting(), "current").mockReturnValue([
+			const votes = [
 				{
 					amount: 0,
 					wallet: new ReadOnlyWallet({
@@ -258,7 +268,9 @@ describe("WalletVote", () => {
 						username: "arky",
 					}),
 				},
-			]);
+			];
+
+			const walletSpy = jest.spyOn(wallet.voting(), "current").mockReturnValue(votes);
 
 			const { asFragment, getByText, getByTestId } = render(
 				<WalletVote profile={profile} wallet={wallet} onButtonClick={jest.fn()} env={env} />,
@@ -266,8 +278,10 @@ describe("WalletVote", () => {
 
 			await waitFor(() => expect(getByTestId("WalletVote")).toBeTruthy());
 
-			expect(getByText(walletTranslations.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE)).toBeTruthy();
-			expect(getByText(walletTranslations.PAGE_WALLET_DETAILS.VOTES.ACTIVE_PLURAL)).toBeTruthy();
+			expect(getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE"))).toBeInTheDocument();
+			expect(
+				getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.ACTIVE", { count: votes.length })),
+			).toBeInTheDocument();
 
 			expect(asFragment()).toMatchSnapshot();
 
@@ -275,7 +289,7 @@ describe("WalletVote", () => {
 		});
 
 		it("should render a vote for multiple standby delegates", async () => {
-			const walletSpy = jest.spyOn(wallet.voting(), "current").mockReturnValue([
+			const votes = [
 				{
 					amount: 0,
 					wallet: new ReadOnlyWallet({
@@ -294,7 +308,9 @@ describe("WalletVote", () => {
 						username: "arky",
 					}),
 				},
-			]);
+			];
+
+			const walletSpy = jest.spyOn(wallet.voting(), "current").mockReturnValue(votes);
 
 			const { asFragment, getByText, getByTestId } = render(
 				<WalletVote profile={profile} wallet={wallet} onButtonClick={jest.fn()} env={env} />,
@@ -302,8 +318,10 @@ describe("WalletVote", () => {
 
 			await waitFor(() => expect(getByTestId("WalletVote")).toBeTruthy());
 
-			expect(getByText(walletTranslations.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE)).toBeTruthy();
-			expect(getByText(walletTranslations.PAGE_WALLET_DETAILS.VOTES.STANDBY_PLURAL)).toBeTruthy();
+			expect(getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE"))).toBeInTheDocument();
+			expect(
+				getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.STANDBY", { count: votes.length })),
+			).toBeInTheDocument();
 
 			expect(asFragment()).toMatchSnapshot();
 
@@ -339,9 +357,11 @@ describe("WalletVote", () => {
 
 			await waitFor(() => expect(getByTestId("WalletVote")).toBeTruthy());
 
-			expect(getByText(walletTranslations.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE)).toBeTruthy();
-			expect(getByText("Active 1")).toBeTruthy();
-			expect(getByText("/ Standby 1")).toBeTruthy();
+			expect(getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE"))).toBeInTheDocument();
+			expect(getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.ACTIVE_COUNT", { count: 1 }))).toBeInTheDocument();
+			expect(
+				getByText(`/ ${t("WALLETS.PAGE_WALLET_DETAILS.VOTES.STANDBY_COUNT", { count: 1 })}`),
+			).toBeInTheDocument();
 
 			expect(getByText("hint-small.svg")).toBeTruthy();
 			expect(asFragment()).toMatchSnapshot();
@@ -381,7 +401,7 @@ describe("WalletVote", () => {
 
 			await waitFor(() => expect(getByTestId("WalletVote")).toBeTruthy());
 
-			expect(getByText(walletTranslations.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE)).toBeTruthy();
+			expect(getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE"))).toBeInTheDocument();
 
 			expect(getByTestId("WalletVote")).toHaveTextContent("Active 1");
 			expect(getByTestId("WalletVote")).toHaveTextContent("Resigned 1");
@@ -423,7 +443,7 @@ describe("WalletVote", () => {
 
 			await waitFor(() => expect(getByTestId("WalletVote")).toBeTruthy());
 
-			expect(getByText(walletTranslations.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE)).toBeTruthy();
+			expect(getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE"))).toBeInTheDocument();
 
 			expect(getByTestId("WalletVote")).toHaveTextContent("Standby 1");
 			expect(getByTestId("WalletVote")).toHaveTextContent("Resigned 1");
@@ -476,7 +496,7 @@ describe("WalletVote", () => {
 
 			await waitFor(() => expect(getByTestId("WalletVote")).toBeTruthy());
 
-			expect(getByText(walletTranslations.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE)).toBeTruthy();
+			expect(getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE"))).toBeInTheDocument();
 
 			expect(getByTestId("WalletVote")).toHaveTextContent("Active 1");
 			expect(getByTestId("WalletVote")).toHaveTextContent("Standby 1");
@@ -521,7 +541,7 @@ describe("WalletVote", () => {
 
 		await waitFor(() => expect(getByTestId("WalletVote")).toBeTruthy());
 		act(() => {
-			fireEvent.click(getByText(walletTranslations.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE));
+			fireEvent.click(getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE")));
 		});
 
 		expect(onButtonClick).toHaveBeenCalled();
@@ -545,7 +565,7 @@ describe("WalletVote", () => {
 		await waitFor(() => expect(getByTestId("WalletVote")).not.toBeDisabled());
 
 		act(() => {
-			fireEvent.click(getByText(commonTranslations.VOTE));
+			fireEvent.click(getByText(t("COMMON.VOTE")));
 		});
 
 		expect(onButtonClick).toHaveBeenCalled();

@@ -26,7 +26,7 @@ exports[`SendIpfs should error if wrong mnemonic 1`] = `
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -1401,7 +1401,7 @@ exports[`SendIpfs should send a ipfs transfer with a ledger wallet 1`] = `
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -1973,7 +1973,7 @@ exports[`SendIpfs should send an IPFS transaction and go back to wallet page 1`]
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -2547,7 +2547,7 @@ exports[`SendIpfs should send an IPFS transaction using encryption password 1`] 
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -3119,7 +3119,7 @@ exports[`SendIpfs should send an ipfs transaction with a multisig wallet 1`] = `
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -3691,7 +3691,7 @@ exports[`SendIpfs should show an error if an invalid IPFS hash is entered 1`] = 
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -4312,7 +4312,7 @@ exports[`SendIpfs should show error step and go back 1`] = `
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"

@@ -382,7 +382,7 @@ export const SendVote = () => {
 	const hideStepNavigation =
 		activeTab === Step.ErrorStep || (activeTab === Step.AuthenticationStep && activeWallet.isLedger());
 
-	const isNextDisabled = !isDirty ? true : !isValid;
+	const isNextDisabled = isDirty ? !isValid : true;
 
 	return (
 		<Page profile={activeProfile}>

@@ -104,7 +104,7 @@ describe("AddressRow", () => {
 
 		expect(container).toBeTruthy();
 
-		await waitFor(() => expect(getByTestId("AddressRow__status")).toBeTruthy());
+		await waitFor(() => expect(getByTestId("StatusIcon__icon")).toBeTruthy());
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -199,7 +199,7 @@ describe("AddressRow", () => {
 
 		expect(container).toBeTruthy();
 
-		await waitFor(() => expect(getByTestId("AddressRow__status")).toBeTruthy());
+		await waitFor(() => expect(getByTestId("StatusIcon__icon")).toBeTruthy());
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -221,7 +221,7 @@ describe("AddressRow", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("AddressRow__status")).toBeTruthy());
+		await waitFor(() => expect(getByTestId("StatusIcon__icon")).toBeTruthy());
 		await waitFor(() => expect(getByTestId("AddressRow__select-0")).toBeTruthy());
 		await waitFor(() => expect(getByTestId("AddressRow__select-1")).toBeTruthy());
 
@@ -243,11 +243,128 @@ describe("AddressRow", () => {
 			},
 		);
 
-		await waitFor(() => expect(getAllByTestId("AddressRow__status")).toBeTruthy());
+		await waitFor(() => expect(getAllByTestId("StatusIcon__icon")).toBeTruthy());
 		await waitFor(() => expect(getByTestId("AddressRow__select-0")).toBeTruthy());
 		await waitFor(() => expect(getByTestId("AddressRow__select-1")).toBeTruthy());
 
 		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should render with active delegate", async () => {
+		const votesMock = jest.spyOn(wallet.voting(), "current").mockReturnValue([
+			{
+				amount: 0,
+				wallet: new ReadOnlyWallet({
+					address: data[0].address,
+					explorerLink: "",
+					governanceIdentifier: "address",
+					isDelegate: true,
+					isResignedDelegate: false,
+					publicKey: data[0].publicKey,
+					rank: 1,
+					username: data[0].username,
+				}),
+			},
+		]);
+
+		const { container, asFragment, getAllByTestId } = renderWithRouter(
+			<Route path="/profiles/:profileId/votes">
+				<table>
+					<tbody>
+						<AddressRow index={0} maxVotes={1} wallet={wallet} />
+					</tbody>
+				</table>
+			</Route>,
+			{
+				routes: [`/profiles/${profile.id()}/votes`],
+			},
+		);
+
+		await waitFor(() => expect(getAllByTestId("StatusIcon__icon")).toBeTruthy());
+
+		expect(container).toHaveTextContent("circle-check-mark.svg");
+
+		expect(asFragment()).toMatchSnapshot();
+
+		votesMock.mockRestore();
+	});
+
+	it("should render with standby delegate", async () => {
+		const votesMock = jest.spyOn(wallet.voting(), "current").mockReturnValue([
+			{
+				amount: 0,
+				wallet: new ReadOnlyWallet({
+					address: data[0].address,
+					explorerLink: "",
+					governanceIdentifier: "address",
+					isDelegate: true,
+					isResignedDelegate: false,
+					publicKey: data[0].publicKey,
+					rank: 100,
+					username: data[0].username,
+				}),
+			},
+		]);
+
+		const { container, asFragment, getAllByTestId } = renderWithRouter(
+			<Route path="/profiles/:profileId/votes">
+				<table>
+					<tbody>
+						<AddressRow index={0} maxVotes={1} wallet={wallet} />
+					</tbody>
+				</table>
+			</Route>,
+			{
+				routes: [`/profiles/${profile.id()}/votes`],
+			},
+		);
+
+		await waitFor(() => expect(getAllByTestId("StatusIcon__icon")).toBeTruthy());
+
+		expect(container).toHaveTextContent("clock.svg");
+
+		expect(asFragment()).toMatchSnapshot();
+
+		votesMock.mockRestore();
+	});
+
+	it("should render with resigned delegate", async () => {
+		const votesMock = jest.spyOn(wallet.voting(), "current").mockReturnValue([
+			{
+				amount: 0,
+				wallet: new ReadOnlyWallet({
+					address: data[0].address,
+					explorerLink: "",
+					governanceIdentifier: "address",
+					isDelegate: true,
+					isResignedDelegate: true,
+					publicKey: data[0].publicKey,
+					rank: undefined,
+					username: data[0].username,
+				}),
+			},
+		]);
+
+		const { container, asFragment, getAllByTestId } = renderWithRouter(
+			<Route path="/profiles/:profileId/votes">
+				<table>
+					<tbody>
+						<AddressRow index={0} maxVotes={1} wallet={wallet} />
+					</tbody>
+				</table>
+			</Route>,
+			{
+				routes: [`/profiles/${profile.id()}/votes`],
+			},
+		);
+
+		await waitFor(() => expect(getAllByTestId("StatusIcon__icon")).toBeTruthy());
+
+		expect(container).toHaveTextContent("circle-cross.svg");
+
+		expect(asFragment()).toMatchSnapshot();
+
+		votesMock.mockRestore();
 	});
 
 	it("should emit action on select button", async () => {
@@ -270,7 +387,7 @@ describe("AddressRow", () => {
 		);
 		const selectButton = getByTestId("AddressRow__select-0");
 
-		await waitFor(() => expect(getByTestId("AddressRow__status")).toBeTruthy());
+		await waitFor(() => expect(getByTestId("StatusIcon__icon")).toBeTruthy());
 
 		act(() => {
 			fireEvent.click(selectButton);

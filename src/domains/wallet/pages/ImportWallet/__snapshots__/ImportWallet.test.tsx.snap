@@ -26,7 +26,7 @@ exports[`ImportWallet should import with encryped wif 1`] = `
       </div>
     </div>
     <div
-      class="pt-6 space-y-6"
+      class="mt-8 space-y-6"
     >
       <fieldset
         class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
@@ -248,7 +248,7 @@ exports[`ImportWallet should import with wif 1`] = `
       </div>
     </div>
     <div
-      class="pt-6 space-y-6"
+      class="mt-8 space-y-6"
     >
       <fieldset
         class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
@@ -441,7 +441,7 @@ exports[`ImportWallet should render 2nd step 1`] = `
       </div>
     </div>
     <div
-      class="pt-6 space-y-6"
+      class="mt-8 space-y-6"
     >
       <fieldset
         class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
@@ -692,7 +692,7 @@ exports[`ImportWallet should render 3rd step 1`] = `
       </div>
     </div>
     <div
-      class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 guMZnB no-ligatures"
+      class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 guMZnB no-ligatures mt-2"
       data-testid="TransactionNetwork"
     >
       <div
@@ -860,7 +860,7 @@ exports[`ImportWallet should render as ledger import 1`] = `
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"

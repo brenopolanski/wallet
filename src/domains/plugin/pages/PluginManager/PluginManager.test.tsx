@@ -770,7 +770,7 @@ describe("PluginManager", () => {
 		fireEvent.click(screen.getByTestId("tabs__tab-button-my-plugins"));
 		fireEvent.click(screen.getByTestId("LayoutControls__list--icon"));
 
-		await waitFor(() => expect(screen.getByTestId("PluginListItem__update-badge")).toBeInTheDocument());
+		await waitFor(() => expect(screen.getByTestId("PluginDropdown__update-badge")).toBeInTheDocument());
 
 		fireEvent.click(
 			within(screen.getByTestId("PluginManager__container--my-plugins")).getAllByTestId("dropdown__toggle")[0],

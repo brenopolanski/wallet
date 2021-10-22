@@ -63,7 +63,7 @@ describe("PluginHeader", () => {
 			/>,
 		);
 
-		fireEvent.click(screen.getByTestId("PluginHeader__dropdown-toggle"));
+		fireEvent.click(screen.getByTestId("dropdown__toggle"));
 		fireEvent.click(screen.getByText(commonTranslations.UPDATE));
 
 		expect(onUpdate).toHaveBeenCalled();
@@ -74,7 +74,7 @@ describe("PluginHeader", () => {
 
 		render(<PluginHeader {...pluginDataFixture} isInstalled onDelete={onDelete} />);
 
-		fireEvent.click(screen.getByTestId("PluginHeader__dropdown-toggle"));
+		fireEvent.click(screen.getByTestId("dropdown__toggle"));
 		fireEvent.click(screen.getByText(commonTranslations.DELETE));
 
 		expect(onDelete).toHaveBeenCalled();
@@ -85,7 +85,7 @@ describe("PluginHeader", () => {
 
 		render(<PluginHeader {...pluginDataFixture} isInstalled onEnable={onEnable} />);
 
-		fireEvent.click(screen.getByTestId("PluginHeader__dropdown-toggle"));
+		fireEvent.click(screen.getByTestId("dropdown__toggle"));
 		fireEvent.click(screen.getByText(commonTranslations.ENABLE));
 
 		expect(onEnable).toHaveBeenCalled();
@@ -96,7 +96,7 @@ describe("PluginHeader", () => {
 
 		render(<PluginHeader {...pluginDataFixture} isInstalled isEnabled onDisable={onDisable} />);
 
-		fireEvent.click(screen.getByTestId("PluginHeader__dropdown-toggle"));
+		fireEvent.click(screen.getByTestId("dropdown__toggle"));
 		fireEvent.click(screen.getByText(commonTranslations.DISABLE));
 
 		expect(onDisable).toHaveBeenCalled();

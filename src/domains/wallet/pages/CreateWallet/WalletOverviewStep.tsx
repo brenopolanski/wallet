@@ -52,45 +52,48 @@ export const WalletOverviewStep = () => {
 	};
 
 	return (
-		<section data-testid="CreateWallet__WalletOverviewStep" className="space-y-8">
+		<section data-testid="CreateWallet__WalletOverviewStep">
 			<Header title={t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.TITLE")} />
 
-			<Alert>{t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.WARNING")}</Alert>
-			<MnemonicList mnemonic={mnemonic} />
+			<Alert className="mt-6">{t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.WARNING")}</Alert>
 
-			<Divider dashed />
+			<div className="mt-8 space-y-8">
+				<MnemonicList mnemonic={mnemonic} />
 
-			<div className="flex justify-between items-center">
-				<div className="space-y-2">
-					<span className="text-lg font-semibold">
-						{t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.COPY_OR_DOWNLOAD.TITLE")}
-					</span>
-					<p className="text-sm text-theme-secondary-text">
-						{t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.COPY_OR_DOWNLOAD.DESCRIPTION")}
-					</p>
+				<Divider dashed />
+
+				<div className="flex justify-between items-center">
+					<div className="space-y-2">
+						<span className="text-lg font-semibold text-theme-secondary-text">
+							{t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.COPY_OR_DOWNLOAD.TITLE")}
+						</span>
+						<p className="text-sm text-theme-secondary-500">
+							{t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.COPY_OR_DOWNLOAD.DESCRIPTION")}
+						</p>
+					</div>
+
+					<Icon name="FrameKey" className="text-black dark:text-theme-secondary-600" size="xl" />
 				</div>
 
-				<Icon name="FrameKey" className="text-black dark:text-theme-secondary-600" size="xl" />
+				<div className="flex justify-end space-x-3 w-full">
+					<Clipboard variant="button" data={mnemonic} data-testid="CreateWallet__copy">
+						<Icon name="Copy" />
+						<span>{t("COMMON.COPY")}</span>
+					</Clipboard>
+
+					<Button
+						data-testid="CreateWallet__download"
+						variant="secondary"
+						className="flex items-center space-x-2"
+						onClick={handleDownload}
+					>
+						<Icon name="ArrowDownBracket" />
+						<span>{t("COMMON.DOWNLOAD")}</span>
+					</Button>
+				</div>
+
+				<Divider dashed />
 			</div>
-
-			<div className="flex justify-end space-x-3 w-full">
-				<Clipboard variant="button" data={mnemonic} data-testid="CreateWallet__copy">
-					<Icon name="Copy" />
-					<span>{t("COMMON.COPY")}</span>
-				</Clipboard>
-
-				<Button
-					data-testid="CreateWallet__download"
-					variant="secondary"
-					className="flex items-center space-x-2"
-					onClick={handleDownload}
-				>
-					<Icon name="ArrowDownBracket" />
-					<span>{t("COMMON.DOWNLOAD")}</span>
-				</Button>
-			</div>
-
-			<Divider dashed />
 		</section>
 	);
 };

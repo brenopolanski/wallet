@@ -57,7 +57,7 @@ export const WalletCard = ({
 
 	const aliasRef = useRef(null);
 
-	const canDisplayBalance = !wallet ? false : isFullySynced(wallet);
+	const canDisplayBalance = wallet ? isFullySynced(wallet) : false;
 
 	if (isLoading) {
 		return <WalletCardSkeleton />;

@@ -1,12 +1,11 @@
-import { Badge } from "app/components/Badge";
 import { Button } from "app/components/Button";
 import { Divider } from "app/components/Divider";
-import { Dropdown, DropdownOption } from "app/components/Dropdown";
 import { Icon } from "app/components/Icon";
 import { Tooltip } from "app/components/Tooltip";
 import { OfficialPluginIcon } from "domains/plugin/components/OfficialPluginIcon";
+import { PluginDropdown } from "domains/plugin/components/PluginDropdown";
 import { PluginUpdateStatus } from "plugins/types";
-import React, { useMemo } from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
 
 import { PluginImage } from "../PluginImage";
@@ -51,28 +50,6 @@ export const PluginHeader = ({
 }: Properties) => {
 	const { t } = useTranslation();
 
-	const actions = useMemo(() => {
-		const result: DropdownOption[] = [];
-
-		if (properties.updateStatus.isAvailable) {
-			result.push({
-				disabled: !properties.updateStatus.isCompatible,
-				label: t("COMMON.UPDATE"),
-				value: "update",
-			});
-		}
-
-		if (properties.isEnabled) {
-			result.push({ label: t("COMMON.DISABLE"), value: "disable" });
-		} else {
-			result.push({ disabled: properties.isCompatible === false, label: t("COMMON.ENABLE"), value: "enable" });
-		}
-
-		result.push({ label: t("COMMON.DELETE"), value: "delete" });
-
-		return result;
-	}, [t, properties]);
-
 	const getPluginButtons = () => {
 		if (properties.isInstalled) {
 			return (
@@ -89,48 +66,12 @@ export const PluginHeader = ({
 						</Button>
 					</Tooltip>
 
-					<Dropdown
-						toggleContent={
-							<div className="relative">
-								{properties.updateStatus.isAvailable && (
-									<Tooltip content={t("PLUGINS.NEW_VERSION_AVAILABLE")}>
-										<Badge
-											data-testid="PluginHeader__update-badge"
-											size="sm"
-											className="bg-theme-danger-500"
-											position="top-right"
-										/>
-									</Tooltip>
-								)}
-								<Button
-									data-testid="PluginHeader__dropdown-toggle"
-									variant="secondary"
-									size="icon"
-									className="text-left"
-								>
-									<Icon name="EllipsisVertical" size="lg" />
-								</Button>
-							</div>
-						}
-						options={actions}
-						onSelect={(option: any) => {
-							if (option.value === "delete") {
-								onDelete?.();
-							}
-
-							if (option.value === "enable") {
-								return onEnable?.();
-							}
-
-							if (option.value === "disable") {
-								return onDisable?.();
-							}
-
-							if (option.value === "update") {
-								return onUpdate?.();
-							}
-						}}
-						dropdownClass="text-left"
+					<PluginDropdown
+						plugin={properties}
+						onDelete={onDelete}
+						onEnable={onEnable}
+						onDisable={onDisable}
+						onUpdate={onUpdate}
 					/>
 				</div>
 			);

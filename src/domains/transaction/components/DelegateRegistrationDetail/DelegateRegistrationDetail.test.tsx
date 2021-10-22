@@ -37,25 +37,4 @@ describe("DelegateRegistrationDetail", () => {
 		expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_DELEGATE_REGISTRATION_DETAIL.TITLE);
 		expect(asFragment()).toMatchSnapshot();
 	});
-
-	it("should render as confirmed", () => {
-		const { asFragment, getByTestId } = renderWithRouter(
-			<Route path="/profiles/:profileId">
-				<DelegateRegistrationDetail
-					isOpen={true}
-					transaction={{
-						...TransactionFixture,
-						isConfirmed: () => true,
-						username: () => "Ark Wallet",
-					}}
-				/>
-			</Route>,
-			{
-				routes: [`/profiles/${fixtureProfileId}`],
-			},
-		);
-
-		expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_DELEGATE_REGISTRATION_DETAIL.TITLE);
-		expect(asFragment()).toMatchSnapshot();
-	});
 });

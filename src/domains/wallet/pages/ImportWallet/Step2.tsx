@@ -304,7 +304,7 @@ export const SecondStep = ({ profile }: { profile: Contracts.IProfile }) => {
 				subtitle={t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.SUBTITLE")}
 			/>
 
-			<div className="pt-6 space-y-6">
+			<div className="mt-8 space-y-6">
 				<FormField name="">
 					<FormLabel>{t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.TYPE")}</FormLabel>
 					<Select

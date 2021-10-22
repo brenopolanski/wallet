@@ -50,18 +50,6 @@ describe("WelcomeModal", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render a modal if user hasnt completed the tutorial", () => {
-		mockHasCompletedTutorial.mockReturnValue(false);
-
-		const { asFragment, getByTestId } = render(<Wrapper />);
-
-		expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_WELCOME.STEP_1_TITLE);
-		expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_WELCOME.DONT_SHOW_CHECKBOX_LABEL);
-		expect(getByTestId("modal__inner")).toHaveTextContent(commonTranslations.START);
-		expect(getByTestId("modal__inner")).toHaveTextContent(commonTranslations.SKIP);
-		expect(asFragment()).toMatchSnapshot();
-	});
-
 	it("should show navigation buttons according to the step", () => {
 		mockHasCompletedTutorial.mockReturnValue(false);
 
