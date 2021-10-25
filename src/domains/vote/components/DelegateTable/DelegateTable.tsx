@@ -10,17 +10,17 @@ import { DelegateRow } from "./DelegateRow";
 import { delegateExistsInVotes, useDelegateTableColumns } from "./DelegateTable.helpers";
 import { DelegateTableProperties, VoteDelegateProperties } from "./DelegateTable.models";
 
+const ITEMS_PER_PAGE = 51;
+
 export const DelegateTable = ({
 	delegates,
-	isLoading,
-	itemsPerPage,
+	isLoading = false,
 	maxVotes,
 	unvoteDelegates,
 	voteDelegates,
 	selectedWallet,
 	votes,
 	onContinue,
-	isPaginationDisabled,
 	isCompact,
 	subtitle,
 }: DelegateTableProperties) => {
@@ -34,7 +34,8 @@ export const DelegateTable = ({
 	const columns = useDelegateTableColumns({ isLoading, network: selectedWallet.network() });
 
 	const totalDelegates = delegates.length;
-	const hasVotes = votes!.length > 0;
+	const isPaginationDisabled = totalDelegates <= ITEMS_PER_PAGE;
+	const hasVotes = votes.length > 0;
 
 	useEffect(() => {
 		if (voteDelegates.length === 0) {
@@ -119,7 +120,7 @@ export const DelegateTable = ({
 
 			if (hasVotes) {
 				setSelectedUnvotes(
-					votes!.map((vote) => ({
+					votes.map((vote) => ({
 						amount: vote.amount,
 						delegateAddress: vote.wallet!.address(),
 					})),
@@ -134,18 +135,18 @@ export const DelegateTable = ({
 		setCurrentPage(page);
 	};
 
-	const paginator = (items: Contracts.IReadOnlyWallet[], currentPage: number, itemsPerPage: number) => {
+	const paginator = (items: Contracts.IReadOnlyWallet[], currentPage: number) => {
 		if (isPaginationDisabled) {
 			return items;
 		}
 
-		const offset = (currentPage - 1) * itemsPerPage;
-		return items.slice(offset).slice(0, itemsPerPage);
+		const offset = (currentPage - 1) * ITEMS_PER_PAGE;
+		return items.slice(offset).slice(0, ITEMS_PER_PAGE);
 	};
 
 	const showSkeleton = useMemo(() => totalDelegates === 0 && isLoading, [totalDelegates, isLoading]);
 	const skeletonList = Array.from({ length: 8 }).fill({});
-	const data = showSkeleton ? skeletonList : paginator(delegates, currentPage, itemsPerPage!);
+	const data = showSkeleton ? skeletonList : paginator(delegates, currentPage);
 
 	if (!isLoading && totalDelegates === 0) {
 		return (
@@ -192,10 +193,10 @@ export const DelegateTable = ({
 			</Table>
 
 			<div className="flex justify-center mt-8 w-full">
-				{totalDelegates > itemsPerPage! && !isPaginationDisabled && (
+				{totalDelegates > ITEMS_PER_PAGE && !isPaginationDisabled && (
 					<Pagination
 						totalCount={totalDelegates}
-						itemsPerPage={itemsPerPage}
+						itemsPerPage={ITEMS_PER_PAGE}
 						currentPage={currentPage}
 						onSelectPage={handleSelectPage}
 					/>
@@ -212,11 +213,4 @@ export const DelegateTable = ({
 			/>
 		</div>
 	);
-};
-
-DelegateTable.defaultProps = {
-	delegates: [],
-	isLoading: false,
-	itemsPerPage: 51,
-	votes: [],
 };

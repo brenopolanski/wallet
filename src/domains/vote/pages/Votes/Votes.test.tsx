@@ -92,12 +92,12 @@ describe("Votes", () => {
 
 	it("should render", async () => {
 		const route = `/profiles/${profile.id()}/wallets/${wallet.id()}/votes`;
-		const { asFragment, container, getByTestId } = renderPage(route);
+		const { asFragment, container } = renderPage(route);
 
 		expect(container).toBeTruthy();
-		expect(getByTestId("DelegateTable")).toBeTruthy();
+		expect(screen.getByTestId("DelegateTable")).toBeInTheDocument();
 
-		await waitFor(() => expect(getByTestId("DelegateRow__toggle-0")).toBeTruthy());
+		await waitFor(() => expect(screen.getByTestId("DelegateRow__toggle-0")).toBeInTheDocument());
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -109,12 +109,12 @@ describe("Votes", () => {
 		});
 
 		const route = `/profiles/${profile.id()}/wallets/${wallet.id()}/votes`;
-		const { asFragment, container, getByTestId } = renderPage(route);
+		const { asFragment, container } = renderPage(route);
 
 		expect(container).toBeTruthy();
-		expect(getByTestId("DelegateTable")).toBeTruthy();
+		expect(screen.getByTestId("DelegateTable")).toBeInTheDocument();
 
-		await waitFor(() => expect(getByTestId("DelegateRow__toggle-0")).toBeTruthy());
+		await waitFor(() => expect(screen.getByTestId("DelegateRow__toggle-0")).toBeInTheDocument());
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -124,11 +124,11 @@ describe("Votes", () => {
 	it("should render with no wallets", () => {
 		const route = `/profiles/${emptyProfile.id()}/votes`;
 		const routePath = "/profiles/:profileId/votes";
-		const { asFragment, container, getByTestId } = renderPage(route, routePath);
+		const { asFragment, container } = renderPage(route, routePath);
 
 		expect(container).toBeTruthy();
-		expect(getByTestId("EmptyBlock")).toBeTruthy();
-		expect(() => getByTestId("HeaderSearchBar__button")).toThrow(/Unable to find an element by/);
+		expect(screen.getByTestId("EmptyBlock")).toBeInTheDocument();
+		expect(screen.queryByTestId("HeaderSearchBar__button")).not.toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -138,28 +138,28 @@ describe("Votes", () => {
 
 		const route = `/profiles/${profile.id()}/votes`;
 		const routePath = "/profiles/:profileId/votes";
-		const { asFragment, container, getByTestId } = renderPage(route, routePath);
+		const { asFragment, container } = renderPage(route, routePath);
 
 		expect(container).toBeTruthy();
-		expect(getByTestId("AddressTable")).toBeTruthy();
+		expect(screen.getByTestId("AddressTable")).toBeInTheDocument();
 
-		await waitFor(() => expect(getByTestId("AddressRow__select-0")).toBeTruthy());
+		await waitFor(() => expect(screen.getByTestId("AddressRow__select-0")).toBeInTheDocument());
 
 		act(() => {
-			fireEvent.click(within(getByTestId("Votes__FilterWallets")).getByTestId("dropdown__toggle"));
+			fireEvent.click(within(screen.getByTestId("Votes__FilterWallets")).getByTestId("dropdown__toggle"));
 		});
 
-		const toggle = getByTestId("NetworkOption__ark.devnet");
+		const toggle = screen.getByTestId("NetworkOption__ark.devnet");
 
-		await waitFor(() => expect(toggle).toBeTruthy());
+		await waitFor(() => expect(toggle).toBeInTheDocument());
 		fireEvent.click(toggle);
 
-		expect(() => getByTestId("AddressTable")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("AddressTable")).not.toBeInTheDocument();
 
-		await waitFor(() => expect(toggle).toBeTruthy());
+		await waitFor(() => expect(toggle).toBeInTheDocument());
 		fireEvent.click(toggle);
 
-		await waitFor(() => expect(getByTestId("AddressTable")).toBeTruthy());
+		await waitFor(() => expect(screen.getByTestId("AddressTable")).toBeInTheDocument());
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -169,29 +169,31 @@ describe("Votes", () => {
 
 		const route = `/profiles/${profile.id()}/votes`;
 		const routePath = "/profiles/:profileId/votes";
-		const { asFragment, container, getByTestId } = renderPage(route, routePath);
+		const { asFragment, container } = renderPage(route, routePath);
 
 		expect(container).toBeTruthy();
-		expect(getByTestId("AddressTable")).toBeTruthy();
+		expect(screen.getByTestId("AddressTable")).toBeInTheDocument();
 
-		await waitFor(() => expect(getByTestId("AddressRow__select-0")).toBeTruthy());
+		await waitFor(() => expect(screen.getByTestId("AddressRow__select-0")).toBeInTheDocument());
 
 		act(() => {
-			fireEvent.click(within(getByTestId("Votes__FilterWallets")).getByTestId("dropdown__toggle"));
+			fireEvent.click(within(screen.getByTestId("Votes__FilterWallets")).getByTestId("dropdown__toggle"));
 		});
 
-		await waitFor(() => expect(within(getByTestId("FilterWallets")).getByTestId("dropdown__toggle")).toBeTruthy());
+		await waitFor(() =>
+			expect(within(screen.getByTestId("FilterWallets")).getByTestId("dropdown__toggle")).toBeInTheDocument(),
+		);
 
-		const toggle = within(getByTestId("FilterWallets")).getByTestId("dropdown__toggle");
+		const toggle = within(screen.getByTestId("FilterWallets")).getByTestId("dropdown__toggle");
 		fireEvent.click(toggle);
 
-		await waitFor(() => expect(getByTestId("filter-wallets__wallets")).toBeTruthy());
+		await waitFor(() => expect(screen.getByTestId("filter-wallets__wallets")).toBeInTheDocument());
 
-		await waitFor(() => expect(getByTestId("dropdown__option--1")).toBeTruthy());
+		await waitFor(() => expect(screen.getByTestId("dropdown__option--1")).toBeInTheDocument());
 
-		fireEvent.click(getByTestId("dropdown__option--1"));
+		fireEvent.click(screen.getByTestId("dropdown__option--1"));
 
-		expect(() => getByTestId("AddressTable")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("AddressTable")).not.toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -201,29 +203,31 @@ describe("Votes", () => {
 
 		const route = `/profiles/${profile.id()}/votes`;
 		const routePath = "/profiles/:profileId/votes";
-		const { asFragment, container, getByTestId } = renderPage(route, routePath);
+		const { asFragment, container } = renderPage(route, routePath);
 
 		expect(container).toBeTruthy();
-		expect(getByTestId("AddressTable")).toBeTruthy();
+		expect(screen.getByTestId("AddressTable")).toBeInTheDocument();
 
-		await waitFor(() => expect(getByTestId("AddressRow__select-0")).toBeTruthy());
+		await waitFor(() => expect(screen.getByTestId("AddressRow__select-0")).toBeInTheDocument());
 
 		act(() => {
-			fireEvent.click(within(getByTestId("Votes__FilterWallets")).getByTestId("dropdown__toggle"));
+			fireEvent.click(within(screen.getByTestId("Votes__FilterWallets")).getByTestId("dropdown__toggle"));
 		});
 
-		await waitFor(() => expect(within(getByTestId("FilterWallets")).getByTestId("dropdown__toggle")).toBeTruthy());
+		await waitFor(() =>
+			expect(within(screen.getByTestId("FilterWallets")).getByTestId("dropdown__toggle")).toBeInTheDocument(),
+		);
 
-		const toggle = within(getByTestId("FilterWallets")).getByTestId("dropdown__toggle");
+		const toggle = within(screen.getByTestId("FilterWallets")).getByTestId("dropdown__toggle");
 		fireEvent.click(toggle);
 
-		await waitFor(() => expect(getByTestId("filter-wallets__wallets")).toBeTruthy());
+		await waitFor(() => expect(screen.getByTestId("filter-wallets__wallets")).toBeInTheDocument());
 
-		await waitFor(() => expect(getByTestId("dropdown__option--2")).toBeTruthy());
+		await waitFor(() => expect(screen.getByTestId("dropdown__option--2")).toBeInTheDocument());
 
-		fireEvent.click(getByTestId("dropdown__option--2"));
+		fireEvent.click(screen.getByTestId("dropdown__option--2"));
 
-		expect(() => getByTestId("AddressTable")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("AddressTable")).not.toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -247,24 +251,26 @@ describe("Votes", () => {
 		]);
 
 		const route = `/profiles/${profile.id()}/wallets/${wallet.id()}/votes`;
-		const { asFragment, container, getByTestId, getAllByTestId } = renderPage(route);
+		const { asFragment, container } = renderPage(route);
 
 		expect(container).toBeTruthy();
-		expect(getByTestId("DelegateTable")).toBeTruthy();
+		expect(screen.getByTestId("DelegateTable")).toBeInTheDocument();
 
-		await waitFor(() => expect(getByTestId("DelegateRow__toggle-0")).toBeTruthy());
-
-		act(() => {
-			fireEvent.click(within(getByTestId("VotesFilter")).getByTestId("dropdown__toggle"));
-		});
-
-		await waitFor(() => expect(within(getByTestId("VotesFilter")).getByTestId("dropdown__content")).toBeTruthy());
+		await waitFor(() => expect(screen.getByTestId("DelegateRow__toggle-0")).toBeInTheDocument());
 
 		act(() => {
-			fireEvent.click(getByTestId("VotesFilter__option--current"));
+			fireEvent.click(within(screen.getByTestId("VotesFilter")).getByTestId("dropdown__toggle"));
 		});
 
-		await waitFor(() => expect(getAllByTestId("DelegateRow__toggle-0")).toHaveLength(1));
+		await waitFor(() =>
+			expect(within(screen.getByTestId("VotesFilter")).getByTestId("dropdown__content")).toBeInTheDocument(),
+		);
+
+		act(() => {
+			fireEvent.click(screen.getByTestId("VotesFilter__option--current"));
+		});
+
+		await waitFor(() => expect(screen.getAllByTestId("DelegateRow__toggle-0")).toHaveLength(1));
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -272,12 +278,12 @@ describe("Votes", () => {
 	it("should navigate to create create page", () => {
 		const route = `/profiles/${emptyProfile.id()}/votes`;
 		const routePath = "/profiles/:profileId/votes";
-		const { asFragment, getByTestId, getByRole } = renderPage(route, routePath, true);
+		const { asFragment } = renderPage(route, routePath, true);
 
-		expect(getByTestId("EmptyBlock")).toBeTruthy();
+		expect(screen.getByTestId("EmptyBlock")).toBeInTheDocument();
 
 		act(() => {
-			fireEvent.click(getByRole("button", { name: /Create/ }));
+			fireEvent.click(screen.getByRole("button", { name: /Create/ }));
 		});
 
 		expect(history.location.pathname).toEqual(`/profiles/${emptyProfile.id()}/wallets/create`);
@@ -287,12 +293,12 @@ describe("Votes", () => {
 	it("should navigate to import wallet page", () => {
 		const route = `/profiles/${emptyProfile.id()}/votes`;
 		const routePath = "/profiles/:profileId/votes";
-		const { asFragment, getByTestId, getByRole } = renderPage(route, routePath, true);
+		const { asFragment } = renderPage(route, routePath, true);
 
-		expect(getByTestId("EmptyBlock")).toBeTruthy();
+		expect(screen.getByTestId("EmptyBlock")).toBeInTheDocument();
 
 		act(() => {
-			fireEvent.click(getByRole("button", { name: /Import/ }));
+			fireEvent.click(screen.getByRole("button", { name: /Import/ }));
 		});
 
 		expect(history.location.pathname).toEqual(`/profiles/${emptyProfile.id()}/wallets/import`);
@@ -319,34 +325,34 @@ describe("Votes", () => {
 
 		const route = `/profiles/${profile.id()}/votes`;
 		const routePath = "/profiles/:profileId/votes";
-		const { asFragment, getByTestId } = renderPage(route, routePath);
+		const { asFragment } = renderPage(route, routePath);
 
-		expect(getByTestId("AddressTable")).toBeTruthy();
+		expect(screen.getByTestId("AddressTable")).toBeInTheDocument();
 
-		await waitFor(() => expect(getByTestId("StatusIcon__icon")).toBeTruthy());
+		await waitFor(() => expect(screen.getByTestId("StatusIcon__icon")).toBeInTheDocument());
 
-		const selectAddressButton = getByTestId("AddressRow__select-0");
+		const selectAddressButton = screen.getByTestId("AddressRow__select-0");
 
 		act(() => {
 			fireEvent.click(selectAddressButton);
 		});
 
-		expect(getByTestId("DelegateTable")).toBeTruthy();
+		expect(screen.getByTestId("DelegateTable")).toBeInTheDocument();
 
 		await waitFor(() => {
-			expect(getByTestId("DelegateRow__toggle-0")).toBeTruthy();
+			expect(screen.getByTestId("DelegateRow__toggle-0")).toBeInTheDocument();
 		});
 
-		const selectDelegateButton = getByTestId("DelegateRow__toggle-0");
+		const selectDelegateButton = screen.getByTestId("DelegateRow__toggle-0");
 
 		act(() => {
 			fireEvent.click(selectDelegateButton);
 		});
 
-		expect(getByTestId("DelegateTable__footer")).toBeTruthy();
+		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
 
 		act(() => {
-			fireEvent.click(getByTestId("DelegateTable__continue-button"));
+			fireEvent.click(screen.getByTestId("DelegateTable__continue-button"));
 		});
 
 		expect(asFragment()).toMatchSnapshot();
@@ -355,41 +361,41 @@ describe("Votes", () => {
 	it("should select an address without vote", async () => {
 		const route = `/profiles/${profile.id()}/votes`;
 		const routePath = "/profiles/:profileId/votes";
-		const { asFragment, getByTestId } = renderPage(route, routePath);
+		const { asFragment } = renderPage(route, routePath);
 
-		expect(getByTestId("AddressTable")).toBeTruthy();
+		expect(screen.getByTestId("AddressTable")).toBeInTheDocument();
 
-		await waitFor(() => expect(getByTestId("StatusIcon__icon")).toBeTruthy());
+		await waitFor(() => expect(screen.getByTestId("StatusIcon__icon")).toBeInTheDocument());
 
-		const selectAddressButton = getByTestId("AddressRow__select-1");
+		const selectAddressButton = screen.getByTestId("AddressRow__select-1");
 
 		act(() => {
 			fireEvent.click(selectAddressButton);
 		});
 
-		await waitFor(() => expect(getByTestId("DelegateTable")).toBeTruthy());
+		await waitFor(() => expect(screen.getByTestId("DelegateTable")).toBeInTheDocument());
 
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should select a delegate", async () => {
 		const route = `/profiles/${profile.id()}/wallets/${wallet.id()}/votes`;
-		const { asFragment, getByTestId } = renderPage(route);
+		const { asFragment } = renderPage(route);
 
-		expect(getByTestId("DelegateTable")).toBeTruthy();
+		expect(screen.getByTestId("DelegateTable")).toBeInTheDocument();
 
 		await waitFor(() => {
-			expect(getByTestId("DelegateRow__toggle-0")).toBeTruthy();
+			expect(screen.getByTestId("DelegateRow__toggle-0")).toBeInTheDocument();
 		});
 
-		const selectDelegateButton = getByTestId("DelegateRow__toggle-0");
+		const selectDelegateButton = screen.getByTestId("DelegateRow__toggle-0");
 
 		act(() => {
 			fireEvent.click(selectDelegateButton);
 		});
 
-		expect(getByTestId("DelegateTable__footer")).toBeTruthy();
-		expect(getByTestId("DelegateTable__footer--votecombination")).toHaveTextContent("1/1");
+		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
+		expect(screen.getByTestId("DelegateTable__footer--votecombination")).toHaveTextContent("1/1");
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -400,24 +406,64 @@ describe("Votes", () => {
 			throw new Error("delegate error");
 		});
 
-		const { getByTestId } = renderPage(route);
+		renderPage(route);
 
-		expect(getByTestId("DelegateTable")).toBeTruthy();
+		expect(screen.getByTestId("DelegateTable")).toBeInTheDocument();
 
 		await waitFor(() => {
-			expect(getByTestId("DelegateRow__toggle-0")).toBeTruthy();
+			expect(screen.getByTestId("DelegateRow__toggle-0")).toBeInTheDocument();
 		});
 
-		const selectDelegateButton = getByTestId("DelegateRow__toggle-0");
+		const selectDelegateButton = screen.getByTestId("DelegateRow__toggle-0");
 
 		act(() => {
 			fireEvent.click(selectDelegateButton);
 		});
 
-		expect(getByTestId("DelegateTable__footer")).toBeTruthy();
-		expect(getByTestId("DelegateTable__footer--votecombination")).toHaveTextContent("1/1");
+		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
+		expect(screen.getByTestId("DelegateTable__footer--votecombination")).toHaveTextContent("1/1");
 
 		walletVoteMock.mockRestore();
+	});
+
+	it("should handle resigned delegate and show empty results", async () => {
+		const currentWallet = profile.wallets().findById("ac38fe6d-4b67-4ef1-85be-17c5f6841129");
+		jest.spyOn(currentWallet.voting(), "current").mockReturnValue([
+			{
+				amount: 0,
+				wallet: new ReadOnlyWallet({
+					address: "D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr",
+					explorerLink: "",
+					governanceIdentifier: "address",
+					isDelegate: true,
+					isResignedDelegate: true,
+					publicKey: currentWallet.publicKey(),
+					rank: 52,
+					username: "arkx",
+				}),
+			},
+		]);
+
+		const route = `/profiles/${profile.id()}/wallets/${wallet.id()}/votes`;
+		renderPage(route);
+
+		await waitFor(() => expect(screen.getByTestId("DelegateTable")).toBeInTheDocument());
+
+		await waitFor(() => expect(screen.getByTestId("DelegateRow__toggle-0")).toBeInTheDocument());
+
+		act(() => {
+			fireEvent.click(within(screen.getByTestId("VotesFilter")).getByTestId("dropdown__toggle"));
+		});
+
+		await waitFor(() =>
+			expect(within(screen.getByTestId("VotesFilter")).getByTestId("dropdown__content")).not.toBeDisabled(),
+		);
+
+		act(() => {
+			fireEvent.click(screen.getByTestId("VotesFilter__option--current"));
+		});
+
+		await waitFor(() => expect(screen.getByTestId("EmptyResults")).toBeInTheDocument());
 	});
 
 	it("should trigger network connection warning", async () => {
@@ -443,10 +489,10 @@ describe("Votes", () => {
 			},
 		);
 
-		await waitFor(() => expect(screen.getByTestId("DelegateTable")).toBeTruthy());
+		await waitFor(() => expect(screen.getByTestId("DelegateTable")).toBeInTheDocument());
 
 		await waitFor(() => {
-			expect(screen.getByTestId("DelegateRow__toggle-0")).toBeTruthy();
+			expect(screen.getByTestId("DelegateRow__toggle-0")).toBeInTheDocument();
 		});
 
 		const selectDelegateButton = screen.getByTestId("DelegateRow__toggle-0");
@@ -460,7 +506,7 @@ describe("Votes", () => {
 			fireEvent.click(selectDelegateButton);
 		});
 
-		expect(screen.getByTestId("DelegateTable__footer")).toBeTruthy();
+		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
 		expect(screen.getByTestId("DelegateTable__footer--votecombination")).toHaveTextContent("1/1");
 
 		await waitFor(() => expect(onProfileSyncError).toHaveBeenCalled());
@@ -473,24 +519,24 @@ describe("Votes", () => {
 
 	it("should emit action on continue button", async () => {
 		const route = `/profiles/${profile.id()}/wallets/${wallet.id()}/votes`;
-		const { asFragment, getByTestId } = renderPage(route);
+		const { asFragment } = renderPage(route);
 
-		expect(getByTestId("DelegateTable")).toBeTruthy();
+		expect(screen.getByTestId("DelegateTable")).toBeInTheDocument();
 
 		await waitFor(() => {
-			expect(getByTestId("DelegateRow__toggle-0")).toBeTruthy();
+			expect(screen.getByTestId("DelegateRow__toggle-0")).toBeInTheDocument();
 		});
 
-		const selectDelegateButton = getByTestId("DelegateRow__toggle-0");
+		const selectDelegateButton = screen.getByTestId("DelegateRow__toggle-0");
 
 		act(() => {
 			fireEvent.click(selectDelegateButton);
 		});
 
-		expect(getByTestId("DelegateTable__footer")).toBeTruthy();
+		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
 
 		act(() => {
-			fireEvent.click(getByTestId("DelegateTable__continue-button"));
+			fireEvent.click(screen.getByTestId("DelegateTable__continue-button"));
 		});
 
 		expect(asFragment()).toMatchSnapshot();
@@ -499,42 +545,42 @@ describe("Votes", () => {
 	it("should emit action on continue button to unvote/vote", async () => {
 		const route = `/profiles/${profile.id()}/votes`;
 		const routePath = "/profiles/:profileId/votes";
-		const { asFragment, getByTestId } = renderPage(route, routePath);
+		const { asFragment } = renderPage(route, routePath);
 
-		expect(getByTestId("AddressTable")).toBeTruthy();
+		expect(screen.getByTestId("AddressTable")).toBeInTheDocument();
 
-		await waitFor(() => expect(getByTestId("StatusIcon__icon")).toBeTruthy());
+		await waitFor(() => expect(screen.getByTestId("StatusIcon__icon")).toBeInTheDocument());
 
-		const selectAddressButton = getByTestId("AddressRow__select-1");
+		const selectAddressButton = screen.getByTestId("AddressRow__select-1");
 
 		act(() => {
 			fireEvent.click(selectAddressButton);
 		});
 
-		expect(getByTestId("DelegateTable")).toBeTruthy();
+		expect(screen.getByTestId("DelegateTable")).toBeInTheDocument();
 
 		await waitFor(() => {
-			expect(getByTestId("DelegateRow__toggle-0")).toBeTruthy();
+			expect(screen.getByTestId("DelegateRow__toggle-0")).toBeInTheDocument();
 		});
 
-		const selectUnvoteButton = getByTestId("DelegateRow__toggle-0");
+		const selectUnvoteButton = screen.getByTestId("DelegateRow__toggle-0");
 
 		act(() => {
 			fireEvent.click(selectUnvoteButton);
 		});
 
-		expect(getByTestId("DelegateTable__footer")).toBeTruthy();
+		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
 
-		const selectVoteButton = getByTestId("DelegateRow__toggle-1");
+		const selectVoteButton = screen.getByTestId("DelegateRow__toggle-1");
 
 		act(() => {
 			fireEvent.click(selectVoteButton);
 		});
 
-		expect(getByTestId("DelegateTable__footer")).toBeTruthy();
+		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
 
 		act(() => {
-			fireEvent.click(getByTestId("DelegateTable__continue-button"));
+			fireEvent.click(screen.getByTestId("DelegateTable__continue-button"));
 		});
 
 		expect(asFragment()).toMatchSnapshot();
@@ -552,12 +598,12 @@ describe("Votes", () => {
 		profile.wallets().push(mainnetWallet);
 
 		const route = `/profiles/${profile.id()}/wallets/${wallet.id()}/votes`;
-		const { asFragment, container, getByTestId } = renderPage(route);
+		const { asFragment, container } = renderPage(route);
 
 		expect(container).toBeTruthy();
-		expect(getByTestId("DelegateTable")).toBeTruthy();
+		expect(screen.getByTestId("DelegateTable")).toBeInTheDocument();
 
-		await waitFor(() => expect(getByTestId("DelegateRow__toggle-0")).toBeTruthy());
+		await waitFor(() => expect(screen.getByTestId("DelegateRow__toggle-0")).toBeInTheDocument());
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -570,45 +616,45 @@ describe("Votes", () => {
 	it("should filter wallets by address", async () => {
 		const route = `/profiles/${profile.id()}/votes`;
 		const routePath = "/profiles/:profileId/votes";
-		const { getByTestId, queryAllByTestId } = renderPage(route, routePath);
+		renderPage(route, routePath);
 
-		await waitFor(() => expect(queryAllByTestId("TableRow")).toHaveLength(3));
+		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(3));
 
 		act(() => {
-			fireEvent.click(within(getByTestId("HeaderSearchBar")).getByRole("button"));
+			fireEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
 		});
 
-		await waitFor(() => expect(getByTestId("HeaderSearchBar__input")).toBeInTheDocument());
-		const searchInput = within(getByTestId("HeaderSearchBar__input")).getByTestId("Input");
+		await waitFor(() => expect(screen.getByTestId("HeaderSearchBar__input")).toBeInTheDocument());
+		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
 		act(() => {
 			fireEvent.change(searchInput, { target: { value: "D8rr7B1d6TL6pf1" } });
 		});
 
-		await waitFor(() => expect(queryAllByTestId("TableRow")).toHaveLength(1));
+		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(1));
 	});
 
 	it("should filter wallets by alias", async () => {
 		const route = `/profiles/${profile.id()}/votes`;
 		const routePath = "/profiles/:profileId/votes";
-		const { getByTestId, queryAllByTestId } = renderPage(route, routePath);
+		renderPage(route, routePath);
 
-		await waitFor(() => expect(queryAllByTestId("TableRow")).toHaveLength(3));
+		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(3));
 
 		act(() => {
-			fireEvent.click(within(getByTestId("HeaderSearchBar")).getByRole("button"));
+			fireEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
 		});
 
-		await waitFor(() => expect(getByTestId("HeaderSearchBar__input")).toBeInTheDocument());
-		const searchInput = within(getByTestId("HeaderSearchBar__input")).getByTestId("Input");
+		await waitFor(() => expect(screen.getByTestId("HeaderSearchBar__input")).toBeInTheDocument());
+		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
 		act(() => {
 			fireEvent.change(searchInput, { target: { value: "ARK Wallet 2" } });
 		});
 
-		await waitFor(() => expect(queryAllByTestId("TableRow")).toHaveLength(1));
+		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(1));
 	});
 
 	it("should reset wallet search", async () => {
@@ -616,16 +662,16 @@ describe("Votes", () => {
 
 		const route = `/profiles/${profile.id()}/votes`;
 		const routePath = "/profiles/:profileId/votes";
-		const { getByTestId, queryAllByTestId } = renderPage(route, routePath);
+		renderPage(route, routePath);
 
-		await waitFor(() => expect(queryAllByTestId("TableRow")).toHaveLength(3));
+		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(3));
 
 		act(() => {
-			fireEvent.click(within(getByTestId("HeaderSearchBar")).getByRole("button"));
+			fireEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
 		});
 
-		await waitFor(() => expect(getByTestId("HeaderSearchBar__input")).toBeInTheDocument());
-		const searchInput = within(getByTestId("HeaderSearchBar__input")).getByTestId("Input");
+		await waitFor(() => expect(screen.getByTestId("HeaderSearchBar__input")).toBeInTheDocument());
+		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
 		// Search by wallet alias
@@ -633,15 +679,15 @@ describe("Votes", () => {
 			fireEvent.change(searchInput, { target: { value: "non existent wallet name" } });
 		});
 
-		await waitFor(() => expect(queryAllByTestId("TableRow")).toHaveLength(0));
+		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(0));
 
 		// Reset search
 		act(() => {
-			fireEvent.click(getByTestId("header-search-bar__reset"));
+			fireEvent.click(screen.getByTestId("header-search-bar__reset"));
 		});
 
 		await waitFor(() => expect(searchInput).toHaveValue(""));
-		await waitFor(() => expect(queryAllByTestId("TableRow")).toHaveLength(3));
+		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(3));
 	});
 
 	it("should show resigned delegate notice", async () => {
@@ -662,14 +708,58 @@ describe("Votes", () => {
 			},
 		]);
 		const route = `/profiles/${profile.id()}/wallets/${currentWallet.id()}/votes`;
-		const { container, getByTestId } = renderPage(route);
+		const { container } = renderPage(route);
 
-		expect(getByTestId("DelegateTable")).toBeTruthy();
+		expect(screen.getByTestId("DelegateTable")).toBeInTheDocument();
 
-		await waitFor(() => expect(getByTestId("Votes__resigned-vote")).toBeInTheDocument());
+		await waitFor(() => expect(screen.getByTestId("Votes__resigned-vote")).toBeInTheDocument());
 
 		expect(container).toMatchSnapshot();
 
 		walletSpy.mockRestore();
+	});
+
+	it("should filter delegates by address", async () => {
+		const route = `/profiles/${profile.id()}/wallets/${wallet.id()}/votes`;
+		renderPage(route);
+
+		await waitFor(() => expect(screen.getByTestId("DelegateTable")).toBeInTheDocument());
+		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(3));
+
+		act(() => {
+			fireEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
+		});
+
+		await waitFor(() => expect(screen.getByTestId("HeaderSearchBar__input")).toBeInTheDocument());
+		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
+		await waitFor(() => expect(searchInput).toBeInTheDocument());
+
+		act(() => {
+			fireEvent.change(searchInput, { target: { value: "DBk4cPYpqp7EBc" } });
+		});
+
+		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(1));
+	});
+
+	it("should filter delegates by alias", async () => {
+		const route = `/profiles/${profile.id()}/wallets/${wallet.id()}/votes`;
+		renderPage(route);
+
+		await waitFor(() => expect(screen.getByTestId("DelegateTable")).toBeInTheDocument());
+		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(3));
+
+		act(() => {
+			fireEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
+		});
+
+		await waitFor(() => expect(screen.getByTestId("HeaderSearchBar__input")).toBeInTheDocument());
+		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
+		await waitFor(() => expect(searchInput).toBeInTheDocument());
+
+		act(() => {
+			fireEvent.change(searchInput, { target: { value: "itsanametoo" } });
+		});
+
+		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(1));
 	});
 });

@@ -52,6 +52,7 @@ describe("DelegateTable", () => {
 		const { container, asFragment } = render(
 			<DelegateTable
 				delegates={delegates}
+				votes={[]}
 				voteDelegates={[]}
 				unvoteDelegates={[]}
 				selectedWallet={wallet}
@@ -69,6 +70,7 @@ describe("DelegateTable", () => {
 		const { container, asFragment } = render(
 			<DelegateTable
 				delegates={delegates}
+				votes={[]}
 				voteDelegates={[]}
 				unvoteDelegates={[]}
 				selectedWallet={wallet}
@@ -91,6 +93,7 @@ describe("DelegateTable", () => {
 			const { container, asFragment } = render(
 				<DelegateTable
 					delegates={[]}
+					votes={[]}
 					isLoading={true}
 					voteDelegates={[]}
 					unvoteDelegates={[]}
@@ -107,27 +110,11 @@ describe("DelegateTable", () => {
 		});
 	});
 
-	it("should render pagination", () => {
-		const { container, asFragment } = render(
-			<DelegateTable
-				itemsPerPage={1}
-				delegates={delegates}
-				isLoading={false}
-				voteDelegates={[]}
-				unvoteDelegates={[]}
-				selectedWallet={wallet}
-				maxVotes={wallet.network().maximumVotesPerTransaction()}
-			/>,
-		);
-
-		expect(container).toBeTruthy();
-		expect(asFragment()).toMatchSnapshot();
-	});
-
 	it("should render with empty list", () => {
 		const { container, asFragment } = render(
 			<DelegateTable
 				delegates={[]}
+				votes={[]}
 				voteDelegates={[]}
 				unvoteDelegates={[]}
 				selectedWallet={wallet}
@@ -143,6 +130,7 @@ describe("DelegateTable", () => {
 		const { container, asFragment } = render(
 			<DelegateTable
 				delegates={delegates}
+				votes={[]}
 				voteDelegates={[]}
 				unvoteDelegates={[]}
 				selectedWallet={wallet}
@@ -160,6 +148,7 @@ describe("DelegateTable", () => {
 		const { asFragment } = render(
 			<DelegateTable
 				delegates={delegates}
+				votes={[]}
 				voteDelegates={[]}
 				unvoteDelegates={[]}
 				selectedWallet={wallet}
@@ -466,6 +455,7 @@ describe("DelegateTable", () => {
 		const { container, asFragment } = render(
 			<DelegateTable
 				delegates={delegates}
+				votes={[]}
 				onContinue={onContinue}
 				voteDelegates={[]}
 				unvoteDelegates={[]}
@@ -502,6 +492,7 @@ describe("DelegateTable", () => {
 		const { container, asFragment } = render(
 			<DelegateTable
 				delegates={delegates}
+				votes={[]}
 				voteDelegates={voteDelegates}
 				unvoteDelegates={[]}
 				onContinue={onContinue}
@@ -534,6 +525,7 @@ describe("DelegateTable", () => {
 			<DelegateTable
 				delegates={delegates}
 				voteDelegates={[]}
+				votes={[]}
 				unvoteDelegates={unvoteDelegates}
 				onContinue={onContinue}
 				selectedWallet={wallet}
@@ -629,12 +621,13 @@ describe("DelegateTable", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should navigate on next and previous pages", () => {
+	it("should navigate to the next and previous pages", () => {
+		const delegatesList = Array.from({ length: 52 }).fill(delegates[0]) as Contracts.IReadOnlyWallet[];
+
 		render(
 			<DelegateTable
-				delegates={delegates}
+				delegates={delegatesList}
 				votes={votes}
-				itemsPerPage={2}
 				voteDelegates={[]}
 				unvoteDelegates={[]}
 				selectedWallet={wallet}
@@ -662,8 +655,6 @@ describe("DelegateTable", () => {
 			<DelegateTable
 				delegates={delegates}
 				votes={votes}
-				itemsPerPage={2}
-				isPaginationDisabled
 				voteDelegates={[]}
 				unvoteDelegates={[]}
 				selectedWallet={wallet}

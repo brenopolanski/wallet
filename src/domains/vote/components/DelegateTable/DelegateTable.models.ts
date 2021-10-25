@@ -5,14 +5,12 @@ export interface DelegateTableProperties {
 	delegates: Contracts.IReadOnlyWallet[];
 	emptyText?: string;
 	isLoading?: boolean;
-	itemsPerPage?: number;
 	maxVotes: number;
 	unvoteDelegates: VoteDelegateProperties[];
 	voteDelegates: VoteDelegateProperties[];
 	selectedWallet: Contracts.IReadWriteWallet;
-	votes?: Contracts.VoteRegistryItem[];
+	votes: Contracts.VoteRegistryItem[];
 	onContinue?: (unvotes: VoteDelegateProperties[], votes: VoteDelegateProperties[]) => void;
-	isPaginationDisabled?: boolean;
 	isCompact?: boolean;
 	subtitle?: React.ReactNode;
 }

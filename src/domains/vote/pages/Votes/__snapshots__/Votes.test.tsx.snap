@@ -1152,6 +1152,40 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
               Select a Delegate
             </h2>
             <div
+              class="flex overflow-hidden flex-col space-y-4 rounded-lg p-4 bg-theme-warning-50 dark:bg-theme-secondary-800 sm:space-y-0 sm:space-x-4 sm:flex-row sm:items-center mb-6"
+            >
+              <div
+                class="h-11 w-11 flex flex-shrink-0 items-center justify-center rounded-lg text-white bg-theme-warning-600"
+              >
+                <div
+                  class="sc-bdnxRM NjstW"
+                  height="20"
+                  width="20"
+                >
+                  <svg>
+                    circle-exclamation-mark.svg
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="flex flex-col w-full"
+              >
+                <div
+                  class="text-sm leading-relaxed break-words dark:text-theme-secondary-500"
+                >
+                  <div
+                    data-testid="Votes__resigned-vote"
+                  >
+                    "
+                    <strong>
+                      arkx
+                    </strong>
+                    ", the Delegate you are voting for has resigned. Press continue to unvote or select a new Delegate below.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
               class="Table__TableWrapper-sc-1gcp0fb-0 fDAVsO -mt-3"
               role="table"
             >
@@ -8963,6 +8997,40 @@ exports[`Votes should trigger network connection warning 1`] = `
             >
               Select a Delegate
             </h2>
+            <div
+              class="flex overflow-hidden flex-col space-y-4 rounded-lg p-4 bg-theme-warning-50 dark:bg-theme-secondary-800 sm:space-y-0 sm:space-x-4 sm:flex-row sm:items-center mb-6"
+            >
+              <div
+                class="h-11 w-11 flex flex-shrink-0 items-center justify-center rounded-lg text-white bg-theme-warning-600"
+              >
+                <div
+                  class="sc-bdnxRM NjstW"
+                  height="20"
+                  width="20"
+                >
+                  <svg>
+                    circle-exclamation-mark.svg
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="flex flex-col w-full"
+              >
+                <div
+                  class="text-sm leading-relaxed break-words dark:text-theme-secondary-500"
+                >
+                  <div
+                    data-testid="Votes__resigned-vote"
+                  >
+                    "
+                    <strong>
+                      arkx
+                    </strong>
+                    ", the Delegate you are voting for has resigned. Press continue to unvote or select a new Delegate below.
+                  </div>
+                </div>
+              </div>
+            </div>
             <div
               class="Table__TableWrapper-sc-1gcp0fb-0 fDAVsO -mt-3"
               role="table"

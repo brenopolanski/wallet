@@ -15,11 +15,11 @@ export const useDelegates = ({
 	voteFilter: FilterOption;
 }) => {
 	const [delegates, setDelegates] = useState<Contracts.IReadOnlyWallet[]>([]);
-	const [votes, setVotes] = useState<Contracts.VoteRegistryItem[] | undefined>();
+	const [votes, setVotes] = useState<Contracts.VoteRegistryItem[]>([]);
 	const [isLoadingDelegates, setIsLoadingDelegates] = useState(false);
 
 	const currentVotes = useMemo(
-		() => votes?.filter((vote) => delegates.some((delegate) => vote.wallet?.address() === delegate.address())),
+		() => votes.filter((vote) => delegates.some((delegate) => vote.wallet?.address() === delegate.address())),
 		[votes, delegates],
 	);
 
@@ -35,12 +35,18 @@ export const useDelegates = ({
 		[env, profile],
 	);
 
-	const filteredDelegatesVotes: any = useMemo(() => {
+	const filteredDelegatesVotes = useMemo(() => {
 		if (voteFilter === "all") {
 			return delegates.filter((delegate) => !delegate.isResignedDelegate());
 		}
 
-		return currentVotes?.filter(({ wallet }) => !wallet?.isResignedDelegate()).map(({ wallet }) => wallet);
+		return currentVotes.reduce((accumulator: Contracts.IReadOnlyWallet[], { wallet }) => {
+			if (wallet && !wallet.isResignedDelegate()) {
+				accumulator.push(wallet);
+			}
+
+			return accumulator;
+		}, []);
 	}, [delegates, currentVotes, voteFilter]);
 
 	const filteredDelegates = useMemo(() => {
@@ -48,17 +54,11 @@ export const useDelegates = ({
 			return filteredDelegatesVotes;
 		}
 
-		/* istanbul ignore next */
-		// @ts-ignore @TODO ?????
-		return filteredDelegatesVotes?.filter((delegate) => {
-			// @ts-ignore @TODO ?????
-			const wallet = delegate.wallet ?? delegate;
-
-			return (
-				wallet.address().toLowerCase().includes(searchQuery.toLowerCase()) ||
-				wallet.username()?.toLowerCase()?.includes(searchQuery.toLowerCase())
-			);
-		});
+		const query = searchQuery.toLowerCase();
+		return filteredDelegatesVotes.filter(
+			(delegate) =>
+				delegate.address().toLowerCase().includes(query) || delegate.username()?.toLowerCase()?.includes(query),
+		);
 	}, [filteredDelegatesVotes, searchQuery]);
 
 	const fetchVotes = useCallback(
@@ -80,7 +80,7 @@ export const useDelegates = ({
 		[profile],
 	);
 
-	const hasResignedDelegateVotes = useMemo(() => currentVotes?.some(({ wallet }) => wallet?.isResignedDelegate()), [
+	const hasResignedDelegateVotes = useMemo(() => currentVotes.some(({ wallet }) => wallet?.isResignedDelegate()), [
 		currentVotes,
 	]);
 

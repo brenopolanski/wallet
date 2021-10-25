@@ -51,7 +51,6 @@ export const VotesHeader = ({
 							placeholder={renderPlaceholder()}
 							onSearch={setSearchQuery}
 							onReset={() => setSearchQuery("")}
-							debounceTimeout={100}
 						/>
 
 						<div className="h-10 border-l border-theme-secondary-300 dark:border-theme-secondary-800" />

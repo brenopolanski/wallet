@@ -167,7 +167,6 @@ export const Votes = () => {
 						voteDelegates={voteDelegates}
 						selectedWallet={selectedWallet}
 						onContinue={navigateToSendVote}
-						isPaginationDisabled={searchQuery.length > 0}
 						isCompact={useCompactTables}
 						subtitle={
 							hasResignedDelegateVotes ? (
