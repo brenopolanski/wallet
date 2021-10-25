@@ -32,6 +32,14 @@ export const VotesHeader = ({
 }: VotesHeaderProperties) => {
 	const { t } = useTranslation();
 
+	const renderPlaceholder = () => {
+		if (selectedAddress) {
+			return t("VOTE.VOTES_PAGE.SEARCH_DELEGATE_PLACEHOLDER");
+		}
+
+		return t("VOTE.VOTES_PAGE.SEARCH_WALLET_PLACEHOLDER");
+	};
+
 	return (
 		<Header
 			title={t("VOTE.VOTES_PAGE.TITLE")}
@@ -40,7 +48,7 @@ export const VotesHeader = ({
 				profile.wallets().count() ? (
 					<div className="flex items-center space-x-5 text-theme-primary-200">
 						<HeaderSearchBar
-							placeholder={t("VOTE.VOTES_PAGE.SEARCH_PLACEHOLDER")}
+							placeholder={renderPlaceholder()}
 							onSearch={setSearchQuery}
 							onReset={() => setSearchQuery("")}
 							debounceTimeout={100}

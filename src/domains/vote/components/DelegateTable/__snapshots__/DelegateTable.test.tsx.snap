@@ -2362,7 +2362,7 @@ exports[`DelegateTable loading state for requiresAmount should render when isCom
               <div
                 class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
               >
-                Available to Vote (100%)
+                Available To Vote (100%)
               </div>
               <div
                 class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 dvkAql"
@@ -3317,7 +3317,7 @@ exports[`DelegateTable loading state for requiresAmount should render when isCom
               <div
                 class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
               >
-                Available to Vote (100%)
+                Available To Vote (100%)
               </div>
               <div
                 class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 dvkAql"
@@ -5957,7 +5957,7 @@ exports[`DelegateTable should render vote amount column 1`] = `
               <div
                 class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
               >
-                Available to Vote (100%)
+                Available To Vote (100%)
               </div>
               <div
                 class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 dvkAql"
@@ -8731,7 +8731,7 @@ exports[`DelegateTable should select a changed delegate to unvote 1`] = `
               <div
                 class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
               >
-                Available to Vote (71%)
+                Available To Vote (71%)
               </div>
               <div
                 class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 dvkAql"
@@ -10970,7 +10970,7 @@ exports[`DelegateTable should select a delegate with vote amount and make it unv
               <div
                 class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
               >
-                Available to Vote (100%)
+                Available To Vote (100%)
               </div>
               <div
                 class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 dvkAql"

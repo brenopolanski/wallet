@@ -17,7 +17,7 @@ export const translations: { [key: string]: any } = {
 		VOTE: "Vote",
 		VOTES: "Votes",
 		VOTE_AMOUNT: {
-			AVAILABLE_TO_VOTE: "Available to Vote ({{percent}}%)",
+			AVAILABLE_TO_VOTE: "Available To Vote ({{percent}}%)",
 			TITLE: "Vote Amount",
 			TOOLTIP: "Number of {{ coinId }} you want to vote with for a specific delegate",
 			VALIDATION: {
@@ -37,7 +37,8 @@ export const translations: { [key: string]: any } = {
 			"Your must first <bold>{{create}}</bold> or <bold>{{import}}</bold> an address to view your current voting status.",
 		NO_RESULTS: "The Delegate is either unregistered or resigned. Check you search term and try again.",
 		RESIGNED_VOTE: `"<bold>{{ name }}</bold>", the Delegate you are voting for has resigned. Press continue to unvote or select a new Delegate below.`,
-		SEARCH_PLACEHOLDER: "Enter the delegate’s name or address for a quick search",
+		SEARCH_DELEGATE_PLACEHOLDER: "Enter the delegate’s name or address",
+		SEARCH_WALLET_PLACEHOLDER: "Enter the wallet’s name or address",
 		SELECT_CRYPTOASSET_MESSAGE: "Select one of the proposed cryptoassets above to vote for a delegate.",
 		SUBTITLE: "Manage your cryptoasset staking.",
 		TITLE: "My Votes",
