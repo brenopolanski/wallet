@@ -590,7 +590,11 @@ describe("MultiSignatureDetail", () => {
 		jest.spyOn(wallet.transaction(), "transaction").mockReturnValue(fixtures.transfer);
 
 		const broadcastMock = jest.spyOn(wallet.transaction(), "broadcast");
-		const addSignatureMock = jest.spyOn(wallet.transaction(), "addSignature").mockResolvedValue(void 0);
+		const addSignatureMock = jest.spyOn(wallet.transaction(), "addSignature").mockResolvedValue({
+			accepted: [fixtures.transfer.id()],
+			errors: {},
+			rejected: [],
+		});
 
 		const unsubscribe = jest.fn();
 		let observer: Observer<any>;
@@ -728,7 +732,11 @@ describe("MultiSignatureDetail", () => {
 			errors: {},
 			rejected: [],
 		});
-		const addSignatureMock = jest.spyOn(wallet.transaction(), "addSignature").mockResolvedValue(void 0);
+		const addSignatureMock = jest.spyOn(wallet.transaction(), "addSignature").mockResolvedValue({
+			accepted: [fixtures.transfer.id()],
+			errors: {},
+			rejected: [],
+		});
 
 		const unsubscribe = jest.fn();
 		let observer: Observer<any>;
