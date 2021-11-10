@@ -410,7 +410,6 @@ export const WalletHeader = ({
 				<WalletEncryptionWarning
 					importType={wallet.actsWithMnemonicWithEncryption() ? "mnemonic" : "secret"}
 					onCancel={() => setModal(undefined)}
-					// onConfirm={() => history.push(`/profiles/${profile.id()}/wallets/${wallet.id()}/send-registration/secondSignature`)}
 					onConfirm={handleConfirmEncryptionWarning}
 				/>
 			)}
