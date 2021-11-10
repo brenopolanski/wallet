@@ -90,9 +90,9 @@ export const translations = {
 	},
 
 	MODAL_WALLET_ENCRYPTION: {
-		TITLE: "Wallet Encryption Removal",
 		DESCRIPTION:
 			"You are about to register a second passphrase while having your current {{importType}} encrypted with a custom password. Continuing with the second signature registration will automatically remove the encryption once the transaction is sent. Ensure your {{importType}} is backed up before proceeding. You will have to re-import your wallet if you want to use an encryption password again.",
+		TITLE: "Wallet Encryption Removal",
 	},
 
 	MODAL_WALLET_UPDATE: {
