@@ -1,10 +1,9 @@
 import { Slider } from "app/components/Slider";
 import { TruncateEnd } from "app/components/TruncateEnd";
+import { PluginPermissionsModal } from "domains/plugin/components/PluginPermissionsModal/PluginPermissionsModal";
+import { PluginPermissions } from "domains/plugin/plugin.contracts";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-
-import { PluginPermissions } from "../../plugin.contracts";
-import { PluginPermissionsModal } from "../PluginPermissionsModal/PluginPermissionsModal";
 
 const Description = ({ description }: { description?: string }) => {
 	const { t } = useTranslation();

@@ -51,8 +51,8 @@ describe("PluginLoaderFileSystem", () => {
 		const fsExtra = require("fs-extra");
 		jest.spyOn(fsExtra, "remove").mockImplementation();
 
-		await expect(subject.remove(path.resolve("/etc/plugins/plugin-test-custom-button"))).rejects.toMatch(
-			"The dir /etc/plugins/plugin-test-custom-button cannot be removed.",
-		);
+		const directory = path.resolve("/etc/plugins/plugin-test-custom-button");
+
+		await expect(subject.remove(directory)).rejects.toBe(`The dir ${directory} cannot be removed.`);
 	});
 });

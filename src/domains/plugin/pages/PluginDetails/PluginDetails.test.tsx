@@ -212,8 +212,8 @@ describe("PluginDetails", () => {
 
 		fireEvent.click(screen.getByTestId("PluginHeader__button--launch"));
 
-		expect(history.location.pathname).toEqual(`/profiles/${profile.id()}/plugins/view`);
-		expect(history.location.search).toEqual(`?pluginId=${plugin.config().id()}`);
+		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/plugins/view`);
+		expect(history.location.search).toBe(`?pluginId=${plugin.config().id()}`);
 
 		pluginManager.plugins().removeById(plugin.config().id(), profile);
 	});

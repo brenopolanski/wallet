@@ -596,7 +596,7 @@ describe("PluginManager", () => {
 			within(screen.getByTestId("PluginManager__latest__utility")).getAllByText("ARK Delegate Calculator")[0],
 		);
 
-		expect(history.location.pathname).toEqual(`/profiles/${fixtureProfileId}/plugins/details`);
+		expect(history.location.pathname).toBe(`/profiles/${fixtureProfileId}/plugins/details`);
 		expect(history.location.search).toBe("?pluginId=@dated/delegate-calculator-wallet-plugin");
 	});
 

@@ -12,11 +12,10 @@ import { httpClient, toasts } from "app/services";
 import { FTXAd } from "domains/news/components/FTXAd";
 import { NewsCard, NewsCardSkeleton } from "domains/news/components/NewsCard";
 import { NewsOptions } from "domains/news/components/NewsOptions";
+import { AVAILABLE_CATEGORIES } from "domains/news/news.constants";
+import { AvailableNewsCategories } from "domains/news/news.contracts";
 import React, { useCallback, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-
-import { AVAILABLE_CATEGORIES } from "../../news.constants";
-import { AvailableNewsCategories } from "../../news.contracts";
 
 interface NewsFilters {
 	categories: AvailableNewsCategories[];

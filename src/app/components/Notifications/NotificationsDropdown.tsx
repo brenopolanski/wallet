@@ -1,13 +1,12 @@
 import { Contracts, DTO } from "@payvo/profiles";
 import { Button } from "app/components/Button";
+import { Dropdown } from "app/components/Dropdown";
 import { Icon } from "app/components/Icon";
 import { NavigationButtonWrapper } from "app/components/NavigationBar/NavigationBar.blocks";
 import { Notifications, useNotifications } from "app/components/Notifications";
 import { TransactionDetailModal } from "domains/transaction/components/TransactionDetailModal";
 import { WalletUpdate } from "domains/wallet/components/WalletUpdate";
 import React, { useState } from "react";
-
-import { Dropdown } from "../Dropdown";
 
 export const NotificationsDropdown = ({ profile }: { profile: Contracts.IProfile }) => {
 	const [transactionModalItem, setTransactionModalItem] = useState<DTO.ExtendedConfirmedTransactionData | undefined>(

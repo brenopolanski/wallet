@@ -1,9 +1,9 @@
 import { uniqBy } from "@arkecosystem/utils";
 import { Contracts } from "@payvo/profiles";
+import { LedgerData } from "app/contexts/Ledger/contracts";
+import { useLedgerContext } from "app/contexts/Ledger/Ledger";
 import { useCallback, useMemo, useReducer, useRef, useState } from "react";
 
-import { LedgerData } from "../contracts";
-import { useLedgerContext } from "../Ledger";
 import { scannerReducer } from "./scanner.state";
 
 export const useLedgerScanner = (coin: string, network: string) => {

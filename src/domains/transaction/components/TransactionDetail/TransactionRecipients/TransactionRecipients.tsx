@@ -4,10 +4,12 @@ import { Circle } from "app/components/Circle";
 import { Icon } from "app/components/Icon";
 import { RecipientList } from "domains/transaction/components/RecipientList";
 import { RecipientItem } from "domains/transaction/components/RecipientList/RecipientList.contracts";
+import {
+	TransactionDetail,
+	TransactionDetailProperties,
+} from "domains/transaction/components/TransactionDetail/TransactionDetail";
 import React from "react";
 import { useTranslation } from "react-i18next";
-
-import { TransactionDetail, TransactionDetailProperties } from "../TransactionDetail";
 
 type TransactionRecipientsProperties = {
 	currency: string;

@@ -34,7 +34,7 @@ describe("Welcome", () => {
 
 		fireEvent.click(getByText(profile.name()));
 
-		expect(history.location.pathname).toEqual(profileDashboardUrl);
+		expect(history.location.pathname).toBe(profileDashboardUrl);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -49,7 +49,7 @@ describe("Welcome", () => {
 
 		fireEvent.click(getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
 
-		expect(history.location.pathname).toEqual(`/profiles/${profile.id()}/dashboard`);
+		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/dashboard`);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -103,7 +103,7 @@ describe("Welcome", () => {
 		fireEvent.click(getByTestId("SignIn__submit-button"));
 
 		await waitFor(() => {
-			expect(history.location.pathname).toEqual(`/profiles/${profile.id()}/dashboard`);
+			expect(history.location.pathname).toBe(`/profiles/${profile.id()}/dashboard`);
 		});
 
 		expect(asFragment()).toMatchSnapshot();
@@ -143,7 +143,7 @@ describe("Welcome", () => {
 		fireEvent.click(getByTestId("SignIn__submit-button"));
 
 		await waitFor(() => {
-			expect(history.location.pathname).toEqual(`/profiles/${profile.id()}/settings`);
+			expect(history.location.pathname).toBe(`/profiles/${profile.id()}/settings`);
 		});
 
 		expect(asFragment()).toMatchSnapshot();
@@ -170,7 +170,7 @@ describe("Welcome", () => {
 		fireEvent.click(settingsOption);
 
 		await waitFor(() => {
-			expect(history.location.pathname).toEqual(`/profiles/${profile.id()}/settings`);
+			expect(history.location.pathname).toBe(`/profiles/${profile.id()}/settings`);
 		});
 
 		expect(asFragment()).toMatchSnapshot();

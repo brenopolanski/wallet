@@ -169,7 +169,7 @@ describe("Dashboard", () => {
 			observer!.next({ descriptor: "", type: "add" });
 		});
 
-		expect(history.location.pathname).toEqual(`/profiles/${fixtureProfileId}/wallets/import`);
+		expect(history.location.pathname).toBe(`/profiles/${fixtureProfileId}/wallets/import`);
 		expect(asFragment()).toMatchSnapshot();
 
 		listenSpy.mockReset();
@@ -194,7 +194,7 @@ describe("Dashboard", () => {
 
 		fireEvent.click(getByText("Create"));
 
-		expect(history.location.pathname).toEqual(`/profiles/${fixtureProfileId}/wallets/create`);
+		expect(history.location.pathname).toBe(`/profiles/${fixtureProfileId}/wallets/create`);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -217,7 +217,7 @@ describe("Dashboard", () => {
 
 		fireEvent.click(getByText("Import"));
 
-		expect(history.location.pathname).toEqual(`/profiles/${fixtureProfileId}/wallets/import`);
+		expect(history.location.pathname).toBe(`/profiles/${fixtureProfileId}/wallets/import`);
 		expect(asFragment()).toMatchSnapshot();
 	});
 

@@ -1,7 +1,6 @@
+import { DropdownOption } from "app/components/Dropdown";
+import { NavigationBarMenuItem } from "app/components/NavigationBar";
 import { TFunction } from "react-i18next";
-
-import { DropdownOption } from "../components/Dropdown";
-import { NavigationBarMenuItem } from "../components/NavigationBar/NavigationBar.contracts";
 
 export const getNavigationMenu = (t: TFunction): NavigationBarMenuItem[] => [
 	{

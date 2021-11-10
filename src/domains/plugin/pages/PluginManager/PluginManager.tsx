@@ -20,6 +20,8 @@ import { PluginManualInstallModal } from "domains/plugin/components/PluginManual
 import { PluginUninstallConfirmation } from "domains/plugin/components/PluginUninstallConfirmation/PluginUninstallConfirmation";
 import { PluginUpdatesConfirmation } from "domains/plugin/components/PluginUpdatesConfirmation";
 import { usePluginUpdateQueue } from "domains/plugin/hooks/use-plugin-update-queue";
+import { PLUGIN_CATEGORIES } from "domains/plugin/plugin.constants";
+import { PluginCategories } from "domains/plugin/plugin.contracts";
 import { PluginController } from "plugins";
 import { usePluginManagerContext } from "plugins/context/PluginManagerProvider";
 import { SerializedPluginConfigurationData } from "plugins/types";
@@ -27,9 +29,6 @@ import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 import { assertPluginController } from "utils/assertions";
-
-import { PLUGIN_CATEGORIES } from "../../plugin.constants";
-import { PluginCategories } from "../../plugin.contracts";
 
 interface LatestPluginsProperties {
 	isLoading?: boolean;

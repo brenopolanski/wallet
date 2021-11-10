@@ -162,7 +162,7 @@ describe("Plugin Configuration", () => {
 			name: "plugin-test",
 		});
 
-		expect(subject.category()).toEqual(categories[0]);
+		expect(subject.category()).toBe(categories[0]);
 	});
 
 	it("should return plugin size from fs", async () => {

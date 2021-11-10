@@ -1,8 +1,8 @@
 import { Alert } from "app/components/Alert";
+import { PluginPermissions } from "domains/plugin/plugin.contracts";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import { PluginPermissions } from "../../plugin.contracts";
 import { Description, Images, Permissions, Requirements } from "./PluginInfo.blocks";
 
 interface PluginInfoProperties {

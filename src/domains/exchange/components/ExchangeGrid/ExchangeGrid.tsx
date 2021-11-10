@@ -1,9 +1,8 @@
 import { EmptyBlock } from "app/components/EmptyBlock";
+import { ExchangeCard, ExchangeCardSkeleton } from "domains/exchange/components/ExchangeCard";
 import { Exchange } from "domains/exchange/contracts";
 import React from "react";
 import { useTranslation } from "react-i18next";
-
-import { ExchangeCard, ExchangeCardSkeleton } from "../ExchangeCard";
 
 interface ExchangeGridProperties {
 	exchanges: Exchange[];

@@ -1,8 +1,7 @@
 import { Contracts, Environment } from "@payvo/profiles";
 import { useConfiguration } from "app/contexts";
+import { WelcomeModalStep } from "domains/profile/components/WelcomeModal/WelcomeModal.models";
 import { useCallback, useEffect, useState } from "react";
-
-import { WelcomeModalStep } from "../components/WelcomeModal/WelcomeModal.models";
 
 export const useWelcomeModal = (environment: Environment, profile: Contracts.IProfile) => {
 	const [show, setShow] = useState<boolean>(false);

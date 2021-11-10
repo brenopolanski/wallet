@@ -1,9 +1,9 @@
 import { useFormField } from "app/components/Form/useFormField";
 import { InputCurrency } from "app/components/Input";
+import { InputFeeAdvancedProperties } from "domains/transaction/components/InputFee/InputFee.contracts";
+import { useStepMath } from "domains/transaction/components/InputFee/InputFee.helpers";
 import React, { useMemo } from "react";
 
-import { InputFeeAdvancedProperties } from "../InputFee.contracts";
-import { useStepMath } from "../InputFee.helpers";
 import { InputFeeAdvancedAddon } from "./InputFeeAdvancedAddon";
 
 export const InputFeeAdvanced: React.FC<InputFeeAdvancedProperties> = ({

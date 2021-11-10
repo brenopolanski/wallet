@@ -1,10 +1,9 @@
+import { Avatar } from "app/components/Avatar";
+import { Dropdown, DropdownOption } from "app/components/Dropdown";
+import { NavigationBarMenuItem, UserInfoProperties } from "app/components/NavigationBar";
+import { getUserInfoActions } from "app/constants/navigation";
 import React, { FC, useCallback, useMemo } from "react";
 import { useTranslation } from "react-i18next";
-
-import { getUserInfoActions } from "../../../../constants/navigation";
-import { Avatar } from "../../../Avatar";
-import { Dropdown, DropdownOption } from "../../../Dropdown";
-import { NavigationBarMenuItem, UserInfoProperties } from "../../NavigationBar.contracts";
 
 export const UserInfo: FC<UserInfoProperties> = ({ onUserAction, avatarImage, userInitials }) => {
 	const { t } = useTranslation();

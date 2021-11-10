@@ -9,6 +9,7 @@ import { useEnvironmentContext } from "app/contexts";
 import { useActiveProfile, useNetworkOptions } from "app/hooks";
 import { CreateContact, DeleteContact, UpdateContact } from "domains/contact/components";
 import { ContactListItem } from "domains/contact/components/ContactListItem";
+import { ContactListItemOption } from "domains/contact/components/ContactListItem/ContactListItem.models";
 import querystring from "querystring";
 import React, { FC, useCallback, useEffect, useMemo, useState, VFC } from "react";
 import { useTranslation } from "react-i18next";
@@ -16,7 +17,6 @@ import { useHistory } from "react-router-dom";
 import { Column } from "react-table";
 import { assertNetwork } from "utils/assertions";
 
-import { ContactListItemOption } from "../../components/ContactListItem/ContactListItem.models";
 import { ContactsHeaderExtraProperties } from "./Contacts.contracts";
 
 const ContactsHeaderExtra: VFC<ContactsHeaderExtraProperties> = ({ showSearchBar, onSearch, onAddContact }) => {

@@ -2,12 +2,12 @@
 import { Contracts } from "@payvo/profiles";
 import { Networks } from "@payvo/sdk";
 import userEvent from "@testing-library/user-event";
+import { translations } from "domains/wallet/i18n";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 import { act, env, fireEvent, getDefaultProfileId, render, screen, waitFor, within } from "utils/testing-library";
 
-import { translations } from "../../i18n";
 import { SearchWallet } from "./SearchWallet";
 
 const history = createMemoryHistory();

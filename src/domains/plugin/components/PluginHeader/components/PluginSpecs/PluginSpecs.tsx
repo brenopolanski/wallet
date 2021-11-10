@@ -2,10 +2,9 @@ import { Link } from "app/components/Link";
 import { Skeleton } from "app/components/Skeleton";
 import cn from "classnames";
 import { usePluginStatus } from "domains/plugin/hooks/use-plugin-status";
+import { PluginCategories } from "domains/plugin/plugin.contracts";
 import React from "react";
 import { useTranslation } from "react-i18next";
-
-import { PluginCategories } from "../../../../plugin.contracts";
 
 interface Properties {
 	author?: string;

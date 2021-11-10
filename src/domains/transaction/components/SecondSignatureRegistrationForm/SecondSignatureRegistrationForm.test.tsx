@@ -70,7 +70,7 @@ describe("SecondSignatureRegistrationForm", () => {
 		);
 
 		await waitFor(() => expect(screen.getByTestId("SecondSignatureRegistrationForm__generation-step")));
-		await waitFor(() => expect(form()?.getValues("secondMnemonic")).toEqual(passphrase));
+		await waitFor(() => expect(form()?.getValues("secondMnemonic")).toBe(passphrase));
 
 		expect(bip39GenerateMock).toHaveBeenCalled();
 		expect(asFragment()).toMatchSnapshot();

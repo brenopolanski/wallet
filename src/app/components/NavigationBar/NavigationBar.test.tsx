@@ -104,7 +104,7 @@ describe("NavigationBar", () => {
 
 		fireEvent.click(getByText("Option 1"));
 
-		expect(history.location.pathname).toMatch("/test");
+		expect(history.location.pathname).toBe("/test");
 
 		getUserInfoActionsMock.mockRestore();
 	});
@@ -117,7 +117,7 @@ describe("NavigationBar", () => {
 
 		fireEvent.click(sendButton);
 
-		expect(history.location.pathname).toMatch(`/profiles/${mockProfile.id()}/send-transfer`);
+		expect(history.location.pathname).toBe(`/profiles/${mockProfile.id()}/send-transfer`);
 	});
 
 	it("should handle receive funds", async () => {

@@ -1,6 +1,5 @@
 import { Contracts } from "@payvo/profiles";
-
-import { UnlockableBalance } from "../../UnlockTokens.contracts";
+import { UnlockableBalance } from "domains/transaction/components/UnlockTokens/UnlockTokens.contracts";
 
 export interface UnlockTokensSelectProperties {
 	items: UnlockableBalance[];

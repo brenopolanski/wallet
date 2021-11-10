@@ -7,12 +7,11 @@ import { Link } from "app/components/Link";
 import { TimeAgo } from "app/components/TimeAgo";
 import { useEnvironmentContext } from "app/contexts";
 import { NetworkIcon } from "domains/network/components/NetworkIcon";
+import { AvailableNewsCategories } from "domains/news/news.contracts";
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import Linkify from "react-linkify";
 import { assertNetwork } from "utils/assertions";
-
-import { AvailableNewsCategories } from "../../news.contracts";
 
 type Properties = {
 	coverImage?: string;
