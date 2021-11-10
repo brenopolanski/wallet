@@ -26,6 +26,10 @@ export const RecipientList: React.VFC<RecipientListProperties> = ({
 	ticker,
 	tooltipDisabled,
 	variant,
+	useMandatoryOption,
+	mandatoryKeys,
+	onAddMandatoryKey,
+	onRemoveMandatoryKey,
 }) => {
 	const columns = useColumns({ isEditable, showAmount });
 
@@ -49,6 +53,10 @@ export const RecipientList: React.VFC<RecipientListProperties> = ({
 				ticker={ticker}
 				tooltipDisabled={tooltipDisabled}
 				variant={variant}
+				useMandatoryOption={useMandatoryOption}
+				isMandatory={mandatoryKeys && mandatoryKeys.some((publicKey) => publicKey === recipient.publicKey)}
+				onEnableMandatory={onAddMandatoryKey}
+				onDisableMandatory={onRemoveMandatoryKey}
 			/>
 		),
 		[

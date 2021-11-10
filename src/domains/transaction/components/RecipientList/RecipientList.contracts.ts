@@ -5,6 +5,7 @@ export interface RecipientItem {
 	alias?: string;
 	amount?: number;
 	isDelegate?: boolean;
+	publicKey?: string;
 }
 
 export interface RecipientListItemProperties {
@@ -20,6 +21,10 @@ export interface RecipientListItemProperties {
 	ticker: string;
 	tooltipDisabled?: string;
 	variant?: "condensed";
+	useMandatoryOption?: boolean;
+	isMandatory?: boolean;
+	onEnableMandatory?: (publicKey: string) => void;
+	onDisableMandatory?: (publicKey: string) => void;
 }
 
 export interface RecipientListProperties {
@@ -33,4 +38,8 @@ export interface RecipientListProperties {
 	ticker: string;
 	tooltipDisabled?: string;
 	variant?: "condensed";
+	useMandatoryOption?: boolean;
+	mandatoryKeys?: string[];
+	onRemoveMandatoryKey?: (publicKey: string) => void;
+	onAddMandatoryKey?: (publicKey: string) => void;
 }
