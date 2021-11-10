@@ -296,7 +296,7 @@ describe("AddRecipient", () => {
 		});
 
 		await waitFor(() => {
-			expect(+form.getValues("amount")).toEqual(values.amount);
+			expect(+form.getValues("amount")).toBe(values.amount);
 			expect(screen.getByTestId("AddRecipient__add-button")).toBeInTheDocument();
 			expect(screen.getByTestId("AddRecipient__add-button")).toBeDisabled();
 		});

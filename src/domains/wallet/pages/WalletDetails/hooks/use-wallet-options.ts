@@ -39,6 +39,17 @@ export const useWalletOptions = (wallet: Contracts.IReadWriteWallet) => {
 		title: t("WALLETS.PAGE_WALLET_DETAILS.REGISTRATION_OPTIONS"),
 	};
 
+	const allowsSecondSignature = useMemo(() => {
+		const networkAllowsSecondSig = wallet.network().allows(Enums.FeatureFlag.TransactionSecondSignature);
+		const walletRequiresMnemonic =
+			wallet.actsWithMnemonic() ||
+			wallet.actsWithMnemonicWithEncryption() ||
+			wallet.actsWithAddress() ||
+			wallet.actsWithPublicKey();
+
+		return networkAllowsSecondSig && isRestoredAndSynced && walletRequiresMnemonic && !wallet.isSecondSignature();
+	}, [wallet, isRestoredAndSynced]);
+
 	const allowsMultiSignature = useMemo(() => {
 		const networkAllowsMuSig = wallet.network().allows(Enums.FeatureFlag.TransactionMultiSignature);
 		const isLedgerAndAllowsMuSig =
@@ -78,7 +89,7 @@ export const useWalletOptions = (wallet: Contracts.IReadWriteWallet) => {
 			});
 		}
 
-		if (wallet.network().allows(Enums.FeatureFlag.TransactionSecondSignature) && !wallet.isSecondSignature()) {
+		if (allowsSecondSignature) {
 			registrationOptions.options.push({
 				label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.SECOND_SIGNATURE"),
 				value: "second-signature",

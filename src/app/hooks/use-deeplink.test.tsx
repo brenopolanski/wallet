@@ -161,7 +161,7 @@ describe("useDeeplink hook", () => {
 		);
 
 		expect(getByText("Deeplink tester")).toBeInTheDocument();
-		expect(history.location.pathname).toEqual(`/profiles/${getDefaultProfileId()}/send-transfer`);
+		expect(history.location.pathname).toBe(`/profiles/${getDefaultProfileId()}/send-transfer`);
 		expect(ipcRenderer.on).toHaveBeenCalledWith("process-url", expect.any(Function));
 	});
 

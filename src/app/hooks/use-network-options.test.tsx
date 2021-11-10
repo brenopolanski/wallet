@@ -36,6 +36,6 @@ describe("useNetworkOptions hook", () => {
 
 		const network = result.current.networkById(id);
 
-		expect(network?.id()).toEqual(id);
+		expect(network?.id()).toBe(id);
 	});
 });

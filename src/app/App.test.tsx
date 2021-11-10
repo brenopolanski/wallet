@@ -67,7 +67,7 @@ describe("App", () => {
 
 		await findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE, undefined, { timeout: 2000 });
 
-		expect(history.location.pathname).toMatch("/");
+		expect(history.location.pathname).toBe("/");
 
 		const selectedProfile = env.profiles().findById(profile.id());
 
@@ -102,7 +102,7 @@ describe("App", () => {
 		fireEvent.click(getAllByTestId("Card")[0]);
 
 		const profileDashboardUrl = `/profiles/${profile.id()}/dashboard`;
-		await waitFor(() => expect(history.location.pathname).toMatch(profileDashboardUrl));
+		await waitFor(() => expect(history.location.pathname).toBe(profileDashboardUrl));
 
 		act(() => {
 			jest.runAllTimers();
@@ -120,7 +120,7 @@ describe("App", () => {
 		await waitFor(() =>
 			expect(() => getByTestId("SyncErrorMessage__retry")).toThrow(/Unable to find an element by/),
 		);
-		await waitFor(() => expect(history.location.pathname).toMatch(profileDashboardUrl));
+		await waitFor(() => expect(history.location.pathname).toBe(profileDashboardUrl));
 
 		walletRestoreErrorMock.mockRestore();
 		walletSyncErrorMock.mockRestore();
@@ -224,7 +224,7 @@ describe("App", () => {
 
 		await findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE, undefined, { timeout: 2000 });
 
-		expect(history.location.pathname).toMatch("/");
+		expect(history.location.pathname).toBe("/");
 
 		fireEvent.click(getAllByTestId("Card")[1]);
 
@@ -249,7 +249,7 @@ describe("App", () => {
 
 		await waitFor(() => expect(profilePasswordSetMock).toHaveBeenCalled());
 		await waitFor(() => expect(memoryPasswordMock).toHaveBeenCalled());
-		await waitFor(() => expect(history.location.pathname).toMatch("/"), { timeout: 4000 });
+		await waitFor(() => expect(history.location.pathname).toBe("/"), { timeout: 4000 });
 
 		memoryPasswordMock.mockRestore();
 		verifyPasswordMock.mockRestore();
@@ -267,7 +267,7 @@ describe("App", () => {
 
 		await findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE, undefined, { timeout: 2000 });
 
-		expect(history.location.pathname).toMatch("/");
+		expect(history.location.pathname).toBe("/");
 
 		const selectedProfile = env.profiles().findById(profile.id());
 
@@ -293,7 +293,7 @@ describe("App", () => {
 
 		const profileDashboardUrl = `/profiles/${profile.id()}/dashboard`;
 
-		await waitFor(() => expect(history.location.pathname).toMatch(profileDashboardUrl));
+		await waitFor(() => expect(history.location.pathname).toBe(profileDashboardUrl));
 
 		await act(async () => {
 			await new Promise((resolve) => setTimeout(resolve, 500));
@@ -336,7 +336,7 @@ describe("App", () => {
 
 		await env.profiles().restore(passwordProtectedProfile, getDefaultPassword());
 
-		expect(history.location.pathname).toMatch("/");
+		expect(history.location.pathname).toBe("/");
 
 		fireEvent.click(getAllByTestId("Card")[1]);
 
@@ -355,6 +355,6 @@ describe("App", () => {
 		fireEvent.click(getByTestId("SignIn__submit-button"));
 
 		const profileDashboardUrl = `/profiles/${passwordProtectedProfile.id()}/dashboard`;
-		await waitFor(() => expect(history.location.pathname).toMatch(profileDashboardUrl));
+		await waitFor(() => expect(history.location.pathname).toBe(profileDashboardUrl));
 	});
 });

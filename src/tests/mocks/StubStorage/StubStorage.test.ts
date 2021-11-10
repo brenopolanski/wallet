@@ -14,26 +14,20 @@ describe("StubStorage", () => {
 	it("should return set and get an entry into storage", async () => {
 		await stubStorage.set("item", "bleh");
 
-		await expect(stubStorage.get("item")).resolves.toEqual("bleh");
-	});
-
-	it("should return set and get an entry into storage", async () => {
-		await stubStorage.set("item", "bleh");
-
-		await expect(stubStorage.get("item")).resolves.toEqual("bleh");
+		await expect(stubStorage.get("item")).resolves.toBe("bleh");
 	});
 
 	it("should check if the storage has a key", async () => {
 		await stubStorage.set("item", "bleh");
 
-		await expect(stubStorage.has("item")).resolves.toEqual(true);
+		await expect(stubStorage.has("item")).resolves.toBe(true);
 	});
 
 	it("should forget a key", async () => {
 		await stubStorage.set("item", "bleh");
 		await stubStorage.forget("item");
 
-		await expect(stubStorage.has("item")).resolves.toEqual(false);
+		await expect(stubStorage.has("item")).resolves.toBe(false);
 	});
 
 	it("should flush the storage", async () => {
@@ -44,13 +38,13 @@ describe("StubStorage", () => {
 	});
 
 	it("should return count", async () => {
-		await expect(stubStorage.count()).resolves.toEqual(0);
+		await expect(stubStorage.count()).resolves.toBe(0);
 	});
 
 	it("should restore", async () => {
-		await expect(stubStorage.restore()).resolves.toEqual(undefined);
+		await expect(stubStorage.restore()).resolves.toBeUndefined();
 	});
 	it("should snapshot", async () => {
-		await expect(stubStorage.snapshot()).resolves.toEqual(undefined);
+		await expect(stubStorage.snapshot()).resolves.toBeUndefined();
 	});
 });

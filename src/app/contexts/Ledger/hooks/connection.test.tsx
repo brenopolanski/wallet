@@ -163,7 +163,7 @@ describe("Use Ledger Connection", () => {
 			.findByAddressWithNetwork("DQx1w8KE7nEW1nX9gj9iWjMXnp8Q3xyn3y", "ark.devnet");
 
 		expect(importedWallet?.isLedgerNanoX()).toBe(true);
-		expect(importedWallet?.data().get(WalletData.LedgerModel)).toEqual(WalletLedgerModel.NanoX);
+		expect(importedWallet?.data().get(WalletData.LedgerModel)).toBe(WalletLedgerModel.NanoX);
 
 		profile.wallets().forget("DQx1w8KE7nEW1nX9gj9iWjMXnp8Q3xyn3y");
 		env.persist();
