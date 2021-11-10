@@ -3,6 +3,7 @@ import { Amount, AmountCrypto } from "app/components/Amount";
 import { Avatar } from "app/components/Avatar";
 import { OriginalButton as Button } from "app/components/Button/OriginalButton";
 import { Icon } from "app/components/Icon";
+import { Toggle } from "app/components/Toggle";
 import { Tooltip } from "app/components/Tooltip";
 import { useExchangeRate } from "app/hooks/use-exchange-rate";
 import React from "react";
@@ -17,12 +18,16 @@ export const RecipientListItem: React.VFC<RecipientListItemProperties> = ({
 	label,
 	listIndex,
 	onRemove,
-	recipient: { address, alias, amount },
+	recipient: { address, alias, amount, publicKey },
 	showAmount,
 	showExchangeAmount,
 	ticker,
 	tooltipDisabled,
 	variant,
+	useMandatoryOption,
+	isMandatory,
+	onEnableMandatory,
+	onDisableMandatory,
 }) => {
 	const { t } = useTranslation();
 
@@ -78,9 +83,21 @@ export const RecipientListItem: React.VFC<RecipientListItemProperties> = ({
 
 	const isButtonDisabled = disableButton?.(address) || false;
 
+	const handleMandatoryToggle = (event: React.ChangeEvent<HTMLInputElement>) => {
+		if (!publicKey) {
+			return;
+		}
+
+		if (event.target.checked) {
+			return onEnableMandatory?.(publicKey);
+		}
+
+		onDisableMandatory?.(publicKey);
+	};
+
 	return (
 		<tr
-			className="flex border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+			className="flex items-center border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
 			data-testid="recipient-list__recipient-list-item"
 		>
 			<td className="flex-none py-6">
@@ -97,22 +114,43 @@ export const RecipientListItem: React.VFC<RecipientListItemProperties> = ({
 			{renderAmount()}
 
 			{isEditable && (
-				<td className="flex-none py-6 ml-3">
-					<Tooltip content={tooltipDisabled} disabled={!isButtonDisabled}>
-						<span className="inline-block">
-							<Button
-								disabled={isButtonDisabled}
-								variant="danger"
-								onClick={() => !isButtonDisabled && onRemove?.(listIndex)}
-								data-testid="recipient-list__remove-recipient"
-							>
-								<div className="py-1">
-									<Icon name="Trash" />
+				<>
+					{useMandatoryOption && (
+						<td className="flex-0 py-6 w-36">
+							{listIndex === 0 && (
+								<div className="mb-2 text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 text-center">
+									<span>{t("COMMON.MANDATORY")}</span>
 								</div>
-							</Button>
-						</span>
-					</Tooltip>
-				</td>
+							)}
+
+							<div className="flex justify-center">
+								<Toggle
+									onChange={handleMandatoryToggle}
+									name="isMandatory"
+									checked={isMandatory}
+									data-testid="RecipientListItem__mandatory-toggle"
+								/>
+							</div>
+						</td>
+					)}
+
+					<td className="flex-none py-6 ml-3">
+						<Tooltip content={tooltipDisabled} disabled={!isButtonDisabled}>
+							<span className="inline-block">
+								<Button
+									disabled={isButtonDisabled}
+									variant="danger"
+									onClick={() => !isButtonDisabled && onRemove?.(listIndex)}
+									data-testid="recipient-list__remove-recipient"
+								>
+									<div className="py-1">
+										<Icon name="Trash" />
+									</div>
+								</Button>
+							</span>
+						</Tooltip>
+					</td>
+				</>
 			)}
 		</tr>
 	);

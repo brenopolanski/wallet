@@ -358,4 +358,5 @@ export const translations = {
 	YOU: "You",
 	YOUR_BALANCE: "Your Balance",
 	YOUR_PASSPHRASE: "Your Passphrase",
+	MANDATORY: "Mandatory",
 };
