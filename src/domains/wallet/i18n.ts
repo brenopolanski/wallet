@@ -4,11 +4,13 @@ export const translations = {
 		SELECT_WORD: "Select the {{position}}{{ordinalIndicator}} Word",
 		WORD_NUMBER: "The {{position}}{{ordinalIndicator}} Word",
 	},
+
 	MODAL_DELETE_WALLET: {
 		DESCRIPTION:
 			"Are you sure you wish to delete this wallet? Before deleting, make sure the mnemonic passphrase is secured safely.",
 		TITLE: "Delete Wallet",
 	},
+
 	MODAL_LEDGER_WALLET: {
 		CONNECT_DEVICE: "Connect your Ledger and confirm input.",
 		CONNECT_DEVICE_MODEL: "Connect your {{model}} and confirm input.",
@@ -25,10 +27,12 @@ export const translations = {
 		UPDATE_ERROR: "The {{coin}} app version is {{version}}. Please update the {{coin}} app via Ledger Live.",
 		WAITING_DEVICE: "Waiting for Ledger ...",
 	},
+
 	MODAL_NAME_WALLET: {
 		DESCRIPTION: "Enter a name for this wallet address (only visible to you).",
 		TITLE: "Wallet Name",
 	},
+
 	MODAL_RECEIVE_FUNDS: {
 		DESCRIPTION: "Specify the amount to request.",
 		SPECIFY_AMOUNT: "Specify Amount",
@@ -83,6 +87,12 @@ export const translations = {
 			TITLE: "Verification Method",
 		},
 		VERIFY: "Verify",
+	},
+
+	MODAL_WALLET_ENCRYPTION: {
+		TITLE: "Wallet Encryption Removal",
+		DESCRIPTION:
+			"You are about to register a second passphrase while having your current {{importType}} encrypted with a custom password. Continuing with the second signature registration will automatically remove the encryption once the transaction is sent. Ensure your {{importType}} is backed up before proceeding. You will have to re-import your wallet if you want to use an encryption password again.",
 	},
 
 	MODAL_WALLET_UPDATE: {

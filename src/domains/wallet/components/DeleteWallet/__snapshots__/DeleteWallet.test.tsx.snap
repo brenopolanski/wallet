@@ -1,7 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DeleteWallet should not render if not open 1`] = `<DocumentFragment />`;
-
 exports[`DeleteWallet should render a modal 1`] = `
 <DocumentFragment>
   <div

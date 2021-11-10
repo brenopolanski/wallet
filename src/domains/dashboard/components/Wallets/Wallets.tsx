@@ -144,12 +144,9 @@ export const Wallets: FC<WalletsProperties> = ({
 				/>
 			)}
 
-			<DeleteWallet
-				isOpen={modal === "delete"}
-				onClose={resetWalletAction}
-				onCancel={resetWalletAction}
-				onDelete={handleDeleteWallet}
-			/>
+			{modal === "delete" && (
+				<DeleteWallet onClose={resetWalletAction} onCancel={resetWalletAction} onDelete={handleDeleteWallet} />
+			)}
 
 			{modal === "rename" && !!selectedWallet && (
 				<UpdateWalletName
