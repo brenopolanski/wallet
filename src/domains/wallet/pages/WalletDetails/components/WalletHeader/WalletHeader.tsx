@@ -107,7 +107,6 @@ export const WalletHeader = ({
 			history.push(`/profiles/${profile.id()}/wallets/${wallet.id()}/send-registration/multiSignature`);
 		}
 
-		// @ts-ignore
 		if (option.value === "second-signature" && !wallet.usesPassword()) {
 			history.push(`/profiles/${profile.id()}/wallets/${wallet.id()}/send-registration/secondSignature`);
 		}
