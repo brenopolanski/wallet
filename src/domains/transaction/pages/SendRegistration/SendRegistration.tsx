@@ -143,6 +143,7 @@ export const SendRegistration = () => {
 				participants,
 				minParticipants,
 				fee,
+				mandatoryKeys,
 			} = getValues();
 
 			if (activeWallet.isLedger()) {
@@ -166,6 +167,7 @@ export const SendRegistration = () => {
 					fee,
 					minParticipants,
 					participants,
+					mandatoryKeys,
 					signatory,
 					wallet: activeWallet,
 				});
