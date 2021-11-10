@@ -10,6 +10,7 @@ import { assertString } from "utils/assertions";
 interface SendMultisignatureProperties {
 	wallet: ProfileContracts.IReadWriteWallet;
 	participants: Participant[];
+	mandatoryKeys: string[];
 	minParticipants: number;
 	fee: Services.TransactionFee;
 	signatory: Signatories.Signatory;
@@ -54,9 +55,48 @@ export const useMultiSignatureRegistration = () => {
 		return wallet.publicKey();
 	};
 
+	const formatMultiSignatureInput = ({
+		wallet,
+		min,
+		publicKeys,
+		mandatoryKeys,
+		signatory,
+	}: {
+		min: number;
+		publicKeys: string[];
+		mandatoryKeys: string[];
+		wallet: ProfileContracts.IReadWriteWallet;
+		signatory: Signatories.Signatory;
+	}) => {
+		// TODO: add a better check to see if network uses mandatory keys or handle this from sdk
+		if (wallet.coinId() === "LSK") {
+			const optionalKeys = publicKeys.filter((publicKey) => !mandatoryKeys.includes(publicKey));
+
+			return {
+				data: {
+					numberOfSignatures: min,
+					optionalKeys,
+					mandatoryKeys,
+				},
+				fee: 5000000000, // TODO: fix fee calculation
+				signatory,
+			};
+		}
+
+		return {
+			data: {
+				min,
+				publicKeys,
+			},
+			fee: 5000000000, // TODO: fix fee calculation
+			signatory,
+		};
+	};
+
 	const sendMultiSignature = async ({
 		wallet,
 		participants,
+		mandatoryKeys,
 		minParticipants,
 		fee,
 		signatory,
@@ -72,22 +112,18 @@ export const useMultiSignatureRegistration = () => {
 		const publicKeys = [senderPublicKey, ...restPublicKeys];
 		await wallet.transaction().sync();
 
-		const transaction: ExtendedSignedTransactionData = wallet.transaction().transaction(
-			await wallet.transaction().signMultiSignature({
-				data: {
-					mandatoryKeys: publicKeys,
-					min: +minParticipants,
-					numberOfSignatures: +minParticipants,
-					optionalKeys: [],
-					publicKeys,
-					senderPublicKey,
-				},
-				fee: +fee,
+		const uuid = await wallet.transaction().signMultiSignature(
+			formatMultiSignatureInput({
+				min: +minParticipants,
+				publicKeys,
+				mandatoryKeys,
+				wallet,
 				signatory,
 			}),
 		);
 
-		await wallet.transaction().broadcast(transaction.id());
+		await wallet.transaction().broadcast(uuid);
+		const transaction: ExtendedSignedTransactionData = wallet.transaction().transaction(uuid);
 
 		try {
 			transaction.generatedAddress = (
