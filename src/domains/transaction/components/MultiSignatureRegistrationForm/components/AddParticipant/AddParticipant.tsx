@@ -226,7 +226,7 @@ export const AddParticipant = ({
 					ticker={wallet.currency()}
 					tooltipDisabled={t("TRANSACTION.MULTISIGNATURE.REMOVE_NOT_ALLOWED")}
 					// TODO: use better check to determine if coin uses mandatory fields
-					useMandatoryOption={wallet?.coinId() === "LSK"}
+					useMandatoryOption={wallet.network().multiSignatureType() === "advanced"}
 					mandatoryKeys={mandatoryKeys}
 					onAddMandatoryKey={addMandatoryKey}
 					onRemoveMandatoryKey={removeMandatoryKey}
