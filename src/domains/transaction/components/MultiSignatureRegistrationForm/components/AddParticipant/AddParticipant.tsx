@@ -1,3 +1,4 @@
+import { uniq } from "@arkecosystem/utils";
 import { Contracts } from "@payvo/profiles";
 import { Button } from "app/components/Button";
 import { FormField, FormLabel, SubForm } from "app/components/Form";
@@ -18,7 +19,9 @@ interface Properties {
 	profile: Contracts.IProfile;
 	wallet: Contracts.IReadWriteWallet;
 	onChange?: (wallets: Participant[]) => void;
+	onChangeMandatoryKeys?: (publicKeys: string[]) => void;
 	defaultParticipants?: Participant[];
+	minRequiredSignatures?: number;
 }
 
 const defaultProps = {
@@ -26,13 +29,16 @@ const defaultProps = {
 };
 
 export const AddParticipant = ({
+	minRequiredSignatures,
 	profile,
 	wallet,
 	onChange,
+	onChangeMandatoryKeys,
 	defaultParticipants = defaultProps.defaultParticipants,
 }: Properties) => {
 	const { t } = useTranslation();
 
+	const [mandatoryKeys, setMandatoryKeys] = useState<string[]>([]);
 	const [isValidating, setIsValidating] = useState(false);
 	const [participants, setParticipants] = useState<Participant[]>(defaultParticipants);
 	const lastValidationReference = useRef<unknown | undefined>();
@@ -80,12 +86,40 @@ export const AddParticipant = ({
 		setTimeout(() => setValue("address", ""));
 	};
 
+	useEffect(() => {
+		setMandatoryKeys(mandatoryKeys.slice(0, minRequiredSignatures));
+	}, [minRequiredSignatures]);
+
+	useEffect(() => {
+		onChangeMandatoryKeys?.(mandatoryKeys);
+	}, [mandatoryKeys]);
+
 	const removeParticipant = (index: number) => {
 		const remainingParticipants = [...participants];
+
+		removeMandatoryKey(remainingParticipants[index].publicKey);
+
 		remainingParticipants.splice(index, 1);
 
 		setParticipants(remainingParticipants);
 		onChange?.(remainingParticipants);
+	};
+
+	const addMandatoryKey = (publicKey: string) => {
+		if (!minRequiredSignatures) {
+			return;
+		}
+
+		if (mandatoryKeys.length === +minRequiredSignatures) {
+			// TODO: Inform user about reaching max mandatoryKeys limit
+			return;
+		}
+
+		setMandatoryKeys(uniq([...mandatoryKeys, publicKey]));
+	};
+
+	const removeMandatoryKey = (publicKey: string) => {
+		setMandatoryKeys(mandatoryKeys.filter((item) => item !== publicKey));
 	};
 
 	const findDuplicate = useCallback(
@@ -191,6 +225,11 @@ export const AddParticipant = ({
 					showExchangeAmount={wallet.network().isLive()}
 					ticker={wallet.currency()}
 					tooltipDisabled={t("TRANSACTION.MULTISIGNATURE.REMOVE_NOT_ALLOWED")}
+					// TODO: use better check to determine if coin uses mandatory fields
+					useMandatoryOption={wallet?.coinId() === "LSK"}
+					mandatoryKeys={mandatoryKeys}
+					onAddMandatoryKey={addMandatoryKey}
+					onRemoveMandatoryKey={removeMandatoryKey}
 				/>
 			</div>
 		</div>
