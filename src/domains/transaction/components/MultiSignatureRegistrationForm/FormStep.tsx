@@ -23,6 +23,7 @@ export const FormStep = ({ profile, wallet }: FormStepProperties) => {
 	useEffect(() => {
 		register("participants", multiSignatureRegistration.participants());
 		register("minParticipants", multiSignatureRegistration.minParticipants(participants));
+		register("mandatoryKeys");
 	}, [register, participants, common, multiSignatureRegistration, wallet]);
 
 	useEffect(() => {
@@ -63,6 +64,8 @@ export const FormStep = ({ profile, wallet }: FormStepProperties) => {
 					profile={profile}
 					wallet={wallet}
 					onChange={handleParticipants}
+					onChangeMandatoryKeys={(publicKeys) => setValue("mandatoryKeys", publicKeys)}
+					minRequiredSignatures={minParticipants}
 					defaultParticipants={participants}
 				/>
 
