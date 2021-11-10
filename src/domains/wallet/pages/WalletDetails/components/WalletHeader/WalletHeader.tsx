@@ -150,7 +150,7 @@ export const WalletHeader = ({
 		}
 	}, [isSyncing, previousIsUpdatingTransactions, isUpdatingTransactions, onUpdate]);
 
-	const handleConfirmEncryptionWarning = async () => {
+	const handleConfirmEncryptionWarning = () => {
 		history.push(`/profiles/${profile.id()}/wallets/${wallet.id()}/send-registration/secondSignature`);
 	};
 
