@@ -4,10 +4,12 @@ import { Avatar } from "app/components/Avatar";
 import { Circle } from "app/components/Circle";
 import { Icon } from "app/components/Icon";
 import { useActiveProfile, useWalletAlias } from "app/hooks";
+import {
+	TransactionDetail,
+	TransactionDetailProperties,
+} from "domains/transaction/components/TransactionDetail/TransactionDetail";
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
-
-import { TransactionDetail, TransactionDetailProperties } from "../TransactionDetail";
 
 type TransactionSenderProperties = {
 	address: string;

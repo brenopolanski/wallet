@@ -1,4 +1,4 @@
-import { LedgerData } from "../contracts";
+import { LedgerData } from "app/contexts/Ledger/contracts";
 
 interface State {
 	error?: string;

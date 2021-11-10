@@ -3,10 +3,12 @@ import { Clipboard } from "app/components/Clipboard";
 import { Icon } from "app/components/Icon";
 import { Link } from "app/components/Link";
 import { TruncateMiddleDynamic } from "app/components/TruncateMiddleDynamic";
+import {
+	TransactionDetail,
+	TransactionDetailProperties,
+} from "domains/transaction/components/TransactionDetail/TransactionDetail";
 import React, { useRef } from "react";
 import { useTranslation } from "react-i18next";
-
-import { TransactionDetail, TransactionDetailProperties } from "../TransactionDetail";
 
 type TransactionExplorerLinkProperties = {
 	transaction: DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData;

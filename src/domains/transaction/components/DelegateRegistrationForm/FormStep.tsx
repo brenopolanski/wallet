@@ -7,11 +7,10 @@ import { useEnvironmentContext } from "app/contexts";
 import { useValidation } from "app/hooks";
 import { FeeField } from "domains/transaction/components/FeeField";
 import { TransactionNetwork, TransactionSender } from "domains/transaction/components/TransactionDetail";
+import { FormStepProperties } from "domains/transaction/pages/SendRegistration/SendRegistration.models";
 import React, { ChangeEvent, useEffect, useMemo, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-
-import { FormStepProperties } from "../../pages/SendRegistration/SendRegistration.models";
 
 export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: FormStepProperties) => {
 	const { t } = useTranslation();

@@ -1,6 +1,5 @@
 import { ipcRenderer } from "electron";
-
-import { PluginRawInstance } from "../../types";
+import { PluginRawInstance } from "plugins/types";
 
 export const search = (profileId: string): Promise<PluginRawInstance[]> =>
 	ipcRenderer.invoke("plugin:loader-fs.search", profileId);

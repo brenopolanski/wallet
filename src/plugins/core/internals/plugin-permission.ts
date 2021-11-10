@@ -1,7 +1,6 @@
 import { Contracts } from "@payvo/profiles";
-
-import { PluginController } from "../plugin-controller";
-import { PluginServiceData } from "../plugin-service";
+import { PluginController } from "plugins/core/plugin-controller";
+import { PluginServiceData } from "plugins/core/plugin-service";
 
 interface MiddlewareContext {
 	profile: Contracts.IProfile;

@@ -13,10 +13,10 @@ import { Spinner } from "app/components/Spinner";
 import { Table, TableCell, TableRow } from "app/components/Table";
 import { TabPanel, Tabs } from "app/components/Tabs";
 import { Tooltip } from "app/components/Tooltip";
+import { Box } from "plugins/components/shared/Box";
 import { runUnknownCode } from "plugins/loader/vm";
+import { PluginRawInstance } from "plugins/types";
 
-import { Box } from "../components/shared/Box";
-import { PluginRawInstance } from "../types";
 import { container } from "./plugin-container";
 import { PluginController } from "./plugin-controller";
 

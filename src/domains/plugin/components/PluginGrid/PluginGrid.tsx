@@ -4,11 +4,10 @@ import { EmptyBlock } from "app/components/EmptyBlock";
 import { Pagination } from "app/components/Pagination";
 import cn from "classnames";
 import { PluginCard } from "domains/plugin/components/PluginCard";
+import { PluginCardSkeleton } from "domains/plugin/components/PluginCard/PluginCardSkeleton";
+import { PluginCategories } from "domains/plugin/plugin.contracts";
 import React, { useCallback } from "react";
 import { Trans, useTranslation } from "react-i18next";
-
-import { PluginCategories } from "../../plugin.contracts";
-import { PluginCardSkeleton } from "../PluginCard/PluginCardSkeleton";
 
 interface PluginGridProperties {
 	category?: PluginCategories;

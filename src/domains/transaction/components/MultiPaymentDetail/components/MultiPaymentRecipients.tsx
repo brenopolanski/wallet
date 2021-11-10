@@ -5,10 +5,9 @@ import { Circle } from "app/components/Circle";
 import { Divider } from "app/components/Divider";
 import { Icon } from "app/components/Icon";
 import { Link } from "app/components/Link";
+import { TransactionDetail } from "domains/transaction/components/TransactionDetail";
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
-
-import { TransactionDetail } from "../../TransactionDetail";
 
 interface MultiPaymentRecipientsProperties {
 	transaction: DTO.ExtendedConfirmedTransactionData;

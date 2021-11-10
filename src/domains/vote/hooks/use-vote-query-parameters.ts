@@ -1,8 +1,7 @@
 import { useQueryParams } from "app/hooks";
 import { FilterOption } from "domains/vote/components/VotesFilter";
+import { getParameters } from "domains/vote/utils/url-parameters";
 import { useMemo } from "react";
-
-import { getParameters } from "../utils/url-parameters";
 
 export const useVoteQueryParameters = () => {
 	const queryParameters = useQueryParams();

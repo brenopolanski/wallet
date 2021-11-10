@@ -1,10 +1,9 @@
 import { Contracts, DTO } from "@payvo/profiles";
 import { TableCell, TableRow } from "app/components/Table";
 import { TimeAgo } from "app/components/TimeAgo";
+import { TransactionRowAmount } from "domains/transaction/components/TransactionTable/TransactionRow/TransactionRowAmount";
+import { TransactionRowRecipient } from "domains/transaction/components/TransactionTable/TransactionRow/TransactionRowRecipient";
 import React from "react";
-
-import { TransactionRowAmount } from "../TransactionRow/TransactionRowAmount";
-import { TransactionRowRecipient } from "../TransactionRow/TransactionRowRecipient";
 
 type Properties = {
 	transaction: DTO.ExtendedConfirmedTransactionData;
