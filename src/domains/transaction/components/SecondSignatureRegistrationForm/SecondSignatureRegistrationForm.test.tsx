@@ -399,18 +399,16 @@ describe("SecondSignatureRegistrationForm", () => {
 		};
 
 		const signMock = jest
-		.spyOn(wallet.transaction(), "signSecondSignature")
-		.mockReturnValue(Promise.resolve(secondSignatureFixture.data.id));
+			.spyOn(wallet.transaction(), "signSecondSignature")
+			.mockReturnValue(Promise.resolve(secondSignatureFixture.data.id));
 		const broadcastMock = jest.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
 			accepted: [secondSignatureFixture.data.id],
 			errors: {},
 			rejected: [],
 		});
 		const transactionMock = createTransactionMock(wallet);
-		const mutatorMock = jest
-			.spyOn(wallet.mutator(), "removeEncryption")
-			.mockImplementation();
-		
+		const mutatorMock = jest.spyOn(wallet.mutator(), "removeEncryption").mockImplementation();
+
 		await signSecondSignatureRegistration({
 			env,
 			form,
