@@ -68,8 +68,7 @@ export const useMultiSignatureRegistration = () => {
 		wallet: ProfileContracts.IReadWriteWallet;
 		signatory: Signatories.Signatory;
 	}) => {
-		// TODO: add a better check to see if network uses mandatory keys or handle this from sdk
-		if (wallet.coinId() === "LSK") {
+		if (wallet.network().multiSignatureType() === "advanced") {
 			const optionalKeys = publicKeys.filter((publicKey) => !mandatoryKeys.includes(publicKey));
 
 			return {
