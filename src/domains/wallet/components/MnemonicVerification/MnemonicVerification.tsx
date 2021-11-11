@@ -1,4 +1,4 @@
-import { sample } from "@payvo/helpers";
+import { sample } from "@arkecosystem/utils";
 import { TabPanel, Tabs } from "app/components/Tabs";
 import React, { useEffect, useMemo, useState } from "react";
 

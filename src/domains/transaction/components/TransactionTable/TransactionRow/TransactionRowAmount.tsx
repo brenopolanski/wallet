@@ -1,4 +1,4 @@
-import { isNil } from "@payvo/helpers";
+import { isNil } from "@arkecosystem/utils";
 import { Contracts, DTO, Helpers } from "@payvo/profiles";
 import { Amount, AmountLabel } from "app/components/Amount";
 import { Tooltip } from "app/components/Tooltip";

@@ -1,4 +1,4 @@
-import { prettyBytes } from "@payvo/helpers";
+import { prettyBytes } from "@arkecosystem/utils";
 import { CircularProgressBar } from "app/components/CircularProgressBar";
 import { PluginImage } from "domains/plugin/components/PluginImage";
 import React from "react";

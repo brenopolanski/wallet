@@ -1,4 +1,4 @@
-import { isEqual } from "@payvo/helpers";
+import { isEqual } from "@arkecosystem/utils";
 import { Contracts } from "@payvo/profiles";
 import { Networks } from "@payvo/sdk";
 import { useDebounce, useFees } from "app/hooks";

@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { camelCase } from "@payvo/helpers";
+import { camelCase } from "@arkecosystem/utils";
 import { Contracts } from "@payvo/profiles";
 import { screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";

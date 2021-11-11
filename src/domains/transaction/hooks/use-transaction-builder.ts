@@ -1,4 +1,4 @@
-import { upperFirst } from "@payvo/helpers";
+import { upperFirst } from "@arkecosystem/utils";
 import { Contracts as ProfileContracts, DTO } from "@payvo/profiles";
 import { Services } from "@payvo/sdk";
 import { useLedgerContext } from "app/contexts";

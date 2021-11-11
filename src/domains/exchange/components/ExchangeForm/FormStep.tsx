@@ -1,4 +1,4 @@
-import { startCase } from "@payvo/helpers";
+import { startCase } from "@arkecosystem/utils";
 import { Contracts } from "@payvo/profiles";
 import { Networks } from "@payvo/sdk";
 import { Alert } from "app/components/Alert";

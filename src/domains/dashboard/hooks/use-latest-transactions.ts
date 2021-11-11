@@ -1,4 +1,4 @@
-import { sortByDesc } from "@payvo/helpers";
+import { sortByDesc } from "@arkecosystem/utils";
 import { Contracts, DTO } from "@payvo/profiles";
 import { useProfileTransactions } from "domains/transaction/hooks/use-profile-transactions";
 import { useEffect, useState } from "react";

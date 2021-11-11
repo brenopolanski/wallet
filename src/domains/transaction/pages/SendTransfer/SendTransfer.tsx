@@ -1,4 +1,4 @@
-import { sortBy } from "@payvo/helpers";
+import { sortBy } from "@arkecosystem/utils";
 import { Contracts, DTO } from "@payvo/profiles";
 import { Networks, Services } from "@payvo/sdk";
 import { Form } from "app/components/Form";

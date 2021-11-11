@@ -1,4 +1,4 @@
-import { isNil } from "@payvo/helpers";
+import { isNil } from "@arkecosystem/utils";
 import { Contracts } from "@payvo/profiles";
 import { Switch } from "app/components/Switch";
 import { useExchangeRate } from "app/hooks/use-exchange-rate";
