@@ -257,7 +257,7 @@ exports[`SearchWallet uses fiat value = false should render 1`] = `
                         >
                           <span
                             class="whitespace-nowrap"
-                            data-testid="AmountCrypto"
+                            data-testid="Amount"
                           >
                             33.75089801 DARK
                           </span>
@@ -361,7 +361,7 @@ exports[`SearchWallet uses fiat value = false should render 1`] = `
                         >
                           <span
                             class="whitespace-nowrap"
-                            data-testid="AmountCrypto"
+                            data-testid="Amount"
                           >
                             57.68 DARK
                           </span>
@@ -654,7 +654,7 @@ exports[`SearchWallet uses fiat value = false should render with selected addres
                         >
                           <span
                             class="whitespace-nowrap"
-                            data-testid="AmountCrypto"
+                            data-testid="Amount"
                           >
                             33.75089801 DARK
                           </span>
@@ -758,7 +758,7 @@ exports[`SearchWallet uses fiat value = false should render with selected addres
                         >
                           <span
                             class="whitespace-nowrap"
-                            data-testid="AmountCrypto"
+                            data-testid="Amount"
                           >
                             57.68 DARK
                           </span>
@@ -1051,7 +1051,7 @@ exports[`SearchWallet uses fiat value = false should render with the default exc
                         >
                           <span
                             class="whitespace-nowrap"
-                            data-testid="AmountCrypto"
+                            data-testid="Amount"
                           >
                             33.75089801 DARK
                           </span>
@@ -1155,7 +1155,7 @@ exports[`SearchWallet uses fiat value = false should render with the default exc
                         >
                           <span
                             class="whitespace-nowrap"
-                            data-testid="AmountCrypto"
+                            data-testid="Amount"
                           >
                             57.68 DARK
                           </span>
@@ -1478,7 +1478,7 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
                         >
                           <span
                             class="whitespace-nowrap"
-                            data-testid="AmountCrypto"
+                            data-testid="Amount"
                           >
                             33.75089801 DARK
                           </span>
@@ -1490,7 +1490,7 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
                         >
                           <span
                             class="whitespace-nowrap"
-                            data-testid="AmountCrypto"
+                            data-testid="Amount"
                           >
                             0 BTC
                           </span>
@@ -1594,7 +1594,7 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
                         >
                           <span
                             class="whitespace-nowrap"
-                            data-testid="AmountCrypto"
+                            data-testid="Amount"
                           >
                             57.68 DARK
                           </span>
@@ -1606,7 +1606,7 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
                         >
                           <span
                             class="whitespace-nowrap"
-                            data-testid="AmountCrypto"
+                            data-testid="Amount"
                           >
                             0 BTC
                           </span>
@@ -1929,7 +1929,7 @@ exports[`SearchWallet uses fiat value = true should render with selected address
                         >
                           <span
                             class="whitespace-nowrap"
-                            data-testid="AmountCrypto"
+                            data-testid="Amount"
                           >
                             33.75089801 DARK
                           </span>
@@ -1941,7 +1941,7 @@ exports[`SearchWallet uses fiat value = true should render with selected address
                         >
                           <span
                             class="whitespace-nowrap"
-                            data-testid="AmountCrypto"
+                            data-testid="Amount"
                           >
                             0 BTC
                           </span>
@@ -2045,7 +2045,7 @@ exports[`SearchWallet uses fiat value = true should render with selected address
                         >
                           <span
                             class="whitespace-nowrap"
-                            data-testid="AmountCrypto"
+                            data-testid="Amount"
                           >
                             57.68 DARK
                           </span>
@@ -2057,7 +2057,7 @@ exports[`SearchWallet uses fiat value = true should render with selected address
                         >
                           <span
                             class="whitespace-nowrap"
-                            data-testid="AmountCrypto"
+                            data-testid="Amount"
                           >
                             0 BTC
                           </span>
@@ -2380,7 +2380,7 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
                         >
                           <span
                             class="whitespace-nowrap"
-                            data-testid="AmountCrypto"
+                            data-testid="Amount"
                           >
                             33.75089801 DARK
                           </span>
@@ -2392,7 +2392,7 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
                         >
                           <span
                             class="whitespace-nowrap"
-                            data-testid="AmountCrypto"
+                            data-testid="Amount"
                           >
                             0 BTC
                           </span>
@@ -2496,7 +2496,7 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
                         >
                           <span
                             class="whitespace-nowrap"
-                            data-testid="AmountCrypto"
+                            data-testid="Amount"
                           >
                             57.68 DARK
                           </span>
@@ -2508,7 +2508,7 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
                         >
                           <span
                             class="whitespace-nowrap"
-                            data-testid="AmountCrypto"
+                            data-testid="Amount"
                           >
                             0 BTC
                           </span>

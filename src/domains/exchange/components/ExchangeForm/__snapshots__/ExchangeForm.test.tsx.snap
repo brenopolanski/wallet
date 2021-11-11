@@ -204,7 +204,7 @@ exports[`ConfirmationStep should render 1`] = `
             >
               <span
                 class="whitespace-nowrap text-lg font-semibold"
-                data-testid="AmountCrypto"
+                data-testid="Amount"
               >
                 - 1 BTC
               </span>
@@ -314,7 +314,7 @@ exports[`ConfirmationStep should render 1`] = `
             >
               <span
                 class="whitespace-nowrap text-lg font-semibold"
-                data-testid="AmountCrypto"
+                data-testid="Amount"
               >
                 + 100 ARK
               </span>
@@ -1061,7 +1061,7 @@ exports[`ExchangeForm should render exchange form with id of finished order 1`] 
                     >
                       <span
                         class="whitespace-nowrap text-lg font-semibold"
-                        data-testid="AmountCrypto"
+                        data-testid="Amount"
                       >
                         - 1 BTC
                       </span>
@@ -1251,7 +1251,7 @@ exports[`ExchangeForm should render exchange form with id of finished order 1`] 
                     >
                       <span
                         class="whitespace-nowrap text-lg font-semibold"
-                        data-testid="AmountCrypto"
+                        data-testid="Amount"
                       >
                         + 100 ARK
                       </span>
@@ -1360,7 +1360,7 @@ exports[`ExchangeForm should render exchange form with id of pending order 1`] =
                 </span>
                 <span
                   class="whitespace-nowrap text-lg font-semibold"
-                  data-testid="AmountCrypto"
+                  data-testid="Amount"
                 >
                   1 BTC
                 </span>
@@ -1484,7 +1484,7 @@ exports[`ExchangeForm should render exchange form with id of pending order 1`] =
                    
                   <span
                     class="whitespace-nowrap font-semibold"
-                    data-testid="AmountCrypto"
+                    data-testid="Amount"
                   >
                     100 ARK
                   </span>
@@ -2028,7 +2028,7 @@ exports[`ReviewStep should render 1`] = `
         </span>
         <span
           class="whitespace-nowrap text-lg font-semibold"
-          data-testid="AmountCrypto"
+          data-testid="Amount"
         >
           1 BTC
         </span>
@@ -2037,11 +2037,10 @@ exports[`ReviewStep should render 1`] = `
         >
           1 
           BTC
-           ≈
-           
+           ≈ 
           <span
             class="whitespace-nowrap"
-            data-testid="AmountCrypto"
+            data-testid="Amount"
           >
             NaN ARK
           </span>
@@ -2074,7 +2073,7 @@ exports[`ReviewStep should render 1`] = `
         </span>
         <span
           class="whitespace-nowrap text-lg font-semibold"
-          data-testid="AmountCrypto"
+          data-testid="Amount"
         >
           1 ARK
         </span>
@@ -2205,7 +2204,7 @@ exports[`StatusStep should render 1`] = `
         </span>
         <span
           class="whitespace-nowrap text-lg font-semibold"
-          data-testid="AmountCrypto"
+          data-testid="Amount"
         >
           1 BTC
         </span>
@@ -2329,7 +2328,7 @@ exports[`StatusStep should render 1`] = `
            
           <span
             class="whitespace-nowrap font-semibold"
-            data-testid="AmountCrypto"
+            data-testid="Amount"
           >
             100 ARK
           </span>

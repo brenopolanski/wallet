@@ -18,7 +18,7 @@ describe("AmountLabel", () => {
 	});
 
 	it("should render compact", () => {
-		const { asFragment } = render(<AmountLabel isCompact value={10} ticker="ARK" />);
+		const { asFragment } = render(<AmountLabel isNegative={false} isCompact value={10} ticker="ARK" />);
 
 		expect(asFragment()).toMatchSnapshot();
 	});

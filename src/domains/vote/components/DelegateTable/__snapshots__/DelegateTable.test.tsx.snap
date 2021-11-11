@@ -2369,7 +2369,7 @@ exports[`DelegateTable loading state for requiresAmount should render when isCom
               >
                 <span
                   class="whitespace-nowrap"
-                  data-testid="AmountCrypto"
+                  data-testid="Amount"
                 >
                   33.75089801 DARK
                 </span>
@@ -3324,7 +3324,7 @@ exports[`DelegateTable loading state for requiresAmount should render when isCom
               >
                 <span
                   class="whitespace-nowrap"
-                  data-testid="AmountCrypto"
+                  data-testid="Amount"
                 >
                   33.75089801 DARK
                 </span>
@@ -6071,7 +6071,7 @@ exports[`DelegateTable should render vote amount column 1`] = `
               >
                 <span
                   class="whitespace-nowrap"
-                  data-testid="AmountCrypto"
+                  data-testid="Amount"
                 >
                   33.75089801 DARK
                 </span>
@@ -8845,7 +8845,7 @@ exports[`DelegateTable should select a changed delegate to unvote 1`] = `
               >
                 <span
                   class="whitespace-nowrap"
-                  data-testid="AmountCrypto"
+                  data-testid="Amount"
                 >
                   23.75089801 DARK
                 </span>
@@ -11084,7 +11084,7 @@ exports[`DelegateTable should select a delegate with vote amount and make it unv
               >
                 <span
                   class="whitespace-nowrap"
-                  data-testid="AmountCrypto"
+                  data-testid="Amount"
                 >
                   33.75089801 DARK
                 </span>

@@ -686,9 +686,9 @@ describe("SendVote", () => {
 
 		expect(getByTestId("SendVote__review-step")).toBeInTheDocument();
 
-		await findAllByTestId("AmountCrypto");
+		await findAllByTestId("Amount");
 
-		expect(getAllByTestId("AmountCrypto")[3]).toHaveTextContent("0.02");
+		expect(getAllByTestId("Amount")[3]).toHaveTextContent("0.02");
 	});
 
 	it("should move back and forth between steps", async () => {

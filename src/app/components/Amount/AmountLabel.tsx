@@ -5,17 +5,14 @@ import cn from "classnames";
 import React from "react";
 
 import { Amount } from "./Amount";
-import { AmountLabelProperties } from "./Amount.contracts";
 
-const AmountLabelHint = ({
-	className,
-	isCompact,
-	tooltipContent,
-}: {
+interface AmountLabelHintProperties {
 	className: string;
 	isCompact?: boolean;
 	tooltipContent?: string;
-}) => (
+}
+
+const AmountLabelHint: React.VFC<AmountLabelHintProperties> = ({ className, isCompact, tooltipContent }) => (
 	<Tooltip content={tooltipContent}>
 		<div
 			data-testid="AmountLabel__hint"
@@ -30,13 +27,15 @@ const AmountLabelHint = ({
 	</Tooltip>
 );
 
-export const AmountLabel: React.FC<AmountLabelProperties> = ({
-	value,
-	ticker,
-	isCompact,
-	isNegative,
-	hint,
-}: AmountLabelProperties) => {
+interface AmountLabelProperties {
+	isCompact?: boolean;
+	isNegative: boolean;
+	value: number;
+	ticker: string;
+	hint?: string;
+}
+
+export const AmountLabel: React.VFC<AmountLabelProperties> = ({ value, ticker, isCompact, isNegative, hint }) => {
 	let labelColor = "success";
 	let hintClassName = "bg-theme-success-200 dark:bg-theme-success-600";
 

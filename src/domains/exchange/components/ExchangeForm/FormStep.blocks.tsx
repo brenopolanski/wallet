@@ -1,4 +1,4 @@
-import { AmountCrypto } from "app/components/Amount";
+import { Amount } from "app/components/Amount";
 import { Button } from "app/components/Button";
 import { Circle } from "app/components/Circle";
 import { Skeleton } from "app/components/Skeleton";
@@ -54,8 +54,7 @@ const FormDivider = ({
 		if (exchangeRate) {
 			return (
 				<span data-testid="FormDivider__exchange-rate">
-					1 {fromCurrency?.coin.toUpperCase()} ≈{" "}
-					<AmountCrypto value={exchangeRate} ticker={toCurrency?.coin} />
+					1 {fromCurrency?.coin.toUpperCase()} ≈ <Amount value={exchangeRate} ticker={toCurrency?.coin} />
 				</span>
 			);
 		}

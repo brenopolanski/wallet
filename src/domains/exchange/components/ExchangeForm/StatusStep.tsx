@@ -1,5 +1,5 @@
 import { Contracts } from "@payvo/profiles";
-import { AmountCrypto } from "app/components/Amount";
+import { Amount } from "app/components/Amount";
 import { Clipboard } from "app/components/Clipboard";
 import { Icon } from "app/components/Icon";
 import { Link } from "app/components/Link";
@@ -70,7 +70,7 @@ export const StatusStep = ({ exchangeTransaction, onUpdate }: StatusStepProperti
 					<span className="font-semibold text-sm text-theme-secondary-500 dark:text-theme-secondary-700">
 						{t("EXCHANGE.EXCHANGE_FORM.YOU_SEND")}
 					</span>
-					<AmountCrypto
+					<Amount
 						value={exchangeTransaction.input().amount}
 						ticker={exchangeTransaction.input().ticker}
 						className="text-lg font-semibold"
@@ -103,7 +103,7 @@ export const StatusStep = ({ exchangeTransaction, onUpdate }: StatusStepProperti
 					</span>
 					<span>
 						≈{" "}
-						<AmountCrypto
+						<Amount
 							value={exchangeTransaction.output().amount}
 							ticker={exchangeTransaction.output().ticker}
 							className="font-semibold"

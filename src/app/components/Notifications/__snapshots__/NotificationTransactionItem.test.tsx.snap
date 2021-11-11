@@ -75,7 +75,7 @@ exports[`Notifications should render notification item 1`] = `
               >
                 <span
                   class="whitespace-nowrap"
-                  data-testid="AmountCrypto"
+                  data-testid="Amount"
                 >
                   + 20 DARK
                 </span>

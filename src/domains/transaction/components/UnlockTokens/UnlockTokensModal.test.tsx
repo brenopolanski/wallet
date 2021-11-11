@@ -127,12 +127,12 @@ describe("UnlockTokensModal", () => {
 		expect(screen.getAllByRole("checkbox", { checked: true })).toHaveLength(2);
 
 		await waitFor(() => {
-			expect(within(screen.getAllByTestId("UnlockTokensTotal")[0]).getByTestId("AmountCrypto")).toHaveTextContent(
+			expect(within(screen.getAllByTestId("UnlockTokensTotal")[0]).getByTestId("Amount")).toHaveTextContent(
 				"+ 30 LSK",
 			);
 		});
 
-		expect(within(screen.getAllByTestId("UnlockTokensTotal")[1]).getByTestId("AmountCrypto")).toHaveTextContent(
+		expect(within(screen.getAllByTestId("UnlockTokensTotal")[1]).getByTestId("Amount")).toHaveTextContent(
 			"- 0.00147 LSK",
 		);
 
@@ -149,7 +149,7 @@ describe("UnlockTokensModal", () => {
 		userEvent.click(screen.getByText(translations.COMMON.BACK));
 
 		await waitFor(() => {
-			expect(within(screen.getAllByTestId("UnlockTokensTotal")[1]).getByTestId("AmountCrypto")).toHaveTextContent(
+			expect(within(screen.getAllByTestId("UnlockTokensTotal")[1]).getByTestId("Amount")).toHaveTextContent(
 				"- 0.00147 LSK",
 			);
 		});

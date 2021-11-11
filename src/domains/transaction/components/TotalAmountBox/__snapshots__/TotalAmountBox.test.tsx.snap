@@ -21,7 +21,7 @@ exports[`TotalAmountBox should render with amount of 0.1 and fee of 0.01 1`] = `
           </span>
           <span
             class="whitespace-nowrap mt-1 text-lg font-semibold"
-            data-testid="AmountCrypto"
+            data-testid="Amount"
           >
             0.1 ARK
           </span>
@@ -36,7 +36,7 @@ exports[`TotalAmountBox should render with amount of 0.1 and fee of 0.01 1`] = `
           </span>
           <span
             class="whitespace-nowrap mt-1 text-lg font-semibold"
-            data-testid="AmountCrypto"
+            data-testid="Amount"
           >
             0.01 ARK
           </span>
@@ -70,7 +70,7 @@ exports[`TotalAmountBox should render with amount of 0.1 and fee of 0.01 1`] = `
       </span>
       <span
         class="whitespace-nowrap text-2xl font-bold"
-        data-testid="AmountCrypto"
+        data-testid="Amount"
       >
         0.11 ARK
       </span>
@@ -100,7 +100,7 @@ exports[`TotalAmountBox should render with amount of 0.1 and fee of 0.01 2`] = `
           </span>
           <span
             class="whitespace-nowrap mt-1 text-lg font-semibold"
-            data-testid="AmountCrypto"
+            data-testid="Amount"
           >
             0.1 ARK
           </span>
@@ -115,7 +115,7 @@ exports[`TotalAmountBox should render with amount of 0.1 and fee of 0.01 2`] = `
           </span>
           <span
             class="whitespace-nowrap mt-1 text-lg font-semibold"
-            data-testid="AmountCrypto"
+            data-testid="Amount"
           >
             0.01 ARK
           </span>
@@ -149,7 +149,7 @@ exports[`TotalAmountBox should render with amount of 0.1 and fee of 0.01 2`] = `
       </span>
       <span
         class="whitespace-nowrap text-2xl font-bold"
-        data-testid="AmountCrypto"
+        data-testid="Amount"
       >
         0.11 ARK
       </span>
@@ -179,7 +179,7 @@ exports[`TotalAmountBox should render with amount of 0.1 and fee of 0.01 3`] = `
           </span>
           <span
             class="whitespace-nowrap mt-1 text-lg font-semibold"
-            data-testid="AmountCrypto"
+            data-testid="Amount"
           >
             0.1 ARK
           </span>
@@ -194,7 +194,7 @@ exports[`TotalAmountBox should render with amount of 0.1 and fee of 0.01 3`] = `
           </span>
           <span
             class="whitespace-nowrap mt-1 text-lg font-semibold"
-            data-testid="AmountCrypto"
+            data-testid="Amount"
           >
             0.01 ARK
           </span>
@@ -228,7 +228,7 @@ exports[`TotalAmountBox should render with amount of 0.1 and fee of 0.01 3`] = `
       </span>
       <span
         class="whitespace-nowrap text-2xl font-bold"
-        data-testid="AmountCrypto"
+        data-testid="Amount"
       >
         0.11 ARK
       </span>
@@ -258,7 +258,7 @@ exports[`TotalAmountBox should render with amount of 0.1 and fee of 0.01 4`] = `
           </span>
           <span
             class="whitespace-nowrap mt-1 text-lg font-semibold"
-            data-testid="AmountCrypto"
+            data-testid="Amount"
           >
             0.1 ARK
           </span>
@@ -273,7 +273,7 @@ exports[`TotalAmountBox should render with amount of 0.1 and fee of 0.01 4`] = `
           </span>
           <span
             class="whitespace-nowrap mt-1 text-lg font-semibold"
-            data-testid="AmountCrypto"
+            data-testid="Amount"
           >
             0.01 ARK
           </span>
@@ -307,7 +307,7 @@ exports[`TotalAmountBox should render with amount of 0.1 and fee of 0.01 4`] = `
       </span>
       <span
         class="whitespace-nowrap text-2xl font-bold"
-        data-testid="AmountCrypto"
+        data-testid="Amount"
       >
         0.11 ARK
       </span>

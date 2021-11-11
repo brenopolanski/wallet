@@ -1,18 +1,32 @@
+import { Helpers } from "@payvo/profiles";
+import cn from "classnames";
 import React from "react";
 
-import { AmountProperties } from "./Amount.contracts";
-import { getDecimalsByTicker } from "./Amount.helpers";
-import { AmountCrypto } from "./AmountCrypto";
-import { AmountFiat } from "./AmountFiat";
+interface AmountProperties {
+	ticker: string;
+	value: number;
+	showSign?: boolean;
+	showTicker?: boolean;
+	isNegative?: boolean;
+	className?: string;
+}
 
-const Amount: React.FC<AmountProperties> = (properties: AmountProperties) => {
-	const isFiat = getDecimalsByTicker(properties.ticker) <= 2;
+const Amount: React.VFC<AmountProperties> = ({ value, ticker, showTicker = true, isNegative, showSign, className }) => {
+	let formattedAmount = Helpers.Currency.format(value, ticker);
 
-	if (isFiat) {
-		return <AmountFiat {...properties} />;
+	if (!showTicker) {
+		formattedAmount = formattedAmount.split(" ").slice(0, -1).join(" ");
 	}
 
-	return <AmountCrypto {...properties} />;
+	if (showSign) {
+		formattedAmount = `${isNegative ? "-" : "+"} ${formattedAmount}`;
+	}
+
+	return (
+		<span data-testid="Amount" className={cn("whitespace-nowrap", className)}>
+			{formattedAmount}
+		</span>
+	);
 };
 
 export { Amount };

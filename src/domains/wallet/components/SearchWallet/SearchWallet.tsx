@@ -1,6 +1,6 @@
 import { Contracts } from "@payvo/profiles";
 import { Address } from "app/components/Address";
-import { Amount, AmountCrypto } from "app/components/Amount";
+import { Amount } from "app/components/Amount";
 import { Avatar } from "app/components/Avatar";
 import { Button } from "app/components/Button";
 import { EmptyResults } from "app/components/EmptyResults";
@@ -77,7 +77,7 @@ const SearchWalletListItem = ({
 			</TableCell>
 
 			<TableCell innerClassName="font-semibold justify-end">
-				<AmountCrypto value={wallet.balance()} ticker={wallet.currency()} />
+				<Amount value={wallet.balance()} ticker={wallet.currency()} />
 			</TableCell>
 
 			{showConvertedValue && (

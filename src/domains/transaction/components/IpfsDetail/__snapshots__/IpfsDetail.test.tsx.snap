@@ -198,7 +198,7 @@ exports[`IpfsDetail should render a modal 1`] = `
                 >
                   <span
                     class="whitespace-nowrap"
-                    data-testid="AmountCrypto"
+                    data-testid="Amount"
                   >
                     21 ARK
                   </span>
@@ -494,7 +494,7 @@ exports[`IpfsDetail should render a modal without a wallet alias 1`] = `
                 >
                   <span
                     class="whitespace-nowrap"
-                    data-testid="AmountCrypto"
+                    data-testid="Amount"
                   >
                     21 ARK
                   </span>

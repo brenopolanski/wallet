@@ -1,6 +1,6 @@
 import { Contracts } from "@payvo/profiles";
 import { Address } from "app/components/Address";
-import { AmountCrypto } from "app/components/Amount";
+import { Amount } from "app/components/Amount";
 import { Avatar } from "app/components/Avatar";
 import React from "react";
 import tw, { styled } from "twin.macro";
@@ -33,7 +33,7 @@ const VoteItem = ({ wallet, amount = 0, currency, isNegativeAmount }: VoteItemPr
 
 		{amount > 0 && (
 			<div className="flex-grow pl-3 text-right">
-				<AmountCrypto ticker={currency} value={amount} isNegative={isNegativeAmount} showSign />
+				<Amount ticker={currency} value={amount} isNegative={isNegativeAmount} showSign />
 			</div>
 		)}
 	</div>

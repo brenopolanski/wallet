@@ -220,7 +220,7 @@ exports[`Appearance Settings should render appearance settings 1`] = `
               >
                 <span
                   class="whitespace-nowrap"
-                  data-testid="AmountCrypto"
+                  data-testid="Amount"
                 >
                   0 BTC
                 </span>

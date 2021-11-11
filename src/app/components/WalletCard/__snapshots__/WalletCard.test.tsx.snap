@@ -62,7 +62,7 @@ exports[`Wallet Card should render 1`] = `
           </div>
           <span
             class="whitespace-nowrap mt-auto text-lg font-bold text-theme-text"
-            data-testid="AmountCrypto"
+            data-testid="Amount"
           >
             33.75089801 DARK
           </span>
@@ -490,7 +490,7 @@ exports[`Wallet Card should render with wallet data 1`] = `
           </div>
           <span
             class="whitespace-nowrap mt-auto text-lg font-bold text-theme-text"
-            data-testid="AmountCrypto"
+            data-testid="Amount"
           >
             33.75089801 DARK
           </span>
@@ -629,7 +629,7 @@ exports[`Wallet Card should render with wallet data and optional icon 1`] = `
           </div>
           <span
             class="whitespace-nowrap mt-auto text-lg font-bold text-theme-text"
-            data-testid="AmountCrypto"
+            data-testid="Amount"
           >
             33.75089801 DARK
           </span>

@@ -247,7 +247,7 @@ exports[`ExchangeTransactionsTable should render 1`] = `
                   >
                     <span
                       class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                      data-testid="Amount"
                     >
                       - 1 BTC
                     </span>
@@ -295,7 +295,7 @@ exports[`ExchangeTransactionsTable should render 1`] = `
                     </div>
                     <span
                       class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                      data-testid="Amount"
                     >
                       + 100 ARK
                     </span>
@@ -408,7 +408,7 @@ exports[`ExchangeTransactionsTable should render 1`] = `
                   >
                     <span
                       class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                      data-testid="Amount"
                     >
                       - 1 BTC
                     </span>
@@ -456,7 +456,7 @@ exports[`ExchangeTransactionsTable should render 1`] = `
                     </div>
                     <span
                       class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                      data-testid="Amount"
                     >
                       + 100 ARK
                     </span>
@@ -569,7 +569,7 @@ exports[`ExchangeTransactionsTable should render 1`] = `
                   >
                     <span
                       class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                      data-testid="Amount"
                     >
                       - 1 BTC
                     </span>
@@ -617,7 +617,7 @@ exports[`ExchangeTransactionsTable should render 1`] = `
                     </div>
                     <span
                       class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                      data-testid="Amount"
                     >
                       + 100 ARK
                     </span>
@@ -922,7 +922,7 @@ exports[`ExchangeTransactionsTable should render compact 1`] = `
                   >
                     <span
                       class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                      data-testid="Amount"
                     >
                       - 1 BTC
                     </span>
@@ -970,7 +970,7 @@ exports[`ExchangeTransactionsTable should render compact 1`] = `
                     </div>
                     <span
                       class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                      data-testid="Amount"
                     >
                       + 100 ARK
                     </span>
@@ -1083,7 +1083,7 @@ exports[`ExchangeTransactionsTable should render compact 1`] = `
                   >
                     <span
                       class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                      data-testid="Amount"
                     >
                       - 1 BTC
                     </span>
@@ -1131,7 +1131,7 @@ exports[`ExchangeTransactionsTable should render compact 1`] = `
                     </div>
                     <span
                       class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                      data-testid="Amount"
                     >
                       + 100 ARK
                     </span>
@@ -1244,7 +1244,7 @@ exports[`ExchangeTransactionsTable should render compact 1`] = `
                   >
                     <span
                       class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                      data-testid="Amount"
                     >
                       - 1 BTC
                     </span>
@@ -1292,7 +1292,7 @@ exports[`ExchangeTransactionsTable should render compact 1`] = `
                     </div>
                     <span
                       class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                      data-testid="Amount"
                     >
                       + 100 ARK
                     </span>

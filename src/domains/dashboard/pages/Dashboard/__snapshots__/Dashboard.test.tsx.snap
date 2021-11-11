@@ -222,7 +222,7 @@ exports[`Dashboard should display empty block when there are no transactions 1`]
               >
                 <span
                   class="whitespace-nowrap"
-                  data-testid="AmountCrypto"
+                  data-testid="Amount"
                 >
                   50.11421128 BTC
                 </span>
@@ -538,7 +538,7 @@ exports[`Dashboard should display empty block when there are no transactions 1`]
                             </div>
                             <span
                               class="whitespace-nowrap mt-auto text-lg font-bold text-theme-text"
-                              data-testid="AmountCrypto"
+                              data-testid="Amount"
                             >
                               33.75089801 DARK
                             </span>
@@ -655,7 +655,7 @@ exports[`Dashboard should display empty block when there are no transactions 1`]
                             </div>
                             <span
                               class="whitespace-nowrap mt-auto text-lg font-bold text-theme-text"
-                              data-testid="AmountCrypto"
+                              data-testid="Amount"
                             >
                               57.68 DARK
                             </span>
@@ -786,7 +786,7 @@ exports[`Dashboard should display empty block when there are no transactions 1`]
                             </div>
                             <span
                               class="whitespace-nowrap mt-auto text-lg font-bold text-theme-text"
-                              data-testid="AmountCrypto"
+                              data-testid="Amount"
                             >
                               50,114.21127898 ARK
                             </span>
@@ -1117,7 +1117,7 @@ exports[`Dashboard should render 1`] = `
               >
                 <span
                   class="whitespace-nowrap"
-                  data-testid="AmountCrypto"
+                  data-testid="Amount"
                 >
                   50.11421128 BTC
                 </span>
@@ -1433,7 +1433,7 @@ exports[`Dashboard should render 1`] = `
                             </div>
                             <span
                               class="whitespace-nowrap mt-auto text-lg font-bold text-theme-text"
-                              data-testid="AmountCrypto"
+                              data-testid="Amount"
                             >
                               33.75089801 DARK
                             </span>
@@ -1550,7 +1550,7 @@ exports[`Dashboard should render 1`] = `
                             </div>
                             <span
                               class="whitespace-nowrap mt-auto text-lg font-bold text-theme-text"
-                              data-testid="AmountCrypto"
+                              data-testid="Amount"
                             >
                               57.68 DARK
                             </span>
@@ -1681,7 +1681,7 @@ exports[`Dashboard should render 1`] = `
                             </div>
                             <span
                               class="whitespace-nowrap mt-auto text-lg font-bold text-theme-text"
-                              data-testid="AmountCrypto"
+                              data-testid="Amount"
                             >
                               50,114.21127898 ARK
                             </span>
@@ -2036,7 +2036,7 @@ exports[`Dashboard should render 1`] = `
                             >
                               <span
                                 class="whitespace-nowrap"
-                                data-testid="AmountCrypto"
+                                data-testid="Amount"
                               >
                                 + 400,000 DARK
                               </span>
@@ -2207,7 +2207,7 @@ exports[`Dashboard should render 1`] = `
                             >
                               <span
                                 class="whitespace-nowrap"
-                                data-testid="AmountCrypto"
+                                data-testid="Amount"
                               >
                                 + 400,000 DARK
                               </span>
@@ -2378,7 +2378,7 @@ exports[`Dashboard should render 1`] = `
                             >
                               <span
                                 class="whitespace-nowrap"
-                                data-testid="AmountCrypto"
+                                data-testid="Amount"
                               >
                                 + 50,000 DARK
                               </span>
@@ -2549,7 +2549,7 @@ exports[`Dashboard should render 1`] = `
                             >
                               <span
                                 class="whitespace-nowrap"
-                                data-testid="AmountCrypto"
+                                data-testid="Amount"
                               >
                                 + 50,000 DARK
                               </span>
@@ -2806,7 +2806,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
               >
                 <span
                   class="whitespace-nowrap"
-                  data-testid="AmountCrypto"
+                  data-testid="Amount"
                 >
                   50.11421128 BTC
                 </span>
@@ -3122,7 +3122,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                             </div>
                             <span
                               class="whitespace-nowrap mt-auto text-lg font-bold text-theme-text"
-                              data-testid="AmountCrypto"
+                              data-testid="Amount"
                             >
                               33.75089801 DARK
                             </span>
@@ -3239,7 +3239,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                             </div>
                             <span
                               class="whitespace-nowrap mt-auto text-lg font-bold text-theme-text"
-                              data-testid="AmountCrypto"
+                              data-testid="Amount"
                             >
                               57.68 DARK
                             </span>
@@ -3370,7 +3370,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                             </div>
                             <span
                               class="whitespace-nowrap mt-auto text-lg font-bold text-theme-text"
-                              data-testid="AmountCrypto"
+                              data-testid="Amount"
                             >
                               50,114.21127898 ARK
                             </span>

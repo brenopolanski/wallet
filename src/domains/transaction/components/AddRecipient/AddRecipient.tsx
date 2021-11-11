@@ -1,6 +1,5 @@
 import { Contracts } from "@payvo/profiles";
-import { AmountCrypto } from "app/components/Amount";
-import { getDecimalsByTicker } from "app/components/Amount/Amount.helpers";
+import { Amount } from "app/components/Amount";
 import { Button } from "app/components/Button";
 import { FormField, FormLabel, SubForm } from "app/components/Form";
 import { Icon } from "app/components/Icon";
@@ -118,11 +117,10 @@ export const AddRecipient = ({
 	}, [addedRecipients, wallet, isSingle]);
 
 	const remainingNetBalance = useMemo(() => {
-		const decimals = getDecimalsByTicker(ticker);
-		const netBalance = +(remainingBalance - (+fee || 0)).toFixed(decimals);
+		const netBalance = +(remainingBalance - (+fee || 0)).toFixed(10);
 
 		return Math.sign(netBalance) ? netBalance : undefined;
-	}, [fee, remainingBalance, ticker]);
+	}, [fee, remainingBalance]);
 
 	const isSenderFilled = useMemo(() => !!network?.id() && !!senderAddress, [network, senderAddress]);
 
@@ -306,7 +304,7 @@ export const AddRecipient = ({
 			? {
 					end: {
 						content: (
-							<AmountCrypto
+							<Amount
 								value={convert(amount || 0)}
 								ticker={exchangeTicker}
 								data-testid="AddRecipient__currency-balance"
@@ -365,7 +363,7 @@ export const AddRecipient = ({
 							{isSenderFilled && !!remainingNetBalance && (
 								<span className="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700">
 									({t("COMMON.AVAILABLE")}{" "}
-									<AmountCrypto value={remainingNetBalance} ticker={ticker} showTicker={false} />)
+									<Amount value={remainingNetBalance} ticker={ticker} showTicker={false} />)
 								</span>
 							)}
 						</FormLabel>

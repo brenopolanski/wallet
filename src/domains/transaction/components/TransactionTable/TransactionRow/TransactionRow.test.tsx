@@ -43,7 +43,7 @@ describe("TransactionRow", () => {
 		expect(screen.getByTestId("TransactionRow__timestamp")).toBeInTheDocument();
 		expect(screen.getByTestId("TransactionRowMode")).toBeInTheDocument();
 		expect(screen.getAllByTestId("Address__address")).toHaveLength(2);
-		expect(screen.getByTestId("AmountCrypto")).toBeInTheDocument();
+		expect(screen.getByTestId("Amount")).toBeInTheDocument();
 	});
 
 	it("should render skeleton", () => {
@@ -98,7 +98,7 @@ describe("TransactionRow", () => {
 		);
 
 		expect(asFragment()).toMatchSnapshot();
-		expect(screen.getAllByTestId("AmountCrypto")).toHaveLength(2);
+		expect(screen.getAllByTestId("Amount")).toHaveLength(2);
 		expect(() => screen.getByText(commonTranslations.NOT_AVAILABLE)).toThrow(/Unable to find an element/);
 	});
 
@@ -126,7 +126,7 @@ describe("TransactionRow", () => {
 		);
 
 		expect(asFragment()).toMatchSnapshot();
-		expect(screen.getAllByTestId("AmountCrypto")).toHaveLength(1);
+		expect(screen.getAllByTestId("Amount")).toHaveLength(1);
 		expect(screen.getByText(commonTranslations.NOT_AVAILABLE)).toBeInTheDocument();
 	});
 });

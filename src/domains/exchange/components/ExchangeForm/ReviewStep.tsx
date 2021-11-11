@@ -1,4 +1,4 @@
-import { AmountCrypto } from "app/components/Amount";
+import { Amount } from "app/components/Amount";
 import { Checkbox } from "app/components/Checkbox";
 import { FormField } from "app/components/Form";
 import { Icon } from "app/components/Icon";
@@ -32,10 +32,9 @@ export const ReviewStep = () => {
 					<span className="text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold">
 						{t("EXCHANGE.EXCHANGE_FORM.YOU_SEND")}
 					</span>
-					<AmountCrypto value={payinAmount} ticker={fromCurrency?.coin} className="text-lg font-semibold" />
+					<Amount value={payinAmount} ticker={fromCurrency?.coin} className="text-lg font-semibold" />
 					<span className="text-xs font-semibold">
-						1 {fromCurrency?.coin.toUpperCase()} ≈{" "}
-						<AmountCrypto value={exchangeRate} ticker={toCurrency?.coin} />
+						1 {fromCurrency?.coin.toUpperCase()} ≈ <Amount value={exchangeRate} ticker={toCurrency?.coin} />
 					</span>
 				</div>
 
@@ -49,7 +48,7 @@ export const ReviewStep = () => {
 					<span className="text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold">
 						{t("EXCHANGE.EXCHANGE_FORM.YOU_GET")}
 					</span>
-					<AmountCrypto value={payoutAmount} ticker={toCurrency?.coin} className="text-lg font-semibold" />
+					<Amount value={payoutAmount} ticker={toCurrency?.coin} className="text-lg font-semibold" />
 					<TruncateMiddleDynamic value={recipientWallet} className="text-xs font-semibold no-ligatures" />
 				</div>
 			</div>

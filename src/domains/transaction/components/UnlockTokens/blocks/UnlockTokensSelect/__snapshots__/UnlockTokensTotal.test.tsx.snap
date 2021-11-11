@@ -23,7 +23,7 @@ exports[`UnlockTokensTotal should render 1`] = `
         >
           <span
             class="whitespace-nowrap"
-            data-testid="AmountCrypto"
+            data-testid="Amount"
           >
             + 10 LSK
           </span>
@@ -48,7 +48,7 @@ exports[`UnlockTokensTotal should render 1`] = `
         >
           <span
             class="whitespace-nowrap"
-            data-testid="AmountCrypto"
+            data-testid="Amount"
           >
             - 8 LSK
           </span>
@@ -137,7 +137,7 @@ exports[`UnlockTokensTotal should render loading fee 1`] = `
         >
           <span
             class="whitespace-nowrap"
-            data-testid="AmountCrypto"
+            data-testid="Amount"
           >
             + 10 LSK
           </span>

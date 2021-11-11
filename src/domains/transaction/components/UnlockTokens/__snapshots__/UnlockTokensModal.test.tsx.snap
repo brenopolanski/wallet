@@ -185,7 +185,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with error 1`]
                             >
                               <span
                                 class="whitespace-nowrap font-bold text-theme-secondary-900 dark:text-theme-secondary-200"
-                                data-testid="AmountCrypto"
+                                data-testid="Amount"
                               >
                                 30 LSK
                               </span>
@@ -263,7 +263,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with error 1`]
                       >
                         <span
                           class="whitespace-nowrap"
-                          data-testid="AmountCrypto"
+                          data-testid="Amount"
                         >
                           + 30 LSK
                         </span>
@@ -302,7 +302,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with error 1`]
                         </div>
                         <span
                           class="whitespace-nowrap"
-                          data-testid="AmountCrypto"
+                          data-testid="Amount"
                         >
                           - 0.00147 LSK
                         </span>
@@ -475,7 +475,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with error 2`]
                       >
                         <span
                           class="whitespace-nowrap"
-                          data-testid="AmountCrypto"
+                          data-testid="Amount"
                         >
                           + 30 LSK
                         </span>
@@ -514,7 +514,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with error 2`]
                   >
                     <span
                       class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                      data-testid="Amount"
                     >
                       0.00147 LSK
                     </span>
@@ -1060,7 +1060,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with success 1
                             >
                               <span
                                 class="whitespace-nowrap font-bold text-theme-secondary-900 dark:text-theme-secondary-200"
-                                data-testid="AmountCrypto"
+                                data-testid="Amount"
                               >
                                 30 LSK
                               </span>
@@ -1138,7 +1138,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with success 1
                       >
                         <span
                           class="whitespace-nowrap"
-                          data-testid="AmountCrypto"
+                          data-testid="Amount"
                         >
                           + 30 LSK
                         </span>
@@ -1177,7 +1177,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with success 1
                         </div>
                         <span
                           class="whitespace-nowrap"
-                          data-testid="AmountCrypto"
+                          data-testid="Amount"
                         >
                           - 0.00147 LSK
                         </span>
@@ -1350,7 +1350,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with success 2
                       >
                         <span
                           class="whitespace-nowrap"
-                          data-testid="AmountCrypto"
+                          data-testid="Amount"
                         >
                           + 30 LSK
                         </span>
@@ -1389,7 +1389,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with success 2
                   >
                     <span
                       class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                      data-testid="Amount"
                     >
                       0.00147 LSK
                     </span>
@@ -1884,7 +1884,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with success 4
                           >
                             <span
                               class="whitespace-nowrap"
-                              data-testid="AmountCrypto"
+                              data-testid="Amount"
                             >
                               + 30 LSK
                             </span>
@@ -1923,7 +1923,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with success 4
                       >
                         <span
                           class="whitespace-nowrap"
-                          data-testid="AmountCrypto"
+                          data-testid="Amount"
                         >
                           0.00147 LSK
                         </span>
@@ -2145,7 +2145,7 @@ exports[`UnlockTokensModal should render 1`] = `
                             >
                               <span
                                 class="whitespace-nowrap font-bold text-theme-secondary-900 dark:text-theme-secondary-200"
-                                data-testid="AmountCrypto"
+                                data-testid="Amount"
                               >
                                 30 LSK
                               </span>
@@ -2223,7 +2223,7 @@ exports[`UnlockTokensModal should render 1`] = `
                       >
                         <span
                           class="whitespace-nowrap"
-                          data-testid="AmountCrypto"
+                          data-testid="Amount"
                         >
                           + 30 LSK
                         </span>
@@ -2262,7 +2262,7 @@ exports[`UnlockTokensModal should render 1`] = `
                         </div>
                         <span
                           class="whitespace-nowrap"
-                          data-testid="AmountCrypto"
+                          data-testid="Amount"
                         >
                           - 0.00147 LSK
                         </span>

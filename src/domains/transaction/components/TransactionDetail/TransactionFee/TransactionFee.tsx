@@ -1,4 +1,4 @@
-import { Amount, AmountCrypto } from "app/components/Amount";
+import { Amount } from "app/components/Amount";
 import {
 	TransactionDetail,
 	TransactionDetailProperties,
@@ -30,7 +30,7 @@ const TransactionFee: React.FC<TransactionFeeProperties> = ({
 			borderPosition={borderPosition}
 			{...properties}
 		>
-			<AmountCrypto ticker={currency} value={value} />
+			<Amount ticker={currency} value={value} />
 
 			{!!exchangeCurrency && !!convertedValue && (
 				<Amount ticker={exchangeCurrency} value={convertedValue} className="ml-2 text-theme-secondary-400" />

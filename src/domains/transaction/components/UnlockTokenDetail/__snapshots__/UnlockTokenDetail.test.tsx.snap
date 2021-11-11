@@ -209,7 +209,7 @@ exports[`UnlockTokenDetail should render a modal 1`] = `
                     >
                       <span
                         class="whitespace-nowrap"
-                        data-testid="AmountCrypto"
+                        data-testid="Amount"
                       >
                         - 100 LSK
                       </span>
@@ -248,7 +248,7 @@ exports[`UnlockTokenDetail should render a modal 1`] = `
                 >
                   <span
                     class="whitespace-nowrap"
-                    data-testid="AmountCrypto"
+                    data-testid="Amount"
                   >
                     21 LSK
                   </span>

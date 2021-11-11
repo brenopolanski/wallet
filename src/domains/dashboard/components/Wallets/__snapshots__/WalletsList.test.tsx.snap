@@ -231,7 +231,7 @@ exports[`WalletsList should render 1`] = `
                 >
                   <span
                     class="whitespace-nowrap"
-                    data-testid="AmountCrypto"
+                    data-testid="Amount"
                   >
                     33.75089801 DARK
                   </span>
@@ -358,7 +358,7 @@ exports[`WalletsList should render 1`] = `
                 >
                   <span
                     class="whitespace-nowrap"
-                    data-testid="AmountCrypto"
+                    data-testid="Amount"
                   >
                     57.68 DARK
                   </span>
@@ -1073,7 +1073,7 @@ exports[`WalletsList should render with view more button 1`] = `
                 >
                   <span
                     class="whitespace-nowrap"
-                    data-testid="AmountCrypto"
+                    data-testid="Amount"
                   >
                     33.75089801 DARK
                   </span>
@@ -1200,7 +1200,7 @@ exports[`WalletsList should render with view more button 1`] = `
                 >
                   <span
                     class="whitespace-nowrap"
-                    data-testid="AmountCrypto"
+                    data-testid="Amount"
                   >
                     57.68 DARK
                   </span>

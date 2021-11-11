@@ -198,7 +198,7 @@ exports[`LegacyMagistrateDetail should render a legacy magistrate modal 1`] = `
                 >
                   <span
                     class="whitespace-nowrap"
-                    data-testid="AmountCrypto"
+                    data-testid="Amount"
                   >
                     21 ARK
                   </span>
