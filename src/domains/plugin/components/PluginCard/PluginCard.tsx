@@ -107,6 +107,7 @@ export const PluginCard = ({
 										>
 											<Icon
 												className={cn({ "animate-spin": isUpdating })}
+												style={{ animationDirection: "reverse" }}
 												name="ArrowsRotate"
 												size="lg"
 											/>

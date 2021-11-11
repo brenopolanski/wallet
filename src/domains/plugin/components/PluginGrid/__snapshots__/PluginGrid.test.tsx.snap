@@ -1979,6 +1979,7 @@ exports[`PluginGrid should trigger update by addon button 1`] = `
                   <div
                     class="sc-bdnxRM NjstW"
                     height="20"
+                    style="animation-direction: reverse;"
                     width="20"
                   >
                     <svg>
