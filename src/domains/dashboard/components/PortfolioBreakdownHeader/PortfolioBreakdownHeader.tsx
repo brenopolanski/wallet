@@ -3,6 +3,8 @@ import { LineGraph } from "app/components/Graphs/LineGraph";
 import { usePortfolioBreakdown } from "domains/dashboard/hooks/use-portfolio-breakdown";
 import React from "react";
 
+import { mapAssetsToDataPoints } from "./PortfolioBreakdownHeader.helpers";
+
 interface PortfolioBreakdownHeaderProperties {
 	profile: Contracts.IProfile;
 	profileIsSyncingExchangeRates: boolean;
@@ -12,7 +14,7 @@ export const PortfolioBreakdownHeader: React.VFC<PortfolioBreakdownHeaderPropert
 	profile,
 	profileIsSyncingExchangeRates,
 }) => {
-	const { assets, loading } = usePortfolioBreakdown({
+	const { loading, assets } = usePortfolioBreakdown({
 		profile,
 		profileIsSyncingExchangeRates,
 	});
@@ -22,11 +24,8 @@ export const PortfolioBreakdownHeader: React.VFC<PortfolioBreakdownHeaderPropert
 	}
 
 	return (
-		<LineGraph
-			data={assets.map(({ convertedAmount, label }) => ({
-				label,
-				value: convertedAmount,
-			}))}
-		/>
+		<div>
+			<LineGraph data={assets} mapper={mapAssetsToDataPoints} />
+		</div>
 	);
 };
