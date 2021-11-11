@@ -294,9 +294,9 @@ describe("useProfileTransactions", () => {
 
 		await hookAct(async () => {
 			await result.current.fetchMore();
-
-			await waitFor(() => expect(result.current.transactions).toHaveLength(30), { timeout: 4000 });
 		});
+
+		await waitFor(() => expect(result.current.transactions).toHaveLength(30), { timeout: 4000 });
 
 		const mockTransactionsAggregate = jest.spyOn(profile.transactionAggregate(), "all").mockResolvedValue({
 			hasMorePages: () => false,
@@ -305,8 +305,9 @@ describe("useProfileTransactions", () => {
 
 		await hookAct(async () => {
 			await result.current.fetchMore();
-			await waitFor(() => expect(result.current.transactions).toHaveLength(30), { timeout: 4000 });
 		});
+
+		await waitFor(() => expect(result.current.transactions).toHaveLength(30), { timeout: 4000 });
 
 		mockTransactionsAggregate.mockRestore();
 	});
