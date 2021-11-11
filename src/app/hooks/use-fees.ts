@@ -4,6 +4,7 @@ import { useEnvironmentContext } from "app/contexts";
 import { useCallback } from "react";
 import { TransactionFees } from "types";
 import { assertString } from "utils/assertions";
+import { formatMultiSignatureInputData } from "domains/transaction/hooks/use-multisignature-registration";
 
 interface CreateStubTransactionProperties {
 	coin: Coins.Coin;
@@ -31,6 +32,7 @@ export const useFees = (profile: Contracts.IProfile) => {
 	const getMuSigData = (senderWallet: Contracts.IReadWriteWallet, data: Record<string, any>) => {
 		const participants = data?.participants ?? [];
 		const minParticipants = data?.minParticipants ?? 2;
+		const mandatoryKeys = data?.mandatoryKeys ?? [];
 
 		const publicKey = senderWallet.publicKey();
 		assertString(publicKey);
@@ -40,19 +42,12 @@ export const useFees = (profile: Contracts.IProfile) => {
 		// Some coins like ARK, throw error if signatory's public key is not included in musig participants public keys.
 		publicKeys.splice(1, 1, publicKey);
 
-		return {
-			// LSK
-			mandatoryKeys: publicKeys,
-
-			// TODO: handle fields in sdk
-			// ARK
+		return formatMultiSignatureInputData({
+			wallet: senderWallet,
 			min: +minParticipants,
-
-			numberOfSignatures: +minParticipants,
-			optionalKeys: [],
 			publicKeys,
-			senderPublicKey: publicKey,
-		};
+			mandatoryKeys,
+		});
 	};
 
 	const getWallet = useCallback(

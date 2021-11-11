@@ -22,6 +22,35 @@ interface AddSignatureProperties {
 	wallet: ProfileContracts.IReadWriteWallet;
 }
 
+interface MultiSignatureInputFormatProperties {
+	min: number;
+	publicKeys: string[];
+	mandatoryKeys: string[];
+	wallet: ProfileContracts.IReadWriteWallet;
+}
+
+export const formatMultiSignatureInputData = ({
+	wallet,
+	min,
+	publicKeys,
+	mandatoryKeys,
+}: MultiSignatureInputFormatProperties) => {
+	if (wallet.network().multiSignatureType() === "advanced") {
+		const optionalKeys = publicKeys.filter((publicKey) => !mandatoryKeys.includes(publicKey));
+
+		return {
+			numberOfSignatures: min,
+			optionalKeys,
+			mandatoryKeys,
+		};
+	}
+
+	return {
+		min,
+		publicKeys,
+	};
+};
+
 export const useMultiSignatureRegistration = () => {
 	const { abortConnectionRetry } = useLedgerContext();
 	const abortReference = useRef(new AbortController());
@@ -55,43 +84,6 @@ export const useMultiSignatureRegistration = () => {
 		return wallet.publicKey();
 	};
 
-	const formatMultiSignatureInput = ({
-		wallet,
-		min,
-		publicKeys,
-		mandatoryKeys,
-		signatory,
-	}: {
-		min: number;
-		publicKeys: string[];
-		mandatoryKeys: string[];
-		wallet: ProfileContracts.IReadWriteWallet;
-		signatory: Signatories.Signatory;
-	}) => {
-		if (wallet.network().multiSignatureType() === "advanced") {
-			const optionalKeys = publicKeys.filter((publicKey) => !mandatoryKeys.includes(publicKey));
-
-			return {
-				data: {
-					numberOfSignatures: min,
-					optionalKeys,
-					mandatoryKeys,
-				},
-				fee: 5000000000, // TODO: fix fee calculation
-				signatory,
-			};
-		}
-
-		return {
-			data: {
-				min,
-				publicKeys,
-			},
-			fee: 5000000000, // TODO: fix fee calculation
-			signatory,
-		};
-	};
-
 	const sendMultiSignature = async ({
 		wallet,
 		participants,
@@ -111,15 +103,18 @@ export const useMultiSignatureRegistration = () => {
 		const publicKeys = [senderPublicKey, ...restPublicKeys];
 		await wallet.transaction().sync();
 
-		const uuid = await wallet.transaction().signMultiSignature(
-			formatMultiSignatureInput({
-				min: +minParticipants,
-				publicKeys,
-				mandatoryKeys,
-				wallet,
-				signatory,
-			}),
-		);
+		const uuid = await wallet.transaction().signMultiSignature({
+			data: {
+				...formatMultiSignatureInputData({
+					min: +minParticipants,
+					publicKeys,
+					mandatoryKeys,
+					wallet,
+				}),
+			},
+			signatory,
+			fee: +fee,
+		});
 
 		await wallet.transaction().broadcast(uuid);
 		const transaction: ExtendedSignedTransactionData = wallet.transaction().transaction(uuid);

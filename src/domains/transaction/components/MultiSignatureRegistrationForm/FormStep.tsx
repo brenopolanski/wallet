@@ -37,7 +37,11 @@ export const FormStep = ({ profile, wallet }: FormStepProperties) => {
 	}, [setValue, minParticipants, participants]);
 
 	const network = useMemo(() => wallet.network(), [wallet]);
-	const feeTransactionData = useMemo(() => ({ minParticipants, participants }), [minParticipants, participants]);
+	const feeTransactionData = useMemo(() => ({ minParticipants, participants, mandatoryKeys }), [
+		minParticipants,
+		participants,
+		mandatoryKeys,
+	]);
 
 	const handleParticipants = useCallback(
 		(values: Participant[]) => {
