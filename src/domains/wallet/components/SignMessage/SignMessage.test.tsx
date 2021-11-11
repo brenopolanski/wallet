@@ -390,7 +390,7 @@ describe("SignMessage", () => {
 			observer.next({ descriptor: "", deviceModel: { id: "nanoX" }, type: "add" });
 		});
 
-		await waitFor(() => expect(getPublicKeyMock).toHaveBeenCalled());
+		await waitFor(() => expect(getPublicKeyMock).toHaveBeenCalledWith("m/44'/1'/0'/0/0"));
 
 		signMessageSpy.mockRestore();
 		isLedgerMock.mockRestore();

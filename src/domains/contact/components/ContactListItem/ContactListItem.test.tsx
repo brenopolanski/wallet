@@ -1,4 +1,5 @@
 import { Contracts } from "@payvo/profiles";
+import { ContactAddress } from "@payvo/profiles/distribution/contact-address";
 import React from "react";
 import { env, fireEvent, getDefaultProfileId, render } from "utils/testing-library";
 
@@ -142,7 +143,7 @@ describe("ContactListItem", () => {
 
 		fireEvent.click(getByTestId("ContactListItem__one-option-button-0"));
 
-		expect(onAction).toHaveBeenCalled();
+		expect(onAction).toHaveBeenCalledWith(singleOption[0], contact.addresses().first().address());
 	});
 
 	it("should call onAction callback if provided with one option in my contacts", () => {
@@ -158,7 +159,7 @@ describe("ContactListItem", () => {
 
 		fireEvent.click(getByTestId("ContactListItem__one-option-button-0"));
 
-		expect(onAction).toHaveBeenCalled();
+		expect(onAction).toHaveBeenCalledWith(singleOption[0], contact.addresses().first().address());
 	});
 
 	it("should call onAction callback if provided with multiple options", () => {
@@ -175,7 +176,7 @@ describe("ContactListItem", () => {
 		fireEvent.click(getAllByTestId("dropdown__toggle")[0]);
 		fireEvent.click(getByTestId("dropdown__option--0"));
 
-		expect(onAction).toHaveBeenCalled();
+		expect(onAction).toHaveBeenCalledWith(singleOption[0], contact.addresses().first().address());
 	});
 
 	it("should call onAction callback if provided with multiple options in my contacts", () => {
@@ -192,7 +193,7 @@ describe("ContactListItem", () => {
 		fireEvent.click(getAllByTestId("dropdown__toggle")[0]);
 		fireEvent.click(getByTestId("dropdown__option--0"));
 
-		expect(onAction).toHaveBeenCalled();
+		expect(onAction).toHaveBeenCalledWith(singleOption[0], contact.addresses().first().address());
 	});
 
 	it("should not call onAction callback if not provided with multiple options", () => {
@@ -280,6 +281,6 @@ describe("ContactListItem", () => {
 
 		fireEvent.click(getAllByTestId("ContactListItem__send-button")[0]);
 
-		expect(onSend).toHaveBeenCalled();
+		expect(onSend).toHaveBeenCalledWith(expect.any(ContactAddress));
 	});
 });

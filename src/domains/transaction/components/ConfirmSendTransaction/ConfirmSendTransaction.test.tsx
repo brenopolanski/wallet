@@ -44,7 +44,7 @@ describe("ConfirmSendTransaction", () => {
 
 		fireEvent.click(screen.getByTestId("ConfirmSendTransaction__confirm"));
 
-		expect(onConfirm).toHaveBeenCalled();
+		expect(onConfirm).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
 
 	it("should cancel", () => {
@@ -57,6 +57,6 @@ describe("ConfirmSendTransaction", () => {
 
 		fireEvent.click(screen.getByTestId("ConfirmSendTransaction__cancel"));
 
-		expect(onCancel).toHaveBeenCalled();
+		expect(onCancel).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
 });

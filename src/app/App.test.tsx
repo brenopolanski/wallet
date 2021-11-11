@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Bcrypt } from "@payvo/cryptography";
 import { Contracts, Environment } from "@payvo/profiles";
+import { buildTranslations } from "app/i18n/helpers";
 import { toasts } from "app/services";
 import { translations as errorTranslations } from "domains/error/i18n";
 import { translations as profileTranslations } from "domains/profile/i18n";
@@ -22,6 +23,8 @@ import { App } from "./App";
 
 let profile: Contracts.IProfile;
 let passwordProtectedProfile: Contracts.IProfile;
+
+const translations = buildTranslations();
 
 describe("App", () => {
 	beforeAll(async () => {
@@ -179,7 +182,7 @@ describe("App", () => {
 
 		const { asFragment, getByTestId } = render(<App />, { withProviders: false });
 
-		await waitFor(() => expect(environmentSpy).toHaveBeenCalled());
+		await waitFor(() => expect(environmentSpy).toHaveBeenCalledWith());
 
 		await waitFor(() => {
 			expect(getByTestId("ApplicationError__text")).toHaveTextContent(errorTranslations.APPLICATION.TITLE);
@@ -247,8 +250,8 @@ describe("App", () => {
 
 		fireEvent.click(getByTestId("SignIn__submit-button"));
 
-		await waitFor(() => expect(profilePasswordSetMock).toHaveBeenCalled());
-		await waitFor(() => expect(memoryPasswordMock).toHaveBeenCalled());
+		await waitFor(() => expect(profilePasswordSetMock).toHaveBeenCalledWith("password"));
+		await waitFor(() => expect(memoryPasswordMock).toHaveBeenCalledWith());
 		await waitFor(() => expect(history.location.pathname).toBe("/"), { timeout: 4000 });
 
 		memoryPasswordMock.mockRestore();
@@ -299,9 +302,11 @@ describe("App", () => {
 			await new Promise((resolve) => setTimeout(resolve, 500));
 		});
 
-		await waitFor(() => expect(warningToast).toHaveBeenCalled());
-		await waitFor(() => expect(toastDismiss).toHaveBeenCalled());
-		await waitFor(() => expect(successToast).toHaveBeenCalled());
+		await waitFor(() =>
+			expect(warningToast).toHaveBeenCalledWith(translations.COMMON.PROFILE_SYNC_STARTED, { autoClose: false }),
+		);
+		await waitFor(() => expect(toastDismiss).toHaveBeenCalledWith());
+		await waitFor(() => expect(successToast).toHaveBeenCalledWith(translations.COMMON.PROFILE_SYNC_COMPLETED));
 
 		successToast.mockRestore();
 		warningToast.mockRestore();

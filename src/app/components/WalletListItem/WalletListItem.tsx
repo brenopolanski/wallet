@@ -1,6 +1,6 @@
 import { Contracts } from "@payvo/profiles";
 import { Address } from "app/components/Address";
-import { Amount, AmountCrypto } from "app/components/Amount";
+import { Amount } from "app/components/Amount";
 import { Avatar } from "app/components/Avatar";
 import { TableCell, TableRow } from "app/components/Table";
 import { WalletIcons } from "app/components/WalletIcons";
@@ -97,7 +97,7 @@ export const WalletListItem: React.FC<WalletListItemProperties> = ({
 
 			<TableCell innerClassName="font-semibold justify-end" isCompact={isCompact}>
 				{canDisplayBalance ? (
-					<AmountCrypto value={wallet.balance()} ticker={wallet.network().ticker()} />
+					<Amount value={wallet.balance()} ticker={wallet.network().ticker()} />
 				) : (
 					<span className="text-theme-secondary-text font-normal">{t("COMMON.NOT_AVAILABLE")}</span>
 				)}

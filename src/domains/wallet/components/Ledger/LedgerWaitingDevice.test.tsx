@@ -19,7 +19,7 @@ describe("LedgerWaitingDevice", () => {
 
 		fireEvent.click(getByTestId("modal__close-btn"));
 
-		expect(onClose).toHaveBeenCalled();
+		expect(onClose).toHaveBeenCalledWith();
 	});
 
 	it("should emit true when devices is available", () => {

@@ -1,6 +1,6 @@
 import { Contracts } from "@payvo/profiles";
 import { Address } from "app/components/Address";
-import { AmountCrypto } from "app/components/Amount";
+import { Amount } from "app/components/Amount";
 import { Avatar } from "app/components/Avatar";
 import { Button } from "app/components/Button";
 import { Icon } from "app/components/Icon";
@@ -103,7 +103,7 @@ export const DelegateFooter = ({
 									})}
 								</LabelWrapper>
 								<TextWrapper>
-									<AmountCrypto value={availableBalance} ticker={selectedWallet.network().ticker()} />
+									<Amount value={availableBalance} ticker={selectedWallet.network().ticker()} />
 								</TextWrapper>
 							</div>
 						)}

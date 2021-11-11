@@ -6,6 +6,7 @@ import { ExchangeProvider, useExchangeContext } from "domains/exchange/contexts/
 import { createMemoryHistory, MemoryHistory } from "history";
 import nock from "nock";
 import React, { useEffect } from "react";
+import { Trans } from "react-i18next";
 import { Route } from "react-router-dom";
 import { env, fireEvent, getDefaultProfileId, render, screen, waitFor, within } from "utils/testing-library";
 
@@ -366,7 +367,13 @@ describe("Exchange", () => {
 
 		expect(() => profile.exchangeTransactions().findById(exchangeTransaction.id())).toThrow("Failed to find");
 
-		expect(toastSpy).toHaveBeenCalled();
+		expect(toastSpy).toHaveBeenCalledWith(
+			<Trans
+				components={{ bold: <strong /> }}
+				i18nKey="EXCHANGE.PAGE_EXCHANGES.DELETE_CONFIRMATION"
+				values={{ orderId: exchangeTransaction.orderId() }}
+			/>,
+		);
 
 		toastSpy.mockRestore();
 	});

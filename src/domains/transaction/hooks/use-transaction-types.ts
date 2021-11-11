@@ -1,4 +1,4 @@
-import { uniq } from "@arkecosystem/utils";
+import { uniq } from "@payvo/helpers";
 import { Contracts } from "@payvo/profiles";
 import { useMemo } from "react";
 import { useTranslation } from "react-i18next";

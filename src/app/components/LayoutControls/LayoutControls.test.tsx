@@ -22,7 +22,7 @@ describe("LayoutControls", () => {
 
 		fireEvent.click(getByTestId(element));
 
-		expect(function_).toHaveBeenCalled();
+		expect(function_).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
 
 	it.each([

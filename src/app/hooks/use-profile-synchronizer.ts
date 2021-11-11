@@ -1,4 +1,4 @@
-import { isEqual, uniq } from "@arkecosystem/utils";
+import { isEqual, uniq } from "@payvo/helpers";
 import { Contracts, Environment } from "@payvo/profiles";
 import { useConfiguration, useEnvironmentContext } from "app/contexts";
 import { useAccentColor } from "app/hooks/use-accent-color";

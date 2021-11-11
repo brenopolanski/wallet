@@ -190,7 +190,7 @@ exports[`VoteList should render vote amount 1`] = `
       >
         <span
           class="whitespace-nowrap"
-          data-testid="AmountCrypto"
+          data-testid="Amount"
         >
           + 10 BTC
         </span>
@@ -243,7 +243,7 @@ exports[`VoteList should render vote amount 1`] = `
       >
         <span
           class="whitespace-nowrap"
-          data-testid="AmountCrypto"
+          data-testid="Amount"
         >
           + 10 BTC
         </span>
@@ -296,7 +296,7 @@ exports[`VoteList should render vote amount 1`] = `
       >
         <span
           class="whitespace-nowrap"
-          data-testid="AmountCrypto"
+          data-testid="Amount"
         >
           + 10 BTC
         </span>

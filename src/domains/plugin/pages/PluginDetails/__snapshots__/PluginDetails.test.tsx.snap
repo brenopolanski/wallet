@@ -224,7 +224,7 @@ exports[`PluginDetails should render properly 1`] = `
               >
                 <span
                   class="whitespace-nowrap"
-                  data-testid="AmountCrypto"
+                  data-testid="Amount"
                 >
                   0 BTC
                 </span>
@@ -783,7 +783,7 @@ exports[`PluginDetails should render properly for remote package 1`] = `
               >
                 <span
                   class="whitespace-nowrap"
-                  data-testid="AmountCrypto"
+                  data-testid="Amount"
                 >
                   0 BTC
                 </span>
@@ -1319,7 +1319,7 @@ exports[`PluginDetails should report plugin 1`] = `
               >
                 <span
                   class="whitespace-nowrap"
-                  data-testid="AmountCrypto"
+                  data-testid="Amount"
                 >
                   0 BTC
                 </span>
@@ -1878,7 +1878,7 @@ exports[`PluginDetails should show configuration for plugins from npm 1`] = `
               >
                 <span
                   class="whitespace-nowrap"
-                  data-testid="AmountCrypto"
+                  data-testid="Amount"
                 >
                   0 BTC
                 </span>
@@ -2499,7 +2499,7 @@ exports[`PluginDetails should update package 1`] = `
               >
                 <span
                   class="whitespace-nowrap"
-                  data-testid="AmountCrypto"
+                  data-testid="Amount"
                 >
                   0 BTC
                 </span>

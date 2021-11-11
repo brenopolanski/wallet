@@ -222,7 +222,7 @@ exports[`Exchange should render empty 1`] = `
               >
                 <span
                   class="whitespace-nowrap"
-                  data-testid="AmountCrypto"
+                  data-testid="Amount"
                 >
                   0 BTC
                 </span>
@@ -585,7 +585,7 @@ exports[`Exchange should render with exchanges 1`] = `
               >
                 <span
                   class="whitespace-nowrap"
-                  data-testid="AmountCrypto"
+                  data-testid="Amount"
                 >
                   0 BTC
                 </span>

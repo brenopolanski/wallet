@@ -1,4 +1,4 @@
-import { AmountCrypto } from "app/components/Amount";
+import { Amount } from "app/components/Amount";
 import { Checkbox } from "app/components/Checkbox";
 import { Icon } from "app/components/Icon";
 import { TableCell, TableRow } from "app/components/Table";
@@ -22,7 +22,7 @@ export const UnlockTokensRow: FC<UnlockTokensRowProperties> = ({ loading, item, 
 	return (
 		<TableRow>
 			<TableCell variant="start" isCompact>
-				<AmountCrypto
+				<Amount
 					className="font-bold text-theme-secondary-900 dark:text-theme-secondary-200"
 					value={item.amount.toHuman()}
 					ticker={ticker}

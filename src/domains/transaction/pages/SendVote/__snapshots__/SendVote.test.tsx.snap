@@ -226,7 +226,7 @@ exports[`SendVote should send a unvote transaction 1`] = `
               >
                 <span
                   class="whitespace-nowrap"
-                  data-testid="AmountCrypto"
+                  data-testid="Amount"
                 >
                   0 BTC
                 </span>
@@ -595,7 +595,7 @@ exports[`SendVote should send a unvote transaction 1`] = `
                                 >
                                   <span
                                     class="whitespace-nowrap"
-                                    data-testid="AmountCrypto"
+                                    data-testid="Amount"
                                   >
                                     - 10 DARK
                                   </span>
@@ -622,7 +622,7 @@ exports[`SendVote should send a unvote transaction 1`] = `
                           >
                             <span
                               class="whitespace-nowrap"
-                              data-testid="AmountCrypto"
+                              data-testid="Amount"
                             >
                               0.20716584 DARK
                             </span>
@@ -877,7 +877,7 @@ exports[`SendVote should send a vote transaction with keyboard 1`] = `
               >
                 <span
                   class="whitespace-nowrap"
-                  data-testid="AmountCrypto"
+                  data-testid="Amount"
                 >
                   0 BTC
                 </span>
@@ -1246,7 +1246,7 @@ exports[`SendVote should send a vote transaction with keyboard 1`] = `
                                 >
                                   <span
                                     class="whitespace-nowrap"
-                                    data-testid="AmountCrypto"
+                                    data-testid="Amount"
                                   >
                                     + 10 DARK
                                   </span>
@@ -1273,7 +1273,7 @@ exports[`SendVote should send a vote transaction with keyboard 1`] = `
                           >
                             <span
                               class="whitespace-nowrap"
-                              data-testid="AmountCrypto"
+                              data-testid="Amount"
                             >
                               0.20716584 DARK
                             </span>
@@ -1528,7 +1528,7 @@ exports[`SendVote should send a vote transaction without keyboard 1`] = `
               >
                 <span
                   class="whitespace-nowrap"
-                  data-testid="AmountCrypto"
+                  data-testid="Amount"
                 >
                   0 BTC
                 </span>
@@ -1897,7 +1897,7 @@ exports[`SendVote should send a vote transaction without keyboard 1`] = `
                                 >
                                   <span
                                     class="whitespace-nowrap"
-                                    data-testid="AmountCrypto"
+                                    data-testid="Amount"
                                   >
                                     + 10 DARK
                                   </span>
@@ -1924,7 +1924,7 @@ exports[`SendVote should send a vote transaction without keyboard 1`] = `
                           >
                             <span
                               class="whitespace-nowrap"
-                              data-testid="AmountCrypto"
+                              data-testid="Amount"
                             >
                               0.20716584 DARK
                             </span>
@@ -2179,7 +2179,7 @@ exports[`SendVote should show error if wrong mnemonic 1`] = `
               >
                 <span
                   class="whitespace-nowrap"
-                  data-testid="AmountCrypto"
+                  data-testid="Amount"
                 >
                   0 BTC
                 </span>
@@ -2615,7 +2615,7 @@ exports[`SendVote should show error step and go back 1`] = `
               >
                 <span
                   class="whitespace-nowrap"
-                  data-testid="AmountCrypto"
+                  data-testid="Amount"
                 >
                   0 BTC
                 </span>

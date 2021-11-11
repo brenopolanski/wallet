@@ -738,7 +738,7 @@ exports[`WalletVote should disable vote button when balance is less than votesAm
         </span>
         <span
           class="whitespace-nowrap"
-          data-testid="AmountCrypto"
+          data-testid="Amount"
         >
           5 DARK
         </span>
@@ -753,7 +753,7 @@ exports[`WalletVote should disable vote button when balance is less than votesAm
         </span>
         <span
           class="whitespace-nowrap"
-          data-testid="AmountCrypto"
+          data-testid="Amount"
         >
           5 DARK
         </span>

@@ -1,4 +1,4 @@
-import { constantCase } from "@arkecosystem/utils";
+import { constantCase } from "@payvo/helpers";
 import { Contracts } from "@payvo/profiles";
 import { Icon } from "app/components/Icon";
 import { Tooltip } from "app/components/Tooltip";

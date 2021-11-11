@@ -1,5 +1,5 @@
 import { Address } from "app/components/Address";
-import { Amount, AmountCrypto } from "app/components/Amount";
+import { Amount } from "app/components/Amount";
 import { Avatar } from "app/components/Avatar";
 import { OriginalButton as Button } from "app/components/Button/OriginalButton";
 import { Icon } from "app/components/Icon";
@@ -41,7 +41,7 @@ export const RecipientListItem: React.VFC<RecipientListItemProperties> = ({
 		if (variant === "condensed") {
 			return (
 				<td className="flex-1 flex-shrink-0 pl-3 text-right">
-					<AmountCrypto ticker={ticker} value={amount} />
+					<Amount ticker={ticker} value={amount} />
 				</td>
 			);
 		}
@@ -56,7 +56,7 @@ export const RecipientListItem: React.VFC<RecipientListItemProperties> = ({
 					)}
 				</div>
 				<div className="font-semibold">
-					<AmountCrypto ticker={ticker} value={amount} />
+					<Amount ticker={ticker} value={amount} />
 				</div>
 			</td>
 		);

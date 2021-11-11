@@ -1,4 +1,4 @@
-import { uniqBy } from "@arkecosystem/utils";
+import { uniqBy } from "@payvo/helpers";
 import { Contracts } from "@payvo/profiles";
 import { LedgerData } from "app/contexts/Ledger/contracts";
 import { useLedgerContext } from "app/contexts/Ledger/Ledger";

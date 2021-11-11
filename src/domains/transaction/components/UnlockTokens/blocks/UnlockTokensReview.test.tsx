@@ -56,16 +56,16 @@ describe("UnlockTokensReview", () => {
 
 		expect(screen.getByText(translations.TRANSACTION.UNLOCK_TOKENS.REVIEW.TITLE)).toBeInTheDocument();
 
-		expect(screen.getAllByTestId("AmountCrypto")[0]).toHaveTextContent("+ 10 LSK");
-		expect(screen.getAllByTestId("AmountCrypto")[1]).toHaveTextContent("5 LSK");
+		expect(screen.getAllByTestId("Amount")[0]).toHaveTextContent("+ 10 LSK");
+		expect(screen.getAllByTestId("Amount")[1]).toHaveTextContent("5 LSK");
 
 		userEvent.click(screen.getByText(translations.COMMON.BACK));
 
-		expect(onBack).toHaveBeenCalled();
+		expect(onBack).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 
 		userEvent.click(screen.getByText(translations.COMMON.CONFIRM));
 
-		expect(onConfirm).toHaveBeenCalled();
+		expect(onConfirm).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 
 		expect(asFragment()).toMatchSnapshot();
 	});

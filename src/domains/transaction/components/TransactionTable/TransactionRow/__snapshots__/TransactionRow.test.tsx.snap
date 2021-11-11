@@ -151,7 +151,7 @@ exports[`TransactionRow should omit the currency for transactions from test netw
                 >
                   <span
                     class="whitespace-nowrap"
-                    data-testid="AmountCrypto"
+                    data-testid="Amount"
                   >
                     - 121 BTC
                   </span>
@@ -349,7 +349,7 @@ exports[`TransactionRow should render 1`] = `
               >
                 <span
                   class="whitespace-nowrap"
-                  data-testid="AmountCrypto"
+                  data-testid="Amount"
                 >
                   - 121 DARK
                 </span>
@@ -962,7 +962,7 @@ exports[`TransactionRow should render with currency 1`] = `
                 >
                   <span
                     class="whitespace-nowrap"
-                    data-testid="AmountCrypto"
+                    data-testid="Amount"
                   >
                     - 121 BTC
                   </span>
@@ -983,7 +983,7 @@ exports[`TransactionRow should render with currency 1`] = `
             >
               <span
                 class="whitespace-nowrap text-theme-secondary-text"
-                data-testid="AmountCrypto"
+                data-testid="Amount"
               >
                 0 BTC
               </span>

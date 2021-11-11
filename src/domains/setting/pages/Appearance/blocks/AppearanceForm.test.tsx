@@ -12,7 +12,7 @@ describe("AppearanceForm", () => {
 
 		expect(screen.getAllByRole("radiogroup")).toHaveLength(2);
 
-		expect(screen.getByTestId("AppearanceFooterButtons__save")).not.toBeDisabled();
+		expect(screen.getByTestId("AppearanceFooterButtons__save")).toBeDisabled();
 
 		expect(asFragment()).toMatchSnapshot();
 	});

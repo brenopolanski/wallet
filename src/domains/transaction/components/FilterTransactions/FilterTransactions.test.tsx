@@ -57,6 +57,12 @@ describe("FilterTransactions", () => {
 
 		fireEvent.click(getByTestId("dropdown__option--core-0"));
 
-		expect(onSelect).toHaveBeenCalled();
+		expect(onSelect).toHaveBeenCalledWith(
+			{
+				label: expect.any(String),
+				value: expect.any(String),
+			},
+			expect.any(String),
+		);
 	});
 });

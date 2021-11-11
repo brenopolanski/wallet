@@ -192,7 +192,7 @@ exports[`AddRecipient should render 1`] = `
                
               <span
                 class="whitespace-nowrap"
-                data-testid="AmountCrypto"
+                data-testid="Amount"
               >
                 33.75089801
               </span>
@@ -437,7 +437,7 @@ exports[`AddRecipient should render with multiple recipients switch 1`] = `
                
               <span
                 class="whitespace-nowrap"
-                data-testid="AmountCrypto"
+                data-testid="Amount"
               >
                 33.75089801
               </span>
@@ -693,7 +693,7 @@ exports[`AddRecipient should render with single recipient data 1`] = `
                
               <span
                 class="whitespace-nowrap"
-                data-testid="AmountCrypto"
+                data-testid="Amount"
               >
                 33.75089801
               </span>
@@ -888,7 +888,7 @@ exports[`AddRecipient should render without the single & multiple switch 1`] = `
                
               <span
                 class="whitespace-nowrap"
-                data-testid="AmountCrypto"
+                data-testid="Amount"
               >
                 33.75089801
               </span>
@@ -1133,7 +1133,7 @@ exports[`AddRecipient should set available amount 1`] = `
                
               <span
                 class="whitespace-nowrap"
-                data-testid="AmountCrypto"
+                data-testid="Amount"
               >
                 33.75089801
               </span>
@@ -1403,7 +1403,7 @@ exports[`AddRecipient should show zero amount if wallet has zero or insufficient
                     >
                       <span
                         class="whitespace-nowrap text-sm font-semibold whitespace-no-break text-theme-secondary-500 dark:text-theme-secondary-700"
-                        data-testid="AmountCrypto"
+                        data-testid="Amount"
                       >
                         0 BTC
                       </span>

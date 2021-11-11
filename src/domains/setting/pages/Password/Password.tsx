@@ -43,7 +43,7 @@ export const PasswordSettings = () => {
 	const { formState, register, reset, trigger, watch } = form;
 	const { currentPassword, confirmPassword, password } = watch();
 
-	const { isDirty, dirtyFields, isValid } = formState;
+	const { isDirty, dirtyFields, isSubmitting, isValid } = formState;
 	const { getPromptMessage } = useSettingsPrompt({ dirtyFields, isDirty });
 
 	useEffect(() => {
@@ -60,7 +60,7 @@ export const PasswordSettings = () => {
 				activeProfile.auth().setPassword(password);
 			}
 		} catch {
-			toasts.error(`${t("COMMON.ERROR")}: ${t("SETTINGS.PASSWORD.ERROR.MISMATCH")}`);
+			toasts.error(t("SETTINGS.PASSWORD.ERROR.MISMATCH"));
 			return;
 		}
 
@@ -84,29 +84,27 @@ export const PasswordSettings = () => {
 
 			toasts.success(t("SETTINGS.PASSWORD.REMOVAL.SUCCESS"));
 		} catch {
-			toasts.error(`${t("COMMON.ERROR")}: ${t("SETTINGS.PASSWORD.ERROR.MISMATCH")}`);
+			toasts.error(t("SETTINGS.PASSWORD.ERROR.MISMATCH"));
 		}
 	};
 
 	return (
 		<>
 			<SettingsWrapper profile={activeProfile} activeSettings="password">
-				<div className="space-y-8">
-					<Header
-						title={t("SETTINGS.PASSWORD.TITLE")}
-						subtitle={
-							usesPassword
-								? t("SETTINGS.PASSWORD.SUBTITLE.UPDATE")
-								: t("SETTINGS.PASSWORD.SUBTITLE.CREATE")
-						}
-					/>
+				<Header
+					title={t("SETTINGS.PASSWORD.TITLE")}
+					subtitle={
+						usesPassword ? t("SETTINGS.PASSWORD.SUBTITLE.UPDATE") : t("SETTINGS.PASSWORD.SUBTITLE.CREATE")
+					}
+				/>
 
-					<Form
-						id="password-settings__form"
-						context={form as any}
-						onSubmit={handleSubmit as any}
-						className="space-y-5"
-					>
+				<Form
+					id="password-settings__form"
+					className="mt-8"
+					context={form as any}
+					onSubmit={handleSubmit as any}
+				>
+					<div className="space-y-5">
 						{usesPassword && (
 							<FormField name="currentPassword">
 								<FormLabel label={t("SETTINGS.PASSWORD.CURRENT")} />
@@ -136,34 +134,32 @@ export const PasswordSettings = () => {
 								data-testid={`Password-settings__input--password_2`}
 							/>
 						</FormField>
+					</div>
 
-						<div className="flex justify-between mt-8 w-full">
-							{usesPassword && (
-								<Button
-									data-testid="Password-settings__remove-button"
-									variant="danger"
-									className="flex space-x-2"
-									onClick={() => setIsConfirmRemovalVisible(true)}
-								>
-									<Icon name="Trash" />
-									<span>{t("SETTINGS.PASSWORD.BUTTON.REMOVE")}</span>
-								</Button>
-							)}
-
+					<div className="flex justify-end mt-8 w-full">
+						{usesPassword && (
 							<Button
-								data-testid="Password-settings__submit-button"
-								disabled={isDirty ? !isValid : true}
-								type="submit"
+								data-testid="Password-settings__remove-button"
+								variant="danger"
+								className="flex space-x-2 mr-auto"
+								onClick={() => setIsConfirmRemovalVisible(true)}
 							>
-								{usesPassword
-									? t("SETTINGS.PASSWORD.BUTTON.UPDATE")
-									: t("SETTINGS.PASSWORD.BUTTON.CREATE")}
+								<Icon name="Trash" />
+								<span>{t("SETTINGS.PASSWORD.BUTTON.REMOVE")}</span>
 							</Button>
-						</div>
-					</Form>
+						)}
 
-					<Prompt message={getPromptMessage} />
-				</div>
+						<Button
+							data-testid="Password-settings__submit-button"
+							disabled={isSubmitting || (isDirty ? !isValid : true)}
+							type="submit"
+						>
+							{usesPassword ? t("SETTINGS.PASSWORD.BUTTON.UPDATE") : t("SETTINGS.PASSWORD.BUTTON.CREATE")}
+						</Button>
+					</div>
+				</Form>
+
+				<Prompt message={getPromptMessage} />
 			</SettingsWrapper>
 
 			{isConfirmRemovalVisible && (

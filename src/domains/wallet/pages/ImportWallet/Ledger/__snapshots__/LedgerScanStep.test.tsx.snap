@@ -264,7 +264,7 @@ exports[`LedgerScanStep should render 1`] = `
                 <div>
                   <span
                     class="whitespace-nowrap"
-                    data-testid="AmountCrypto"
+                    data-testid="Amount"
                   >
                     0 DARK
                   </span>

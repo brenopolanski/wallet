@@ -10,7 +10,7 @@ import { useTranslation } from "react-i18next";
 interface ConfirmSendTransactionProperties {
 	isOpen: boolean;
 	onClose?: any;
-	onRemove?: any;
+	onRemove?: (transaction: DTO.ExtendedSignedTransactionData) => void;
 	transaction?: DTO.ExtendedSignedTransactionData;
 }
 
@@ -56,7 +56,7 @@ export const ConfirmRemovePendingTransaction = ({
 
 				<Button
 					type="submit"
-					onClick={() => onRemove(transaction)}
+					onClick={() => onRemove?.(transaction)}
 					variant="danger"
 					data-testid="ConfirmRemovePendingTransaction__remove"
 				>

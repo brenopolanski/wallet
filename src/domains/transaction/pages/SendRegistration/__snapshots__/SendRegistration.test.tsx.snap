@@ -224,7 +224,7 @@ exports[`Registration should register second signature 1`] = `
               >
                 <span
                   class="whitespace-nowrap"
-                  data-testid="AmountCrypto"
+                  data-testid="Amount"
                 >
                   0 BTC
                 </span>
@@ -651,7 +651,7 @@ exports[`Registration should show error step and go back 1`] = `
               >
                 <span
                   class="whitespace-nowrap"
-                  data-testid="AmountCrypto"
+                  data-testid="Amount"
                 >
                   0 BTC
                 </span>
@@ -1068,7 +1068,7 @@ exports[`Registration should show mnemonic error 1`] = `
               >
                 <span
                   class="whitespace-nowrap"
-                  data-testid="AmountCrypto"
+                  data-testid="Amount"
                 >
                   0 BTC
                 </span>

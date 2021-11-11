@@ -1,4 +1,4 @@
-import { sortBy, uniqBy } from "@arkecosystem/utils";
+import { sortBy, uniqBy } from "@payvo/helpers";
 import { Contracts } from "@payvo/profiles";
 import { useEnvironmentContext } from "app/contexts";
 import { httpClient, toasts } from "app/services";

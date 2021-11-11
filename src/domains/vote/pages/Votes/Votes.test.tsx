@@ -500,7 +500,9 @@ describe("Votes", () => {
 		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
 		expect(screen.getByTestId("DelegateTable__footer--votecombination")).toHaveTextContent("1/1");
 
-		await waitFor(() => expect(onProfileSyncError).toHaveBeenCalled());
+		await waitFor(() =>
+			expect(onProfileSyncError).toHaveBeenCalledWith([expect.any(String)], expect.any(Function)),
+		);
 
 		expect(asFragment()).toMatchSnapshot();
 

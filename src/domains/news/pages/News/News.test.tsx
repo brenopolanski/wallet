@@ -184,7 +184,10 @@ describe("News", () => {
 
 		await waitFor(() => expect(screen.getAllByTestId("NewsCard")).toHaveLength(1));
 
-		expect(screen.getAllByTestId("NewsCard__content")[0]).toHaveTextContent(page1Fixture.data[0].text);
+		await waitFor(() =>
+			expect(screen.getAllByTestId("NewsCard__content")[0]).toHaveTextContent(page1Fixture.data[0].text),
+		);
+
 		expect(asFragment()).toMatchSnapshot();
 	});
 

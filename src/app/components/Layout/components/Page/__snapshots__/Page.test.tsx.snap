@@ -226,7 +226,7 @@ exports[`Page should render with sidebar = false 1`] = `
               >
                 <span
                   class="whitespace-nowrap"
-                  data-testid="AmountCrypto"
+                  data-testid="Amount"
                 >
                   0 BTC
                 </span>
@@ -500,7 +500,7 @@ exports[`Page should render with sidebar = true 1`] = `
               >
                 <span
                   class="whitespace-nowrap"
-                  data-testid="AmountCrypto"
+                  data-testid="Amount"
                 >
                   0 BTC
                 </span>

@@ -20,7 +20,7 @@ import { useSettingsPrompt } from "domains/setting/hooks/use-settings-prompt";
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import { Prompt, useHistory } from "react-router-dom";
+import { Prompt } from "react-router-dom";
 import { setScreenshotProtection } from "utils/electron-utils";
 
 interface GeneralSettingsState {
@@ -45,7 +45,6 @@ export const GeneralSettings: React.FC = () => {
 	const { persist } = useEnvironmentContext();
 	const { syncExchangeRates } = useProfileJobs(profile);
 
-	const history = useHistory();
 	const { t } = useTranslation();
 
 	const getDefaultValues = (): Partial<GeneralSettingsState> => {
@@ -206,7 +205,7 @@ export const GeneralSettings: React.FC = () => {
 				/>
 			),
 			labelDescription: t("SETTINGS.GENERAL.OTHER.ERROR_REPORTING.DESCRIPTION"),
-			wrapperClass: "py-6",
+			wrapperClass: "pt-6",
 		},
 	];
 
@@ -257,7 +256,7 @@ export const GeneralSettings: React.FC = () => {
 			<Header title={t("SETTINGS.GENERAL.TITLE")} subtitle={t("SETTINGS.GENERAL.SUBTITLE")} />
 
 			<Form
-				className="space-y-12"
+				className="space-y-8"
 				data-testid="General-settings__form"
 				context={form as any}
 				onSubmit={handleSubmit as any}
@@ -437,28 +436,19 @@ export const GeneralSettings: React.FC = () => {
 					<ListDivided items={otherItems} />
 				</div>
 
-				<div className="flex justify-between pt-2 w-full">
+				<div className="flex justify-between w-full">
 					<Button onClick={() => setIsResetProfileOpen(true)} variant="danger">
 						<Icon name="ArrowRotateRight" />
 						<span>{t("COMMON.RESET_SETTINGS")}</span>
 					</Button>
 
-					<div className="space-x-3">
-						<Button
-							data-testid="General-settings__cancel-button"
-							variant="secondary"
-							onClick={() => history.go(-1)}
-						>
-							{t("COMMON.CANCEL")}
-						</Button>
-						<Button
-							disabled={!isValid || isSubmitting || !isProfileRestored}
-							type="submit"
-							data-testid="General-settings__submit-button"
-						>
-							{t("COMMON.SAVE")}
-						</Button>
-					</div>
+					<Button
+						disabled={!isValid || isSubmitting || !isProfileRestored}
+						type="submit"
+						data-testid="General-settings__submit-button"
+					>
+						{t("COMMON.SAVE")}
+					</Button>
 				</div>
 			</Form>
 

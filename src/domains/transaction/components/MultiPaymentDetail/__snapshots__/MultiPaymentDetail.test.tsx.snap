@@ -272,7 +272,7 @@ exports[`MultiPaymentDetail should render a modal 1`] = `
                     >
                       <span
                         class="whitespace-nowrap"
-                        data-testid="AmountCrypto"
+                        data-testid="Amount"
                       >
                         - 100 ARK
                       </span>
@@ -311,7 +311,7 @@ exports[`MultiPaymentDetail should render a modal 1`] = `
                 >
                   <span
                     class="whitespace-nowrap"
-                    data-testid="AmountCrypto"
+                    data-testid="Amount"
                   >
                     21 ARK
                   </span>
@@ -712,7 +712,7 @@ exports[`MultiPaymentDetail should render hint icon with tooltip when it's a ret
                       </div>
                       <span
                         class="whitespace-nowrap"
-                        data-testid="AmountCrypto"
+                        data-testid="Amount"
                       >
                         - 100 ARK
                       </span>
@@ -751,7 +751,7 @@ exports[`MultiPaymentDetail should render hint icon with tooltip when it's a ret
                 >
                   <span
                     class="whitespace-nowrap"
-                    data-testid="AmountCrypto"
+                    data-testid="Amount"
                   >
                     21 ARK
                   </span>
@@ -1138,7 +1138,7 @@ exports[`MultiPaymentDetail should render with recipients 1`] = `
                     >
                       <span
                         class="whitespace-nowrap"
-                        data-testid="AmountCrypto"
+                        data-testid="Amount"
                       >
                         - 100 ARK
                       </span>
@@ -1177,7 +1177,7 @@ exports[`MultiPaymentDetail should render with recipients 1`] = `
                 >
                   <span
                     class="whitespace-nowrap"
-                    data-testid="AmountCrypto"
+                    data-testid="Amount"
                   >
                     21 ARK
                   </span>

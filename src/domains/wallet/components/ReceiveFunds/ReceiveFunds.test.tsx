@@ -60,7 +60,7 @@ describe("ReceiveFunds", () => {
 
 		fireEvent.click(getByTestId("modal__close-btn"));
 
-		expect(onClose).toHaveBeenCalled();
+		expect(onClose).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
 
 	it("should open qr code form", async () => {

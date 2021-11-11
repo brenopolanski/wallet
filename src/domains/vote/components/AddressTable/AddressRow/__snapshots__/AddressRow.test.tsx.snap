@@ -93,7 +93,7 @@ exports[`AddressRow should emit action on select button 1`] = `
           >
             <span
               class="whitespace-nowrap"
-              data-testid="AmountCrypto"
+              data-testid="Amount"
             >
               33.75089801 DARK
             </span>
@@ -281,7 +281,7 @@ exports[`AddressRow should render for a multisignature wallet 1`] = `
           >
             <span
               class="whitespace-nowrap"
-              data-testid="AmountCrypto"
+              data-testid="Amount"
             >
               33.75089801 DARK
             </span>
@@ -455,7 +455,7 @@ exports[`AddressRow should render when isCompact = false 1`] = `
           >
             <span
               class="whitespace-nowrap"
-              data-testid="AmountCrypto"
+              data-testid="Amount"
             >
               33.75089801 DARK
             </span>
@@ -629,7 +629,7 @@ exports[`AddressRow should render when isCompact = true 1`] = `
           >
             <span
               class="whitespace-nowrap"
-              data-testid="AmountCrypto"
+              data-testid="Amount"
             >
               33.75089801 DARK
             </span>
@@ -803,7 +803,7 @@ exports[`AddressRow should render when wallet hasn't voted 1`] = `
           >
             <span
               class="whitespace-nowrap"
-              data-testid="AmountCrypto"
+              data-testid="Amount"
             >
               33.75089801 DARK
             </span>
@@ -939,7 +939,7 @@ exports[`AddressRow should render when wallet hasn't voted 1`] = `
           >
             <span
               class="whitespace-nowrap"
-              data-testid="AmountCrypto"
+              data-testid="Amount"
             >
               57.68 DARK
             </span>
@@ -1085,7 +1085,7 @@ exports[`AddressRow should render when wallet not found for votes 1`] = `
           >
             <span
               class="whitespace-nowrap"
-              data-testid="AmountCrypto"
+              data-testid="Amount"
             >
               33.75089801 DARK
             </span>
@@ -1210,7 +1210,7 @@ exports[`AddressRow should render when wallet not found for votes 1`] = `
           >
             <span
               class="whitespace-nowrap"
-              data-testid="AmountCrypto"
+              data-testid="Amount"
             >
               0 DARK
             </span>
@@ -1357,7 +1357,7 @@ exports[`AddressRow should render with active delegate 1`] = `
           >
             <span
               class="whitespace-nowrap"
-              data-testid="AmountCrypto"
+              data-testid="Amount"
             >
               33.75089801 DARK
             </span>
@@ -1529,7 +1529,7 @@ exports[`AddressRow should render with isCompact = false when the maximum votes 
           >
             <span
               class="whitespace-nowrap"
-              data-testid="AmountCrypto"
+              data-testid="Amount"
             >
               33.75089801 DARK
             </span>
@@ -1751,7 +1751,7 @@ exports[`AddressRow should render with isCompact = false when the wallet has man
           >
             <span
               class="whitespace-nowrap"
-              data-testid="AmountCrypto"
+              data-testid="Amount"
             >
               33.75089801 DARK
             </span>
@@ -1964,7 +1964,7 @@ exports[`AddressRow should render with isCompact = true when the maximum votes i
           >
             <span
               class="whitespace-nowrap"
-              data-testid="AmountCrypto"
+              data-testid="Amount"
             >
               33.75089801 DARK
             </span>
@@ -2186,7 +2186,7 @@ exports[`AddressRow should render with isCompact = true when the wallet has many
           >
             <span
               class="whitespace-nowrap"
-              data-testid="AmountCrypto"
+              data-testid="Amount"
             >
               33.75089801 DARK
             </span>
@@ -2399,7 +2399,7 @@ exports[`AddressRow should render with resigned delegate 1`] = `
           >
             <span
               class="whitespace-nowrap"
-              data-testid="AmountCrypto"
+              data-testid="Amount"
             >
               33.75089801 DARK
             </span>
@@ -2573,7 +2573,7 @@ exports[`AddressRow should render with standby delegate 1`] = `
           >
             <span
               class="whitespace-nowrap"
-              data-testid="AmountCrypto"
+              data-testid="Amount"
             >
               33.75089801 DARK
             </span>

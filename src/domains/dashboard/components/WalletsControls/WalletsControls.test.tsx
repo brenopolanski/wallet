@@ -34,7 +34,7 @@ describe("WalletsControls", () => {
 
 		fireEvent.click(toggle);
 
-		expect(function_).toHaveBeenCalled();
+		expect(function_).toHaveBeenCalledWith();
 	});
 
 	it("should ignore event emition for grid view if callback not provided", () => {
@@ -74,7 +74,7 @@ describe("WalletsControls", () => {
 
 		fireEvent.click(toggle);
 
-		expect(function_).toHaveBeenCalled();
+		expect(function_).toHaveBeenCalledWith();
 	});
 
 	it("should ignore event emition for list view if callback not provided", () => {

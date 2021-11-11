@@ -380,7 +380,7 @@ exports[`Transactions should fetch more transactions 1`] = `
                     >
                       <span
                         class="whitespace-nowrap"
-                        data-testid="AmountCrypto"
+                        data-testid="Amount"
                       >
                         + 400,000 DARK
                       </span>
@@ -551,7 +551,7 @@ exports[`Transactions should fetch more transactions 1`] = `
                     >
                       <span
                         class="whitespace-nowrap"
-                        data-testid="AmountCrypto"
+                        data-testid="Amount"
                       >
                         + 400,000 DARK
                       </span>
@@ -722,7 +722,7 @@ exports[`Transactions should fetch more transactions 1`] = `
                     >
                       <span
                         class="whitespace-nowrap"
-                        data-testid="AmountCrypto"
+                        data-testid="Amount"
                       >
                         + 400,000 DARK
                       </span>
@@ -893,7 +893,7 @@ exports[`Transactions should fetch more transactions 1`] = `
                     >
                       <span
                         class="whitespace-nowrap"
-                        data-testid="AmountCrypto"
+                        data-testid="Amount"
                       >
                         + 400,000 DARK
                       </span>
@@ -1064,7 +1064,7 @@ exports[`Transactions should fetch more transactions 1`] = `
                     >
                       <span
                         class="whitespace-nowrap"
-                        data-testid="AmountCrypto"
+                        data-testid="Amount"
                       >
                         + 50,000 DARK
                       </span>
@@ -1235,7 +1235,7 @@ exports[`Transactions should fetch more transactions 1`] = `
                     >
                       <span
                         class="whitespace-nowrap"
-                        data-testid="AmountCrypto"
+                        data-testid="Amount"
                       >
                         + 50,000 DARK
                       </span>
@@ -1406,7 +1406,7 @@ exports[`Transactions should fetch more transactions 1`] = `
                     >
                       <span
                         class="whitespace-nowrap"
-                        data-testid="AmountCrypto"
+                        data-testid="Amount"
                       >
                         + 50,000 DARK
                       </span>
@@ -1577,7 +1577,7 @@ exports[`Transactions should fetch more transactions 1`] = `
                     >
                       <span
                         class="whitespace-nowrap"
-                        data-testid="AmountCrypto"
+                        data-testid="Amount"
                       >
                         + 50,000 DARK
                       </span>
@@ -1999,7 +1999,7 @@ exports[`Transactions should hide view more button when there are no next pages 
                     >
                       <span
                         class="whitespace-nowrap"
-                        data-testid="AmountCrypto"
+                        data-testid="Amount"
                       >
                         + 400,000 DARK
                       </span>
@@ -2170,7 +2170,7 @@ exports[`Transactions should hide view more button when there are no next pages 
                     >
                       <span
                         class="whitespace-nowrap"
-                        data-testid="AmountCrypto"
+                        data-testid="Amount"
                       >
                         + 400,000 DARK
                       </span>
@@ -2341,7 +2341,7 @@ exports[`Transactions should hide view more button when there are no next pages 
                     >
                       <span
                         class="whitespace-nowrap"
-                        data-testid="AmountCrypto"
+                        data-testid="Amount"
                       >
                         + 50,000 DARK
                       </span>
@@ -2512,7 +2512,7 @@ exports[`Transactions should hide view more button when there are no next pages 
                     >
                       <span
                         class="whitespace-nowrap"
-                        data-testid="AmountCrypto"
+                        data-testid="Amount"
                       >
                         + 50,000 DARK
                       </span>
@@ -2923,7 +2923,7 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
                     >
                       <span
                         class="whitespace-nowrap"
-                        data-testid="AmountCrypto"
+                        data-testid="Amount"
                       >
                         + 400,000 DARK
                       </span>
@@ -3094,7 +3094,7 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
                     >
                       <span
                         class="whitespace-nowrap"
-                        data-testid="AmountCrypto"
+                        data-testid="Amount"
                       >
                         + 400,000 DARK
                       </span>
@@ -3265,7 +3265,7 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
                     >
                       <span
                         class="whitespace-nowrap"
-                        data-testid="AmountCrypto"
+                        data-testid="Amount"
                       >
                         + 50,000 DARK
                       </span>
@@ -3436,7 +3436,7 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
                     >
                       <span
                         class="whitespace-nowrap"
-                        data-testid="AmountCrypto"
+                        data-testid="Amount"
                       >
                         + 50,000 DARK
                       </span>
@@ -3847,7 +3847,7 @@ exports[`Transactions should render 1`] = `
                     >
                       <span
                         class="whitespace-nowrap"
-                        data-testid="AmountCrypto"
+                        data-testid="Amount"
                       >
                         + 400,000 DARK
                       </span>
@@ -4018,7 +4018,7 @@ exports[`Transactions should render 1`] = `
                     >
                       <span
                         class="whitespace-nowrap"
-                        data-testid="AmountCrypto"
+                        data-testid="Amount"
                       >
                         + 400,000 DARK
                       </span>
@@ -4189,7 +4189,7 @@ exports[`Transactions should render 1`] = `
                     >
                       <span
                         class="whitespace-nowrap"
-                        data-testid="AmountCrypto"
+                        data-testid="Amount"
                       >
                         + 50,000 DARK
                       </span>
@@ -4360,7 +4360,7 @@ exports[`Transactions should render 1`] = `
                     >
                       <span
                         class="whitespace-nowrap"
-                        data-testid="AmountCrypto"
+                        data-testid="Amount"
                       >
                         + 50,000 DARK
                       </span>
@@ -4784,7 +4784,7 @@ exports[`Transactions should render with custom title 1`] = `
                     >
                       <span
                         class="whitespace-nowrap"
-                        data-testid="AmountCrypto"
+                        data-testid="Amount"
                       >
                         + 400,000 DARK
                       </span>
@@ -4955,7 +4955,7 @@ exports[`Transactions should render with custom title 1`] = `
                     >
                       <span
                         class="whitespace-nowrap"
-                        data-testid="AmountCrypto"
+                        data-testid="Amount"
                       >
                         + 400,000 DARK
                       </span>
@@ -5126,7 +5126,7 @@ exports[`Transactions should render with custom title 1`] = `
                     >
                       <span
                         class="whitespace-nowrap"
-                        data-testid="AmountCrypto"
+                        data-testid="Amount"
                       >
                         + 50,000 DARK
                       </span>
@@ -5297,7 +5297,7 @@ exports[`Transactions should render with custom title 1`] = `
                     >
                       <span
                         class="whitespace-nowrap"
-                        data-testid="AmountCrypto"
+                        data-testid="Amount"
                       >
                         + 50,000 DARK
                       </span>

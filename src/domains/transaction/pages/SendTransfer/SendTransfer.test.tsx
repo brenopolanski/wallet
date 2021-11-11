@@ -135,7 +135,7 @@ describe("SendTransfer", () => {
 
 		expect(screen.getByTestId("SendTransfer__form-step")).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getAllByTestId("AmountCrypto")).toHaveLength(3));
+		await waitFor(() => expect(screen.getAllByTestId("Amount")).toHaveLength(3));
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -166,7 +166,7 @@ describe("SendTransfer", () => {
 
 		expect(screen.getByTestId("SendTransfer__form-step")).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getAllByTestId("AmountCrypto")).toHaveLength(3));
+		await waitFor(() => expect(screen.getAllByTestId("Amount")).toHaveLength(3));
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -635,7 +635,9 @@ describe("SendTransfer", () => {
 			expect(screen.getByTestId("SelectAddress__input")).toHaveValue(profile.wallets().first().address()),
 		);
 
-		await waitFor(() => expect(onProfileSyncError).toHaveBeenCalled());
+		await waitFor(() =>
+			expect(onProfileSyncError).toHaveBeenCalledWith([expect.any(String)], expect.any(Function)),
+		);
 		walletMock.mockRestore();
 	});
 
@@ -975,9 +977,9 @@ describe("SendTransfer", () => {
 		fireEvent.click(getByTestId("StepNavigation__continue-button"));
 		await findByTestId("SendTransfer__review-step");
 
-		await findAllByTestId("AmountCrypto");
+		await findAllByTestId("Amount");
 
-		expect(getAllByTestId("AmountCrypto")[2]).toHaveTextContent("0.1");
+		expect(getAllByTestId("Amount")[2]).toHaveTextContent("0.1");
 	});
 
 	it("should handle fee change", async () => {
@@ -1242,15 +1244,15 @@ describe("SendTransfer", () => {
 
 		await screen.findByTestId("SendTransfer__review-step");
 
-		expect(
-			within(screen.getByTestId("SendTransfer__review-step")).getAllByTestId("AmountCrypto")[0],
-		).toHaveTextContent("1 LSK");
-		expect(
-			within(screen.getByTestId("SendTransfer__review-step")).getAllByTestId("AmountCrypto")[1],
-		).toHaveTextContent("0.1 LSK");
-		expect(
-			within(screen.getByTestId("SendTransfer__review-step")).getAllByTestId("AmountCrypto")[2],
-		).toHaveTextContent("1.1 LSK");
+		expect(within(screen.getByTestId("SendTransfer__review-step")).getAllByTestId("Amount")[0]).toHaveTextContent(
+			"1 LSK",
+		);
+		expect(within(screen.getByTestId("SendTransfer__review-step")).getAllByTestId("Amount")[1]).toHaveTextContent(
+			"0.1 LSK",
+		);
+		expect(within(screen.getByTestId("SendTransfer__review-step")).getAllByTestId("Amount")[2]).toHaveTextContent(
+			"1.1 LSK",
+		);
 
 		expect(backButton).not.toHaveAttribute("disabled");
 
@@ -1269,15 +1271,15 @@ describe("SendTransfer", () => {
 
 		await screen.findByTestId("SendTransfer__review-step");
 
-		expect(
-			within(screen.getByTestId("SendTransfer__review-step")).getAllByTestId("AmountCrypto")[0],
-		).toHaveTextContent("1 LSK");
-		expect(
-			within(screen.getByTestId("SendTransfer__review-step")).getAllByTestId("AmountCrypto")[1],
-		).toHaveTextContent("0.1 LSK");
-		expect(
-			within(screen.getByTestId("SendTransfer__review-step")).getAllByTestId("AmountCrypto")[2],
-		).toHaveTextContent("1.1 LSK");
+		expect(within(screen.getByTestId("SendTransfer__review-step")).getAllByTestId("Amount")[0]).toHaveTextContent(
+			"1 LSK",
+		);
+		expect(within(screen.getByTestId("SendTransfer__review-step")).getAllByTestId("Amount")[1]).toHaveTextContent(
+			"0.1 LSK",
+		);
+		expect(within(screen.getByTestId("SendTransfer__review-step")).getAllByTestId("Amount")[2]).toHaveTextContent(
+			"1.1 LSK",
+		);
 
 		profile.wallets().forget(lskWallet.id());
 

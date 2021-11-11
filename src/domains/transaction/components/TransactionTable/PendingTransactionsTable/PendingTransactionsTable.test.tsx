@@ -305,7 +305,7 @@ describe("Signed Transaction Table", () => {
 
 		fireEvent.click(getAllByTestId("TableRow")[0]);
 
-		await waitFor(() => expect(onClick).toHaveBeenCalled());
+		await waitFor(() => expect(onClick).toHaveBeenCalledWith(expect.any(DTO.ExtendedSignedTransactionData)));
 
 		jest.restoreAllMocks();
 	});
@@ -504,7 +504,7 @@ describe("Signed Transaction Table", () => {
 
 		fireEvent.click(screen.getAllByTestId("TransactionRow__sign")[0]);
 
-		expect(onClick).toHaveBeenCalled();
+		expect(onClick).toHaveBeenCalledWith(expect.any(DTO.ExtendedSignedTransactionData));
 		expect(asFragment()).toMatchSnapshot();
 
 		awaitingMock.mockReset();
@@ -592,7 +592,7 @@ describe("Signed Transaction Table", () => {
 
 		fireEvent.click(getByTestId("ConfirmRemovePendingTransaction__remove"));
 
-		await waitFor(() => expect(onRemove).toHaveBeenCalled());
+		await waitFor(() => expect(onRemove).toHaveBeenCalledWith(expect.any(DTO.ExtendedSignedTransactionData)));
 
 		canBeSignedMock.mockReset();
 		isMultiSignatureReadyMock.mockRestore();

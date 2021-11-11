@@ -36,7 +36,7 @@ describe("Plugin Uninstall Confirmation", () => {
 
 		expect(manager.plugins().findById(plugin.config().id())).toBeUndefined();
 
-		expect(onDelete).toHaveBeenCalled();
+		expect(onDelete).toHaveBeenCalledWith();
 		expect(container).toMatchSnapshot();
 	});
 
@@ -54,6 +54,6 @@ describe("Plugin Uninstall Confirmation", () => {
 
 		fireEvent.click(screen.getByTestId("PluginUninstall__cancel-button"));
 
-		expect(onClose).toHaveBeenCalled();
+		expect(onClose).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
 });

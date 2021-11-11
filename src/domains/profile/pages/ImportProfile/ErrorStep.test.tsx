@@ -21,7 +21,7 @@ describe("Import Profile - Error Step", () => {
 		const { getByTestId } = render(<ImportError file={file} onBack={onBack} />);
 		fireEvent.click(getByTestId("ImportError__back"));
 
-		expect(onBack).toHaveBeenCalled();
+		expect(onBack).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
 
 	it("should emit retry event", () => {
@@ -29,6 +29,6 @@ describe("Import Profile - Error Step", () => {
 		const { getByTestId } = render(<ImportError file={file} onRetry={onRetry} />);
 		fireEvent.click(getByTestId("ImportError__retry"));
 
-		expect(onRetry).toHaveBeenCalled();
+		expect(onRetry).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
 });

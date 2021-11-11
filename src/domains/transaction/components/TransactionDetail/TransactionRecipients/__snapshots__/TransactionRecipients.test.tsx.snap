@@ -119,7 +119,7 @@ exports[`TransactionRecipients should render a recipients array 1`] = `
                   >
                     <span
                       class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                      data-testid="Amount"
                     >
                       1 DARK
                     </span>
@@ -164,7 +164,7 @@ exports[`TransactionRecipients should render a recipients array 1`] = `
                   >
                     <span
                       class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                      data-testid="Amount"
                     >
                       1 DARK
                     </span>

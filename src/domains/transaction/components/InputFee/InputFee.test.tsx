@@ -10,9 +10,10 @@ import { env, render } from "utils/testing-library";
 import { InputFee } from "./InputFee";
 import { InputFeeProperties, InputFeeSimpleValue, InputFeeViewType } from "./InputFee.contracts";
 
-const getDefaultProperties = (): InputFeeProperties => ({
+const getDefaultProperties = (): Omit<InputFeeProperties, "network" | "profile"> => ({
 	avg: 0.456,
 	disabled: false,
+	loading: false,
 	max: 0.5,
 	min: 0.006,
 	onChange: jest.fn(),
@@ -53,12 +54,12 @@ describe("InputFee", () => {
 
 			const handleChangeViewType = (newValue: InputFeeViewType) => {
 				setViewType(newValue);
-				defaultProps.onChangeViewType(newValue);
+				defaultProps.onChangeViewType?.(newValue);
 			};
 
 			const handleChangeSimpleValue = (value_: InputFeeSimpleValue) => {
 				setSimpleValue(value_);
-				defaultProps.onChangeSimpleValue(value_);
+				defaultProps.onChangeSimpleValue?.(value_);
 			};
 
 			return (
@@ -114,7 +115,7 @@ describe("InputFee", () => {
 	});
 
 	it("should switch to simple and advanced type when value is number", () => {
-		defaultProps.value = 0.123;
+		defaultProps.value = (0.123 as unknown) as string;
 
 		render(<Wrapper />);
 
@@ -156,8 +157,7 @@ describe("InputFee", () => {
 
 			const { asFragment } = render(<InputFee {...defaultProps} />);
 
-			expect(screen.getAllByTestId("AmountCrypto")).toHaveLength(3);
-			expect(screen.getAllByTestId("AmountFiat")).toHaveLength(3);
+			expect(screen.getAllByTestId("Amount")).toHaveLength(6);
 			expect(asFragment()).toMatchSnapshot();
 		});
 	});
@@ -311,7 +311,7 @@ describe("InputFee", () => {
 
 			const { asFragment } = render(<InputFee {...defaultProps} />);
 
-			expect(screen.getByTestId("AmountFiat")).toBeInTheDocument();
+			expect(screen.getByTestId("Amount")).toHaveTextContent(/^€0.00$/);
 			expect(asFragment()).toMatchSnapshot();
 		});
 	});

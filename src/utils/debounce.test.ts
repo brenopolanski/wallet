@@ -8,6 +8,6 @@ describe("debounce", () => {
 		const debouncedCallback = debounceAsync(callback, 10);
 		debouncedCallback();
 
-		await waitFor(() => expect(callback).toHaveBeenCalled());
+		await waitFor(() => expect(callback).toHaveBeenCalledWith());
 	});
 });

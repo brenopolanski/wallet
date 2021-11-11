@@ -1,4 +1,4 @@
-import { uniq } from "@arkecosystem/utils";
+import { uniq } from "@payvo/helpers";
 import { Contracts } from "@payvo/profiles";
 import { Button } from "app/components/Button";
 import { Form } from "app/components/Form";

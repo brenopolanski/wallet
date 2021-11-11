@@ -1,9 +1,12 @@
+import { buildTranslations } from "app/i18n/helpers";
 import { toasts } from "app/services";
 import electron from "electron";
 import React from "react";
 import { fireEvent, render } from "utils/testing-library";
 
 import { Link } from "./Link";
+
+const translations = buildTranslations();
 
 describe("Link", () => {
 	it("should render", () => {
@@ -53,7 +56,7 @@ describe("Link", () => {
 
 		fireEvent.click(getByTestId("Link"));
 
-		expect(toastSpy).toHaveBeenCalled();
+		expect(toastSpy).toHaveBeenCalledWith(translations.COMMON.ERRORS.INVALID_URL.replace("{{url}}", "invalid-url"));
 		expect(asFragment()).toMatchSnapshot();
 	});
 

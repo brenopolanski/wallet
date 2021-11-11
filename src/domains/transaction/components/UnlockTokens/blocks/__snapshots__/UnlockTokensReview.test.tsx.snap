@@ -97,7 +97,7 @@ exports[`UnlockTokensReview should render 1`] = `
           >
             <span
               class="whitespace-nowrap"
-              data-testid="AmountCrypto"
+              data-testid="Amount"
             >
               + 10 LSK
             </span>
@@ -136,7 +136,7 @@ exports[`UnlockTokensReview should render 1`] = `
       >
         <span
           class="whitespace-nowrap"
-          data-testid="AmountCrypto"
+          data-testid="Amount"
         >
           5 LSK
         </span>

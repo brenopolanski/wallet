@@ -1,4 +1,4 @@
-import { chunk } from "@arkecosystem/utils";
+import { chunk } from "@payvo/helpers";
 import { DropdownOption } from "app/components/Dropdown";
 import { EmptyBlock } from "app/components/EmptyBlock";
 import { Pagination } from "app/components/Pagination";

@@ -1,3 +1,4 @@
+import { Profile } from "@payvo/profiles";
 import { ProcessingImport } from "domains/profile/pages/ImportProfile/ProcessingImportStep";
 import fs from "fs";
 import React from "react";
@@ -34,18 +35,18 @@ describe("Import Profile - Processing import", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should succesfully import dwe profile", async () => {
+	it("should successfully import dwe profile", async () => {
 		const onSuccess = jest.fn();
 		const { container } = render(<ProcessingImport env={env} file={dwe} onSuccess={onSuccess} />);
-		await waitFor(() => expect(onSuccess).toHaveBeenCalled());
+		await waitFor(() => expect(onSuccess).toHaveBeenCalledWith(expect.any(Profile)));
 
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should succesfully import json profile", async () => {
+	it("should successfully import json profile", async () => {
 		const onSuccess = jest.fn();
 		const { container } = render(<ProcessingImport env={env} file={json} onSuccess={onSuccess} />);
-		await waitFor(() => expect(onSuccess).toHaveBeenCalled());
+		await waitFor(() => expect(onSuccess).toHaveBeenCalledWith(expect.any(Profile)));
 
 		expect(container).toMatchSnapshot();
 	});
@@ -134,7 +135,7 @@ describe("Import Profile - Processing import", () => {
 		const onError = jest.fn();
 		const { container } = render(<ProcessingImport env={env} file={jsonEmpty} onError={onError} password="test" />);
 
-		await waitFor(() => expect(onError).toHaveBeenCalled());
+		await waitFor(() => expect(onError).toHaveBeenCalledWith("MissingWallets"));
 
 		expect(container).toMatchSnapshot();
 	});
@@ -150,7 +151,9 @@ describe("Import Profile - Processing import", () => {
 			/>,
 		);
 
-		await waitFor(() => expect(onError).toHaveBeenCalled());
+		await waitFor(() =>
+			expect(onError).toHaveBeenCalledWith(expect.stringMatching(/Failed to decode or decrypt the profile/)),
+		);
 
 		expect(container).toMatchSnapshot();
 	});

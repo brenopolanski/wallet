@@ -27,7 +27,7 @@ describe("Import Profile Select File Step", () => {
 
 		fireEvent.click(screen.getByTestId("SelectFileStep__change-file"));
 
-		expect(onFileFormatChange).toHaveBeenCalled();
+		expect(onFileFormatChange).toHaveBeenCalledWith(".json");
 		expect(container).toMatchSnapshot();
 	});
 
@@ -38,7 +38,7 @@ describe("Import Profile Select File Step", () => {
 
 		fireEvent.click(screen.getByTestId("SelectFileStep__back"));
 
-		expect(onBack).toHaveBeenCalled();
+		expect(onBack).toHaveBeenCalledWith();
 		expect(container).toMatchSnapshot();
 	});
 
@@ -49,7 +49,7 @@ describe("Import Profile Select File Step", () => {
 
 		fireEvent.click(screen.getByTestId("SelectFileStep__back"));
 
-		expect(onFileFormatChange).toHaveBeenCalled();
+		expect(onFileFormatChange).toHaveBeenCalledWith(".dwe");
 		expect(container).toMatchSnapshot();
 	});
 });

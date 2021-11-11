@@ -263,7 +263,7 @@ exports[`AddressTable should render 1`] = `
               >
                 <span
                   class="whitespace-nowrap"
-                  data-testid="AmountCrypto"
+                  data-testid="Amount"
                 >
                   33.75089801 DARK
                 </span>
@@ -595,7 +595,7 @@ exports[`AddressTable should render when the maximum votes is greater than 1 1`]
               >
                 <span
                   class="whitespace-nowrap"
-                  data-testid="AmountCrypto"
+                  data-testid="Amount"
                 >
                   33.75089801 DARK
                 </span>
@@ -935,7 +935,7 @@ exports[`AddressTable should render with voting delegates and handle exception 1
               >
                 <span
                   class="whitespace-nowrap"
-                  data-testid="AmountCrypto"
+                  data-testid="Amount"
                 >
                   33.75089801 DARK
                 </span>

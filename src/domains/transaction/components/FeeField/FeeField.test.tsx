@@ -47,7 +47,7 @@ describe("FeeField", () => {
 	it("should render", async () => {
 		const { asFragment } = render(<Component type="transfer" />);
 
-		await waitFor(() => expect(screen.getAllByTestId("AmountCrypto")).toHaveLength(3));
+		await waitFor(() => expect(screen.getAllByTestId("Amount")).toHaveLength(3));
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -58,11 +58,11 @@ describe("FeeField", () => {
 			async (transactionType) => {
 				render(<Component type={transactionType} network={networksByFeeType.size} data={undefined} />);
 
-				await waitFor(() => expect(screen.getAllByTestId("AmountCrypto")).toHaveLength(3));
+				await waitFor(() => expect(screen.getAllByTestId("Amount")).toHaveLength(3));
 
-				expect(screen.getAllByTestId("AmountCrypto")[0]).toHaveTextContent("0 LSK");
-				expect(screen.getAllByTestId("AmountCrypto")[1]).toHaveTextContent("0 LSK");
-				expect(screen.getAllByTestId("AmountCrypto")[2]).toHaveTextContent("0 LSK");
+				expect(screen.getAllByTestId("Amount")[0]).toHaveTextContent("0 LSK");
+				expect(screen.getAllByTestId("Amount")[1]).toHaveTextContent("0 LSK");
+				expect(screen.getAllByTestId("Amount")[2]).toHaveTextContent("0 LSK");
 			},
 		);
 
@@ -71,11 +71,11 @@ describe("FeeField", () => {
 			async (transactionType) => {
 				render(<Component type={transactionType} network={networksByFeeType.size} data={{}} />);
 
-				await waitFor(() => expect(screen.getAllByTestId("AmountCrypto")).toHaveLength(3));
+				await waitFor(() => expect(screen.getAllByTestId("Amount")).toHaveLength(3));
 
-				expect(screen.getAllByTestId("AmountCrypto")[0]).toHaveTextContent("0 LSK");
-				expect(screen.getAllByTestId("AmountCrypto")[1]).toHaveTextContent("0 LSK");
-				expect(screen.getAllByTestId("AmountCrypto")[2]).toHaveTextContent("0 LSK");
+				expect(screen.getAllByTestId("Amount")[0]).toHaveTextContent("0 LSK");
+				expect(screen.getAllByTestId("Amount")[1]).toHaveTextContent("0 LSK");
+				expect(screen.getAllByTestId("Amount")[2]).toHaveTextContent("0 LSK");
 			},
 		);
 
@@ -87,13 +87,13 @@ describe("FeeField", () => {
 
 			const { rerender } = render(<Component {...properties} data={{}} />);
 
-			await waitFor(() => expect(screen.getAllByTestId("AmountCrypto")[0]).toHaveTextContent("0 LSK"));
+			await waitFor(() => expect(screen.getAllByTestId("Amount")[0]).toHaveTextContent("0 LSK"));
 
 			rerender(
 				<Component {...properties} data={{ amount: 1, to: "lsktpbzum9d9gnhqu3homwbwo8h238zeo3bhpjocg" }} />,
 			);
 
-			await waitFor(() => expect(screen.getAllByTestId("AmountCrypto")[0]).toHaveTextContent("2 LSK"));
+			await waitFor(() => expect(screen.getAllByTestId("Amount")[0]).toHaveTextContent("2 LSK"));
 
 			calculate.mockRestore();
 			useFeesMock.mockRestore();
@@ -116,10 +116,10 @@ describe("FeeField", () => {
 				/>,
 			);
 
-			await waitFor(() => expect(screen.getAllByTestId("AmountCrypto")[0]).toHaveTextContent("1 LSK"));
+			await waitFor(() => expect(screen.getAllByTestId("Amount")[0]).toHaveTextContent("1 LSK"));
 
-			expect(screen.getAllByTestId("AmountCrypto")[1]).toHaveTextContent("3 LSK");
-			expect(screen.getAllByTestId("AmountCrypto")[2]).toHaveTextContent("5 LSK");
+			expect(screen.getAllByTestId("Amount")[1]).toHaveTextContent("3 LSK");
+			expect(screen.getAllByTestId("Amount")[2]).toHaveTextContent("5 LSK");
 			expect(screen.getAllByRole("radio")[1]).toBeChecked();
 
 			userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
@@ -159,7 +159,7 @@ describe("FeeField", () => {
 			/>,
 		);
 
-		await waitFor(() => expect(screen.getAllByTestId("AmountCrypto")[0]).toHaveTextContent("1 LSK"));
+		await waitFor(() => expect(screen.getAllByTestId("Amount")[0]).toHaveTextContent("1 LSK"));
 
 		expect(screen.getByRole("radio", { checked: true })).toHaveTextContent("30 LSK");
 

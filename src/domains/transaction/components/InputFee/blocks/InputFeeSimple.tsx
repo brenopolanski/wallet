@@ -1,4 +1,4 @@
-import { Amount, AmountCrypto } from "app/components/Amount";
+import { Amount } from "app/components/Amount";
 import { ButtonGroup, ButtonGroupOption } from "app/components/ButtonGroup";
 import { Skeleton } from "app/components/Skeleton";
 import {
@@ -30,7 +30,7 @@ export const InputFeeSimple: React.FC<InputFeeSimpleProperties> = ({
 						<Skeleton width={100} className="my-1 h-3" />
 					) : (
 						<>
-							<AmountCrypto ticker={ticker} value={displayValue} className="text-sm" />
+							<Amount ticker={ticker} value={displayValue} className="text-sm" />
 							{showConvertedValues && (
 								<Amount
 									ticker={exchangeTicker}

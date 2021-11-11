@@ -19,7 +19,7 @@ describe("LedgerDeviceError", () => {
 
 		fireEvent.click(getByTestId("modal__close-btn"));
 
-		expect(onClose).toHaveBeenCalled();
+		expect(onClose).toHaveBeenCalledWith();
 	});
 
 	it("should render with custom subtitle", () => {

@@ -54,7 +54,7 @@ describe("NotificationsTransactionTable", () => {
 
 		expect(getAllByTestId("TableRow")).toHaveLength(transactions.length);
 
-		await waitFor(() => expect(onVisibilityChange).toHaveBeenCalled());
+		await waitFor(() => expect(onVisibilityChange).toHaveBeenCalledWith(false));
 	});
 
 	it("should emit on click event", async () => {
@@ -72,6 +72,6 @@ describe("NotificationsTransactionTable", () => {
 
 		fireEvent.click(getAllByTestId("TableRow")[0]);
 
-		await waitFor(() => expect(onClick).toHaveBeenCalled());
+		await waitFor(() => expect(onClick).toHaveBeenCalledWith(expect.any(DTO.ExtendedConfirmedTransactionData)));
 	});
 });

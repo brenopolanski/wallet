@@ -1,6 +1,6 @@
 import { Contracts } from "@payvo/profiles";
 import { Address } from "app/components/Address";
-import { AmountCrypto } from "app/components/Amount";
+import { Amount } from "app/components/Amount";
 import { Avatar } from "app/components/Avatar";
 import { Button } from "app/components/Button";
 import { Header } from "app/components/Header";
@@ -40,7 +40,7 @@ export const SuccessStep = ({
 			</TransactionDetail>
 
 			<TransactionDetail label={t("COMMON.BALANCE")}>
-				<AmountCrypto value={importedWallet.balance()} ticker={network.ticker()} />
+				<Amount value={importedWallet.balance()} ticker={network.ticker()} />
 			</TransactionDetail>
 
 			<TransactionDetail

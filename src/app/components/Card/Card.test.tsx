@@ -19,7 +19,7 @@ describe("Card", () => {
 
 		fireEvent.click(getByText("Test"));
 
-		expect(handleClick).toHaveBeenCalled();
+		expect(handleClick).toHaveBeenCalledWith();
 		expect(asFragment()).toMatchSnapshot();
 	});
 

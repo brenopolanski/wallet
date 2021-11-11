@@ -11,7 +11,7 @@ exports[`AmountLabel should render 1`] = `
     >
       <span
         class="whitespace-nowrap"
-        data-testid="AmountCrypto"
+        data-testid="Amount"
       >
         + 10 ARK
       </span>
@@ -31,7 +31,7 @@ exports[`AmountLabel should render compact 1`] = `
     >
       <span
         class="whitespace-nowrap"
-        data-testid="AmountCrypto"
+        data-testid="Amount"
       >
         + 10 ARK
       </span>
@@ -65,7 +65,7 @@ exports[`AmountLabel should render compact with hint 1`] = `
       </div>
       <span
         class="whitespace-nowrap"
-        data-testid="AmountCrypto"
+        data-testid="Amount"
       >
         + 10 ARK
       </span>
@@ -85,7 +85,7 @@ exports[`AmountLabel should render negative 1`] = `
     >
       <span
         class="whitespace-nowrap"
-        data-testid="AmountCrypto"
+        data-testid="Amount"
       >
         - 10 ARK
       </span>
@@ -119,7 +119,7 @@ exports[`AmountLabel should render with hint 1`] = `
       </div>
       <span
         class="whitespace-nowrap"
-        data-testid="AmountCrypto"
+        data-testid="Amount"
       >
         + 10 ARK
       </span>
@@ -139,7 +139,7 @@ exports[`AmountLabel should render zero 1`] = `
     >
       <span
         class="whitespace-nowrap"
-        data-testid="AmountCrypto"
+        data-testid="Amount"
       >
         0 ARK
       </span>

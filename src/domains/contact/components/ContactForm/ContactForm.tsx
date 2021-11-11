@@ -230,7 +230,9 @@ export const ContactForm = ({
 				<InputDefault
 					data-testid="contact-form__name-input"
 					ref={register(contactFormValidation.name(contact?.id()))}
-					onChange={() => onChange?.("name", name)}
+					onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
+						onChange?.("name", event.target.value);
+					}}
 					defaultValue={contact?.name?.()}
 				/>
 			</FormField>

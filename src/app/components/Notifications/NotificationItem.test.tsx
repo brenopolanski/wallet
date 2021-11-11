@@ -45,7 +45,7 @@ describe("Notifications", () => {
 
 		fireEvent.click(getByTestId("NotificationItem__action"));
 
-		await waitFor(() => expect(onAction).toHaveBeenCalled());
+		await waitFor(() => expect(onAction).toHaveBeenCalledWith("29fdd62d-1c28-4d2c-b46f-667868c5afe1"));
 	});
 
 	it("should emit onVisibilityChange event", async () => {
@@ -58,7 +58,7 @@ describe("Notifications", () => {
 			</table>,
 		);
 
-		await waitFor(() => expect(onVisibilityChange).toHaveBeenCalled());
+		await waitFor(() => expect(onVisibilityChange).toHaveBeenCalledWith(false));
 	});
 
 	it("should render with custom action name", () => {

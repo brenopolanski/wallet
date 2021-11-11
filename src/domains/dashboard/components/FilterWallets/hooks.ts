@@ -1,4 +1,4 @@
-import { sortBy } from "@arkecosystem/utils";
+import { sortBy } from "@payvo/helpers";
 import { Contracts } from "@payvo/profiles";
 import { Networks } from "@payvo/sdk";
 import { useWalletConfig } from "domains/dashboard/hooks";

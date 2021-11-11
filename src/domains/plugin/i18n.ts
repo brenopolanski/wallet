@@ -42,6 +42,7 @@ export const translations = {
 
 	MODAL_MANUAL_INSTALL_PLUGIN: {
 		DESCRIPTION: "Fetch the Plugin directly from GitHub by providing the repository URL below.",
+		ERROR: "Failed to find a valid plugin repository. Please verify the URL and try again.",
 		REPOSITORY_URL: "GitHub Repository URL",
 		TITLE: "Install from URL",
 	},

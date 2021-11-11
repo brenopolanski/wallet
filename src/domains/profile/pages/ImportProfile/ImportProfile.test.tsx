@@ -59,7 +59,7 @@ describe("ImportProfile", () => {
 
 		fireEvent.click(getByTestId("SelectFileStep__back"));
 
-		await waitFor(() => expect(historyMock).toHaveBeenCalled());
+		await waitFor(() => expect(historyMock).toHaveBeenCalledWith("/"));
 		historyMock.mockRestore();
 	});
 

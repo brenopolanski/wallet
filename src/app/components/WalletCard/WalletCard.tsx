@@ -1,5 +1,5 @@
 import { Contracts } from "@payvo/profiles";
-import { AmountCrypto } from "app/components/Amount";
+import { Amount } from "app/components/Amount";
 import { Avatar } from "app/components/Avatar";
 import { Card } from "app/components/Card";
 import { Circle } from "app/components/Circle";
@@ -133,7 +133,7 @@ export const WalletCard = ({
 					</div>
 
 					{canDisplayBalance ? (
-						<AmountCrypto
+						<Amount
 							value={wallet.balance()}
 							ticker={wallet.network().ticker()}
 							className="mt-auto text-lg font-bold text-theme-text"

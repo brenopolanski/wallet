@@ -183,7 +183,7 @@ exports[`MultiSignatureDetail should fail to broadcast transaction and show erro
                             >
                               <span
                                 class="whitespace-nowrap"
-                                data-testid="AmountCrypto"
+                                data-testid="Amount"
                               >
                                 - 1 DARK
                               </span>
@@ -222,7 +222,7 @@ exports[`MultiSignatureDetail should fail to broadcast transaction and show erro
                         >
                           <span
                             class="whitespace-nowrap"
-                            data-testid="AmountCrypto"
+                            data-testid="Amount"
                           >
                             1 DARK
                           </span>
@@ -669,7 +669,7 @@ exports[`MultiSignatureDetail should not broadcast if wallet is not ready to do 
                             >
                               <span
                                 class="whitespace-nowrap"
-                                data-testid="AmountCrypto"
+                                data-testid="Amount"
                               >
                                 - 1 DARK
                               </span>
@@ -708,7 +708,7 @@ exports[`MultiSignatureDetail should not broadcast if wallet is not ready to do 
                         >
                           <span
                             class="whitespace-nowrap"
-                            data-testid="AmountCrypto"
+                            data-testid="Amount"
                           >
                             1 DARK
                           </span>
@@ -1155,7 +1155,7 @@ exports[`MultiSignatureDetail should not show send button when waiting for confi
                             >
                               <span
                                 class="whitespace-nowrap"
-                                data-testid="AmountCrypto"
+                                data-testid="Amount"
                               >
                                 - 1 DARK
                               </span>
@@ -1194,7 +1194,7 @@ exports[`MultiSignatureDetail should not show send button when waiting for confi
                         >
                           <span
                             class="whitespace-nowrap"
-                            data-testid="AmountCrypto"
+                            data-testid="Amount"
                           >
                             1 DARK
                           </span>
@@ -1615,7 +1615,7 @@ exports[`MultiSignatureDetail should render summary step and handle exception 1`
                             >
                               <span
                                 class="whitespace-nowrap"
-                                data-testid="AmountCrypto"
+                                data-testid="Amount"
                               >
                                 - 1 DARK
                               </span>
@@ -1654,7 +1654,7 @@ exports[`MultiSignatureDetail should render summary step and handle exception 1`
                         >
                           <span
                             class="whitespace-nowrap"
-                            data-testid="AmountCrypto"
+                            data-testid="Amount"
                           >
                             1 DARK
                           </span>
@@ -2052,7 +2052,7 @@ exports[`MultiSignatureDetail should render summary step for ipfs 1`] = `
                         >
                           <span
                             class="whitespace-nowrap"
-                            data-testid="AmountCrypto"
+                            data-testid="Amount"
                           >
                             1 DARK
                           </span>
@@ -2520,7 +2520,7 @@ exports[`MultiSignatureDetail should render summary step for multi payment 1`] =
                                     >
                                       <span
                                         class="whitespace-nowrap"
-                                        data-testid="AmountCrypto"
+                                        data-testid="Amount"
                                       >
                                         1 DARK
                                       </span>
@@ -2565,7 +2565,7 @@ exports[`MultiSignatureDetail should render summary step for multi payment 1`] =
                                     >
                                       <span
                                         class="whitespace-nowrap"
-                                        data-testid="AmountCrypto"
+                                        data-testid="Amount"
                                       >
                                         2 DARK
                                       </span>
@@ -2602,7 +2602,7 @@ exports[`MultiSignatureDetail should render summary step for multi payment 1`] =
                             >
                               <span
                                 class="whitespace-nowrap"
-                                data-testid="AmountCrypto"
+                                data-testid="Amount"
                               >
                                 - 3 DARK
                               </span>
@@ -2641,7 +2641,7 @@ exports[`MultiSignatureDetail should render summary step for multi payment 1`] =
                         >
                           <span
                             class="whitespace-nowrap"
-                            data-testid="AmountCrypto"
+                            data-testid="Amount"
                           >
                             1 DARK
                           </span>
@@ -3020,7 +3020,7 @@ exports[`MultiSignatureDetail should render summary step for multi signature 1`]
                         >
                           <span
                             class="whitespace-nowrap"
-                            data-testid="AmountCrypto"
+                            data-testid="Amount"
                           >
                             15 DARK
                           </span>
@@ -3441,7 +3441,7 @@ exports[`MultiSignatureDetail should render summary step for transfer 1`] = `
                             >
                               <span
                                 class="whitespace-nowrap"
-                                data-testid="AmountCrypto"
+                                data-testid="Amount"
                               >
                                 - 1 DARK
                               </span>
@@ -3480,7 +3480,7 @@ exports[`MultiSignatureDetail should render summary step for transfer 1`] = `
                         >
                           <span
                             class="whitespace-nowrap"
-                            data-testid="AmountCrypto"
+                            data-testid="Amount"
                           >
                             1 DARK
                           </span>
@@ -3913,7 +3913,7 @@ exports[`MultiSignatureDetail should render summary step for unvote 1`] = `
                         >
                           <span
                             class="whitespace-nowrap"
-                            data-testid="AmountCrypto"
+                            data-testid="Amount"
                           >
                             1 DARK
                           </span>
@@ -4346,7 +4346,7 @@ exports[`MultiSignatureDetail should render summary step for vote 1`] = `
                         >
                           <span
                             class="whitespace-nowrap"
-                            data-testid="AmountCrypto"
+                            data-testid="Amount"
                           >
                             1 DARK
                           </span>
@@ -4965,7 +4965,7 @@ exports[`MultiSignatureDetail should show send button when able to add final sig
                             >
                               <span
                                 class="whitespace-nowrap"
-                                data-testid="AmountCrypto"
+                                data-testid="Amount"
                               >
                                 - 1 DARK
                               </span>
@@ -5004,7 +5004,7 @@ exports[`MultiSignatureDetail should show send button when able to add final sig
                         >
                           <span
                             class="whitespace-nowrap"
-                            data-testid="AmountCrypto"
+                            data-testid="Amount"
                           >
                             1 DARK
                           </span>
@@ -5451,7 +5451,7 @@ exports[`MultiSignatureDetail should show sign button when able to sign 1`] = `
                             >
                               <span
                                 class="whitespace-nowrap"
-                                data-testid="AmountCrypto"
+                                data-testid="Amount"
                               >
                                 - 1 DARK
                               </span>
@@ -5490,7 +5490,7 @@ exports[`MultiSignatureDetail should show sign button when able to sign 1`] = `
                         >
                           <span
                             class="whitespace-nowrap"
-                            data-testid="AmountCrypto"
+                            data-testid="Amount"
                           >
                             1 DARK
                           </span>

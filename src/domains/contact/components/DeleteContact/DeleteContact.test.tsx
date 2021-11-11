@@ -47,7 +47,7 @@ describe("DeleteContact", () => {
 
 		fireEvent.click(deleteButton);
 
-		await waitFor(() => expect(onDelete).toHaveBeenCalled());
+		await waitFor(() => expect(onDelete).toHaveBeenCalledWith(contact.id()));
 
 		expect(() => profile.contacts().findById(contact.id())).toThrow("Failed to find");
 	});

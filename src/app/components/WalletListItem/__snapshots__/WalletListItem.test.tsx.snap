@@ -117,7 +117,7 @@ exports[`WalletListItem should render for selected wallet 1`] = `
           >
             <span
               class="whitespace-nowrap"
-              data-testid="AmountCrypto"
+              data-testid="Amount"
             >
               33.75089801 DARK
             </span>
@@ -129,7 +129,7 @@ exports[`WalletListItem should render for selected wallet 1`] = `
           >
             <span
               class="whitespace-nowrap"
-              data-testid="AmountCrypto"
+              data-testid="Amount"
             >
               0 BTC
             </span>
@@ -272,7 +272,7 @@ exports[`WalletListItem should render when isCompact = false 1`] = `
           >
             <span
               class="whitespace-nowrap"
-              data-testid="AmountCrypto"
+              data-testid="Amount"
             >
               33.75089801 DARK
             </span>
@@ -422,7 +422,7 @@ exports[`WalletListItem should render when isCompact = true 1`] = `
           >
             <span
               class="whitespace-nowrap"
-              data-testid="AmountCrypto"
+              data-testid="Amount"
             >
               33.75089801 DARK
             </span>
@@ -572,7 +572,7 @@ exports[`WalletListItem should render with a N/A for fiat 1`] = `
           >
             <span
               class="whitespace-nowrap"
-              data-testid="AmountCrypto"
+              data-testid="Amount"
             >
               33.75089801 DARK
             </span>
@@ -722,7 +722,7 @@ exports[`WalletListItem should render with default BTC as default exchangeCurren
           >
             <span
               class="whitespace-nowrap"
-              data-testid="AmountCrypto"
+              data-testid="Amount"
             >
               33.75089801 DARK
             </span>

@@ -5,6 +5,7 @@ import { toasts } from "app/services";
 import electron from "electron";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
+import { Trans } from "react-i18next";
 import { env, fireEvent, getDefaultProfileId, MNEMONICS, render, waitFor } from "utils/testing-library";
 
 import { WalletOverviewStep } from "./WalletOverviewStep";
@@ -85,7 +86,13 @@ describe("WalletOverviewStep", () => {
 			fireEvent.click(getByTestId("CreateWallet__download"));
 
 			await waitFor(() => {
-				expect(toastSpy).toHaveBeenCalled();
+				expect(toastSpy).toHaveBeenCalledWith(
+					<Trans
+						components={{ bold: <strong /> }}
+						i18nKey="COMMON.SAVE_FILE.SUCCESS"
+						values={{ filePath: "filePath" }}
+					/>,
+				);
 			});
 
 			toastSpy.mockRestore();
@@ -149,7 +156,7 @@ describe("WalletOverviewStep", () => {
 			fireEvent.click(getByTestId("CreateWallet__download"));
 
 			await waitFor(() => {
-				expect(toastSpy).toHaveBeenCalled();
+				expect(toastSpy).toHaveBeenCalledWith(expect.stringMatching(/Could not save/));
 			});
 
 			toastSpy.mockRestore();

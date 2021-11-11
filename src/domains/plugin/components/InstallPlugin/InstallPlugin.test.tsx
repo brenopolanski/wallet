@@ -136,7 +136,7 @@ describe("InstallPlugin", () => {
 
 		fireEvent.click(screen.getByTestId("modal__close-btn"));
 
-		expect(onClose).toHaveBeenCalled();
+		expect(onClose).toHaveBeenCalledWith();
 
 		const downloadAndInstallPlugin = async () => {
 			fireEvent.click(screen.getByTestId("InstallPlugin__allow-button"));
@@ -197,7 +197,7 @@ describe("InstallPlugin", () => {
 
 		expect(pluginManager.plugins().findById(plugin.id)?.isEnabled(profile)).toBeTruthy();
 
-		expect(toastSpy).toHaveBeenCalled();
+		expect(toastSpy).toHaveBeenCalledWith(pluginTranslations.ENABLE_SUCCESS.replace("{{name}}", plugin.title));
 
 		pluginManager.plugins().removeById(plugin.id, profile);
 
@@ -264,7 +264,7 @@ describe("InstallPlugin", () => {
 
 		expect(pluginManager.plugins().findById(plugin.id)?.isEnabled(profile)).toBeFalsy();
 
-		expect(toastSpy).toHaveBeenCalled();
+		expect(toastSpy).toHaveBeenCalledWith(expect.stringMatching(/Failed to enable plugin/));
 
 		pluginManager.plugins().removeById(plugin.id, profile);
 

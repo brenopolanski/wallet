@@ -102,6 +102,7 @@ module.exports = {
 		"jest/no-conditional-expect": "off",
 		"jest/no-done-callback": "off",
 		"jest/no-identical-title": "error",
+		"jest/prefer-called-with": "error",
 		"jest/require-top-level-describe": "error",
 		"jest/require-to-throw-message": "error",
 		"jest/prefer-to-be": "error",

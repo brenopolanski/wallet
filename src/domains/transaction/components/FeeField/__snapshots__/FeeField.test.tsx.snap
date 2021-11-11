@@ -62,7 +62,7 @@ exports[`FeeField should render 1`] = `
           </div>
           <span
             class="whitespace-nowrap text-sm"
-            data-testid="AmountCrypto"
+            data-testid="Amount"
           >
             0.00357 DARK
           </span>
@@ -84,7 +84,7 @@ exports[`FeeField should render 1`] = `
           </div>
           <span
             class="whitespace-nowrap text-sm"
-            data-testid="AmountCrypto"
+            data-testid="Amount"
           >
             0.07320598 DARK
           </span>
@@ -106,7 +106,7 @@ exports[`FeeField should render 1`] = `
           </div>
           <span
             class="whitespace-nowrap text-sm"
-            data-testid="AmountCrypto"
+            data-testid="Amount"
           >
             0.1 DARK
           </span>

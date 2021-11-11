@@ -759,7 +759,7 @@ exports[`MultiSignature Registration Form should render review step 1`] = `
                   </span>
                   <span
                     class="whitespace-nowrap mt-1 text-lg font-semibold"
-                    data-testid="AmountCrypto"
+                    data-testid="Amount"
                   >
                     0 DARK
                   </span>
@@ -774,7 +774,7 @@ exports[`MultiSignature Registration Form should render review step 1`] = `
                   </span>
                   <span
                     class="whitespace-nowrap mt-1 text-lg font-semibold"
-                    data-testid="AmountCrypto"
+                    data-testid="Amount"
                   >
                     5 DARK
                   </span>
@@ -808,7 +808,7 @@ exports[`MultiSignature Registration Form should render review step 1`] = `
               </span>
               <span
                 class="whitespace-nowrap text-2xl font-bold"
-                data-testid="AmountCrypto"
+                data-testid="Amount"
               >
                 5 DARK
               </span>
@@ -840,7 +840,7 @@ exports[`MultiSignature Registration Form should render transaction details 1`] 
       >
         <span
           class="whitespace-nowrap"
-          data-testid="AmountCrypto"
+          data-testid="Amount"
         >
           5 DARK
         </span>
