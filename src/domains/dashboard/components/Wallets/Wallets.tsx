@@ -1,7 +1,7 @@
 import { Contracts } from "@payvo/profiles";
 import { DropdownOption } from "app/components/Dropdown";
 import { Section } from "app/components/Layout";
-import { useEnvironmentContext } from "app/contexts";
+import { useConfiguration, useEnvironmentContext } from "app/contexts";
 import { useActiveProfile } from "app/hooks";
 import { useWalletFilters } from "domains/dashboard/components/FilterWallets";
 import { WalletsControls } from "domains/dashboard/components/WalletsControls";
@@ -15,6 +15,7 @@ import { assertWallet } from "utils/assertions";
 
 import { useWalletDisplay, WalletsGrid, WalletsList } from ".";
 import { WalletsProperties } from "./Wallets.contracts";
+import { PortfolioBreakdownHeader } from "domains/dashboard/components/PortfolioBreakdownHeader";
 
 export const Wallets: FC<WalletsProperties> = ({
 	title,
@@ -30,6 +31,8 @@ export const Wallets: FC<WalletsProperties> = ({
 
 	const [modal, setModal] = useState<string | undefined>();
 	const [selectedWallet, setSelectedWallet] = useState<Contracts.IReadWriteWallet>();
+
+	const { profileIsSyncingExchangeRates } = useConfiguration();
 
 	const history = useHistory();
 	const activeProfile = useActiveProfile();
@@ -114,6 +117,11 @@ export const Wallets: FC<WalletsProperties> = ({
 					/>
 				</div>
 			</div>
+
+			<PortfolioBreakdownHeader
+				profile={activeProfile}
+				profileIsSyncingExchangeRates={profileIsSyncingExchangeRates}
+			/>
 
 			<WalletsGrid
 				actions={walletActions}
