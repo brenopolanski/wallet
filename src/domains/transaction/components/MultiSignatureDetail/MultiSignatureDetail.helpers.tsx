@@ -102,15 +102,23 @@ export const Paginator = ({
 };
 
 export const getMultiSignatureInfo = (transaction: DTO.ExtendedSignedTransactionData) => {
-	const { min, publicKeys, mandatoryKeys, numberOfSignatures } = transaction.get<{
+	const { min, publicKeys, mandatoryKeys, numberOfSignatures, optionalKeys } = transaction.get<{
+		optionalKeys: string[];
 		mandatoryKeys: string[];
 		publicKeys: string[];
 		min: number;
 		numberOfSignatures: number;
 	}>("multiSignature");
 
+	if (transaction.wallet().network().multiSignatureType() === "advanced") {
+		return {
+			publicKeys: [...mandatoryKeys, ...optionalKeys],
+			min: numberOfSignatures,
+		};
+	}
+
 	return {
-		min: min ?? numberOfSignatures,
-		publicKeys: publicKeys || mandatoryKeys,
+		min,
+		publicKeys,
 	};
 };
