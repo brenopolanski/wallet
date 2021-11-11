@@ -1,6 +1,6 @@
 import { sortByDesc } from "@arkecosystem/utils";
 import { GRAPH_COLORS } from "app/components/Graphs/Graphs.shared";
-import { LineGraphMapper, LineGraphDataPoint } from "app/components/Graphs/LineGraph/LineGraph.contracts";
+import { LineGraphDataPoint, LineGraphMapper } from "app/components/Graphs/LineGraph/LineGraph.contracts";
 import { AssetItem } from "domains/dashboard/hooks/use-portfolio-breakdown";
 
 const getColor = (index: number): string => {
