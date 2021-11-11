@@ -36,7 +36,7 @@ describe("SelectProfileImage", () => {
 
 		userEvent.click(screen.getByTestId("SelectProfileImage__remove-button"));
 
-		expect(onSelect).toHaveBeenCalled();
+		expect(onSelect).toHaveBeenCalledWith(expect.any(String));
 	});
 
 	it("should handle upload file", async () => {
@@ -64,7 +64,7 @@ describe("SelectProfileImage", () => {
 			}),
 		).resolves.not.toThrow();
 
-		await waitFor(() => expect(onSelect).toHaveBeenCalled());
+		await waitFor(() => expect(onSelect).toHaveBeenCalledWith(expect.any(String)));
 	});
 
 	it("should not allow to upload an invalid file image", async () => {

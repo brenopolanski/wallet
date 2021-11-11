@@ -1,5 +1,5 @@
 import { Contracts } from "@payvo/profiles";
-import { translations as commonTranslations } from "app/i18n/common/i18n";
+import { buildTranslations } from "app/i18n/helpers";
 import { toasts } from "app/services";
 import { ipcRenderer } from "electron";
 import nock from "nock";
@@ -18,8 +18,9 @@ import {
 	within,
 } from "utils/testing-library";
 
-import { translations } from "../../i18n";
 import { PluginDetails } from "./PluginDetails";
+
+const translations = buildTranslations();
 
 describe("PluginDetails", () => {
 	let profile: Contracts.IProfile;
@@ -251,11 +252,13 @@ describe("PluginDetails", () => {
 		await screen.findByText("Test Plugin");
 
 		fireEvent.click(within(screen.getByTestId("plugin-details__header")).getByTestId("dropdown__toggle"));
-		fireEvent.click(screen.getByText(commonTranslations.ENABLE));
+		fireEvent.click(screen.getByText(translations.COMMON.ENABLE));
 
 		await waitFor(() => expect(plugin.isEnabled(profile)).toBe(true));
 
-		expect(toastSpy).toHaveBeenCalled();
+		expect(toastSpy).toHaveBeenCalledWith(
+			translations.PLUGINS.ENABLE_SUCCESS.replace("{{name}}", plugin.config().title() as string),
+		);
 
 		pluginManager.plugins().removeById(plugin.config().id(), profile);
 
@@ -295,9 +298,9 @@ describe("PluginDetails", () => {
 		await screen.findByText("Test Plugin");
 
 		fireEvent.click(within(screen.getByTestId("plugin-details__header")).getByTestId("dropdown__toggle"));
-		fireEvent.click(screen.getByText(commonTranslations.ENABLE));
+		fireEvent.click(screen.getByText(translations.COMMON.ENABLE));
 
-		await waitFor(() => expect(toastSpy).toHaveBeenCalled());
+		await waitFor(() => expect(toastSpy).toHaveBeenCalledWith(expect.stringMatching(/Failed to enable/)));
 
 		pluginManager.plugins().removeById(plugin.config().id(), profile);
 
@@ -336,7 +339,7 @@ describe("PluginDetails", () => {
 		await screen.findByText("Test Plugin");
 
 		fireEvent.click(within(screen.getByTestId("plugin-details__header")).getByTestId("dropdown__toggle"));
-		fireEvent.click(screen.getByText(commonTranslations.DISABLE));
+		fireEvent.click(screen.getByText(translations.COMMON.DISABLE));
 
 		await waitFor(() => expect(plugin.isEnabled(profile)).toBe(false));
 		pluginManager.plugins().removeById(plugin.config().id(), profile);
@@ -373,7 +376,7 @@ describe("PluginDetails", () => {
 		await screen.findByText("Test Plugin");
 
 		fireEvent.click(within(screen.getByTestId("plugin-details__header")).getByTestId("dropdown__toggle"));
-		fireEvent.click(screen.getByText(commonTranslations.DELETE));
+		fireEvent.click(screen.getByText(translations.COMMON.DELETE));
 
 		const invokeMock = jest.spyOn(ipcRenderer, "invoke").mockResolvedValue([]);
 		fireEvent.click(screen.getByTestId("PluginUninstall__submit-button"));
@@ -417,7 +420,7 @@ describe("PluginDetails", () => {
 		await screen.findByText("Test Plugin");
 
 		fireEvent.click(within(screen.getByTestId("plugin-details__header")).getByTestId("dropdown__toggle"));
-		fireEvent.click(screen.getByText(commonTranslations.DELETE));
+		fireEvent.click(screen.getByText(translations.COMMON.DELETE));
 
 		const invokeMock = jest.spyOn(ipcRenderer, "invoke").mockResolvedValue([]);
 		fireEvent.click(screen.getByTestId("PluginUninstall__cancel-button"));
@@ -471,13 +474,17 @@ describe("PluginDetails", () => {
 
 		fireEvent.click(screen.getByTestId("PluginHeader__button--install"));
 
-		expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_INSTALL_PLUGIN.DESCRIPTION);
-
-		fireEvent.click(screen.getByTestId("InstallPlugin__allow-button"));
+		expect(screen.getByTestId("modal__inner")).toHaveTextContent(
+			translations.PLUGINS.MODAL_INSTALL_PLUGIN.DESCRIPTION,
+		);
 
 		const toastSpy = jest.spyOn(toasts, "error");
 
-		await waitFor(() => expect(toastSpy).toHaveBeenCalled());
+		fireEvent.click(screen.getByTestId("InstallPlugin__allow-button"));
+
+		await waitFor(() => {
+			expect(toastSpy).toHaveBeenCalledWith(expect.stringMatching(/Failed to download/));
+		});
 	});
 
 	it("should install package", async () => {
@@ -532,7 +539,9 @@ describe("PluginDetails", () => {
 
 		fireEvent.click(screen.getByTestId("PluginHeader__button--install"));
 
-		expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_INSTALL_PLUGIN.DESCRIPTION);
+		expect(screen.getByTestId("modal__inner")).toHaveTextContent(
+			translations.PLUGINS.MODAL_INSTALL_PLUGIN.DESCRIPTION,
+		);
 
 		fireEvent.click(screen.getByTestId("InstallPlugin__allow-button"));
 
@@ -579,8 +588,8 @@ describe("PluginDetails", () => {
 
 		fireEvent.click(within(screen.getByTestId("plugin-details__header")).getByTestId("dropdown__toggle"));
 
-		await screen.findByText(commonTranslations.UPDATE);
-		fireEvent.click(screen.getByText(commonTranslations.UPDATE));
+		await screen.findByText(translations.COMMON.UPDATE);
+		fireEvent.click(screen.getByText(translations.COMMON.UPDATE));
 
 		await waitFor(() =>
 			expect(ipcRendererSpy).toHaveBeenLastCalledWith("plugin:download", {

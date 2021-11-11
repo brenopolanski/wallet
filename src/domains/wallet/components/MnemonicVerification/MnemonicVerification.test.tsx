@@ -72,7 +72,7 @@ describe("MnemonicVerification", () => {
 		const thirdButton = getByText(mnemonicWords[wordPositions[2] - 1]);
 		fireEvent.click(thirdButton);
 
-		expect(handleComplete).toHaveBeenCalled();
+		expect(handleComplete).toHaveBeenCalledWith();
 	});
 
 	it("should ask for random words", () => {

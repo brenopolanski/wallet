@@ -32,7 +32,7 @@ export const FeeWarning = ({ isOpen, variant, onCancel, onConfirm }: FeeWarningP
 			title={t("TRANSACTION.MODAL_FEE_WARNING.TITLE")}
 			image={<Image name="WarningBanner" className="my-8 mx-auto" />}
 			size="lg"
-			onClose={onCancel}
+			onClose={() => onCancel(true)}
 		>
 			<div className="mt-8 mb-6 text-theme-secondary-text">
 				{variant && t(`TRANSACTION.MODAL_FEE_WARNING.DESCRIPTION.TOO_${variant}`)}

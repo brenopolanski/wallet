@@ -35,6 +35,6 @@ describe("ResetProfile", () => {
 
 		await waitFor(() => expect(profile.settings().get(Contracts.ProfileSetting.Theme)).not.toBe(theme));
 
-		expect(onReset).toHaveBeenCalled();
+		expect(onReset).toHaveBeenCalledWith();
 	});
 });

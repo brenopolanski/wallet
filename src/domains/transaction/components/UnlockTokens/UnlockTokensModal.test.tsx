@@ -1,6 +1,7 @@
 import { BigNumber } from "@payvo/helpers";
 import { DateTime } from "@payvo/intl";
 import { Contracts } from "@payvo/profiles";
+import { Signatories } from "@payvo/sdk";
 import { LSK } from "@payvo/sdk-lsk";
 import { fireEvent, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
@@ -25,6 +26,14 @@ describe("UnlockTokensModal", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
 
+	const unlockableBalanceItemMock = {
+		address: "lsk5gjpsoqgchb8shk8hvwez6ddx3a4b8gga59rw4",
+		amount: BigNumber.make(30),
+		height: "789",
+		isReady: true,
+		timestamp: DateTime.make("2020-01-01T00:00:00.000Z"),
+	};
+
 	beforeAll(async () => {
 		nock.disableNetConnect();
 
@@ -46,15 +55,7 @@ describe("UnlockTokensModal", () => {
 
 		jest.spyOn(wallet.coin().client(), "unlockableBalances").mockResolvedValue({
 			current: BigNumber.make(30),
-			objects: [
-				{
-					address: "lsk5gjpsoqgchb8shk8hvwez6ddx3a4b8gga59rw4",
-					amount: BigNumber.make(30),
-					height: "789",
-					isReady: true,
-					timestamp: DateTime.make("2020-01-01T00:00:00.000Z"),
-				},
-			],
+			objects: [unlockableBalanceItemMock],
 			pending: BigNumber.make(0),
 		});
 
@@ -104,7 +105,7 @@ describe("UnlockTokensModal", () => {
 
 		userEvent.click(screen.getByText(translations.COMMON.CLOSE));
 
-		expect(onClose).toHaveBeenCalled();
+		expect(onClose).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
 
 	it.each(["success", "error"])("should handle unlock token transaction with %s", async (expectedOutcome) => {
@@ -216,8 +217,19 @@ describe("UnlockTokensModal", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 
-		expect(signMock).toHaveBeenCalled();
-		expect(broadcastMock).toHaveBeenCalled();
+		expect(signMock).toHaveBeenCalledWith({
+			data: {
+				objects: [
+					{
+						...unlockableBalanceItemMock,
+						id: expect.any(String),
+					},
+				],
+			},
+			signatory: expect.any(Signatories.Signatory),
+		});
+
+		expect(broadcastMock).toHaveBeenCalledWith(transactionFixture.data.id);
 
 		signMock.mockRestore();
 		broadcastMock.mockRestore();

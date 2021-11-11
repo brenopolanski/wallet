@@ -78,7 +78,15 @@ describe("useProfileTransactions", () => {
 
 		await hook.waitForNextUpdate();
 
-		expect(mockTransactionsAggregate).toHaveBeenCalled();
+		const distinctAddresses = [...new Set(items.map((item) => item.wallet().address()))];
+
+		expect(mockTransactionsAggregate).toHaveBeenCalledWith({
+			identifiers: distinctAddresses.map((address) => ({
+				type: "address",
+				value: address,
+			})),
+			limit: 30,
+		});
 
 		await waitFor(() => expect(hook.result.current.transactions).toHaveLength(items.length));
 

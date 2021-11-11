@@ -1,4 +1,4 @@
-import { uniq } from "@arkecosystem/utils";
+import { uniq } from "@payvo/helpers";
 import { Contracts } from "@payvo/profiles";
 import { act, renderHook } from "@testing-library/react-hooks";
 import { ConfigurationProvider, EnvironmentProvider } from "app/contexts";

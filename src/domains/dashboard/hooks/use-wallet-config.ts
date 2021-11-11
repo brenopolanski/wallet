@@ -1,4 +1,4 @@
-import { uniq } from "@arkecosystem/utils";
+import { uniq } from "@payvo/helpers";
 import { Contracts } from "@payvo/profiles";
 import { useConfiguration, useEnvironmentContext } from "app/contexts";
 import { DashboardConfiguration } from "domains/dashboard/pages/Dashboard";

@@ -56,7 +56,7 @@ describe("SignIn", () => {
 		fireEvent.click(getByTestId("SignIn__cancel-button"));
 
 		await waitFor(() => {
-			expect(onCancel).toHaveBeenCalled();
+			expect(onCancel).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 		});
 	});
 
@@ -73,7 +73,7 @@ describe("SignIn", () => {
 		fireEvent.click(getByTestId("SignIn__submit-button"));
 
 		await waitFor(() => {
-			expect(onSuccess).toHaveBeenCalled();
+			expect(onSuccess).toHaveBeenCalledWith(getDefaultPassword());
 		});
 	});
 

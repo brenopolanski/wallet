@@ -1,4 +1,4 @@
-import { truncate } from "@arkecosystem/utils";
+import { truncate } from "@payvo/helpers";
 import { Contracts } from "@payvo/profiles";
 import { Coins, Networks } from "@payvo/sdk";
 import { Divider } from "app/components/Divider";

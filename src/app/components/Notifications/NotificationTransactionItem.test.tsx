@@ -57,7 +57,7 @@ describe("Notifications", () => {
 			</table>,
 		);
 		await waitFor(() => expect(getAllByTestId("TransactionRowMode")).toHaveLength(1));
-		await waitFor(() => expect(onVisibilityChange).toHaveBeenCalled());
+		await waitFor(() => expect(onVisibilityChange).toHaveBeenCalledWith(expect.any(Boolean)));
 	});
 
 	it("should emit events onTransactionClick", async () => {
@@ -78,6 +78,6 @@ describe("Notifications", () => {
 
 		fireEvent.click(getByTestId("TransactionRowMode"));
 
-		await waitFor(() => expect(onTransactionClick).toHaveBeenCalled());
+		await waitFor(() => expect(onTransactionClick).toHaveBeenCalledWith(notificationTransaction));
 	});
 });

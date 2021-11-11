@@ -170,10 +170,10 @@ describe("Password Settings", () => {
 		fireEvent.click(getByTestId("Password-settings__submit-button"));
 
 		await waitFor(() => {
-			expect(toastSpy).toHaveBeenCalledWith(
-				`${translations.COMMON.ERROR}: ${translations.SETTINGS.PASSWORD.ERROR.MISMATCH}`,
-			);
+			expect(getByTestId("Password-settings__submit-button")).toBeEnabled();
 		});
+
+		expect(toastSpy).toHaveBeenCalledWith(`${translations.SETTINGS.PASSWORD.ERROR.MISMATCH}`);
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -320,7 +320,7 @@ describe("Password Settings", () => {
 			target: { value: password },
 		});
 
-		await waitFor(() => expect(screen.getByTestId("PasswordRemovalConfirmModal__confirm")).not.toBeDisabled());
+		await waitFor(() => expect(screen.getByTestId("PasswordRemovalConfirmModal__confirm")).toBeEnabled());
 
 		userEvent.click(screen.getByTestId("PasswordRemovalConfirmModal__confirm"));
 
@@ -369,15 +369,11 @@ describe("Password Settings", () => {
 			target: { value: "S3cUrePa$swordWrong" },
 		});
 
-		await waitFor(() => expect(screen.getByTestId("PasswordRemovalConfirmModal__confirm")).not.toBeDisabled());
+		await waitFor(() => expect(screen.getByTestId("PasswordRemovalConfirmModal__confirm")).toBeEnabled());
 
 		userEvent.click(screen.getByTestId("PasswordRemovalConfirmModal__confirm"));
 
-		await waitFor(() =>
-			expect(toastSpy).toHaveBeenCalledWith(
-				`${translations.COMMON.ERROR}: ${translations.SETTINGS.PASSWORD.ERROR.MISMATCH}`,
-			),
-		);
+		await waitFor(() => expect(toastSpy).toHaveBeenCalledWith(`${translations.SETTINGS.PASSWORD.ERROR.MISMATCH}`));
 
 		toastSpy.mockRestore();
 	});

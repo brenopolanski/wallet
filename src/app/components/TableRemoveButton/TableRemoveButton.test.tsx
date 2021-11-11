@@ -27,6 +27,6 @@ describe("TableRemoveButton", () => {
 
 		fireEvent.click(screen.getByTestId("TableRemoveButton"));
 
-		expect(onClick).toHaveBeenCalled();
+		expect(onClick).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
 });

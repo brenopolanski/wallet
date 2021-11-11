@@ -135,7 +135,7 @@ describe("EncryptionPasswordStep", () => {
 
 		fireEvent.click(screen.getByTestId("CreateWallet__finish-button"));
 
-		await waitFor(() => expect(walletSpy).toHaveBeenCalled());
+		await waitFor(() => expect(walletSpy).toHaveBeenCalledWith());
 		walletSpy.mockRestore();
 	});
 
@@ -250,7 +250,7 @@ describe("EncryptionPasswordStep", () => {
 		await screen.findByTestId("CreateWallet__SuccessStep");
 
 		expect(profile.wallets().values()).toHaveLength(1);
-		expect(walletSpy).toHaveBeenCalled();
+		expect(walletSpy).toHaveBeenCalledWith();
 
 		fireEvent.click(screen.getByTestId("CreateWallet__finish-button"));
 

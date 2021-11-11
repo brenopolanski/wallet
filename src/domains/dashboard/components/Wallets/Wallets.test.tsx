@@ -193,7 +193,7 @@ describe("Wallets", () => {
 
 		fireEvent.click(getByTestId("WalletControls__create-wallet"));
 
-		expect(onCreateWallet).toHaveBeenCalled();
+		expect(onCreateWallet).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
 
 	it("should handle wallet import", () => {
@@ -210,7 +210,7 @@ describe("Wallets", () => {
 
 		fireEvent.click(getByTestId("WalletControls__import-wallet"));
 
-		expect(onImportWallet).toHaveBeenCalled();
+		expect(onImportWallet).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
 
 	it("should handle filter change", async () => {

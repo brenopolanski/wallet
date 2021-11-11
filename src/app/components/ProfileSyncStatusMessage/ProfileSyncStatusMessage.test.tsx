@@ -71,7 +71,7 @@ describe("SyncErrorMessage", () => {
 
 		fireEvent.click(getByTestId("SyncErrorMessage__retry"));
 
-		await waitFor(() => expect(onRetry).toHaveBeenCalled());
+		await waitFor(() => expect(onRetry).toHaveBeenCalledWith());
 
 		expect(container).toMatchSnapshot();
 	});

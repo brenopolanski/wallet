@@ -210,9 +210,9 @@ describe("DelegateRegistrationForm", () => {
 			profile,
 		});
 
-		expect(signMock).toHaveBeenCalled();
-		expect(broadcastMock).toHaveBeenCalled();
-		expect(transactionMock).toHaveBeenCalled();
+		expect(signMock).toHaveBeenCalledWith({ data: { username: "test_delegate" }, fee: 1 });
+		expect(broadcastMock).toHaveBeenCalledWith(delegateRegistrationFixture.data.id);
+		expect(transactionMock).toHaveBeenCalledWith(delegateRegistrationFixture.data.id);
 
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
@@ -276,9 +276,9 @@ describe("DelegateRegistrationForm", () => {
 			profile,
 		});
 
-		expect(signMock).toHaveBeenCalled();
-		expect(broadcastMock).toHaveBeenCalled();
-		expect(transactionMock).toHaveBeenCalled();
+		expect(signMock).toHaveBeenCalledWith({ data: { username: "test_delegate" }, fee: 1 });
+		expect(broadcastMock).toHaveBeenCalledWith(delegateRegistrationFixture.data.id);
+		expect(transactionMock).toHaveBeenCalledWith(delegateRegistrationFixture.data.id);
 
 		signMock.mockRestore();
 		broadcastMock.mockRestore();

@@ -666,7 +666,7 @@ describe("useProfileRestore", () => {
 
 		await findByTestId("ProfileRestored", undefined, { timeout: 4000 });
 
-		await waitFor(() => expect(historyMock).toHaveBeenCalled(), { timeout: 4000 });
+		await waitFor(() => expect(historyMock).toHaveBeenCalledWith("/"), { timeout: 4000 });
 
 		process.env.TEST_PROFILES_RESTORE_STATUS = "restored";
 		idleTimeMock.mockRestore();
@@ -711,7 +711,7 @@ describe("useProfileRestore", () => {
 			},
 		);
 
-		await waitFor(() => expect(profileSyncMock).toHaveBeenCalled());
+		await waitFor(() => expect(profileSyncMock).toHaveBeenCalledWith());
 
 		profileSyncMock.mockRestore();
 	});
@@ -846,7 +846,10 @@ describe("useProfileStatusWatcher", () => {
 		});
 
 		expect(onProfileSyncComplete).not.toHaveBeenCalled();
-		expect(onProfileSyncError).toHaveBeenCalled();
+		expect(onProfileSyncError).toHaveBeenCalledWith(
+			expect.arrayContaining([expect.any(String)]),
+			expect.any(Function),
+		);
 
 		mockWalletSyncStatus.mockRestore();
 	});

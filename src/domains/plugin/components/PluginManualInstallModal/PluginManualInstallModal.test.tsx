@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
+import { buildTranslations } from "app/i18n/helpers";
 import { toasts } from "app/services";
 import nock from "nock";
 import { PluginManager } from "plugins";
@@ -7,6 +8,8 @@ import React from "react";
 import { fireEvent, render, screen, waitFor } from "utils/testing-library";
 
 import { PluginManualInstallModal } from "./PluginManualInstallModal";
+
+const translations = buildTranslations();
 
 describe("PluginManualInstallModal", () => {
 	let manager: PluginManager;
@@ -56,7 +59,9 @@ describe("PluginManualInstallModal", () => {
 
 		fireEvent.click(screen.getByTestId("PluginManualInstallModal__submit-button"));
 
-		await waitFor(() => expect(toastSpy).toHaveBeenCalled());
+		await waitFor(() =>
+			expect(toastSpy).toHaveBeenCalledWith(translations.PLUGINS.MODAL_MANUAL_INSTALL_PLUGIN.ERROR),
+		);
 
 		fireEvent.input(screen.getByRole("textbox"), {
 			target: { value: "https://github.com/arkecosystem/test-plugin" },

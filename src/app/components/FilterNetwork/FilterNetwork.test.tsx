@@ -65,7 +65,7 @@ describe("ToggleAllOption", () => {
 		const { getByTestId } = render(<ToggleAllOption isSelected onClick={onClick} />);
 		fireEvent.click(getByTestId("network__viewall"));
 
-		expect(onClick).toHaveBeenCalled();
+		expect(onClick).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
 });
 

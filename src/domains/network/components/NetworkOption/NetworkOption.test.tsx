@@ -40,7 +40,7 @@ describe("NetworkIcon", () => {
 
 		fireEvent.click(getByTestId("SelectNetwork__NetworkIcon--container"));
 
-		expect(onClick).toHaveBeenCalled();
+		expect(onClick).toHaveBeenCalledWith();
 	});
 
 	it("should not call onClick callback if disabled", () => {

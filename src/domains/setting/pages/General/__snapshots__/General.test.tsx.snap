@@ -427,7 +427,7 @@ exports[`General Settings should disable submit button when profile is not resto
                   </div>
                 </div>
                 <form
-                  class="space-y-12"
+                  class="space-y-8"
                   data-testid="General-settings__form"
                 >
                   <div
@@ -1334,7 +1334,7 @@ exports[`General Settings should disable submit button when profile is not resto
                         </div>
                       </li>
                       <li
-                        class="flex flex-col w-full py-6"
+                        class="flex flex-col w-full pt-6"
                         data-testid="list-divided-item__wrapper"
                       >
                         <div
@@ -1385,7 +1385,7 @@ exports[`General Settings should disable submit button when profile is not resto
                     </ul>
                   </div>
                   <div
-                    class="flex justify-between pt-2 w-full"
+                    class="flex justify-between w-full"
                   >
                     <button
                       class="OriginalButton__StyledButton-sc-o0fs2j-0 bAsnxQ"
@@ -1408,33 +1408,18 @@ exports[`General Settings should disable submit button when profile is not resto
                         </span>
                       </div>
                     </button>
-                    <div
-                      class="space-x-3"
+                    <button
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd"
+                      data-testid="General-settings__submit-button"
+                      disabled=""
+                      type="submit"
                     >
-                      <button
-                        class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
-                        data-testid="General-settings__cancel-button"
-                        type="button"
+                      <div
+                        class="flex items-center space-x-2"
                       >
-                        <div
-                          class="flex items-center space-x-2"
-                        >
-                          Cancel
-                        </div>
-                      </button>
-                      <button
-                        class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd"
-                        data-testid="General-settings__submit-button"
-                        disabled=""
-                        type="submit"
-                      >
-                        <div
-                          class="flex items-center space-x-2"
-                        >
-                          Save
-                        </div>
-                      </button>
-                    </div>
+                        Save
+                      </div>
+                    </button>
                   </div>
                 </form>
               </div>
@@ -1868,7 +1853,7 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                   </div>
                 </div>
                 <form
-                  class="space-y-12"
+                  class="space-y-8"
                   data-testid="General-settings__form"
                 >
                   <div
@@ -2793,7 +2778,7 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                         </div>
                       </li>
                       <li
-                        class="flex flex-col w-full py-6"
+                        class="flex flex-col w-full pt-6"
                         data-testid="list-divided-item__wrapper"
                       >
                         <div
@@ -2844,7 +2829,7 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                     </ul>
                   </div>
                   <div
-                    class="flex justify-between pt-2 w-full"
+                    class="flex justify-between w-full"
                   >
                     <button
                       class="OriginalButton__StyledButton-sc-o0fs2j-0 bAsnxQ"
@@ -2867,32 +2852,17 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                         </span>
                       </div>
                     </button>
-                    <div
-                      class="space-x-3"
+                    <button
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
+                      data-testid="General-settings__submit-button"
+                      type="submit"
                     >
-                      <button
-                        class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
-                        data-testid="General-settings__cancel-button"
-                        type="button"
+                      <div
+                        class="flex items-center space-x-2"
                       >
-                        <div
-                          class="flex items-center space-x-2"
-                        >
-                          Cancel
-                        </div>
-                      </button>
-                      <button
-                        class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
-                        data-testid="General-settings__submit-button"
-                        type="submit"
-                      >
-                        <div
-                          class="flex items-center space-x-2"
-                        >
-                          Save
-                        </div>
-                      </button>
-                    </div>
+                        Save
+                      </div>
+                    </button>
                   </div>
                 </form>
               </div>
@@ -3326,7 +3296,7 @@ exports[`General Settings should render 1`] = `
                   </div>
                 </div>
                 <form
-                  class="space-y-12"
+                  class="space-y-8"
                   data-testid="General-settings__form"
                 >
                   <div
@@ -4233,7 +4203,7 @@ exports[`General Settings should render 1`] = `
                         </div>
                       </li>
                       <li
-                        class="flex flex-col w-full py-6"
+                        class="flex flex-col w-full pt-6"
                         data-testid="list-divided-item__wrapper"
                       >
                         <div
@@ -4284,7 +4254,7 @@ exports[`General Settings should render 1`] = `
                     </ul>
                   </div>
                   <div
-                    class="flex justify-between pt-2 w-full"
+                    class="flex justify-between w-full"
                   >
                     <button
                       class="OriginalButton__StyledButton-sc-o0fs2j-0 bAsnxQ"
@@ -4307,32 +4277,17 @@ exports[`General Settings should render 1`] = `
                         </span>
                       </div>
                     </button>
-                    <div
-                      class="space-x-3"
+                    <button
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
+                      data-testid="General-settings__submit-button"
+                      type="submit"
                     >
-                      <button
-                        class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
-                        data-testid="General-settings__cancel-button"
-                        type="button"
+                      <div
+                        class="flex items-center space-x-2"
                       >
-                        <div
-                          class="flex items-center space-x-2"
-                        >
-                          Cancel
-                        </div>
-                      </button>
-                      <button
-                        class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
-                        data-testid="General-settings__submit-button"
-                        type="submit"
-                      >
-                        <div
-                          class="flex items-center space-x-2"
-                        >
-                          Save
-                        </div>
-                      </button>
-                    </div>
+                        Save
+                      </div>
+                    </button>
                   </div>
                 </form>
               </div>
@@ -4766,7 +4721,7 @@ exports[`General Settings should show identicon when removing image if name is s
                   </div>
                 </div>
                 <form
-                  class="space-y-12"
+                  class="space-y-8"
                   data-testid="General-settings__form"
                 >
                   <div
@@ -5673,7 +5628,7 @@ exports[`General Settings should show identicon when removing image if name is s
                         </div>
                       </li>
                       <li
-                        class="flex flex-col w-full py-6"
+                        class="flex flex-col w-full pt-6"
                         data-testid="list-divided-item__wrapper"
                       >
                         <div
@@ -5724,7 +5679,7 @@ exports[`General Settings should show identicon when removing image if name is s
                     </ul>
                   </div>
                   <div
-                    class="flex justify-between pt-2 w-full"
+                    class="flex justify-between w-full"
                   >
                     <button
                       class="OriginalButton__StyledButton-sc-o0fs2j-0 bAsnxQ"
@@ -5747,32 +5702,17 @@ exports[`General Settings should show identicon when removing image if name is s
                         </span>
                       </div>
                     </button>
-                    <div
-                      class="space-x-3"
+                    <button
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
+                      data-testid="General-settings__submit-button"
+                      type="submit"
                     >
-                      <button
-                        class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
-                        data-testid="General-settings__cancel-button"
-                        type="button"
+                      <div
+                        class="flex items-center space-x-2"
                       >
-                        <div
-                          class="flex items-center space-x-2"
-                        >
-                          Cancel
-                        </div>
-                      </button>
-                      <button
-                        class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
-                        data-testid="General-settings__submit-button"
-                        type="submit"
-                      >
-                        <div
-                          class="flex items-center space-x-2"
-                        >
-                          Save
-                        </div>
-                      </button>
-                    </div>
+                        Save
+                      </div>
+                    </button>
                   </div>
                 </form>
               </div>
@@ -6206,7 +6146,7 @@ exports[`General Settings should update profile 1`] = `
                   </div>
                 </div>
                 <form
-                  class="space-y-12"
+                  class="space-y-8"
                   data-testid="General-settings__form"
                 >
                   <div
@@ -7114,7 +7054,7 @@ exports[`General Settings should update profile 1`] = `
                         </div>
                       </li>
                       <li
-                        class="flex flex-col w-full py-6"
+                        class="flex flex-col w-full pt-6"
                         data-testid="list-divided-item__wrapper"
                       >
                         <div
@@ -7165,7 +7105,7 @@ exports[`General Settings should update profile 1`] = `
                     </ul>
                   </div>
                   <div
-                    class="flex justify-between pt-2 w-full"
+                    class="flex justify-between w-full"
                   >
                     <button
                       class="OriginalButton__StyledButton-sc-o0fs2j-0 bAsnxQ"
@@ -7188,32 +7128,17 @@ exports[`General Settings should update profile 1`] = `
                         </span>
                       </div>
                     </button>
-                    <div
-                      class="space-x-3"
+                    <button
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
+                      data-testid="General-settings__submit-button"
+                      type="submit"
                     >
-                      <button
-                        class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
-                        data-testid="General-settings__cancel-button"
-                        type="button"
+                      <div
+                        class="flex items-center space-x-2"
                       >
-                        <div
-                          class="flex items-center space-x-2"
-                        >
-                          Cancel
-                        </div>
-                      </button>
-                      <button
-                        class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
-                        data-testid="General-settings__submit-button"
-                        type="submit"
-                      >
-                        <div
-                          class="flex items-center space-x-2"
-                        >
-                          Save
-                        </div>
-                      </button>
-                    </div>
+                        Save
+                      </div>
+                    </button>
                   </div>
                 </form>
               </div>
@@ -7647,7 +7572,7 @@ exports[`General Settings should update the avatar when removing focus from name
                   </div>
                 </div>
                 <form
-                  class="space-y-12"
+                  class="space-y-8"
                   data-testid="General-settings__form"
                 >
                   <div
@@ -8554,7 +8479,7 @@ exports[`General Settings should update the avatar when removing focus from name
                         </div>
                       </li>
                       <li
-                        class="flex flex-col w-full py-6"
+                        class="flex flex-col w-full pt-6"
                         data-testid="list-divided-item__wrapper"
                       >
                         <div
@@ -8605,7 +8530,7 @@ exports[`General Settings should update the avatar when removing focus from name
                     </ul>
                   </div>
                   <div
-                    class="flex justify-between pt-2 w-full"
+                    class="flex justify-between w-full"
                   >
                     <button
                       class="OriginalButton__StyledButton-sc-o0fs2j-0 bAsnxQ"
@@ -8628,32 +8553,17 @@ exports[`General Settings should update the avatar when removing focus from name
                         </span>
                       </div>
                     </button>
-                    <div
-                      class="space-x-3"
+                    <button
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
+                      data-testid="General-settings__submit-button"
+                      type="submit"
                     >
-                      <button
-                        class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
-                        data-testid="General-settings__cancel-button"
-                        type="button"
+                      <div
+                        class="flex items-center space-x-2"
                       >
-                        <div
-                          class="flex items-center space-x-2"
-                        >
-                          Cancel
-                        </div>
-                      </button>
-                      <button
-                        class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
-                        data-testid="General-settings__submit-button"
-                        type="submit"
-                      >
-                        <div
-                          class="flex items-center space-x-2"
-                        >
-                          Save
-                        </div>
-                      </button>
-                    </div>
+                        Save
+                      </div>
+                    </button>
                   </div>
                 </form>
               </div>
@@ -9087,7 +8997,7 @@ exports[`General Settings should update the avatar when removing focus from name
                   </div>
                 </div>
                 <form
-                  class="space-y-12"
+                  class="space-y-8"
                   data-testid="General-settings__form"
                 >
                   <div
@@ -10006,7 +9916,7 @@ exports[`General Settings should update the avatar when removing focus from name
                         </div>
                       </li>
                       <li
-                        class="flex flex-col w-full py-6"
+                        class="flex flex-col w-full pt-6"
                         data-testid="list-divided-item__wrapper"
                       >
                         <div
@@ -10057,7 +9967,7 @@ exports[`General Settings should update the avatar when removing focus from name
                     </ul>
                   </div>
                   <div
-                    class="flex justify-between pt-2 w-full"
+                    class="flex justify-between w-full"
                   >
                     <button
                       class="OriginalButton__StyledButton-sc-o0fs2j-0 bAsnxQ"
@@ -10080,33 +9990,18 @@ exports[`General Settings should update the avatar when removing focus from name
                         </span>
                       </div>
                     </button>
-                    <div
-                      class="space-x-3"
+                    <button
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd"
+                      data-testid="General-settings__submit-button"
+                      disabled=""
+                      type="submit"
                     >
-                      <button
-                        class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
-                        data-testid="General-settings__cancel-button"
-                        type="button"
+                      <div
+                        class="flex items-center space-x-2"
                       >
-                        <div
-                          class="flex items-center space-x-2"
-                        >
-                          Cancel
-                        </div>
-                      </button>
-                      <button
-                        class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd"
-                        data-testid="General-settings__submit-button"
-                        disabled=""
-                        type="submit"
-                      >
-                        <div
-                          class="flex items-center space-x-2"
-                        >
-                          Save
-                        </div>
-                      </button>
-                    </div>
+                        Save
+                      </div>
+                    </button>
                   </div>
                 </form>
               </div>

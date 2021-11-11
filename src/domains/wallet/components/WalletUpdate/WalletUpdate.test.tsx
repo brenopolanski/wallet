@@ -56,7 +56,7 @@ describe("WalletUpdate", () => {
 		const { getByTestId, findByTestId } = render(<WalletUpdate isOpen={true} onClose={onClose} />);
 		await findByTestId("WalletUpdate__first-step");
 		fireEvent.click(getByTestId("modal__close-btn"));
-		await waitFor(() => expect(onClose).toHaveBeenCalled());
+		await waitFor(() => expect(onClose).toHaveBeenCalledWith());
 	});
 
 	it("should handle cancel", async () => {
@@ -64,7 +64,7 @@ describe("WalletUpdate", () => {
 		const { getByTestId, findByTestId } = render(<WalletUpdate isOpen={true} onCancel={onCancel} />);
 		await findByTestId("WalletUpdate__first-step");
 		fireEvent.click(getByTestId("WalletUpdate__cancel-button"));
-		await waitFor(() => expect(onCancel).toHaveBeenCalled());
+		await waitFor(() => expect(onCancel).toHaveBeenCalledWith());
 	});
 
 	it("should handle update", async () => {
@@ -84,6 +84,6 @@ describe("WalletUpdate", () => {
 
 		const { getByTestId } = render(<WalletUpdate isOpen={true} />);
 		fireEvent.click(getByTestId("WalletUpdate__install-button"));
-		await waitFor(() => expect(quitInstall).toHaveBeenCalled());
+		await waitFor(() => expect(quitInstall).toHaveBeenCalledWith(undefined));
 	});
 });

@@ -26,7 +26,7 @@ describe("PasswordRemovalConfirmModal", () => {
 
 		userEvent.click(screen.getByTestId("PasswordRemovalConfirmModal__cancel"));
 
-		expect(onCancel).toHaveBeenCalled();
+		expect(onCancel).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
 
 	it("should call onConfirm when submitted", async () => {

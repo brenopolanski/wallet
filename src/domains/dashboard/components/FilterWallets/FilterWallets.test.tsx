@@ -77,7 +77,7 @@ describe("FilterWallets", () => {
 
 		fireEvent.click(getByTestId("dropdown__option--0"));
 
-		expect(onChange).toHaveBeenCalled();
+		expect(onChange).toHaveBeenCalledWith("walletsDisplayType", "all");
 	});
 
 	it("should not emit onChange for wallet display type change", () => {

@@ -17,7 +17,9 @@ describe("ApplicationError", () => {
 
 		fireEvent.click(getByTestId("ApplicationError__button--reload"));
 
-		expect(onResetErrorBoundary).toHaveBeenCalled();
+		expect(onResetErrorBoundary).toHaveBeenCalledWith(
+			expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }),
+		);
 		expect(asFragment()).toMatchSnapshot();
 	});
 });

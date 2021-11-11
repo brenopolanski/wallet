@@ -75,7 +75,7 @@ describe("useWelcomeModal", () => {
 			result.current.onClose();
 		});
 
-		expect(mockHasCompletedTutorial).toHaveBeenCalled();
+		expect(mockHasCompletedTutorial).toHaveBeenCalledWith();
 
 		mockHasCompletedTutorial.mockRestore();
 	});
@@ -114,7 +114,7 @@ describe("useWelcomeModal", () => {
 			result.current.onClose();
 		});
 
-		expect(mockHasCompletedTutorial).toHaveBeenCalled();
+		expect(mockHasCompletedTutorial).toHaveBeenCalledWith();
 
 		mockHasCompletedTutorial.mockRestore();
 	});

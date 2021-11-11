@@ -37,7 +37,7 @@ describe("FeeWarning", () => {
 
 		userEvent.click(screen.getByTestId("modal__close-btn"));
 
-		expect(onCancel).toHaveBeenCalled();
+		expect(onCancel).toHaveBeenCalledWith(true);
 	});
 
 	it("should call onCancel callback when clicking on cancel button", () => {
@@ -47,7 +47,7 @@ describe("FeeWarning", () => {
 
 		userEvent.click(screen.getByTestId("FeeWarning__cancel-button"));
 
-		expect(onCancel).toHaveBeenCalled();
+		expect(onCancel).toHaveBeenCalledWith(false);
 	});
 
 	it.each([true, false])(

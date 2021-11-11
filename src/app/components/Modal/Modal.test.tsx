@@ -36,7 +36,7 @@ describe("Modal", () => {
 
 		fireEvent.click(screen.getByTestId("modal__overlay"));
 
-		expect(onClose).toHaveBeenCalled();
+		expect(onClose).toHaveBeenCalledWith();
 	});
 
 	it("should no close by click on modal content", () => {

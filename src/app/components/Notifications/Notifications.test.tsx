@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts, DTO } from "@payvo/profiles";
 import { waitFor } from "@testing-library/react";
 import nock from "nock";
 import React from "react";
@@ -58,7 +58,7 @@ describe("Notifications", () => {
 
 		fireEvent.click(screen.getAllByTestId("NotificationItem__action")[1]);
 
-		await waitFor(() => expect(onNotificationAction).toHaveBeenCalled());
+		await waitFor(() => expect(onNotificationAction).toHaveBeenCalledWith(expect.any(String)));
 	});
 
 	it("should emit transactionClick event", async () => {
@@ -71,7 +71,9 @@ describe("Notifications", () => {
 
 		fireEvent.click(screen.getAllByTestId("TransactionRowMode")[0]);
 
-		await waitFor(() => expect(onTransactionClick).toHaveBeenCalled());
+		await waitFor(() =>
+			expect(onTransactionClick).toHaveBeenCalledWith(expect.any(DTO.ExtendedConfirmedTransactionData)),
+		);
 
 		expect(container).toMatchSnapshot();
 	});

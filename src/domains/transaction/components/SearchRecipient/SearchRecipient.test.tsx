@@ -46,7 +46,7 @@ describe("SearchRecipient", () => {
 
 		fireEvent.click(screen.getByTestId("modal__close-btn"));
 
-		expect(onClose).toHaveBeenCalled();
+		expect(onClose).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
 
 	it("should render a modal with custom title and description", () => {
@@ -83,7 +83,7 @@ describe("SearchRecipient", () => {
 
 		fireEvent.click(screen.getByTestId("RecipientListItem__selected-button-0"));
 
-		expect(onAction).toHaveBeenCalled();
+		expect(onAction).toHaveBeenCalledWith(recipients[0].address);
 
 		expect(asFragment()).toMatchSnapshot();
 	});

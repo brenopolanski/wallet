@@ -2,6 +2,7 @@
 import { Observer } from "@ledgerhq/hw-transport";
 import { BIP39 } from "@payvo/cryptography";
 import { Contracts } from "@payvo/profiles";
+import { Signatories } from "@payvo/sdk";
 import userEvent from "@testing-library/user-event";
 import { LedgerProvider, minVersionList } from "app/contexts";
 import { translations as transactionTranslations } from "domains/transaction/i18n";
@@ -267,9 +268,16 @@ describe("Registration", () => {
 			fireEvent.click(getByTestId("StepNavigation__send-button"));
 		}
 
-		await waitFor(() => expect(signMock).toHaveBeenCalled());
-		await waitFor(() => expect(broadcastMock).toHaveBeenCalled());
-		await waitFor(() => expect(transactionMock).toHaveBeenCalled());
+		await waitFor(() => {
+			expect(signMock).toHaveBeenCalledWith({
+				data: { username: "test_delegate" },
+				fee: 25,
+				signatory: expect.any(Signatories.Signatory),
+			});
+		});
+
+		await waitFor(() => expect(broadcastMock).toHaveBeenCalledWith(DelegateRegistrationFixture.data.id));
+		await waitFor(() => expect(transactionMock).toHaveBeenCalledWith(DelegateRegistrationFixture.data.id));
 
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
@@ -351,9 +359,16 @@ describe("Registration", () => {
 
 		fireEvent.click(screen.getByTestId("StepNavigation__send-button"));
 
-		await waitFor(() => expect(signMock).toHaveBeenCalled());
-		await waitFor(() => expect(broadcastMock).toHaveBeenCalled());
-		await waitFor(() => expect(transactionMock).toHaveBeenCalled());
+		await waitFor(() =>
+			expect(signMock).toHaveBeenCalledWith({
+				data: { mnemonic: passphrase },
+				fee: 0.1,
+				signatory: expect.any(Signatories.Signatory),
+			}),
+		);
+
+		await waitFor(() => expect(broadcastMock).toHaveBeenCalledWith(SecondSignatureRegistrationFixture.data.id));
+		await waitFor(() => expect(transactionMock).toHaveBeenCalledWith(SecondSignatureRegistrationFixture.data.id));
 
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
@@ -800,9 +815,16 @@ describe("Registration", () => {
 
 		fireEvent.submit(screen.getByTestId("AuthenticationStep"));
 
-		await waitFor(() => expect(signMock).toHaveBeenCalled());
-		await waitFor(() => expect(broadcastMock).toHaveBeenCalled());
-		await waitFor(() => expect(transactionMock).toHaveBeenCalled());
+		await waitFor(() =>
+			expect(signMock).toHaveBeenCalledWith({
+				data: { username: "username" },
+				fee: 25,
+				signatory: expect.any(Signatories.Signatory),
+			}),
+		);
+
+		await waitFor(() => expect(broadcastMock).toHaveBeenCalledWith(DelegateRegistrationFixture.data.id));
+		await waitFor(() => expect(transactionMock).toHaveBeenCalledWith(DelegateRegistrationFixture.data.id));
 
 		signMock.mockRestore();
 		broadcastMock.mockRestore();

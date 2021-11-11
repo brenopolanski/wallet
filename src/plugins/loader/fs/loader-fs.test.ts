@@ -41,10 +41,11 @@ describe("PluginLoaderFileSystem", () => {
 
 	it("should remove a valid folder", () => {
 		const fsExtra = require("fs-extra");
+		const pathValue = "src/tests/fixtures/plugins/packages/plugin-test-custom-button";
 		const removeMock = jest.spyOn(fsExtra, "remove").mockImplementation();
-		subject.remove(path.resolve("src/tests/fixtures/plugins/packages/plugin-test-custom-button"));
+		subject.remove(path.resolve(pathValue));
 
-		expect(removeMock).toHaveBeenCalled();
+		expect(removeMock).toHaveBeenCalledWith(expect.stringContaining(pathValue));
 	});
 
 	it("should not remove an invalid folder", async () => {

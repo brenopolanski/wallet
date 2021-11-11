@@ -635,7 +635,9 @@ describe("SendTransfer", () => {
 			expect(screen.getByTestId("SelectAddress__input")).toHaveValue(profile.wallets().first().address()),
 		);
 
-		await waitFor(() => expect(onProfileSyncError).toHaveBeenCalled());
+		await waitFor(() =>
+			expect(onProfileSyncError).toHaveBeenCalledWith([expect.any(String)], expect.any(Function)),
+		);
 		walletMock.mockRestore();
 	});
 

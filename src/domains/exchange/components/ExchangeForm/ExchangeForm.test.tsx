@@ -129,7 +129,7 @@ describe("ExchangeForm", () => {
 		const { container } = renderComponent(<ExchangeForm onReady={onReady} />);
 
 		await waitFor(() => {
-			expect(onReady).toHaveBeenCalled();
+			expect(onReady).toHaveBeenCalledWith();
 		});
 
 		await waitFor(() => {
@@ -189,7 +189,7 @@ describe("ExchangeForm", () => {
 		});
 
 		await waitFor(() => {
-			expect(onReady).toHaveBeenCalled();
+			expect(onReady).toHaveBeenCalledWith();
 		});
 
 		expect(screen.getByTestId("ExchangeForm__status-step")).toBeInTheDocument();
@@ -228,7 +228,7 @@ describe("ExchangeForm", () => {
 		});
 
 		await waitFor(() => {
-			expect(onReady).toHaveBeenCalled();
+			expect(onReady).toHaveBeenCalledWith();
 		});
 
 		expect(screen.getByTestId("ExchangeForm__confirmation-step")).toBeInTheDocument();
@@ -241,7 +241,7 @@ describe("ExchangeForm", () => {
 		renderComponent(<ExchangeForm onReady={onReady} />);
 
 		await waitFor(() => {
-			expect(onReady).toHaveBeenCalled();
+			expect(onReady).toHaveBeenCalledWith();
 		});
 
 		await waitFor(() => {
@@ -282,7 +282,7 @@ describe("ExchangeForm", () => {
 		const { container } = renderComponent(<ExchangeForm onReady={onReady} />);
 
 		await waitFor(() => {
-			expect(onReady).toHaveBeenCalled();
+			expect(onReady).toHaveBeenCalledWith();
 		});
 
 		await waitFor(() => {
@@ -305,7 +305,7 @@ describe("ExchangeForm", () => {
 		renderComponent(<ExchangeForm onReady={onReady} />);
 
 		await waitFor(() => {
-			expect(onReady).toHaveBeenCalled();
+			expect(onReady).toHaveBeenCalledWith();
 		});
 
 		await waitFor(() => {
@@ -357,7 +357,7 @@ describe("ExchangeForm", () => {
 		renderComponent(<ExchangeForm onReady={onReady} />);
 
 		await waitFor(() => {
-			expect(onReady).toHaveBeenCalled();
+			expect(onReady).toHaveBeenCalledWith();
 		});
 
 		await waitFor(() => {
@@ -398,7 +398,7 @@ describe("ExchangeForm", () => {
 		renderComponent(<ExchangeForm onReady={onReady} />);
 
 		await waitFor(() => {
-			expect(onReady).toHaveBeenCalled();
+			expect(onReady).toHaveBeenCalledWith();
 		});
 
 		await waitFor(() => {
@@ -439,7 +439,7 @@ describe("ExchangeForm", () => {
 		renderComponent(<ExchangeForm onReady={onReady} />);
 
 		await waitFor(() => {
-			expect(onReady).toHaveBeenCalled();
+			expect(onReady).toHaveBeenCalledWith();
 		});
 
 		await waitFor(() => {
@@ -469,7 +469,7 @@ describe("ExchangeForm", () => {
 		renderComponent(<ExchangeForm onReady={onReady} />);
 
 		await waitFor(() => {
-			expect(onReady).toHaveBeenCalled();
+			expect(onReady).toHaveBeenCalledWith();
 		});
 
 		await waitFor(() => {
@@ -523,7 +523,7 @@ describe("ExchangeForm", () => {
 		renderComponent(<ExchangeForm onReady={onReady} />);
 
 		await waitFor(() => {
-			expect(onReady).toHaveBeenCalled();
+			expect(onReady).toHaveBeenCalledWith();
 		});
 
 		await waitFor(() => {
@@ -566,7 +566,7 @@ describe("ExchangeForm", () => {
 		renderComponent(<ExchangeForm onReady={onReady} />);
 
 		await waitFor(() => {
-			expect(onReady).toHaveBeenCalled();
+			expect(onReady).toHaveBeenCalledWith();
 		});
 
 		await waitFor(() => {
@@ -606,7 +606,7 @@ describe("ExchangeForm", () => {
 		renderComponent(<ExchangeForm onReady={onReady} />);
 
 		await waitFor(() => {
-			expect(onReady).toHaveBeenCalled();
+			expect(onReady).toHaveBeenCalledWith();
 		});
 
 		await waitFor(() => {
@@ -646,7 +646,7 @@ describe("ExchangeForm", () => {
 		renderComponent(<ExchangeForm onReady={onReady} />);
 
 		await waitFor(() => {
-			expect(onReady).toHaveBeenCalled();
+			expect(onReady).toHaveBeenCalledWith();
 		});
 
 		await waitFor(() => {
@@ -685,7 +685,7 @@ describe("ExchangeForm", () => {
 		renderComponent(<ExchangeForm onReady={onReady} />);
 
 		await waitFor(() => {
-			expect(onReady).toHaveBeenCalled();
+			expect(onReady).toHaveBeenCalledWith();
 		});
 
 		await waitFor(() => {
@@ -730,7 +730,7 @@ describe("ExchangeForm", () => {
 		renderComponent(<ExchangeForm onReady={onReady} />);
 
 		await waitFor(() => {
-			expect(onReady).toHaveBeenCalled();
+			expect(onReady).toHaveBeenCalledWith();
 		});
 
 		await waitFor(() => {
@@ -778,7 +778,7 @@ describe("ExchangeForm", () => {
 		renderComponent(<ExchangeForm onReady={onReady} />);
 
 		await waitFor(() => {
-			expect(onReady).toHaveBeenCalled();
+			expect(onReady).toHaveBeenCalledWith();
 		});
 
 		await waitFor(() => {
@@ -830,7 +830,7 @@ describe("ExchangeForm", () => {
 		renderComponent(<ExchangeForm onReady={onReady} />);
 
 		await waitFor(() => {
-			expect(onReady).toHaveBeenCalled();
+			expect(onReady).toHaveBeenCalledWith();
 		});
 
 		await waitFor(() => {
@@ -925,7 +925,7 @@ describe("ExchangeForm", () => {
 		renderComponent(<ExchangeForm onReady={onReady} />);
 
 		await waitFor(() => {
-			expect(onReady).toHaveBeenCalled();
+			expect(onReady).toHaveBeenCalledWith();
 		});
 
 		await waitFor(() => {
@@ -1004,7 +1004,7 @@ describe("ExchangeForm", () => {
 		renderComponent(<ExchangeForm onReady={onReady} />);
 
 		await waitFor(() => {
-			expect(onReady).toHaveBeenCalled();
+			expect(onReady).toHaveBeenCalledWith();
 		});
 
 		await waitFor(() => {
@@ -1124,7 +1124,7 @@ describe("ExchangeForm", () => {
 		const { findByTestId } = renderComponent(<ExchangeForm onReady={onReady} />);
 
 		await waitFor(() => {
-			expect(onReady).toHaveBeenCalled();
+			expect(onReady).toHaveBeenCalledWith();
 		});
 
 		await waitFor(() => {
@@ -1380,20 +1380,24 @@ describe("StatusStep", () => {
 	it("should execute onUpdate callback on status change", async () => {
 		const onUpdate = jest.fn();
 
-		const exchangeTransaction = profile.exchangeTransactions().create({
+		const exchangeTransactionData = {
 			input: {
 				address: "payinAddress",
 				amount: 1,
 				hash: "payinHash",
 				ticker: "btc",
 			},
-			orderId: "orderId",
 			output: {
 				address: "payoutAddress",
 				amount: 1,
 				hash: "payoutHash",
 				ticker: "ark",
 			},
+		};
+
+		const exchangeTransaction = profile.exchangeTransactions().create({
+			...exchangeTransactionData,
+			orderId: "orderId",
 			provider: "changenow",
 		});
 
@@ -1423,7 +1427,10 @@ describe("StatusStep", () => {
 		expect(screen.getAllByTestId("StatusIcon__empty")).toHaveLength(2);
 
 		await waitFor(() => {
-			expect(onUpdate).toHaveBeenCalled();
+			expect(onUpdate).toHaveBeenCalledWith(exchangeTransaction.id(), {
+				...exchangeTransactionData,
+				status: expect.any(Number),
+			});
 		});
 	});
 });

@@ -62,7 +62,12 @@ describe("Export Settings", () => {
 
 		fireEvent.click(await findByTestId("Export-settings__submit-button"));
 
-		await waitFor(() => expect(dialogMock).toHaveBeenCalled());
+		await waitFor(() =>
+			expect(dialogMock).toHaveBeenCalledWith({
+				defaultPath: `profile-${exportingProfile.id()}.dwe`,
+				filters: [{ extensions: ["dwe"], name: "Desktop Wallet Export" }],
+			}),
+		);
 
 		dialogMock.mockRestore();
 	});
