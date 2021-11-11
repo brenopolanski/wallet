@@ -4,6 +4,7 @@ import { Section } from "app/components/Layout";
 import { useConfiguration, useEnvironmentContext } from "app/contexts";
 import { useActiveProfile } from "app/hooks";
 import { useWalletFilters } from "domains/dashboard/components/FilterWallets";
+import { PortfolioBreakdownHeader } from "domains/dashboard/components/PortfolioBreakdownHeader";
 import { WalletsControls } from "domains/dashboard/components/WalletsControls";
 import { DeleteWallet } from "domains/wallet/components/DeleteWallet";
 import { LedgerWaitingDevice } from "domains/wallet/components/Ledger/LedgerWaitingDevice";
@@ -15,7 +16,6 @@ import { assertWallet } from "utils/assertions";
 
 import { useWalletDisplay, WalletsGrid, WalletsList } from ".";
 import { WalletsProperties } from "./Wallets.contracts";
-import { PortfolioBreakdownHeader } from "domains/dashboard/components/PortfolioBreakdownHeader";
 
 export const Wallets: FC<WalletsProperties> = ({
 	title,
