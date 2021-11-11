@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
+/* eslint-disable testing-library/no-unnecessary-act */ // @TODO remove and fix test
 import { Contracts } from "@payvo/profiles";
 // @README: This import is fine in tests but should be avoided in production code.
 import { ReadOnlyWallet } from "@payvo/profiles/distribution/read-only-wallet";
