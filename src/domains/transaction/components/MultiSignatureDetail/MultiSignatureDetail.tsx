@@ -7,6 +7,7 @@ import { useLedgerModelStatus } from "app/hooks";
 import { AuthenticationStep } from "domains/transaction/components/AuthenticationStep";
 import { ErrorStep } from "domains/transaction/components/ErrorStep";
 import { useMultiSignatureRegistration, useMultiSignatureStatus } from "domains/transaction/hooks";
+import { handleBroadcastError } from "domains/transaction/utils";
 import React, { useCallback, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 
@@ -91,14 +92,20 @@ export const MultiSignatureDetail = ({
 					wif,
 				});
 
-				await addSignature({ signatory, transactionId: transaction.id(), wallet });
+				const response = await addSignature({ signatory, transactionId: transaction.id(), wallet });
+				handleBroadcastError(response);
+
+				// Transaction id changes after adding signature. Get the latest id and keep transaction state in sync.
+				const transactionId = response.accepted[0];
+
 				await wallet.transaction().sync();
+				setActiveTransaction(wallet.transaction().transaction(transactionId));
 
-				if (wallet.transaction().canBeBroadcasted(transaction.id())) {
-					return broadcastMultiSignature();
+				// Automatically broadcast transaction after adding last required signature.
+				if (wallet.transaction().canBeBroadcasted(transactionId)) {
+					const broadcastedTransaction = await broadcast({ transactionId, wallet });
+					setActiveTransaction(broadcastedTransaction);
 				}
-
-				setActiveTransaction(transaction);
 
 				setActiveStep(MultiSignatureDetailStep.SentStep);
 				await persist();
