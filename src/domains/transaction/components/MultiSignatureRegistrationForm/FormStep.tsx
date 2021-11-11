@@ -16,7 +16,7 @@ const MINIMUM_PARTICIPANTS = 2;
 export const FormStep = ({ profile, wallet }: FormStepProperties) => {
 	const { t } = useTranslation();
 	const { errors, setValue, register, watch } = useFormContext();
-	const { participants, minParticipants } = watch();
+	const { participants, minParticipants, mandatoryKeys } = watch();
 
 	const { common, multiSignatureRegistration } = useValidation();
 
@@ -64,6 +64,7 @@ export const FormStep = ({ profile, wallet }: FormStepProperties) => {
 					profile={profile}
 					wallet={wallet}
 					onChange={handleParticipants}
+					mandatoryKeys={mandatoryKeys}
 					onChangeMandatoryKeys={(publicKeys) => setValue("mandatoryKeys", publicKeys)}
 					minRequiredSignatures={minParticipants}
 					defaultParticipants={participants}

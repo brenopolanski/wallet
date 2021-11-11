@@ -18,6 +18,7 @@ export interface Participant {
 interface Properties {
 	profile: Contracts.IProfile;
 	wallet: Contracts.IReadWriteWallet;
+	mandatoryKeys?: string[];
 	onChange?: (wallets: Participant[]) => void;
 	onChangeMandatoryKeys?: (publicKeys: string[]) => void;
 	defaultParticipants?: Participant[];
@@ -32,13 +33,13 @@ export const AddParticipant = ({
 	minRequiredSignatures,
 	profile,
 	wallet,
+	mandatoryKeys = [],
 	onChange,
 	onChangeMandatoryKeys,
 	defaultParticipants = defaultProps.defaultParticipants,
 }: Properties) => {
 	const { t } = useTranslation();
 
-	const [mandatoryKeys, setMandatoryKeys] = useState<string[]>([]);
 	const [isValidating, setIsValidating] = useState(false);
 	const [participants, setParticipants] = useState<Participant[]>(defaultParticipants);
 	const lastValidationReference = useRef<unknown | undefined>();
@@ -87,12 +88,8 @@ export const AddParticipant = ({
 	};
 
 	useEffect(() => {
-		setMandatoryKeys(mandatoryKeys.slice(0, minRequiredSignatures));
+		onChangeMandatoryKeys?.(mandatoryKeys.slice(0, minRequiredSignatures));
 	}, [minRequiredSignatures]);
-
-	useEffect(() => {
-		onChangeMandatoryKeys?.(mandatoryKeys);
-	}, [mandatoryKeys]);
 
 	const removeParticipant = (index: number) => {
 		const remainingParticipants = [...participants];
@@ -115,11 +112,11 @@ export const AddParticipant = ({
 			return;
 		}
 
-		setMandatoryKeys(uniq([...mandatoryKeys, publicKey]));
+		onChangeMandatoryKeys?.(uniq([...mandatoryKeys, publicKey]));
 	};
 
 	const removeMandatoryKey = (publicKey: string) => {
-		setMandatoryKeys(mandatoryKeys.filter((item) => item !== publicKey));
+		onChangeMandatoryKeys?.(mandatoryKeys.filter((item) => item !== publicKey));
 	};
 
 	const findDuplicate = useCallback(
