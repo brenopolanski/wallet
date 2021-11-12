@@ -12,11 +12,12 @@ type UsePortfolioBreakdownHook = (input: {
 	profile: Contracts.IProfile;
 	profileIsSyncingExchangeRates: boolean;
 }) => {
-	loading: boolean;
+	assets: AssetItem[];
 	balance: number;
 	convertedBalance: number;
-	assets: AssetItem[];
-	wallets: Contracts.IReadWriteWallet[];
+	loading: boolean;
+	ticker: string;
+	walletsCount: number;
 };
 
 export const usePortfolioBreakdown: UsePortfolioBreakdownHook = ({ profile, profileIsSyncingExchangeRates }) => {
@@ -30,13 +31,18 @@ export const usePortfolioBreakdown: UsePortfolioBreakdownHook = ({ profile, prof
 		profileIsSyncingExchangeRates,
 	]);
 
-	const wallets = useMemo<Contracts.IReadWriteWallet[]>(
+	const ticker = useMemo<string>(
+		() => profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency) ?? "",
+		[profile, isRestored], // eslint-disable-line react-hooks/exhaustive-deps
+	);
+
+	const walletsCount = useMemo<number>(
 		() =>
 			profile
 				.wallets()
 				.values()
-				.filter((wallet) => wallet.network().isLive()),
-		[profile, loading], // eslint-disable-line react-hooks/exhaustive-deps
+				.filter((wallet) => wallet.network().isLive()).length,
+		[profile, isRestored], // eslint-disable-line react-hooks/exhaustive-deps
 	);
 
 	const assets = useMemo<AssetItem[]>(
@@ -58,6 +64,7 @@ export const usePortfolioBreakdown: UsePortfolioBreakdownHook = ({ profile, prof
 		balance,
 		convertedBalance,
 		loading,
-		wallets,
+		ticker,
+		walletsCount,
 	};
 };

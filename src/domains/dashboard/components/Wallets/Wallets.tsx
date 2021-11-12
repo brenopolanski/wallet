@@ -4,7 +4,7 @@ import { Section } from "app/components/Layout";
 import { useConfiguration, useEnvironmentContext } from "app/contexts";
 import { useActiveProfile } from "app/hooks";
 import { useWalletFilters } from "domains/dashboard/components/FilterWallets";
-import { PortfolioBreakdownHeader } from "domains/dashboard/components/PortfolioBreakdownHeader";
+import { PortfolioBreakdown } from "domains/dashboard/components/PortfolioBreakdown";
 import { WalletsControls } from "domains/dashboard/components/WalletsControls";
 import { DeleteWallet } from "domains/wallet/components/DeleteWallet";
 import { LedgerWaitingDevice } from "domains/wallet/components/Ledger/LedgerWaitingDevice";
@@ -118,10 +118,7 @@ export const Wallets: FC<WalletsProperties> = ({
 				</div>
 			</div>
 
-			<PortfolioBreakdownHeader
-				profile={activeProfile}
-				profileIsSyncingExchangeRates={profileIsSyncingExchangeRates}
-			/>
+			<PortfolioBreakdown profile={activeProfile} profileIsSyncingExchangeRates={profileIsSyncingExchangeRates} />
 
 			<WalletsGrid
 				actions={walletActions}

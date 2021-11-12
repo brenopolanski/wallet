@@ -4,7 +4,7 @@ import { getStyles } from "./Divider.styles";
 
 interface DividerProperties {
 	type?: "horizontal" | "vertical";
-	size?: "sm" | "md" | "lg";
+	size?: "sm" | "md" | "lg" | "xl";
 	dashed?: boolean;
 	className?: string;
 }

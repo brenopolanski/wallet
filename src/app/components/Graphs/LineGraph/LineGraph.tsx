@@ -1,5 +1,4 @@
 import { useGraphWidth } from "app/components/Graphs/Graphs.shared";
-import cn from "classnames";
 import React, { useRef } from "react";
 
 import { LineGraphLegend, LineGraphSegment } from "./LineGraph.blocks";
@@ -20,12 +19,12 @@ export function LineGraph<TDataType>({ data, mapper, renderAfterLegend }: LineGr
 
 	return (
 		<div>
-			<div className={cn("flex justify-end mb-1", { "divide-x": !!renderAfterLegend })}>
+			<div className="flex justify-end mb-1">
 				<LineGraphLegend dataPoints={dataPoints} />
 				{renderAfterLegend?.()}
 			</div>
 
-			<svg ref={reference} className="w-full">
+			<svg ref={reference} className="w-full h-6">
 				{!!graphWidth &&
 					dataPoints.map((dataPoint, index) => (
 						<LineGraphSegment config={config} dataPoint={dataPoint} key={index} />

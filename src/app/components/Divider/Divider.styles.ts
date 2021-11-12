@@ -20,6 +20,8 @@ const getSize = (type: string, size: string): any => {
 				return tw`h-5`;
 			case "lg":
 				return tw`h-8`;
+			case "xl":
+				return tw`h-12`;
 			default:
 				return tw`h-4`;
 		}
