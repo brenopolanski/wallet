@@ -1,4 +1,8 @@
+import { useMemo } from "react";
 import { useLocation } from "react-router-dom";
 
-// A custom `react-router-dom` hook that is based on `useLocation` to parse
-export const useQueryParams = () => new URLSearchParams(useLocation().search);
+export const useQueryParams = () => {
+	const { search } = useLocation();
+
+	return useMemo(() => new URLSearchParams(search), [search]);
+};

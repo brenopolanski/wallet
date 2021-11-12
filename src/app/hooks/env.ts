@@ -1,4 +1,6 @@
+import { sortBy } from "@arkecosystem/utils";
 import { Contracts } from "@payvo/profiles";
+import { Networks } from "@payvo/sdk";
 import { useEnvironmentContext } from "app/contexts/Environment";
 import { useMemo } from "react";
 import { useHistory, useParams } from "react-router-dom";
@@ -17,12 +19,43 @@ export const useActiveProfile = (): Contracts.IProfile => {
 		}
 
 		return context.env.profiles().findById(profileId);
-	}, [context, profileId]); // eslint-disable-line react-hooks/exhaustive-deps
+	}, [context, profileId]);
 };
 
-export const useActiveWallet = () => {
+export const useActiveWallet = (): Contracts.IReadWriteWallet => {
 	const profile = useActiveProfile();
 	const { walletId } = useParams<{ walletId: string }>();
 
-	return useMemo(() => profile.wallets().findById(walletId), [profile, walletId]);
+	// TODO: allow to return `undefined`, now it's not supported by components
+	// @ts-ignore
+	return useMemo(() => {
+		if (!profile || !walletId) {
+			return undefined;
+		}
+
+		try {
+			return profile.wallets().findById(walletId);
+		} catch {
+			return undefined;
+		}
+	}, [profile, walletId]);
+};
+
+export const useProfileNetworks = () => {
+	const activeProfile = useActiveProfile();
+
+	return useMemo(() => {
+		const results = activeProfile
+			.wallets()
+			.values()
+			.reduce<Record<string, Networks.Network>>(
+				(accumulator, wallet) => ({
+					...accumulator,
+					[wallet.networkId()]: wallet.network(),
+				}),
+				{},
+			);
+
+		return sortBy(Object.values(results), (network) => network.displayName());
+	}, [activeProfile]);
 };
