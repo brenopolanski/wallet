@@ -37,36 +37,23 @@ export const usePortfolioBreakdown: UsePortfolioBreakdownHook = ({ profile, prof
 				.wallets()
 				.values()
 				.filter((wallet) => wallet.network().isLive()),
-		[loading], // eslint-disable-line react-hooks/exhaustive-deps
+		[profile, loading], // eslint-disable-line react-hooks/exhaustive-deps
 	);
 
-	const assets = useMemo<AssetItem[]>(() => {
-		const values: Omit<AssetItem, "percent" | "percentFormatted">[] = Object.values(
-			wallets.reduce<Record<string, Omit<AssetItem, "percent" | "percentFormatted">>>((assetsMap, wallet) => {
-				const { amount = 0, convertedAmount = 0 } = assetsMap[wallet.currency()] ?? {};
-
-				assetsMap[wallet.currency()] = {
-					amount: amount + wallet.balance(),
-					convertedAmount: convertedAmount + wallet.convertedBalance(),
-					label: wallet.currency(),
-				};
-
-				return assetsMap;
-			}, {}),
-		);
-
-		// Calculate percentages.
-		return values.map((asset) => {
-			const percent = (asset.amount * 100) / balance;
-			const percentFormatted = `${Math.round((percent + Number.EPSILON) * 100) / 100}%`;
-
-			return {
-				...asset,
-				percent,
-				percentFormatted,
-			};
-		});
-	}, [balance, wallets]);
+	const assets = useMemo<AssetItem[]>(
+		() =>
+			profile
+				.portfolio()
+				.breakdown()
+				.map((asset) => ({
+					amount: asset.source,
+					convertedAmount: asset.target,
+					label: asset.coin.network().ticker(),
+					percent: asset.shares,
+					percentFormatted: `${Math.round((asset.shares + Number.EPSILON) * 100) / 100}%`,
+				})),
+		[profile, loading], // eslint-disable-line react-hooks/exhaustive-deps
+	);
 
 	return {
 		assets,
