@@ -1,11 +1,17 @@
 import { Contracts } from "@payvo/profiles";
 import { Coins, Networks } from "@payvo/sdk";
 import { RecipientItem } from "domains/transaction/components/RecipientList/RecipientList.contracts";
+import { TFunction } from "react-i18next";
 
-export const sendTransfer = (t: any) => ({
-	amount: (network: Networks.Network, balance: number, recipients: RecipientItem[], isSingleRecipient: boolean) => ({
+export const sendTransfer = (t: TFunction) => ({
+	amount: (
+		network: Networks.Network | undefined,
+		balance: number,
+		recipients: RecipientItem[],
+		isSingleRecipient: boolean,
+	) => ({
 		validate: {
-			valid: (amountValue: any) => {
+			valid: (amountValue: number | string) => {
 				const amount = amountValue || 0;
 				const hasSufficientBalance = Number(balance || 0) >= amount && balance !== 0;
 				const shouldRequire = isSingleRecipient || recipients.length === 0;
@@ -52,7 +58,7 @@ export const sendTransfer = (t: any) => ({
 	}),
 	recipientAddress: (
 		profile: Contracts.IProfile,
-		network: Networks.Network,
+		network: Networks.Network | undefined,
 		recipients: RecipientItem[],
 		isSingleRecipient: boolean,
 	) => ({
@@ -76,7 +82,7 @@ export const sendTransfer = (t: any) => ({
 					});
 				}
 
-				const coin: Coins.Coin = profile.coins().set(network?.coin(), network?.id());
+				const coin: Coins.Coin = profile.coins().set(network.coin(), network.id());
 				const isValidAddress: boolean = await coin.address().validate(address);
 				return isValidAddress || t("COMMON.VALIDATION.RECIPIENT_INVALID");
 			},

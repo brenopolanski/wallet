@@ -1,7 +1,8 @@
 import { Networks } from "@payvo/sdk";
+import { TFunction } from "react-i18next";
 import { TransactionFees } from "types";
 
-export const common = (t: any) => ({
+export const common = (t: TFunction) => ({
 	fee: (balance = 0, network?: Networks.Network, fees?: TransactionFees) => ({
 		validate: {
 			valid: (fee?: string | number) => {
@@ -39,7 +40,7 @@ export const common = (t: any) => ({
 					return t("TRANSACTION.VALIDATION.FEE_NEGATIVE");
 				}
 
-				if (network?.feeType() === "size" && fees?.min && +fee < fees.min) {
+				if (network.feeType() === "size" && fees?.min && +fee < fees.min) {
 					return t("COMMON.VALIDATION.MIN", {
 						field: t("COMMON.FEE"),
 						min: fees.min,

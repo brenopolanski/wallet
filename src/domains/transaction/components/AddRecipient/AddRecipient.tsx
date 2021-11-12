@@ -13,7 +13,7 @@ import cn from "classnames";
 import { SelectRecipient } from "domains/profile/components/SelectRecipient";
 import { RecipientList } from "domains/transaction/components/RecipientList";
 import { RecipientItem } from "domains/transaction/components/RecipientList/RecipientList.contracts";
-import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useRef, useState, VFC } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import tw, { css, styled } from "twin.macro";
@@ -74,7 +74,7 @@ const InputButtonStyled = styled.button(() => [
 	`,
 ]);
 
-export const AddRecipient = ({
+export const AddRecipient: VFC<AddRecipientProperties> = ({
 	disableMultiPaymentOption,
 	onChange,
 	profile,
@@ -82,7 +82,7 @@ export const AddRecipient = ({
 	showMultiPaymentOption = true,
 	wallet,
 	withDeeplink,
-}: AddRecipientProperties) => {
+}) => {
 	const { t } = useTranslation();
 	const [addedRecipients, setAddedRecipients] = useState<RecipientItem[]>([]);
 	const [isSingle, setIsSingle] = useState(recipients.length <= 1);
@@ -150,7 +150,7 @@ export const AddRecipient = ({
 
 		setRecipientsAmount(
 			recipients
-				?.reduce((accumulator, currentValue) => Number(accumulator) + Number(currentValue.amount), 0)
+				.reduce((accumulator, currentValue) => Number(accumulator) + Number(currentValue.amount), 0)
 				.toString(),
 		);
 	}, [recipients, withDeeplink]);
@@ -279,7 +279,7 @@ export const AddRecipient = ({
 	const handleAddRecipient = () => {
 		const amount = getValues("amount");
 
-		let newRecipient: RecipientItem = {
+		const newRecipient: RecipientItem = {
 			address: recipientAddress,
 			alias: recipientAlias?.alias,
 			amount: +amount,
@@ -298,7 +298,7 @@ export const AddRecipient = ({
 		remainingRecipients.splice(index, 1);
 
 		setAddedRecipients(remainingRecipients);
-		onChange?.(remainingRecipients);
+		onChange(remainingRecipients);
 	};
 
 	const amountAddons =
