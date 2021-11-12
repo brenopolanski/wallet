@@ -18,16 +18,22 @@ interface LineGraphSegmentProperties {
 	dataPoint: LineGraphDataPoint;
 }
 
+interface LineGraphLegendProperties {
+	dataPoints: LineGraphDataPoint[];
+}
+
 type LineGraphMapper<TDataPoint> = (data: TDataPoint[], config: LineGraphGraphConfig) => LineGraphDataPoint[];
 
 interface LineGraphProperties<TDataPoint> {
 	data: TDataPoint[];
 	mapper: LineGraphMapper<TDataPoint>;
+	renderAfterLegend?: () => JSX.Element;
 }
 
 export type {
 	LineGraphDataPoint,
 	LineGraphGraphConfig,
+	LineGraphLegendProperties,
 	LineGraphMapper,
 	LineGraphProperties,
 	LineGraphSegmentProperties,

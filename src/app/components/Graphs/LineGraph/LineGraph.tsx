@@ -1,10 +1,10 @@
 import { useGraphWidth } from "app/components/Graphs/Graphs.shared";
 import React, { useRef } from "react";
 
-import { LineGraphSegment } from "./LineGraph.blocks";
+import { LineGraphLegend, LineGraphSegment } from "./LineGraph.blocks";
 import { LineGraphGraphConfig, LineGraphProperties } from "./LineGraph.contracts";
 
-export function LineGraph<TDataType>({ data, mapper }: LineGraphProperties<TDataType>): JSX.Element {
+export function LineGraph<TDataType>({ data, mapper, renderAfterLegend }: LineGraphProperties<TDataType>): JSX.Element {
 	const reference = useRef<SVGSVGElement | null>(null);
 	const graphWidth = useGraphWidth(reference);
 
@@ -15,12 +15,21 @@ export function LineGraph<TDataType>({ data, mapper }: LineGraphProperties<TData
 		segmentSpacing: 8,
 	};
 
+	const dataPoints = mapper(data, config);
+
 	return (
-		<svg ref={reference} className="w-full">
-			{!!graphWidth &&
-				mapper(data, config).map((dataPoint, index) => (
-					<LineGraphSegment config={config} dataPoint={dataPoint} key={index} />
-				))}
-		</svg>
+		<div>
+			<div className="flex justify-end mb-1">
+				<LineGraphLegend dataPoints={dataPoints} />
+				{renderAfterLegend?.()}
+			</div>
+
+			<svg ref={reference} className="w-full">
+				{!!graphWidth &&
+					dataPoints.map((dataPoint, index) => (
+						<LineGraphSegment config={config} dataPoint={dataPoint} key={index} />
+					))}
+			</svg>
+		</div>
 	);
 }

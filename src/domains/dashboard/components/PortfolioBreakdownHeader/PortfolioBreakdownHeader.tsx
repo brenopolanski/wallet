@@ -14,7 +14,7 @@ export const PortfolioBreakdownHeader: React.VFC<PortfolioBreakdownHeaderPropert
 	profile,
 	profileIsSyncingExchangeRates,
 }) => {
-	const { loading, assets } = usePortfolioBreakdown({
+	const { loading } = usePortfolioBreakdown({
 		profile,
 		profileIsSyncingExchangeRates,
 	});
@@ -25,7 +25,30 @@ export const PortfolioBreakdownHeader: React.VFC<PortfolioBreakdownHeaderPropert
 
 	return (
 		<div>
-			<LineGraph data={assets} mapper={mapAssetsToDataPoints} />
+			<LineGraph
+				data={[
+					{
+						amount: 20,
+						convertedAmount: 20,
+						label: "ARK",
+						percent: 20,
+					},
+					{
+						amount: 30,
+						convertedAmount: 30,
+						label: "BTC",
+						percent: 30,
+					},
+					{
+						amount: 50,
+						convertedAmount: 50,
+						label: "ETH",
+						percent: 50,
+					},
+				]}
+				mapper={mapAssetsToDataPoints}
+				renderAfterLegend={() => <p>after legend</p>}
+			/>
 		</div>
 	);
 };

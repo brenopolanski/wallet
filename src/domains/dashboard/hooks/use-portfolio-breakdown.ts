@@ -6,7 +6,6 @@ export interface AssetItem {
 	amount: number;
 	convertedAmount: number;
 	percent: number;
-	percentFormatted: string;
 }
 
 type UsePortfolioBreakdownHook = (input: {
@@ -50,7 +49,6 @@ export const usePortfolioBreakdown: UsePortfolioBreakdownHook = ({ profile, prof
 					convertedAmount: asset.target,
 					label: asset.coin.network().ticker(),
 					percent: asset.shares,
-					percentFormatted: `${Math.round((asset.shares + Number.EPSILON) * 100) / 100}%`,
 				})),
 		[profile, loading], // eslint-disable-line react-hooks/exhaustive-deps
 	);

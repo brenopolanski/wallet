@@ -21,3 +21,7 @@ export const useGraphWidth = (svgReference: MutableRefObject<SVGSVGElement | nul
 
 	return value;
 };
+
+export const useGraphFormatter = () => ({
+	formatPercent: (value: number): string => `${Math.round((value + Number.EPSILON) * 100) / 100}%`,
+});
