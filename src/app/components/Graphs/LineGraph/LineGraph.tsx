@@ -1,11 +1,11 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useGraphWidth } from "app/components/Graphs/Graphs.shared";
+import React, { useRef } from "react";
 
 import { LineGraphGraphConfig, LineGraphProperties } from "./LineGraph.contracts";
 
 export function LineGraph<TDataType>({ data, mapper }: LineGraphProperties<TDataType>): JSX.Element {
 	const reference = useRef<SVGSVGElement | null>(null);
-
-	const [graphWidth, setGraphWidth] = useState<number>(0);
+	const graphWidth = useGraphWidth(reference);
 
 	const config: LineGraphGraphConfig = {
 		graphWidth,
@@ -13,14 +13,6 @@ export function LineGraph<TDataType>({ data, mapper }: LineGraphProperties<TData
 		segmentRadius: 4,
 		segmentSpacing: 8,
 	};
-
-	useEffect(() => {
-		if (!reference.current) {
-			return;
-		}
-
-		setGraphWidth(reference.current.clientWidth);
-	}, []);
 
 	return (
 		<svg ref={reference} className="w-full">
