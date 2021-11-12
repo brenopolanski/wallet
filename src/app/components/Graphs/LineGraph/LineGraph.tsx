@@ -1,12 +1,19 @@
-import { useGraphWidth } from "app/components/Graphs/Graphs.shared";
+import { useGraphTooltip, useGraphWidth } from "app/components/Graphs/Graphs.shared";
 import React, { useRef } from "react";
 
 import { LineGraphLegend, LineGraphSegment } from "./LineGraph.blocks";
-import { LineGraphGraphConfig, LineGraphProperties } from "./LineGraph.contracts";
+import { LineGraphDataPoint, LineGraphGraphConfig, LineGraphProperties } from "./LineGraph.contracts";
 
-export function LineGraph<TDataType>({ data, mapper, renderAfterLegend }: LineGraphProperties<TDataType>): JSX.Element {
+export function LineGraph<TDataType>({
+	data,
+	mapper,
+	renderAfterLegend,
+	renderTooltip,
+}: LineGraphProperties<TDataType>): JSX.Element {
 	const reference = useRef<SVGSVGElement | null>(null);
 	const graphWidth = useGraphWidth(reference);
+
+	const { Tooltip, getMouseEventProperties } = useGraphTooltip<LineGraphDataPoint, SVGRectElement>(renderTooltip);
 
 	const config: LineGraphGraphConfig = {
 		graphWidth,
@@ -19,6 +26,8 @@ export function LineGraph<TDataType>({ data, mapper, renderAfterLegend }: LineGr
 
 	return (
 		<div>
+			<Tooltip />
+
 			<div className="flex justify-end mb-1">
 				<LineGraphLegend dataPoints={dataPoints} />
 				{renderAfterLegend?.()}
@@ -27,7 +36,12 @@ export function LineGraph<TDataType>({ data, mapper, renderAfterLegend }: LineGr
 			<svg ref={reference} className="w-full h-6">
 				{!!graphWidth &&
 					dataPoints.map((dataPoint, index) => (
-						<LineGraphSegment config={config} dataPoint={dataPoint} key={index} />
+						<LineGraphSegment
+							key={index}
+							config={config}
+							dataPoint={dataPoint}
+							{...getMouseEventProperties(dataPoint)}
+						/>
 					))}
 			</svg>
 		</div>

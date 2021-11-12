@@ -2,9 +2,9 @@ import { Contracts } from "@payvo/profiles";
 import { useMemo } from "react";
 
 export interface AssetItem {
-	label: string;
 	amount: number;
 	convertedAmount: number;
+	label: string;
 	percent: number;
 }
 

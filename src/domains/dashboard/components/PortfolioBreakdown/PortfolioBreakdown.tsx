@@ -6,8 +6,8 @@ import { usePortfolioBreakdown } from "domains/dashboard/hooks/use-portfolio-bre
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 
-import { LabelledText, MoreDetailsButton } from "./PortfolioBreakdown.blocks";
-import { mapAssetsToDataPoints } from "./PortfolioBreakdown.helpers";
+import { LabelledText, MoreDetailsButton, Tooltip } from "./PortfolioBreakdown.blocks";
+import { getAssetsToDataPointsMapper } from "./PortfolioBreakdown.helpers";
 
 interface PortfolioBreakdownProperties {
 	profile: Contracts.IProfile;
@@ -54,8 +54,9 @@ export const PortfolioBreakdown: React.VFC<PortfolioBreakdownProperties> = ({
 			<div className="flex-1 ml-4">
 				<LineGraph
 					data={assets}
-					mapper={mapAssetsToDataPoints}
+					mapper={getAssetsToDataPointsMapper(ticker)}
 					renderAfterLegend={() => <MoreDetailsButton onClick={() => setIsDetailOpen(true)} />}
+					renderTooltip={(dataPoint) => <Tooltip dataPoint={dataPoint} />}
 				/>
 			</div>
 		</div>

@@ -21,8 +21,12 @@ const LineGraphAnimation: React.VFC<LineGraphAnimationProperties> = ({ animation
 export const LineGraphSegment: React.VFC<LineGraphSegmentProperties> = ({
 	config: { segmentHeight, segmentHeightHover },
 	dataPoint: { x, width, color },
+	onMouseMove,
+	onMouseOut,
 }) => (
 	<rect
+		onMouseMove={onMouseMove}
+		onMouseOut={onMouseOut}
 		x={x}
 		y={segmentHeight}
 		className={`fill-current text-theme-${color}`}

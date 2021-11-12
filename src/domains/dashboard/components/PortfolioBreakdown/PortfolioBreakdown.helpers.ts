@@ -1,4 +1,5 @@
 import { sortByDesc } from "@arkecosystem/utils";
+import { Helpers } from "@payvo/profiles";
 import { GRAPH_COLORS } from "app/components/Graphs/Graphs.shared";
 import { LineGraphDataPoint, LineGraphMapper } from "app/components/Graphs/LineGraph/LineGraph.contracts";
 import { AssetItem } from "domains/dashboard/hooks/use-portfolio-breakdown";
@@ -11,7 +12,10 @@ const getColor = (index: number): string => {
 	return GRAPH_COLORS[GRAPH_COLORS.length - 1];
 };
 
-export const mapAssetsToDataPoints: LineGraphMapper<AssetItem> = (items, { graphWidth, segmentSpacing }) => {
+export const getAssetsToDataPointsMapper: (ticker: string) => LineGraphMapper<AssetItem> = (ticker) => (
+	items,
+	{ graphWidth, segmentSpacing },
+) => {
 	const assets = sortByDesc(items, "percent");
 
 	const dataPoints: LineGraphDataPoint[] = [];
@@ -36,6 +40,7 @@ export const mapAssetsToDataPoints: LineGraphMapper<AssetItem> = (items, { graph
 			color: getColor(index),
 			label: asset.label,
 			percent: asset.percent,
+			tooltipText: Helpers.Currency.format(asset.convertedAmount, ticker),
 			width,
 			x,
 		});

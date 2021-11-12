@@ -1,7 +1,10 @@
+import React from "react";
+
 interface LineGraphDataPoint {
 	color: string;
 	label: string;
 	percent: number;
+	tooltipText: string;
 	width: number;
 	x: number;
 }
@@ -16,6 +19,8 @@ interface LineGraphGraphConfig {
 interface LineGraphSegmentProperties {
 	config: LineGraphGraphConfig;
 	dataPoint: LineGraphDataPoint;
+	onMouseMove?: (event: React.MouseEvent<SVGRectElement>) => void;
+	onMouseOut?: (event: React.MouseEvent<SVGRectElement>) => void;
 }
 
 interface LineGraphLegendProperties {
@@ -36,6 +41,7 @@ interface LineGraphProperties<TDataPoint> {
 	data: TDataPoint[];
 	mapper: LineGraphMapper<TDataPoint>;
 	renderAfterLegend?: () => JSX.Element;
+	renderTooltip?: (dataPoint: LineGraphDataPoint) => JSX.Element;
 }
 
 export type {
