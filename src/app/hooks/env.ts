@@ -19,7 +19,7 @@ export const useActiveProfile = (): Contracts.IProfile => {
 		}
 
 		return context.env.profiles().findById(profileId);
-	}, [context, profileId]);
+	}, [context.env, history.location.pathname, profileId]);
 };
 
 export const useActiveWallet = (): Contracts.IReadWriteWallet => {

@@ -21,7 +21,7 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 	const transactionBuilder = useTransactionBuilder();
 	const { transport, connect } = useLedgerContext();
 	const { persist } = useEnvironmentContext();
-	const { hasAnyParameters, queryParameters: queryParameters } = useTransactionQueryParams();
+	const { hasAnyParameters, queryParameters } = useTransactionQueryParams();
 
 	const formDefaultValues = useMemo<DefaultValues<SendTransferForm>>(
 		() => ({
@@ -170,7 +170,7 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 				0,
 			);
 		}
-	}, [queryParameters, setValue, networks]);
+	}, [queryParameters, setValue, networks, hasAnyParameters]);
 
 	useEffect(() => {
 		if (!wallet) {
