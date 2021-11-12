@@ -22,6 +22,14 @@ interface LineGraphLegendProperties {
 	dataPoints: LineGraphDataPoint[];
 }
 
+interface LineGraphAnimationProperties {
+	animations: {
+		attribute: string;
+		from: number;
+		to: number;
+	}[];
+}
+
 type LineGraphMapper<TDataPoint> = (data: TDataPoint[], config: LineGraphGraphConfig) => LineGraphDataPoint[];
 
 interface LineGraphProperties<TDataPoint> {
@@ -31,6 +39,7 @@ interface LineGraphProperties<TDataPoint> {
 }
 
 export type {
+	LineGraphAnimationProperties,
 	LineGraphDataPoint,
 	LineGraphGraphConfig,
 	LineGraphLegendProperties,

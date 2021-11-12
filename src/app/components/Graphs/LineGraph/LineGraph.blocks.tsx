@@ -1,32 +1,44 @@
-import React, { useMemo, useState } from "react";
-
-import { LineGraphLegendProperties, LineGraphSegmentProperties } from "./LineGraph.contracts";
 import { useGraphFormatter } from "app/components/Graphs/Graphs.shared";
+import React from "react";
+
+import {
+	LineGraphAnimationProperties,
+	LineGraphLegendProperties,
+	LineGraphSegmentProperties,
+} from "./LineGraph.contracts";
+
+const LineGraphAnimation: React.VFC<LineGraphAnimationProperties> = ({ animations }) => (
+	<>
+		{animations.map(({ attribute, from, to }, index) => (
+			<React.Fragment key={index}>
+				<animate attributeName={attribute} from={from} to={to} dur="0.1s" begin="mouseover" fill="freeze" />
+				<animate attributeName={attribute} from={to} to={from} dur="0.15s" begin="mouseleave" fill="freeze" />
+			</React.Fragment>
+		))}
+	</>
+);
 
 export const LineGraphSegment: React.VFC<LineGraphSegmentProperties> = ({
 	config: { segmentHeight, segmentHeightHover },
 	dataPoint: { x, width, color },
-}) => {
-	const [isHover, setIsHover] = useState(false);
-
-	const [height, y] = useMemo<[number, number]>(
-		() => (isHover ? [segmentHeightHover, 0] : [segmentHeight, segmentHeight]),
-		[segmentHeight, segmentHeightHover, isHover],
-	);
-
-	return (
-		<rect
-			onMouseEnter={() => setIsHover(true)}
-			onMouseLeave={() => setIsHover(false)}
-			x={x}
-			y={y}
-			className={`fill-current text-theme-${color}`}
-			width={width}
-			height={height}
-			rx={height / 2}
+}) => (
+	<rect
+		x={x}
+		y={segmentHeight}
+		className={`fill-current text-theme-${color}`}
+		width={width}
+		height={segmentHeight}
+		rx={segmentHeight / 2}
+	>
+		<LineGraphAnimation
+			animations={[
+				{ attribute: "height", from: segmentHeight, to: segmentHeightHover },
+				{ attribute: "rx", from: segmentHeight / 2, to: segmentHeightHover / 2 },
+				{ attribute: "y", from: segmentHeight, to: 0 },
+			]}
 		/>
-	);
-};
+	</rect>
+);
 
 export const LineGraphLegend: React.VFC<LineGraphLegendProperties> = ({ dataPoints }) => {
 	const { formatPercent } = useGraphFormatter();
