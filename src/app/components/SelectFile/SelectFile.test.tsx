@@ -49,7 +49,14 @@ describe("SelectFile", () => {
 			properties: ["openFile"],
 		});
 
-		await waitFor(() => expect(onSelect).toHaveBeenCalled());
+		await waitFor(() =>
+			expect(onSelect).toHaveBeenCalledWith({
+				content: expect.any(Buffer),
+				extension: expect.any(String),
+				name: expect.any(String),
+			}),
+		);
+
 		showOpenDialogMock.mockRestore();
 	});
 

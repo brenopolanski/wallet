@@ -1,5 +1,5 @@
 import { Contracts } from "@payvo/profiles";
-import { AmountCrypto } from "app/components/Amount";
+import { Amount } from "app/components/Amount";
 import { Clipboard } from "app/components/Clipboard";
 import { Icon } from "app/components/Icon";
 import { Image } from "app/components/Image";
@@ -126,7 +126,7 @@ export const ConfirmationStep = ({ exchangeTransaction }: ConfirmationStepProper
 							</span>
 
 							<Label color="danger" className="whitespace-nowrap mr-auto">
-								<AmountCrypto
+								<Amount
 									className="text-lg font-semibold"
 									value={exchangeTransaction.input().amount}
 									ticker={exchangeTransaction.input().ticker}
@@ -183,7 +183,7 @@ export const ConfirmationStep = ({ exchangeTransaction }: ConfirmationStepProper
 							</span>
 
 							<Label color="success" className="whitespace-nowrap mr-auto">
-								<AmountCrypto
+								<Amount
 									className="text-lg font-semibold"
 									value={exchangeTransaction.output().amount}
 									ticker={exchangeTransaction.output().ticker}

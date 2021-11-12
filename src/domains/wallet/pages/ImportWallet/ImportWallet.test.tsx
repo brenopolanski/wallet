@@ -263,14 +263,14 @@ describe("ImportWallet", () => {
 
 		fireEvent.click(getByTestId("ImportWallet__edit-alias"));
 
-		expect(onClickEditAlias).toHaveBeenCalled();
+		expect(onClickEditAlias).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
 
 	it("should go back to portfolio", async () => {
 		const history = createMemoryHistory();
 		history.push(route);
 
-		const historySpy = jest.spyOn(history, "push").mockImplementationOnce();
+		const historySpy = jest.spyOn(history, "push").mockImplementation();
 
 		const { getByTestId, findByTestId } = render(
 			<Route path="/profiles/:profileId/wallets/import">
@@ -1123,7 +1123,7 @@ describe("ImportWallet", () => {
 		fireEvent.click(getByTestId("ImportWallet__finish-button"));
 
 		await waitFor(() => {
-			expect(historySpy).toHaveBeenCalled();
+			expect(historySpy).toHaveBeenCalledWith(expect.stringContaining(`/profiles/${profile.id()}/wallets/`));
 		});
 
 		historySpy.mockRestore();

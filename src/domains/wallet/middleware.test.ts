@@ -41,7 +41,7 @@ describe("WalletMiddleware", () => {
 
 		// @ts-ignore
 		expect(subject.handler(parameters)).toBe(false);
-		expect(redirect).toHaveBeenCalled();
+		expect(redirect).toHaveBeenCalledWith("/profiles/1/dashboard");
 	});
 
 	it("should return true if path matches and wallet exists", () => {

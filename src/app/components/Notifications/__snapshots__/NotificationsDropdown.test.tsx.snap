@@ -234,7 +234,7 @@ exports[`Notifications should open and cancel wallet update notification modal 1
                                 >
                                   <span
                                     class="whitespace-nowrap"
-                                    data-testid="AmountCrypto"
+                                    data-testid="Amount"
                                   >
                                     - 1.28629325 DARK
                                   </span>
@@ -314,7 +314,7 @@ exports[`Notifications should open and cancel wallet update notification modal 1
                                 >
                                   <span
                                     class="whitespace-nowrap"
-                                    data-testid="AmountCrypto"
+                                    data-testid="Amount"
                                   >
                                     + 20 DARK
                                   </span>
@@ -394,7 +394,7 @@ exports[`Notifications should open and cancel wallet update notification modal 1
                                 >
                                   <span
                                     class="whitespace-nowrap"
-                                    data-testid="AmountCrypto"
+                                    data-testid="Amount"
                                   >
                                     + 0.0000001 DARK
                                   </span>
@@ -747,7 +747,7 @@ exports[`Notifications should open and cancel wallet update notification modal 2
                                 >
                                   <span
                                     class="whitespace-nowrap"
-                                    data-testid="AmountCrypto"
+                                    data-testid="Amount"
                                   >
                                     - 1.28629325 DARK
                                   </span>
@@ -827,7 +827,7 @@ exports[`Notifications should open and cancel wallet update notification modal 2
                                 >
                                   <span
                                     class="whitespace-nowrap"
-                                    data-testid="AmountCrypto"
+                                    data-testid="Amount"
                                   >
                                     + 20 DARK
                                   </span>
@@ -907,7 +907,7 @@ exports[`Notifications should open and cancel wallet update notification modal 2
                                 >
                                   <span
                                     class="whitespace-nowrap"
-                                    data-testid="AmountCrypto"
+                                    data-testid="Amount"
                                   >
                                     + 0.0000001 DARK
                                   </span>
@@ -1164,7 +1164,7 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                                 >
                                   <span
                                     class="whitespace-nowrap"
-                                    data-testid="AmountCrypto"
+                                    data-testid="Amount"
                                   >
                                     - 1.28629325 DARK
                                   </span>
@@ -1244,7 +1244,7 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                                 >
                                   <span
                                     class="whitespace-nowrap"
-                                    data-testid="AmountCrypto"
+                                    data-testid="Amount"
                                   >
                                     + 20 DARK
                                   </span>
@@ -1324,7 +1324,7 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                                 >
                                   <span
                                     class="whitespace-nowrap"
-                                    data-testid="AmountCrypto"
+                                    data-testid="Amount"
                                   >
                                     + 0.0000001 DARK
                                   </span>
@@ -1601,7 +1601,7 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                       >
                         <span
                           class="whitespace-nowrap"
-                          data-testid="AmountCrypto"
+                          data-testid="Amount"
                         >
                           - 1 DARK
                         </span>
@@ -1640,7 +1640,7 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                   >
                     <span
                       class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                      data-testid="Amount"
                     >
                       0.28629325 DARK
                     </span>
@@ -1979,7 +1979,7 @@ exports[`Notifications should open and close wallet update notification modal 1`
                                 >
                                   <span
                                     class="whitespace-nowrap"
-                                    data-testid="AmountCrypto"
+                                    data-testid="Amount"
                                   >
                                     - 1.28629325 DARK
                                   </span>
@@ -2059,7 +2059,7 @@ exports[`Notifications should open and close wallet update notification modal 1`
                                 >
                                   <span
                                     class="whitespace-nowrap"
-                                    data-testid="AmountCrypto"
+                                    data-testid="Amount"
                                   >
                                     + 20 DARK
                                   </span>
@@ -2139,7 +2139,7 @@ exports[`Notifications should open and close wallet update notification modal 1`
                                 >
                                   <span
                                     class="whitespace-nowrap"
-                                    data-testid="AmountCrypto"
+                                    data-testid="Amount"
                                   >
                                     + 0.0000001 DARK
                                   </span>
@@ -2492,7 +2492,7 @@ exports[`Notifications should open and close wallet update notification modal 2`
                                 >
                                   <span
                                     class="whitespace-nowrap"
-                                    data-testid="AmountCrypto"
+                                    data-testid="Amount"
                                   >
                                     - 1.28629325 DARK
                                   </span>
@@ -2572,7 +2572,7 @@ exports[`Notifications should open and close wallet update notification modal 2`
                                 >
                                   <span
                                     class="whitespace-nowrap"
-                                    data-testid="AmountCrypto"
+                                    data-testid="Amount"
                                   >
                                     + 20 DARK
                                   </span>
@@ -2652,7 +2652,7 @@ exports[`Notifications should open and close wallet update notification modal 2`
                                 >
                                   <span
                                     class="whitespace-nowrap"
-                                    data-testid="AmountCrypto"
+                                    data-testid="Amount"
                                   >
                                     + 0.0000001 DARK
                                   </span>
@@ -2909,7 +2909,7 @@ exports[`Notifications should render with transactions and plugins 1`] = `
                                 >
                                   <span
                                     class="whitespace-nowrap"
-                                    data-testid="AmountCrypto"
+                                    data-testid="Amount"
                                   >
                                     + 1 DARK
                                   </span>
@@ -2989,7 +2989,7 @@ exports[`Notifications should render with transactions and plugins 1`] = `
                                 >
                                   <span
                                     class="whitespace-nowrap"
-                                    data-testid="AmountCrypto"
+                                    data-testid="Amount"
                                   >
                                     + 20 DARK
                                   </span>
@@ -3069,7 +3069,7 @@ exports[`Notifications should render with transactions and plugins 1`] = `
                                 >
                                   <span
                                     class="whitespace-nowrap"
-                                    data-testid="AmountCrypto"
+                                    data-testid="Amount"
                                   >
                                     + 0.0000001 DARK
                                   </span>

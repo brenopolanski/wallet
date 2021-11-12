@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts, Profile } from "@payvo/profiles";
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import { EnvironmentProvider } from "app/contexts";
 import electron, { ipcRenderer } from "electron";
@@ -93,7 +93,7 @@ describe("PluginManagerProvider", () => {
 
 		fireEvent.click(screen.getByRole("button"));
 
-		await waitFor(() => expect(restoreSpy).toHaveBeenCalled());
+		await waitFor(() => expect(restoreSpy).toHaveBeenCalledWith(expect.any(Profile)));
 
 		restoreSpy.mockRestore();
 	});
@@ -117,7 +117,7 @@ describe("PluginManagerProvider", () => {
 
 		fireEvent.click(screen.getByRole("button"));
 
-		expect(disposeSpy).toHaveBeenCalled();
+		expect(disposeSpy).toHaveBeenCalledWith();
 
 		disposeSpy.mockRestore();
 	});

@@ -1,7 +1,6 @@
 import { isNil } from "@arkecosystem/utils";
-import { Contracts, DTO } from "@payvo/profiles";
+import { Contracts, DTO, Helpers } from "@payvo/profiles";
 import { Amount, AmountLabel } from "app/components/Amount";
-import { formatCrypto, formatFiat, getDecimalsByTicker } from "app/components/Amount/Amount.helpers";
 import { Tooltip } from "app/components/Tooltip";
 import React from "react";
 import { useTranslation } from "react-i18next";
@@ -26,13 +25,7 @@ const ExchangeTooltip: React.FC<ExchangeTooltipProperties> = ({
 			return t("COMMON.NOT_AVAILABLE");
 		}
 
-		const isFiat = getDecimalsByTicker(ticker) <= 2;
-
-		if (isFiat) {
-			return formatFiat({ ticker, value });
-		}
-
-		return formatCrypto({ ticker, value });
+		return Helpers.Currency.format(value, ticker);
 	};
 
 	return (

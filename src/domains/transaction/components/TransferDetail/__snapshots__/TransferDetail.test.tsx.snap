@@ -251,7 +251,7 @@ exports[`TransferDetail should render a modal 1`] = `
                     >
                       <span
                         class="whitespace-nowrap"
-                        data-testid="AmountCrypto"
+                        data-testid="Amount"
                       >
                         - 100 ARK
                       </span>
@@ -290,7 +290,7 @@ exports[`TransferDetail should render a modal 1`] = `
                 >
                   <span
                     class="whitespace-nowrap"
-                    data-testid="AmountCrypto"
+                    data-testid="Amount"
                   >
                     21 ARK
                   </span>
@@ -643,7 +643,7 @@ exports[`TransferDetail should render as not is sent 1`] = `
                     >
                       <span
                         class="whitespace-nowrap"
-                        data-testid="AmountCrypto"
+                        data-testid="Amount"
                       >
                         + 100 ARK
                       </span>
@@ -682,7 +682,7 @@ exports[`TransferDetail should render as not is sent 1`] = `
                 >
                   <span
                     class="whitespace-nowrap"
-                    data-testid="AmountCrypto"
+                    data-testid="Amount"
                   >
                     21 ARK
                   </span>
@@ -1035,7 +1035,7 @@ exports[`TransferDetail should render with wallet alias 1`] = `
                     >
                       <span
                         class="whitespace-nowrap"
-                        data-testid="AmountCrypto"
+                        data-testid="Amount"
                       >
                         + 100 ARK
                       </span>
@@ -1074,7 +1074,7 @@ exports[`TransferDetail should render with wallet alias 1`] = `
                 >
                   <span
                     class="whitespace-nowrap"
-                    data-testid="AmountCrypto"
+                    data-testid="Amount"
                   >
                     21 ARK
                   </span>

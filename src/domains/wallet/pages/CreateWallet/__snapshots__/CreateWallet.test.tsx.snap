@@ -222,7 +222,7 @@ exports[`CreateWallet should create a wallet 1`] = `
               >
                 <span
                   class="whitespace-nowrap"
-                  data-testid="AmountCrypto"
+                  data-testid="Amount"
                 >
                   0 BTC
                 </span>
@@ -843,7 +843,7 @@ exports[`CreateWallet should create a wallet 2`] = `
               >
                 <span
                   class="whitespace-nowrap"
-                  data-testid="AmountCrypto"
+                  data-testid="Amount"
                 >
                   0 BTC
                 </span>
@@ -1307,7 +1307,7 @@ exports[`CreateWallet should create a wallet with encryption 1`] = `
               >
                 <span
                   class="whitespace-nowrap"
-                  data-testid="AmountCrypto"
+                  data-testid="Amount"
                 >
                   0 BTC
                 </span>
@@ -1928,7 +1928,7 @@ exports[`CreateWallet should create a wallet with encryption 2`] = `
               >
                 <span
                   class="whitespace-nowrap"
-                  data-testid="AmountCrypto"
+                  data-testid="Amount"
                 >
                   0 BTC
                 </span>
@@ -2397,7 +2397,7 @@ exports[`CreateWallet should remove pending wallet if not submitted 1`] = `
               >
                 <span
                   class="whitespace-nowrap"
-                  data-testid="AmountCrypto"
+                  data-testid="Amount"
                 >
                   0 BTC
                 </span>
@@ -3018,7 +3018,7 @@ exports[`CreateWallet should show an error message for duplicate name 1`] = `
               >
                 <span
                   class="whitespace-nowrap"
-                  data-testid="AmountCrypto"
+                  data-testid="Amount"
                 >
                   0 BTC
                 </span>
@@ -3639,7 +3639,7 @@ exports[`CreateWallet should show an error message if wallet generation failed 1
               >
                 <span
                   class="whitespace-nowrap"
-                  data-testid="AmountCrypto"
+                  data-testid="Amount"
                 >
                   0 BTC
                 </span>

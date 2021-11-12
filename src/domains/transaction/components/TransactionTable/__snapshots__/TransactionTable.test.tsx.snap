@@ -3723,7 +3723,7 @@ exports[`TransactionTable should render 1`] = `
                   >
                     <span
                       class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                      data-testid="Amount"
                     >
                       + 20 DARK
                     </span>
@@ -3900,7 +3900,7 @@ exports[`TransactionTable should render 1`] = `
                   >
                     <span
                       class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                      data-testid="Amount"
                     >
                       - 20.03499657 DARK
                     </span>
@@ -4077,7 +4077,7 @@ exports[`TransactionTable should render 1`] = `
                   >
                     <span
                       class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                      data-testid="Amount"
                     >
                       + 0.0000001 DARK
                     </span>
@@ -4254,7 +4254,7 @@ exports[`TransactionTable should render 1`] = `
                   >
                     <span
                       class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                      data-testid="Amount"
                     >
                       + 0.0000001 DARK
                     </span>
@@ -4431,7 +4431,7 @@ exports[`TransactionTable should render 1`] = `
                   >
                     <span
                       class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                      data-testid="Amount"
                     >
                       + 0.0000001 DARK
                     </span>
@@ -4608,7 +4608,7 @@ exports[`TransactionTable should render 1`] = `
                   >
                     <span
                       class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                      data-testid="Amount"
                     >
                       + 0.0000001 DARK
                     </span>
@@ -4785,7 +4785,7 @@ exports[`TransactionTable should render 1`] = `
                   >
                     <span
                       class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                      data-testid="Amount"
                     >
                       + 0.0000001 DARK
                     </span>
@@ -4962,7 +4962,7 @@ exports[`TransactionTable should render 1`] = `
                   >
                     <span
                       class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                      data-testid="Amount"
                     >
                       + 0.0000001 DARK
                     </span>
@@ -5139,7 +5139,7 @@ exports[`TransactionTable should render 1`] = `
                   >
                     <span
                       class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                      data-testid="Amount"
                     >
                       + 0.0000001 DARK
                     </span>
@@ -5316,7 +5316,7 @@ exports[`TransactionTable should render 1`] = `
                   >
                     <span
                       class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                      data-testid="Amount"
                     >
                       - 0.100001 DARK
                     </span>
@@ -5626,7 +5626,7 @@ exports[`TransactionTable should render compact 1`] = `
                   >
                     <span
                       class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                      data-testid="Amount"
                     >
                       + 20 DARK
                     </span>
@@ -5803,7 +5803,7 @@ exports[`TransactionTable should render compact 1`] = `
                   >
                     <span
                       class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                      data-testid="Amount"
                     >
                       - 20.03499657 DARK
                     </span>
@@ -5980,7 +5980,7 @@ exports[`TransactionTable should render compact 1`] = `
                   >
                     <span
                       class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                      data-testid="Amount"
                     >
                       + 0.0000001 DARK
                     </span>
@@ -6157,7 +6157,7 @@ exports[`TransactionTable should render compact 1`] = `
                   >
                     <span
                       class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                      data-testid="Amount"
                     >
                       + 0.0000001 DARK
                     </span>
@@ -6334,7 +6334,7 @@ exports[`TransactionTable should render compact 1`] = `
                   >
                     <span
                       class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                      data-testid="Amount"
                     >
                       + 0.0000001 DARK
                     </span>
@@ -6511,7 +6511,7 @@ exports[`TransactionTable should render compact 1`] = `
                   >
                     <span
                       class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                      data-testid="Amount"
                     >
                       + 0.0000001 DARK
                     </span>
@@ -6688,7 +6688,7 @@ exports[`TransactionTable should render compact 1`] = `
                   >
                     <span
                       class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                      data-testid="Amount"
                     >
                       + 0.0000001 DARK
                     </span>
@@ -6865,7 +6865,7 @@ exports[`TransactionTable should render compact 1`] = `
                   >
                     <span
                       class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                      data-testid="Amount"
                     >
                       + 0.0000001 DARK
                     </span>
@@ -7042,7 +7042,7 @@ exports[`TransactionTable should render compact 1`] = `
                   >
                     <span
                       class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                      data-testid="Amount"
                     >
                       + 0.0000001 DARK
                     </span>
@@ -7219,7 +7219,7 @@ exports[`TransactionTable should render compact 1`] = `
                   >
                     <span
                       class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                      data-testid="Amount"
                     >
                       - 0.100001 DARK
                     </span>

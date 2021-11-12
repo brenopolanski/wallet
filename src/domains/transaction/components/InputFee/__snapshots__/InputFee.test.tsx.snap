@@ -182,7 +182,7 @@ exports[`should display converted value when on live net 1`] = `
               >
                 <span
                   class="whitespace-nowrap"
-                  data-testid="AmountFiat"
+                  data-testid="Amount"
                 >
                   €0.00
                 </span>
@@ -292,13 +292,13 @@ exports[`should display converted values when on live net 1`] = `
           </div>
           <span
             class="whitespace-nowrap text-sm"
-            data-testid="AmountCrypto"
+            data-testid="Amount"
           >
             0.006 DARK
           </span>
           <span
             class="whitespace-nowrap text-sm text-theme-secondary-500"
-            data-testid="AmountFiat"
+            data-testid="Amount"
           >
             €0.00
           </span>
@@ -320,13 +320,13 @@ exports[`should display converted values when on live net 1`] = `
           </div>
           <span
             class="whitespace-nowrap text-sm"
-            data-testid="AmountCrypto"
+            data-testid="Amount"
           >
             0.456 DARK
           </span>
           <span
             class="whitespace-nowrap text-sm text-theme-secondary-500"
-            data-testid="AmountFiat"
+            data-testid="Amount"
           >
             €0.00
           </span>
@@ -348,13 +348,13 @@ exports[`should display converted values when on live net 1`] = `
           </div>
           <span
             class="whitespace-nowrap text-sm"
-            data-testid="AmountCrypto"
+            data-testid="Amount"
           >
             0.5 DARK
           </span>
           <span
             class="whitespace-nowrap text-sm text-theme-secondary-500"
-            data-testid="AmountFiat"
+            data-testid="Amount"
           >
             €0.00
           </span>
@@ -536,7 +536,7 @@ exports[`should keep different values for simple and advanced view types 2`] = `
           </div>
           <span
             class="whitespace-nowrap text-sm"
-            data-testid="AmountCrypto"
+            data-testid="Amount"
           >
             0.006 DARK
           </span>
@@ -558,7 +558,7 @@ exports[`should keep different values for simple and advanced view types 2`] = `
           </div>
           <span
             class="whitespace-nowrap text-sm"
-            data-testid="AmountCrypto"
+            data-testid="Amount"
           >
             0.456 DARK
           </span>
@@ -580,7 +580,7 @@ exports[`should keep different values for simple and advanced view types 2`] = `
           </div>
           <span
             class="whitespace-nowrap text-sm"
-            data-testid="AmountCrypto"
+            data-testid="Amount"
           >
             0.5 DARK
           </span>
@@ -653,7 +653,7 @@ exports[`should render 1`] = `
           </div>
           <span
             class="whitespace-nowrap text-sm"
-            data-testid="AmountCrypto"
+            data-testid="Amount"
           >
             0.006 DARK
           </span>
@@ -675,7 +675,7 @@ exports[`should render 1`] = `
           </div>
           <span
             class="whitespace-nowrap text-sm"
-            data-testid="AmountCrypto"
+            data-testid="Amount"
           >
             0.456 DARK
           </span>
@@ -697,7 +697,7 @@ exports[`should render 1`] = `
           </div>
           <span
             class="whitespace-nowrap text-sm"
-            data-testid="AmountCrypto"
+            data-testid="Amount"
           >
             0.5 DARK
           </span>
@@ -843,7 +843,7 @@ exports[`should update value when clicking button Average 1`] = `
           </div>
           <span
             class="whitespace-nowrap text-sm"
-            data-testid="AmountCrypto"
+            data-testid="Amount"
           >
             0.006 DARK
           </span>
@@ -865,7 +865,7 @@ exports[`should update value when clicking button Average 1`] = `
           </div>
           <span
             class="whitespace-nowrap text-sm"
-            data-testid="AmountCrypto"
+            data-testid="Amount"
           >
             0.456 DARK
           </span>
@@ -887,7 +887,7 @@ exports[`should update value when clicking button Average 1`] = `
           </div>
           <span
             class="whitespace-nowrap text-sm"
-            data-testid="AmountCrypto"
+            data-testid="Amount"
           >
             0.5 DARK
           </span>
@@ -960,7 +960,7 @@ exports[`should update value when clicking button Fast 1`] = `
           </div>
           <span
             class="whitespace-nowrap text-sm"
-            data-testid="AmountCrypto"
+            data-testid="Amount"
           >
             0.006 DARK
           </span>
@@ -982,7 +982,7 @@ exports[`should update value when clicking button Fast 1`] = `
           </div>
           <span
             class="whitespace-nowrap text-sm"
-            data-testid="AmountCrypto"
+            data-testid="Amount"
           >
             0.456 DARK
           </span>
@@ -1004,7 +1004,7 @@ exports[`should update value when clicking button Fast 1`] = `
           </div>
           <span
             class="whitespace-nowrap text-sm"
-            data-testid="AmountCrypto"
+            data-testid="Amount"
           >
             0.5 DARK
           </span>
@@ -1077,7 +1077,7 @@ exports[`should update value when clicking button Slow 1`] = `
           </div>
           <span
             class="whitespace-nowrap text-sm"
-            data-testid="AmountCrypto"
+            data-testid="Amount"
           >
             0.006 DARK
           </span>
@@ -1099,7 +1099,7 @@ exports[`should update value when clicking button Slow 1`] = `
           </div>
           <span
             class="whitespace-nowrap text-sm"
-            data-testid="AmountCrypto"
+            data-testid="Amount"
           >
             0.456 DARK
           </span>
@@ -1121,7 +1121,7 @@ exports[`should update value when clicking button Slow 1`] = `
           </div>
           <span
             class="whitespace-nowrap text-sm"
-            data-testid="AmountCrypto"
+            data-testid="Amount"
           >
             0.5 DARK
           </span>

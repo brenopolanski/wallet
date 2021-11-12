@@ -1,8 +1,7 @@
+import { Icon } from "app/components/Icon";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import tw, { styled } from "twin.macro";
-
-import { Icon } from "../Icon";
 
 const ToggleIcon = styled.span<{ isOpen: boolean; isDisabled?: boolean }>`
 	${tw`inline-flex items-center justify-center rounded-full transition duration-200 transform bg-theme-primary-100 dark:bg-theme-secondary-800 text-theme-primary-600 dark:text-theme-secondary-200`}

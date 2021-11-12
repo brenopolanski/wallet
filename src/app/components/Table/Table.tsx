@@ -1,9 +1,9 @@
+import { Icon } from "app/components/Icon";
 import cn from "classnames";
 import React, { useMemo } from "react";
 import { HeaderGroup, useSortBy, useTable } from "react-table";
 import { styled } from "twin.macro";
 
-import { Icon } from "../Icon";
 import { TableProperties } from "./Table.contracts";
 import { defaultTableStyle } from "./Table.styles";
 

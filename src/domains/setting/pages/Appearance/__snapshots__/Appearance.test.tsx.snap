@@ -220,7 +220,7 @@ exports[`Appearance Settings should render appearance settings 1`] = `
               >
                 <span
                   class="whitespace-nowrap"
-                  data-testid="AmountCrypto"
+                  data-testid="Amount"
                 >
                   0 BTC
                 </span>
@@ -743,19 +743,9 @@ exports[`Appearance Settings should render appearance settings 1`] = `
                     class="flex justify-end mt-8 space-x-3 w-full"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
-                      data-testid="AppearanceFooterButtons__cancel"
-                      type="button"
-                    >
-                      <div
-                        class="flex items-center space-x-2"
-                      >
-                        Cancel
-                      </div>
-                    </button>
-                    <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd"
                       data-testid="AppearanceFooterButtons__save"
+                      disabled=""
                       type="submit"
                     >
                       <div

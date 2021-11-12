@@ -349,7 +349,7 @@ describe("Dropdown ClickOutside Hook", () => {
 
 		fireEvent.mouseDown(document);
 
-		expect(callback).toHaveBeenCalled();
+		expect(callback).toHaveBeenCalledWith();
 	});
 
 	it("should do nothing if callback is not provided", () => {

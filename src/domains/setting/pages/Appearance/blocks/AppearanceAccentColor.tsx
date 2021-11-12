@@ -1,9 +1,8 @@
 import { ButtonGroup, ButtonGroupOption } from "app/components/ButtonGroup";
+import { AppearanceSettingsState } from "domains/setting/pages/Appearance/Appearance.contracts";
 import React from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-
-import { AppearanceSettingsState } from "../Appearance.contracts";
 
 interface AccentColorItem {
 	className: string;

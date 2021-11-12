@@ -16,7 +16,7 @@ describe("CollapseToggleButton", () => {
 
 		fireEvent.click(button);
 
-		expect(onClick).toHaveBeenCalled();
+		expect(onClick).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
 
 	it("should render open", () => {

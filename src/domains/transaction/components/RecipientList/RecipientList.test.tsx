@@ -168,7 +168,7 @@ describe("RecipientList", () => {
 
 		fireEvent.click(removeButton[0]);
 
-		expect(onRemove).toHaveBeenCalled();
+		expect(onRemove).toHaveBeenCalledWith(0);
 	});
 
 	it("should not call onRemove callback if not provided", async () => {

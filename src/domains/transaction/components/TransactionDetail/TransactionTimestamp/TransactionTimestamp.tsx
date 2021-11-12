@@ -1,9 +1,8 @@
 import { DateTime } from "@payvo/intl";
 import { useTimeFormat } from "app/hooks/use-time-format";
+import { TransactionDetail } from "domains/transaction/components/TransactionDetail/TransactionDetail";
 import React from "react";
 import { useTranslation } from "react-i18next";
-
-import { TransactionDetail } from "../TransactionDetail";
 
 interface TransactionTimestampProperties {
 	timestamp?: DateTime;

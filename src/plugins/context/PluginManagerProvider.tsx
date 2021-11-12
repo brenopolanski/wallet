@@ -3,6 +3,7 @@ import { Contracts } from "@payvo/profiles";
 import { useEnvironmentContext } from "app/contexts";
 import { httpClient, toasts } from "app/services";
 import { ipcRenderer } from "electron";
+import { PluginController, PluginManager } from "plugins/core";
 import { PluginConfigurationData } from "plugins/core/configuration";
 import { PluginLoaderFileSystem } from "plugins/loader/fs";
 import {
@@ -15,8 +16,6 @@ import React, { useCallback, useMemo, useState } from "react";
 import semver from "semver";
 import { assertArray, assertString } from "utils/assertions";
 import { appVersion, openExternal } from "utils/electron-utils";
-
-import { PluginController, PluginManager } from "../core";
 
 const PluginManagerContext = React.createContext<any>(undefined);
 

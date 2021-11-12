@@ -261,7 +261,7 @@ exports[`Signed Transaction Table should render pending transfers when isCompact
                   >
                     <span
                       class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                      data-testid="Amount"
                     >
                       + 1.1 DARK
                     </span>
@@ -547,7 +547,7 @@ exports[`Signed Transaction Table should render pending transfers when isCompact
                   >
                     <span
                       class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                      data-testid="Amount"
                     >
                       + 1.1 DARK
                     </span>
@@ -829,7 +829,7 @@ exports[`Signed Transaction Table should render signed transactions and handle e
                   >
                     <span
                       class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                      data-testid="Amount"
                     >
                       - 15 DARK
                     </span>
@@ -1131,7 +1131,7 @@ exports[`Signed Transaction Table should show as awaiting confirmations 1`] = `
                   >
                     <span
                       class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                      data-testid="Amount"
                     >
                       + 1.1 DARK
                     </span>
@@ -1413,7 +1413,7 @@ exports[`Signed Transaction Table should show as awaiting other wallets signatur
                   >
                     <span
                       class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                      data-testid="Amount"
                     >
                       - 15 DARK
                     </span>
@@ -1711,7 +1711,7 @@ exports[`Signed Transaction Table should show as awaiting the wallet signature 1
                   >
                     <span
                       class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                      data-testid="Amount"
                     >
                       - 15 DARK
                     </span>
@@ -2031,7 +2031,7 @@ exports[`Signed Transaction Table should show as final signature 1`] = `
                   >
                     <span
                       class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                      data-testid="Amount"
                     >
                       - 15 DARK
                     </span>
@@ -2351,7 +2351,7 @@ exports[`Signed Transaction Table should show as multiSignature ready 1`] = `
                   >
                     <span
                       class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                      data-testid="Amount"
                     >
                       - 15 DARK
                     </span>
@@ -2671,7 +2671,7 @@ exports[`Signed Transaction Table should show as unvote 1`] = `
                   >
                     <span
                       class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                      data-testid="Amount"
                     >
                       + 0.1 DARK
                     </span>
@@ -2953,7 +2953,7 @@ exports[`Signed Transaction Table should show as vote 1`] = `
                   >
                     <span
                       class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                      data-testid="Amount"
                     >
                       + 0.1 DARK
                     </span>
@@ -3235,7 +3235,7 @@ exports[`Signed Transaction Table should show the sign button with isCompact = f
                   >
                     <span
                       class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                      data-testid="Amount"
                     >
                       - 15 DARK
                     </span>
@@ -3555,7 +3555,7 @@ exports[`Signed Transaction Table should show the sign button with isCompact = t
                   >
                     <span
                       class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                      data-testid="Amount"
                     >
                       - 15 DARK
                     </span>
@@ -3875,7 +3875,7 @@ exports[`Signed Transaction Table should show unconfirmed multiSignature transac
                   >
                     <span
                       class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                      data-testid="Amount"
                     >
                       - 15 DARK
                     </span>

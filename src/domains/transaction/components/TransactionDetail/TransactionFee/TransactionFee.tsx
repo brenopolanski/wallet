@@ -1,8 +1,10 @@
-import { Amount, AmountCrypto } from "app/components/Amount";
+import { Amount } from "app/components/Amount";
+import {
+	TransactionDetail,
+	TransactionDetailProperties,
+} from "domains/transaction/components/TransactionDetail/TransactionDetail";
 import React from "react";
 import { useTranslation } from "react-i18next";
-
-import { TransactionDetail, TransactionDetailProperties } from "../TransactionDetail";
 
 type TransactionFeeProperties = {
 	currency: string;
@@ -28,7 +30,7 @@ const TransactionFee: React.FC<TransactionFeeProperties> = ({
 			borderPosition={borderPosition}
 			{...properties}
 		>
-			<AmountCrypto ticker={currency} value={value} />
+			<Amount ticker={currency} value={value} />
 
 			{!!exchangeCurrency && !!convertedValue && (
 				<Amount ticker={exchangeCurrency} value={convertedValue} className="ml-2 text-theme-secondary-400" />

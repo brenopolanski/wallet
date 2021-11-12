@@ -11,7 +11,7 @@ exports[`TransactionRowAmount should show as received 1`] = `
     >
       <span
         class="whitespace-nowrap"
-        data-testid="AmountCrypto"
+        data-testid="Amount"
       >
         + 121 ARK
       </span>

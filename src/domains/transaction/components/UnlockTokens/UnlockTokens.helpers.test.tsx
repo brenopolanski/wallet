@@ -3,6 +3,8 @@ import { DateTime } from "@payvo/intl";
 import { Contracts } from "@payvo/profiles";
 import { act, renderHook } from "@testing-library/react-hooks";
 import { toasts } from "app/services";
+import { UnlockTokensFetchError } from "domains/transaction/components/UnlockTokens/blocks/UnlockTokensFetchError";
+import React from "react";
 import { env, getDefaultProfileId } from "utils/testing-library";
 
 import { POLLING_INTERVAL } from "./UnlockTokens.contracts";
@@ -70,8 +72,8 @@ describe("useUnlockableBalances", () => {
 		await waitForNextUpdate();
 
 		expect(result.current.items).toHaveLength(0);
-		expect(unlockableBalances).toHaveBeenCalled();
-		expect(toastWarning).toHaveBeenCalled();
+		expect(unlockableBalances).toHaveBeenCalledWith(wallet.address());
+		expect(toastWarning).toHaveBeenCalledWith(<UnlockTokensFetchError onRetry={expect.any(Function)} />);
 
 		unlockableBalances.mockRestore();
 		toastWarning.mockRestore();

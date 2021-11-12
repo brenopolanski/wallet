@@ -722,7 +722,7 @@ exports[`ImportWallet should render as ledger import 1`] = `
               >
                 <span
                   class="whitespace-nowrap"
-                  data-testid="AmountCrypto"
+                  data-testid="Amount"
                 >
                   0 BTC
                 </span>
@@ -1885,7 +1885,7 @@ exports[`ImportWallet should render success step 1`] = `
         >
           <span
             class="whitespace-nowrap"
-            data-testid="AmountCrypto"
+            data-testid="Amount"
           >
             33.75089801 DARK
           </span>

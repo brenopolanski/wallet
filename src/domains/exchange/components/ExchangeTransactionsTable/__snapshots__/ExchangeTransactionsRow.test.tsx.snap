@@ -66,7 +66,7 @@ exports[`ExchangeTransactionsRow should render (Expired) 1`] = `
               >
                 <span
                   class="whitespace-nowrap"
-                  data-testid="AmountCrypto"
+                  data-testid="Amount"
                 >
                   - 1 BTC
                 </span>
@@ -100,7 +100,7 @@ exports[`ExchangeTransactionsRow should render (Expired) 1`] = `
               >
                 <span
                   class="whitespace-nowrap"
-                  data-testid="AmountCrypto"
+                  data-testid="Amount"
                 >
                   + 100 ARK
                 </span>
@@ -222,7 +222,7 @@ exports[`ExchangeTransactionsRow should render (Failed) 1`] = `
               >
                 <span
                   class="whitespace-nowrap"
-                  data-testid="AmountCrypto"
+                  data-testid="Amount"
                 >
                   - 1 BTC
                 </span>
@@ -256,7 +256,7 @@ exports[`ExchangeTransactionsRow should render (Failed) 1`] = `
               >
                 <span
                   class="whitespace-nowrap"
-                  data-testid="AmountCrypto"
+                  data-testid="Amount"
                 >
                   + 100 ARK
                 </span>
@@ -378,7 +378,7 @@ exports[`ExchangeTransactionsRow should render (Finished) 1`] = `
               >
                 <span
                   class="whitespace-nowrap"
-                  data-testid="AmountCrypto"
+                  data-testid="Amount"
                 >
                   - 1 BTC
                 </span>
@@ -412,7 +412,7 @@ exports[`ExchangeTransactionsRow should render (Finished) 1`] = `
               >
                 <span
                   class="whitespace-nowrap"
-                  data-testid="AmountCrypto"
+                  data-testid="Amount"
                 >
                   + 100 ARK
                 </span>
@@ -534,7 +534,7 @@ exports[`ExchangeTransactionsRow should render (New) 1`] = `
               >
                 <span
                   class="whitespace-nowrap"
-                  data-testid="AmountCrypto"
+                  data-testid="Amount"
                 >
                   - 1 BTC
                 </span>
@@ -582,7 +582,7 @@ exports[`ExchangeTransactionsRow should render (New) 1`] = `
                 </div>
                 <span
                   class="whitespace-nowrap"
-                  data-testid="AmountCrypto"
+                  data-testid="Amount"
                 >
                   + 100 ARK
                 </span>
@@ -704,7 +704,7 @@ exports[`ExchangeTransactionsRow should render (Refunded) 1`] = `
               >
                 <span
                   class="whitespace-nowrap"
-                  data-testid="AmountCrypto"
+                  data-testid="Amount"
                 >
                   - 1 BTC
                 </span>
@@ -738,7 +738,7 @@ exports[`ExchangeTransactionsRow should render (Refunded) 1`] = `
               >
                 <span
                   class="whitespace-nowrap"
-                  data-testid="AmountCrypto"
+                  data-testid="Amount"
                 >
                   + 100 ARK
                 </span>
@@ -860,7 +860,7 @@ exports[`ExchangeTransactionsRow should render (Verifying) 1`] = `
               >
                 <span
                   class="whitespace-nowrap"
-                  data-testid="AmountCrypto"
+                  data-testid="Amount"
                 >
                   - 1 BTC
                 </span>
@@ -894,7 +894,7 @@ exports[`ExchangeTransactionsRow should render (Verifying) 1`] = `
               >
                 <span
                   class="whitespace-nowrap"
-                  data-testid="AmountCrypto"
+                  data-testid="Amount"
                 >
                   + 100 ARK
                 </span>
@@ -1016,7 +1016,7 @@ exports[`ExchangeTransactionsRow should render compact 1`] = `
               >
                 <span
                   class="whitespace-nowrap"
-                  data-testid="AmountCrypto"
+                  data-testid="Amount"
                 >
                   - 1 BTC
                 </span>
@@ -1050,7 +1050,7 @@ exports[`ExchangeTransactionsRow should render compact 1`] = `
               >
                 <span
                   class="whitespace-nowrap"
-                  data-testid="AmountCrypto"
+                  data-testid="Amount"
                 >
                   + 100 ARK
                 </span>

@@ -30,7 +30,7 @@ describe("Confirmation Modal", () => {
 
 		fireEvent.click(screen.getByText(translations.NO));
 
-		expect(onCancel).toHaveBeenCalled();
+		expect(onCancel).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
 
 	it("should trigger confirm", () => {
@@ -40,6 +40,6 @@ describe("Confirmation Modal", () => {
 
 		fireEvent.click(screen.getByText(translations.YES));
 
-		expect(onConfirm).toHaveBeenCalled();
+		expect(onConfirm).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
 });

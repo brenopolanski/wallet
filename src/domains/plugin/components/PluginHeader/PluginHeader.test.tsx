@@ -26,7 +26,7 @@ describe("PluginHeader", () => {
 
 		fireEvent.click(screen.getByTestId("PluginHeader__button--install"));
 
-		expect(onInstall).toHaveBeenCalled();
+		expect(onInstall).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 		expect(container).toMatchSnapshot();
 	});
 
@@ -66,7 +66,14 @@ describe("PluginHeader", () => {
 		fireEvent.click(screen.getByTestId("dropdown__toggle"));
 		fireEvent.click(screen.getByText(commonTranslations.UPDATE));
 
-		expect(onUpdate).toHaveBeenCalled();
+		expect(onUpdate).toHaveBeenCalledWith({
+			...pluginDataFixture,
+			isInstalled: true,
+			updateStatus: {
+				isAvailable: true,
+				isCompatible: true,
+			},
+		});
 	});
 
 	it("should trigger delete", () => {
@@ -77,7 +84,10 @@ describe("PluginHeader", () => {
 		fireEvent.click(screen.getByTestId("dropdown__toggle"));
 		fireEvent.click(screen.getByText(commonTranslations.DELETE));
 
-		expect(onDelete).toHaveBeenCalled();
+		expect(onDelete).toHaveBeenCalledWith({
+			...pluginDataFixture,
+			isInstalled: true,
+		});
 	});
 
 	it("should trigger enable", () => {
@@ -88,7 +98,10 @@ describe("PluginHeader", () => {
 		fireEvent.click(screen.getByTestId("dropdown__toggle"));
 		fireEvent.click(screen.getByText(commonTranslations.ENABLE));
 
-		expect(onEnable).toHaveBeenCalled();
+		expect(onEnable).toHaveBeenCalledWith({
+			...pluginDataFixture,
+			isInstalled: true,
+		});
 	});
 
 	it("should trigger disable", () => {
@@ -99,6 +112,10 @@ describe("PluginHeader", () => {
 		fireEvent.click(screen.getByTestId("dropdown__toggle"));
 		fireEvent.click(screen.getByText(commonTranslations.DISABLE));
 
-		expect(onDisable).toHaveBeenCalled();
+		expect(onDisable).toHaveBeenCalledWith({
+			...pluginDataFixture,
+			isEnabled: true,
+			isInstalled: true,
+		});
 	});
 });

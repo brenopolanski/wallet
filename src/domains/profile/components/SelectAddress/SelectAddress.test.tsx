@@ -171,6 +171,6 @@ describe("SelectAddress", () => {
 			expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 		});
 
-		expect(onChange).toHaveBeenCalled();
+		expect(onChange).toHaveBeenCalledWith(wallets[0].address());
 	});
 });

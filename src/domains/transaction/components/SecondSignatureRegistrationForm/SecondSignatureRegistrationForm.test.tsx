@@ -6,7 +6,7 @@ import userEvent from "@testing-library/user-event";
 import { toasts } from "app/services";
 import { createMemoryHistory } from "history";
 import React from "react";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import { Route, Router } from "react-router-dom";
 import secondSignatureFixture from "tests/fixtures/coins/ark/devnet/transactions/second-signature-registration.json";
 import * as utils from "utils/electron-utils";
@@ -70,9 +70,9 @@ describe("SecondSignatureRegistrationForm", () => {
 		);
 
 		await waitFor(() => expect(screen.getByTestId("SecondSignatureRegistrationForm__generation-step")));
-		await waitFor(() => expect(form()?.getValues("secondMnemonic")).toEqual(passphrase));
+		await waitFor(() => expect(form()?.getValues("secondMnemonic")).toBe(passphrase));
 
-		expect(bip39GenerateMock).toHaveBeenCalled();
+		expect(bip39GenerateMock).toHaveBeenCalledWith("english", 24);
 		expect(asFragment()).toMatchSnapshot();
 
 		bip39GenerateMock.mockRestore();
@@ -206,7 +206,15 @@ describe("SecondSignatureRegistrationForm", () => {
 
 			fireEvent.click(screen.getByTestId("SecondSignature__download"));
 
-			await waitFor(() => expect(toastSpy).toHaveBeenCalled());
+			await waitFor(() =>
+				expect(toastSpy).toHaveBeenCalledWith(
+					<Trans
+						components={{ bold: <strong /> }}
+						i18nKey="COMMON.SAVE_FILE.SUCCESS"
+						values={{ filePath: "filePath" }}
+					/>,
+				),
+			);
 
 			toastSpy.mockRestore();
 		});
@@ -262,7 +270,7 @@ describe("SecondSignatureRegistrationForm", () => {
 
 			fireEvent.click(screen.getByTestId("SecondSignature__download"));
 
-			await waitFor(() => expect(toastSpy).toHaveBeenCalled());
+			await waitFor(() => expect(toastSpy).toHaveBeenCalledWith(expect.stringMatching(/Could not save file/)));
 
 			toastSpy.mockRestore();
 		});
@@ -373,9 +381,9 @@ describe("SecondSignatureRegistrationForm", () => {
 			profile,
 		});
 
-		expect(signMock).toHaveBeenCalled();
-		expect(broadcastMock).toHaveBeenCalled();
-		expect(transactionMock).toHaveBeenCalled();
+		expect(signMock).toHaveBeenCalledWith({ data: { mnemonic: MNEMONICS[1] }, fee: 1 });
+		expect(broadcastMock).toHaveBeenCalledWith(secondSignatureFixture.data.id);
+		expect(transactionMock).toHaveBeenCalledWith(secondSignatureFixture.data.id);
 
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
@@ -413,9 +421,9 @@ describe("SecondSignatureRegistrationForm", () => {
 			profile,
 		});
 
-		expect(signMock).toHaveBeenCalled();
-		expect(broadcastMock).toHaveBeenCalled();
-		expect(transactionMock).toHaveBeenCalled();
+		expect(signMock).toHaveBeenCalledWith({ data: {}, fee: 1 });
+		expect(broadcastMock).toHaveBeenCalledWith(secondSignatureFixture.data.id);
+		expect(transactionMock).toHaveBeenCalledWith(secondSignatureFixture.data.id);
 
 		signMock.mockRestore();
 		broadcastMock.mockRestore();

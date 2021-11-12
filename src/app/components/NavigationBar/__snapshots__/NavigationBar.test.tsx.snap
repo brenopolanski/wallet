@@ -467,7 +467,7 @@ exports[`NavigationBar should render full variant when profile restored is true 
             >
               <span
                 class="whitespace-nowrap"
-                data-testid="AmountCrypto"
+                data-testid="Amount"
               >
                 0 BTC
               </span>
@@ -704,7 +704,7 @@ exports[`NavigationBar should render with custom menu 1`] = `
             >
               <span
                 class="whitespace-nowrap"
-                data-testid="AmountCrypto"
+                data-testid="Amount"
               >
                 0 BTC
               </span>
@@ -941,7 +941,7 @@ exports[`NavigationBar should render with shadow if there is a scroll 1`] = `
             >
               <span
                 class="whitespace-nowrap"
-                data-testid="AmountCrypto"
+                data-testid="Amount"
               >
                 0 BTC
               </span>
@@ -1183,7 +1183,7 @@ exports[`NavigationBar should render with title 1`] = `
             >
               <span
                 class="whitespace-nowrap"
-                data-testid="AmountCrypto"
+                data-testid="Amount"
               >
                 0 BTC
               </span>

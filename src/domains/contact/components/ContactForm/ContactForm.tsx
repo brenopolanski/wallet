@@ -10,12 +10,11 @@ import { OptionProperties, Select } from "app/components/SelectDropdown";
 import { Tooltip } from "app/components/Tooltip";
 import { useEnvironmentContext } from "app/contexts";
 import { useNetworkOptions } from "app/hooks";
+import { contactForm } from "domains/contact/validations/ContactForm";
 import { NetworkIcon } from "domains/network/components/NetworkIcon";
 import React, { useEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-
-import { contactForm } from "../../validations/ContactForm";
 
 interface AddressListItemProperties {
 	address: any;
@@ -231,7 +230,9 @@ export const ContactForm = ({
 				<InputDefault
 					data-testid="contact-form__name-input"
 					ref={register(contactFormValidation.name(contact?.id()))}
-					onChange={() => onChange?.("name", name)}
+					onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
+						onChange?.("name", event.target.value);
+					}}
 					defaultValue={contact?.name?.()}
 				/>
 			</FormField>

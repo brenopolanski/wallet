@@ -1,7 +1,7 @@
 import { Contracts } from "@payvo/profiles";
 import { Networks } from "@payvo/sdk";
 import { Address } from "app/components/Address";
-import { AmountCrypto } from "app/components/Amount";
+import { Amount } from "app/components/Amount";
 import { Avatar } from "app/components/Avatar";
 import { Button } from "app/components/Button";
 import { Header } from "app/components/Header";
@@ -62,7 +62,7 @@ const MultipleImport = ({
 											maxNameChars={8}
 										/>
 										<p className="mt-1 text-sm font-medium text-theme-secondary-500">
-											<AmountCrypto value={wallet.balance ?? 0} ticker={network.ticker()} />
+											<Amount value={wallet.balance ?? 0} ticker={network.ticker()} />
 										</p>
 									</div>
 								</div>
@@ -105,7 +105,7 @@ const SingleImport = ({
 			</TransactionDetail>
 
 			<TransactionDetail label={t("COMMON.BALANCE")} borderPosition="bottom" paddingPosition="bottom">
-				<AmountCrypto value={ledgerWallet.balance ?? 0} ticker={network.ticker()} />
+				<Amount value={ledgerWallet.balance ?? 0} ticker={network.ticker()} />
 			</TransactionDetail>
 
 			<TransactionDetail

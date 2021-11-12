@@ -42,7 +42,7 @@ describe("UpdateContact", () => {
 
 		fireEvent.click(screen.getByTestId("contact-form__cancel-btn"));
 
-		expect(onCancel).toHaveBeenCalled();
+		expect(onCancel).toHaveBeenCalledWith();
 	});
 
 	it("should not update contact if provided name already exists", async () => {
@@ -116,7 +116,7 @@ describe("UpdateContact", () => {
 		fireEvent.click(screen.getByTestId("contact-form__delete-btn"));
 
 		await waitFor(() => {
-			expect(onDelete).toHaveBeenCalled();
+			expect(onDelete).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 		});
 
 		deleteSpy.mockRestore();
@@ -186,7 +186,7 @@ describe("UpdateContact", () => {
 
 		const savedContact = profile.contacts().findById(contact.id());
 
-		expect(savedContact.name()).toEqual(newName);
+		expect(savedContact.name()).toBe(newName);
 		expect(savedContact.addresses().findByAddress(newAddress.address)).toHaveLength(1);
 	});
 });

@@ -75,7 +75,7 @@ describe("VerifyMessage", () => {
 
 		fireEvent.click(cancelButton);
 
-		expect(onCancel).toHaveBeenCalled();
+		expect(onCancel).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
 
 	it("should open verify message modal and close modal", async () => {
@@ -87,7 +87,7 @@ describe("VerifyMessage", () => {
 
 		fireEvent.click(closeButton);
 
-		expect(onClose).toHaveBeenCalled();
+		expect(onClose).toHaveBeenCalledWith();
 	});
 
 	it("should verify message", async () => {
@@ -183,7 +183,7 @@ describe("VerifyMessage", () => {
 		fireEvent.click(screen.getByTestId("modal__close-btn"));
 
 		await waitFor(() => {
-			expect(onClose).toHaveBeenCalled();
+			expect(onClose).toHaveBeenCalledWith();
 		});
 	});
 
@@ -222,7 +222,7 @@ describe("VerifyMessage", () => {
 		fireEvent.click(screen.getByTestId("modal__close-btn"));
 
 		await waitFor(() => {
-			expect(onClose).toHaveBeenCalled();
+			expect(onClose).toHaveBeenCalledWith();
 		});
 
 		messageSpy.mockRestore();

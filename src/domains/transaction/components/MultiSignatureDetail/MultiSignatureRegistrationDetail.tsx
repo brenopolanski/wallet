@@ -10,10 +10,9 @@ import {
 	TransactionStatus,
 	TransactionTimestamp,
 } from "domains/transaction/components/TransactionDetail";
+import { TransactionDetailProperties } from "domains/transaction/components/TransactionDetailModal/TransactionDetailModal.models";
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-
-import { TransactionDetailProperties } from "../TransactionDetailModal/TransactionDetailModal.models";
 
 export const MultiSignatureRegistrationDetail: React.FC<TransactionDetailProperties> = ({
 	isOpen,

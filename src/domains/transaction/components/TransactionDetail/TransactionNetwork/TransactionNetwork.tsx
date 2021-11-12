@@ -1,9 +1,11 @@
 import { Networks } from "@payvo/sdk";
 import { NetworkIcon } from "domains/network/components/NetworkIcon";
+import {
+	TransactionDetail,
+	TransactionDetailProperties,
+} from "domains/transaction/components/TransactionDetail/TransactionDetail";
 import React from "react";
 import { useTranslation } from "react-i18next";
-
-import { TransactionDetail, TransactionDetailProperties } from "../TransactionDetail";
 
 type TransactionNetworkProperties = {
 	network: Networks.Network;

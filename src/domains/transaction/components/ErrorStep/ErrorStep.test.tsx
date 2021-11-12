@@ -30,7 +30,9 @@ describe("ErrorStep", () => {
 
 		fireEvent.click(getByTestId("ErrorStep__wallet-button"));
 
-		await waitFor(() => expect(onBack).toHaveBeenCalled());
+		await waitFor(() =>
+			expect(onBack).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) })),
+		);
 	});
 
 	it("should emit onRepeat", async () => {
@@ -41,6 +43,6 @@ describe("ErrorStep", () => {
 
 		fireEvent.click(getByTestId("ErrorStep__repeat-button"));
 
-		await waitFor(() => expect(onRepeat).toHaveBeenCalled());
+		await waitFor(() => expect(onRepeat).toHaveBeenCalledWith());
 	});
 });

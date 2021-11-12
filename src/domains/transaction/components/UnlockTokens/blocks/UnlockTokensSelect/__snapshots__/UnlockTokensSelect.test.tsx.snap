@@ -139,7 +139,7 @@ exports[`UnlockTokensSelect should render 1`] = `
                 >
                   <span
                     class="whitespace-nowrap font-bold text-theme-secondary-900 dark:text-theme-secondary-200"
-                    data-testid="AmountCrypto"
+                    data-testid="Amount"
                   >
                     10 LSK
                   </span>
@@ -202,7 +202,7 @@ exports[`UnlockTokensSelect should render 1`] = `
                 >
                   <span
                     class="whitespace-nowrap font-bold text-theme-secondary-900 dark:text-theme-secondary-200"
-                    data-testid="AmountCrypto"
+                    data-testid="Amount"
                   >
                     20 LSK
                   </span>
@@ -265,7 +265,7 @@ exports[`UnlockTokensSelect should render 1`] = `
                 >
                   <span
                     class="whitespace-nowrap font-bold text-theme-secondary-900 dark:text-theme-secondary-200"
-                    data-testid="AmountCrypto"
+                    data-testid="Amount"
                   >
                     30 LSK
                   </span>
@@ -329,7 +329,7 @@ exports[`UnlockTokensSelect should render 1`] = `
                 >
                   <span
                     class="whitespace-nowrap font-bold text-theme-secondary-900 dark:text-theme-secondary-200"
-                    data-testid="AmountCrypto"
+                    data-testid="Amount"
                   >
                     40 LSK
                   </span>
@@ -408,7 +408,7 @@ exports[`UnlockTokensSelect should render 1`] = `
           >
             <span
               class="whitespace-nowrap"
-              data-testid="AmountCrypto"
+              data-testid="Amount"
             >
               0 LSK
             </span>
@@ -433,7 +433,7 @@ exports[`UnlockTokensSelect should render 1`] = `
           >
             <span
               class="whitespace-nowrap"
-              data-testid="AmountCrypto"
+              data-testid="Amount"
             >
               0 LSK
             </span>

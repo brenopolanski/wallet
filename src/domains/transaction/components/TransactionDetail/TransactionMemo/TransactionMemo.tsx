@@ -1,8 +1,7 @@
 import { Icon } from "app/components/Icon";
+import { TransactionDetail } from "domains/transaction/components/TransactionDetail/TransactionDetail";
 import React from "react";
 import { useTranslation } from "react-i18next";
-
-import { TransactionDetail } from "../TransactionDetail";
 
 interface TransactionMemoProperties {
 	memo?: string;

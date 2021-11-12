@@ -108,7 +108,7 @@ describe("WalletHeader", () => {
 
 		fireEvent.click(getByTestId("WalletHeader__send-button"));
 
-		expect(onSend).toHaveBeenCalled();
+		expect(onSend).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
 
 	it("send button should be disabled if wallet has no balance", async () => {

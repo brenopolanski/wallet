@@ -14,7 +14,7 @@ exports[`UnlockTokensRow should render with isReady = false 1`] = `
           >
             <span
               class="whitespace-nowrap font-bold text-theme-secondary-900 dark:text-theme-secondary-200"
-              data-testid="AmountCrypto"
+              data-testid="Amount"
             >
               10 LSK
             </span>
@@ -87,7 +87,7 @@ exports[`UnlockTokensRow should render with isReady = true 1`] = `
           >
             <span
               class="whitespace-nowrap font-bold text-theme-secondary-900 dark:text-theme-secondary-200"
-              data-testid="AmountCrypto"
+              data-testid="Amount"
             >
               10 LSK
             </span>

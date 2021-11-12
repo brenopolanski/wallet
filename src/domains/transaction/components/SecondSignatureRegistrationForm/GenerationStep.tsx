@@ -6,11 +6,10 @@ import { Header } from "app/components/Header";
 import { useValidation } from "app/hooks";
 import { FeeField } from "domains/transaction/components/FeeField";
 import { TransactionSender } from "domains/transaction/components/TransactionDetail";
+import { FormStepProperties } from "domains/transaction/pages/SendRegistration/SendRegistration.models";
 import React, { useEffect, useMemo } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-
-import { FormStepProperties } from "../../pages/SendRegistration/SendRegistration.models";
 
 export const GenerationStep = ({ wallet, profile }: FormStepProperties) => {
 	const { t } = useTranslation();

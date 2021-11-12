@@ -20,14 +20,13 @@ import { SignMessage } from "domains/wallet/components/SignMessage";
 import { UpdateWalletName } from "domains/wallet/components/UpdateWalletName";
 import { VerifyMessage } from "domains/wallet/components/VerifyMessage";
 import { useWalletSync } from "domains/wallet/hooks/use-wallet-sync";
+import { useWalletOptions } from "domains/wallet/pages/WalletDetails/hooks/use-wallet-options";
 import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 import tw, { styled } from "twin.macro";
 import { assertString } from "utils/assertions";
 import { openExternal } from "utils/electron-utils";
-
-import { useWalletOptions } from "../../hooks/use-wallet-options";
 
 interface WalletHeaderProperties {
 	profile: Contracts.IProfile;

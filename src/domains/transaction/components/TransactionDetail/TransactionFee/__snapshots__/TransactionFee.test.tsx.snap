@@ -19,13 +19,13 @@ exports[`TransactionFee should render 1`] = `
       >
         <span
           class="whitespace-nowrap"
-          data-testid="AmountCrypto"
+          data-testid="Amount"
         >
           1 DARK
         </span>
         <span
           class="whitespace-nowrap ml-2 text-theme-secondary-400"
-          data-testid="AmountFiat"
+          data-testid="Amount"
         >
           €1.50
         </span>

@@ -571,7 +571,7 @@ describe("PluginManager", () => {
 			}),
 		);
 
-		await waitFor(() => expect(toastSpy).toHaveBeenCalled());
+		await waitFor(() => expect(toastSpy).toHaveBeenCalledWith(expect.stringMatching(/Failed to download/)));
 
 		ipcRendererSpy.mockRestore();
 		toastSpy.mockRestore();
@@ -596,7 +596,7 @@ describe("PluginManager", () => {
 			within(screen.getByTestId("PluginManager__latest__utility")).getAllByText("ARK Delegate Calculator")[0],
 		);
 
-		expect(history.location.pathname).toEqual(`/profiles/${fixtureProfileId}/plugins/details`);
+		expect(history.location.pathname).toBe(`/profiles/${fixtureProfileId}/plugins/details`);
 		expect(history.location.search).toBe("?pluginId=@dated/delegate-calculator-wallet-plugin");
 	});
 
@@ -671,7 +671,8 @@ describe("PluginManager", () => {
 		await screen.findByTestId("PluginListItem__enabled");
 
 		expect(asFragment()).toMatchSnapshot();
-		expect(onEnabled).toHaveBeenCalled();
+
+		expect(onEnabled).toHaveBeenCalledWith(expect.any(Object));
 
 		pluginManager.plugins().removeById(plugin.config().id(), profile);
 	});
@@ -706,7 +707,7 @@ describe("PluginManager", () => {
 			within(screen.getByTestId("PluginManager__container--my-plugins")).getByText(commonTranslations.ENABLE),
 		);
 
-		expect(toastSpy).toHaveBeenCalled();
+		expect(toastSpy).toHaveBeenCalledWith(expect.stringMatching(/Failed to enable/));
 
 		pluginManager.plugins().removeById(plugin.config().id(), profile);
 	});

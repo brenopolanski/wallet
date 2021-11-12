@@ -73,7 +73,7 @@ describe("Clipboard", () => {
 
 				fireEvent.click(getByTestId(`clipboard-${variant}__wrapper`));
 
-				await waitFor(() => expect(onSuccess).toHaveBeenCalled());
+				await waitFor(() => expect(onSuccess).toHaveBeenCalledWith(""));
 			},
 		);
 
@@ -115,7 +115,7 @@ describe("Clipboard", () => {
 
 				fireEvent.click(getByTestId(`clipboard-${variant}__wrapper`));
 
-				await waitFor(() => expect(onError).toHaveBeenCalled());
+				await waitFor(() => expect(onError).toHaveBeenCalledWith());
 			},
 		);
 
@@ -132,7 +132,7 @@ describe("Clipboard", () => {
 
 				fireEvent.click(getByTestId(`clipboard-${variant}__wrapper`));
 
-				await waitFor(() => expect(onError).not.toHaveBeenCalled());
+				await waitFor(() => expect(onError).not.toHaveBeenCalledWith());
 			},
 		);
 	});

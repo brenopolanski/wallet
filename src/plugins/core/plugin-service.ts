@@ -1,4 +1,5 @@
-import { PluginService } from "../types";
+import { PluginService } from "plugins/types";
+
 import { PluginController } from "./plugin-controller";
 
 export class PluginServiceData {

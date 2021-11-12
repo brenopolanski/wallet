@@ -69,10 +69,6 @@ describe("General Settings", () => {
 
 		// Reload
 		history.replace(`/profiles/${profile.id()}/settings`);
-
-		await waitFor(() => expect(screen.getByTestId("General-settings__cancel-button")).toBeEnabled());
-
-		fireEvent.click(screen.getByTestId("General-settings__cancel-button"));
 	});
 
 	it("should render", async () => {
@@ -311,7 +307,7 @@ describe("General Settings", () => {
 		fireEvent.click(screen.getByTestId("General-settings__submit-button"));
 
 		await waitFor(() => {
-			expect(toastSpy).toHaveBeenCalled();
+			expect(toastSpy).toHaveBeenCalledWith(translations.SETTINGS.GENERAL.SUCCESS);
 		});
 
 		// Upload and remove avatar image
@@ -340,7 +336,7 @@ describe("General Settings", () => {
 			expect(showOpenDialogMock).toHaveBeenCalledWith(showOpenDialogParameters);
 		});
 
-		expect(env.profiles().count()).toEqual(profilesCount);
+		expect(env.profiles().count()).toBe(profilesCount);
 		expect(asFragment()).toMatchSnapshot();
 
 		toastSpy.mockRestore();
@@ -599,7 +595,7 @@ describe("General Settings", () => {
 		fireEvent.click(screen.getByTestId("ResetProfile__submit-button"));
 
 		await waitFor(() => {
-			expect(toastSpy).toHaveBeenCalled();
+			expect(toastSpy).toHaveBeenCalledWith(translations.SETTINGS.GENERAL.SUCCESS);
 		});
 
 		toastSpy.mockRestore();

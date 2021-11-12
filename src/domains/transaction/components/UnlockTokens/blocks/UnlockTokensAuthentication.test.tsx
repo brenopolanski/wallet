@@ -29,7 +29,7 @@ describe("UnlockTokensAuthentication", () => {
 
 		userEvent.click(screen.getByText(translations.COMMON.BACK));
 
-		expect(onBack).toHaveBeenCalled();
+		expect(onBack).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 		expect(asFragment()).toMatchSnapshot();
 	});
 });

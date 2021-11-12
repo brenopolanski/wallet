@@ -193,7 +193,7 @@ describe("Wallets", () => {
 
 		fireEvent.click(getByTestId("WalletControls__create-wallet"));
 
-		expect(onCreateWallet).toHaveBeenCalled();
+		expect(onCreateWallet).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
 
 	it("should handle wallet import", () => {
@@ -210,7 +210,7 @@ describe("Wallets", () => {
 
 		fireEvent.click(getByTestId("WalletControls__import-wallet"));
 
-		expect(onImportWallet).toHaveBeenCalled();
+		expect(onImportWallet).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
 
 	it("should handle filter change", async () => {
@@ -330,7 +330,7 @@ describe("Wallets", () => {
 		fireEvent.click(toggle);
 		fireEvent.click(getByText(wallets[0].alias()!));
 
-		expect(history.location.pathname).toMatch(`/profiles/${profile.id()}/wallets/${wallets[0].id()}`);
+		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/wallets/${wallets[0].id()}`);
 	});
 
 	it("should rename wallet through wallet card dropdown", async () => {
@@ -410,7 +410,7 @@ describe("Wallets", () => {
 
 		fireEvent.click(screen.getByTestId("DeleteResource__submit-button"));
 
-		await waitFor(() => expect(profile.wallets().count()).toEqual(count - 1));
+		await waitFor(() => expect(profile.wallets().count()).toBe(count - 1));
 	});
 
 	it("should render empty profile wallets", async () => {

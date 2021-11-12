@@ -86,7 +86,7 @@ describe("LedgerConnectionStep", () => {
 		);
 
 		await screen.findByText("Successfully connected");
-		await waitFor(() => expect(onConnect).toHaveBeenCalled());
+		await waitFor(() => expect(onConnect).toHaveBeenCalledWith());
 
 		expect(container).toMatchSnapshot();
 
@@ -192,7 +192,8 @@ describe("LedgerConnectionStep", () => {
 
 		await screen.findByText("Open the ARK app on your device ...");
 
-		await waitFor(() => expect(onFailed).toHaveBeenCalled());
+		await waitFor(() => expect(onFailed).toHaveBeenCalledWith(expect.any(Error)));
+
 		await screen.findByText(
 			t("WALLETS.MODAL_LEDGER_WALLET.UPDATE_ERROR", {
 				coin: wallet.network().coin(),

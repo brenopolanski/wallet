@@ -1,6 +1,6 @@
 import { Contracts } from "@payvo/profiles";
 import { Address } from "app/components/Address";
-import { AmountCrypto } from "app/components/Amount";
+import { Amount } from "app/components/Amount";
 import { Avatar } from "app/components/Avatar";
 import { Button } from "app/components/Button";
 import { Circle } from "app/components/Circle";
@@ -155,7 +155,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect, isCompact = fals
 				innerClassName="justify-end font-bold text-theme-secondary-text whitespace-nowrap"
 				isCompact={isCompact}
 			>
-				<AmountCrypto value={wallet.balance()} ticker={wallet.network().ticker()} />
+				<Amount value={wallet.balance()} ticker={wallet.network().ticker()} />
 			</TableCell>
 
 			<TableCell

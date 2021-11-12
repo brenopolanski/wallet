@@ -1,9 +1,8 @@
 import { Contracts } from "@payvo/profiles";
+import { toasts } from "app/services";
 import { ipcRenderer } from "electron";
 import { useCallback, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-
-import { toasts } from "../services";
 
 export interface DownloadProgress {
 	total: number;

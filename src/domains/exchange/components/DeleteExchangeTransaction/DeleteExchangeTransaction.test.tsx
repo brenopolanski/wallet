@@ -77,7 +77,7 @@ describe("DeleteExchangeTransaction", () => {
 
 		fireEvent.click(screen.getByTestId("DeleteResource__submit-button"));
 
-		await waitFor(() => expect(onDelete).toHaveBeenCalled());
+		await waitFor(() => expect(onDelete).toHaveBeenCalledWith(exchangeTransaction));
 
 		expect(() => profile.exchangeTransactions().findById(exchangeTransaction.id())).toThrow("Failed to find");
 	});

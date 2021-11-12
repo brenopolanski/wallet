@@ -301,7 +301,7 @@ describe("Votes", () => {
 
 		fireEvent.click(screen.getByRole("button", { name: /Create/ }));
 
-		expect(history.location.pathname).toEqual(`/profiles/${emptyProfile.id()}/wallets/create`);
+		expect(history.location.pathname).toBe(`/profiles/${emptyProfile.id()}/wallets/create`);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -314,7 +314,7 @@ describe("Votes", () => {
 
 		fireEvent.click(screen.getByRole("button", { name: /Import/ }));
 
-		expect(history.location.pathname).toEqual(`/profiles/${emptyProfile.id()}/wallets/import`);
+		expect(history.location.pathname).toBe(`/profiles/${emptyProfile.id()}/wallets/import`);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -500,7 +500,9 @@ describe("Votes", () => {
 		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
 		expect(screen.getByTestId("DelegateTable__footer--votecombination")).toHaveTextContent("1/1");
 
-		await waitFor(() => expect(onProfileSyncError).toHaveBeenCalled());
+		await waitFor(() =>
+			expect(onProfileSyncError).toHaveBeenCalledWith([expect.any(String)], expect.any(Function)),
+		);
 
 		expect(asFragment()).toMatchSnapshot();
 

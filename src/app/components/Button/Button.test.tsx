@@ -55,7 +55,7 @@ describe("Button", () => {
 
 		fireEvent.click(getByText("Click Me"));
 
-		expect(onClick).toHaveBeenCalled();
+		expect(onClick).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
 
 	it("should render with icon on the left side", () => {

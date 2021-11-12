@@ -132,7 +132,7 @@ describe("ConfirmRemovePendingTransaction", () => {
 
 		fireEvent.click(getByTestId("ConfirmRemovePendingTransaction__cancel"));
 
-		expect(onClose).toHaveBeenCalled();
+		expect(onClose).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
 
 	it("should handle remove", () => {
@@ -153,6 +153,6 @@ describe("ConfirmRemovePendingTransaction", () => {
 
 		fireEvent.click(getByTestId("ConfirmRemovePendingTransaction__remove"));
 
-		expect(onRemove).toHaveBeenCalled();
+		expect(onRemove).toHaveBeenCalledWith(expect.any(DTO.ExtendedSignedTransactionData));
 	});
 });

@@ -29,7 +29,7 @@ describe("UnlockTokensRow", () => {
 			</table>,
 		);
 
-		expect(screen.queryByTestId("AmountCrypto")).toBeNull();
+		expect(screen.queryByTestId("Amount")).toBeNull();
 	});
 
 	it.each([true, false])("should render with isReady = %s", (isReady) => {
@@ -50,7 +50,7 @@ describe("UnlockTokensRow", () => {
 		);
 
 		expect(asFragment()).toMatchSnapshot();
-		expect(screen.getByTestId("AmountCrypto")).toHaveTextContent("10 LSK");
+		expect(screen.getByTestId("Amount")).toHaveTextContent("10 LSK");
 		expect(screen.getByTestId("UnlockableBalanceRow__status")).toHaveTextContent(
 			isReady ? translations.TRANSACTION.UNLOCK_TOKENS.UNLOCKABLE : translations.TRANSACTION.UNLOCK_TOKENS.LOCKED,
 		);

@@ -13,8 +13,10 @@ let contact: Contracts.IContact;
 let validArkDevnetAddress: string;
 
 describe("ContactForm", () => {
-	beforeAll(() => {
+	beforeEach(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
+		await env.profiles().restore(profile);
+
 		const [wallet] = profile.wallets().values();
 		validArkDevnetAddress = wallet.address();
 		contact = profile.contacts().values()[0];
@@ -126,7 +128,7 @@ describe("ContactForm", () => {
 		});
 
 		await waitFor(() => {
-			expect(onChange).toHaveBeenCalled();
+			expect(onChange).toHaveBeenCalledWith("name", name);
 		});
 	});
 
@@ -381,7 +383,17 @@ describe("ContactForm", () => {
 		fireEvent.click(screen.getByTestId("contact-form__save-btn"));
 
 		await waitFor(() => {
-			expect(onSave).toHaveBeenCalled();
+			expect(onSave).toHaveBeenCalledWith({
+				addresses: [
+					{
+						address: validArkDevnetAddress,
+						coin: "ARK",
+						name: validArkDevnetAddress,
+						network: "ark.devnet",
+					},
+				],
+				name: expect.any(String),
+			});
 		});
 	});
 });

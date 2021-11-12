@@ -88,7 +88,10 @@ describe("ExchangeTransactionsTable", () => {
 
 		fireEvent.click(within(screen.getAllByTestId("TableRow")[0]).getAllByRole("button")[0]);
 
-		expect(onClick).toHaveBeenCalled();
+		// reverse() is called because display items are sorted by creation date desc.
+		const exchangeTransaction = profile.exchangeTransactions().values().reverse()[0];
+
+		expect(onClick).toHaveBeenCalledWith(exchangeTransaction.provider(), exchangeTransaction.orderId());
 	});
 
 	it("should execute onRemove callback", () => {
@@ -108,6 +111,6 @@ describe("ExchangeTransactionsTable", () => {
 
 		fireEvent.click(within(screen.getAllByTestId("TableRow")[0]).getAllByRole("button")[1]);
 
-		expect(onRemove).toHaveBeenCalled();
+		expect(onRemove).toHaveBeenCalledWith(profile.exchangeTransactions().values()[0]);
 	});
 });

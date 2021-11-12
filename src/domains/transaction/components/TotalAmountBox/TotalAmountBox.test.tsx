@@ -12,7 +12,7 @@ describe("TotalAmountBox", () => {
 	])("should render with amount of %s and fee of %s", (a: any, b: any) => {
 		const { asFragment } = render(<TotalAmountBox amount={a} fee={b} ticker="ARK" />);
 
-		const [amount, fee, total] = screen.getAllByTestId("AmountCrypto");
+		const [amount, fee, total] = screen.getAllByTestId("Amount");
 
 		expect(amount).toHaveTextContent("0.1 ARK");
 		expect(fee).toHaveTextContent("0.01 ARK");

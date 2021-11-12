@@ -1,7 +1,9 @@
 /* eslint-disable @typescript-eslint/require-await */
+/* eslint-disable testing-library/no-unnecessary-act */ // @TODO remove and fix test
 import { Contracts } from "@payvo/profiles";
 // @README: This import is fine in tests but should be avoided in production code.
 import { ReadOnlyWallet } from "@payvo/profiles/distribution/read-only-wallet";
+import { Signatories } from "@payvo/sdk";
 import { screen, within } from "@testing-library/react";
 import { renderHook } from "@testing-library/react-hooks";
 import userEvent from "@testing-library/user-event";
@@ -460,15 +462,28 @@ describe("SendVote", () => {
 		// AuthenticationStep
 		expect(getByTestId("AuthenticationStep")).toBeInTheDocument();
 
-		const signUnvoteMock = jest
+		const signMock = jest
 			.spyOn(wallet.transaction(), "signVote")
-			.mockReturnValue(Promise.resolve(unvoteFixture.data.id));
-		const broadcastUnvoteMock = jest.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
-			accepted: [unvoteFixture.data.id],
-			errors: {},
-			rejected: [],
-		});
+			.mockReturnValueOnce(Promise.resolve(unvoteFixture.data.id))
+			.mockReturnValueOnce(Promise.resolve(voteFixture.data.id));
+
+		const broadcastMock = jest
+			.spyOn(wallet.transaction(), "broadcast")
+			.mockResolvedValueOnce({
+				accepted: [unvoteFixture.data.id],
+				errors: {},
+				rejected: [],
+			})
+			.mockResolvedValueOnce({
+				accepted: [voteFixture.data.id],
+				errors: {},
+				rejected: [],
+			});
+
+		const splitVotingMethodMock = jest.spyOn(wallet.network(), "votingMethod").mockReturnValue("split");
+
 		const transactionUnvoteMock = createUnvoteTransactionMock(wallet);
+		const transactionVoteMock = createVoteTransactionMock(wallet);
 
 		const passwordInput = getByTestId("AuthenticationStep__mnemonic");
 		fireEvent.input(passwordInput, { target: { value: passphrase } });
@@ -476,8 +491,6 @@ describe("SendVote", () => {
 		expect(passwordInput).toHaveValue(passphrase);
 
 		await waitFor(() => expect(getByTestId("StepNavigation__send-button")).not.toBeDisabled());
-
-		const splitVotingMethodMock = jest.spyOn(wallet.network(), "votingMethod").mockReturnValue("split");
 
 		await act(async () => {
 			fireEvent.click(getByTestId("StepNavigation__send-button"));
@@ -496,31 +509,45 @@ describe("SendVote", () => {
 		});
 
 		await waitFor(() => expect(setInterval).toHaveBeenCalledTimes(1));
-		await waitFor(() => expect(signUnvoteMock).toHaveBeenCalled());
-		await waitFor(() => expect(broadcastUnvoteMock).toHaveBeenCalled());
-
-		const signVoteMock = jest
-			.spyOn(wallet.transaction(), "signVote")
-			.mockReturnValue(Promise.resolve(voteFixture.data.id));
-		const broadcastVoteMock = jest.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
-			accepted: [voteFixture.data.id],
-			errors: {},
-			rejected: [],
+		await waitFor(() => {
+			expect(signMock).toHaveBeenNthCalledWith(1, {
+				data: {
+					unvotes: [
+						{
+							amount: 10,
+							id: delegateData[1].publicKey,
+						},
+					],
+				},
+				fee: 0.01,
+				signatory: expect.any(Signatories.Signatory),
+			});
 		});
 
-		const transactionVoteMock = createVoteTransactionMock(wallet);
+		await waitFor(() => expect(broadcastMock).toHaveBeenNthCalledWith(1, unvoteFixture.data.id));
 
-		await waitFor(() => expect(signVoteMock).toHaveBeenCalled());
-		await waitFor(() => expect(broadcastVoteMock).toHaveBeenCalled());
+		await waitFor(() =>
+			expect(signMock).toHaveBeenNthCalledWith(2, {
+				data: {
+					votes: [
+						{
+							amount: 10,
+							id: delegateData[0].publicKey,
+						},
+					],
+				},
+				fee: 0.01,
+				signatory: expect.any(Signatories.Signatory),
+			}),
+		);
+
+		await waitFor(() => expect(broadcastMock).toHaveBeenNthCalledWith(2, voteFixture.data.id));
 
 		await findByTestId("TransactionSuccessful");
 
-		signUnvoteMock.mockRestore();
-		broadcastUnvoteMock.mockRestore();
+		signMock.mockRestore();
+		broadcastMock.mockRestore();
 		transactionUnvoteMock.mockRestore();
-
-		signVoteMock.mockRestore();
-		broadcastVoteMock.mockRestore();
 		transactionVoteMock.mockRestore();
 		splitVotingMethodMock.mockRestore();
 	});
@@ -686,9 +713,9 @@ describe("SendVote", () => {
 
 		expect(getByTestId("SendVote__review-step")).toBeInTheDocument();
 
-		await findAllByTestId("AmountCrypto");
+		await findAllByTestId("Amount");
 
-		expect(getAllByTestId("AmountCrypto")[3]).toHaveTextContent("0.02");
+		expect(getAllByTestId("Amount")[3]).toHaveTextContent("0.02");
 	});
 
 	it("should move back and forth between steps", async () => {

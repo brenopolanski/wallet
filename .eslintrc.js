@@ -60,11 +60,11 @@ module.exports = {
 		"@typescript-eslint/no-misused-promises": "warn",
 		"@typescript-eslint/no-non-null-assertion": "warn",
 		"@typescript-eslint/no-unnecessary-condition": "warn", // @TODO: set to error and resolve issues
+		"@typescript-eslint/no-unsafe-argument": "warn", // @TODO: set to error and resolve issues
 		"@typescript-eslint/no-unsafe-assignment": "warn",
 		"@typescript-eslint/no-unsafe-call": "warn",
 		"@typescript-eslint/no-unsafe-member-access": "warn",
 		"@typescript-eslint/no-unsafe-return": "warn",
-		"@typescript-eslint/no-unsafe-argument": "warn", // @TODO: set to error and resolve issues
 		"@typescript-eslint/no-unused-expressions": "warn",
 		"@typescript-eslint/no-unused-vars": ["error"],
 		"@typescript-eslint/no-var-requires": "warn",
@@ -98,21 +98,22 @@ module.exports = {
 		"import/no-webpack-loader-syntax": "error",
 		"import/order": "warn",
 		"jest/consistent-test-it": "error",
+		"jest/max-nested-describe": "error",
 		"jest/no-alias-methods": "error",
 		"jest/no-conditional-expect": "off",
 		"jest/no-done-callback": "off",
 		"jest/no-identical-title": "error",
-		"jest/require-top-level-describe": "error",
-		"jest/require-to-throw-message": "error",
-		"jest/prefer-to-be": "error",
-		"jest/prefer-spy-on": "error",
-		"jest/prefer-to-have-length": "error",
-		"jest/prefer-expect-resolves": "error",
 		"jest/no-test-return-statement": "error",
-		"jest/max-nested-describe": "error",
+		"jest/prefer-called-with": "error",
+		"jest/prefer-expect-resolves": "error",
 		"jest/prefer-hooks-on-top": "error",
+		"jest/prefer-spy-on": "error",
+		"jest/prefer-to-be": "error",
 		"jest/prefer-to-contain": "error",
+		"jest/prefer-to-have-length": "error",
 		"jest/prefer-todo": "error",
+		"jest/require-to-throw-message": "error",
+		"jest/require-top-level-describe": "error",
 		"jest/valid-expect": "off",
 		"jest/valid-expect-in-promise": "off",
 		"max-lines": ["warn", { max: 300, skipBlankLines: true, skipComments: true }],
@@ -122,22 +123,12 @@ module.exports = {
 		"no-unneeded-ternary": "warn", // @TODO: set to error and resolve issues
 		"no-unused-expressions": "off",
 		"no-unused-vars": "off",
-		"prefer-const": [
-			"warn",
-			{
-				destructuring: "all",
-			},
-		],
-		"prettier/prettier": [
-			"off",
-			{
-				endOfLine: "auto",
-			},
-		],
+		"prefer-const": ["warn", { destructuring: "all" }],
+		"prettier/prettier": ["off", { endOfLine: "auto" }],
 		"promise/param-names": "warn",
 		"react-hooks/rules-of-hooks": "error",
-		"react/self-closing-comp": "error",
 		"react/prop-types": "off",
+		"react/self-closing-comp": "error",
 		"simple-import-sort/exports": "error",
 		"simple-import-sort/imports": "error",
 		"sonarjs/cognitive-complexity": "warn", // @TODO: set to error and resolve issues
@@ -174,14 +165,6 @@ module.exports = {
 		"testing-library/prefer-screen-queries": "warn", // @TODO: set to error and fix
 		"testing-library/prefer-user-event": "warn", // @TODO: set to error and fix
 		"testing-library/prefer-wait-for": "error",
-		"testing-library/render-result-naming-convention": "warn", // @TODO: set to error and fix
-		"testing-library/no-container": "warn", // @TODO: set to error and fix
-		"testing-library/no-node-access": "warn", // @TODO: set to error and fix
-		"testing-library/no-promise-in-fire-event": "warn", // @TODO: set to error and fix
-		"testing-library/no-unnecessary-act": "warn", // @TODO: set to error and fix
-		"testing-library/no-wait-for-multiple-assertions": "warn", // @TODO: set to error and fix
-		"testing-library/no-wait-for-side-effects": "warn", // @TODO: set to error and fix
-		"testing-library/prefer-user-event": "warn", // @TODO: set to error and fix
 		"testing-library/render-result-naming-convention": "warn", // @TODO: set to error and fix
 		"unicorn/consistent-destructuring": "warn", // @TODO: set to error and fix resulting issues
 		"unicorn/consistent-function-scoping": "warn", // @TODO: set to error and fix resulting issues

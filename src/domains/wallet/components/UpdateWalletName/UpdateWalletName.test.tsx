@@ -52,10 +52,10 @@ describe("UpdateWalletName", () => {
 
 		userEvent.click(screen.getByTestId("UpdateWalletName__submit"));
 
-		await waitFor(() => expect(onAfterSave).toHaveBeenCalled());
+		await waitFor(() => expect(onAfterSave).toHaveBeenCalledWith());
 
 		expect(aliasSpy).toHaveBeenCalledWith(name);
-		expect(wallet.settings().get(Contracts.WalletSetting.Alias)).toEqual(name);
+		expect(wallet.settings().get(Contracts.WalletSetting.Alias)).toBe(name);
 	});
 
 	it("should show an error message for duplicate name", async () => {

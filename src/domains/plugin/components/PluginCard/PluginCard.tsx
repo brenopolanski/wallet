@@ -4,11 +4,10 @@ import { Icon } from "app/components/Icon";
 import { Tooltip } from "app/components/Tooltip";
 import cn from "classnames";
 import { OfficialPluginIcon } from "domains/plugin/components/OfficialPluginIcon";
+import { PluginImage } from "domains/plugin/components/PluginImage";
+import { PluginCategories } from "domains/plugin/plugin.contracts";
 import React from "react";
 import { useTranslation } from "react-i18next";
-
-import { PluginCategories } from "../../plugin.contracts";
-import { PluginImage } from "../PluginImage";
 
 interface PluginCardProperties {
 	actions?: DropdownOption[];
@@ -108,6 +107,7 @@ export const PluginCard = ({
 										>
 											<Icon
 												className={cn({ "animate-spin": isUpdating })}
+												style={{ animationDirection: "reverse" }}
 												name="ArrowsRotate"
 												size="lg"
 											/>

@@ -171,7 +171,7 @@ exports[`Unconfirmed transaction table should render 1`] = `
                   >
                     <span
                       class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                      data-testid="Amount"
                     >
                       - 1 DARK
                     </span>
@@ -245,7 +245,7 @@ exports[`Unconfirmed transaction table should render 1`] = `
                   >
                     <span
                       class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                      data-testid="Amount"
                     >
                       - 1 DARK
                     </span>

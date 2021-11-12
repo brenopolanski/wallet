@@ -1,7 +1,6 @@
+import { Icon } from "app/components/Icon";
 import cls from "classnames";
 import React from "react";
-
-import { Icon } from "../Icon";
 
 export type AlertVariant = "info" | "success" | "warning" | "danger" | "hint";
 

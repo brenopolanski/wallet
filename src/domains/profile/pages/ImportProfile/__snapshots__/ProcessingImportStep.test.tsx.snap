@@ -807,7 +807,7 @@ exports[`Import Profile - Processing import should show error if json import has
 </div>
 `;
 
-exports[`Import Profile - Processing import should succesfully import dwe profile 1`] = `
+exports[`Import Profile - Processing import should successfully import dwe profile 1`] = `
 <div>
   <div
     class="mx-auto max-w-xl"
@@ -884,7 +884,7 @@ exports[`Import Profile - Processing import should succesfully import dwe profil
 </div>
 `;
 
-exports[`Import Profile - Processing import should succesfully import json profile 1`] = `
+exports[`Import Profile - Processing import should successfully import json profile 1`] = `
 <div>
   <div
     class="mx-auto max-w-xl"

@@ -1,5 +1,6 @@
 import { CircularProgressBar } from "app/components/CircularProgressBar";
 import { DownloadProgress } from "app/hooks";
+import cn from "classnames";
 import prettyBytes from "pretty-bytes";
 import React from "react";
 import { useTranslation } from "react-i18next";
@@ -23,7 +24,7 @@ export const SecondStep = ({ transferred = 0, total = 0, percent = 0 }: Download
 				</div>
 				<div>
 					<div className="flex justify-center">
-						<div className={percent ? "" : "animate-spin"}>
+						<div className={cn({ "animate-spin": !percent })}>
 							<CircularProgressBar
 								showValue={!!percent}
 								value={percent ? Number.parseInt(percent.toFixed(0)) : 20}

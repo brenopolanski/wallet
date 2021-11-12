@@ -9,10 +9,9 @@ import {
 	TransactionTimestamp,
 	TransactionVotes,
 } from "domains/transaction/components/TransactionDetail";
+import { TransactionDetailProperties } from "domains/transaction/components/TransactionDetailModal/TransactionDetailModal.models";
 import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
-
-import { TransactionDetailProperties } from "../TransactionDetailModal/TransactionDetailModal.models";
 
 export const VoteDetail = ({ isOpen, transaction, onClose }: TransactionDetailProperties) => {
 	const { t } = useTranslation();

@@ -200,10 +200,8 @@ describe("UnlockTokensSelect", () => {
 
 		await waitFor(() => expect(screen.getAllByTestId("TableRow")).toHaveLength(4));
 
-		const getAmount = () =>
-			within(screen.getAllByTestId("UnlockTokensTotal")[0]).getByTestId("AmountCrypto").textContent;
-		const getFees = () =>
-			within(screen.getAllByTestId("UnlockTokensTotal")[1]).getByTestId("AmountCrypto").textContent;
+		const getAmount = () => within(screen.getAllByTestId("UnlockTokensTotal")[0]).getByTestId("Amount").textContent;
+		const getFees = () => within(screen.getAllByTestId("UnlockTokensTotal")[1]).getByTestId("Amount").textContent;
 
 		expect(getAmount()).toBe("0 LSK");
 		expect(getFees()).toBe("0 LSK");

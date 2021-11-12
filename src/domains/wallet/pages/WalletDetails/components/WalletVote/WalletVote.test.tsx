@@ -542,7 +542,7 @@ describe("WalletVote", () => {
 		await findByTestId("WalletVote");
 		fireEvent.click(getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE")));
 
-		expect(onButtonClick).toHaveBeenCalled();
+		expect(onButtonClick).toHaveBeenCalledWith("current");
 
 		walletSpy.mockRestore();
 	});
@@ -564,7 +564,7 @@ describe("WalletVote", () => {
 
 		fireEvent.click(getByText(t("COMMON.VOTE")));
 
-		expect(onButtonClick).toHaveBeenCalled();
+		expect(onButtonClick).toHaveBeenCalledWith();
 
 		walletSpy.mockRestore();
 	});

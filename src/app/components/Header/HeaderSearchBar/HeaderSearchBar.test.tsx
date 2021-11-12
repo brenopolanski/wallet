@@ -58,7 +58,7 @@ describe("HeaderSearchBar", () => {
 
 		await waitFor(() => expect(input.value).not.toBe("test"));
 
-		expect(onReset).toHaveBeenCalled();
+		expect(onReset).toHaveBeenCalledWith();
 	});
 
 	it("should show extra slot", () => {
@@ -114,7 +114,7 @@ describe("HeaderSearchBar", () => {
 		fireEvent.click(screen.getByTestId("header-search-bar__reset"));
 
 		expect(input.value).not.toBe("test");
-		expect(onReset).toHaveBeenCalled();
+		expect(onReset).toHaveBeenCalledWith();
 	});
 
 	it("should call onSearch", () => {
@@ -136,7 +136,7 @@ describe("HeaderSearchBar", () => {
 			jest.runAllTimers();
 		});
 
-		expect(onSearch).toHaveBeenCalled();
+		expect(onSearch).toHaveBeenCalledWith("test");
 	});
 
 	it("should set custom debounce timeout form props", () => {
@@ -158,6 +158,6 @@ describe("HeaderSearchBar", () => {
 			jest.runAllTimers();
 		});
 
-		expect(onSearch).toHaveBeenCalled();
+		expect(onSearch).toHaveBeenCalledWith("test");
 	});
 });

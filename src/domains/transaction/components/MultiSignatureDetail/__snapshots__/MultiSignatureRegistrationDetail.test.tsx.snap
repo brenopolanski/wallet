@@ -196,7 +196,7 @@ exports[`MultiSignatureRegistrationDetail should render 1`] = `
                 >
                   <span
                     class="whitespace-nowrap"
-                    data-testid="AmountCrypto"
+                    data-testid="Amount"
                   >
                     21 DARK
                   </span>
@@ -728,7 +728,7 @@ exports[`MultiSignatureRegistrationDetail should render sender's address as gene
                 >
                   <span
                     class="whitespace-nowrap"
-                    data-testid="AmountCrypto"
+                    data-testid="Amount"
                   >
                     21 DARK
                   </span>

@@ -3,11 +3,10 @@ import { Button } from "app/components/Button";
 import { Header } from "app/components/Header";
 import { useExchangeRate } from "app/hooks/use-exchange-rate";
 import { TransactionAmount, TransactionFee, TransactionSender } from "domains/transaction/components/TransactionDetail";
+import { UnlockTokensFormState } from "domains/transaction/components/UnlockTokens/UnlockTokens.contracts";
 import React from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-
-import { UnlockTokensFormState } from "../UnlockTokens.contracts";
 
 interface Properties {
 	wallet: Contracts.IReadWriteWallet;

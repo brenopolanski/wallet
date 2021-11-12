@@ -118,7 +118,7 @@ exports[`LedgerImportStep should render with multiple import 1`] = `
                     >
                       <span
                         class="whitespace-nowrap"
-                        data-testid="AmountCrypto"
+                        data-testid="Amount"
                       >
                         0 DARK
                       </span>
@@ -203,7 +203,7 @@ exports[`LedgerImportStep should render with multiple import 1`] = `
                     >
                       <span
                         class="whitespace-nowrap"
-                        data-testid="AmountCrypto"
+                        data-testid="Amount"
                       >
                         0 DARK
                       </span>
@@ -359,7 +359,7 @@ exports[`LedgerImportStep should render with single import 1`] = `
         >
           <span
             class="whitespace-nowrap"
-            data-testid="AmountCrypto"
+            data-testid="Amount"
           >
             0 DARK
           </span>

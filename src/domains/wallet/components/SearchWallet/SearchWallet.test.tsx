@@ -2,12 +2,12 @@
 import { Contracts } from "@payvo/profiles";
 import { Networks } from "@payvo/sdk";
 import userEvent from "@testing-library/user-event";
+import { translations } from "domains/wallet/i18n";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 import { act, env, fireEvent, getDefaultProfileId, render, screen, waitFor, within } from "utils/testing-library";
 
-import { translations } from "../../i18n";
 import { SearchWallet } from "./SearchWallet";
 
 const history = createMemoryHistory();
@@ -161,7 +161,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 
 		fireEvent.click(getByTestId("modal__close-btn"));
 
-		expect(onClose).toHaveBeenCalled();
+		expect(onClose).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
 
 	it("should filter wallets by address", async () => {

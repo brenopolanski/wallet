@@ -25,7 +25,7 @@ describe("Password Validation", () => {
 		const { t } = result.current;
 		const passwordValidation = password(t);
 
-		await expect(passwordValidation.password().validate("NO_LOWER")).resolves.toEqual(
+		await expect(passwordValidation.password().validate("NO_LOWER")).resolves.toBe(
 			t("COMMON.VALIDATION.PASSWORD_WEAK"),
 		);
 		expect(pwnd).not.toHaveBeenCalled();
@@ -36,7 +36,7 @@ describe("Password Validation", () => {
 		const { t } = result.current;
 		const passwordValidation = password(t);
 
-		await expect(passwordValidation.password().validate("no_upper")).resolves.toEqual(
+		await expect(passwordValidation.password().validate("no_upper")).resolves.toBe(
 			t("COMMON.VALIDATION.PASSWORD_WEAK"),
 		);
 		expect(pwnd).not.toHaveBeenCalled();
@@ -47,7 +47,7 @@ describe("Password Validation", () => {
 		const { t } = result.current;
 		const passwordValidation = password(t);
 
-		await expect(passwordValidation.password().validate("NoNumeric")).resolves.toEqual(
+		await expect(passwordValidation.password().validate("NoNumeric")).resolves.toBe(
 			t("COMMON.VALIDATION.PASSWORD_WEAK"),
 		);
 		expect(pwnd).not.toHaveBeenCalled();
@@ -58,7 +58,7 @@ describe("Password Validation", () => {
 		const { t } = result.current;
 		const passwordValidation = password(t);
 
-		await expect(passwordValidation.password().validate("N0SpecialChar5")).resolves.toEqual(
+		await expect(passwordValidation.password().validate("N0SpecialChar5")).resolves.toBe(
 			t("COMMON.VALIDATION.PASSWORD_WEAK"),
 		);
 		expect(pwnd).not.toHaveBeenCalled();
@@ -69,7 +69,7 @@ describe("Password Validation", () => {
 		const { t } = result.current;
 		const passwordValidation = password(t);
 
-		await expect(passwordValidation.password().validate("shortpw")).resolves.toEqual(
+		await expect(passwordValidation.password().validate("shortpw")).resolves.toBe(
 			t("COMMON.VALIDATION.PASSWORD_WEAK"),
 		);
 		expect(pwnd).not.toHaveBeenCalled();
@@ -82,7 +82,7 @@ describe("Password Validation", () => {
 
 		pwnd.mockImplementation(() => Promise.resolve(1));
 
-		await expect(passwordValidation.password().validate("S3cUr3!Pas#w0rd")).resolves.toEqual(
+		await expect(passwordValidation.password().validate("S3cUr3!Pas#w0rd")).resolves.toBe(
 			t("COMMON.VALIDATION.PASSWORD_LEAKED"),
 		);
 		expect(pwnd).toHaveBeenCalledWith("S3cUr3!Pas#w0rd");
@@ -109,7 +109,7 @@ describe("Password Validation", () => {
 
 		const passwordRule = password(t).password("S3cUr3!Pas#w0rd");
 
-		await expect(passwordRule.validate("S3cUr3!Pas#w0rd")).resolves.toEqual(
+		await expect(passwordRule.validate("S3cUr3!Pas#w0rd")).resolves.toBe(
 			t("COMMON.VALIDATION.PASSWORD_SAME_AS_OLD"),
 		);
 		await expect(passwordRule.validate("S3cUr3!Pas#w0rd2different")).resolves.toBe(true);
@@ -132,7 +132,7 @@ describe("Password Validation", () => {
 		const passwordValidation = password(t);
 		const confirmPassword = passwordValidation.confirmPassword("password");
 
-		expect(confirmPassword.validate("password2")).toEqual(t("COMMON.VALIDATION.PASSWORD_MISMATCH"));
+		expect(confirmPassword.validate("password2")).toBe(t("COMMON.VALIDATION.PASSWORD_MISMATCH"));
 	});
 
 	it("should require password to be entered before confirm password", () => {
@@ -142,7 +142,7 @@ describe("Password Validation", () => {
 		const passwordValidation = password(t);
 		const confirmPassword = passwordValidation.confirmPassword();
 
-		expect(confirmPassword.validate("password2")).toEqual(
+		expect(confirmPassword.validate("password2")).toBe(
 			t("COMMON.VALIDATION.FIELD_REQUIRED", {
 				field: t("SETTINGS.GENERAL.PERSONAL.PASSWORD"),
 			}).toString(),
@@ -158,7 +158,7 @@ describe("Password Validation", () => {
 
 		expect(confirmPassword.validate()).toBe(true);
 		expect(confirmPassword.validate()).toBe(true);
-		expect(confirmPassword.validate("password")).toEqual(
+		expect(confirmPassword.validate("password")).toBe(
 			t("COMMON.VALIDATION.FIELD_REQUIRED", {
 				field: t("SETTINGS.GENERAL.PERSONAL.PASSWORD"),
 			}).toString(),
@@ -172,7 +172,7 @@ describe("Password Validation", () => {
 		const passwordValidation = password(t);
 		const confirmPassword = passwordValidation.confirmOptionalPassword("test");
 
-		expect(confirmPassword.validate()).toEqual(t("COMMON.VALIDATION.PASSWORD_MISMATCH"));
-		expect(confirmPassword.validate("test2")).toEqual(t("COMMON.VALIDATION.PASSWORD_MISMATCH"));
+		expect(confirmPassword.validate()).toBe(t("COMMON.VALIDATION.PASSWORD_MISMATCH"));
+		expect(confirmPassword.validate("test2")).toBe(t("COMMON.VALIDATION.PASSWORD_MISMATCH"));
 	});
 });

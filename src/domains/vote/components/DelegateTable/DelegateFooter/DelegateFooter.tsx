@@ -1,15 +1,15 @@
 import { Contracts } from "@payvo/profiles";
 import { Address } from "app/components/Address";
-import { AmountCrypto } from "app/components/Amount";
+import { Amount } from "app/components/Amount";
 import { Avatar } from "app/components/Avatar";
 import { Button } from "app/components/Button";
 import { Icon } from "app/components/Icon";
 import { Tooltip } from "app/components/Tooltip";
 import cn from "classnames";
+import { VoteDelegateProperties } from "domains/vote/components/DelegateTable/DelegateTable.models";
 import React, { useCallback, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 
-import { VoteDelegateProperties } from "../DelegateTable.models";
 import { LabelWrapper, StyledCircle as Circle, TextWrapper } from "./DelegateFooter.styles";
 
 interface FooterContentProperties {
@@ -103,7 +103,7 @@ export const DelegateFooter = ({
 									})}
 								</LabelWrapper>
 								<TextWrapper>
-									<AmountCrypto value={availableBalance} ticker={selectedWallet.network().ticker()} />
+									<Amount value={availableBalance} ticker={selectedWallet.network().ticker()} />
 								</TextWrapper>
 							</div>
 						)}

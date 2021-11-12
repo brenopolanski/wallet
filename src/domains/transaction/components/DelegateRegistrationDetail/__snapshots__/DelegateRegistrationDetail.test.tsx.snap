@@ -230,7 +230,7 @@ exports[`DelegateRegistrationDetail should render a modal 1`] = `
                 >
                   <span
                     class="whitespace-nowrap"
-                    data-testid="AmountCrypto"
+                    data-testid="Amount"
                   >
                     21 ARK
                   </span>

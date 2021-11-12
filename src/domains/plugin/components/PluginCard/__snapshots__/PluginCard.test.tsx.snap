@@ -466,6 +466,7 @@ exports[`PluginCard should render update icon 1`] = `
               <div
                 class="sc-bdnxRM NjstW"
                 height="20"
+                style="animation-direction: reverse;"
                 width="20"
               >
                 <svg>

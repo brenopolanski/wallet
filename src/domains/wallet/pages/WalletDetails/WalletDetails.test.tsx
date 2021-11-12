@@ -4,9 +4,8 @@ import { Contracts, DTO } from "@payvo/profiles";
 import { ReadOnlyWallet } from "@payvo/profiles/distribution/read-only-wallet";
 import { Enums } from "@payvo/sdk";
 import { LedgerProvider } from "app/contexts";
-import { translations as commonTranslations } from "app/i18n/common/i18n";
+import { buildTranslations } from "app/i18n/helpers";
 import { toasts } from "app/services";
-import { translations as walletTranslations } from "domains/wallet/i18n";
 import electron from "electron";
 import { createMemoryHistory } from "history";
 import { when } from "jest-when";
@@ -29,6 +28,8 @@ import {
 } from "utils/testing-library";
 
 import { WalletDetails } from "./WalletDetails";
+
+const translations = buildTranslations();
 
 const history = createMemoryHistory();
 let walletUrl: string;
@@ -242,7 +243,7 @@ describe("WalletDetails", () => {
 
 		await waitFor(() => expect(() => getByTestId("PendingTransactions")).toThrow(/Unable to find an element by/));
 
-		expect(toastsMock).toHaveBeenCalled();
+		expect(toastsMock).toHaveBeenCalledWith(translations.TRANSACTION.TRANSACTION_REMOVED);
 
 		toastsMock.mockRestore();
 	});
@@ -300,7 +301,7 @@ describe("WalletDetails", () => {
 
 		const { findByText } = await renderPage({ waitForTopSection: true, waitForTransactions: false });
 
-		await findByText(commonTranslations.LEARN_MORE);
+		await findByText(translations.COMMON.LEARN_MORE);
 	});
 
 	it("should navigate to votes page when clicking on WalletVote button", async () => {
@@ -311,7 +312,7 @@ describe("WalletDetails", () => {
 
 		const { getByTestId, findByText } = await renderPage();
 
-		await findByText(commonTranslations.LEARN_MORE);
+		await findByText(translations.COMMON.LEARN_MORE);
 		await waitFor(() => expect(getByTestId("WalletVote__button")).not.toBeDisabled());
 
 		fireEvent.click(getByTestId("WalletVote__button"));
@@ -350,7 +351,7 @@ describe("WalletDetails", () => {
 
 		const { getByText } = await renderPage();
 
-		fireEvent.click(getByText(walletTranslations.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE));
+		fireEvent.click(getByText(translations.WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE));
 
 		expect(historySpy).toHaveBeenCalledWith({
 			pathname: `/profiles/${profile.id()}/wallets/${wallet.id()}/votes`,
@@ -379,7 +380,7 @@ describe("WalletDetails", () => {
 
 		fireEvent.click(getByTestId("UpdateWalletName__submit"));
 
-		await waitFor(() => expect(wallet.settings().get(Contracts.WalletSetting.Alias)).toEqual(name));
+		await waitFor(() => expect(wallet.settings().get(Contracts.WalletSetting.Alias)).toBe(name));
 	});
 
 	it("should star and unstar a wallet", async () => {
@@ -521,7 +522,7 @@ describe("WalletDetails", () => {
 
 		const { findByText } = await renderPage();
 
-		await findByText(commonTranslations.LEARN_MORE);
+		await findByText(translations.COMMON.LEARN_MORE);
 
 		syncVotesSpy.mockRestore();
 	});

@@ -5,11 +5,11 @@ import { Tooltip } from "app/components/Tooltip";
 import cn from "classnames";
 import { OfficialPluginIcon } from "domains/plugin/components/OfficialPluginIcon";
 import { PluginDropdown } from "domains/plugin/components/PluginDropdown";
+import { PluginImage, PluginImageProgressSize } from "domains/plugin/components/PluginImage";
+import { PluginCategories } from "domains/plugin/plugin.contracts";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import { PluginCategories } from "../../plugin.contracts";
-import { PluginImage, PluginImageProgressSize } from "../PluginImage";
 import { PluginLaunchButton } from "./PluginListItem.blocks";
 
 interface PluginListItemProperties {

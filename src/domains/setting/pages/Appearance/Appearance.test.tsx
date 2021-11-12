@@ -15,7 +15,6 @@ import { AppearanceSettings } from "./Appearance";
 describe("Appearance Settings", () => {
 	let profile: Contracts.IProfile;
 	let history: MemoryHistory;
-	let historyGoSpy: jest.SpyInstance;
 
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
@@ -27,8 +26,6 @@ describe("Appearance Settings", () => {
 		history = createMemoryHistory({
 			initialEntries: [`/profiles/${profile.id()}/settings/appearance`],
 		});
-
-		historyGoSpy = jest.spyOn(history, "go").mockImplementation();
 	});
 
 	const renderPage = () =>
@@ -50,17 +47,6 @@ describe("Appearance Settings", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should go back when cancel button is clicked", async () => {
-		renderPage();
-
-		expect(screen.getByTestId("AppearanceFooterButtons__cancel")).toBeInTheDocument();
-
-		userEvent.click(screen.getByTestId("AppearanceFooterButtons__cancel"));
-
-		expect(historyGoSpy).toHaveBeenCalledTimes(1);
-		expect(historyGoSpy).toHaveBeenCalledWith(-1);
-	});
-
 	it("should allow to change the accent color", async () => {
 		const toastSuccess = jest.spyOn(toasts, "success");
 
@@ -71,6 +57,8 @@ describe("Appearance Settings", () => {
 		expect(blueRadioButton).not.toBeChecked();
 		expect(profile.settings().get(Contracts.ProfileSetting.AccentColor)).not.toBe("blue");
 
+		expect(screen.getByTestId("AppearanceFooterButtons__save")).toBeDisabled();
+
 		userEvent.click(blueRadioButton);
 
 		await waitFor(() => {
@@ -79,7 +67,7 @@ describe("Appearance Settings", () => {
 
 		expect(profile.settings().get(Contracts.ProfileSetting.AccentColor)).not.toBe("blue");
 
-		expect(screen.getByTestId("AppearanceFooterButtons__save")).not.toBeDisabled();
+		expect(screen.getByTestId("AppearanceFooterButtons__save")).toBeEnabled();
 
 		userEvent.click(screen.getByTestId("AppearanceFooterButtons__save"));
 
@@ -87,7 +75,7 @@ describe("Appearance Settings", () => {
 			expect(profile.settings().get(Contracts.ProfileSetting.AccentColor)).toBe("blue");
 		});
 
-		expect(toastSuccess).toHaveBeenCalled();
+		expect(toastSuccess).toHaveBeenCalledWith(translations.GENERAL.SUCCESS);
 	});
 
 	it("should allow to change the viewing mode", async () => {
@@ -115,7 +103,7 @@ describe("Appearance Settings", () => {
 
 		expect(profile.settings().get(Contracts.ProfileSetting.Theme)).not.toBe("dark");
 
-		expect(screen.getByTestId("AppearanceFooterButtons__save")).not.toBeDisabled();
+		expect(screen.getByTestId("AppearanceFooterButtons__save")).toBeEnabled();
 
 		userEvent.click(screen.getByTestId("AppearanceFooterButtons__save"));
 
@@ -123,7 +111,7 @@ describe("Appearance Settings", () => {
 			expect(profile.settings().get(Contracts.ProfileSetting.Theme)).toBe("dark");
 		});
 
-		expect(toastSuccess).toHaveBeenCalled();
+		expect(toastSuccess).toHaveBeenCalledWith(translations.GENERAL.SUCCESS);
 	});
 
 	it.each([
@@ -150,7 +138,7 @@ describe("Appearance Settings", () => {
 
 		expect(profile.settings().get(key)).toBe(true);
 
-		expect(screen.getByTestId("AppearanceFooterButtons__save")).not.toBeDisabled();
+		expect(screen.getByTestId("AppearanceFooterButtons__save")).toBeEnabled();
 
 		userEvent.click(screen.getByTestId("AppearanceFooterButtons__save"));
 
@@ -158,6 +146,6 @@ describe("Appearance Settings", () => {
 			expect(profile.settings().get(key)).toBe(false);
 		});
 
-		expect(toastSuccess).toHaveBeenCalled();
+		expect(toastSuccess).toHaveBeenCalledWith(translations.GENERAL.SUCCESS);
 	});
 });

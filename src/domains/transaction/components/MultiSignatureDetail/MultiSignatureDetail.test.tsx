@@ -1,4 +1,5 @@
 import { Contracts, DTO } from "@payvo/profiles";
+import { Signatories } from "@payvo/sdk";
 import { LedgerProvider, minVersionList } from "app/contexts";
 import React from "react";
 import { Route } from "react-router-dom";
@@ -416,7 +417,7 @@ describe("MultiSignatureDetail", () => {
 
 		fireEvent.click(screen.getByTestId("MultiSignatureDetail__broadcast"));
 
-		await waitFor(() => expect(broadcastMock).toHaveBeenCalled());
+		await waitFor(() => expect(broadcastMock).toHaveBeenCalledWith(fixtures.transfer.id()));
 		await screen.findByText(translations.SUCCESS.TITLE);
 
 		broadcastMock.mockRestore();
@@ -503,7 +504,7 @@ describe("MultiSignatureDetail", () => {
 		fireEvent.click(screen.getByTestId("MultiSignatureDetail__broadcast"));
 
 		await waitFor(() => expect(screen.getByTestId("ErrorStep")));
-		await waitFor(() => expect(broadcastMock).toHaveBeenCalled());
+		await waitFor(() => expect(broadcastMock).toHaveBeenCalledWith(fixtures.transfer.id()));
 		broadcastMock.mockRestore();
 	});
 
@@ -563,7 +564,7 @@ describe("MultiSignatureDetail", () => {
 
 		fireEvent.click(screen.getByTestId("Paginator__cancel"));
 
-		expect(onClose).toHaveBeenCalled();
+		expect(onClose).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
 
 	it("should go to authentication step with sign button", async () => {
@@ -641,8 +642,10 @@ describe("MultiSignatureDetail", () => {
 
 		fireEvent.click(screen.getByTestId("Paginator__continue"));
 
-		await waitFor(() => expect(addSignatureMock).toHaveBeenCalled());
-		await waitFor(() => expect(broadcastMock).toHaveBeenCalled());
+		await waitFor(() =>
+			expect(addSignatureMock).toHaveBeenCalledWith(fixtures.transfer.id(), expect.any(Signatories.Signatory)),
+		);
+		await waitFor(() => expect(broadcastMock).toHaveBeenCalledWith(fixtures.transfer.id()));
 
 		jest.restoreAllMocks();
 	});
@@ -698,7 +701,9 @@ describe("MultiSignatureDetail", () => {
 
 		fireEvent.click(screen.getByTestId("Paginator__continue"));
 
-		await waitFor(() => expect(addSignatureMock).toHaveBeenCalled());
+		await waitFor(() =>
+			expect(addSignatureMock).toHaveBeenCalledWith(fixtures.transfer.id(), expect.any(Signatories.Signatory)),
+		);
 		await waitFor(() => expect(broadcastMock).not.toHaveBeenCalled());
 		await screen.findByText(translations.TRANSACTION_SIGNED);
 
@@ -759,8 +764,10 @@ describe("MultiSignatureDetail", () => {
 
 		fireEvent.click(screen.getByTestId("Paginator__continue"));
 
-		await waitFor(() => expect(addSignatureMock).toHaveBeenCalled());
-		await waitFor(() => expect(broadcastMock).not.toHaveBeenCalled());
+		await waitFor(() =>
+			expect(addSignatureMock).toHaveBeenCalledWith(fixtures.transfer.id(), expect.any(Signatories.Signatory)),
+		);
+		await waitFor(() => expect(broadcastMock).not.toHaveBeenCalledWith(fixtures.transfer.id()));
 
 		jest.restoreAllMocks();
 	});
@@ -820,7 +827,9 @@ describe("MultiSignatureDetail", () => {
 
 		fireEvent.click(screen.getByTestId("Paginator__continue"));
 
-		await waitFor(() => expect(addSignatureMock).toHaveBeenCalled());
+		await waitFor(() =>
+			expect(addSignatureMock).toHaveBeenCalledWith(fixtures.transfer.id(), expect.any(Signatories.Signatory)),
+		);
 		await waitFor(() => expect(broadcastMock).not.toHaveBeenCalled());
 
 		jest.restoreAllMocks();
@@ -921,7 +930,12 @@ describe("MultiSignatureDetail", () => {
 
 		await waitFor(() => expect(() => screen.getByTestId("Paginator__continue")), { timeout: 1000 });
 
-		await waitFor(() => expect(addSignatureMock).toHaveBeenCalled());
+		await waitFor(() =>
+			expect(addSignatureMock).toHaveBeenCalledWith(
+				fixtures.multiSignature.id(),
+				expect.any(Signatories.Signatory),
+			),
+		);
 		await waitFor(() => expect(broadcastMock).not.toHaveBeenCalled());
 
 		expect(container).toMatchSnapshot();
@@ -1032,7 +1046,13 @@ describe("MultiSignatureDetail", () => {
 			observer!.next({ descriptor: "", deviceModel: { id: "nanoX" }, type: "add" });
 		});
 
-		await waitFor(() => expect(addSignatureMock).toHaveBeenCalled());
+		await waitFor(() =>
+			expect(addSignatureMock).toHaveBeenCalledWith(
+				fixtures.multiSignature.id(),
+				expect.any(Signatories.Signatory),
+			),
+		);
+
 		await waitFor(() => expect(broadcastMock).not.toHaveBeenCalled());
 		await screen.findByText(translations.TRANSACTION_SIGNED);
 
