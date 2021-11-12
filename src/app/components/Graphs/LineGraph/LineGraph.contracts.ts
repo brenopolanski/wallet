@@ -1,4 +1,4 @@
-export interface LineGraphDataPoint {
+interface LineGraphDataPoint {
 	color: string;
 	label: string;
 	percent: number;
@@ -6,16 +6,29 @@ export interface LineGraphDataPoint {
 	x: number;
 }
 
-export interface LineGraphGraphConfig {
+interface LineGraphGraphConfig {
 	graphWidth: number;
-	segmentSpacing: number;
 	segmentHeight: number;
-	segmentRadius: number;
+	segmentHeightHover: number;
+	segmentSpacing: number;
 }
 
-export type LineGraphMapper<TDataPoint> = (data: TDataPoint[], config: LineGraphGraphConfig) => LineGraphDataPoint[];
+interface LineGraphSegmentProperties {
+	config: LineGraphGraphConfig;
+	dataPoint: LineGraphDataPoint;
+}
 
-export interface LineGraphProperties<TDataPoint> {
+type LineGraphMapper<TDataPoint> = (data: TDataPoint[], config: LineGraphGraphConfig) => LineGraphDataPoint[];
+
+interface LineGraphProperties<TDataPoint> {
 	data: TDataPoint[];
 	mapper: LineGraphMapper<TDataPoint>;
 }
+
+export type {
+	LineGraphDataPoint,
+	LineGraphGraphConfig,
+	LineGraphMapper,
+	LineGraphProperties,
+	LineGraphSegmentProperties,
+};

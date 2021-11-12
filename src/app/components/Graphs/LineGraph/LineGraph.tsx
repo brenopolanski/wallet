@@ -1,6 +1,7 @@
 import { useGraphWidth } from "app/components/Graphs/Graphs.shared";
 import React, { useRef } from "react";
 
+import { LineGraphSegment } from "./LineGraph.blocks";
 import { LineGraphGraphConfig, LineGraphProperties } from "./LineGraph.contracts";
 
 export function LineGraph<TDataType>({ data, mapper }: LineGraphProperties<TDataType>): JSX.Element {
@@ -10,24 +11,15 @@ export function LineGraph<TDataType>({ data, mapper }: LineGraphProperties<TData
 	const config: LineGraphGraphConfig = {
 		graphWidth,
 		segmentHeight: 8,
-		segmentRadius: 4,
+		segmentHeightHover: 16,
 		segmentSpacing: 8,
 	};
 
 	return (
 		<svg ref={reference} className="w-full">
 			{!!graphWidth &&
-				mapper(data, config).map(({ width, x, color }, index) => (
-					<rect
-						x={x}
-						y={0}
-						key={index}
-						className={`fill-current text-theme-${color}`}
-						width={width}
-						height={config.segmentHeight}
-						rx={config.segmentRadius}
-						ry={config.segmentRadius}
-					/>
+				mapper(data, config).map((dataPoint, index) => (
+					<LineGraphSegment config={config} dataPoint={dataPoint} key={index} />
 				))}
 		</svg>
 	);
