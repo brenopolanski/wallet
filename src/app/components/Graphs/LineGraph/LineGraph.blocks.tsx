@@ -1,7 +1,7 @@
+import { useGraphFormatter } from "app/components/Graphs/Graphs.shared";
 import React, { useMemo, useState } from "react";
 
 import { LineGraphLegendProperties, LineGraphSegmentProperties } from "./LineGraph.contracts";
-import { useGraphFormatter } from "app/components/Graphs/Graphs.shared";
 
 export const LineGraphSegment: React.VFC<LineGraphSegmentProperties> = ({
 	config: { segmentHeight, segmentHeightHover },
