@@ -1,25 +1,19 @@
-import { Coins } from "@payvo/sdk";
-
-interface BuildTransferDataProperties {
-	coin: Coins.Coin;
-	recipients?: { address: string; amount: number }[];
-	memo?: string;
-}
+import { BuildTransferDataProperties } from "domains/transaction/pages/SendTransfer/SendTransfer.contracts";
 
 export const buildTransferData = async ({ coin, recipients, memo }: BuildTransferDataProperties) => {
 	let data: Record<string, any> = {};
 
 	if (recipients?.length === 1) {
 		data = {
-			amount: +recipients[0].amount,
+			amount: +(recipients[0].amount ?? 0),
 			to: recipients[0].address,
 		};
 	}
 
 	if (!!recipients?.length && recipients.length > 1) {
 		data = {
-			payments: recipients?.map(({ address, amount }: { address: string; amount: number }) => ({
-				amount: +amount,
+			payments: recipients.map(({ address, amount }) => ({
+				amount: +(amount ?? 0),
 				to: address,
 			})),
 		};

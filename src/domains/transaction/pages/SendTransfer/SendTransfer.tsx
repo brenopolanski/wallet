@@ -1,119 +1,77 @@
-import { sortBy } from "@arkecosystem/utils";
 import { Contracts, DTO } from "@payvo/profiles";
-import { Networks, Services } from "@payvo/sdk";
+import { Networks } from "@payvo/sdk";
 import { Form } from "app/components/Form";
 import { Page, Section } from "app/components/Layout";
 import { StepIndicator } from "app/components/StepIndicator";
 import { StepNavigation } from "app/components/StepNavigation";
 import { TabPanel, Tabs } from "app/components/Tabs";
-import { useEnvironmentContext, useLedgerContext } from "app/contexts";
-import { useActiveProfile, useActiveWallet, useQueryParams, useValidation } from "app/hooks";
+import { useLedgerContext } from "app/contexts";
+import { useActiveProfile, useActiveWallet, useProfileNetworks } from "app/hooks";
 import { useKeydown } from "app/hooks/use-keydown";
 import { AuthenticationStep } from "domains/transaction/components/AuthenticationStep";
 import { ConfirmSendTransaction } from "domains/transaction/components/ConfirmSendTransaction";
 import { ErrorStep } from "domains/transaction/components/ErrorStep";
 import { FeeWarning } from "domains/transaction/components/FeeWarning";
-import { useFeeConfirmation, useTransaction, useTransactionBuilder } from "domains/transaction/hooks";
-import { handleBroadcastError } from "domains/transaction/utils";
-import React, { useEffect, useMemo, useRef, useState } from "react";
-import { useForm } from "react-hook-form";
-import { useHistory, useParams } from "react-router-dom";
+import { useFeeConfirmation, useTransaction } from "domains/transaction/hooks";
+import { useSendTransferForm } from "domains/transaction/hooks/use-send-transfer-form";
+import { useTransactionQueryParams } from "domains/transaction/hooks/use-transaction-query-params";
+import { SendTransferStep } from "domains/transaction/pages/SendTransfer/SendTransfer.contracts";
+import React, { useCallback, useEffect, useMemo, useRef, useState, VFC } from "react";
+import { useHistory } from "react-router-dom";
 import { assertWallet } from "utils/assertions";
-import { lowerCaseEquals } from "utils/equals";
 
 import { FormStep } from "./FormStep";
 import { TransferLedgerReview } from "./LedgerReview";
 import { NetworkStep } from "./NetworkStep";
 import { ReviewStep } from "./ReviewStep";
-import { buildTransferData } from "./SendTransfer.helpers";
 import { SummaryStep } from "./SummaryStep";
 
-enum Step {
-	NetworkStep,
-	FormStep,
-	ReviewStep,
-	AuthenticationStep,
-	SummaryStep,
-	ErrorStep,
-}
+const MAX_TABS = 5;
 
-export const SendTransfer = () => {
+export const SendTransfer: VFC = () => {
 	const history = useHistory();
-	const { walletId: hasWalletId } = useParams<{ walletId: string }>();
+	const activeWallet = useActiveWallet();
+	const activeProfile = useActiveProfile();
+	const networks = useProfileNetworks();
+	const { fetchWalletUnconfirmedTransactions } = useTransaction();
+	const { hasDeviceAvailable, isConnected } = useLedgerContext();
+	const {
+		hasAnyParameters: hasDeepLinkParameters,
+		hasReset: shouldResetForm,
+		queryParameters: deepLinkParameters,
+	} = useTransactionQueryParams();
+
+	const abortReference = useRef(new AbortController());
+
 	const [errorMessage, setErrorMessage] = useState<string | undefined>();
 
-	const queryParameters = useQueryParams();
+	const showNetworkStep = !hasDeepLinkParameters && !activeWallet;
+	const firstTabIndex = showNetworkStep ? SendTransferStep.NetworkStep : SendTransferStep.FormStep;
+	const [activeTab, setActiveTab] = useState<SendTransferStep>(firstTabIndex);
 
-	const shouldResetForm = queryParameters.get("reset") === "1";
-
-	const deepLinkParameters = useMemo<Record<string, string>>(() => {
-		const result: Record<string, string> = {};
-		for (const [key, value] of queryParameters.entries()) {
-			if (key !== "reset") {
-				result[key] = value;
-			}
-		}
-		return result;
-	}, []); // eslint-disable-line react-hooks/exhaustive-deps
-
-	const hasDeepLinkParameters = Object.keys(deepLinkParameters).length > 0;
-
-	const showNetworkStep = !hasDeepLinkParameters && !hasWalletId;
-	const firstTabIndex: Step = showNetworkStep ? Step.NetworkStep : Step.FormStep;
-
-	const [activeTab, setActiveTab] = useState<Step>(firstTabIndex);
 	const [unconfirmedTransactions, setUnconfirmedTransactions] = useState<DTO.ExtendedConfirmedTransactionData[]>([]);
 	const [isConfirmModalOpen, setIsConfirmModalOpen] = useState(false);
 	const [transaction, setTransaction] = useState<DTO.ExtendedSignedTransactionData | undefined>(undefined);
 
-	const { persist } = useEnvironmentContext();
-	const activeProfile = useActiveProfile();
-	const activeWallet = useActiveWallet();
+	const [wallet, setWallet] = useState<Contracts.IReadWriteWallet | undefined>(activeWallet);
 
-	const [wallet, setWallet] = useState<Contracts.IReadWriteWallet | undefined>(
-		hasWalletId ? activeWallet : undefined,
-	);
-
-	const networks = useMemo(() => {
-		const results: Record<string, Networks.Network> = {};
-		for (const wallet of activeProfile.wallets().values()) {
-			results[wallet.networkId()] = wallet.network();
-		}
-
-		return sortBy(Object.values(results), (network) => network.displayName());
-	}, [activeProfile]);
-
-	const defaultValues = useMemo(
-		() => ({
-			amount: 0,
-			recipients: [],
-			remainingBalance: wallet?.balance(),
-		}),
-		[wallet],
-	);
-
-	const form = useForm<any>({
-		defaultValues,
-		mode: "onChange",
-	});
-
-	const { clearErrors, formState, getValues, register, setValue, handleSubmit, watch, reset, trigger } = form;
-	const { isDirty, isValid, isSubmitting } = formState;
-
-	const { senderAddress, fees, fee, remainingBalance, amount, isSendAllSelected, network } = watch();
-	const { sendTransfer, common } = useValidation();
-
-	const { hasDeviceAvailable, isConnected, transport, connect } = useLedgerContext();
-
-	const [lastEstimatedExpiration, setLastEstimatedExpiration] = useState<number | undefined>();
-	const abortReference = useRef(new AbortController());
-	const transactionBuilder = useTransactionBuilder();
-	const { fetchWalletUnconfirmedTransactions } = useTransaction();
+	const {
+		form,
+		resetForm,
+		submitForm,
+		handleSubmit,
+		getValues,
+		lastEstimatedExpiration,
+		values: { fee, fees, network, senderAddress },
+		formState: { isDirty, isValid, isSubmitting },
+	} = useSendTransferForm(wallet);
 
 	useKeydown("Enter", () => {
-		const isButton = (document.activeElement as any)?.type === "button";
+		if (document.activeElement instanceof HTMLInputElement && document.activeElement.type === "button") {
+			return;
+		}
 
-		if (isButton || isNextDisabled || activeTab >= Step.AuthenticationStep) {
+		if (isNextDisabled || activeTab >= SendTransferStep.AuthenticationStep) {
 			return;
 		}
 
@@ -121,51 +79,36 @@ export const SendTransfer = () => {
 	});
 
 	useEffect(() => {
-		if (shouldResetForm) {
-			setActiveTab(firstTabIndex);
+		if (!shouldResetForm) {
+			return;
+		}
 
-			const resetValues = window.setTimeout(() => {
-				reset({ ...defaultValues, network });
+		setActiveTab(firstTabIndex);
 
+		const resetValues = window.setTimeout(() =>
+			resetForm(() => {
 				setErrorMessage(undefined);
 				setUnconfirmedTransactions([]);
 				setTransaction(undefined);
-				setLastEstimatedExpiration(undefined);
 				setWallet(undefined);
 
 				// remove all query params
 				history.replace(history.location.pathname);
-			});
+			}),
+		);
 
-			return () => {
-				window.clearTimeout(resetValues);
-			};
-		}
-	}, [defaultValues, firstTabIndex, history, network, reset, shouldResetForm]);
-
-	useEffect(() => {
-		register("remainingBalance");
-		register("network", sendTransfer.network());
-		register("recipients", sendTransfer.recipients());
-		register("senderAddress", sendTransfer.senderAddress());
-		register("fees");
-		register("fee", common.fee(remainingBalance, wallet?.network(), fees));
-		register("memo", sendTransfer.memo());
-
-		register("remainingBalance");
-		register("isSendAllSelected");
-		register("inputFeeSettings");
-
-		register("suppressWarning");
-	}, [register, sendTransfer, common, fees, wallet, remainingBalance, amount, senderAddress]);
+		return () => {
+			window.clearTimeout(resetValues);
+		};
+	}, [firstTabIndex, history, resetForm, shouldResetForm]);
 
 	useEffect(() => {
 		if (!showNetworkStep) {
 			return;
 		}
 
-		reset({ ...defaultValues, network });
-	}, [network, reset]); // eslint-disable-line react-hooks/exhaustive-deps
+		resetForm();
+	}, [resetForm]); // eslint-disable-line react-hooks/exhaustive-deps
 
 	const {
 		dismissFeeWarning,
@@ -181,142 +124,32 @@ export const SendTransfer = () => {
 		}
 	}, [activeProfile, network, senderAddress]);
 
-	useEffect(() => {
-		if (Object.keys(deepLinkParameters).length === 0) {
-			return;
-		}
+	const submit = useCallback(
+		async (skipUnconfirmedCheck = false) => {
+			assertWallet(wallet);
 
-		setValue(
-			"network",
-			networks.find(
-				(item) =>
-					lowerCaseEquals(item.coin(), deepLinkParameters.coin) &&
-					lowerCaseEquals(item.id(), deepLinkParameters.network),
-			),
-		);
+			if (!skipUnconfirmedCheck) {
+				const unconfirmed = await fetchWalletUnconfirmedTransactions(wallet);
+				setUnconfirmedTransactions(unconfirmed);
 
-		if (deepLinkParameters.memo) {
-			setValue("memo", deepLinkParameters.memo);
-		}
-
-		if (deepLinkParameters.recipient) {
-			setTimeout(
-				() =>
-					setValue("recipientAddress", deepLinkParameters.recipient, {
-						shouldDirty: true,
-						shouldValidate: false,
-					}),
-				0,
-			);
-		}
-	}, [deepLinkParameters, setValue, networks]);
-
-	useEffect(() => {
-		if (!wallet) {
-			return;
-		}
-
-		setValue("senderAddress", wallet.address(), { shouldDirty: true, shouldValidate: true });
-
-		for (const network of networks) {
-			/* istanbul ignore else */
-			if (network.coin() === wallet.coinId() && network.id() === wallet.networkId()) {
-				setValue("network", network, { shouldDirty: true, shouldValidate: true });
-
-				break;
-			}
-		}
-	}, [wallet, networks, setValue]);
-
-	useEffect(() => {
-		if (!isSendAllSelected) {
-			return;
-		}
-
-		const remaining = remainingBalance - fee;
-
-		setValue("amount", remaining);
-
-		void trigger(["fee", "amount"]);
-	}, [fee]); // eslint-disable-line react-hooks/exhaustive-deps
-
-	const submitForm = async (skipUnconfirmedCheck = false) => {
-		assertWallet(wallet);
-
-		if (!skipUnconfirmedCheck) {
-			const unconfirmed = await fetchWalletUnconfirmedTransactions(wallet);
-			setUnconfirmedTransactions(unconfirmed);
-
-			if (unconfirmed.length > 0) {
-				setIsConfirmModalOpen(true);
-				return;
-			}
-		}
-
-		clearErrors("mnemonic");
-
-		const {
-			fee,
-			mnemonic,
-			secondMnemonic,
-			recipients,
-			memo,
-			encryptionPassword,
-			wif,
-			privateKey,
-			secret,
-			secondSecret,
-		} = getValues();
-		const isMultiPayment = recipients.length > 1;
-		const transactionType = isMultiPayment ? "multiPayment" : "transfer";
-
-		try {
-			const signatory = await wallet.signatoryFactory().make({
-				encryptionPassword,
-				mnemonic,
-				privateKey,
-				secondMnemonic,
-				secondSecret,
-				secret,
-				wif,
-			});
-
-			const data = await buildTransferData({
-				coin: wallet.coin(),
-				memo,
-				recipients,
-			});
-
-			setLastEstimatedExpiration(data.expiration);
-
-			const transactionInput: Services.TransactionInputs = { data, fee: +fee, signatory };
-
-			if (wallet.isLedger()) {
-				await connect(activeProfile, wallet.coinId(), wallet.networkId());
-				await wallet.ledger().connect(transport);
+				if (unconfirmed.length > 0) {
+					setIsConfirmModalOpen(true);
+					return;
+				}
 			}
 
-			const abortSignal = abortReference.current?.signal;
-			const { uuid, transaction } = await transactionBuilder.build(transactionType, transactionInput, wallet, {
-				abortSignal,
-			});
+			try {
+				const transaction = await submitForm(abortReference);
 
-			const response = await wallet.transaction().broadcast(uuid);
-
-			handleBroadcastError(response);
-
-			await wallet.transaction().sync();
-
-			await persist();
-
-			setTransaction(transaction);
-			setActiveTab(Step.SummaryStep);
-		} catch (error) {
-			setErrorMessage(JSON.stringify({ message: error.message, type: error.name }));
-			setActiveTab(Step.ErrorStep);
-		}
-	};
-
+				setTransaction(transaction);
+				setActiveTab(SendTransferStep.SummaryStep);
+			} catch (error) {
+				setErrorMessage(JSON.stringify({ message: error.message, type: error.name }));
+				setActiveTab(SendTransferStep.ErrorStep);
+			}
+		},
+		[fetchWalletUnconfirmedTransactions, submitForm, wallet],
+	);
 	const handleBack = () => {
 		// Abort any existing listener
 		abortReference.current.abort();
@@ -332,32 +165,36 @@ export const SendTransfer = () => {
 		abortReference.current = new AbortController();
 
 		const { network, senderAddress } = getValues();
+		if (!network) {
+			return;
+		}
 		const senderWallet = activeProfile.wallets().findByAddressWithNetwork(senderAddress, network.id());
 
 		const nextStep = activeTab + 1;
 
-		if (nextStep === Step.AuthenticationStep && requireFeeConfirmation && !suppressWarning) {
+		if (nextStep === SendTransferStep.AuthenticationStep && requireFeeConfirmation && !suppressWarning) {
 			setShowFeeWarning(true);
 			return;
 		}
 
-		if (nextStep === Step.AuthenticationStep && senderWallet?.isMultiSignature()) {
-			await handleSubmit(() => submitForm(true))();
+		if (nextStep === SendTransferStep.AuthenticationStep && senderWallet?.isMultiSignature()) {
+			await handleSubmit(() => submit(true))();
 			return;
 		}
 
-		if (nextStep === Step.AuthenticationStep && senderWallet?.isLedger()) {
-			handleSubmit(() => submitForm(true))();
+		if (nextStep === SendTransferStep.AuthenticationStep && senderWallet?.isLedger()) {
+			await handleSubmit(() => submit(true))();
 		}
 
 		setActiveTab(nextStep);
 	};
 
 	const hideStepNavigation =
-		activeTab === Step.ErrorStep || (activeTab === Step.AuthenticationStep && wallet?.isLedger());
+		activeTab === SendTransferStep.ErrorStep ||
+		(activeTab === SendTransferStep.AuthenticationStep && wallet?.isLedger());
 
-	const isNextDisabled: boolean = useMemo(() => {
-		if (activeTab === Step.NetworkStep && getValues("network") instanceof Networks.Network) {
+	const isNextDisabled = useMemo<boolean>(() => {
+		if (activeTab === SendTransferStep.NetworkStep && getValues("network") instanceof Networks.Network) {
 			return false;
 		}
 
@@ -368,83 +205,76 @@ export const SendTransfer = () => {
 		return !isValid;
 	}, [activeTab, getValues, isDirty, isValid]);
 
+	const renderTabs = () => (
+		<>
+			<StepIndicator
+				size={showNetworkStep ? MAX_TABS : MAX_TABS - 1}
+				activeIndex={showNetworkStep ? activeTab + 1 : activeTab}
+			/>
+
+			<div className="mt-8">
+				<TabPanel tabId={SendTransferStep.NetworkStep}>
+					<NetworkStep profile={activeProfile} networks={networks} />
+				</TabPanel>
+
+				<TabPanel tabId={SendTransferStep.FormStep}>
+					<FormStep networks={networks} profile={activeProfile} deeplinkProps={deepLinkParameters} />
+				</TabPanel>
+
+				<TabPanel tabId={SendTransferStep.ReviewStep}>
+					<ReviewStep wallet={wallet!} />
+				</TabPanel>
+
+				<TabPanel tabId={SendTransferStep.AuthenticationStep}>
+					<AuthenticationStep
+						wallet={wallet!}
+						ledgerDetails={
+							<TransferLedgerReview wallet={wallet!} estimatedExpiration={lastEstimatedExpiration} />
+						}
+						ledgerIsAwaitingDevice={!hasDeviceAvailable}
+						ledgerIsAwaitingApp={!isConnected}
+					/>
+				</TabPanel>
+
+				<TabPanel tabId={SendTransferStep.SummaryStep}>
+					<SummaryStep transaction={transaction!} senderWallet={wallet!} profile={activeProfile} />
+				</TabPanel>
+
+				<TabPanel tabId={SendTransferStep.ErrorStep}>
+					<ErrorStep
+						onBack={() => {
+							assertWallet(wallet);
+							history.push(`/profiles/${activeProfile.id()}/wallets/${wallet.id()}`);
+						}}
+						isRepeatDisabled={isSubmitting}
+						onRepeat={handleSubmit(() => submit())}
+						errorMessage={errorMessage}
+					/>
+				</TabPanel>
+
+				{!hideStepNavigation && (
+					<StepNavigation
+						onBackClick={handleBack}
+						onBackToWalletClick={() => {
+							assertWallet(wallet);
+							history.push(`/profiles/${activeProfile.id()}/wallets/${wallet.id()}`);
+						}}
+						onContinueClick={async () => await handleNext()}
+						isLoading={isSubmitting}
+						isNextDisabled={isNextDisabled}
+						size={4}
+						activeIndex={activeTab}
+					/>
+				)}
+			</div>
+		</>
+	);
+
 	return (
 		<Page>
 			<Section className="flex-1">
-				<Form className="mx-auto max-w-xl" context={form} onSubmit={() => submitForm()}>
-					<Tabs activeId={activeTab}>
-						<StepIndicator
-							size={showNetworkStep ? 5 : 4}
-							activeIndex={showNetworkStep ? activeTab + 1 : activeTab}
-						/>
-
-						<div className="mt-8">
-							<TabPanel tabId={Step.NetworkStep}>
-								<NetworkStep profile={activeProfile} networks={networks} />
-							</TabPanel>
-
-							<TabPanel tabId={Step.FormStep}>
-								<FormStep
-									networks={networks}
-									profile={activeProfile}
-									deeplinkProps={deepLinkParameters}
-								/>
-							</TabPanel>
-
-							<TabPanel tabId={Step.ReviewStep}>
-								<ReviewStep wallet={wallet!} />
-							</TabPanel>
-
-							<TabPanel tabId={Step.AuthenticationStep}>
-								<AuthenticationStep
-									wallet={wallet!}
-									ledgerDetails={
-										<TransferLedgerReview
-											wallet={wallet!}
-											estimatedExpiration={lastEstimatedExpiration}
-										/>
-									}
-									ledgerIsAwaitingDevice={!hasDeviceAvailable}
-									ledgerIsAwaitingApp={!isConnected}
-								/>
-							</TabPanel>
-
-							<TabPanel tabId={Step.SummaryStep}>
-								<SummaryStep
-									transaction={transaction!}
-									senderWallet={wallet!}
-									profile={activeProfile}
-								/>
-							</TabPanel>
-
-							<TabPanel tabId={Step.ErrorStep}>
-								<ErrorStep
-									onBack={() => {
-										assertWallet(wallet);
-										history.push(`/profiles/${activeProfile.id()}/wallets/${wallet.id()}`);
-									}}
-									isRepeatDisabled={isSubmitting}
-									onRepeat={handleSubmit(submitForm as any)}
-									errorMessage={errorMessage}
-								/>
-							</TabPanel>
-
-							{!hideStepNavigation && (
-								<StepNavigation
-									onBackClick={handleBack}
-									onBackToWalletClick={() => {
-										assertWallet(wallet);
-										history.push(`/profiles/${activeProfile.id()}/wallets/${wallet.id()}`);
-									}}
-									onContinueClick={async () => await handleNext()}
-									isLoading={isSubmitting}
-									isNextDisabled={isNextDisabled}
-									size={4}
-									activeIndex={activeTab}
-								/>
-							)}
-						</div>
-					</Tabs>
+				<Form className="mx-auto max-w-xl" context={form} onSubmit={() => submit()}>
+					<Tabs activeId={activeTab}>{renderTabs()}</Tabs>
 
 					<FeeWarning
 						isOpen={showFeeWarning}
@@ -461,7 +291,7 @@ export const SendTransfer = () => {
 						isOpen={isConfirmModalOpen}
 						onConfirm={() => {
 							setIsConfirmModalOpen(false);
-							handleSubmit(() => submitForm(true))();
+							handleSubmit(() => submit(true))();
 						}}
 						onClose={() => {
 							setIsConfirmModalOpen(false);
