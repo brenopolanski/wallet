@@ -86,6 +86,32 @@ describe("useActiveProfile", () => {
 
 		expect(getByText(wallet.address())).toBeInTheDocument();
 	});
+
+	it("should throw error with no profile", () => {
+		expect(() =>
+			render(
+				<Route path="/profiles/:profileId/wallets/:walletId">
+					<TestWallet />
+				</Route>,
+				{
+					routes: [`/profiles/${"undefined"}/wallets/${wallet.id()}`],
+				},
+			),
+		).toThrow("No profile found for [undefined].");
+	});
+
+	it("should throw error with no wallet", () => {
+		expect(() =>
+			render(
+				<Route path="/profiles/:profileId/wallets/:walletId">
+					<TestWallet />
+				</Route>,
+				{
+					routes: [`/profiles/${profile.id()}/wallets/${"undefined"}`],
+				},
+			),
+		).toThrow("Cannot read property 'address' of undefined");
+	});
 });
 
 let networks: Networks.Network[];
