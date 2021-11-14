@@ -6,7 +6,7 @@ import { StepIndicator } from "app/components/StepIndicator";
 import { StepNavigation } from "app/components/StepNavigation";
 import { TabPanel, Tabs } from "app/components/Tabs";
 import { useLedgerContext } from "app/contexts";
-import { useActiveProfile, useActiveWallet, useProfileNetworks } from "app/hooks";
+import { useActiveProfile, useActiveWallet, useNetworks } from "app/hooks";
 import { useKeydown } from "app/hooks/use-keydown";
 import { AuthenticationStep } from "domains/transaction/components/AuthenticationStep";
 import { ConfirmSendTransaction } from "domains/transaction/components/ConfirmSendTransaction";
@@ -32,7 +32,7 @@ export const SendTransfer: VFC = () => {
 	const history = useHistory();
 	const activeWallet = useActiveWallet();
 	const activeProfile = useActiveProfile();
-	const networks = useProfileNetworks();
+	const networks = useNetworks();
 	const { fetchWalletUnconfirmedTransactions } = useTransaction();
 	const { hasDeviceAvailable, isConnected } = useLedgerContext();
 	const {

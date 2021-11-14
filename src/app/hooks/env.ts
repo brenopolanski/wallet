@@ -41,7 +41,7 @@ export const useActiveWallet = (): Contracts.IReadWriteWallet => {
 	}, [profile, walletId]);
 };
 
-export const useProfileNetworks = () => {
+export const useNetworks = () => {
 	const activeProfile = useActiveProfile();
 
 	return useMemo(() => {

@@ -1,7 +1,7 @@
 import { Contracts } from "@payvo/profiles";
 import { Services } from "@payvo/sdk";
 import { useEnvironmentContext, useLedgerContext } from "app/contexts";
-import { useActiveProfile, useProfileNetworks, useValidation } from "app/hooks";
+import { useActiveProfile, useNetworks, useValidation } from "app/hooks";
 import { useTransactionBuilder } from "domains/transaction/hooks/use-transaction-builder";
 import { useTransactionQueryParams } from "domains/transaction/hooks/use-transaction-query-params";
 import { SendTransferForm } from "domains/transaction/pages/SendTransfer";
@@ -17,7 +17,7 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 	const [lastEstimatedExpiration, setLastEstimatedExpiration] = useState<number | undefined>();
 
 	const activeProfile = useActiveProfile();
-	const networks = useProfileNetworks();
+	const networks = useNetworks();
 	const transactionBuilder = useTransactionBuilder();
 	const { transport, connect } = useLedgerContext();
 	const { persist } = useEnvironmentContext();
