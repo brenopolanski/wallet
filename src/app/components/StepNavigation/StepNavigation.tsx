@@ -17,7 +17,7 @@ const StepNavigationWrapper = styled.div`
 	${tw`flex justify-end mt-8 space-x-3`}
 `;
 
-export const StepNavigation: React.FC<StepNavigationProperties> = ({
+export const StepNavigation: React.VFC<StepNavigationProperties> = ({
 	onBackClick,
 	onBackToWalletClick,
 	onContinueClick,
@@ -25,7 +25,7 @@ export const StepNavigation: React.FC<StepNavigationProperties> = ({
 	isLoading,
 	activeIndex,
 	size,
-}: StepNavigationProperties) => {
+}) => {
 	const { t } = useTranslation();
 
 	const showBack = activeIndex < size;

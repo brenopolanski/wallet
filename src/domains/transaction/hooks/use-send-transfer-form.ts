@@ -29,7 +29,8 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 			recipients: [],
 			remainingBalance: wallet?.balance(),
 		}),
-		[wallet],
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+		[],
 	);
 	const form = useForm<SendTransferForm>({
 		defaultValues: formDefaultValues,
