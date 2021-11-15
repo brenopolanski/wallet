@@ -1,12 +1,6 @@
 import { Contracts } from "@payvo/profiles";
+import { AssetItem } from "domains/dashboard/components/PortfolioBreakdown/PortfolioBreakdown.contracts";
 import { useMemo } from "react";
-
-export interface AssetItem {
-	amount: number;
-	convertedAmount: number;
-	label: string;
-	percent: number;
-}
 
 type UsePortfolioBreakdownHook = (input: {
 	profile: Contracts.IProfile;

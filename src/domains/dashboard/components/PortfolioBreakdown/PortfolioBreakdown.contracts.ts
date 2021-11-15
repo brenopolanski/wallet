@@ -1,5 +1,12 @@
 import { LineGraphDataPoint } from "app/components/Graphs/LineGraph/LineGraph.contracts";
 
+interface AssetItem {
+	amount: number;
+	convertedAmount: number;
+	label: string;
+	percent: number;
+}
+
 interface LegendProperties {
 	dataPoints: LineGraphDataPoint[];
 	hasZeroBalance: boolean;
@@ -15,4 +22,4 @@ interface TooltipProperties {
 	dataPoint: LineGraphDataPoint;
 }
 
-export type { LabelledTextProperties, LegendProperties, TooltipProperties };
+export type { AssetItem, LabelledTextProperties, LegendProperties, TooltipProperties };

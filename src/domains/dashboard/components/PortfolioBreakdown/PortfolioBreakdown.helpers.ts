@@ -2,7 +2,7 @@ import { sortByDesc } from "@arkecosystem/utils";
 import { Helpers } from "@payvo/profiles";
 import { GRAPH_COLOR_EMPTY, GRAPH_COLORS } from "app/components/Graphs/Graphs.shared";
 import { LineGraphDataPoint, LineGraphMapper } from "app/components/Graphs/LineGraph/LineGraph.contracts";
-import { AssetItem } from "domains/dashboard/hooks/use-portfolio-breakdown";
+import { AssetItem } from "domains/dashboard/components/PortfolioBreakdown/PortfolioBreakdown.contracts";
 
 const getColor = (index: number): string => {
 	if (GRAPH_COLORS[index]) {
@@ -12,7 +12,7 @@ const getColor = (index: number): string => {
 	return GRAPH_COLORS[GRAPH_COLORS.length - 1];
 };
 
-export const getAssetsToDataPointsMapper: (ticker: string, hasZeroBalance: boolean) => LineGraphMapper<AssetItem> = (
+const getAssetsToDataPointsMapper: (ticker: string, hasZeroBalance: boolean) => LineGraphMapper<AssetItem> = (
 	ticker,
 	hasZeroBalance,
 ) => (items, { graphWidth, segmentSpacing }) => {
@@ -63,3 +63,5 @@ export const getAssetsToDataPointsMapper: (ticker: string, hasZeroBalance: boole
 
 	return dataPoints;
 };
+
+export { getAssetsToDataPointsMapper, getColor };

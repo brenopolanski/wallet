@@ -21,6 +21,10 @@ export const translations = {
 		EMPTY: "Your portfolio is currently empty. <bold>Create</bold> or <bold>Import</bold> a wallet to get started.",
 	},
 
+	PORTFOLIO_BREAKDOWN_DETAILS: {
+		TITLE: "Portfolio Breakdown",
+	},
+
 	WALLET_CONTROLS: {
 		CREATE: "Create",
 		EMPTY_MESSAGE: "You don't have any wallets yet.",

@@ -15,6 +15,7 @@ export const translations = {
 	APP_NAME: "Payvo Wallet",
 	APP_NAME_SHORT: "Payvo Wallet",
 	ARK: "ARK",
+	ASSET: "Asset",
 	ASSETS: "Assets",
 	ASSET_TYPE: "Asset Type",
 	AT: "at",
