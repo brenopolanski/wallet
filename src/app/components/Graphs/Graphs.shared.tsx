@@ -71,12 +71,20 @@ function useGraphTooltip<TDataPoint, TSvgElement>(
 			tooltipElement.style.left = `${event.pageX - Math.floor(tooltipElement.clientWidth / 2)}px`;
 			tooltipElement.style.top = `${targetTop - 48}px`;
 
+			tooltipElement.classList.remove("hidden");
+
 			tooltipElement.classList.remove("opacity-0");
 			tooltipElement.classList.add("opacity-100");
 		},
 		onMouseOut: () => {
 			tooltipReference.current?.classList.add("opacity-0");
 			tooltipReference.current?.classList.remove("opacity-100");
+
+			setTimeout(() => {
+				if (tooltipReference.current) {
+					tooltipReference.current?.classList.add("hidden");
+				}
+			}, 200);
 		},
 	});
 
