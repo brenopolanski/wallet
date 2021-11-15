@@ -39,9 +39,9 @@ export const formatMultiSignatureInputData = ({
 		const optionalKeys = publicKeys.filter((publicKey) => !mandatoryKeys.includes(publicKey));
 
 		return {
+			mandatoryKeys,
 			numberOfSignatures: min,
 			optionalKeys,
-			mandatoryKeys,
 		};
 	}
 
@@ -106,14 +106,14 @@ export const useMultiSignatureRegistration = () => {
 		const uuid = await wallet.transaction().signMultiSignature({
 			data: {
 				...formatMultiSignatureInputData({
+					mandatoryKeys,
 					min: +minParticipants,
 					publicKeys,
-					mandatoryKeys,
 					wallet,
 				}),
 			},
-			signatory,
 			fee: +fee,
+			signatory,
 		});
 
 		await wallet.transaction().broadcast(uuid);

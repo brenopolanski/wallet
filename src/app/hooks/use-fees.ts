@@ -1,10 +1,10 @@
 import { Contracts } from "@payvo/profiles";
 import { Coins, Services } from "@payvo/sdk";
 import { useEnvironmentContext } from "app/contexts";
+import { formatMultiSignatureInputData } from "domains/transaction/hooks/use-multisignature-registration";
 import { useCallback } from "react";
 import { TransactionFees } from "types";
 import { assertString } from "utils/assertions";
-import { formatMultiSignatureInputData } from "domains/transaction/hooks/use-multisignature-registration";
 
 interface CreateStubTransactionProperties {
 	coin: Coins.Coin;
@@ -43,10 +43,10 @@ export const useFees = (profile: Contracts.IProfile) => {
 		publicKeys.splice(1, 1, publicKey);
 
 		return formatMultiSignatureInputData({
-			wallet: senderWallet,
+			mandatoryKeys,
 			min: +minParticipants,
 			publicKeys,
-			mandatoryKeys,
+			wallet: senderWallet,
 		});
 	};
 

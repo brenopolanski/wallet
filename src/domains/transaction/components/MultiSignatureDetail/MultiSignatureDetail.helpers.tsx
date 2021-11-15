@@ -112,8 +112,8 @@ export const getMultiSignatureInfo = (transaction: DTO.ExtendedSignedTransaction
 
 	if (transaction.wallet().network().multiSignatureType() === "advanced") {
 		return {
-			publicKeys: [...mandatoryKeys, ...optionalKeys],
 			min: numberOfSignatures,
+			publicKeys: [...mandatoryKeys, ...optionalKeys],
 		};
 	}
 

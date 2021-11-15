@@ -54,7 +54,7 @@ export const RecipientList: React.VFC<RecipientListProperties> = ({
 				tooltipDisabled={tooltipDisabled}
 				variant={variant}
 				useMandatoryOption={useMandatoryOption}
-				isMandatory={mandatoryKeys && mandatoryKeys.some((publicKey) => publicKey === recipient.publicKey)}
+				isMandatory={mandatoryKeys && mandatoryKeys.includes(recipient.publicKey)}
 				onEnableMandatory={onAddMandatoryKey}
 				onDisableMandatory={onRemoveMandatoryKey}
 			/>
