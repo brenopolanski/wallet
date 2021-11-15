@@ -1,6 +1,5 @@
 import { Contracts } from "@payvo/profiles";
 import { Amount } from "app/components/Amount";
-import { Divider } from "app/components/Divider";
 import { EmptyBlock } from "app/components/EmptyBlock";
 import { LineGraph } from "app/components/Graphs/LineGraph";
 import { PortfolioBreakdownDetails } from "domains/dashboard/components/PortfolioBreakdownDetails";
@@ -52,23 +51,21 @@ export const PortfolioBreakdown: React.VFC<PortfolioBreakdownProperties> = ({
 	return (
 		<>
 			<div className="py-4 px-6 bg-theme-secondary-100 rounded-xl flex">
-				<LabelledText label={t("COMMON.YOUR_BALANCE")}>
-					{(textClassName) => <Amount className={textClassName} ticker={ticker} value={balance} />}
-				</LabelledText>
+				<div className="flex space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800">
+					<LabelledText label={t("COMMON.YOUR_BALANCE")}>
+						{(textClassName) => <Amount className={textClassName} ticker={ticker} value={balance} />}
+					</LabelledText>
 
-				<Divider size="xl" type="vertical" />
+					<LabelledText label={t("COMMON.ASSETS")}>
+						{(textClassName) => <span className={textClassName}>{assets.length}</span>}
+					</LabelledText>
 
-				<LabelledText label={t("COMMON.ASSETS")}>
-					{(textClassName) => <span className={textClassName}>{assets.length}</span>}
-				</LabelledText>
+					<LabelledText label={t("COMMON.WALLETS")}>
+						{(textClassName) => <span className={textClassName}>{walletsCount}</span>}
+					</LabelledText>
+				</div>
 
-				<Divider size="xl" type="vertical" />
-
-				<LabelledText label={t("COMMON.WALLETS")}>
-					{(textClassName) => <span className={textClassName}>{walletsCount}</span>}
-				</LabelledText>
-
-				<div className="flex-1 ml-4">
+				<div className="flex-1 ml-6">
 					<LineGraph
 						items={assets}
 						mapper={getAssetsToDataPointsMapper(ticker, hasZeroBalance)}
