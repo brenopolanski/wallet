@@ -1,4 +1,4 @@
-import { upperFirst } from "@payvo/helpers";
+import { upperFirst } from "@arkecosystem/utils";
 import { Contracts } from "@payvo/profiles";
 import { Header } from "app/components/Header";
 import { Page, Section } from "app/components/Layout";

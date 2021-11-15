@@ -1,4 +1,4 @@
-import { isEmptyObject, sortBy, uniq } from "@payvo/helpers";
+import { isEmptyObject, sortBy, uniq } from "@arkecosystem/utils";
 import { Contracts } from "@payvo/profiles";
 import { Networks } from "@payvo/sdk";
 import { useWalletAlias } from "app/hooks";

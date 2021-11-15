@@ -1,4 +1,4 @@
-import { uniq } from "@payvo/helpers";
+import { uniq } from "@arkecosystem/utils";
 import { Contracts } from "@payvo/profiles";
 import * as Sentry from "@sentry/react";
 import { Integrations } from "@sentry/tracing";

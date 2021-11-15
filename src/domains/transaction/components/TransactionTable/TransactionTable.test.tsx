@@ -1,4 +1,4 @@
-import { sortByDesc } from "@payvo/helpers";
+import { sortByDesc } from "@arkecosystem/utils";
 import { Contracts, DTO } from "@payvo/profiles";
 import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";

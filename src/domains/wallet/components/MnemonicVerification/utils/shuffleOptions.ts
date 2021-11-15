@@ -1,4 +1,4 @@
-import { shuffle, uniq } from "@payvo/helpers";
+import { shuffle, uniq } from "@arkecosystem/utils";
 
 interface Properties {
 	options: string[];

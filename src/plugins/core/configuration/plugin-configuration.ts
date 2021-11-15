@@ -1,4 +1,4 @@
-import { prettyBytes, startCase, uniq } from "@payvo/helpers";
+import { prettyBytes, startCase, uniq } from "@arkecosystem/utils";
 import { Contracts, Repositories } from "@payvo/profiles";
 import du from "du";
 import parseAuthor from "parse-author";
