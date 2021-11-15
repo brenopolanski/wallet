@@ -70,6 +70,10 @@ export const RecipientList: React.VFC<RecipientListProperties> = ({
 			ticker,
 			tooltipDisabled,
 			variant,
+			mandatoryKeys,
+			onAddMandatoryKey,
+			onRemoveMandatoryKey,
+			useMandatoryOption,
 		],
 	);
 

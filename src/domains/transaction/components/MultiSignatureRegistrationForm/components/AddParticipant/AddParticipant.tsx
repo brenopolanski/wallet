@@ -89,7 +89,7 @@ export const AddParticipant = ({
 
 	useEffect(() => {
 		onChangeMandatoryKeys?.(mandatoryKeys.slice(0, minRequiredSignatures));
-	}, [minRequiredSignatures]);
+	}, [minRequiredSignatures]); // eslint-disable-line react-hooks/exhaustive-deps
 
 	const removeParticipant = (index: number) => {
 		const remainingParticipants = [...participants];
