@@ -3,7 +3,7 @@
 exports[`Divider should render 1`] = `
 <DocumentFragment>
   <div
-    class="Divider-sc-17ehhxk-0 lgtApE border-theme-secondary-300 dark:border-theme-secondary-800"
+    class="Divider-sc-17ehhxk-0 hoeInf border-theme-secondary-300 dark:border-theme-secondary-800"
     type="horizontal"
   />
 </DocumentFragment>
@@ -12,7 +12,7 @@ exports[`Divider should render 1`] = `
 exports[`Divider should render a dashed 1`] = `
 <div>
   <div
-    class="Divider-sc-17ehhxk-0 hZpmpp border-theme-secondary-300 dark:border-theme-secondary-800"
+    class="Divider-sc-17ehhxk-0 ijjdey border-theme-secondary-300 dark:border-theme-secondary-800"
     type="horizontal"
   />
 </div>
@@ -21,7 +21,7 @@ exports[`Divider should render a dashed 1`] = `
 exports[`Divider should render horizontal type 1`] = `
 <div>
   <div
-    class="Divider-sc-17ehhxk-0 lgtApE border-theme-secondary-300 dark:border-theme-secondary-800"
+    class="Divider-sc-17ehhxk-0 hoeInf border-theme-secondary-300 dark:border-theme-secondary-800"
     type="horizontal"
   />
 </div>
@@ -30,7 +30,7 @@ exports[`Divider should render horizontal type 1`] = `
 exports[`Divider should render vertical type 1`] = `
 <div>
   <div
-    class="Divider-sc-17ehhxk-0 iLifLj border-theme-secondary-300 dark:border-theme-secondary-800"
+    class="Divider-sc-17ehhxk-0 jqFYpY border-theme-secondary-300 dark:border-theme-secondary-800"
     type="vertical"
   />
 </div>
@@ -39,7 +39,7 @@ exports[`Divider should render vertical type 1`] = `
 exports[`Divider should render vertical type and large 1`] = `
 <div>
   <div
-    class="Divider-sc-17ehhxk-0 brANhc border-theme-secondary-300 dark:border-theme-secondary-800"
+    class="Divider-sc-17ehhxk-0 bGhmfz border-theme-secondary-300 dark:border-theme-secondary-800"
     type="vertical"
   />
 </div>
@@ -48,7 +48,7 @@ exports[`Divider should render vertical type and large 1`] = `
 exports[`Divider should render vertical type and small 1`] = `
 <div>
   <div
-    class="Divider-sc-17ehhxk-0 VAkHZ border-theme-secondary-300 dark:border-theme-secondary-800"
+    class="Divider-sc-17ehhxk-0 jOzFza border-theme-secondary-300 dark:border-theme-secondary-800"
     type="vertical"
   />
 </div>

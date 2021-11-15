@@ -1,10 +1,6 @@
 import { useEffect, useRef } from "react";
 
-type UseSchedulerHook = (config: {
-	handler: () => void;
-	timeout: number;
-	autostart: boolean;
-}) => {
+type UseSchedulerHook = (config: { handler: () => void; timeout: number; autostart: boolean }) => {
 	start: () => void;
 	stop: () => void;
 };

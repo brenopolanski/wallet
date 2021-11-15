@@ -1,5 +1,5 @@
-import { Contracts } from "@payvo/profiles";
 import { Networks } from "@payvo/sdk";
+import { Contracts } from "@payvo/sdk-profiles";
 import { useLedgerScanner } from "app/contexts";
 
 export enum LedgerTabStep {

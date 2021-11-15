@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { RecipientItem } from "domains/transaction/components/RecipientList/RecipientList.contracts";
 import React from "react";
 import { Route } from "react-router-dom";

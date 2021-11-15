@@ -1,5 +1,5 @@
-import { Contracts } from "@payvo/profiles";
 import { Networks } from "@payvo/sdk";
+import { Contracts } from "@payvo/sdk-profiles";
 import { useTranslation } from "react-i18next";
 
 import { OptionsValue } from "./use-import-options";

@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts as ProfilesContracts } from "@payvo/profiles";
 import { Contracts } from "@payvo/sdk";
+import { Contracts as ProfilesContracts } from "@payvo/sdk-profiles";
 import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import * as useFeesHook from "app/hooks/use-fees";

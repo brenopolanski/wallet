@@ -13,29 +13,29 @@ exports[`should allow to input a value 1`] = `
         class="flex items-center"
       >
         <span
-          class="Switch__SwitchText-sc-161iiro-0 bBuInq"
+          class="Switch__SwitchText-sc-161iiro-0 jeOrUV"
           role="button"
         >
           Simple
         </span>
         <label
-          class="Toggle__Wrapper-sc-6s3wfu-0 emWhNO"
+          class="Toggle__Wrapper-sc-6s3wfu-0 iggSjt"
         >
           <input
             checked=""
-            class="Toggle__Input-sc-6s3wfu-1 utRNX"
+            class="Toggle__Input-sc-6s3wfu-1 WwplI"
             type="checkbox"
           />
           <div
-            class="Toggle__Handle-sc-6s3wfu-2 giHppe"
+            class="Toggle__Handle-sc-6s3wfu-2 jRjdQR"
           >
             <span
-              class="Toggle__HandleInner-sc-6s3wfu-3 gKIbRT"
+              class="Toggle__HandleInner-sc-6s3wfu-3 gNamtB"
             />
           </div>
         </label>
         <span
-          class="Switch__SwitchText-sc-161iiro-0 faOaTv"
+          class="Switch__SwitchText-sc-161iiro-0 aJKSk"
           role="button"
         >
           Advanced
@@ -46,13 +46,13 @@ exports[`should allow to input a value 1`] = `
       class="relative"
     >
       <div
-        class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
+        class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
       >
         <div
           class="relative flex flex-1 h-full"
         >
           <input
-            class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+            class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
             data-testid="InputCurrency"
             type="text"
             value="0.447"
@@ -71,12 +71,12 @@ exports[`should allow to input a value 1`] = `
                 class="flex flex-col justify-between border-l h-14 -mr-4 w-10 text-theme-secondary-700 dark:border-theme-secondary-700 border-theme-secondary-400"
               >
                 <button
-                  class="InputFeeAdvancedAddon__ArrowButtonStyled-sc-bh9n8o-0 bwAUBK"
+                  class="InputFeeAdvancedAddon__ArrowButtonStyled-sc-bh9n8o-0 iQCbqZ"
                   data-testid="InputFeeAdvanced__up"
                   type="button"
                 >
                   <div
-                    class="sc-bdnxRM AkeAK"
+                    class="sc-bdvvtL Cfvxc"
                     height="10"
                     width="10"
                   >
@@ -86,12 +86,12 @@ exports[`should allow to input a value 1`] = `
                   </div>
                 </button>
                 <button
-                  class="InputFeeAdvancedAddon__ArrowButtonStyled-sc-bh9n8o-0 gmyhdQ"
+                  class="InputFeeAdvancedAddon__ArrowButtonStyled-sc-bh9n8o-0 gAVAVP"
                   data-testid="InputFeeAdvanced__down"
                   type="button"
                 >
                   <div
-                    class="sc-bdnxRM AkeAK"
+                    class="sc-bdvvtL Cfvxc"
                     height="10"
                     width="10"
                   >
@@ -123,29 +123,29 @@ exports[`should display converted value when on live net 1`] = `
         class="flex items-center"
       >
         <span
-          class="Switch__SwitchText-sc-161iiro-0 bBuInq"
+          class="Switch__SwitchText-sc-161iiro-0 jeOrUV"
           role="button"
         >
           Simple
         </span>
         <label
-          class="Toggle__Wrapper-sc-6s3wfu-0 emWhNO"
+          class="Toggle__Wrapper-sc-6s3wfu-0 iggSjt"
         >
           <input
             checked=""
-            class="Toggle__Input-sc-6s3wfu-1 utRNX"
+            class="Toggle__Input-sc-6s3wfu-1 WwplI"
             type="checkbox"
           />
           <div
-            class="Toggle__Handle-sc-6s3wfu-2 giHppe"
+            class="Toggle__Handle-sc-6s3wfu-2 jRjdQR"
           >
             <span
-              class="Toggle__HandleInner-sc-6s3wfu-3 gKIbRT"
+              class="Toggle__HandleInner-sc-6s3wfu-3 gNamtB"
             />
           </div>
         </label>
         <span
-          class="Switch__SwitchText-sc-161iiro-0 faOaTv"
+          class="Switch__SwitchText-sc-161iiro-0 aJKSk"
           role="button"
         >
           Advanced
@@ -156,13 +156,13 @@ exports[`should display converted value when on live net 1`] = `
       class="relative"
     >
       <div
-        class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
+        class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
       >
         <div
           class="relative flex flex-1 h-full"
         >
           <input
-            class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+            class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
             data-testid="InputCurrency"
             type="text"
             value="0.3"
@@ -191,12 +191,12 @@ exports[`should display converted value when on live net 1`] = `
                 class="flex flex-col justify-between border-l h-14 -mr-4 w-10 text-theme-secondary-700 dark:border-theme-secondary-700 border-theme-secondary-400"
               >
                 <button
-                  class="InputFeeAdvancedAddon__ArrowButtonStyled-sc-bh9n8o-0 bwAUBK"
+                  class="InputFeeAdvancedAddon__ArrowButtonStyled-sc-bh9n8o-0 iQCbqZ"
                   data-testid="InputFeeAdvanced__up"
                   type="button"
                 >
                   <div
-                    class="sc-bdnxRM AkeAK"
+                    class="sc-bdvvtL Cfvxc"
                     height="10"
                     width="10"
                   >
@@ -206,12 +206,12 @@ exports[`should display converted value when on live net 1`] = `
                   </div>
                 </button>
                 <button
-                  class="InputFeeAdvancedAddon__ArrowButtonStyled-sc-bh9n8o-0 gmyhdQ"
+                  class="InputFeeAdvancedAddon__ArrowButtonStyled-sc-bh9n8o-0 gAVAVP"
                   data-testid="InputFeeAdvanced__down"
                   type="button"
                 >
                   <div
-                    class="sc-bdnxRM AkeAK"
+                    class="sc-bdvvtL Cfvxc"
                     height="10"
                     width="10"
                   >
@@ -243,28 +243,28 @@ exports[`should display converted values when on live net 1`] = `
         class="flex items-center"
       >
         <span
-          class="Switch__SwitchText-sc-161iiro-0 faOaTv"
+          class="Switch__SwitchText-sc-161iiro-0 aJKSk"
           role="button"
         >
           Simple
         </span>
         <label
-          class="Toggle__Wrapper-sc-6s3wfu-0 emWhNO"
+          class="Toggle__Wrapper-sc-6s3wfu-0 iggSjt"
         >
           <input
-            class="Toggle__Input-sc-6s3wfu-1 utRNX"
+            class="Toggle__Input-sc-6s3wfu-1 WwplI"
             type="checkbox"
           />
           <div
-            class="Toggle__Handle-sc-6s3wfu-2 giHppe"
+            class="Toggle__Handle-sc-6s3wfu-2 jRjdQR"
           >
             <span
-              class="Toggle__HandleInner-sc-6s3wfu-3 gKIbRT"
+              class="Toggle__HandleInner-sc-6s3wfu-3 gNamtB"
             />
           </div>
         </label>
         <span
-          class="Switch__SwitchText-sc-161iiro-0 bBuInq"
+          class="Switch__SwitchText-sc-161iiro-0 jeOrUV"
           role="button"
         >
           Advanced
@@ -279,7 +279,7 @@ exports[`should display converted values when on live net 1`] = `
       <button
         aria-checked="false"
         aria-label="0.006"
-        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ivLOIB"
+        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -307,7 +307,7 @@ exports[`should display converted values when on live net 1`] = `
       <button
         aria-checked="true"
         aria-label="0.456"
-        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ivLOIB"
+        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -335,7 +335,7 @@ exports[`should display converted values when on live net 1`] = `
       <button
         aria-checked="false"
         aria-label="0.5"
-        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ivLOIB"
+        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -378,28 +378,28 @@ exports[`should keep different values for simple and advanced view types 1`] = `
         class="flex items-center"
       >
         <span
-          class="Switch__SwitchText-sc-161iiro-0 bBuInq"
+          class="Switch__SwitchText-sc-161iiro-0 jeOrUV"
           role="button"
         >
           Simple
         </span>
         <label
-          class="Toggle__Wrapper-sc-6s3wfu-0 emWhNO"
+          class="Toggle__Wrapper-sc-6s3wfu-0 iggSjt"
         >
           <input
-            class="Toggle__Input-sc-6s3wfu-1 utRNX"
+            class="Toggle__Input-sc-6s3wfu-1 WwplI"
             type="checkbox"
           />
           <div
-            class="Toggle__Handle-sc-6s3wfu-2 giHppe"
+            class="Toggle__Handle-sc-6s3wfu-2 jRjdQR"
           >
             <span
-              class="Toggle__HandleInner-sc-6s3wfu-3 gKIbRT"
+              class="Toggle__HandleInner-sc-6s3wfu-3 gNamtB"
             />
           </div>
         </label>
         <span
-          class="Switch__SwitchText-sc-161iiro-0 faOaTv"
+          class="Switch__SwitchText-sc-161iiro-0 aJKSk"
           role="button"
         >
           Advanced
@@ -410,13 +410,13 @@ exports[`should keep different values for simple and advanced view types 1`] = `
       class="relative"
     >
       <div
-        class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
+        class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
       >
         <div
           class="relative flex flex-1 h-full"
         >
           <input
-            class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+            class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
             data-testid="InputCurrency"
             type="text"
             value="0.3"
@@ -435,12 +435,12 @@ exports[`should keep different values for simple and advanced view types 1`] = `
                 class="flex flex-col justify-between border-l h-14 -mr-4 w-10 text-theme-secondary-700 dark:border-theme-secondary-700 border-theme-secondary-400"
               >
                 <button
-                  class="InputFeeAdvancedAddon__ArrowButtonStyled-sc-bh9n8o-0 bwAUBK"
+                  class="InputFeeAdvancedAddon__ArrowButtonStyled-sc-bh9n8o-0 iQCbqZ"
                   data-testid="InputFeeAdvanced__up"
                   type="button"
                 >
                   <div
-                    class="sc-bdnxRM AkeAK"
+                    class="sc-bdvvtL Cfvxc"
                     height="10"
                     width="10"
                   >
@@ -450,12 +450,12 @@ exports[`should keep different values for simple and advanced view types 1`] = `
                   </div>
                 </button>
                 <button
-                  class="InputFeeAdvancedAddon__ArrowButtonStyled-sc-bh9n8o-0 gmyhdQ"
+                  class="InputFeeAdvancedAddon__ArrowButtonStyled-sc-bh9n8o-0 gAVAVP"
                   data-testid="InputFeeAdvanced__down"
                   type="button"
                 >
                   <div
-                    class="sc-bdnxRM AkeAK"
+                    class="sc-bdvvtL Cfvxc"
                     height="10"
                     width="10"
                   >
@@ -487,28 +487,28 @@ exports[`should keep different values for simple and advanced view types 2`] = `
         class="flex items-center"
       >
         <span
-          class="Switch__SwitchText-sc-161iiro-0 faOaTv"
+          class="Switch__SwitchText-sc-161iiro-0 aJKSk"
           role="button"
         >
           Simple
         </span>
         <label
-          class="Toggle__Wrapper-sc-6s3wfu-0 emWhNO"
+          class="Toggle__Wrapper-sc-6s3wfu-0 iggSjt"
         >
           <input
-            class="Toggle__Input-sc-6s3wfu-1 utRNX"
+            class="Toggle__Input-sc-6s3wfu-1 WwplI"
             type="checkbox"
           />
           <div
-            class="Toggle__Handle-sc-6s3wfu-2 giHppe"
+            class="Toggle__Handle-sc-6s3wfu-2 jRjdQR"
           >
             <span
-              class="Toggle__HandleInner-sc-6s3wfu-3 gKIbRT"
+              class="Toggle__HandleInner-sc-6s3wfu-3 gNamtB"
             />
           </div>
         </label>
         <span
-          class="Switch__SwitchText-sc-161iiro-0 bBuInq"
+          class="Switch__SwitchText-sc-161iiro-0 jeOrUV"
           role="button"
         >
           Advanced
@@ -523,7 +523,7 @@ exports[`should keep different values for simple and advanced view types 2`] = `
       <button
         aria-checked="false"
         aria-label="0.006"
-        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ivLOIB"
+        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -545,7 +545,7 @@ exports[`should keep different values for simple and advanced view types 2`] = `
       <button
         aria-checked="true"
         aria-label="0.456"
-        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ivLOIB"
+        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -567,7 +567,7 @@ exports[`should keep different values for simple and advanced view types 2`] = `
       <button
         aria-checked="false"
         aria-label="0.5"
-        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ivLOIB"
+        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -604,28 +604,28 @@ exports[`should render 1`] = `
         class="flex items-center"
       >
         <span
-          class="Switch__SwitchText-sc-161iiro-0 faOaTv"
+          class="Switch__SwitchText-sc-161iiro-0 aJKSk"
           role="button"
         >
           Simple
         </span>
         <label
-          class="Toggle__Wrapper-sc-6s3wfu-0 emWhNO"
+          class="Toggle__Wrapper-sc-6s3wfu-0 iggSjt"
         >
           <input
-            class="Toggle__Input-sc-6s3wfu-1 utRNX"
+            class="Toggle__Input-sc-6s3wfu-1 WwplI"
             type="checkbox"
           />
           <div
-            class="Toggle__Handle-sc-6s3wfu-2 giHppe"
+            class="Toggle__Handle-sc-6s3wfu-2 jRjdQR"
           >
             <span
-              class="Toggle__HandleInner-sc-6s3wfu-3 gKIbRT"
+              class="Toggle__HandleInner-sc-6s3wfu-3 gNamtB"
             />
           </div>
         </label>
         <span
-          class="Switch__SwitchText-sc-161iiro-0 bBuInq"
+          class="Switch__SwitchText-sc-161iiro-0 jeOrUV"
           role="button"
         >
           Advanced
@@ -640,7 +640,7 @@ exports[`should render 1`] = `
       <button
         aria-checked="false"
         aria-label="0.006"
-        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ivLOIB"
+        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -662,7 +662,7 @@ exports[`should render 1`] = `
       <button
         aria-checked="true"
         aria-label="0.456"
-        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ivLOIB"
+        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -684,7 +684,7 @@ exports[`should render 1`] = `
       <button
         aria-checked="false"
         aria-label="0.5"
-        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ivLOIB"
+        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -714,14 +714,14 @@ exports[`should render disabled 1`] = `
     class="relative"
   >
     <div
-      class="Input__InputWrapperStyled-sc-1i8sd1r-0 iqZIWh"
+      class="Input__InputWrapperStyled-sc-1i8sd1r-0 ktoJbG"
       disabled=""
     >
       <div
         class="relative flex flex-1 h-full"
       >
         <input
-          class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full text-theme-secondary-text"
+          class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full text-theme-secondary-text"
           data-testid="InputCurrency"
           disabled=""
           type="text"
@@ -741,13 +741,13 @@ exports[`should render disabled 1`] = `
               class="flex flex-col justify-between border-l h-14 -mr-4 w-10 text-theme-secondary-700 dark:border-theme-secondary-700 border-theme-secondary-300"
             >
               <button
-                class="InputFeeAdvancedAddon__ArrowButtonStyled-sc-bh9n8o-0 bwAUBK"
+                class="InputFeeAdvancedAddon__ArrowButtonStyled-sc-bh9n8o-0 iQCbqZ"
                 data-testid="InputFeeAdvanced__up"
                 disabled=""
                 type="button"
               >
                 <div
-                  class="sc-bdnxRM AkeAK"
+                  class="sc-bdvvtL Cfvxc"
                   height="10"
                   width="10"
                 >
@@ -757,13 +757,13 @@ exports[`should render disabled 1`] = `
                 </div>
               </button>
               <button
-                class="InputFeeAdvancedAddon__ArrowButtonStyled-sc-bh9n8o-0 gmyhdQ"
+                class="InputFeeAdvancedAddon__ArrowButtonStyled-sc-bh9n8o-0 gAVAVP"
                 data-testid="InputFeeAdvanced__down"
                 disabled=""
                 type="button"
               >
                 <div
-                  class="sc-bdnxRM AkeAK"
+                  class="sc-bdvvtL Cfvxc"
                   height="10"
                   width="10"
                 >
@@ -794,28 +794,28 @@ exports[`should update value when clicking button Average 1`] = `
         class="flex items-center"
       >
         <span
-          class="Switch__SwitchText-sc-161iiro-0 faOaTv"
+          class="Switch__SwitchText-sc-161iiro-0 aJKSk"
           role="button"
         >
           Simple
         </span>
         <label
-          class="Toggle__Wrapper-sc-6s3wfu-0 emWhNO"
+          class="Toggle__Wrapper-sc-6s3wfu-0 iggSjt"
         >
           <input
-            class="Toggle__Input-sc-6s3wfu-1 utRNX"
+            class="Toggle__Input-sc-6s3wfu-1 WwplI"
             type="checkbox"
           />
           <div
-            class="Toggle__Handle-sc-6s3wfu-2 giHppe"
+            class="Toggle__Handle-sc-6s3wfu-2 jRjdQR"
           >
             <span
-              class="Toggle__HandleInner-sc-6s3wfu-3 gKIbRT"
+              class="Toggle__HandleInner-sc-6s3wfu-3 gNamtB"
             />
           </div>
         </label>
         <span
-          class="Switch__SwitchText-sc-161iiro-0 bBuInq"
+          class="Switch__SwitchText-sc-161iiro-0 jeOrUV"
           role="button"
         >
           Advanced
@@ -830,7 +830,7 @@ exports[`should update value when clicking button Average 1`] = `
       <button
         aria-checked="false"
         aria-label="0.006"
-        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ivLOIB"
+        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -852,7 +852,7 @@ exports[`should update value when clicking button Average 1`] = `
       <button
         aria-checked="true"
         aria-label="0.456"
-        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ivLOIB"
+        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -874,7 +874,7 @@ exports[`should update value when clicking button Average 1`] = `
       <button
         aria-checked="false"
         aria-label="0.5"
-        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ivLOIB"
+        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -911,28 +911,28 @@ exports[`should update value when clicking button Fast 1`] = `
         class="flex items-center"
       >
         <span
-          class="Switch__SwitchText-sc-161iiro-0 faOaTv"
+          class="Switch__SwitchText-sc-161iiro-0 aJKSk"
           role="button"
         >
           Simple
         </span>
         <label
-          class="Toggle__Wrapper-sc-6s3wfu-0 emWhNO"
+          class="Toggle__Wrapper-sc-6s3wfu-0 iggSjt"
         >
           <input
-            class="Toggle__Input-sc-6s3wfu-1 utRNX"
+            class="Toggle__Input-sc-6s3wfu-1 WwplI"
             type="checkbox"
           />
           <div
-            class="Toggle__Handle-sc-6s3wfu-2 giHppe"
+            class="Toggle__Handle-sc-6s3wfu-2 jRjdQR"
           >
             <span
-              class="Toggle__HandleInner-sc-6s3wfu-3 gKIbRT"
+              class="Toggle__HandleInner-sc-6s3wfu-3 gNamtB"
             />
           </div>
         </label>
         <span
-          class="Switch__SwitchText-sc-161iiro-0 bBuInq"
+          class="Switch__SwitchText-sc-161iiro-0 jeOrUV"
           role="button"
         >
           Advanced
@@ -947,7 +947,7 @@ exports[`should update value when clicking button Fast 1`] = `
       <button
         aria-checked="false"
         aria-label="0.006"
-        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ivLOIB"
+        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -969,7 +969,7 @@ exports[`should update value when clicking button Fast 1`] = `
       <button
         aria-checked="false"
         aria-label="0.456"
-        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ivLOIB"
+        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -991,7 +991,7 @@ exports[`should update value when clicking button Fast 1`] = `
       <button
         aria-checked="true"
         aria-label="0.5"
-        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ivLOIB"
+        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -1028,28 +1028,28 @@ exports[`should update value when clicking button Slow 1`] = `
         class="flex items-center"
       >
         <span
-          class="Switch__SwitchText-sc-161iiro-0 faOaTv"
+          class="Switch__SwitchText-sc-161iiro-0 aJKSk"
           role="button"
         >
           Simple
         </span>
         <label
-          class="Toggle__Wrapper-sc-6s3wfu-0 emWhNO"
+          class="Toggle__Wrapper-sc-6s3wfu-0 iggSjt"
         >
           <input
-            class="Toggle__Input-sc-6s3wfu-1 utRNX"
+            class="Toggle__Input-sc-6s3wfu-1 WwplI"
             type="checkbox"
           />
           <div
-            class="Toggle__Handle-sc-6s3wfu-2 giHppe"
+            class="Toggle__Handle-sc-6s3wfu-2 jRjdQR"
           >
             <span
-              class="Toggle__HandleInner-sc-6s3wfu-3 gKIbRT"
+              class="Toggle__HandleInner-sc-6s3wfu-3 gNamtB"
             />
           </div>
         </label>
         <span
-          class="Switch__SwitchText-sc-161iiro-0 bBuInq"
+          class="Switch__SwitchText-sc-161iiro-0 jeOrUV"
           role="button"
         >
           Advanced
@@ -1064,7 +1064,7 @@ exports[`should update value when clicking button Slow 1`] = `
       <button
         aria-checked="true"
         aria-label="0.006"
-        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ivLOIB"
+        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -1086,7 +1086,7 @@ exports[`should update value when clicking button Slow 1`] = `
       <button
         aria-checked="false"
         aria-label="0.456"
-        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ivLOIB"
+        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -1108,7 +1108,7 @@ exports[`should update value when clicking button Slow 1`] = `
       <button
         aria-checked="false"
         aria-label="0.5"
-        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ivLOIB"
+        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"

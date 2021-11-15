@@ -27,8 +27,7 @@ export const translations = {
 		REFUND_WALLET: "Refund Wallet",
 		SUPPORT_INFO:
 			"If you have any question about your exchange, please contact {{exchange}} support team via email at <linkEmail>{{email}}</linkEmail>",
-		TERMS:
-			"I've read and agree to the {{exchange}} <linkTerms>{{terms}}</linkTerms> and <linkPrivacyPolicy>{{privacy}}</linkPrivacyPolicy>",
+		TERMS: "I've read and agree to the {{exchange}} <linkTerms>{{terms}}</linkTerms> and <linkPrivacyPolicy>{{privacy}}</linkPrivacyPolicy>",
 		TO_CURRENCY: "To Currency",
 		TRANSACTION_COMPLETE: "Transaction is Complete!",
 		YOUR_ADDRESS: "Your {{currency}} Address",

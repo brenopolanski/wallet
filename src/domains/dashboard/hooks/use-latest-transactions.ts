@@ -1,5 +1,5 @@
-import { sortByDesc } from "@arkecosystem/utils";
-import { Contracts, DTO } from "@payvo/profiles";
+import { sortByDesc } from "@payvo/sdk-helpers";
+import { Contracts, DTO } from "@payvo/sdk-profiles";
 import { useProfileTransactions } from "domains/transaction/hooks/use-profile-transactions";
 import { useEffect, useState } from "react";
 
@@ -24,7 +24,11 @@ export const useLatestTransactions = ({ profile, profileIsSyncing }: LatestTrans
 
 	const { selectedWallets } = useWalletConfig({ profile });
 
-	const { updateFilters, transactions, isLoadingTransactions: isLoading } = useProfileTransactions({
+	const {
+		updateFilters,
+		transactions,
+		isLoadingTransactions: isLoading,
+	} = useProfileTransactions({
 		limit,
 		profile,
 		wallets: selectedWallets,

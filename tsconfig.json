@@ -16,6 +16,7 @@
 		"strict": true,
 		"target": "es2019",
 		"useUnknownInCatchVariables": false,
+		"noImplicitAny": false,
 		"noFallthroughCasesInSwitch": true
 	},
 	"include": ["src", "public", "custom.d.ts", "global.d.ts"]

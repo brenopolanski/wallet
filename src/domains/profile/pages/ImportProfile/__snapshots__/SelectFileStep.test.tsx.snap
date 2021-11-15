@@ -34,7 +34,7 @@ exports[`Import Profile Select File Step should change back from json to dwe 1`]
         data-testid="SelectFile__drop-zone"
       >
         <div
-          class="sc-bdnxRM cTrAIK"
+          class="sc-bdvvtL kCgesw"
           height="40"
           width="40"
         >
@@ -78,7 +78,7 @@ exports[`Import Profile Select File Step should change back from json to dwe 1`]
           class="h-11 w-11 flex flex-shrink-0 items-center justify-center rounded-lg text-white bg-theme-warning-600"
         >
           <div
-            class="sc-bdnxRM NjstW"
+            class="sc-bdvvtL qGXhc"
             height="20"
             width="20"
           >
@@ -102,7 +102,7 @@ exports[`Import Profile Select File Step should change back from json to dwe 1`]
       class="flex justify-end mt-8 space-x-3"
     >
       <button
-        class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
+        class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
         data-testid="SelectFileStep__back"
         type="button"
       >
@@ -151,7 +151,7 @@ exports[`Import Profile Select File Step should handle back event 1`] = `
         data-testid="SelectFile__drop-zone"
       >
         <div
-          class="sc-bdnxRM cTrAIK"
+          class="sc-bdvvtL kCgesw"
           height="40"
           width="40"
         >
@@ -206,7 +206,7 @@ exports[`Import Profile Select File Step should handle back event 1`] = `
       class="flex justify-end mt-8 space-x-3"
     >
       <button
-        class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
+        class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
         data-testid="SelectFileStep__back"
         type="button"
       >
@@ -255,7 +255,7 @@ exports[`Import Profile Select File Step should render file selection for dwe an
         data-testid="SelectFile__drop-zone"
       >
         <div
-          class="sc-bdnxRM cTrAIK"
+          class="sc-bdvvtL kCgesw"
           height="40"
           width="40"
         >
@@ -310,7 +310,7 @@ exports[`Import Profile Select File Step should render file selection for dwe an
       class="flex justify-end mt-8 space-x-3"
     >
       <button
-        class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
+        class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
         data-testid="SelectFileStep__back"
         type="button"
       >
@@ -359,7 +359,7 @@ exports[`Import Profile Select File Step should render with dwe fileFormat selec
         data-testid="SelectFile__drop-zone"
       >
         <div
-          class="sc-bdnxRM cTrAIK"
+          class="sc-bdvvtL kCgesw"
           height="40"
           width="40"
         >
@@ -414,7 +414,7 @@ exports[`Import Profile Select File Step should render with dwe fileFormat selec
       class="flex justify-end mt-8 space-x-3"
     >
       <button
-        class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
+        class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
         data-testid="SelectFileStep__back"
         type="button"
       >
@@ -463,7 +463,7 @@ exports[`Import Profile Select File Step should render with json fileFormat sele
         data-testid="SelectFile__drop-zone"
       >
         <div
-          class="sc-bdnxRM cTrAIK"
+          class="sc-bdvvtL kCgesw"
           height="40"
           width="40"
         >
@@ -507,7 +507,7 @@ exports[`Import Profile Select File Step should render with json fileFormat sele
           class="h-11 w-11 flex flex-shrink-0 items-center justify-center rounded-lg text-white bg-theme-warning-600"
         >
           <div
-            class="sc-bdnxRM NjstW"
+            class="sc-bdvvtL qGXhc"
             height="20"
             width="20"
           >
@@ -531,7 +531,7 @@ exports[`Import Profile Select File Step should render with json fileFormat sele
       class="flex justify-end mt-8 space-x-3"
     >
       <button
-        class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
+        class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
         data-testid="SelectFileStep__back"
         type="button"
       >

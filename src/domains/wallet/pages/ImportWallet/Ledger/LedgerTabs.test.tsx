@@ -1,5 +1,5 @@
 import Transport from "@ledgerhq/hw-transport";
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { LedgerProvider, minVersionList } from "app/contexts";
 import * as scanner from "app/contexts/Ledger/hooks/scanner.state";

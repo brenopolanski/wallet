@@ -1,4 +1,4 @@
-import { DateTime } from "@payvo/intl";
+import { DateTime } from "@payvo/sdk-intl";
 import React from "react";
 import * as utils from "utils/electron-utils";
 import { render } from "utils/testing-library";

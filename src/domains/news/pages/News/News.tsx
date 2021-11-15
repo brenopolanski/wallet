@@ -1,5 +1,5 @@
-import { Blockfolio as FTX, BlockfolioResponse as FTXResponse, BlockfolioSignal as FTXSignal } from "@payvo/news";
-import { Contracts } from "@payvo/profiles";
+import { Blockfolio as FTX, BlockfolioResponse as FTXResponse, BlockfolioSignal as FTXSignal } from "@payvo/sdk-news";
+import { Contracts } from "@payvo/sdk-profiles";
 import { SvgCollection } from "app/assets/svg";
 import { EmptyResults } from "app/components/EmptyResults";
 import { Header } from "app/components/Header";

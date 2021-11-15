@@ -1,4 +1,4 @@
-import { chunk } from "@arkecosystem/utils";
+import { chunk } from "@payvo/sdk-helpers";
 import { EmptyBlock } from "app/components/EmptyBlock";
 import { Pagination } from "app/components/Pagination";
 import { Table } from "app/components/Table";

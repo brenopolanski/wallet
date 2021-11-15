@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import * as Sentry from "@sentry/react";
 import { LedgerProvider } from "app/contexts";
 import React from "react";

@@ -1,8 +1,8 @@
-import { sortBy, uniqBy } from "@arkecosystem/utils";
-import { Contracts } from "@payvo/profiles";
+import { sortBy, uniqBy } from "@payvo/sdk-helpers";
+import { Contracts } from "@payvo/sdk-profiles";
 import { useEnvironmentContext } from "app/contexts";
 import { httpClient, toasts } from "app/services";
-import { ipcRenderer } from "electron";
+import electron from "electron";
 import { PluginController, PluginManager } from "plugins/core";
 import { PluginConfigurationData } from "plugins/core/configuration";
 import { PluginLoaderFileSystem } from "plugins/loader/fs";
@@ -250,7 +250,8 @@ const useManager = (services: PluginService[], manager: PluginManager) => {
 		[pluginManager, pluginPackages],
 	);
 
-	const githubRepositoryRegex = /https?:\/\/(?:www\.)?github\.com\/([\w.-]+)\/([\dA-z-]+)(?:\/?(tree)\/([\dA-z-]+)\/((?:\/?[\dA-z-]+)+))?\/?$/;
+	const githubRepositoryRegex =
+		/https?:\/\/(?:www\.)?github\.com\/([\w.-]+)\/([\dA-z-]+)(?:\/?(tree)\/([\dA-z-]+)\/((?:\/?[\dA-z-]+)+))?\/?$/;
 
 	const isRootRepositoryUrl = useCallback(
 		(url: string) => {
@@ -299,7 +300,7 @@ const useManager = (services: PluginService[], manager: PluginManager) => {
 				savedPath: string;
 				subDirectory?: string;
 			} = {
-				savedPath: await ipcRenderer.invoke("plugin:download", { name: plugin.id, url }),
+				savedPath: await electron.ipcRenderer.invoke("plugin:download", { name: plugin.id, url }),
 			};
 
 			if (subDirectory) {
@@ -313,7 +314,12 @@ const useManager = (services: PluginService[], manager: PluginManager) => {
 
 	const installPlugin = useCallback(
 		async (savedPath, name, profileId, subDirectory = undefined) => {
-			const pluginPath = await ipcRenderer.invoke("plugin:install", { name, profileId, savedPath, subDirectory });
+			const pluginPath = await electron.ipcRenderer.invoke("plugin:install", {
+				name,
+				profileId,
+				savedPath,
+				subDirectory,
+			});
 
 			await loadPlugin(pluginPath);
 
@@ -379,7 +385,7 @@ const useManager = (services: PluginService[], manager: PluginManager) => {
 				setUpdatingStats((previous) => ({ ...previous, [value.name]: value }));
 			};
 
-			ipcRenderer.on("plugin:download-progress", listener);
+			electron.ipcRenderer.on("plugin:download-progress", listener);
 
 			setUpdatingStats((previous) => ({ ...previous, [pluginData.id]: { percent: 0 } }));
 
@@ -396,7 +402,7 @@ const useManager = (services: PluginService[], manager: PluginManager) => {
 			} catch {
 				setUpdatingStats((previous) => ({ ...previous, [pluginData.id]: { failed: true } }));
 			} finally {
-				ipcRenderer.removeListener("plugin:download-progress", listener);
+				electron.ipcRenderer.removeListener("plugin:download-progress", listener);
 			}
 		},
 		[downloadPlugin, installPlugin],

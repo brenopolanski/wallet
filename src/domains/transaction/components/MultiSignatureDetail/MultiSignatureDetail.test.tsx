@@ -1,5 +1,5 @@
-import { Contracts, DTO } from "@payvo/profiles";
 import { Signatories } from "@payvo/sdk";
+import { Contracts, DTO } from "@payvo/sdk-profiles";
 import { LedgerProvider, minVersionList } from "app/contexts";
 import React from "react";
 import { Route } from "react-router-dom";

@@ -3,13 +3,13 @@
 exports[`VoteList should render 1`] = `
 <DocumentFragment>
   <div
-    class="VoteList__ListWrapper-sc-1nnybs4-0 glbdNa"
+    class="VoteList__ListWrapper-sc-1nnybs4-0 gUTXGV"
   >
     <div
       class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
-        class="Avatar__AvatarWrapper-sc-18vw8a4-0 fuPYca flex-shrink-0"
+        class="Avatar__AvatarWrapper-sc-18vw8a4-0 SfPfF flex-shrink-0"
         data-testid="Avatar"
       >
         <div
@@ -52,7 +52,7 @@ exports[`VoteList should render 1`] = `
       class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
-        class="Avatar__AvatarWrapper-sc-18vw8a4-0 fuPYca flex-shrink-0"
+        class="Avatar__AvatarWrapper-sc-18vw8a4-0 SfPfF flex-shrink-0"
         data-testid="Avatar"
       >
         <div
@@ -95,7 +95,7 @@ exports[`VoteList should render 1`] = `
       class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
-        class="Avatar__AvatarWrapper-sc-18vw8a4-0 fuPYca flex-shrink-0"
+        class="Avatar__AvatarWrapper-sc-18vw8a4-0 SfPfF flex-shrink-0"
         data-testid="Avatar"
       >
         <div
@@ -141,13 +141,13 @@ exports[`VoteList should render 1`] = `
 exports[`VoteList should render vote amount 1`] = `
 <DocumentFragment>
   <div
-    class="VoteList__ListWrapper-sc-1nnybs4-0 glbdNa"
+    class="VoteList__ListWrapper-sc-1nnybs4-0 gUTXGV"
   >
     <div
       class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
-        class="Avatar__AvatarWrapper-sc-18vw8a4-0 fuPYca flex-shrink-0"
+        class="Avatar__AvatarWrapper-sc-18vw8a4-0 SfPfF flex-shrink-0"
         data-testid="Avatar"
       >
         <div
@@ -200,7 +200,7 @@ exports[`VoteList should render vote amount 1`] = `
       class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
-        class="Avatar__AvatarWrapper-sc-18vw8a4-0 fuPYca flex-shrink-0"
+        class="Avatar__AvatarWrapper-sc-18vw8a4-0 SfPfF flex-shrink-0"
         data-testid="Avatar"
       >
         <div
@@ -253,7 +253,7 @@ exports[`VoteList should render vote amount 1`] = `
       class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
-        class="Avatar__AvatarWrapper-sc-18vw8a4-0 fuPYca flex-shrink-0"
+        class="Avatar__AvatarWrapper-sc-18vw8a4-0 SfPfF flex-shrink-0"
         data-testid="Avatar"
       >
         <div

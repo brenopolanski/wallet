@@ -3,7 +3,7 @@
 exports[`TransactionExplorerLink should render a transaction link 1`] = `
 <div>
   <div
-    class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 kQeQRD no-ligatures"
+    class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 GJFVE no-ligatures"
     data-testid="TransactionDetail"
   >
     <div
@@ -24,7 +24,7 @@ exports[`TransactionExplorerLink should render a transaction link 1`] = `
             class="overflow-hidden"
           >
             <a
-              class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+              class="Link__AnchorStyled-sc-ec014t-0 eeKUfa group ring-focus"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
               href="#"
@@ -32,7 +32,7 @@ exports[`TransactionExplorerLink should render a transaction link 1`] = `
               to="transaction-link"
             >
               <span
-                class="Link__Content-sc-ec014t-1 hUiuRR"
+                class="Link__Content-sc-ec014t-1 jGLnf"
               >
                 <span
                   class="inline-flex overflow-hidden"
@@ -41,7 +41,7 @@ exports[`TransactionExplorerLink should render a transaction link 1`] = `
                 </span>
               </span>
               <div
-                class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block text-sm"
+                class="sc-bdvvtL fCrhkg flex-shrink-0 duration-200 inline-block text-sm"
                 data-testid="Link__external"
                 height="16"
                 width="16"
@@ -62,7 +62,7 @@ exports[`TransactionExplorerLink should render a transaction link 1`] = `
               type="button"
             >
               <div
-                class="sc-bdnxRM AFVmm"
+                class="sc-bdvvtL fCrhkg"
                 height="16"
                 width="16"
               >

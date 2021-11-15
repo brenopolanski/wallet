@@ -54,9 +54,10 @@ export const NewsOptions = ({ selectedCategories, selectedCoins, onSubmit }: New
 		return Object.values(coins);
 	});
 
-	const showSelectAllCategories = useMemo(() => categories.some((option: Option) => !option.isSelected), [
-		categories,
-	]);
+	const showSelectAllCategories = useMemo(
+		() => categories.some((option: Option) => !option.isSelected),
+		[categories],
+	);
 
 	const handleSelectCategory = (name: string) => {
 		const selected = categories.filter((category: Option) => category.isSelected);

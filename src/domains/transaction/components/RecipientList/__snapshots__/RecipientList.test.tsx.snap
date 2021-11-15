@@ -3,10 +3,10 @@
 exports[`RecipientList should conditionally disable remove button 1`] = `
 <div>
   <div
-    class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 bCfwoA"
+    class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 hSCHjT"
   >
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 fDAVsO -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jHfvAR -mt-3"
       role="table"
     >
       <table
@@ -73,7 +73,7 @@ exports[`RecipientList should conditionally disable remove button 1`] = `
               class="flex-none py-6"
             >
               <div
-                class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
+                class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -126,7 +126,7 @@ exports[`RecipientList should conditionally disable remove button 1`] = `
                 class="inline-block"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 dQCpEO"
                   data-testid="recipient-list__remove-recipient"
                   disabled=""
                   type="button"
@@ -138,7 +138,7 @@ exports[`RecipientList should conditionally disable remove button 1`] = `
                       class="py-1"
                     >
                       <div
-                        class="sc-bdnxRM AFVmm"
+                        class="sc-bdvvtL fCrhkg"
                         height="16"
                         width="16"
                       >
@@ -160,7 +160,7 @@ exports[`RecipientList should conditionally disable remove button 1`] = `
               class="flex-none py-6"
             >
               <div
-                class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
+                class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -213,7 +213,7 @@ exports[`RecipientList should conditionally disable remove button 1`] = `
                 class="inline-block"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 bAsnxQ"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 dhaLpP"
                   data-testid="recipient-list__remove-recipient"
                   type="button"
                 >
@@ -224,7 +224,7 @@ exports[`RecipientList should conditionally disable remove button 1`] = `
                       class="py-1"
                     >
                       <div
-                        class="sc-bdnxRM AFVmm"
+                        class="sc-bdvvtL fCrhkg"
                         height="16"
                         width="16"
                       >
@@ -246,7 +246,7 @@ exports[`RecipientList should conditionally disable remove button 1`] = `
               class="flex-none py-6"
             >
               <div
-                class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
+                class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -299,7 +299,7 @@ exports[`RecipientList should conditionally disable remove button 1`] = `
                 class="inline-block"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 bAsnxQ"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 dhaLpP"
                   data-testid="recipient-list__remove-recipient"
                   type="button"
                 >
@@ -310,7 +310,7 @@ exports[`RecipientList should conditionally disable remove button 1`] = `
                       class="py-1"
                     >
                       <div
-                        class="sc-bdnxRM AFVmm"
+                        class="sc-bdvvtL fCrhkg"
                         height="16"
                         width="16"
                       >
@@ -332,7 +332,7 @@ exports[`RecipientList should conditionally disable remove button 1`] = `
               class="flex-none py-6"
             >
               <div
-                class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
+                class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -374,7 +374,7 @@ exports[`RecipientList should conditionally disable remove button 1`] = `
                 class="inline-block"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 bAsnxQ"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 dhaLpP"
                   data-testid="recipient-list__remove-recipient"
                   type="button"
                 >
@@ -385,7 +385,7 @@ exports[`RecipientList should conditionally disable remove button 1`] = `
                       class="py-1"
                     >
                       <div
-                        class="sc-bdnxRM AFVmm"
+                        class="sc-bdvvtL fCrhkg"
                         height="16"
                         width="16"
                       >
@@ -409,10 +409,10 @@ exports[`RecipientList should conditionally disable remove button 1`] = `
 exports[`RecipientList should render condensed variant 1`] = `
 <div>
   <div
-    class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 bCfwoA"
+    class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 hSCHjT"
   >
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 fDAVsO -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jHfvAR -mt-3"
       role="table"
     >
       <table
@@ -477,7 +477,7 @@ exports[`RecipientList should render condensed variant 1`] = `
           >
             <td>
               <div
-                class="Avatar__AvatarWrapper-sc-18vw8a4-0 fuPYca flex-shrink-0"
+                class="Avatar__AvatarWrapper-sc-18vw8a4-0 SfPfF flex-shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -523,7 +523,7 @@ exports[`RecipientList should render condensed variant 1`] = `
           >
             <td>
               <div
-                class="Avatar__AvatarWrapper-sc-18vw8a4-0 fuPYca flex-shrink-0"
+                class="Avatar__AvatarWrapper-sc-18vw8a4-0 SfPfF flex-shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -569,7 +569,7 @@ exports[`RecipientList should render condensed variant 1`] = `
           >
             <td>
               <div
-                class="Avatar__AvatarWrapper-sc-18vw8a4-0 fuPYca flex-shrink-0"
+                class="Avatar__AvatarWrapper-sc-18vw8a4-0 SfPfF flex-shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -615,7 +615,7 @@ exports[`RecipientList should render condensed variant 1`] = `
           >
             <td>
               <div
-                class="Avatar__AvatarWrapper-sc-18vw8a4-0 fuPYca flex-shrink-0"
+                class="Avatar__AvatarWrapper-sc-18vw8a4-0 SfPfF flex-shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -654,10 +654,10 @@ exports[`RecipientList should render condensed variant 1`] = `
 exports[`RecipientList should render editable 1`] = `
 <div>
   <div
-    class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 bCfwoA"
+    class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 hSCHjT"
   >
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 fDAVsO -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jHfvAR -mt-3"
       role="table"
     >
       <table
@@ -724,7 +724,7 @@ exports[`RecipientList should render editable 1`] = `
               class="flex-none py-6"
             >
               <div
-                class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
+                class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -777,7 +777,7 @@ exports[`RecipientList should render editable 1`] = `
                 class="inline-block"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 bAsnxQ"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 dhaLpP"
                   data-testid="recipient-list__remove-recipient"
                   type="button"
                 >
@@ -788,7 +788,7 @@ exports[`RecipientList should render editable 1`] = `
                       class="py-1"
                     >
                       <div
-                        class="sc-bdnxRM AFVmm"
+                        class="sc-bdvvtL fCrhkg"
                         height="16"
                         width="16"
                       >
@@ -810,7 +810,7 @@ exports[`RecipientList should render editable 1`] = `
               class="flex-none py-6"
             >
               <div
-                class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
+                class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -863,7 +863,7 @@ exports[`RecipientList should render editable 1`] = `
                 class="inline-block"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 bAsnxQ"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 dhaLpP"
                   data-testid="recipient-list__remove-recipient"
                   type="button"
                 >
@@ -874,7 +874,7 @@ exports[`RecipientList should render editable 1`] = `
                       class="py-1"
                     >
                       <div
-                        class="sc-bdnxRM AFVmm"
+                        class="sc-bdvvtL fCrhkg"
                         height="16"
                         width="16"
                       >
@@ -896,7 +896,7 @@ exports[`RecipientList should render editable 1`] = `
               class="flex-none py-6"
             >
               <div
-                class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
+                class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -949,7 +949,7 @@ exports[`RecipientList should render editable 1`] = `
                 class="inline-block"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 bAsnxQ"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 dhaLpP"
                   data-testid="recipient-list__remove-recipient"
                   type="button"
                 >
@@ -960,7 +960,7 @@ exports[`RecipientList should render editable 1`] = `
                       class="py-1"
                     >
                       <div
-                        class="sc-bdnxRM AFVmm"
+                        class="sc-bdvvtL fCrhkg"
                         height="16"
                         width="16"
                       >
@@ -982,7 +982,7 @@ exports[`RecipientList should render editable 1`] = `
               class="flex-none py-6"
             >
               <div
-                class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
+                class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -1024,7 +1024,7 @@ exports[`RecipientList should render editable 1`] = `
                 class="inline-block"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 bAsnxQ"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 dhaLpP"
                   data-testid="recipient-list__remove-recipient"
                   type="button"
                 >
@@ -1035,7 +1035,7 @@ exports[`RecipientList should render editable 1`] = `
                       class="py-1"
                     >
                       <div
-                        class="sc-bdnxRM AFVmm"
+                        class="sc-bdvvtL fCrhkg"
                         height="16"
                         width="16"
                       >
@@ -1059,10 +1059,10 @@ exports[`RecipientList should render editable 1`] = `
 exports[`RecipientList should render non-editable 1`] = `
 <div>
   <div
-    class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 bCfwoA"
+    class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 hSCHjT"
   >
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 fDAVsO -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jHfvAR -mt-3"
       role="table"
     >
       <table
@@ -1115,7 +1115,7 @@ exports[`RecipientList should render non-editable 1`] = `
               class="flex-none py-6"
             >
               <div
-                class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
+                class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -1170,7 +1170,7 @@ exports[`RecipientList should render non-editable 1`] = `
               class="flex-none py-6"
             >
               <div
-                class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
+                class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -1225,7 +1225,7 @@ exports[`RecipientList should render non-editable 1`] = `
               class="flex-none py-6"
             >
               <div
-                class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
+                class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -1280,7 +1280,7 @@ exports[`RecipientList should render non-editable 1`] = `
               class="flex-none py-6"
             >
               <div
-                class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
+                class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -1326,10 +1326,10 @@ exports[`RecipientList should render non-editable 1`] = `
 exports[`RecipientList should render without amount column 1`] = `
 <div>
   <div
-    class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 bCfwoA"
+    class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 hSCHjT"
   >
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 fDAVsO -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jHfvAR -mt-3"
       role="table"
     >
       <table
@@ -1396,7 +1396,7 @@ exports[`RecipientList should render without amount column 1`] = `
               class="flex-none py-6"
             >
               <div
-                class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
+                class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -1472,7 +1472,7 @@ exports[`RecipientList should render without amount column 1`] = `
               class="flex-none py-6"
             >
               <div
-                class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
+                class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -1548,7 +1548,7 @@ exports[`RecipientList should render without amount column 1`] = `
               class="flex-none py-6"
             >
               <div
-                class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
+                class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -1624,7 +1624,7 @@ exports[`RecipientList should render without amount column 1`] = `
               class="flex-none py-6"
             >
               <div
-                class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
+                class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
                 data-testid="Avatar"
               >
                 <div

@@ -1,5 +1,5 @@
-import * as PayvoIntl from "@payvo/intl";
-import { Contracts } from "@payvo/profiles";
+import * as PayvoIntl from "@payvo/sdk-intl";
+import { Contracts } from "@payvo/sdk-profiles";
 import { Alert } from "app/components/Alert";
 import { OriginalButton } from "app/components/Button/OriginalButton";
 import { Card } from "app/components/Card";
@@ -103,7 +103,7 @@ export class PluginControllerRepository {
 
 		for (const entry of instances) {
 			try {
-				const callback = runUnknownCode(entry.source, entry.sourcePath, {
+				const callback = runUnknownCode(entry.source.toString(), entry.sourcePath, {
 					payvo: {
 						Components: {
 							Alert,

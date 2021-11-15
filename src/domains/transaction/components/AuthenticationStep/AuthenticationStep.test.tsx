@@ -1,5 +1,5 @@
-import { PBKDF2 } from "@payvo/cryptography";
-import { Contracts } from "@payvo/profiles";
+import { PBKDF2 } from "@payvo/sdk-cryptography";
+import { Contracts } from "@payvo/sdk-profiles";
 import React from "react";
 import {
 	env,

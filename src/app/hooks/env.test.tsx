@@ -1,10 +1,10 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 import { env, getDefaultProfileId, render } from "utils/testing-library";
 
-import { useActiveProfile, useActiveWallet } from "./env";
+import { useActiveProfile, useActiveWallet, useActiveWalletWhenNeeded } from "./env";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
@@ -84,5 +84,84 @@ describe("useActiveProfile", () => {
 		);
 
 		expect(getByText(wallet.address())).toBeInTheDocument();
+	});
+
+	it("should return active wallet from url", () => {
+		let activeWalletId: string | undefined;
+
+		const TestActiveWallet = () => {
+			const activeWallet = useActiveWalletWhenNeeded(false);
+			activeWalletId = activeWallet?.id();
+
+			return <TestWallet />;
+		};
+
+		const { getByText } = render(
+			<Route path="/profiles/:profileId/wallets/:walletId">
+				<TestActiveWallet />
+			</Route>,
+			{
+				routes: [`/profiles/${profile.id()}/wallets/${wallet.id()}`],
+			},
+		);
+
+		expect(activeWalletId).toStrictEqual(wallet.id());
+		expect(getByText(wallet.address())).toBeInTheDocument();
+	});
+
+	it("should return undefined if wallet id is not provided in url", () => {
+		const consoleSpy = jest.spyOn(console, "error").mockImplementation(jest.fn());
+		let activeWalletId: string | undefined;
+
+		const TestActiveWallet = () => {
+			const activeWallet = useActiveWalletWhenNeeded(false);
+			activeWalletId = activeWallet?.id();
+
+			return <TestWallet />;
+		};
+
+		expect(() =>
+			render(
+				<Route path="/profiles/:profileId/wallets/:walletId">
+					<TestActiveWallet />
+				</Route>,
+				{
+					routes: [`/profiles/${profile.id()}/wallets/1`],
+					withProfileSynchronizer: false,
+				},
+			),
+		).toThrow("Failed to find a wallet for [1].");
+
+		expect(activeWalletId).toBeUndefined();
+
+		consoleSpy.mockRestore();
+	});
+
+	it("should throw if wallet id is not provided in url", () => {
+		const consoleSpy = jest.spyOn(console, "error").mockImplementation(jest.fn());
+		let activeWalletId: string | undefined;
+
+		const TestActiveWallet = () => {
+			const activeWallet = useActiveWalletWhenNeeded(true);
+			activeWalletId = activeWallet?.id();
+
+			return <TestWallet />;
+		};
+
+		expect(() =>
+			render(
+				<Route path="/profiles/:profileId/wallets/:walletId">
+					<TestActiveWallet />
+				</Route>,
+				{
+					routes: [`/profiles/${profile.id()}/wallets/1`],
+					withProfileSynchronizer: false,
+				},
+			),
+		).toThrow("Failed to find a wallet for [1].");
+
+		expect(activeWalletId).toBeUndefined();
+
+		consoleSpy.mockRestore();
 	});
 });

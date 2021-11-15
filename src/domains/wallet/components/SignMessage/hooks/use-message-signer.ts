@@ -1,6 +1,6 @@
 import LedgerTransportNodeHID from "@ledgerhq/hw-transport-node-hid-singleton";
-import { Contracts as ProfileContracts } from "@payvo/profiles";
 import { Services } from "@payvo/sdk";
+import { Contracts as ProfileContracts } from "@payvo/sdk-profiles";
 
 const signWithLedger = async (
 	message: string,
@@ -26,14 +26,16 @@ const signWithLedger = async (
 	};
 };
 
-const withAbortPromise = (signal?: AbortSignal) => <T>(promise: Promise<T>) =>
-	new Promise<T>((resolve, reject) => {
-		if (signal) {
-			signal.addEventListener("abort", () => reject("ERR_ABORT"));
-		}
+const withAbortPromise =
+	(signal?: AbortSignal) =>
+	<T>(promise: Promise<T>) =>
+		new Promise<T>((resolve, reject) => {
+			if (signal) {
+				signal.addEventListener("abort", () => reject("ERR_ABORT"));
+			}
 
-		return promise.then(resolve).catch(reject);
-	});
+			return promise.then(resolve).catch(reject);
+		});
 
 // @TODO: extract this into the SDK/Profiles
 export const useMessageSigner = (transport: typeof LedgerTransportNodeHID) => {

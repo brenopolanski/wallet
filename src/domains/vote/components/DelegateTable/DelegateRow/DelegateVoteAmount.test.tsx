@@ -1,5 +1,5 @@
-import { Contracts } from "@payvo/profiles";
-import { ReadOnlyWallet } from "@payvo/profiles/distribution/read-only-wallet";
+import { Contracts } from "@payvo/sdk-profiles";
+import { ReadOnlyWallet } from "@payvo/sdk-profiles/distribution/read-only-wallet";
 import { fireEvent } from "@testing-library/react";
 import { renderHook } from "@testing-library/react-hooks";
 import { translations as transactionTranslations } from "domains/transaction/i18n";

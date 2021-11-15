@@ -1,13 +1,13 @@
-import { sortBy } from "@arkecosystem/utils";
-import { Contracts, DTO } from "@payvo/profiles";
 import { Networks, Services } from "@payvo/sdk";
+import { sortBy } from "@payvo/sdk-helpers";
+import { Contracts, DTO } from "@payvo/sdk-profiles";
 import { Form } from "app/components/Form";
 import { Page, Section } from "app/components/Layout";
 import { StepIndicator } from "app/components/StepIndicator";
 import { StepNavigation } from "app/components/StepNavigation";
 import { TabPanel, Tabs } from "app/components/Tabs";
 import { useEnvironmentContext, useLedgerContext } from "app/contexts";
-import { useActiveProfile, useActiveWallet, useQueryParams, useValidation } from "app/hooks";
+import { useActiveProfile, useActiveWalletWhenNeeded, useQueryParams, useValidation } from "app/hooks";
 import { useKeydown } from "app/hooks/use-keydown";
 import { AuthenticationStep } from "domains/transaction/components/AuthenticationStep";
 import { ConfirmSendTransaction } from "domains/transaction/components/ConfirmSendTransaction";
@@ -68,7 +68,7 @@ export const SendTransfer = () => {
 
 	const { persist } = useEnvironmentContext();
 	const activeProfile = useActiveProfile();
-	const activeWallet = useActiveWallet();
+	const activeWallet = useActiveWalletWhenNeeded(!!hasWalletId);
 
 	const [wallet, setWallet] = useState<Contracts.IReadWriteWallet | undefined>(
 		hasWalletId ? activeWallet : undefined,
@@ -167,13 +167,8 @@ export const SendTransfer = () => {
 		reset({ ...defaultValues, network });
 	}, [network, reset]); // eslint-disable-line react-hooks/exhaustive-deps
 
-	const {
-		dismissFeeWarning,
-		feeWarningVariant,
-		requireFeeConfirmation,
-		showFeeWarning,
-		setShowFeeWarning,
-	} = useFeeConfirmation(fee, fees);
+	const { dismissFeeWarning, feeWarningVariant, requireFeeConfirmation, showFeeWarning, setShowFeeWarning } =
+		useFeeConfirmation(fee, fees);
 
 	useEffect(() => {
 		if (network) {

@@ -1,4 +1,4 @@
-import { chunk } from "@arkecosystem/utils";
+import { chunk } from "@payvo/sdk-helpers";
 import { DropdownOption } from "app/components/Dropdown";
 import { EmptyBlock } from "app/components/EmptyBlock";
 import { Pagination } from "app/components/Pagination";
@@ -53,6 +53,7 @@ export const PluginGrid = ({
 	let skeletons = [];
 
 	if (isLoading) {
+		// @ts-ignore
 		skeletons = new Array(skeletonsLimit).fill({});
 	}
 

@@ -1,5 +1,5 @@
-import { DTO } from "@payvo/profiles";
 import { Services } from "@payvo/sdk";
+import { DTO } from "@payvo/sdk-profiles";
 import { Form } from "app/components/Form";
 import { Modal } from "app/components/Modal";
 import { useEnvironmentContext, useLedgerContext } from "app/contexts";

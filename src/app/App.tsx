@@ -5,10 +5,6 @@
 import "focus-visible";
 
 import LedgerTransportNodeHID from "@ledgerhq/hw-transport-node-hid-singleton";
-// import { LUNA } from "@payvo/sdk-luna";
-// import { NANO } from "@payvo/sdk-nano";
-// import { NEO } from "@payvo/sdk-neo";
-import { Environment } from "@payvo/profiles";
 // import { ADA } from "@payvo/sdk-ada";
 import { ARK } from "@payvo/sdk-ark";
 // import { ATOM } from "@payvo/sdk-atom";
@@ -18,6 +14,10 @@ import { ARK } from "@payvo/sdk-ark";
 // import { EGLD } from "@payvo/sdk-egld";
 // import { ETH } from "@payvo/sdk-eth";
 import { LSK } from "@payvo/sdk-lsk";
+// import { LUNA } from "@payvo/sdk-luna";
+// import { NANO } from "@payvo/sdk-nano";
+// import { NEO } from "@payvo/sdk-neo";
+import { Environment } from "@payvo/sdk-profiles";
 import { Offline } from "domains/error/pages";
 import { ExchangeProvider } from "domains/exchange/contexts/Exchange";
 import { Splash } from "domains/splash/pages";

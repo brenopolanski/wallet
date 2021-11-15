@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { EventEmitter } from "events";
 
 type HandlerFunction = (...arguments_: any[]) => any;

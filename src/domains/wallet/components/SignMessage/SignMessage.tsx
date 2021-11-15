@@ -1,5 +1,5 @@
-import { Contracts as ProfileContracts } from "@payvo/profiles";
 import { Services } from "@payvo/sdk";
+import { Contracts as ProfileContracts } from "@payvo/sdk-profiles";
 import { OriginalButton as Button } from "app/components/Button/OriginalButton";
 import { Clipboard } from "app/components/Clipboard";
 import { Form } from "app/components/Form";

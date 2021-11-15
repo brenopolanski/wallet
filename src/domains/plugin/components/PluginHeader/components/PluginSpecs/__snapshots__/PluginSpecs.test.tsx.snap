@@ -63,7 +63,7 @@ exports[`PluginSpecs should render properly 1`] = `
             class="font-semibold text-theme-secondary-text"
           >
             <a
-              class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+              class="Link__AnchorStyled-sc-ec014t-0 eeKUfa group ring-focus"
               data-ring-focus-margin="-m-1"
               data-testid="PluginSpecs__website"
               href="#"
@@ -71,14 +71,14 @@ exports[`PluginSpecs should render properly 1`] = `
               to="https://github.com/arkecosystem/explorer"
             >
               <span
-                class="Link__Content-sc-ec014t-1 hUiuRR"
+                class="Link__Content-sc-ec014t-1 jGLnf"
               >
                 <span>
                   View
                 </span>
               </span>
               <div
-                class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block text-sm"
+                class="sc-bdvvtL fCrhkg flex-shrink-0 duration-200 inline-block text-sm"
                 data-testid="Link__external"
                 height="16"
                 width="16"

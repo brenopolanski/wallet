@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { waitFor } from "@testing-library/react";
 import { act as actHook, renderHook } from "@testing-library/react-hooks";
 import { EnvironmentProvider } from "app/contexts";

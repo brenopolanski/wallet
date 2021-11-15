@@ -5,12 +5,12 @@ exports[`UnlockTokensRow should render with isReady = false 1`] = `
   <table>
     <tbody>
       <tr
-        class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
+        class="TableRow__TableRowStyled-sc-y9j4av-0 jRikRC"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx"
           >
             <span
               class="whitespace-nowrap font-bold text-theme-secondary-900 dark:text-theme-secondary-200"
@@ -22,7 +22,7 @@ exports[`UnlockTokensRow should render with isReady = false 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD"
           >
             <time
               class="text-theme-secondary-700"
@@ -34,7 +34,7 @@ exports[`UnlockTokensRow should render with isReady = false 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end"
           >
             <div
               class="flex items-center"
@@ -49,7 +49,7 @@ exports[`UnlockTokensRow should render with isReady = false 1`] = `
                   Locked
                 </span>
                 <div
-                  class="sc-bdnxRM NjstW text-theme-secondary-700 mr-3 ml-2"
+                  class="sc-bdvvtL qGXhc text-theme-secondary-700 mr-3 ml-2"
                   height="20"
                   width="20"
                 >
@@ -59,7 +59,7 @@ exports[`UnlockTokensRow should render with isReady = false 1`] = `
                 </div>
               </div>
               <input
-                class="Checkbox-sc-1aq7nos-0 drePYo"
+                class="Checkbox-sc-1aq7nos-0 dZJFYi"
                 color="success"
                 disabled=""
                 type="checkbox"
@@ -78,12 +78,12 @@ exports[`UnlockTokensRow should render with isReady = true 1`] = `
   <table>
     <tbody>
       <tr
-        class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
+        class="TableRow__TableRowStyled-sc-y9j4av-0 jRikRC"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx"
           >
             <span
               class="whitespace-nowrap font-bold text-theme-secondary-900 dark:text-theme-secondary-200"
@@ -95,7 +95,7 @@ exports[`UnlockTokensRow should render with isReady = true 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD"
           >
             <time
               class="text-theme-secondary-700"
@@ -107,7 +107,7 @@ exports[`UnlockTokensRow should render with isReady = true 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end"
           >
             <div
               class="flex items-center"
@@ -122,7 +122,7 @@ exports[`UnlockTokensRow should render with isReady = true 1`] = `
                   Unlockable
                 </span>
                 <div
-                  class="sc-bdnxRM NjstW text-theme-primary-600 mr-3 ml-2"
+                  class="sc-bdvvtL qGXhc text-theme-primary-600 mr-3 ml-2"
                   height="20"
                   width="20"
                 >
@@ -133,7 +133,7 @@ exports[`UnlockTokensRow should render with isReady = true 1`] = `
               </div>
               <input
                 checked=""
-                class="Checkbox-sc-1aq7nos-0 drePYo"
+                class="Checkbox-sc-1aq7nos-0 dZJFYi"
                 color="success"
                 type="checkbox"
               />

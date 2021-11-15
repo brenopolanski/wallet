@@ -200,8 +200,7 @@ describe("Plugin Configuration", () => {
 	it("should return logo from manifest", () => {
 		const subject = PluginConfigurationData.make({
 			"desktop-wallet": {
-				logo:
-					"https://raw.githubusercontent.com/ark-ecosystem-desktop-plugins/sound-notifications/master/logo.png",
+				logo: "https://raw.githubusercontent.com/ark-ecosystem-desktop-plugins/sound-notifications/master/logo.png",
 			},
 			name: "plugin-test",
 		});

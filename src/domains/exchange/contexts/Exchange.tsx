@@ -1,4 +1,4 @@
-import { camelCase } from "@arkecosystem/utils";
+import { camelCase } from "@payvo/sdk-helpers";
 import { httpClient } from "app/services";
 import { Exchange } from "domains/exchange/contracts";
 import { exchangeHost, ExchangeService } from "domains/exchange/services/exchange.service";

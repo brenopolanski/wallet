@@ -15,7 +15,7 @@ exports[`ButtonGroupOption should render 1`] = `
   <button
     aria-checked="true"
     aria-label="1"
-    class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ivLOIB"
+    class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
     data-testid="ButtonGroupOption"
     role="radio"
     type="button"
@@ -25,7 +25,7 @@ exports[`ButtonGroupOption should render 1`] = `
   <button
     aria-checked="false"
     aria-label="2"
-    class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ivLOIB"
+    class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
     data-testid="ButtonGroupOption"
     role="radio"
     type="button"
@@ -40,7 +40,7 @@ exports[`ButtonGroupOption should render with modern variant 1`] = `
   <button
     aria-checked="false"
     aria-label="tooltip"
-    class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 bUnezw"
+    class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 itDOEz"
     data-testid="ButtonGroupOption"
     role="radio"
     type="button"

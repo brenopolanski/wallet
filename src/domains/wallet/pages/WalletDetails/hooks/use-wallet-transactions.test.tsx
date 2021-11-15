@@ -1,4 +1,4 @@
-import { Contracts, DTO } from "@payvo/profiles";
+import { Contracts, DTO } from "@payvo/sdk-profiles";
 import { PendingTransaction } from "domains/transaction/components/TransactionTable/PendingTransactionsTable/PendingTransactionsTable.contracts";
 import nock from "nock";
 import React, { useEffect, useState } from "react";
@@ -236,11 +236,8 @@ describe("Wallet Transactions Hook", () => {
 		const spySync = jest.spyOn(wallet.transaction(), "sync");
 
 		const Component = () => {
-			const {
-				pendingTransactions,
-				startSyncingPendingTransactions,
-				stopSyncingPendingTransactions,
-			} = useWalletTransactions(wallet);
+			const { pendingTransactions, startSyncingPendingTransactions, stopSyncingPendingTransactions } =
+				useWalletTransactions(wallet);
 
 			useEffect(() => {
 				startSyncingPendingTransactions();

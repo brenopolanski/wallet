@@ -1,5 +1,5 @@
-import { isNil } from "@arkecosystem/utils";
-import { Contracts } from "@payvo/profiles";
+import { isNil } from "@payvo/sdk-helpers";
+import { Contracts } from "@payvo/sdk-profiles";
 import { Switch } from "app/components/Switch";
 import { useExchangeRate } from "app/hooks/use-exchange-rate";
 import React, { memo, useEffect, useState } from "react";

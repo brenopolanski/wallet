@@ -1,7 +1,7 @@
 import LedgerTransportNodeHID from "@ledgerhq/hw-transport-node-hid-singleton";
-import { Contracts } from "@payvo/profiles";
-import { WalletData } from "@payvo/profiles/distribution/contracts";
 import { Coins } from "@payvo/sdk";
+import { Contracts } from "@payvo/sdk-profiles";
+import { WalletData } from "@payvo/sdk-profiles/distribution/contracts";
 import { useEnvironmentContext } from "app/contexts/Environment";
 import { LedgerData, minVersionList } from "app/contexts/Ledger/contracts";
 import { formatLedgerDerivationPath } from "app/contexts/Ledger/utils/format-ledger-derivation-path";

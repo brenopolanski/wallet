@@ -1,4 +1,4 @@
-import { Contracts, Environment } from "@payvo/profiles";
+import { Contracts, Environment } from "@payvo/sdk-profiles";
 import { lowerCaseEquals } from "utils/equals";
 
 export const createProfile = (t: any, environment: Environment) => ({

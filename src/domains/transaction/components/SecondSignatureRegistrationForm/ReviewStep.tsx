@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { Header } from "app/components/Header";
 import { TotalAmountBox } from "domains/transaction/components/TotalAmountBox";
 import { TransactionNetwork, TransactionSender } from "domains/transaction/components/TransactionDetail";

@@ -52,11 +52,10 @@ const Pagination = ({
 	const showFirst = useMemo(() => !paginationButtons.includes(1), [paginationButtons]);
 	const showPrevious = useMemo(() => currentPage > 1, [currentPage]);
 	const showNext = useMemo(() => currentPage < totalPages, [currentPage, totalPages]);
-	const showLast = useMemo(() => totalPages !== currentPage + 1 && !paginationButtons.includes(totalPages), [
-		currentPage,
-		totalPages,
-		paginationButtons,
-	]);
+	const showLast = useMemo(
+		() => totalPages !== currentPage + 1 && !paginationButtons.includes(totalPages),
+		[currentPage, totalPages, paginationButtons],
+	);
 
 	if (totalPages <= 1) {
 		return <></>;

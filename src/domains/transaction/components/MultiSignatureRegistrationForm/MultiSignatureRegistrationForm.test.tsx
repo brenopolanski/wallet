@@ -1,5 +1,5 @@
-import { Contracts as ProfilesContracts } from "@payvo/profiles";
 import { Contracts } from "@payvo/sdk";
+import { Contracts as ProfilesContracts } from "@payvo/sdk-profiles";
 import { RenderResult } from "@testing-library/react";
 import React, { useEffect } from "react";
 import { FormProvider, useForm, UseFormMethods } from "react-hook-form";

@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { Avatar } from "app/components/Avatar";
 import { Icon } from "app/components/Icon";
 import { Link } from "app/components/Link";
@@ -61,11 +61,10 @@ export const DelegateRow = ({
 		[delegate, requiresStakeAmount, selectedUnvotes, voted],
 	);
 
-	const isSelectedVote = useMemo(() => !!voted || !!delegateExistsInVotes(selectedVotes, delegate?.address?.()), [
-		delegate,
-		voted,
-		selectedVotes,
-	]);
+	const isSelectedVote = useMemo(
+		() => !!voted || !!delegateExistsInVotes(selectedVotes, delegate?.address?.()),
+		[delegate, voted, selectedVotes],
+	);
 
 	const isChanged = useMemo(() => {
 		const alreadyExistsInVotes = !!delegateExistsInVotes(selectedVotes, delegate?.address?.());

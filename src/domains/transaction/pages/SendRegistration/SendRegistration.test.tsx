@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Observer } from "@ledgerhq/hw-transport";
-import { BIP39 } from "@payvo/cryptography";
-import { Contracts } from "@payvo/profiles";
 import { Signatories } from "@payvo/sdk";
+import { BIP39 } from "@payvo/sdk-cryptography";
+import { Contracts } from "@payvo/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { LedgerProvider, minVersionList } from "app/contexts";
 import { translations as transactionTranslations } from "domains/transaction/i18n";

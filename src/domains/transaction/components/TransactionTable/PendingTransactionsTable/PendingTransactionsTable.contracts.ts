@@ -1,4 +1,4 @@
-import { Contracts, DTO } from "@payvo/profiles";
+import { Contracts, DTO } from "@payvo/sdk-profiles";
 
 interface PendingTransaction {
 	transaction: DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData;

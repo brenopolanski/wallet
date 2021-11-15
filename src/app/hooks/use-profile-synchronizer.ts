@@ -1,5 +1,5 @@
-import { isEqual, uniq } from "@arkecosystem/utils";
-import { Contracts, Environment } from "@payvo/profiles";
+import { isEqual, uniq } from "@payvo/sdk-helpers";
+import { Contracts, Environment } from "@payvo/sdk-profiles";
 import { useConfiguration, useEnvironmentContext } from "app/contexts";
 import { useAccentColor } from "app/hooks/use-accent-color";
 import { DashboardConfiguration } from "domains/dashboard/pages/Dashboard";
@@ -374,15 +374,8 @@ export const useProfileSynchronizer = ({
 	const { restoreProfile } = useProfileRestore();
 	const profile = useProfileWatcher();
 
-	const {
-		shouldRestore,
-		shouldSync,
-		shouldMarkCompleted,
-		setStatus,
-		status,
-		markAsRestored,
-		resetStatuses,
-	} = useProfileSyncStatus();
+	const { shouldRestore, shouldSync, shouldMarkCompleted, setStatus, status, markAsRestored, resetStatuses } =
+		useProfileSyncStatus();
 
 	const { allJobs, syncProfileWallets } = useProfileJobs(profile);
 	const { start, stop, runAll } = useSynchronizer(allJobs);

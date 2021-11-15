@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { Button } from "app/components/Button";
 import { AuthenticationStep, LedgerStates } from "domains/transaction/components/AuthenticationStep";
 import { UnlockTokensFormState } from "domains/transaction/components/UnlockTokens/UnlockTokens.contracts";

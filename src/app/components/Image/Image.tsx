@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { images } from "app/assets/images";
 import { useActiveProfile } from "app/hooks";
 import { useAccentColor } from "app/hooks/use-accent-color";

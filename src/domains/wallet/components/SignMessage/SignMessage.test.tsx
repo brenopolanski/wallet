@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { LedgerProvider } from "app/contexts/Ledger/Ledger";
 import { toasts } from "app/services";
 import { translations as transactionTranslations } from "domains/transaction/i18n";

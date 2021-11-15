@@ -1,8 +1,8 @@
 // @ts-ignore
 import Transport, { Observer } from "@ledgerhq/hw-transport";
 import { TransportReplayer } from "@ledgerhq/hw-transport-mocker/lib/openTransportReplayer";
-import { Contracts, Environment } from "@payvo/profiles";
 import { ARK } from "@payvo/sdk-ark";
+import { Contracts, Environment } from "@payvo/sdk-profiles";
 import { render, RenderResult } from "@testing-library/react";
 import { ConfigurationProvider, EnvironmentProvider } from "app/contexts";
 import { useProfileSynchronizer } from "app/hooks/use-profile-synchronizer";

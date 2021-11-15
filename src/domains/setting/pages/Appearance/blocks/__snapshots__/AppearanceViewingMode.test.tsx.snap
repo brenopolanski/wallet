@@ -10,7 +10,7 @@ exports[`AppearanceViewingMode should render 1`] = `
     <button
       aria-checked="false"
       aria-label="light"
-      class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 bUnezw"
+      class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 itDOEz"
       data-testid="ButtonGroupOption"
       role="radio"
       type="button"
@@ -19,7 +19,7 @@ exports[`AppearanceViewingMode should render 1`] = `
         class="flex items-center space-x-2 px-2"
       >
         <div
-          class="sc-bdnxRM NjstW dark:text-theme-secondary-600"
+          class="sc-bdvvtL qGXhc dark:text-theme-secondary-600"
           height="20"
           width="20"
         >
@@ -35,7 +35,7 @@ exports[`AppearanceViewingMode should render 1`] = `
     <button
       aria-checked="false"
       aria-label="dark"
-      class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 bUnezw"
+      class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 itDOEz"
       data-testid="ButtonGroupOption"
       role="radio"
       type="button"
@@ -44,7 +44,7 @@ exports[`AppearanceViewingMode should render 1`] = `
         class="flex items-center space-x-2 px-2"
       >
         <div
-          class="sc-bdnxRM NjstW dark:text-theme-secondary-600"
+          class="sc-bdvvtL qGXhc dark:text-theme-secondary-600"
           height="20"
           width="20"
         >

@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts } from "@payvo/profiles";
-import { ProfileSetting } from "@payvo/profiles/distribution/contracts";
+import { Contracts } from "@payvo/sdk-profiles";
+import { ProfileSetting } from "@payvo/sdk-profiles/distribution/contracts";
 import { translations as commonTranslations } from "app/i18n/common/i18n";
 import { createMemoryHistory } from "history";
 import React from "react";

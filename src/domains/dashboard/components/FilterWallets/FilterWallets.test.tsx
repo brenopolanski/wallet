@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { FilterOption } from "app/components/FilterNetwork";
 import React from "react";
 import { env, fireEvent, getDefaultProfileId, render } from "utils/testing-library";

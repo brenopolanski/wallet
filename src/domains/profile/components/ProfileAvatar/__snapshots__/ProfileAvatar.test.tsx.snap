@@ -3,7 +3,7 @@
 exports[`Avatar should render with profile image 1`] = `
 <DocumentFragment>
   <div
-    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
+    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
     data-testid="Avatar"
   >
     <div
@@ -24,7 +24,7 @@ exports[`Avatar should render with profile image 1`] = `
 exports[`Avatar should render with svg 1`] = `
 <DocumentFragment>
   <div
-    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
+    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
     data-testid="Avatar"
   >
     <div

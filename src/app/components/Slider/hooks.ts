@@ -44,10 +44,10 @@ export const useSlider = ({ container, options, data, paginationPosition }: Prop
 		};
 	}, [data, options]);
 
-	const showPagination = useMemo(() => data.length > swiperOptions.slidesPerView * swiperOptions.slidesPerColumn, [
-		data,
-		swiperOptions,
-	]);
+	const showPagination = useMemo(
+		() => data.length > swiperOptions.slidesPerView * swiperOptions.slidesPerColumn,
+		[data, swiperOptions],
+	);
 
 	// Swiper needs container height to be defined. `slideHeight` is required.
 	const containerHeight = useMemo(() => {
