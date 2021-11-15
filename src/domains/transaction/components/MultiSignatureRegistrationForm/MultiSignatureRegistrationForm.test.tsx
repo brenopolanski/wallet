@@ -1,6 +1,7 @@
 import { Contracts as ProfilesContracts } from "@payvo/profiles";
 import { Contracts } from "@payvo/sdk";
 import { RenderResult } from "@testing-library/react";
+import { translations } from "domains/transaction/i18n";
 import React, { useEffect } from "react";
 import { FormProvider, useForm, UseFormMethods } from "react-hook-form";
 import { useTranslation } from "react-i18next";
@@ -9,7 +10,6 @@ import multiSignatureFixture from "tests/fixtures/coins/ark/devnet/transactions/
 import { TransactionFees } from "types";
 import { env, fireEvent, getDefaultProfileId, render, screen, syncFees, waitFor } from "utils/testing-library";
 
-import { translations as transactionTranslations } from "../../i18n";
 import { MultiSignatureRegistrationForm } from "./MultiSignatureRegistrationForm";
 
 describe("MultiSignature Registration Form", () => {
@@ -92,7 +92,7 @@ describe("MultiSignature Registration Form", () => {
 	it("should set fee if dynamic", async () => {
 		renderComponent();
 
-		fireEvent.click(screen.getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
+		fireEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
 
 		await waitFor(() => expect(screen.getByTestId("InputCurrency")).toBeVisible());
 
@@ -108,7 +108,7 @@ describe("MultiSignature Registration Form", () => {
 	it("should fill form", async () => {
 		const { form } = renderComponent();
 
-		fireEvent.click(screen.getByText(transactionTranslations.FEES.AVERAGE));
+		fireEvent.click(screen.getByText(translations.FEES.AVERAGE));
 
 		fireEvent.input(screen.getByTestId("MultiSignatureRegistrationForm__min-participants"), {
 			target: {
@@ -125,7 +125,7 @@ describe("MultiSignature Registration Form", () => {
 			},
 		});
 
-		fireEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
+		fireEvent.click(screen.getByText(translations.MULTISIGNATURE.ADD_PARTICIPANT));
 
 		await waitFor(() => expect(form?.getValues("minParticipants")).toBe("3"));
 		await waitFor(() =>
@@ -155,7 +155,7 @@ describe("MultiSignature Registration Form", () => {
 			},
 		});
 
-		fireEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
+		fireEvent.click(screen.getByText(translations.MULTISIGNATURE.ADD_PARTICIPANT));
 
 		await waitFor(() => expect(form?.getValues("participants")).toHaveLength(2));
 
@@ -185,8 +185,8 @@ describe("MultiSignature Registration Form", () => {
 			},
 		});
 
-		expect(screen.getByText(transactionTranslations.MULTISIGNATURE.PARTICIPANTS)).toBeInTheDocument();
-		expect(screen.getByText(transactionTranslations.MULTISIGNATURE.MIN_SIGNATURES)).toBeInTheDocument();
+		expect(screen.getByText(translations.MULTISIGNATURE.PARTICIPANTS)).toBeInTheDocument();
+		expect(screen.getByText(translations.MULTISIGNATURE.MIN_SIGNATURES)).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});

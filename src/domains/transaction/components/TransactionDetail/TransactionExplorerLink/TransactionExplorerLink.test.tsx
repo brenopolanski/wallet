@@ -1,7 +1,7 @@
+import { translations } from "domains/transaction/i18n";
 import React from "react";
 import { render } from "utils/testing-library";
 
-import { translations as transactionTranslations } from "../../../i18n";
 import { TransactionExplorerLink } from "./TransactionExplorerLink";
 
 describe("TransactionExplorerLink", () => {
@@ -16,7 +16,7 @@ describe("TransactionExplorerLink", () => {
 			/>,
 		);
 
-		expect(container).toHaveTextContent(transactionTranslations.ID);
+		expect(container).toHaveTextContent(translations.ID);
 		expect(container).toMatchSnapshot();
 	});
 });

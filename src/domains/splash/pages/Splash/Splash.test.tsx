@@ -1,9 +1,9 @@
 import { DateTime } from "@payvo/intl";
+import { translations } from "domains/splash/i18n";
 import React from "react";
 import * as utils from "utils/electron-utils";
 import { render } from "utils/testing-library";
 
-import { translations } from "../../i18n";
 import { Splash } from "./Splash";
 
 describe("Splash", () => {

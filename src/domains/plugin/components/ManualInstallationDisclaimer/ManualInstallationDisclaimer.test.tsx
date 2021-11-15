@@ -1,7 +1,7 @@
+import { translations } from "domains/plugin/i18n";
 import React from "react";
 import { render } from "utils/testing-library";
 
-import { translations } from "../../i18n";
 import { ManualInstallationDisclaimer } from "./ManualInstallationDisclaimer";
 
 describe("ManualInstallationDisclaimer", () => {

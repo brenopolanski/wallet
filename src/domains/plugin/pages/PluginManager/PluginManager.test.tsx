@@ -2,6 +2,7 @@
 import { Contracts } from "@payvo/profiles";
 import { translations as commonTranslations } from "app/i18n/common/i18n";
 import { toasts } from "app/services";
+import { translations } from "domains/plugin/i18n";
 import { ipcRenderer } from "electron";
 import { createMemoryHistory } from "history";
 import nock from "nock";
@@ -20,7 +21,6 @@ import {
 	within,
 } from "utils/testing-library";
 
-import { translations } from "../../i18n";
 import { PluginManager } from "./PluginManager";
 
 let profile: Contracts.IProfile;

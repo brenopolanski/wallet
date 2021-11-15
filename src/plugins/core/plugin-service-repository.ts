@@ -1,6 +1,6 @@
 import { Contracts } from "@payvo/profiles";
+import { PluginAPI, PluginService, PluginServiceIdentifier } from "plugins/types";
 
-import { PluginAPI, PluginService, PluginServiceIdentifier } from "../types";
 import { PluginHooks } from "./internals/plugin-hooks";
 import { applyPluginMiddlewares, isServiceDefinedInConfig, isServiceEnabled } from "./internals/plugin-permission";
 import { PluginController } from "./plugin-controller";

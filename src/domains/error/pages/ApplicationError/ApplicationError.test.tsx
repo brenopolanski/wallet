@@ -1,7 +1,7 @@
+import { translations } from "domains/error/i18n";
 import React from "react";
 import { fireEvent, render } from "utils/testing-library";
 
-import { translations } from "../../i18n";
 import { ApplicationError } from "./ApplicationError";
 
 describe("ApplicationError", () => {
