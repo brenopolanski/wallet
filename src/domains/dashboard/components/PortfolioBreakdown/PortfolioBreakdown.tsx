@@ -7,7 +7,7 @@ import { usePortfolioBreakdown } from "domains/dashboard/hooks/use-portfolio-bre
 import React, { useMemo, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
 
-import { LabelledText, Legend, Tooltip, PortfolioBreakdownSkeleton } from "./PortfolioBreakdown.blocks";
+import { LabelledText, Legend, PortfolioBreakdownSkeleton, Tooltip } from "./PortfolioBreakdown.blocks";
 import { getAssetsToDataPointsMapper } from "./PortfolioBreakdown.helpers";
 
 interface PortfolioBreakdownProperties {
