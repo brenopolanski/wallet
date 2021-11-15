@@ -44,7 +44,7 @@ function useGraphTooltip<TDataPoint, TSvgElement>(
 	const [tooltipDataPoint, setTooltipDataPoint] = useState<TDataPoint | undefined>(undefined);
 
 	const Tooltip: React.VFC = () => (
-		<div ref={tooltipReference} className="absolute hidden">
+		<div ref={tooltipReference} className="absolute transition duration-200 transition-opacity opacity-0">
 			{!!tooltipDataPoint && renderFunction?.(tooltipDataPoint)}
 		</div>
 	);
@@ -62,13 +62,14 @@ function useGraphTooltip<TDataPoint, TSvgElement>(
 			}
 
 			tooltipElement.style.left = `${event.pageX - Math.floor(tooltipElement.clientWidth / 2)}px`;
-			tooltipElement.style.top = `${event.pageY - 48}px`;
+			tooltipElement.style.top = `${event.pageY - 56}px`;
 
-			tooltipElement.classList.remove("hidden");
+			tooltipElement.classList.remove("opacity-0");
+			tooltipElement.classList.add("opacity-100");
 		},
 		onMouseOut: () => {
-			setTooltipDataPoint(undefined);
-			tooltipReference.current?.classList.add("hidden");
+			tooltipReference.current?.classList.add("opacity-0");
+			tooltipReference.current?.classList.remove("opacity-100");
 		},
 	});
 

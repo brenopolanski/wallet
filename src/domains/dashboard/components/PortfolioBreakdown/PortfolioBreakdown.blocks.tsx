@@ -3,6 +3,7 @@ import { useGraphFormatter } from "app/components/Graphs/Graphs.shared";
 import { LineGraphDataPoint } from "app/components/Graphs/LineGraph/LineGraph.contracts";
 import React from "react";
 import { useTranslation } from "react-i18next";
+import tw, { styled } from "twin.macro";
 
 interface MoreDetailsButtonProperties {
 	onClick: () => void;
@@ -37,13 +38,26 @@ interface TooltipProperties {
 	dataPoint: LineGraphDataPoint;
 }
 
+const TooltipWrapper = styled.div`
+	${tw`flex items-center bg-theme-secondary-900 rounded px-3 py-2`}
+
+	&:after {
+		content: " ";
+		${tw`absolute block w-0 h-0 -bottom-1`}
+		border-left: 8px solid transparent;
+		border-right: 8px solid transparent;
+		border-top: 8px solid var(--theme-color-secondary-900);
+		left: calc(50% - 4px);
+	}
+`;
+
 const Tooltip: React.VFC<TooltipProperties> = ({ dataPoint: { color, label, percent, tooltipText } }) => {
 	const { formatPercent } = useGraphFormatter();
 
 	// @TODO improve dark mode styles
 
 	return (
-		<div className="flex items-center bg-theme-secondary-900 rounded px-3 py-2">
+		<TooltipWrapper>
 			<div className={`h-3 w-1 rounded bg-theme-${color}`} />
 			<div className="text-sm font-semibold text-white ml-1">{label}</div>
 
@@ -54,7 +68,7 @@ const Tooltip: React.VFC<TooltipProperties> = ({ dataPoint: { color, label, perc
 			<Divider type="vertical" />
 
 			<div className="text-sm font-semibold text-theme-secondary-500">{formatPercent(percent)}</div>
-		</div>
+		</TooltipWrapper>
 	);
 };
 
