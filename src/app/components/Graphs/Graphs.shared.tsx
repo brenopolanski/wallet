@@ -49,7 +49,7 @@ function useGraphTooltip<TDataPoint, TSvgElement>(
 	}
 
 	const Tooltip: React.VFC = () => (
-		<div ref={tooltipReference} className="absolute transition duration-200 transition-opacity opacity-0">
+		<div ref={tooltipReference} className="absolute duration-200 transition-opacity opacity-0">
 			{!!tooltipDataPoint && renderFunction(tooltipDataPoint)}
 		</div>
 	);
@@ -62,12 +62,14 @@ function useGraphTooltip<TDataPoint, TSvgElement>(
 				return;
 			}
 
+			const targetTop = (event.target as HTMLElement).getBoundingClientRect().top;
+
 			if (!tooltipDataPoint) {
 				setTooltipDataPoint(dataPoint);
 			}
 
 			tooltipElement.style.left = `${event.pageX - Math.floor(tooltipElement.clientWidth / 2)}px`;
-			tooltipElement.style.top = `${event.pageY - 56}px`;
+			tooltipElement.style.top = `${targetTop - 48}px`;
 
 			tooltipElement.classList.remove("opacity-0");
 			tooltipElement.classList.add("opacity-100");
