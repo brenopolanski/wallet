@@ -57,11 +57,11 @@ const TooltipWrapper = styled.div`
 
 	&:after {
 		content: " ";
-		${tw`absolute block w-0 h-0 -bottom-1`}
+		${tw`absolute block w-0 h-0 -bottom-2`}
 		border-left: 8px solid transparent;
 		border-right: 8px solid transparent;
 		border-top: 8px solid var(--theme-color-secondary-900);
-		left: calc(50% - 4px);
+		left: calc(50% - 8px);
 	}
 `;
 
