@@ -167,6 +167,7 @@ export const translations = {
 	LOAD: "Load",
 	LOADING: "Loading ...",
 	LOADING_LEDGER: "Loading Ledger...",
+	MANDATORY: "Mandatory",
 	MAX: "Max",
 	MEMO: "Memo",
 	MESSAGE: "Message",
@@ -358,5 +359,4 @@ export const translations = {
 	YOU: "You",
 	YOUR_BALANCE: "Your Balance",
 	YOUR_PASSPHRASE: "Your Passphrase",
-	MANDATORY: "Mandatory",
 };
