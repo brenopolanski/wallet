@@ -1,11 +1,6 @@
-import { useGraphFormatter } from "app/components/Graphs/Graphs.shared";
 import React from "react";
 
-import {
-	LineGraphAnimationProperties,
-	LineGraphLegendProperties,
-	LineGraphSegmentProperties,
-} from "./LineGraph.contracts";
+import { LineGraphAnimationProperties, LineGraphSegmentProperties } from "./LineGraph.contracts";
 
 const LineGraphAnimation: React.VFC<LineGraphAnimationProperties> = ({ animations }) => (
 	<>
@@ -43,23 +38,3 @@ export const LineGraphSegment: React.VFC<LineGraphSegmentProperties> = ({
 		/>
 	</rect>
 );
-
-export const LineGraphLegend: React.VFC<LineGraphLegendProperties> = ({ dataPoints }) => {
-	const { formatPercent } = useGraphFormatter();
-
-	return (
-		<div className="flex space-x-4">
-			{dataPoints.map(({ color, label, percent }, index) => (
-				<div className="flex items-center space-x-1" key={index}>
-					<div className={`h-3 w-1 rounded bg-theme-${color}`} />
-					<div className="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-200">
-						{label}
-					</div>
-					<div className="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
-						{formatPercent(percent)}
-					</div>
-				</div>
-			))}
-		</div>
-	);
-};

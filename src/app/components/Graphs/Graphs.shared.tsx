@@ -2,6 +2,8 @@ import React, { MouseEvent, MutableRefObject, useEffect, useRef, useState } from
 
 const GRAPH_COLORS = ["success-600", "warning-600", "info-600", "danger-400", "hint-400", "secondary-400"];
 
+const GRAPH_COLOR_EMPTY = "secondary-300";
+
 const useGraphWidth = (reference: MutableRefObject<SVGSVGElement | null>): number => {
 	const [value, setValue] = useState(0);
 
@@ -22,10 +24,6 @@ const useGraphWidth = (reference: MutableRefObject<SVGSVGElement | null>): numbe
 	return value;
 };
 
-const useGraphFormatter = (): { formatPercent: (value: number) => string } => ({
-	formatPercent: (value: number): string => `${Math.round((value + Number.EPSILON) * 100) / 100}%`,
-});
-
 interface UseGraphTooltipReturnType<TDataPoint, TSvgElement> {
 	Tooltip: React.VFC;
 	getMouseEventProperties: (
@@ -43,9 +41,16 @@ function useGraphTooltip<TDataPoint, TSvgElement>(
 
 	const [tooltipDataPoint, setTooltipDataPoint] = useState<TDataPoint | undefined>(undefined);
 
+	if (!renderFunction) {
+		return {
+			Tooltip: () => <></>,
+			getMouseEventProperties: () => ({} as never),
+		};
+	}
+
 	const Tooltip: React.VFC = () => (
 		<div ref={tooltipReference} className="absolute transition duration-200 transition-opacity opacity-0">
-			{!!tooltipDataPoint && renderFunction?.(tooltipDataPoint)}
+			{!!tooltipDataPoint && renderFunction(tooltipDataPoint)}
 		</div>
 	);
 
@@ -76,4 +81,4 @@ function useGraphTooltip<TDataPoint, TSvgElement>(
 	return { Tooltip, getMouseEventProperties };
 }
 
-export { GRAPH_COLORS, useGraphFormatter, useGraphTooltip, useGraphWidth };
+export { GRAPH_COLOR_EMPTY, GRAPH_COLORS, useGraphTooltip, useGraphWidth };

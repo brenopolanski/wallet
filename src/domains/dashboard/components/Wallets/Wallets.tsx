@@ -118,7 +118,12 @@ export const Wallets: FC<WalletsProperties> = ({
 				</div>
 			</div>
 
-			<PortfolioBreakdown profile={activeProfile} profileIsSyncingExchangeRates={profileIsSyncingExchangeRates} />
+			<div className="mb-4">
+				<PortfolioBreakdown
+					profile={activeProfile}
+					profileIsSyncingExchangeRates={profileIsSyncingExchangeRates}
+				/>
+			</div>
 
 			<WalletsGrid
 				actions={walletActions}

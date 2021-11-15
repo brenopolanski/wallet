@@ -2,9 +2,7 @@ import React from "react";
 
 interface LineGraphDataPoint {
 	color: string;
-	label: string;
-	percent: number;
-	tooltipText: string;
+	data: Record<string, any>;
 	width: number;
 	x: number;
 }
@@ -23,10 +21,6 @@ interface LineGraphSegmentProperties {
 	onMouseOut?: (event: React.MouseEvent<SVGRectElement>) => void;
 }
 
-interface LineGraphLegendProperties {
-	dataPoints: LineGraphDataPoint[];
-}
-
 interface LineGraphAnimationProperties {
 	animations: {
 		attribute: string;
@@ -35,20 +29,20 @@ interface LineGraphAnimationProperties {
 	}[];
 }
 
-type LineGraphMapper<TDataPoint> = (data: TDataPoint[], config: LineGraphGraphConfig) => LineGraphDataPoint[];
+type LineGraphMapper<TItem> = (items: TItem[], config: LineGraphGraphConfig) => LineGraphDataPoint[];
 
-interface LineGraphProperties<TDataPoint> {
-	data: TDataPoint[];
-	mapper: LineGraphMapper<TDataPoint>;
-	renderAfterLegend?: () => JSX.Element;
+interface LineGraphProperties<TItem> {
+	items: TItem[];
+	mapper: LineGraphMapper<TItem>;
+	renderLegend?: (dataPoints: LineGraphDataPoint[]) => JSX.Element;
 	renderTooltip?: (dataPoint: LineGraphDataPoint) => JSX.Element;
+	renderAsEmpty?: boolean;
 }
 
 export type {
 	LineGraphAnimationProperties,
 	LineGraphDataPoint,
 	LineGraphGraphConfig,
-	LineGraphLegendProperties,
 	LineGraphMapper,
 	LineGraphProperties,
 	LineGraphSegmentProperties,

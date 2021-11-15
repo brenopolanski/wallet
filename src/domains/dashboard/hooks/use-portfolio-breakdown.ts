@@ -14,7 +14,6 @@ type UsePortfolioBreakdownHook = (input: {
 }) => {
 	assets: AssetItem[];
 	balance: number;
-	convertedBalance: number;
 	loading: boolean;
 	ticker: string;
 	walletsCount: number;
@@ -22,9 +21,7 @@ type UsePortfolioBreakdownHook = (input: {
 
 export const usePortfolioBreakdown: UsePortfolioBreakdownHook = ({ profile, profileIsSyncingExchangeRates }) => {
 	const isRestored = profile.status().isRestored();
-
-	const balance = profile.balance();
-	const convertedBalance = profile.convertedBalance();
+	const balance = profile.convertedBalance();
 
 	const loading = useMemo<boolean>(() => !isRestored || profileIsSyncingExchangeRates, [
 		isRestored,
@@ -62,7 +59,6 @@ export const usePortfolioBreakdown: UsePortfolioBreakdownHook = ({ profile, prof
 	return {
 		assets,
 		balance,
-		convertedBalance,
 		loading,
 		ticker,
 		walletsCount,

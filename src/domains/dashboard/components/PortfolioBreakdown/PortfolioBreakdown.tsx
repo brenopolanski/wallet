@@ -1,12 +1,13 @@
 import { Contracts } from "@payvo/profiles";
 import { Amount } from "app/components/Amount";
 import { Divider } from "app/components/Divider";
+import { EmptyBlock } from "app/components/EmptyBlock";
 import { LineGraph } from "app/components/Graphs/LineGraph";
 import { usePortfolioBreakdown } from "domains/dashboard/hooks/use-portfolio-breakdown";
-import React, { useState } from "react";
-import { useTranslation } from "react-i18next";
+import React, { useMemo, useState } from "react";
+import { Trans, useTranslation } from "react-i18next";
 
-import { LabelledText, MoreDetailsButton, Tooltip } from "./PortfolioBreakdown.blocks";
+import { LabelledText, Legend, Tooltip, PortfolioBreakdownSkeleton } from "./PortfolioBreakdown.blocks";
 import { getAssetsToDataPointsMapper } from "./PortfolioBreakdown.helpers";
 
 interface PortfolioBreakdownProperties {
@@ -22,13 +23,23 @@ export const PortfolioBreakdown: React.VFC<PortfolioBreakdownProperties> = ({
 
 	const [, setIsDetailOpen] = useState(false); // @TODO add modal
 
-	const { loading, convertedBalance, assets, walletsCount, ticker } = usePortfolioBreakdown({
+	const { loading, balance, assets, walletsCount, ticker } = usePortfolioBreakdown({
 		profile,
 		profileIsSyncingExchangeRates,
 	});
 
+	const hasZeroBalance = useMemo(() => balance === 0, [balance]);
+
 	if (loading && assets.length === 0) {
-		return <p>Loading</p>; // @TODO use proper skeleton
+		return <PortfolioBreakdownSkeleton />;
+	}
+
+	if (assets.length === 0) {
+		return (
+			<EmptyBlock>
+				<Trans i18nKey="DASHBOARD.PORTFOLIO_BREAKDOWN.EMPTY" components={{ bold: <strong /> }} />
+			</EmptyBlock>
+		);
 	}
 
 	// @TODO improve dark mode styles
@@ -36,7 +47,7 @@ export const PortfolioBreakdown: React.VFC<PortfolioBreakdownProperties> = ({
 	return (
 		<div className="py-4 px-6 bg-theme-secondary-100 rounded-xl flex">
 			<LabelledText label={t("COMMON.YOUR_BALANCE")}>
-				{(textClassName) => <Amount className={textClassName} ticker={ticker} value={convertedBalance} />}
+				{(textClassName) => <Amount className={textClassName} ticker={ticker} value={balance} />}
 			</LabelledText>
 
 			<Divider size="xl" type="vertical" />
@@ -53,10 +64,17 @@ export const PortfolioBreakdown: React.VFC<PortfolioBreakdownProperties> = ({
 
 			<div className="flex-1 ml-4">
 				<LineGraph
-					data={assets}
-					mapper={getAssetsToDataPointsMapper(ticker)}
-					renderAfterLegend={() => <MoreDetailsButton onClick={() => setIsDetailOpen(true)} />}
+					items={assets}
+					mapper={getAssetsToDataPointsMapper(ticker, hasZeroBalance)}
+					renderAsEmpty={hasZeroBalance}
 					renderTooltip={(dataPoint) => <Tooltip dataPoint={dataPoint} />}
+					renderLegend={(dataPoints) => (
+						<Legend
+							dataPoints={dataPoints}
+							hasZeroBalance={hasZeroBalance}
+							onMoreDetailsClick={() => setIsDetailOpen(true)}
+						/>
+					)}
 				/>
 			</div>
 		</div>

@@ -1,11 +1,4 @@
 export const translations = {
-	DASHBOARD_PAGE: {
-		CHART: {
-			PERCENTAGES_LABEL: "Total Portfolio",
-			TITLE: "Portfolio Chart",
-		},
-	},
-
 	FILTER_WALLETS: {
 		CRYPTOASSET: {
 			DESCRIPTION: "Select the networks to show.",
@@ -22,6 +15,10 @@ export const translations = {
 			"You don't have any transactions yet. Once transactions have been made they will show up in your history.",
 		NO_RESULTS: "No <bold>{{type}}</bold> transactions could be found.",
 		TITLE: "Latest Transactions",
+	},
+
+	PORTFOLIO_BREAKDOWN: {
+		EMPTY: "Your portfolio is currently empty. <bold>Create</bold> or <bold>Import</bold> a wallet to get started.",
 	},
 
 	WALLET_CONTROLS: {
