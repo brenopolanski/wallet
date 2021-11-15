@@ -9,6 +9,7 @@ import { useTranslation } from "react-i18next";
 import tw, { styled } from "twin.macro";
 import { shouldUseDarkColors } from "utils/electron-utils";
 
+// eslint-disable-next-line import/no-relative-parent-imports
 import { version } from "../../../../../package.json";
 
 const { PayvoLogo } = images.common;

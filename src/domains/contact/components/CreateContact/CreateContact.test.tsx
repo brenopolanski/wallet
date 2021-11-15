@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@payvo/profiles";
+import { translations } from "domains/contact/i18n";
 import React from "react";
 import { env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
 
-import { translations } from "../../i18n";
 import { CreateContact } from "./CreateContact";
 
 const onSave = jest.fn();

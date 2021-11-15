@@ -1,7 +1,7 @@
+import { translations } from "domains/transaction/i18n";
 import React from "react";
 import { fireEvent, render, screen } from "utils/testing-library";
 
-import { translations as transactionTranslations } from "../../../i18n";
 import { TransactionAmount } from "./TransactionAmount";
 
 describe("TransactionAmount", () => {
@@ -30,9 +30,7 @@ describe("TransactionAmount", () => {
 	it.each([false, true])("should render label for multiple recipients", (isMultiPayment) => {
 		const { container } = render(<TransactionAmount amount={1} currency="DARK" isTotalAmount={isMultiPayment} />);
 
-		expect(container).toHaveTextContent(
-			isMultiPayment ? transactionTranslations.TOTAL_AMOUNT : transactionTranslations.AMOUNT,
-		);
+		expect(container).toHaveTextContent(isMultiPayment ? translations.TOTAL_AMOUNT : translations.AMOUNT);
 		expect(container).toMatchSnapshot();
 	});
 

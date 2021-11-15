@@ -1,9 +1,9 @@
 import { Contracts } from "@payvo/profiles";
 import { FilterOption } from "app/components/FilterNetwork";
+import { DashboardConfiguration } from "domains/dashboard/pages/Dashboard";
 import React from "react";
 import { env, fireEvent, getDefaultProfileId, render } from "utils/testing-library";
 
-import { DashboardConfiguration } from "../../pages";
 import { FilterWallets } from "./FilterWallets";
 
 let profile: Contracts.IProfile;

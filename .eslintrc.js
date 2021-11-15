@@ -90,6 +90,7 @@ module.exports = {
 		"import/no-extraneous-dependencies": "error",
 		"import/no-mutable-exports": "error",
 		"import/no-namespace": "warn",
+		"import/no-relative-parent-imports": "error",
 		"import/no-restricted-paths": "error",
 		"import/no-self-import": "error",
 		"import/no-unresolved": "off",
@@ -194,6 +195,14 @@ module.exports = {
 		"unicorn/prevent-abbreviations": "warn", // @TODO: set to error and fix resulting issues
 		"unused-imports/no-unused-imports-ts": "error",
 	},
+	overrides: [
+		{
+			files: ["**/e2e/*.ts", "**/cucumber/*.ts", "**/cucumber/*.feature"],
+			rules: {
+				"import/no-relative-parent-imports": "off",
+			},
+		},
+	],
 	settings: {
 		react: {
 			version: "detect",

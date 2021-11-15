@@ -1,8 +1,8 @@
+import { translations } from "domains/transaction/i18n";
 import React from "react";
 import { TransactionFixture } from "tests/fixtures/transactions";
 import { render, screen } from "utils/testing-library";
 
-import { translations as transactionTranslations } from "../../../i18n";
 import { MultiPaymentRecipients } from "./MultiPaymentRecipients";
 
 describe("MultiPaymentRecipients", () => {
@@ -21,8 +21,8 @@ describe("MultiPaymentRecipients", () => {
 		);
 
 		expect(screen.getByTestId("MultiPaymentRecipients")).toBeInTheDocument();
-		expect(screen.getByText(`${transactionTranslations.RECIPIENTS} (2)`)).toBeInTheDocument();
-		expect(screen.getByText(transactionTranslations.VIEW_RECIPIENTS_LIST)).toBeInTheDocument();
+		expect(screen.getByText(`${translations.RECIPIENTS} (2)`)).toBeInTheDocument();
+		expect(screen.getByText(translations.VIEW_RECIPIENTS_LIST)).toBeInTheDocument();
 		expect(screen.getByText(recipients[0].address)).toBeInTheDocument();
 
 		expect(container).toMatchSnapshot();

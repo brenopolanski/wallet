@@ -1,9 +1,9 @@
 import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+import { translations } from "domains/transaction/i18n";
 import React from "react";
 import { renderWithForm } from "utils/testing-library";
 
-import { translations } from "../../i18n";
 import { FeeWarning, FeeWarningVariant } from "./FeeWarning";
 
 describe("FeeWarning", () => {
