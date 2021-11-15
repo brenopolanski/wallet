@@ -108,7 +108,7 @@ export const AuthenticationStep = ({
 		wallet.actsWithWifWithEncryption() ||
 		wallet.actsWithSecretWithEncryption();
 
-	const requireSecondMnemonic = wallet.isSecondSignature() && wallet.actsWithMnemonic();
+	const requireSecondMnemonic = wallet.isSecondSignature() && requireMnemonic;
 	const requireSecondSecret = wallet.isSecondSignature() && wallet.actsWithSecret();
 
 	return (
