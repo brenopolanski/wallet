@@ -16,6 +16,8 @@ import { assertWallet } from "utils/assertions";
 import { useWalletDisplay, WalletsGrid, WalletsList } from ".";
 import { WalletsProperties } from "./Wallets.contracts";
 
+type WalletActionType = "delete" | "rename";
+
 export const Wallets: FC<WalletsProperties> = ({
 	title,
 	onCreateWallet,
@@ -28,7 +30,7 @@ export const Wallets: FC<WalletsProperties> = ({
 	const [viewMore, setViewMore] = useState(false);
 	const [isWaitingLedger, setIsWaitingLedger] = useState(false);
 
-	const [modal, setModal] = useState<string | undefined>();
+	const [modal, setModal] = useState<WalletActionType | undefined>();
 	const [selectedWallet, setSelectedWallet] = useState<Contracts.IReadWriteWallet>();
 
 	const history = useHistory();
@@ -67,7 +69,7 @@ export const Wallets: FC<WalletsProperties> = ({
 
 	const handleWalletAction = (action: string, wallet: Contracts.IReadWriteWallet) => {
 		setSelectedWallet(wallet);
-		setModal(action);
+		setModal(action as WalletActionType);
 	};
 
 	const resetWalletAction = () => {
