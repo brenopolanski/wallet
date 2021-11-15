@@ -14,14 +14,14 @@ const Legend: React.VFC<LegendProperties> = ({ hasZeroBalance, onMoreDetailsClic
 		<div className="flex justify-end mb-1">
 			<div className="flex space-x-4">
 				{dataPoints.map(({ color, data }, index) => (
-					<div className="flex items-center space-x-1" key={index}>
-						<div className={`h-3 w-1 rounded bg-theme-${color}`} />
-						<div className="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-200">
+					<div className="flex items-center space-x-1 text-sm font-semibold" key={index}>
+						<span className={`h-3 w-1 rounded bg-theme-${color}`} />
+						<span className="text-theme-secondary-700 dark:text-theme-secondary-200">
 							{data.label}
-						</div>
-						<div className="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
+						</span>
+						<span className="text-theme-secondary-500 dark:text-theme-secondary-700">
 							{data.percentFormatted}
-						</div>
+						</span>
 					</div>
 				))}
 			</div>
@@ -31,7 +31,7 @@ const Legend: React.VFC<LegendProperties> = ({ hasZeroBalance, onMoreDetailsClic
 					onClick={onMoreDetailsClick}
 					type="button"
 					className={cn(
-						"font-semibold",
+						"font-semibold text-sm",
 						hasZeroBalance
 							? "cursor-not-allowed text-theme-secondary-500 dark:text-theme-secondary-700"
 							: "link",
