@@ -1,5 +1,7 @@
+import { Contracts } from "@payvo/profiles";
 import { useTheme } from "app/hooks/use-theme";
 import electron from "electron";
+import { Theme } from "types";
 import * as utils from "utils/electron-utils";
 import { env, getDefaultProfileId } from "utils/testing-library";
 
@@ -78,6 +80,28 @@ describe("useTheme", () => {
 			useTheme().setProfileTheme(profile);
 
 			expect(electron.remote.nativeTheme.themeSource).toBe("dark");
+		});
+	});
+
+	describe("resetProfileTheme", () => {
+		it.each([
+			["light", "dark"],
+			["dark", "light"],
+		])("should reset profile %s theme to defaults", async (profileTheme, systemTheme) => {
+			const profile = env.profiles().findById(getDefaultProfileId());
+			await env.profiles().restore(profile);
+
+			jest.spyOn(utils, "shouldUseDarkColors").mockImplementation(() => systemTheme === "dark");
+
+			profile.settings().set(Contracts.ProfileSetting.Theme, profileTheme);
+			useTheme().setTheme(profileTheme as Theme);
+
+			expect(electron.remote.nativeTheme.themeSource).toBe(profileTheme);
+
+			useTheme().resetProfileTheme(profile);
+
+			expect(electron.remote.nativeTheme.themeSource).toBe("system");
+			expect(profile.appearance().get("theme")).toBe(systemTheme);
 		});
 	});
 
