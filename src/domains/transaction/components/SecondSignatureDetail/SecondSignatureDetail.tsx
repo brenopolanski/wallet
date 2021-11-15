@@ -17,6 +17,8 @@ export const SecondSignatureDetail = ({ isOpen, transaction, onClose }: Transact
 
 	return (
 		<Modal title={t("TRANSACTION.MODAL_SECOND_SIGNATURE_DETAIL.TITLE")} isOpen={isOpen} onClose={onClose}>
+			<TransactionExplorerLink transaction={transaction} />
+
 			<TransactionSender address={transaction.sender()} network={transaction.wallet().network()} border={false} />
 
 			<TransactionFee currency={wallet.currency()} value={transaction.fee()} />
@@ -24,8 +26,6 @@ export const SecondSignatureDetail = ({ isOpen, transaction, onClose }: Transact
 			<TransactionTimestamp timestamp={transaction.timestamp()} />
 
 			<TransactionStatus transaction={transaction} />
-
-			<TransactionExplorerLink transaction={transaction} />
 		</Modal>
 	);
 };
