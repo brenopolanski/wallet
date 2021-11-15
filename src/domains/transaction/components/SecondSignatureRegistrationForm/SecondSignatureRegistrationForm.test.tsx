@@ -4,6 +4,7 @@ import { Contracts } from "@payvo/sdk";
 import { within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { toasts } from "app/services";
+import { translations } from "domains/transaction/i18n";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Trans, useTranslation } from "react-i18next";
@@ -21,7 +22,6 @@ import {
 	waitFor,
 } from "utils/testing-library";
 
-import { translations as transactionTranslations } from "../../i18n";
 import { SecondSignatureRegistrationForm, signSecondSignatureRegistration } from "./SecondSignatureRegistrationForm";
 
 const history = createMemoryHistory();
@@ -139,7 +139,7 @@ describe("SecondSignatureRegistrationForm", () => {
 
 		// advanced
 
-		userEvent.click(screen.getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
+		userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
 
 		await waitFor(() => expect(screen.getByTestId("InputCurrency")).toBeVisible());
 

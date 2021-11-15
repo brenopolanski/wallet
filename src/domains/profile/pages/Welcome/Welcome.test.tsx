@@ -17,7 +17,6 @@ import {
 	waitFor,
 } from "utils/testing-library";
 
-import { translations } from "../../i18n";
 import { Welcome } from ".";
 
 const fixtureProfileId = getDefaultProfileId();
@@ -28,7 +27,7 @@ describe("Welcome", () => {
 		const { container, getByText, asFragment, history } = render(<Welcome />);
 		const profile = env.profiles().findById(fixtureProfileId);
 
-		expect(getByText(translations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
+		expect(getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
 
 		expect(container).toBeInTheDocument();
 
@@ -43,7 +42,7 @@ describe("Welcome", () => {
 
 		const profile = env.profiles().findById(fixtureProfileId);
 
-		expect(getByText(translations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
+		expect(getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
 
 		expect(container).toBeInTheDocument();
 
@@ -63,7 +62,7 @@ describe("Welcome", () => {
 
 		const profile = env.profiles().findById("cba050f1-880f-45f0-9af9-cfe48f406052");
 
-		expect(getByText(translations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
+		expect(getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
 
 		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
@@ -86,7 +85,7 @@ describe("Welcome", () => {
 		const profile = env.profiles().findById(getPasswordProtectedProfileId());
 		await env.profiles().restore(profile, getDefaultPassword());
 
-		expect(getByText(translations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
+		expect(getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
 
 		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
@@ -118,7 +117,7 @@ describe("Welcome", () => {
 
 		const profile = env.profiles().findById("cba050f1-880f-45f0-9af9-cfe48f406052");
 
-		expect(getByText(translations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
+		expect(getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
 
 		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
@@ -156,7 +155,7 @@ describe("Welcome", () => {
 
 		const profile = env.profiles().findById(fixtureProfileId);
 
-		expect(getByText(translations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
+		expect(getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
 
 		const profileCardMenu = getAllByTestId("dropdown__toggle")[0];
 
@@ -179,7 +178,7 @@ describe("Welcome", () => {
 	it("should delete profile from profile card menu", async () => {
 		const { getByText, getAllByTestId, getByTestId, findByTestId } = render(<Welcome />);
 
-		expect(getByText(translations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
+		expect(getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
 
 		await waitFor(() => expect(getAllByTestId("Card")).toHaveLength(3));
 
@@ -207,7 +206,7 @@ describe("Welcome", () => {
 
 		const profile = env.profiles().findById("cba050f1-880f-45f0-9af9-cfe48f406052");
 
-		expect(getByText(translations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
+		expect(getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
 
 		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
@@ -263,9 +262,9 @@ describe("Welcome", () => {
 
 		expect(container).toBeInTheDocument();
 
-		expect(getByText(translations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
+		expect(getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
 
-		fireEvent.click(getByText(translations.CREATE_PROFILE));
+		fireEvent.click(getByText(profileTranslations.CREATE_PROFILE));
 
 		expect(history.location.pathname).toBe("/profiles/create");
 		expect(asFragment()).toMatchSnapshot();
@@ -282,7 +281,7 @@ describe("Welcome", () => {
 
 		expect(container).toBeInTheDocument();
 
-		expect(getByText(translations.PAGE_WELCOME.WITHOUT_PROFILES.TITLE)).toBeInTheDocument();
+		expect(getByText(profileTranslations.PAGE_WELCOME.WITHOUT_PROFILES.TITLE)).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});

@@ -1,4 +1,5 @@
 import { Contracts } from "@payvo/profiles";
+import { LedgerProvider, useLedgerContext } from "app/contexts/Ledger";
 import nock from "nock";
 import React from "react";
 import {
@@ -11,7 +12,6 @@ import {
 	waitFor,
 } from "utils/testing-library";
 
-import { LedgerProvider, useLedgerContext } from "../Ledger";
 import { useLedgerScanner } from "./scanner";
 
 const transport = getDefaultLedgerTransport();

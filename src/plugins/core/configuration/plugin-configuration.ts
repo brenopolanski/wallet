@@ -6,6 +6,7 @@ import { SerializedPluginConfigurationData } from "plugins/types";
 import semver from "semver";
 import { assertString } from "utils/assertions";
 
+// eslint-disable-next-line import/no-relative-parent-imports
 import appPackage from "../../../../package.json";
 import { allPermissions } from "./permissions";
 import { schema } from "./schema";

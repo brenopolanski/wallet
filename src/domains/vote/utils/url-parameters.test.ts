@@ -1,6 +1,6 @@
+import { VoteDelegateProperties } from "domains/vote/components/DelegateTable/DelegateTable.models";
 import { data } from "tests/fixtures/coins/ark/devnet/delegates.json";
 
-import { VoteDelegateProperties } from "../components/DelegateTable/DelegateTable.models";
 import { appendParameters, getParameters, ParameterNameProperties } from "./url-parameters";
 
 describe("#urlParameters", () => {

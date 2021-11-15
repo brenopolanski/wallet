@@ -1,3 +1,5 @@
+const path = require("path");
+
 module.exports = {
 	module: {
 		rules: [
@@ -19,6 +21,10 @@ module.exports = {
 		],
 	},
 	resolve: {
+		alias: {
+			plugins: path.resolve(__dirname, "./src/plugins"),
+			utils: path.resolve(__dirname, "./src/utils"),
+		},
 		extensions: [".js", ".ts"],
 	},
 };

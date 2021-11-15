@@ -1,9 +1,9 @@
 import { Contracts } from "@payvo/profiles";
 import { fireEvent, waitFor, within } from "@testing-library/react";
+import { translations } from "domains/transaction/i18n";
 import React from "react";
 import { act, env, getDefaultProfileId, render, screen } from "utils/testing-library";
 
-import { translations } from "../../i18n";
 import { SearchRecipient } from "./SearchRecipient";
 import { RecipientProperties } from "./SearchRecipient.contracts";
 

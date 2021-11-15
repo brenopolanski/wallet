@@ -1,8 +1,8 @@
 import { waitFor } from "@testing-library/react";
+import { translations } from "app/i18n/common/i18n";
 import React from "react";
 import { fireEvent, render, screen } from "utils/testing-library";
 
-import { translations } from "../../i18n/common/i18n";
 import { Clipboard } from "./Clipboard";
 
 describe("ClipboardIcon", () => {

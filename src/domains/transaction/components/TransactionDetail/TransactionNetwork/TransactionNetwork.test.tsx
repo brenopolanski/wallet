@@ -1,8 +1,8 @@
+import { translations } from "domains/transaction/i18n";
 import React from "react";
 import { availableNetworksMock } from "tests/mocks/networks";
 import { render } from "utils/testing-library";
 
-import { translations as transactionTranslations } from "../../../i18n";
 import { TransactionNetwork } from "./TransactionNetwork";
 
 describe("TransactionNetwork", () => {
@@ -11,7 +11,7 @@ describe("TransactionNetwork", () => {
 
 		const { container } = render(<TransactionNetwork network={network!} />);
 
-		expect(container).toHaveTextContent(transactionTranslations.CRYPTOASSET);
+		expect(container).toHaveTextContent(translations.CRYPTOASSET);
 		expect(container).toHaveTextContent("ark.svg");
 
 		expect(container).toMatchSnapshot();

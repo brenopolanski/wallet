@@ -3,6 +3,7 @@ import { Contracts } from "@payvo/profiles";
 import { WalletData, WalletLedgerModel } from "@payvo/profiles/distribution/contracts";
 import { LSK } from "@payvo/sdk-lsk";
 import { renderHook } from "@testing-library/react-hooks";
+import { minVersionList } from "app/contexts/Ledger/contracts";
 import { toasts } from "app/services";
 import { translations as walletTranslations } from "domains/wallet/i18n";
 import nock from "nock";
@@ -19,7 +20,6 @@ import {
 	waitFor,
 } from "utils/testing-library";
 
-import { minVersionList } from "../contracts";
 import { useLedgerConnection } from "./connection";
 
 const transport = getDefaultLedgerTransport();

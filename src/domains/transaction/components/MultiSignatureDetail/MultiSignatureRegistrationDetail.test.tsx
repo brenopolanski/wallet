@@ -1,10 +1,10 @@
 import { Contracts } from "@payvo/profiles";
+import { translations } from "domains/transaction/i18n";
 import React from "react";
 import { Route } from "react-router-dom";
 import { TransactionFixture } from "tests/fixtures/transactions";
 import { env, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
 
-import { translations } from "../../i18n";
 import { MultiSignatureRegistrationDetail } from "./MultiSignatureRegistrationDetail";
 
 describe("MultiSignatureRegistrationDetail", () => {

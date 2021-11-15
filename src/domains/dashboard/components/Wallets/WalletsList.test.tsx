@@ -1,11 +1,11 @@
 import { Contracts } from "@payvo/profiles";
 import { screen } from "@testing-library/react";
+import { translations } from "domains/dashboard/i18n";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 import { env, getDefaultProfileId, render } from "utils/testing-library";
 
-import { translations } from "../../i18n";
 import { GridWallet, WalletsList } from ".";
 
 const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;

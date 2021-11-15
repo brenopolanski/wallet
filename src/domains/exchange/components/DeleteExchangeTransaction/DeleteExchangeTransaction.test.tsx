@@ -1,8 +1,8 @@
 import { Contracts } from "@payvo/profiles";
+import { translations } from "domains/exchange/i18n";
 import React from "react";
 import { env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
 
-import { translations } from "../../i18n";
 import { DeleteExchangeTransaction } from "./DeleteExchangeTransaction";
 
 let profile: Contracts.IProfile;
