@@ -203,18 +203,6 @@ describe("useNetworks", () => {
 		networks.map((network) => expect(getByText(network.displayName())).toBeInTheDocument());
 	});
 
-	it("should throw the error when no profile", () => {
-		expect(() =>
-			render(
-				<Route path="">
-					<TestNetworks />
-				</Route>,
-			),
-		).toThrow(
-			`Parameter [profileId] must be available on the route where [useActiveProfile] is called. Current route is [/].`,
-		);
-	});
-
 	it("should throw error with no profile", () => {
 		expect(() =>
 			render(
