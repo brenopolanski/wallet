@@ -25,7 +25,11 @@ describe("useActiveProfile", () => {
 	const TestWallet: React.FC = () => {
 		const wallet = useActiveWallet();
 
-		return <h1>{wallet?.address()}</h1>;
+		if (!wallet) {
+			return <h1>{wallet}</h1>;
+		}
+
+		return <h1>{wallet.address()}</h1>;
 	};
 
 	it("should return profile", () => {
@@ -201,7 +205,6 @@ describe("useNetworks", () => {
 		);
 
 		networks.map((network, index) => {
-			expect(getByText(network.displayName())).toBeInTheDocument();
 			expect(getByText(`${index}:${network.displayName()}`)).toBeInTheDocument();
 		});
 	});
