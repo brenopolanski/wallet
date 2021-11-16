@@ -1,16 +1,17 @@
-import { Contracts } from "@payvo/profiles";
+import { sortByDesc } from "@arkecosystem/utils";
+import { Contracts, Helpers } from "@payvo/profiles";
 import { Amount } from "app/components/Amount";
 import { EmptyBlock } from "app/components/EmptyBlock";
+import { GRAPH_COLOR_EMPTY } from "app/components/Graphs/Graphs.shared";
 import { LineGraph } from "app/components/Graphs/LineGraph";
-import { LineGraphMapper } from "app/components/Graphs/LineGraph/LineGraph.contracts";
+import { LineGraphDataPoint } from "app/components/Graphs/LineGraph/LineGraph.contracts";
 import { PortfolioBreakdownDetails } from "domains/dashboard/components/PortfolioBreakdownDetails";
 import { usePortfolioBreakdown } from "domains/dashboard/hooks/use-portfolio-breakdown";
 import React, { useMemo, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
 
 import { LabelledText, Legend, PortfolioBreakdownSkeleton, Tooltip } from "./PortfolioBreakdown.blocks";
-import { AssetItem } from "./PortfolioBreakdown.contracts";
-import { getAssetsToDataPointsMapper } from "./PortfolioBreakdown.helpers";
+import { formatPercentage, getColor } from "./PortfolioBreakdown.helpers";
 
 interface PortfolioBreakdownProperties {
 	profile: Contracts.IProfile;
@@ -32,10 +33,29 @@ export const PortfolioBreakdown: React.VFC<PortfolioBreakdownProperties> = ({
 
 	const hasZeroBalance = useMemo(() => balance === 0, [balance]);
 
-	const mapper = useMemo<LineGraphMapper<AssetItem>>(() => getAssetsToDataPointsMapper(ticker, hasZeroBalance), [
-		ticker,
-		hasZeroBalance,
-	]);
+	const lineGraphData = useMemo<LineGraphDataPoint[]>(() => {
+		if (hasZeroBalance) {
+			return assets.map((asset) => ({
+				color: GRAPH_COLOR_EMPTY,
+				data: {
+					amountFormatted: Helpers.Currency.format(0, ticker),
+					label: asset.label,
+					percentFormatted: `0%`,
+				},
+				value: 0,
+			}));
+		}
+
+		return sortByDesc(assets, "percent").map((asset, index) => ({
+			color: getColor(index),
+			data: {
+				amountFormatted: Helpers.Currency.format(asset.convertedAmount, ticker),
+				label: asset.label,
+				percentFormatted: formatPercentage(asset.percent),
+			},
+			value: asset.percent,
+		}));
+	}, [assets, hasZeroBalance, ticker]);
 
 	if (loading && assets.length === 0) {
 		return <PortfolioBreakdownSkeleton />;
@@ -48,8 +68,6 @@ export const PortfolioBreakdown: React.VFC<PortfolioBreakdownProperties> = ({
 			</EmptyBlock>
 		);
 	}
-
-	// @TODO improve dark mode styles
 
 	return (
 		<>
@@ -70,8 +88,7 @@ export const PortfolioBreakdown: React.VFC<PortfolioBreakdownProperties> = ({
 
 				<div className="flex-1 ml-6">
 					<LineGraph
-						items={assets}
-						mapper={mapper}
+						data={lineGraphData}
 						renderAsEmpty={hasZeroBalance}
 						renderTooltip={(dataPoint) => <Tooltip dataPoint={dataPoint} />}
 						renderLegend={(dataPoints) => (

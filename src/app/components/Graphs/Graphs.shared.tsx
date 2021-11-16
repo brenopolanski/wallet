@@ -4,12 +4,14 @@ const GRAPH_COLORS = ["success-600", "warning-600", "info-600", "danger-400", "h
 
 const GRAPH_COLOR_EMPTY = "secondary-300";
 
-const useGraphWidth = (reference: MutableRefObject<SVGSVGElement | null>): number => {
+function useGraphWidth<TElement>(): [MutableRefObject<TElement | null>, number] {
+	const reference = useRef<TElement | null>(null);
+
 	const [value, setValue] = useState(0);
 
 	useEffect(() => {
 		const setWidth = () => {
-			setValue(reference.current?.clientWidth ?? 0);
+			setValue((reference.current as HTMLElement | null)?.clientWidth ?? 0);
 		};
 
 		setWidth();
@@ -21,8 +23,8 @@ const useGraphWidth = (reference: MutableRefObject<SVGSVGElement | null>): numbe
 		};
 	});
 
-	return value;
-};
+	return [reference, value];
+}
 
 interface UseGraphTooltipReturnType<TDataPoint, TSvgElement> {
 	Tooltip: React.VFC;
@@ -64,9 +66,7 @@ function useGraphTooltip<TDataPoint, TSvgElement>(
 
 			const targetTop = (event.target as HTMLElement).getBoundingClientRect().top;
 
-			if (!tooltipDataPoint) {
-				setTooltipDataPoint(dataPoint);
-			}
+			setTooltipDataPoint(dataPoint);
 
 			tooltipElement.style.left = `${event.pageX - Math.floor(tooltipElement.clientWidth / 2)}px`;
 			tooltipElement.style.top = `${targetTop - 48}px`;

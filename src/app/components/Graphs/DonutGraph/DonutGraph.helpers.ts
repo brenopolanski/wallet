@@ -3,7 +3,7 @@ import React, { useMemo } from "react";
 import { DonutGraphDataPoint } from "./DonutGraph.contracts";
 
 const GRAPH_MARGIN = 20;
-const SEGMENT_SPACING = 16;
+const SEGMENT_SPACING = 20;
 
 interface DonutGraphConfig {
 	circleCommonProperties: React.SVGProps<SVGCircleElement>;

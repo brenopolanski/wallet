@@ -40,7 +40,7 @@ export const PortfolioBreakdownDetails: React.VFC<PortfolioBreakdownDetailsPrope
 		<Modal isOpen={isOpen} title={t("DASHBOARD.PORTFOLIO_BREAKDOWN_DETAILS.TITLE")} onClose={onClose}>
 			<div className="space-y-4">
 				<div className="flex justify-center">
-					<DonutGraph data={donutGraphData} size={300} />
+					<DonutGraph data={donutGraphData} size={280} />
 				</div>
 
 				<AssetList assets={assets} exchangeCurrency={exchangeCurrency} />

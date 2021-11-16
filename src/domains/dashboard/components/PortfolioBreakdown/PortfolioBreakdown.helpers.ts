@@ -1,8 +1,4 @@
-import { sortByDesc } from "@arkecosystem/utils";
-import { Helpers } from "@payvo/profiles";
-import { GRAPH_COLOR_EMPTY, GRAPH_COLORS } from "app/components/Graphs/Graphs.shared";
-import { LineGraphDataPoint, LineGraphMapper } from "app/components/Graphs/LineGraph/LineGraph.contracts";
-import { AssetItem } from "domains/dashboard/components/PortfolioBreakdown/PortfolioBreakdown.contracts";
+import { GRAPH_COLORS } from "app/components/Graphs/Graphs.shared";
 
 const getColor = (index: number): string => {
 	if (GRAPH_COLORS[index]) {
@@ -14,56 +10,4 @@ const getColor = (index: number): string => {
 
 const formatPercentage = (value: number): string => `${Math.round(((value || 0) + Number.EPSILON) * 100) / 100}%`;
 
-const getAssetsToDataPointsMapper: (ticker: string, hasZeroBalance: boolean) => LineGraphMapper<AssetItem> = (
-	ticker,
-	hasZeroBalance,
-) => (items, { graphWidth, segmentSpacing }) => {
-	if (hasZeroBalance) {
-		return items.map((item) => ({
-			color: GRAPH_COLOR_EMPTY,
-			data: {
-				amountFormatted: Helpers.Currency.format(0, ticker),
-				label: item.label,
-				percentFormatted: `0%`,
-			},
-			width: 0,
-			x: 0,
-		}));
-	}
-
-	const assets = sortByDesc(items, "percent");
-
-	const dataPoints: LineGraphDataPoint[] = [];
-
-	for (let index = 0; index < items.length; index++) {
-		const asset = assets[index];
-
-		let width = (asset.percent * graphWidth) / 100;
-		let x = 0;
-
-		if (index > 0) {
-			// Calculate x position based on width and X of the previous segment, and add spacing.
-			x = dataPoints[index - 1].x + dataPoints[index - 1].width + segmentSpacing;
-		}
-
-		if (index < items.length - 1) {
-			// Decrease width by spacing to every item except the last one.
-			width -= segmentSpacing;
-		}
-
-		dataPoints.push({
-			color: getColor(index),
-			data: {
-				amountFormatted: Helpers.Currency.format(asset.convertedAmount, ticker),
-				label: asset.label,
-				percentFormatted: formatPercentage(asset.percent),
-			},
-			width,
-			x,
-		});
-	}
-
-	return dataPoints;
-};
-
-export { formatPercentage, getAssetsToDataPointsMapper, getColor };
+export { formatPercentage, getColor };

@@ -1,10 +1,7 @@
-import React from "react";
-
 interface LineGraphDataPoint {
 	color: string;
 	data: Record<string, any>;
-	width: number;
-	x: number;
+	value: number;
 }
 
 interface LineGraphConfig {
@@ -14,36 +11,11 @@ interface LineGraphConfig {
 	segmentSpacing: number;
 }
 
-interface LineGraphSegmentProperties {
-	config: LineGraphConfig;
-	dataPoint: LineGraphDataPoint;
-	onMouseMove?: (event: React.MouseEvent<SVGRectElement>) => void;
-	onMouseOut?: (event: React.MouseEvent<SVGRectElement>) => void;
-}
-
-interface LineGraphAnimationProperties {
-	animations: {
-		attribute: string;
-		from: number;
-		to: number;
-	}[];
-}
-
-type LineGraphMapper<TItem> = (items: TItem[], config: LineGraphConfig) => LineGraphDataPoint[];
-
-interface LineGraphProperties<TItem> {
-	items: TItem[];
-	mapper: LineGraphMapper<TItem>;
+interface LineGraphProperties {
+	data: LineGraphDataPoint[];
 	renderLegend?: (dataPoints: LineGraphDataPoint[]) => JSX.Element;
 	renderTooltip?: (dataPoint: LineGraphDataPoint) => JSX.Element;
 	renderAsEmpty?: boolean;
 }
 
-export type {
-	LineGraphAnimationProperties,
-	LineGraphDataPoint,
-	LineGraphConfig,
-	LineGraphMapper,
-	LineGraphProperties,
-	LineGraphSegmentProperties,
-};
+export type { LineGraphConfig, LineGraphDataPoint, LineGraphProperties };

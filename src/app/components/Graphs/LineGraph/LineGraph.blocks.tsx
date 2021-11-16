@@ -1,6 +1,15 @@
+import { GRAPH_COLOR_EMPTY } from "app/components/Graphs/Graphs.shared";
 import React from "react";
 
-import { LineGraphAnimationProperties, LineGraphSegmentProperties } from "./LineGraph.contracts";
+import { LineGraphConfig } from "./LineGraph.contracts";
+
+interface LineGraphAnimationProperties {
+	animations: {
+		attribute: string;
+		from: number;
+		to: number;
+	}[];
+}
 
 const LineGraphAnimation: React.VFC<LineGraphAnimationProperties> = ({ animations }) => (
 	<>
@@ -13,28 +22,19 @@ const LineGraphAnimation: React.VFC<LineGraphAnimationProperties> = ({ animation
 	</>
 );
 
-export const LineGraphSegment: React.VFC<LineGraphSegmentProperties> = ({
-	config: { segmentHeight, segmentHeightHover },
-	dataPoint: { x, width, color },
-	onMouseMove,
-	onMouseOut,
-}) => (
+interface LineGraphEmptyProperties {
+	config: LineGraphConfig;
+}
+
+const LineGraphEmpty: React.VFC<LineGraphEmptyProperties> = ({ config }) => (
 	<rect
-		onMouseMove={onMouseMove}
-		onMouseOut={onMouseOut}
-		x={x}
-		y={segmentHeight}
-		className={`fill-current text-theme-${color}`}
-		width={width}
-		height={segmentHeight}
-		rx={segmentHeight / 2}
-	>
-		<LineGraphAnimation
-			animations={[
-				{ attribute: "height", from: segmentHeight, to: segmentHeightHover },
-				{ attribute: "rx", from: segmentHeight / 2, to: segmentHeightHover / 2 },
-				{ attribute: "y", from: segmentHeight, to: 0 },
-			]}
-		/>
-	</rect>
+		x={0}
+		y={config.segmentHeight}
+		className={`fill-current text-theme-${GRAPH_COLOR_EMPTY}`}
+		width={config.graphWidth}
+		height={config.segmentHeight}
+		rx={config.segmentHeight / 2}
+	/>
 );
+
+export { LineGraphAnimation, LineGraphEmpty };
