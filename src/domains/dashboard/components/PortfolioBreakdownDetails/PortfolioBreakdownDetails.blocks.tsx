@@ -49,7 +49,7 @@ interface AssetListProperties {
 const AssetList: React.VFC<AssetListProperties> = ({ assets, exchangeCurrency }) => {
 	const { t } = useTranslation();
 
-  const initialState = useMemo<Partial<TableState<AssetItem>>>(
+	const initialState = useMemo<Partial<TableState<AssetItem>>>(
 		() => ({
 			sortBy: [
 				{
