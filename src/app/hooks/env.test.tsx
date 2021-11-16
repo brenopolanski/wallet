@@ -24,7 +24,7 @@ describe("useActiveProfile", () => {
 	const TestWallet: React.FC = () => {
 		const wallet = useActiveWallet();
 
-		return <h1>{wallet.address()}</h1>;
+		return <h1>{wallet?.address()}</h1>;
 	};
 
 	it("should return profile", () => {

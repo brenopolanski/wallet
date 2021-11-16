@@ -26,19 +26,7 @@ export const useActiveWallet = (): Contracts.IReadWriteWallet => {
 	const profile = useActiveProfile();
 	const { walletId } = useParams<{ walletId: string }>();
 
-	// TODO: allow to return `undefined`, now it's not supported by components
-	// @ts-ignore
-	return useMemo(() => {
-		if (!profile || !walletId) {
-			return undefined;
-		}
-
-		try {
-			return profile.wallets().findById(walletId);
-		} catch {
-			return undefined;
-		}
-	}, [profile, walletId]);
+	return useMemo(() => profile.wallets().findById(walletId), [profile, walletId]);
 };
 
 export const useNetworks = () => {
