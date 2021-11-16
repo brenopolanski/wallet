@@ -68,16 +68,17 @@ const TooltipWrapper = styled.div`
 // @TODO improve dark mode styles
 const Tooltip: React.VFC<TooltipProperties> = ({ dataPoint: { color, data } }) => (
 	<TooltipWrapper>
-		<div className={`h-3 w-1 rounded bg-theme-${color}`} />
-		<div className="text-sm font-semibold text-white ml-1">{data.label}</div>
 
-		<Divider type="vertical" />
+		<div className="flex space-x-3 divide-x divide-theme-secondary-700 text-sm font-semibold">
+			<div className="flex items-center space-x-2">
+				<div className={`h-3 w-1 rounded bg-theme-${color}`} />
+				<span className="text-white">{data.label}</span>
+			</div>
 
-		<div className="text-sm font-semibold text-theme-secondary-500">{data.amountFormatted}</div>
+			<span className="pl-3 text-theme-secondary-500">{data.amountFormatted}</span>
 
-		<Divider type="vertical" />
-
-		<div className="text-sm font-semibold text-theme-secondary-500">{data.percentFormatted}</div>
+			<span className="pl-3 text-theme-secondary-500">{data.percentFormatted}</span>
+		</div>
 	</TooltipWrapper>
 );
 
