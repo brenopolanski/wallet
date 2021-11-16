@@ -87,7 +87,7 @@ export const PortfolioBreakdown: React.VFC<PortfolioBreakdownProperties> = ({
 
 			<PortfolioBreakdownDetails
 				isOpen={isDetailsOpen}
-				data={assets}
+				assets={assets}
 				exchangeCurrency={ticker}
 				onClose={() => setIsDetailsOpen(false)}
 			/>

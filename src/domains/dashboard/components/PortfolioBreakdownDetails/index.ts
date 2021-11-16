@@ -1,1 +1,1 @@
-export * from "./PortfolioBreakdownDetails";
+export { PortfolioBreakdownDetails } from "./PortfolioBreakdownDetails";

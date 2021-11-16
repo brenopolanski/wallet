@@ -2,7 +2,7 @@ import { GRAPH_COLOR_EMPTY, useGraphTooltip, useGraphWidth } from "app/component
 import React, { useRef } from "react";
 
 import { LineGraphSegment } from "./LineGraph.blocks";
-import { LineGraphDataPoint, LineGraphGraphConfig, LineGraphProperties } from "./LineGraph.contracts";
+import { LineGraphConfig, LineGraphDataPoint, LineGraphProperties } from "./LineGraph.contracts";
 
 export function LineGraph<TItem>({
 	items,
@@ -16,7 +16,7 @@ export function LineGraph<TItem>({
 
 	const { Tooltip, getMouseEventProperties } = useGraphTooltip<LineGraphDataPoint, SVGRectElement>(renderTooltip);
 
-	const config: LineGraphGraphConfig = {
+	const config: LineGraphConfig = {
 		graphWidth,
 		segmentHeight: 8,
 		segmentHeightHover: 16,

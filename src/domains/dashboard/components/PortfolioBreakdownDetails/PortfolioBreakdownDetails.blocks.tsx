@@ -42,11 +42,11 @@ const AssetListItem: React.VFC<AssetListItemProperties> = ({ asset, index, excha
 };
 
 interface AssetListProperties {
-	data: AssetItem[];
+	assets: AssetItem[];
 	exchangeCurrency: string;
 }
 
-const AssetList: React.VFC<AssetListProperties> = ({ data, exchangeCurrency }) => {
+const AssetList: React.VFC<AssetListProperties> = ({ assets, exchangeCurrency }) => {
 	const { t } = useTranslation();
 
 	const columns = useMemo<Column<AssetItem>[]>(
@@ -82,7 +82,7 @@ const AssetList: React.VFC<AssetListProperties> = ({ data, exchangeCurrency }) =
 	);
 
 	return (
-		<Table columns={columns} data={data}>
+		<Table columns={columns} data={assets}>
 			{renderTableRow}
 		</Table>
 	);

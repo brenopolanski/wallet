@@ -7,7 +7,7 @@ interface LineGraphDataPoint {
 	x: number;
 }
 
-interface LineGraphGraphConfig {
+interface LineGraphConfig {
 	graphWidth: number;
 	segmentHeight: number;
 	segmentHeightHover: number;
@@ -15,7 +15,7 @@ interface LineGraphGraphConfig {
 }
 
 interface LineGraphSegmentProperties {
-	config: LineGraphGraphConfig;
+	config: LineGraphConfig;
 	dataPoint: LineGraphDataPoint;
 	onMouseMove?: (event: React.MouseEvent<SVGRectElement>) => void;
 	onMouseOut?: (event: React.MouseEvent<SVGRectElement>) => void;
@@ -29,7 +29,7 @@ interface LineGraphAnimationProperties {
 	}[];
 }
 
-type LineGraphMapper<TItem> = (items: TItem[], config: LineGraphGraphConfig) => LineGraphDataPoint[];
+type LineGraphMapper<TItem> = (items: TItem[], config: LineGraphConfig) => LineGraphDataPoint[];
 
 interface LineGraphProperties<TItem> {
 	items: TItem[];
@@ -42,7 +42,7 @@ interface LineGraphProperties<TItem> {
 export type {
 	LineGraphAnimationProperties,
 	LineGraphDataPoint,
-	LineGraphGraphConfig,
+	LineGraphConfig,
 	LineGraphMapper,
 	LineGraphProperties,
 	LineGraphSegmentProperties,
