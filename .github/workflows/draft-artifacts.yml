@@ -72,7 +72,7 @@ jobs:
                   path: dist/target/payvo-wallet-linux-amd64-1.0.0.deb
 
     macOS:
-        runs-on: macos-11
+        runs-on: macos-latest
 
         strategy:
             matrix:
