@@ -1,10 +1,12 @@
+import { GraphAnimation } from "app/components/Graphs/GraphHoverAnimation/GraphHoverAnimation.contract";
 import React, { useMemo } from "react";
 
-import { DonutGraphCircle, UseDonutGraphHook } from "./DonutGraph.contracts";
+import { DonutGraphDataPoint } from "./DonutGraph.contracts";
 
-const GRAPH_MARGIN = 20;
+const BACKGROUND_CIRCLE_SPACING = 16;
+const GRAPH_MARGIN = 32;
+const RADIUS_HOVER_INCREMENT = 16;
 const SEGMENT_SPACING = 20;
-const RADIUS_HOVER_INCREMENT = 6;
 
 interface DonutGraphConfig {
 	circleCommonProperties: React.SVGProps<SVGCircleElement>;
@@ -14,7 +16,17 @@ interface DonutGraphConfig {
 	radiusHover: number;
 }
 
-export const useDonutGraph: UseDonutGraphHook = (data, size) => {
+interface DonutGraphCircle {
+	circleProperties: React.SVGProps<SVGCircleElement>;
+	animations: GraphAnimation[];
+}
+
+interface UseDonutGraphResult {
+	backgroundCircle: React.SVGProps<SVGCircleElement>;
+	circles: DonutGraphCircle[];
+}
+
+export const useDonutGraph = (data: DonutGraphDataPoint[], size: number): UseDonutGraphResult => {
 	const {
 		circleCommonProperties,
 		circumference,
@@ -28,16 +40,11 @@ export const useDonutGraph: UseDonutGraphHook = (data, size) => {
 		const radius = diameter / 2;
 		const radiusHover = radius + RADIUS_HOVER_INCREMENT;
 
-		// Trigger mouseenter/mouseleave only when
-		// target is a visible part of the circle.
-		const pointerEvents = "visibleStroke";
-
 		return {
 			circleCommonProperties: {
 				cx: center,
 				cy: center,
 				fill: "transparent",
-				pointerEvents,
 				r: radius,
 				strokeLinecap: "round",
 				strokeWidth: 16,
@@ -49,7 +56,18 @@ export const useDonutGraph: UseDonutGraphHook = (data, size) => {
 		};
 	}, [size]);
 
-	return useMemo(() => {
+	const backgroundCircle = useMemo<React.SVGProps<SVGCircleElement>>(
+		() => ({
+			...circleCommonProperties,
+			className: "fill-current text-theme-secondary-200",
+			fill: "inherit",
+			r: radius - BACKGROUND_CIRCLE_SPACING,
+			strokeWidth: 0,
+		}),
+		[size], // eslint-disable-line react-hooks/exhaustive-deps
+	);
+
+	const circles = useMemo<DonutGraphCircle[]>(() => {
 		const items: DonutGraphCircle[] = [];
 
 		// When there is only 1 segment avoid showing
@@ -66,8 +84,8 @@ export const useDonutGraph: UseDonutGraphHook = (data, size) => {
 			const gap = (circumference * (100 - value)) / 100;
 			const gapHover = (circumferenceHover * (100 - value)) / 100;
 
-			// This has to be equal to the sum of the lengths
-			// of the previous segments or they will overlap.
+			// stroke-dashoffset has to be equal to the sum of the
+			// lengths of the previous segments or they will overlap.
 			strokeDashoffset += dash;
 			strokeDashoffsetHover += dashHover;
 
@@ -103,4 +121,9 @@ export const useDonutGraph: UseDonutGraphHook = (data, size) => {
 
 		return items;
 	}, [circumference, data]); // eslint-disable-line react-hooks/exhaustive-deps
+
+	return {
+		backgroundCircle,
+		circles,
+	};
 };

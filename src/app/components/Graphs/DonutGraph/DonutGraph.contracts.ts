@@ -1,6 +1,3 @@
-import { GraphAnimation } from "app/components/Graphs/GraphHoverAnimation/GraphHoverAnimation.contract";
-import React from "react";
-
 interface DonutGraphDataPoint {
 	color: string;
 	data: Record<string, any>;
@@ -13,11 +10,4 @@ interface DonutGraphProperties {
 	renderTooltip?: (dataPoint: DonutGraphDataPoint) => JSX.Element;
 }
 
-interface DonutGraphCircle {
-	circleProperties: React.SVGProps<SVGCircleElement>;
-	animations: GraphAnimation[];
-}
-
-type UseDonutGraphHook = (data: DonutGraphDataPoint[], size: number) => DonutGraphCircle[];
-
-export type { DonutGraphCircle, DonutGraphDataPoint, DonutGraphProperties, UseDonutGraphHook };
+export type { DonutGraphDataPoint, DonutGraphProperties };
