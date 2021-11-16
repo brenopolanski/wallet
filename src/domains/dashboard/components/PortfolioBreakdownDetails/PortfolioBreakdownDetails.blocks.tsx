@@ -4,7 +4,7 @@ import { AssetItem } from "domains/dashboard/components/PortfolioBreakdown/Portf
 import { formatPercentage, getColor } from "domains/dashboard/components/PortfolioBreakdown/PortfolioBreakdown.helpers";
 import React, { useCallback, useMemo } from "react";
 import { useTranslation } from "react-i18next";
-import { Column } from "react-table";
+import { Column, TableState } from "react-table";
 
 interface AssetListItemProperties {
 	asset: AssetItem;
@@ -49,6 +49,17 @@ interface AssetListProperties {
 const AssetList: React.VFC<AssetListProperties> = ({ assets, exchangeCurrency }) => {
 	const { t } = useTranslation();
 
+	const initialState = useMemo<Partial<TableState<AssetItem>>>(
+		() => ({
+			sortBy: [
+				{
+					id: "label",
+				},
+			],
+		}),
+		[],
+	);
+
 	const columns = useMemo<Column<AssetItem>[]>(
 		() => [
 			{
@@ -82,7 +93,7 @@ const AssetList: React.VFC<AssetListProperties> = ({ assets, exchangeCurrency })
 	);
 
 	return (
-		<Table columns={columns} data={assets}>
+		<Table columns={columns} data={assets} initialState={initialState}>
 			{renderTableRow}
 		</Table>
 	);
