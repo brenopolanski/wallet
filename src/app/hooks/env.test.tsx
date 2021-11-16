@@ -204,6 +204,8 @@ describe("useNetworks", () => {
 	});
 
 	it("should throw error with no profile", () => {
+		const consoleErrorSpy = jest.spyOn(console, "error").mockImplementation();
+
 		expect(() =>
 			render(
 				<Route path="/profiles/:profileId/wallets/:walletId">
@@ -214,5 +216,7 @@ describe("useNetworks", () => {
 				},
 			),
 		).toThrow("No profile found for [undefined].");
+
+		consoleErrorSpy.mockRestore();
 	});
 });

@@ -36,17 +36,7 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 		defaultValues: formDefaultValues,
 		mode: "onChange",
 	});
-	const {
-		clearErrors,
-		formState: { isDirty, isValid, isSubmitting },
-		getValues,
-		register,
-		setValue,
-		handleSubmit,
-		watch,
-		reset,
-		trigger,
-	} = form;
+	const { clearErrors, formState, getValues, register, setValue, handleSubmit, watch, reset, trigger } = form;
 
 	const { senderAddress, fees, fee, remainingBalance, amount, isSendAllSelected, network } = watch();
 	const { sendTransfer: sendTransferValidation, common: commonValidation } = useValidation();
@@ -203,7 +193,7 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 
 	return {
 		form,
-		formState: { isDirty, isSubmitting, isValid },
+		formState,
 		getValues,
 		handleSubmit,
 		lastEstimatedExpiration,
