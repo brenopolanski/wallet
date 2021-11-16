@@ -1,6 +1,6 @@
-import { sortBy } from "@arkecosystem/utils";
-import { Contracts } from "@payvo/sdk-profiles";
 import { Networks } from "@payvo/sdk";
+import { sortBy } from "@payvo/sdk-helpers";
+import { Contracts } from "@payvo/sdk-profiles";
 import { useEnvironmentContext } from "app/contexts/Environment";
 import { useMemo } from "react";
 import { useHistory, useParams } from "react-router-dom";
