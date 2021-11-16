@@ -1,7 +1,8 @@
+import { GraphHoverAnimation } from "app/components/Graphs/GraphHoverAnimation";
 import { useGraphTooltip, useGraphWidth } from "app/components/Graphs/Graphs.shared";
 import React from "react";
 
-import { LineGraphAnimation, LineGraphEmpty } from "./LineGraph.blocks";
+import { LineGraphEmpty } from "./LineGraph.blocks";
 import { LineGraphConfig, LineGraphDataPoint, LineGraphProperties } from "./LineGraph.contracts";
 import { useLineGraph } from "./LineGraph.helpers";
 
@@ -26,7 +27,7 @@ export const LineGraph: React.VFC<LineGraphProperties> = ({ data, renderLegend, 
 
 		return rectangles.map((rectProperties, index) => (
 			<rect key={index} {...rectProperties} {...getMouseEventProperties(data[index])}>
-				<LineGraphAnimation
+				<GraphHoverAnimation
 					animations={[
 						{ attribute: "height", from: config.segmentHeight, to: config.segmentHeightHover },
 						{ attribute: "rx", from: config.segmentHeight / 2, to: config.segmentHeightHover / 2 },

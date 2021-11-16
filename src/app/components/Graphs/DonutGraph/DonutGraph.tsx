@@ -1,3 +1,4 @@
+import { GraphHoverAnimation } from "app/components/Graphs/GraphHoverAnimation";
 import React from "react";
 
 import { DonutGraphProperties } from "./DonutGraph.contracts";
@@ -8,8 +9,10 @@ export const DonutGraph: React.VFC<DonutGraphProperties> = ({ data, size }) => {
 
 	return (
 		<svg width={size} height={size}>
-			{circles.map((circleProperties, index) => (
-				<circle key={index} {...circleProperties} />
+			{circles.map(({ circleProperties, animations }, index) => (
+				<circle key={index} {...circleProperties}>
+					<GraphHoverAnimation animations={animations} />
+				</circle>
 			))}
 		</svg>
 	);

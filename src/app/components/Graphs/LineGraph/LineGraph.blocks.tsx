@@ -3,25 +3,6 @@ import React from "react";
 
 import { LineGraphConfig } from "./LineGraph.contracts";
 
-interface LineGraphAnimationProperties {
-	animations: {
-		attribute: string;
-		from: number;
-		to: number;
-	}[];
-}
-
-const LineGraphAnimation: React.VFC<LineGraphAnimationProperties> = ({ animations }) => (
-	<>
-		{animations.map(({ attribute, from, to }, index) => (
-			<React.Fragment key={index}>
-				<animate attributeName={attribute} from={from} to={to} dur="0.1s" begin="mouseover" fill="freeze" />
-				<animate attributeName={attribute} from={to} to={from} dur="0.15s" begin="mouseleave" fill="freeze" />
-			</React.Fragment>
-		))}
-	</>
-);
-
 interface LineGraphEmptyProperties {
 	config: LineGraphConfig;
 }
@@ -37,4 +18,4 @@ const LineGraphEmpty: React.VFC<LineGraphEmptyProperties> = ({ config }) => (
 	/>
 );
 
-export { LineGraphAnimation, LineGraphEmpty };
+export { LineGraphEmpty };
