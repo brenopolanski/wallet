@@ -1,6 +1,5 @@
-import { Contracts, DTO } from "@payvo/profiles";
-import { Networks, Services } from "@payvo/sdk";
-import { sortBy } from "@payvo/sdk-helpers";
+import { Networks } from "@payvo/sdk";
+import { Contracts, DTO } from "@payvo/sdk-profiles";
 import { Form } from "app/components/Form";
 import { Page, Section } from "app/components/Layout";
 import { StepIndicator } from "app/components/StepIndicator";
@@ -31,7 +30,7 @@ const MAX_TABS = 5;
 
 export const SendTransfer: VFC = () => {
 	const history = useHistory();
-	const activeWallet = useActiveWalletWhenNeeded();
+	const activeWallet = useActiveWalletWhenNeeded(false);
 	const activeProfile = useActiveProfile();
 	const networks = useNetworks();
 	const { fetchWalletUnconfirmedTransactions } = useTransaction();
@@ -111,8 +110,13 @@ export const SendTransfer: VFC = () => {
 		resetForm();
 	}, [resetForm]); // eslint-disable-line react-hooks/exhaustive-deps
 
-	const { dismissFeeWarning, feeWarningVariant, requireFeeConfirmation, showFeeWarning, setShowFeeWarning } =
-		useFeeConfirmation(fee, fees);
+	const {
+		dismissFeeWarning,
+		feeWarningVariant,
+		requireFeeConfirmation,
+		showFeeWarning,
+		setShowFeeWarning,
+	} = useFeeConfirmation(fee, fees);
 
 	useEffect(() => {
 		if (network) {

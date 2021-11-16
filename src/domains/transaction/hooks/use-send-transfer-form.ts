@@ -1,5 +1,5 @@
-import { Contracts } from "@payvo/profiles";
 import { Services } from "@payvo/sdk";
+import { Contracts } from "@payvo/sdk-profiles";
 import { useEnvironmentContext, useLedgerContext } from "app/contexts";
 import { useActiveProfile, useNetworks, useValidation } from "app/hooks";
 import { useTransactionBuilder } from "domains/transaction/hooks/use-transaction-builder";
