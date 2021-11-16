@@ -1,4 +1,3 @@
-import { Divider } from "app/components/Divider";
 import { Skeleton } from "app/components/Skeleton";
 import cn from "classnames";
 import React, { useRef } from "react";
@@ -68,7 +67,6 @@ const TooltipWrapper = styled.div`
 // @TODO improve dark mode styles
 const Tooltip: React.VFC<TooltipProperties> = ({ dataPoint: { color, data } }) => (
 	<TooltipWrapper>
-
 		<div className="flex space-x-3 divide-x divide-theme-secondary-700 text-sm font-semibold">
 			<div className="flex items-center space-x-2">
 				<div className={`h-3 w-1 rounded bg-theme-${color}`} />
