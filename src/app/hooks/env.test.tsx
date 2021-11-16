@@ -183,8 +183,8 @@ describe("useNetworks", () => {
 		const networks = useNetworks();
 		return (
 			<ul>
-				{networks.map((network) => (
-					<li key={network.id()}>{network.displayName()}</li>
+				{networks.map((network, index) => (
+					<li key={network.id()}>{`${index}:${network.displayName()}`}</li>
 				))}
 			</ul>
 		);
@@ -200,7 +200,10 @@ describe("useNetworks", () => {
 			},
 		);
 
-		networks.map((network) => expect(getByText(network.displayName())).toBeInTheDocument());
+		networks.map((network, index) => {
+			expect(getByText(network.displayName())).toBeInTheDocument();
+			expect(getByText(`${index}:${network.displayName()}`)).toBeInTheDocument();
+		});
 	});
 
 	it("should throw error with no profile", () => {
