@@ -12,6 +12,8 @@ const getColor = (index: number): string => {
 	return GRAPH_COLORS[GRAPH_COLORS.length - 1];
 };
 
+const formatPercentage = (value: number): string => `${Math.round(((value || 0) + Number.EPSILON) * 100) / 100}%`;
+
 const getAssetsToDataPointsMapper: (ticker: string, hasZeroBalance: boolean) => LineGraphMapper<AssetItem> = (
 	ticker,
 	hasZeroBalance,
@@ -54,7 +56,7 @@ const getAssetsToDataPointsMapper: (ticker: string, hasZeroBalance: boolean) => 
 			data: {
 				amountFormatted: Helpers.Currency.format(asset.convertedAmount, ticker),
 				label: asset.label,
-				percentFormatted: `${Math.round(((asset.percent || 0) + Number.EPSILON) * 100) / 100}%`,
+				percentFormatted: formatPercentage(asset.percent),
 			},
 			width,
 			x,
@@ -64,4 +66,4 @@ const getAssetsToDataPointsMapper: (ticker: string, hasZeroBalance: boolean) => 
 	return dataPoints;
 };
 
-export { getAssetsToDataPointsMapper, getColor };
+export { formatPercentage, getAssetsToDataPointsMapper, getColor };

@@ -72,7 +72,6 @@ function useGraphTooltip<TDataPoint, TSvgElement>(
 			tooltipElement.style.top = `${targetTop - 48}px`;
 
 			tooltipElement.classList.remove("hidden");
-
 			tooltipElement.classList.remove("opacity-0");
 			tooltipElement.classList.add("opacity-100");
 		},
@@ -81,9 +80,7 @@ function useGraphTooltip<TDataPoint, TSvgElement>(
 			tooltipReference.current?.classList.remove("opacity-100");
 
 			setTimeout(() => {
-				if (tooltipReference.current) {
-					tooltipReference.current?.classList.add("hidden");
-				}
+				tooltipReference.current?.classList.add("hidden");
 			}, 200);
 		},
 	});

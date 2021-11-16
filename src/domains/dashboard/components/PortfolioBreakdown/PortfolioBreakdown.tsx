@@ -2,13 +2,14 @@ import { Contracts } from "@payvo/profiles";
 import { Amount } from "app/components/Amount";
 import { EmptyBlock } from "app/components/EmptyBlock";
 import { LineGraph } from "app/components/Graphs/LineGraph";
+import { LineGraphMapper } from "app/components/Graphs/LineGraph/LineGraph.contracts";
 import { PortfolioBreakdownDetails } from "domains/dashboard/components/PortfolioBreakdownDetails";
 import { usePortfolioBreakdown } from "domains/dashboard/hooks/use-portfolio-breakdown";
 import React, { useMemo, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
-import { assertString } from "utils/assertions";
 
 import { LabelledText, Legend, PortfolioBreakdownSkeleton, Tooltip } from "./PortfolioBreakdown.blocks";
+import { AssetItem } from "./PortfolioBreakdown.contracts";
 import { getAssetsToDataPointsMapper } from "./PortfolioBreakdown.helpers";
 
 interface PortfolioBreakdownProperties {
@@ -22,7 +23,7 @@ export const PortfolioBreakdown: React.VFC<PortfolioBreakdownProperties> = ({
 }) => {
 	const { t } = useTranslation();
 
-	const [isDetailsOpen, setIsDetailsOpen] = useState(false); // @TODO add modal
+	const [isDetailsOpen, setIsDetailsOpen] = useState(false);
 
 	const { loading, balance, assets, walletsCount, ticker } = usePortfolioBreakdown({
 		profile,
@@ -31,12 +32,14 @@ export const PortfolioBreakdown: React.VFC<PortfolioBreakdownProperties> = ({
 
 	const hasZeroBalance = useMemo(() => balance === 0, [balance]);
 
+	const mapper = useMemo<LineGraphMapper<AssetItem>>(() => getAssetsToDataPointsMapper(ticker, hasZeroBalance), [
+		ticker,
+		hasZeroBalance,
+	]);
+
 	if (loading && assets.length === 0) {
 		return <PortfolioBreakdownSkeleton />;
 	}
-
-	const exchangeCurrency = profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency);
-	assertString(exchangeCurrency);
 
 	if (assets.length === 0) {
 		return (
@@ -68,7 +71,7 @@ export const PortfolioBreakdown: React.VFC<PortfolioBreakdownProperties> = ({
 				<div className="flex-1 ml-6">
 					<LineGraph
 						items={assets}
-						mapper={getAssetsToDataPointsMapper(ticker, hasZeroBalance)}
+						mapper={mapper}
 						renderAsEmpty={hasZeroBalance}
 						renderTooltip={(dataPoint) => <Tooltip dataPoint={dataPoint} />}
 						renderLegend={(dataPoints) => (
@@ -85,7 +88,7 @@ export const PortfolioBreakdown: React.VFC<PortfolioBreakdownProperties> = ({
 			<PortfolioBreakdownDetails
 				isOpen={isDetailsOpen}
 				data={assets}
-				exchangeCurrency={exchangeCurrency}
+				exchangeCurrency={ticker}
 				onClose={() => setIsDetailsOpen(false)}
 			/>
 		</>
