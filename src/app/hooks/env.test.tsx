@@ -1,10 +1,11 @@
+import { Networks } from "@payvo/sdk";
 import { Contracts } from "@payvo/sdk-profiles";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 import { env, getDefaultProfileId, render } from "utils/testing-library";
 
-import { useActiveProfile, useActiveWallet, useActiveWalletWhenNeeded } from "./env";
+import { useActiveProfile, useActiveWallet, useActiveWalletWhenNeeded, useNetworks } from "./env";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
@@ -163,5 +164,67 @@ describe("useActiveProfile", () => {
 		expect(activeWalletId).toBeUndefined();
 
 		consoleSpy.mockRestore();
+	});
+});
+
+let networks: Networks.Network[];
+let wallets: Contracts.IReadWriteWallet[];
+
+describe("useNetworks", () => {
+	beforeEach(() => {
+		profile = env.profiles().findById(getDefaultProfileId());
+		wallets = profile.wallets().values();
+		networks = wallets
+			.map((wallet) => wallet.network())
+			.sort((a, b) => a.displayName().localeCompare(b.displayName()));
+	});
+
+	const TestNetworks = () => {
+		const networks = useNetworks();
+		return (
+			<ul>
+				{networks.map((network) => (
+					<li key={network.id()}>{network.displayName()}</li>
+				))}
+			</ul>
+		);
+	};
+
+	it("should return networks", () => {
+		const { getByText } = render(
+			<Route path="/profiles/:profileId">
+				<TestNetworks />
+			</Route>,
+			{
+				routes: [`/profiles/${profile.id()}`],
+			},
+		);
+
+		networks.map((network) => expect(getByText(network.displayName())).toBeInTheDocument());
+	});
+
+	it("should throw the error when no profile", () => {
+		expect(() =>
+			render(
+				<Route path="">
+					<TestNetworks />
+				</Route>,
+			),
+		).toThrow(
+			`Parameter [profileId] must be available on the route where [useActiveProfile] is called. Current route is [/].`,
+		);
+	});
+
+	it("should throw error with no profile", () => {
+		expect(() =>
+			render(
+				<Route path="/profiles/:profileId/wallets/:walletId">
+					<TestNetworks />
+				</Route>,
+				{
+					routes: [`/profiles/${"undefined"}/wallets/${"undefined"}`],
+				},
+			),
+		).toThrow("No profile found for [undefined].");
 	});
 });
