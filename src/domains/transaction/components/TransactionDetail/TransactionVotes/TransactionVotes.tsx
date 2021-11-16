@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { TransactionDetail } from "domains/transaction/components/TransactionDetail";
 import { VoteList } from "domains/vote/components/VoteList";
 import React from "react";

@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { Amount } from "app/components/Amount";
 import { useProfileBalance } from "app/hooks/use-profile-balance";
 import React, { useEffect, useRef, useState } from "react";

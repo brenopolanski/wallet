@@ -1,4 +1,4 @@
-import { DateTime } from "@payvo/intl";
+import { DateTime } from "@payvo/sdk-intl";
 import { images } from "app/assets/images";
 import { CircularProgressBar } from "app/components/CircularProgressBar";
 import { Divider } from "app/components/Divider";

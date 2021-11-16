@@ -1,12 +1,13 @@
 import { Contracts, DTO } from "@payvo/profiles";
-import { Networks } from "@payvo/sdk";
+import { Networks, Services } from "@payvo/sdk";
+import { sortBy } from "@payvo/sdk-helpers";
 import { Form } from "app/components/Form";
 import { Page, Section } from "app/components/Layout";
 import { StepIndicator } from "app/components/StepIndicator";
 import { StepNavigation } from "app/components/StepNavigation";
 import { TabPanel, Tabs } from "app/components/Tabs";
 import { useLedgerContext } from "app/contexts";
-import { useActiveProfile, useActiveWallet, useNetworks } from "app/hooks";
+import { useActiveProfile, useActiveWalletWhenNeeded, useNetworks } from "app/hooks";
 import { useKeydown } from "app/hooks/use-keydown";
 import { AuthenticationStep } from "domains/transaction/components/AuthenticationStep";
 import { ConfirmSendTransaction } from "domains/transaction/components/ConfirmSendTransaction";
@@ -30,7 +31,7 @@ const MAX_TABS = 5;
 
 export const SendTransfer: VFC = () => {
 	const history = useHistory();
-	const activeWallet = useActiveWallet();
+	const activeWallet = useActiveWalletWhenNeeded();
 	const activeProfile = useActiveProfile();
 	const networks = useNetworks();
 	const { fetchWalletUnconfirmedTransactions } = useTransaction();
@@ -110,13 +111,8 @@ export const SendTransfer: VFC = () => {
 		resetForm();
 	}, [resetForm]); // eslint-disable-line react-hooks/exhaustive-deps
 
-	const {
-		dismissFeeWarning,
-		feeWarningVariant,
-		requireFeeConfirmation,
-		showFeeWarning,
-		setShowFeeWarning,
-	} = useFeeConfirmation(fee, fees);
+	const { dismissFeeWarning, feeWarningVariant, requireFeeConfirmation, showFeeWarning, setShowFeeWarning } =
+		useFeeConfirmation(fee, fees);
 
 	useEffect(() => {
 		if (network) {

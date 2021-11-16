@@ -1,4 +1,4 @@
-import { DTO } from "@payvo/profiles";
+import { DTO } from "@payvo/sdk-profiles";
 import { NotificationTransactionItem } from "app/components/Notifications";
 import { Table } from "app/components/Table";
 import {

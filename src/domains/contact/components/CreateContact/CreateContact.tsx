@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { Modal } from "app/components/Modal";
 import { useEnvironmentContext } from "app/contexts";
 import { ContactForm } from "domains/contact/components/ContactForm";

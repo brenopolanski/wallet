@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import * as navigation from "app/constants/navigation";
 import * as environmentHooks from "app/hooks/env";
 import * as useScrollHook from "app/hooks/use-scroll";

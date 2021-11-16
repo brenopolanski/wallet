@@ -1,5 +1,5 @@
 import { sortBy } from "@arkecosystem/utils";
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { Networks } from "@payvo/sdk";
 import { useEnvironmentContext } from "app/contexts/Environment";
 import { useMemo } from "react";
@@ -58,4 +58,21 @@ export const useNetworks = () => {
 
 		return sortBy(Object.values(results), (network) => network.displayName());
 	}, [activeProfile]);
+};
+
+export const useActiveWalletWhenNeeded = (isRequired: boolean) => {
+	const profile = useActiveProfile();
+	const { walletId } = useParams<{ walletId: string }>();
+
+	return useMemo(() => {
+		try {
+			return profile.wallets().findById(walletId);
+		} catch (error) {
+			if (isRequired) {
+				throw error;
+			}
+
+			return undefined;
+		}
+	}, [isRequired, profile, walletId]);
 };

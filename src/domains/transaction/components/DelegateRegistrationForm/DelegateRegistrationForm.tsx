@@ -1,4 +1,4 @@
-import { Contracts, DTO } from "@payvo/profiles";
+import { Contracts, DTO } from "@payvo/sdk-profiles";
 import { TabPanel, Tabs } from "app/components/Tabs";
 import { TransactionDetail, TransactionFee } from "domains/transaction/components/TransactionDetail";
 import { SendRegistrationForm } from "domains/transaction/pages/SendRegistration/SendRegistration.models";

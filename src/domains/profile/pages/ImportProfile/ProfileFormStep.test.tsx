@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { EnvironmentProvider } from "app/contexts";
 import { ImportProfileForm } from "domains/profile/pages/ImportProfile/ProfileFormStep";
 import electron from "electron";

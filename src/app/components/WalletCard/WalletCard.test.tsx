@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import * as useRandomNumberHook from "app/hooks/use-random-number";
 import { createMemoryHistory } from "history";
 import React from "react";

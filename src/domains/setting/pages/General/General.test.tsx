@@ -1,6 +1,8 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { within } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
+import { useAccentColor, useTheme } from "app/hooks";
 import { buildTranslations } from "app/i18n/helpers";
 import { toasts } from "app/services";
 import { GeneralSettings } from "domains/setting/pages";
@@ -597,6 +599,59 @@ describe("General Settings", () => {
 		await waitFor(() => {
 			expect(toastSpy).toHaveBeenCalledWith(translations.SETTINGS.GENERAL.SUCCESS);
 		});
+
+		toastSpy.mockRestore();
+	});
+
+	it("should reset appearance settings on reset", async () => {
+		const toastSpy = jest.spyOn(toasts, "success");
+		const { setAccentColor, getCurrentAccentColor } = useAccentColor();
+
+		expect(getCurrentAccentColor()).toBe("green");
+		expect(electron.remote.nativeTheme.themeSource).not.toBe("dark");
+
+		setAccentColor("blue");
+		useTheme().setTheme("dark");
+
+		expect(getCurrentAccentColor()).toBe("blue");
+		expect(electron.remote.nativeTheme.themeSource).toBe("dark");
+
+		render(
+			<Route path="/profiles/:profileId/settings">
+				<GeneralSettings />
+			</Route>,
+			{
+				routes: [`/profiles/${profile.id()}/settings`],
+			},
+		);
+
+		await waitFor(() => {
+			expect(screen.getByText(translations.COMMON.RESET_SETTINGS)).toBeInTheDocument();
+		});
+
+		userEvent.click(screen.getByText(translations.COMMON.RESET_SETTINGS));
+
+		await waitFor(() => {
+			expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
+		});
+
+		expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.PROFILE.MODAL_RESET_PROFILE.TITLE);
+		expect(screen.getByTestId("modal__inner")).toHaveTextContent(
+			translations.PROFILE.MODAL_RESET_PROFILE.DESCRIPTION,
+		);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("ResetProfile__submit-button")).toBeEnabled();
+		});
+
+		userEvent.click(screen.getByTestId("ResetProfile__submit-button"));
+
+		await waitFor(() => {
+			expect(toastSpy).toHaveBeenCalledWith(translations.PROFILE.MODAL_RESET_PROFILE.SUCCESS);
+		});
+
+		expect(getCurrentAccentColor()).toBe("green");
+		expect(electron.remote.nativeTheme.themeSource).toBe("system");
 
 		toastSpy.mockRestore();
 	});

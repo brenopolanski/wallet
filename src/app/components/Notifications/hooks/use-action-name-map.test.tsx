@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import nock from "nock";
 import { env, getDefaultProfileId } from "utils/testing-library";

@@ -3,7 +3,7 @@
 exports[`MultiPaymentRecipients should render recipients 1`] = `
 <div>
   <div
-    class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
+    class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 hFlzIg no-ligatures"
     data-testid="MultiPaymentRecipients"
   >
     <div
@@ -19,11 +19,11 @@ exports[`MultiPaymentRecipients should render recipients 1`] = `
             Recipients (2)
           </span>
           <div
-            class="Divider-sc-17ehhxk-0 hmyWsm border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="Divider-sc-17ehhxk-0 hhDSpl border-theme-secondary-300 dark:border-theme-secondary-800"
             type="vertical"
           />
           <a
-            class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+            class="Link__AnchorStyled-sc-ec014t-0 eeKUfa group ring-focus"
             data-ring-focus-margin="-m-1"
             data-testid="Link"
             href="#"
@@ -31,12 +31,12 @@ exports[`MultiPaymentRecipients should render recipients 1`] = `
             to="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
           >
             <span
-              class="Link__Content-sc-ec014t-1 hUiuRR"
+              class="Link__Content-sc-ec014t-1 jGLnf"
             >
               View Full List
             </span>
             <div
-              class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block text-sm"
+              class="sc-bdvvtL fCrhkg flex-shrink-0 duration-200 inline-block text-sm"
               data-testid="Link__external"
               height="16"
               width="16"
@@ -67,7 +67,7 @@ exports[`MultiPaymentRecipients should render recipients 1`] = `
       class="flex items-center -space-x-1"
     >
       <div
-        class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
+        class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
         data-testid="Avatar"
       >
         <div

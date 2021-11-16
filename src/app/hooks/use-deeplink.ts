@@ -1,4 +1,4 @@
-import { URI } from "@payvo/helpers";
+import { URI } from "@payvo/sdk-helpers";
 import { useEnvironmentContext } from "app/contexts";
 import { toasts } from "app/services";
 import { ipcRenderer } from "electron";

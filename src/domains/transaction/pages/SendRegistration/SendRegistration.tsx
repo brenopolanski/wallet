@@ -1,6 +1,6 @@
-import { DTO } from "@payvo/profiles";
-import { WalletLedgerModel } from "@payvo/profiles/distribution/contracts";
 import { Networks } from "@payvo/sdk";
+import { DTO } from "@payvo/sdk-profiles";
+import { WalletLedgerModel } from "@payvo/sdk-profiles/distribution/contracts";
 import { Form } from "app/components/Form";
 import { Page, Section } from "app/components/Layout";
 import { StepIndicator } from "app/components/StepIndicator";
@@ -33,7 +33,7 @@ export const SendRegistration = () => {
 	const history = useHistory();
 
 	const [activeTab, setActiveTab] = useState(1);
-	const [transaction, setTransaction] = useState((null as unknown) as DTO.ExtendedSignedTransactionData);
+	const [transaction, setTransaction] = useState(null as unknown as DTO.ExtendedSignedTransactionData);
 	const [registrationForm, setRegistrationForm] = useState<SendRegistrationForm>();
 	const [errorMessage, setErrorMessage] = useState<string | undefined>();
 
@@ -75,13 +75,8 @@ export const SendRegistration = () => {
 		register("isLoading");
 	}, [register, activeWallet, common, fees]);
 
-	const {
-		dismissFeeWarning,
-		feeWarningVariant,
-		requireFeeConfirmation,
-		showFeeWarning,
-		setShowFeeWarning,
-	} = useFeeConfirmation(fee, fees);
+	const { dismissFeeWarning, feeWarningVariant, requireFeeConfirmation, showFeeWarning, setShowFeeWarning } =
+		useFeeConfirmation(fee, fees);
 
 	useEffect(() => {
 		setValue("senderAddress", activeWallet.address(), { shouldDirty: true, shouldValidate: true });

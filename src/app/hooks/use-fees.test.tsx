@@ -1,5 +1,5 @@
-import { BigNumber } from "@payvo/helpers";
 import { ARK } from "@payvo/sdk-ark";
+import { BigNumber } from "@payvo/sdk-helpers";
 import { LSK } from "@payvo/sdk-lsk";
 import { renderHook } from "@testing-library/react-hooks";
 import { EnvironmentProvider } from "app/contexts";

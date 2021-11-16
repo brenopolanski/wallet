@@ -28,7 +28,8 @@ export const SelectNetworkInput = React.forwardRef<HTMLInputElement, Properties>
 								data-testid="SelectNetworkInput__network"
 								className={cn({
 									"border-theme-danger-500 text-theme-danger-500": isInvalidValue,
-									"border-theme-secondary-200 dark:border-theme-secondary-700 text-theme-secondary-500": !isInvalidValue,
+									"border-theme-secondary-200 dark:border-theme-secondary-700 text-theme-secondary-500":
+										!isInvalidValue,
 								})}
 								network={network}
 								size="sm"

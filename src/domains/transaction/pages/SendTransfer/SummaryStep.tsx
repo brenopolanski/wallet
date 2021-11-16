@@ -1,4 +1,4 @@
-import { Contracts, DTO } from "@payvo/profiles";
+import { Contracts, DTO } from "@payvo/sdk-profiles";
 import { useWalletAlias } from "app/hooks";
 import { RecipientItem } from "domains/transaction/components/RecipientList/RecipientList.contracts";
 import {

@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { Theme } from "types";
 import { setThemeSource, shouldUseDarkColors } from "utils/electron-utils";
 
@@ -32,5 +32,11 @@ export const useTheme = () => {
 
 	const resetTheme = () => setTheme("system");
 
-	return { isDarkMode, resetTheme, setProfileTheme, setTheme, theme };
+	const resetProfileTheme = (profile: Contracts.IProfile) => {
+		resetTheme();
+
+		profile.settings().set(Contracts.ProfileSetting.Theme, shouldUseDarkColors() ? "dark" : "light");
+	};
+
+	return { isDarkMode, resetProfileTheme, resetTheme, setProfileTheme, setTheme, theme };
 };

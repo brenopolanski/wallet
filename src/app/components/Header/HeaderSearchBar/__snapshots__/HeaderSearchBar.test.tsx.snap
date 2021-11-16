@@ -10,7 +10,7 @@ exports[`HeaderSearchBar should render 1`] = `
       class="group"
     >
       <button
-        class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus"
+        class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus"
         type="button"
       >
         <div
@@ -20,7 +20,7 @@ exports[`HeaderSearchBar should render 1`] = `
             Search
           </span>
           <div
-            class="sc-bdnxRM NjstW"
+            class="sc-bdvvtL qGXhc"
             height="20"
             width="20"
           >

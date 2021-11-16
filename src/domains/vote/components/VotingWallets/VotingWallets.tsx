@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { EmptyResults } from "app/components/EmptyResults";
 import { Section } from "app/components/Layout";
 import { AddressTable } from "domains/vote/components/AddressTable";

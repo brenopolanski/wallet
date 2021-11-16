@@ -4,10 +4,10 @@ exports[`Add Participant should fail if cannot find the address remotely 1`] = `
 <DocumentFragment>
   <div>
     <div
-      class="SubForm__SubFormWrapper-sc-1x20s74-0 eYhvbV"
+      class="SubForm__SubFormWrapper-sc-1x20s74-0 fTuEVK"
     >
       <fieldset
-        class="FormField__FormFieldStyled-sc-q4bblx-0 kknRCr flex flex-col space-y-2"
+        class="FormField__FormFieldStyled-sc-q4bblx-0 jvfbQA flex flex-col space-y-2"
       >
         <label
           class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -25,14 +25,14 @@ exports[`Add Participant should fail if cannot find the address remotely 1`] = `
               class="relative w-full"
             >
               <div
-                class="Input__InputWrapperStyled-sc-1i8sd1r-0 kzbxct sr-only"
+                class="Input__InputWrapperStyled-sc-1i8sd1r-0 eyownm sr-only"
               >
                 <div
                   class="relative flex flex-1 h-full"
                 >
                   <input
                     aria-invalid="true"
-                    class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                    class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                     data-testid="select-list__input"
                     name="address"
                     readonly=""
@@ -48,7 +48,7 @@ exports[`Add Participant should fail if cannot find the address remotely 1`] = `
                     data-testid="Input__error"
                   >
                     <div
-                      class="sc-bdnxRM NjstW text-theme-danger-500"
+                      class="sc-bdvvtL qGXhc text-theme-danger-500"
                       height="20"
                       width="20"
                     >
@@ -73,13 +73,13 @@ exports[`Add Participant should fail if cannot find the address remotely 1`] = `
                     id="SelectRecipient__dropdown-label"
                   />
                   <div
-                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 kzbxct"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 eyownm"
                   >
                     <div
                       class="flex items-center"
                     >
                       <div
-                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 dNqA-DA flex-shrink-0"
+                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 jiaHcL flex-shrink-0"
                         data-testid="Avatar"
                       >
                         <div
@@ -102,7 +102,7 @@ exports[`Add Participant should fail if cannot find the address remotely 1`] = `
                         aria-invalid="true"
                         aria-labelledby="SelectRecipient__dropdown-label"
                         autocomplete="off"
-                        class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                        class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                         data-testid="SelectDropdown__input"
                         id="SelectRecipient__dropdown-input"
                         name="address"
@@ -118,7 +118,7 @@ exports[`Add Participant should fail if cannot find the address remotely 1`] = `
                         data-testid="Input__error"
                       >
                         <div
-                          class="sc-bdnxRM NjstW text-theme-danger-500"
+                          class="sc-bdvvtL qGXhc text-theme-danger-500"
                           height="20"
                           width="20"
                         >
@@ -135,7 +135,7 @@ exports[`Add Participant should fail if cannot find the address remotely 1`] = `
                           data-testid="SelectRecipient__select-recipient"
                         >
                           <div
-                            class="sc-bdnxRM NjstW"
+                            class="sc-bdvvtL qGXhc"
                             height="20"
                             width="20"
                           >
@@ -149,7 +149,7 @@ exports[`Add Participant should fail if cannot find the address remotely 1`] = `
                   </div>
                   <ul
                     aria-labelledby="SelectRecipient__dropdown-label"
-                    class="styles__SelectOptionsList-sc-120rtxy-0 eqsPyr"
+                    class="styles__SelectOptionsList-sc-120rtxy-0 HcHWp"
                     id="SelectRecipient__dropdown-menu"
                     role="listbox"
                   />
@@ -160,7 +160,7 @@ exports[`Add Participant should fail if cannot find the address remotely 1`] = `
         </div>
       </fieldset>
       <button
-        class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL my-4 w-full"
+        class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc my-4 w-full"
         type="button"
       >
         <div
@@ -174,10 +174,10 @@ exports[`Add Participant should fail if cannot find the address remotely 1`] = `
       class="mt-3 border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
-        class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 bCfwoA"
+        class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 hSCHjT"
       >
         <div
-          class="Table__TableWrapper-sc-1gcp0fb-0 fDAVsO -mt-3"
+          class="Table__TableWrapper-sc-1gcp0fb-0 jHfvAR -mt-3"
           role="table"
         >
           <table
@@ -244,7 +244,7 @@ exports[`Add Participant should fail if cannot find the address remotely 1`] = `
                   class="flex-none py-6"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -297,7 +297,7 @@ exports[`Add Participant should fail if cannot find the address remotely 1`] = `
                     class="inline-block"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 dQCpEO"
                       data-testid="recipient-list__remove-recipient"
                       disabled=""
                       type="button"
@@ -309,7 +309,7 @@ exports[`Add Participant should fail if cannot find the address remotely 1`] = `
                           class="py-1"
                         >
                           <div
-                            class="sc-bdnxRM AFVmm"
+                            class="sc-bdvvtL fCrhkg"
                             height="16"
                             width="16"
                           >
@@ -336,10 +336,10 @@ exports[`Add Participant should fail to find 1`] = `
 <DocumentFragment>
   <div>
     <div
-      class="SubForm__SubFormWrapper-sc-1x20s74-0 eYhvbV"
+      class="SubForm__SubFormWrapper-sc-1x20s74-0 fTuEVK"
     >
       <fieldset
-        class="FormField__FormFieldStyled-sc-q4bblx-0 kknRCr flex flex-col space-y-2"
+        class="FormField__FormFieldStyled-sc-q4bblx-0 jvfbQA flex flex-col space-y-2"
       >
         <label
           class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -357,14 +357,14 @@ exports[`Add Participant should fail to find 1`] = `
               class="relative w-full"
             >
               <div
-                class="Input__InputWrapperStyled-sc-1i8sd1r-0 kzbxct sr-only"
+                class="Input__InputWrapperStyled-sc-1i8sd1r-0 eyownm sr-only"
               >
                 <div
                   class="relative flex flex-1 h-full"
                 >
                   <input
                     aria-invalid="true"
-                    class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                    class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                     data-testid="select-list__input"
                     name="address"
                     readonly=""
@@ -380,7 +380,7 @@ exports[`Add Participant should fail to find 1`] = `
                     data-testid="Input__error"
                   >
                     <div
-                      class="sc-bdnxRM NjstW text-theme-danger-500"
+                      class="sc-bdvvtL qGXhc text-theme-danger-500"
                       height="20"
                       width="20"
                     >
@@ -405,13 +405,13 @@ exports[`Add Participant should fail to find 1`] = `
                     id="SelectRecipient__dropdown-label"
                   />
                   <div
-                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 kzbxct"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 eyownm"
                   >
                     <div
                       class="flex items-center"
                     >
                       <div
-                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 dNqA-DA flex-shrink-0"
+                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 jiaHcL flex-shrink-0"
                         data-testid="Avatar"
                       >
                         <div
@@ -434,7 +434,7 @@ exports[`Add Participant should fail to find 1`] = `
                         aria-invalid="true"
                         aria-labelledby="SelectRecipient__dropdown-label"
                         autocomplete="off"
-                        class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                        class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                         data-testid="SelectDropdown__input"
                         id="SelectRecipient__dropdown-input"
                         name="address"
@@ -450,7 +450,7 @@ exports[`Add Participant should fail to find 1`] = `
                         data-testid="Input__error"
                       >
                         <div
-                          class="sc-bdnxRM NjstW text-theme-danger-500"
+                          class="sc-bdvvtL qGXhc text-theme-danger-500"
                           height="20"
                           width="20"
                         >
@@ -467,7 +467,7 @@ exports[`Add Participant should fail to find 1`] = `
                           data-testid="SelectRecipient__select-recipient"
                         >
                           <div
-                            class="sc-bdnxRM NjstW"
+                            class="sc-bdvvtL qGXhc"
                             height="20"
                             width="20"
                           >
@@ -481,7 +481,7 @@ exports[`Add Participant should fail to find 1`] = `
                   </div>
                   <ul
                     aria-labelledby="SelectRecipient__dropdown-label"
-                    class="styles__SelectOptionsList-sc-120rtxy-0 eqsPyr"
+                    class="styles__SelectOptionsList-sc-120rtxy-0 HcHWp"
                     id="SelectRecipient__dropdown-menu"
                     role="listbox"
                   />
@@ -492,7 +492,7 @@ exports[`Add Participant should fail to find 1`] = `
         </div>
       </fieldset>
       <button
-        class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL my-4 w-full"
+        class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc my-4 w-full"
         type="button"
       >
         <div
@@ -506,10 +506,10 @@ exports[`Add Participant should fail to find 1`] = `
       class="mt-3 border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
-        class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 bCfwoA"
+        class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 hSCHjT"
       >
         <div
-          class="Table__TableWrapper-sc-1gcp0fb-0 fDAVsO -mt-3"
+          class="Table__TableWrapper-sc-1gcp0fb-0 jHfvAR -mt-3"
           role="table"
         >
           <table
@@ -576,7 +576,7 @@ exports[`Add Participant should fail to find 1`] = `
                   class="flex-none py-6"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -629,7 +629,7 @@ exports[`Add Participant should fail to find 1`] = `
                     class="inline-block"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 dQCpEO"
                       data-testid="recipient-list__remove-recipient"
                       disabled=""
                       type="button"
@@ -641,7 +641,7 @@ exports[`Add Participant should fail to find 1`] = `
                           class="py-1"
                         >
                           <div
-                            class="sc-bdnxRM AFVmm"
+                            class="sc-bdvvtL fCrhkg"
                             height="16"
                             width="16"
                           >
@@ -668,10 +668,10 @@ exports[`Add Participant should fail with a duplicate address 1`] = `
 <DocumentFragment>
   <div>
     <div
-      class="SubForm__SubFormWrapper-sc-1x20s74-0 eYhvbV"
+      class="SubForm__SubFormWrapper-sc-1x20s74-0 fTuEVK"
     >
       <fieldset
-        class="FormField__FormFieldStyled-sc-q4bblx-0 kknRCr flex flex-col space-y-2"
+        class="FormField__FormFieldStyled-sc-q4bblx-0 jvfbQA flex flex-col space-y-2"
       >
         <label
           class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -689,14 +689,14 @@ exports[`Add Participant should fail with a duplicate address 1`] = `
               class="relative w-full"
             >
               <div
-                class="Input__InputWrapperStyled-sc-1i8sd1r-0 kzbxct sr-only"
+                class="Input__InputWrapperStyled-sc-1i8sd1r-0 eyownm sr-only"
               >
                 <div
                   class="relative flex flex-1 h-full"
                 >
                   <input
                     aria-invalid="true"
-                    class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                    class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                     data-testid="select-list__input"
                     name="address"
                     readonly=""
@@ -712,7 +712,7 @@ exports[`Add Participant should fail with a duplicate address 1`] = `
                     data-testid="Input__error"
                   >
                     <div
-                      class="sc-bdnxRM NjstW text-theme-danger-500"
+                      class="sc-bdvvtL qGXhc text-theme-danger-500"
                       height="20"
                       width="20"
                     >
@@ -742,13 +742,13 @@ exports[`Add Participant should fail with a duplicate address 1`] = `
                     D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD…
                   </div>
                   <div
-                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 kzbxct"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 eyownm"
                   >
                     <div
                       class="flex items-center"
                     >
                       <div
-                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 dNqA-DA flex-shrink-0"
+                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 jiaHcL flex-shrink-0"
                         data-testid="Avatar"
                       >
                         <div
@@ -777,7 +777,7 @@ exports[`Add Participant should fail with a duplicate address 1`] = `
                         aria-invalid="true"
                         aria-labelledby="SelectRecipient__dropdown-label"
                         autocomplete="off"
-                        class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                        class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                         data-testid="SelectDropdown__input"
                         id="SelectRecipient__dropdown-input"
                         name="address"
@@ -803,7 +803,7 @@ exports[`Add Participant should fail with a duplicate address 1`] = `
                         data-testid="Input__error"
                       >
                         <div
-                          class="sc-bdnxRM NjstW text-theme-danger-500"
+                          class="sc-bdvvtL qGXhc text-theme-danger-500"
                           height="20"
                           width="20"
                         >
@@ -820,7 +820,7 @@ exports[`Add Participant should fail with a duplicate address 1`] = `
                           data-testid="SelectRecipient__select-recipient"
                         >
                           <div
-                            class="sc-bdnxRM NjstW"
+                            class="sc-bdvvtL qGXhc"
                             height="20"
                             width="20"
                           >
@@ -834,7 +834,7 @@ exports[`Add Participant should fail with a duplicate address 1`] = `
                   </div>
                   <ul
                     aria-labelledby="SelectRecipient__dropdown-label"
-                    class="styles__SelectOptionsList-sc-120rtxy-0 eqsPyr is-open"
+                    class="styles__SelectOptionsList-sc-120rtxy-0 HcHWp is-open"
                     id="SelectRecipient__dropdown-menu"
                     role="listbox"
                   >
@@ -852,7 +852,7 @@ exports[`Add Participant should fail with a duplicate address 1`] = `
                           class="flex items-center space-x-2 whitespace-nowrap"
                         >
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 dNqA-DA flex-shrink-0 flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 jiaHcL flex-shrink-0 flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -897,7 +897,7 @@ exports[`Add Participant should fail with a duplicate address 1`] = `
         </div>
       </fieldset>
       <button
-        class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL my-4 w-full"
+        class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc my-4 w-full"
         type="button"
       >
         <div
@@ -911,10 +911,10 @@ exports[`Add Participant should fail with a duplicate address 1`] = `
       class="mt-3 border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
-        class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 bCfwoA"
+        class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 hSCHjT"
       >
         <div
-          class="Table__TableWrapper-sc-1gcp0fb-0 fDAVsO -mt-3"
+          class="Table__TableWrapper-sc-1gcp0fb-0 jHfvAR -mt-3"
           role="table"
         >
           <table
@@ -981,7 +981,7 @@ exports[`Add Participant should fail with a duplicate address 1`] = `
                   class="flex-none py-6"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -1023,7 +1023,7 @@ exports[`Add Participant should fail with a duplicate address 1`] = `
                     class="inline-block"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 dQCpEO"
                       data-testid="recipient-list__remove-recipient"
                       disabled=""
                       type="button"
@@ -1035,7 +1035,7 @@ exports[`Add Participant should fail with a duplicate address 1`] = `
                           class="py-1"
                         >
                           <div
-                            class="sc-bdnxRM AFVmm"
+                            class="sc-bdvvtL fCrhkg"
                             height="16"
                             width="16"
                           >
@@ -1062,10 +1062,10 @@ exports[`Add Participant should fail with cold wallet 1`] = `
 <DocumentFragment>
   <div>
     <div
-      class="SubForm__SubFormWrapper-sc-1x20s74-0 eYhvbV"
+      class="SubForm__SubFormWrapper-sc-1x20s74-0 fTuEVK"
     >
       <fieldset
-        class="FormField__FormFieldStyled-sc-q4bblx-0 kknRCr flex flex-col space-y-2"
+        class="FormField__FormFieldStyled-sc-q4bblx-0 jvfbQA flex flex-col space-y-2"
       >
         <label
           class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -1083,14 +1083,14 @@ exports[`Add Participant should fail with cold wallet 1`] = `
               class="relative w-full"
             >
               <div
-                class="Input__InputWrapperStyled-sc-1i8sd1r-0 kzbxct sr-only"
+                class="Input__InputWrapperStyled-sc-1i8sd1r-0 eyownm sr-only"
               >
                 <div
                   class="relative flex flex-1 h-full"
                 >
                   <input
                     aria-invalid="true"
-                    class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                    class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                     data-testid="select-list__input"
                     name="address"
                     readonly=""
@@ -1106,7 +1106,7 @@ exports[`Add Participant should fail with cold wallet 1`] = `
                     data-testid="Input__error"
                   >
                     <div
-                      class="sc-bdnxRM NjstW text-theme-danger-500"
+                      class="sc-bdvvtL qGXhc text-theme-danger-500"
                       height="20"
                       width="20"
                     >
@@ -1131,13 +1131,13 @@ exports[`Add Participant should fail with cold wallet 1`] = `
                     id="SelectRecipient__dropdown-label"
                   />
                   <div
-                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 kzbxct"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 eyownm"
                   >
                     <div
                       class="flex items-center"
                     >
                       <div
-                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 dNqA-DA flex-shrink-0"
+                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 jiaHcL flex-shrink-0"
                         data-testid="Avatar"
                       >
                         <div
@@ -1160,7 +1160,7 @@ exports[`Add Participant should fail with cold wallet 1`] = `
                         aria-invalid="true"
                         aria-labelledby="SelectRecipient__dropdown-label"
                         autocomplete="off"
-                        class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                        class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                         data-testid="SelectDropdown__input"
                         id="SelectRecipient__dropdown-input"
                         name="address"
@@ -1176,7 +1176,7 @@ exports[`Add Participant should fail with cold wallet 1`] = `
                         data-testid="Input__error"
                       >
                         <div
-                          class="sc-bdnxRM NjstW text-theme-danger-500"
+                          class="sc-bdvvtL qGXhc text-theme-danger-500"
                           height="20"
                           width="20"
                         >
@@ -1193,7 +1193,7 @@ exports[`Add Participant should fail with cold wallet 1`] = `
                           data-testid="SelectRecipient__select-recipient"
                         >
                           <div
-                            class="sc-bdnxRM NjstW"
+                            class="sc-bdvvtL qGXhc"
                             height="20"
                             width="20"
                           >
@@ -1207,7 +1207,7 @@ exports[`Add Participant should fail with cold wallet 1`] = `
                   </div>
                   <ul
                     aria-labelledby="SelectRecipient__dropdown-label"
-                    class="styles__SelectOptionsList-sc-120rtxy-0 eqsPyr"
+                    class="styles__SelectOptionsList-sc-120rtxy-0 HcHWp"
                     id="SelectRecipient__dropdown-menu"
                     role="listbox"
                   />
@@ -1218,7 +1218,7 @@ exports[`Add Participant should fail with cold wallet 1`] = `
         </div>
       </fieldset>
       <button
-        class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL my-4 w-full"
+        class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc my-4 w-full"
         type="button"
       >
         <div
@@ -1232,10 +1232,10 @@ exports[`Add Participant should fail with cold wallet 1`] = `
       class="mt-3 border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
-        class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 bCfwoA"
+        class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 hSCHjT"
       >
         <div
-          class="Table__TableWrapper-sc-1gcp0fb-0 fDAVsO -mt-3"
+          class="Table__TableWrapper-sc-1gcp0fb-0 jHfvAR -mt-3"
           role="table"
         >
           <table
@@ -1302,7 +1302,7 @@ exports[`Add Participant should fail with cold wallet 1`] = `
                   class="flex-none py-6"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -1355,7 +1355,7 @@ exports[`Add Participant should fail with cold wallet 1`] = `
                     class="inline-block"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 dQCpEO"
                       data-testid="recipient-list__remove-recipient"
                       disabled=""
                       type="button"
@@ -1367,7 +1367,7 @@ exports[`Add Participant should fail with cold wallet 1`] = `
                           class="py-1"
                         >
                           <div
-                            class="sc-bdnxRM AFVmm"
+                            class="sc-bdvvtL fCrhkg"
                             height="16"
                             width="16"
                           >
@@ -1394,10 +1394,10 @@ exports[`Add Participant should render custom participants 1`] = `
 <DocumentFragment>
   <div>
     <div
-      class="SubForm__SubFormWrapper-sc-1x20s74-0 eYhvbV"
+      class="SubForm__SubFormWrapper-sc-1x20s74-0 fTuEVK"
     >
       <fieldset
-        class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
+        class="FormField__FormFieldStyled-sc-q4bblx-0 dFNJMk flex flex-col space-y-2"
       >
         <label
           class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -1415,14 +1415,14 @@ exports[`Add Participant should render custom participants 1`] = `
               class="relative w-full"
             >
               <div
-                class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
+                class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF sr-only"
               >
                 <div
                   class="relative flex flex-1 h-full"
                 >
                   <input
                     aria-invalid="false"
-                    class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                    class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                     data-testid="select-list__input"
                     name="address"
                     readonly=""
@@ -1445,13 +1445,13 @@ exports[`Add Participant should render custom participants 1`] = `
                     id="SelectRecipient__dropdown-label"
                   />
                   <div
-                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
                   >
                     <div
                       class="flex items-center"
                     >
                       <div
-                        class="Circle__CircleWrapper-sc-d5u41q-0 cPUFYC bg-theme-secondary-200 border-theme-secondary-200 dark:bg-theme-secondary-700 dark:border-theme-secondary-700 ring-theme-background"
+                        class="Circle__CircleWrapper-sc-d5u41q-0 bcplCx bg-theme-secondary-200 border-theme-secondary-200 dark:bg-theme-secondary-700 dark:border-theme-secondary-700 ring-theme-background"
                       />
                     </div>
                     <div
@@ -1463,7 +1463,7 @@ exports[`Add Participant should render custom participants 1`] = `
                         aria-invalid="false"
                         aria-labelledby="SelectRecipient__dropdown-label"
                         autocomplete="off"
-                        class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full cursor-default"
+                        class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full cursor-default"
                         data-testid="SelectDropdown__input"
                         id="SelectRecipient__dropdown-input"
                         name="address"
@@ -1482,7 +1482,7 @@ exports[`Add Participant should render custom participants 1`] = `
                           data-testid="SelectRecipient__select-recipient"
                         >
                           <div
-                            class="sc-bdnxRM NjstW"
+                            class="sc-bdvvtL qGXhc"
                             height="20"
                             width="20"
                           >
@@ -1496,7 +1496,7 @@ exports[`Add Participant should render custom participants 1`] = `
                   </div>
                   <ul
                     aria-labelledby="SelectRecipient__dropdown-label"
-                    class="styles__SelectOptionsList-sc-120rtxy-0 eqsPyr"
+                    class="styles__SelectOptionsList-sc-120rtxy-0 HcHWp"
                     id="SelectRecipient__dropdown-menu"
                     role="listbox"
                   />
@@ -1507,7 +1507,7 @@ exports[`Add Participant should render custom participants 1`] = `
         </div>
       </fieldset>
       <button
-        class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd my-4 w-full"
+        class="OriginalButton__StyledButton-sc-o0fs2j-0 dQCpEO my-4 w-full"
         disabled=""
         type="button"
       >
@@ -1522,10 +1522,10 @@ exports[`Add Participant should render custom participants 1`] = `
       class="mt-3 border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
-        class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 bCfwoA"
+        class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 hSCHjT"
       >
         <div
-          class="Table__TableWrapper-sc-1gcp0fb-0 fDAVsO -mt-3"
+          class="Table__TableWrapper-sc-1gcp0fb-0 jHfvAR -mt-3"
           role="table"
         >
           <table
@@ -1592,7 +1592,7 @@ exports[`Add Participant should render custom participants 1`] = `
                   class="flex-none py-6"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -1634,7 +1634,7 @@ exports[`Add Participant should render custom participants 1`] = `
                     class="inline-block"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 bAsnxQ"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 dhaLpP"
                       data-testid="recipient-list__remove-recipient"
                       type="button"
                     >
@@ -1645,7 +1645,7 @@ exports[`Add Participant should render custom participants 1`] = `
                           class="py-1"
                         >
                           <div
-                            class="sc-bdnxRM AFVmm"
+                            class="sc-bdvvtL fCrhkg"
                             height="16"
                             width="16"
                           >
@@ -1672,10 +1672,10 @@ exports[`Add Participant should work with an imported wallet 1`] = `
 <DocumentFragment>
   <div>
     <div
-      class="SubForm__SubFormWrapper-sc-1x20s74-0 eYhvbV"
+      class="SubForm__SubFormWrapper-sc-1x20s74-0 fTuEVK"
     >
       <fieldset
-        class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
+        class="FormField__FormFieldStyled-sc-q4bblx-0 dFNJMk flex flex-col space-y-2"
       >
         <label
           class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -1693,14 +1693,14 @@ exports[`Add Participant should work with an imported wallet 1`] = `
               class="relative w-full"
             >
               <div
-                class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
+                class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF sr-only"
               >
                 <div
                   class="relative flex flex-1 h-full"
                 >
                   <input
                     aria-invalid="false"
-                    class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                    class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                     data-testid="select-list__input"
                     name="address"
                     readonly=""
@@ -1723,13 +1723,13 @@ exports[`Add Participant should work with an imported wallet 1`] = `
                     id="SelectRecipient__dropdown-label"
                   />
                   <div
-                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
                   >
                     <div
                       class="flex items-center"
                     >
                       <div
-                        class="Circle__CircleWrapper-sc-d5u41q-0 cPUFYC bg-theme-secondary-200 border-theme-secondary-200 dark:bg-theme-secondary-700 dark:border-theme-secondary-700 ring-theme-background"
+                        class="Circle__CircleWrapper-sc-d5u41q-0 bcplCx bg-theme-secondary-200 border-theme-secondary-200 dark:bg-theme-secondary-700 dark:border-theme-secondary-700 ring-theme-background"
                       />
                     </div>
                     <div
@@ -1741,7 +1741,7 @@ exports[`Add Participant should work with an imported wallet 1`] = `
                         aria-invalid="false"
                         aria-labelledby="SelectRecipient__dropdown-label"
                         autocomplete="off"
-                        class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full cursor-default"
+                        class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full cursor-default"
                         data-testid="SelectDropdown__input"
                         id="SelectRecipient__dropdown-input"
                         name="address"
@@ -1760,7 +1760,7 @@ exports[`Add Participant should work with an imported wallet 1`] = `
                           data-testid="SelectRecipient__select-recipient"
                         >
                           <div
-                            class="sc-bdnxRM NjstW"
+                            class="sc-bdvvtL qGXhc"
                             height="20"
                             width="20"
                           >
@@ -1774,7 +1774,7 @@ exports[`Add Participant should work with an imported wallet 1`] = `
                   </div>
                   <ul
                     aria-labelledby="SelectRecipient__dropdown-label"
-                    class="styles__SelectOptionsList-sc-120rtxy-0 eqsPyr is-open"
+                    class="styles__SelectOptionsList-sc-120rtxy-0 HcHWp is-open"
                     id="SelectRecipient__dropdown-menu"
                     role="listbox"
                   >
@@ -1792,7 +1792,7 @@ exports[`Add Participant should work with an imported wallet 1`] = `
                           class="flex items-center space-x-2 whitespace-nowrap"
                         >
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 dNqA-DA flex-shrink-0 flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 jiaHcL flex-shrink-0 flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -1843,7 +1843,7 @@ exports[`Add Participant should work with an imported wallet 1`] = `
                           class="flex items-center space-x-2 whitespace-nowrap"
                         >
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 dNqA-DA flex-shrink-0 flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 jiaHcL flex-shrink-0 flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -1888,7 +1888,7 @@ exports[`Add Participant should work with an imported wallet 1`] = `
         </div>
       </fieldset>
       <button
-        class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd my-4 w-full"
+        class="OriginalButton__StyledButton-sc-o0fs2j-0 dQCpEO my-4 w-full"
         disabled=""
         type="button"
       >
@@ -1903,10 +1903,10 @@ exports[`Add Participant should work with an imported wallet 1`] = `
       class="mt-3 border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
-        class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 bCfwoA"
+        class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 hSCHjT"
       >
         <div
-          class="Table__TableWrapper-sc-1gcp0fb-0 fDAVsO -mt-3"
+          class="Table__TableWrapper-sc-1gcp0fb-0 jHfvAR -mt-3"
           role="table"
         >
           <table
@@ -1973,7 +1973,7 @@ exports[`Add Participant should work with an imported wallet 1`] = `
                   class="flex-none py-6"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -2026,7 +2026,7 @@ exports[`Add Participant should work with an imported wallet 1`] = `
                     class="inline-block"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 dQCpEO"
                       data-testid="recipient-list__remove-recipient"
                       disabled=""
                       type="button"
@@ -2038,7 +2038,7 @@ exports[`Add Participant should work with an imported wallet 1`] = `
                           class="py-1"
                         >
                           <div
-                            class="sc-bdnxRM AFVmm"
+                            class="sc-bdvvtL fCrhkg"
                             height="16"
                             width="16"
                           >
@@ -2060,7 +2060,7 @@ exports[`Add Participant should work with an imported wallet 1`] = `
                   class="flex-none py-6"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -2113,7 +2113,7 @@ exports[`Add Participant should work with an imported wallet 1`] = `
                     class="inline-block"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 bAsnxQ"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 dhaLpP"
                       data-testid="recipient-list__remove-recipient"
                       type="button"
                     >
@@ -2124,7 +2124,7 @@ exports[`Add Participant should work with an imported wallet 1`] = `
                           class="py-1"
                         >
                           <div
-                            class="sc-bdnxRM AFVmm"
+                            class="sc-bdvvtL fCrhkg"
                             height="16"
                             width="16"
                           >

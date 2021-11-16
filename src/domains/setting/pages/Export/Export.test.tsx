@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { ExportSettings } from "domains/setting/pages";
 import electron from "electron";
 import { createMemoryHistory } from "history";

@@ -3,7 +3,7 @@
 exports[`TransactionRowRecipientIcon should render avatar 1`] = `
 <DocumentFragment>
   <div
-    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
     data-testid="Avatar"
   >
     <div
@@ -26,7 +26,7 @@ exports[`TransactionRowRecipientIcon should render compact 1`] = `
     data-testid="TransactionRowRecipientIcon"
   >
     <div
-      class="sc-bdnxRM NjstW"
+      class="sc-bdvvtL qGXhc"
       height="20"
       width="20"
     >
@@ -41,11 +41,11 @@ exports[`TransactionRowRecipientIcon should render compact 1`] = `
 exports[`TransactionRowRecipientIcon should render icon 1`] = `
 <DocumentFragment>
   <div
-    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+    class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
     data-testid="TransactionRowRecipientIcon"
   >
     <div
-      class="sc-bdnxRM NjstW"
+      class="sc-bdvvtL qGXhc"
       height="20"
       width="20"
     >

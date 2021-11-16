@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { BIP39 } from "@payvo/cryptography";
-import { Contracts } from "@payvo/profiles";
+import { BIP39 } from "@payvo/sdk-cryptography";
+import { Contracts } from "@payvo/sdk-profiles";
 import { env, MNEMONICS } from "utils/testing-library";
 
 import { authentication } from "./Authentication";

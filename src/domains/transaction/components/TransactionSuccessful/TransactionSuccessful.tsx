@@ -1,4 +1,4 @@
-import { Contracts, DTO } from "@payvo/profiles";
+import { Contracts, DTO } from "@payvo/sdk-profiles";
 import { Header } from "app/components/Header";
 import { Image } from "app/components/Image";
 import {

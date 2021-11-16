@@ -13,28 +13,28 @@ exports[`FeeField should render 1`] = `
         class="flex items-center"
       >
         <span
-          class="Switch__SwitchText-sc-161iiro-0 faOaTv"
+          class="Switch__SwitchText-sc-161iiro-0 aJKSk"
           role="button"
         >
           Simple
         </span>
         <label
-          class="Toggle__Wrapper-sc-6s3wfu-0 emWhNO"
+          class="Toggle__Wrapper-sc-6s3wfu-0 iggSjt"
         >
           <input
-            class="Toggle__Input-sc-6s3wfu-1 utRNX"
+            class="Toggle__Input-sc-6s3wfu-1 WwplI"
             type="checkbox"
           />
           <div
-            class="Toggle__Handle-sc-6s3wfu-2 giHppe"
+            class="Toggle__Handle-sc-6s3wfu-2 jRjdQR"
           >
             <span
-              class="Toggle__HandleInner-sc-6s3wfu-3 gKIbRT"
+              class="Toggle__HandleInner-sc-6s3wfu-3 gNamtB"
             />
           </div>
         </label>
         <span
-          class="Switch__SwitchText-sc-161iiro-0 bBuInq"
+          class="Switch__SwitchText-sc-161iiro-0 jeOrUV"
           role="button"
         >
           Advanced
@@ -49,7 +49,7 @@ exports[`FeeField should render 1`] = `
       <button
         aria-checked="false"
         aria-label="0.00357"
-        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ivLOIB"
+        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -71,7 +71,7 @@ exports[`FeeField should render 1`] = `
       <button
         aria-checked="true"
         aria-label="0.07320598"
-        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ivLOIB"
+        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -93,7 +93,7 @@ exports[`FeeField should render 1`] = `
       <button
         aria-checked="false"
         aria-label="0.1"
-        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ivLOIB"
+        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"

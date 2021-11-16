@@ -7,7 +7,7 @@ exports[`Plugin Updates Confirmation should render with compatible and incompati
     data-testid="modal__overlay"
   >
     <div
-      class="Modal__ModalContainer-sc-5lu2mc-0 wWqtC"
+      class="Modal__ModalContainer-sc-5lu2mc-0 epQFkJ"
       tabindex="-1"
     >
       <div
@@ -18,7 +18,7 @@ exports[`Plugin Updates Confirmation should render with compatible and incompati
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -26,7 +26,7 @@ exports[`Plugin Updates Confirmation should render with compatible and incompati
               class="flex items-center space-x-2"
             >
               <div
-                class="sc-bdnxRM AFVmm"
+                class="sc-bdvvtL fCrhkg"
                 height="16"
                 width="16"
               >
@@ -63,7 +63,7 @@ exports[`Plugin Updates Confirmation should render with compatible and incompati
               data-testid="PluginUpdatesConfirmation"
             >
               <div
-                class="Table__TableWrapper-sc-1gcp0fb-0 fDAVsO -mt-3"
+                class="Table__TableWrapper-sc-1gcp0fb-0 jHfvAR -mt-3"
                 role="table"
               >
                 <table
@@ -93,7 +93,7 @@ exports[`Plugin Updates Confirmation should render with compatible and incompati
                             class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity ml-2"
                           >
                             <div
-                              class="sc-bdnxRM AkeAK transition-transform transform rotate-180"
+                              class="sc-bdvvtL Cfvxc transition-transform transform rotate-180"
                               height="10"
                               role="img"
                               width="10"
@@ -137,7 +137,7 @@ exports[`Plugin Updates Confirmation should render with compatible and incompati
                             class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                           >
                             <div
-                              class="sc-bdnxRM AkeAK transition-transform transform rotate-180"
+                              class="sc-bdvvtL Cfvxc transition-transform transform rotate-180"
                               height="10"
                               role="img"
                               width="10"
@@ -155,15 +155,15 @@ exports[`Plugin Updates Confirmation should render with compatible and incompati
                     role="rowgroup"
                   >
                     <tr
-                      class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
+                      class="TableRow__TableRowStyled-sc-y9j4av-0 jRikRC"
                       data-testid="TableRow"
                     >
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY space-x-4"
                         >
                           <div
-                            class="PluginImage__PluginImageWrapper-sc-10kztrf-0 bLfBKU bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                            class="PluginImage__PluginImageWrapper-sc-10kztrf-0 bpkNBH bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
                             data-testid="PluginImage"
                           >
                             <img
@@ -182,7 +182,7 @@ exports[`Plugin Updates Confirmation should render with compatible and incompati
                               ARK Explorer
                             </span>
                             <div
-                              class="sc-bdnxRM AFVmm text-theme-warning-600"
+                              class="sc-bdvvtL fCrhkg text-theme-warning-600"
                               height="16"
                               width="16"
                             >
@@ -195,14 +195,14 @@ exports[`Plugin Updates Confirmation should render with compatible and incompati
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq"
                         >
                           <div
                             class="mx-auto text-2xl text-theme-success-500"
                             data-testid="PluginUpdates__compatible"
                           >
                             <div
-                              class="sc-bdnxRM NjstW"
+                              class="sc-bdvvtL qGXhc"
                               height="20"
                               width="20"
                             >
@@ -215,7 +215,7 @@ exports[`Plugin Updates Confirmation should render with compatible and incompati
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end"
                         >
                           <span
                             data-testid="PluginUpdates__minimum-version"
@@ -226,15 +226,15 @@ exports[`Plugin Updates Confirmation should render with compatible and incompati
                       </td>
                     </tr>
                     <tr
-                      class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
+                      class="TableRow__TableRowStyled-sc-y9j4av-0 jRikRC"
                       data-testid="TableRow"
                     >
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY space-x-4"
                         >
                           <div
-                            class="PluginImage__PluginImageWrapper-sc-10kztrf-0 bLfBKU bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                            class="PluginImage__PluginImageWrapper-sc-10kztrf-0 bpkNBH bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
                             data-testid="PluginImage"
                           >
                             <svg>
@@ -255,14 +255,14 @@ exports[`Plugin Updates Confirmation should render with compatible and incompati
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq"
                         >
                           <div
                             class="mx-auto text-2xl text-theme-danger-400"
                             data-testid="PluginUpdates__incompatible"
                           >
                             <div
-                              class="sc-bdnxRM NjstW"
+                              class="sc-bdvvtL qGXhc"
                               height="20"
                               width="20"
                             >
@@ -275,7 +275,7 @@ exports[`Plugin Updates Confirmation should render with compatible and incompati
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end"
                         >
                           <span
                             data-testid="PluginUpdates__minimum-version"
@@ -292,7 +292,7 @@ exports[`Plugin Updates Confirmation should render with compatible and incompati
                 class="flex justify-end mt-8 space-x-3"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
                   data-testid="PluginUpdates__cancel-button"
                   type="button"
                 >
@@ -303,7 +303,7 @@ exports[`Plugin Updates Confirmation should render with compatible and incompati
                   </div>
                 </button>
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
                   data-testid="PluginUpdates__continue-button"
                   type="button"
                 >
@@ -332,7 +332,7 @@ exports[`Plugin Updates Confirmation should render with compatible updates 1`] =
     data-testid="modal__overlay"
   >
     <div
-      class="Modal__ModalContainer-sc-5lu2mc-0 wWqtC"
+      class="Modal__ModalContainer-sc-5lu2mc-0 epQFkJ"
       tabindex="-1"
     >
       <div
@@ -343,7 +343,7 @@ exports[`Plugin Updates Confirmation should render with compatible updates 1`] =
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -351,7 +351,7 @@ exports[`Plugin Updates Confirmation should render with compatible updates 1`] =
               class="flex items-center space-x-2"
             >
               <div
-                class="sc-bdnxRM AFVmm"
+                class="sc-bdvvtL fCrhkg"
                 height="16"
                 width="16"
               >
@@ -388,7 +388,7 @@ exports[`Plugin Updates Confirmation should render with compatible updates 1`] =
               data-testid="PluginUpdatesConfirmation"
             >
               <div
-                class="Table__TableWrapper-sc-1gcp0fb-0 fDAVsO -mt-3"
+                class="Table__TableWrapper-sc-1gcp0fb-0 jHfvAR -mt-3"
                 role="table"
               >
                 <table
@@ -418,7 +418,7 @@ exports[`Plugin Updates Confirmation should render with compatible updates 1`] =
                             class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity ml-2"
                           >
                             <div
-                              class="sc-bdnxRM AkeAK transition-transform transform rotate-180"
+                              class="sc-bdvvtL Cfvxc transition-transform transform rotate-180"
                               height="10"
                               role="img"
                               width="10"
@@ -462,7 +462,7 @@ exports[`Plugin Updates Confirmation should render with compatible updates 1`] =
                             class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                           >
                             <div
-                              class="sc-bdnxRM AkeAK transition-transform transform rotate-180"
+                              class="sc-bdvvtL Cfvxc transition-transform transform rotate-180"
                               height="10"
                               role="img"
                               width="10"
@@ -480,15 +480,15 @@ exports[`Plugin Updates Confirmation should render with compatible updates 1`] =
                     role="rowgroup"
                   >
                     <tr
-                      class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
+                      class="TableRow__TableRowStyled-sc-y9j4av-0 jRikRC"
                       data-testid="TableRow"
                     >
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY space-x-4"
                         >
                           <div
-                            class="PluginImage__PluginImageWrapper-sc-10kztrf-0 bLfBKU bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                            class="PluginImage__PluginImageWrapper-sc-10kztrf-0 bpkNBH bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
                             data-testid="PluginImage"
                           >
                             <img
@@ -507,7 +507,7 @@ exports[`Plugin Updates Confirmation should render with compatible updates 1`] =
                               ARK Explorer
                             </span>
                             <div
-                              class="sc-bdnxRM AFVmm text-theme-warning-600"
+                              class="sc-bdvvtL fCrhkg text-theme-warning-600"
                               height="16"
                               width="16"
                             >
@@ -520,14 +520,14 @@ exports[`Plugin Updates Confirmation should render with compatible updates 1`] =
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq"
                         >
                           <div
                             class="mx-auto text-2xl text-theme-success-500"
                             data-testid="PluginUpdates__compatible"
                           >
                             <div
-                              class="sc-bdnxRM NjstW"
+                              class="sc-bdvvtL qGXhc"
                               height="20"
                               width="20"
                             >
@@ -540,7 +540,7 @@ exports[`Plugin Updates Confirmation should render with compatible updates 1`] =
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end"
                         >
                           <span
                             data-testid="PluginUpdates__minimum-version"
@@ -557,7 +557,7 @@ exports[`Plugin Updates Confirmation should render with compatible updates 1`] =
                 class="flex justify-end mt-8 space-x-3"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
                   data-testid="PluginUpdates__cancel-button"
                   type="button"
                 >
@@ -568,7 +568,7 @@ exports[`Plugin Updates Confirmation should render with compatible updates 1`] =
                   </div>
                 </button>
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
                   data-testid="PluginUpdates__continue-button"
                   type="button"
                 >

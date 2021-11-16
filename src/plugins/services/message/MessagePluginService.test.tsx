@@ -1,4 +1,4 @@
-import { Profile, ReadWriteWallet } from "@payvo/profiles";
+import { Profile, ReadWriteWallet } from "@payvo/sdk-profiles";
 import { LedgerProvider } from "app/contexts";
 import { PluginController, PluginManager } from "plugins/core";
 import { PluginAPI } from "plugins/types";

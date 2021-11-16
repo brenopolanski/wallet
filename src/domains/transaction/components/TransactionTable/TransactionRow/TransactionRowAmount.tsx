@@ -1,5 +1,5 @@
-import { isNil } from "@arkecosystem/utils";
-import { Contracts, DTO, Helpers } from "@payvo/profiles";
+import { isNil } from "@payvo/sdk-helpers";
+import { Contracts, DTO, Helpers } from "@payvo/sdk-profiles";
 import { Amount, AmountLabel } from "app/components/Amount";
 import { Tooltip } from "app/components/Tooltip";
 import React from "react";

@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { VoteDelegateProperties } from "domains/vote/components/DelegateTable/DelegateTable.models";
 import { appendParameters } from "domains/vote/utils/url-parameters";
 import { useHistory } from "react-router-dom";

@@ -11,10 +11,10 @@ exports[`CollapseToggleButton should render disabled 1`] = `
       Hide
     </span>
     <span
-      class="CollapseToggleButton__ToggleIcon-sc-1wkp6k4-0 gPNDgr"
+      class="CollapseToggleButton__ToggleIcon-sc-1wkp6k4-0 iKeMbO"
     >
       <div
-        class="sc-bdnxRM AkeAK p-1"
+        class="sc-bdvvtL Cfvxc p-1"
         height="10"
         width="10"
       >

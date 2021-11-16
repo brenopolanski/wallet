@@ -1,5 +1,5 @@
-import { Contracts } from "@payvo/profiles";
 import { Coins, Services } from "@payvo/sdk";
+import { Contracts } from "@payvo/sdk-profiles";
 import { useEnvironmentContext } from "app/contexts";
 import { useCallback } from "react";
 import { TransactionFees } from "types";

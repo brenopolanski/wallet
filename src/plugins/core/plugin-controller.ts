@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { PluginAPI } from "plugins/types";
 
 import { PluginConfigurationData } from "./configuration";

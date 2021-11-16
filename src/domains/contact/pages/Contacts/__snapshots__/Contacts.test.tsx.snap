@@ -7,16 +7,16 @@ exports[`Contacts should render with contacts 1`] = `
   >
     <nav
       aria-labelledby="main menu"
-      class="NavigationBarblocks__NavWrapper-sc-nciu2a-0 gKHJQe"
+      class="NavigationBarblocks__NavWrapper-sc-nciu2a-0 iVVfMx"
     >
       <div
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 tELEj flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
         >
           <div
-            class="sc-bdnxRM AkeAK mx-auto"
+            class="sc-bdvvtL Cfvxc mx-auto"
             height="10"
             width="10"
           >
@@ -106,10 +106,10 @@ exports[`Contacts should render with contacts 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 hAcKQs group"
+                    class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -117,7 +117,7 @@ exports[`Contacts should render with contacts 1`] = `
                         class="flex items-center space-x-2"
                       >
                         <div
-                          class="sc-bdnxRM NjstW p-1"
+                          class="sc-bdvvtL qGXhc p-1"
                           height="20"
                           width="20"
                         >
@@ -145,10 +145,10 @@ exports[`Contacts should render with contacts 1`] = `
               class="flex items-center"
             >
               <div
-                class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 hAcKQs"
+                class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -156,7 +156,7 @@ exports[`Contacts should render with contacts 1`] = `
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="sc-bdnxRM NjstW p-1"
+                      class="sc-bdvvtL qGXhc p-1"
                       height="20"
                       width="20"
                     >
@@ -175,10 +175,10 @@ exports[`Contacts should render with contacts 1`] = `
               class="flex items-center"
             >
               <div
-                class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 hAcKQs"
+                class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -186,7 +186,7 @@ exports[`Contacts should render with contacts 1`] = `
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="sc-bdnxRM NjstW p-1"
+                      class="sc-bdvvtL qGXhc p-1"
                       height="20"
                       width="20"
                     >
@@ -237,7 +237,7 @@ exports[`Contacts should render with contacts 1`] = `
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -265,7 +265,7 @@ exports[`Contacts should render with contacts 1`] = `
       class="flex flex-col flex-1"
     >
       <div
-        class="Section__SectionWrapper-sc-plnv9l-0 eFeTGz border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder"
+        class="Section__SectionWrapper-sc-plnv9l-0 gIRSYc border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder"
       >
         <div
           class="container px-10 mx-auto"
@@ -304,7 +304,7 @@ exports[`Contacts should render with contacts 1`] = `
                       class="group"
                     >
                       <button
-                        class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus"
+                        class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus"
                         type="button"
                       >
                         <div
@@ -314,7 +314,7 @@ exports[`Contacts should render with contacts 1`] = `
                             Search
                           </span>
                           <div
-                            class="sc-bdnxRM NjstW"
+                            class="sc-bdvvtL qGXhc"
                             height="20"
                             width="20"
                           >
@@ -331,7 +331,7 @@ exports[`Contacts should render with contacts 1`] = `
                   />
                 </div>
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC whitespace-nowrap"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ whitespace-nowrap"
                   data-testid="contacts__add-contact-btn"
                   type="button"
                 >
@@ -347,7 +347,7 @@ exports[`Contacts should render with contacts 1`] = `
         </div>
       </div>
       <div
-        class="Section__SectionWrapper-sc-plnv9l-0 efrBqv"
+        class="Section__SectionWrapper-sc-plnv9l-0 fYoPaw"
       >
         <div
           class="container px-10 mx-auto"
@@ -357,7 +357,7 @@ exports[`Contacts should render with contacts 1`] = `
             data-testid="ContactList"
           >
             <div
-              class="Table__TableWrapper-sc-1gcp0fb-0 fDAVsO -mt-3"
+              class="Table__TableWrapper-sc-1gcp0fb-0 jHfvAR -mt-3"
               role="table"
             >
               <table
@@ -387,7 +387,7 @@ exports[`Contacts should render with contacts 1`] = `
                           class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                         >
                           <div
-                            class="sc-bdnxRM AkeAK transition-transform transform rotate-180"
+                            class="sc-bdvvtL Cfvxc transition-transform transform rotate-180"
                             height="10"
                             role="img"
                             width="10"
@@ -461,15 +461,15 @@ exports[`Contacts should render with contacts 1`] = `
                   role="rowgroup"
                 >
                   <tr
-                    class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
+                    class="TableRow__TableRowStyled-sc-y9j4av-0 jRikRC"
                     data-testid="TableRow"
                   >
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY space-x-4"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 gljhIf flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -497,15 +497,15 @@ exports[`Contacts should render with contacts 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq justify-center"
                       >
                         <div
                           aria-label="ARK Devnet"
-                          class="Circle__CircleWrapper-sc-d5u41q-0 fgSjup text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+                          class="Circle__CircleWrapper-sc-d5u41q-0 ePUgJq text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
                           data-testid="NetworkIcon-ARK-ark.devnet"
                         >
                           <div
-                            class="sc-bdnxRM NjstW"
+                            class="sc-bdvvtL qGXhc"
                             data-testid="NetworkIcon__icon"
                             height="20"
                             width="20"
@@ -522,10 +522,10 @@ exports[`Contacts should render with contacts 1`] = `
                       data-testid="ContactListItem__address"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq space-x-4"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 gljhIf flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -554,7 +554,7 @@ exports[`Contacts should render with contacts 1`] = `
                       class=""
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4 justify-center"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq space-x-4 justify-center"
                       >
                         <button
                           class="relative focus:outline-none ring-focus"
@@ -566,7 +566,7 @@ exports[`Contacts should render with contacts 1`] = `
                             class="text-theme-primary-300 dark:text-theme-secondary-700"
                           >
                             <div
-                              class="sc-bdnxRM AFVmm"
+                              class="sc-bdvvtL fCrhkg"
                               height="16"
                               width="16"
                             >
@@ -582,13 +582,13 @@ exports[`Contacts should render with contacts 1`] = `
                       class=""
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end"
                       >
                         <div
                           class="flex items-center space-x-2"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
                             data-testid="ContactListItem__send-button"
                             type="button"
                           >
@@ -608,14 +608,14 @@ exports[`Contacts should render with contacts 1`] = `
                                 data-testid="dropdown__toggle"
                               >
                                 <button
-                                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cpPdwA"
+                                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hSJSpT"
                                   type="button"
                                 >
                                   <div
                                     class="flex items-center space-x-2"
                                   >
                                     <div
-                                      class="sc-bdnxRM NjstW"
+                                      class="sc-bdvvtL qGXhc"
                                       height="20"
                                       width="20"
                                     >
@@ -633,15 +633,15 @@ exports[`Contacts should render with contacts 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="TableRow__TableRowStyled-sc-y9j4av-0 jzTbDS"
+                    class="TableRow__TableRowStyled-sc-y9j4av-0 fXMgbp"
                     data-testid="TableRow"
                   >
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY space-x-4"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 gljhIf flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -669,15 +669,15 @@ exports[`Contacts should render with contacts 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq justify-center"
                       >
                         <div
                           aria-label="ARK Devnet"
-                          class="Circle__CircleWrapper-sc-d5u41q-0 fgSjup text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+                          class="Circle__CircleWrapper-sc-d5u41q-0 ePUgJq text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
                           data-testid="NetworkIcon-ARK-ark.devnet"
                         >
                           <div
-                            class="sc-bdnxRM NjstW"
+                            class="sc-bdvvtL qGXhc"
                             data-testid="NetworkIcon__icon"
                             height="20"
                             width="20"
@@ -694,10 +694,10 @@ exports[`Contacts should render with contacts 1`] = `
                       data-testid="ContactListItem__address"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq space-x-4"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 gljhIf flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -726,7 +726,7 @@ exports[`Contacts should render with contacts 1`] = `
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4 justify-center"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq space-x-4 justify-center"
                       >
                         <button
                           class="relative focus:outline-none ring-focus"
@@ -738,7 +738,7 @@ exports[`Contacts should render with contacts 1`] = `
                             class="text-theme-primary-300 dark:text-theme-secondary-700"
                           >
                             <div
-                              class="sc-bdnxRM AFVmm"
+                              class="sc-bdvvtL fCrhkg"
                               height="16"
                               width="16"
                             >
@@ -754,13 +754,13 @@ exports[`Contacts should render with contacts 1`] = `
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end"
                       >
                         <div
                           class="flex items-center space-x-2"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
                             data-testid="ContactListItem__send-button"
                             type="button"
                           >
@@ -780,14 +780,14 @@ exports[`Contacts should render with contacts 1`] = `
                                 data-testid="dropdown__toggle"
                               >
                                 <button
-                                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cpPdwA"
+                                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hSJSpT"
                                   type="button"
                                 >
                                   <div
                                     class="flex items-center space-x-2"
                                   >
                                     <div
-                                      class="sc-bdnxRM NjstW"
+                                      class="sc-bdvvtL qGXhc"
                                       height="20"
                                       width="20"
                                     >
@@ -805,25 +805,25 @@ exports[`Contacts should render with contacts 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="TableRow__TableRowStyled-sc-y9j4av-0 jzTbDS"
+                    class="TableRow__TableRowStyled-sc-y9j4av-0 fXMgbp"
                     data-testid="TableRow"
                   >
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY space-x-4"
                       />
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq justify-center"
                       >
                         <div
                           aria-label="ARK Devnet"
-                          class="Circle__CircleWrapper-sc-d5u41q-0 fgSjup text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+                          class="Circle__CircleWrapper-sc-d5u41q-0 ePUgJq text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
                           data-testid="NetworkIcon-ARK-ark.devnet"
                         >
                           <div
-                            class="sc-bdnxRM NjstW"
+                            class="sc-bdvvtL qGXhc"
                             data-testid="NetworkIcon__icon"
                             height="20"
                             width="20"
@@ -840,10 +840,10 @@ exports[`Contacts should render with contacts 1`] = `
                       data-testid="ContactListItem__address"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq space-x-4"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 gljhIf flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -872,7 +872,7 @@ exports[`Contacts should render with contacts 1`] = `
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4 justify-center"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq space-x-4 justify-center"
                       >
                         <button
                           class="relative focus:outline-none ring-focus"
@@ -884,7 +884,7 @@ exports[`Contacts should render with contacts 1`] = `
                             class="text-theme-primary-300 dark:text-theme-secondary-700"
                           >
                             <div
-                              class="sc-bdnxRM AFVmm"
+                              class="sc-bdvvtL fCrhkg"
                               height="16"
                               width="16"
                             >
@@ -900,13 +900,13 @@ exports[`Contacts should render with contacts 1`] = `
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end"
                       >
                         <div
                           class="flex items-center space-x-2"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
                             data-testid="ContactListItem__send-button"
                             type="button"
                           >
@@ -926,14 +926,14 @@ exports[`Contacts should render with contacts 1`] = `
                                 data-testid="dropdown__toggle"
                               >
                                 <button
-                                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cpPdwA"
+                                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hSJSpT"
                                   type="button"
                                 >
                                   <div
                                     class="flex items-center space-x-2"
                                   >
                                     <div
-                                      class="sc-bdnxRM NjstW"
+                                      class="sc-bdvvtL qGXhc"
                                       height="20"
                                       width="20"
                                     >
@@ -951,25 +951,25 @@ exports[`Contacts should render with contacts 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
+                    class="TableRow__TableRowStyled-sc-y9j4av-0 jRikRC"
                     data-testid="TableRow"
                   >
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY space-x-4"
                       />
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq justify-center"
                       >
                         <div
                           aria-label="ARK Devnet"
-                          class="Circle__CircleWrapper-sc-d5u41q-0 fgSjup text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+                          class="Circle__CircleWrapper-sc-d5u41q-0 ePUgJq text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
                           data-testid="NetworkIcon-ARK-ark.devnet"
                         >
                           <div
-                            class="sc-bdnxRM NjstW"
+                            class="sc-bdvvtL qGXhc"
                             data-testid="NetworkIcon__icon"
                             height="20"
                             width="20"
@@ -986,10 +986,10 @@ exports[`Contacts should render with contacts 1`] = `
                       data-testid="ContactListItem__address"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq space-x-4"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 gljhIf flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -1018,7 +1018,7 @@ exports[`Contacts should render with contacts 1`] = `
                       class=""
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4 justify-center"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq space-x-4 justify-center"
                       >
                         <button
                           class="relative focus:outline-none ring-focus"
@@ -1030,7 +1030,7 @@ exports[`Contacts should render with contacts 1`] = `
                             class="text-theme-primary-300 dark:text-theme-secondary-700"
                           >
                             <div
-                              class="sc-bdnxRM AFVmm"
+                              class="sc-bdvvtL fCrhkg"
                               height="16"
                               width="16"
                             >
@@ -1046,13 +1046,13 @@ exports[`Contacts should render with contacts 1`] = `
                       class=""
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end"
                       >
                         <div
                           class="flex items-center space-x-2"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
                             data-testid="ContactListItem__send-button"
                             type="button"
                           >
@@ -1072,14 +1072,14 @@ exports[`Contacts should render with contacts 1`] = `
                                 data-testid="dropdown__toggle"
                               >
                                 <button
-                                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cpPdwA"
+                                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hSJSpT"
                                   type="button"
                                 >
                                   <div
                                     class="flex items-center space-x-2"
                                   >
                                     <div
-                                      class="sc-bdnxRM NjstW"
+                                      class="sc-bdvvtL qGXhc"
                                       height="20"
                                       width="20"
                                     >
@@ -1114,16 +1114,16 @@ exports[`Contacts should render with contacts of live networks only 1`] = `
   >
     <nav
       aria-labelledby="main menu"
-      class="NavigationBarblocks__NavWrapper-sc-nciu2a-0 gKHJQe"
+      class="NavigationBarblocks__NavWrapper-sc-nciu2a-0 iVVfMx"
     >
       <div
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 tELEj flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
         >
           <div
-            class="sc-bdnxRM AkeAK mx-auto"
+            class="sc-bdvvtL Cfvxc mx-auto"
             height="10"
             width="10"
           >
@@ -1213,10 +1213,10 @@ exports[`Contacts should render with contacts of live networks only 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 hAcKQs group"
+                    class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -1224,7 +1224,7 @@ exports[`Contacts should render with contacts of live networks only 1`] = `
                         class="flex items-center space-x-2"
                       >
                         <div
-                          class="sc-bdnxRM NjstW p-1"
+                          class="sc-bdvvtL qGXhc p-1"
                           height="20"
                           width="20"
                         >
@@ -1252,10 +1252,10 @@ exports[`Contacts should render with contacts of live networks only 1`] = `
               class="flex items-center"
             >
               <div
-                class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 hAcKQs"
+                class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 dMZjng"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nnGbn"
                   data-testid="navbar__buttons--send"
                   disabled=""
                   type="button"
@@ -1264,7 +1264,7 @@ exports[`Contacts should render with contacts of live networks only 1`] = `
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="sc-bdnxRM NjstW p-1"
+                      class="sc-bdvvtL qGXhc p-1"
                       height="20"
                       width="20"
                     >
@@ -1283,10 +1283,10 @@ exports[`Contacts should render with contacts of live networks only 1`] = `
               class="flex items-center"
             >
               <div
-                class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 hAcKQs"
+                class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 dMZjng"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nnGbn"
                   data-testid="navbar__buttons--receive"
                   disabled=""
                   type="button"
@@ -1295,7 +1295,7 @@ exports[`Contacts should render with contacts of live networks only 1`] = `
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="sc-bdnxRM NjstW p-1"
+                      class="sc-bdvvtL qGXhc p-1"
                       height="20"
                       width="20"
                     >
@@ -1346,7 +1346,7 @@ exports[`Contacts should render with contacts of live networks only 1`] = `
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -1374,7 +1374,7 @@ exports[`Contacts should render with contacts of live networks only 1`] = `
       class="flex flex-col flex-1"
     >
       <div
-        class="Section__SectionWrapper-sc-plnv9l-0 eFeTGz border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder"
+        class="Section__SectionWrapper-sc-plnv9l-0 gIRSYc border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder"
       >
         <div
           class="container px-10 mx-auto"
@@ -1413,7 +1413,7 @@ exports[`Contacts should render with contacts of live networks only 1`] = `
                       class="group"
                     >
                       <button
-                        class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus"
+                        class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus"
                         type="button"
                       >
                         <div
@@ -1423,7 +1423,7 @@ exports[`Contacts should render with contacts of live networks only 1`] = `
                             Search
                           </span>
                           <div
-                            class="sc-bdnxRM NjstW"
+                            class="sc-bdvvtL qGXhc"
                             height="20"
                             width="20"
                           >
@@ -1440,7 +1440,7 @@ exports[`Contacts should render with contacts of live networks only 1`] = `
                   />
                 </div>
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC whitespace-nowrap"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ whitespace-nowrap"
                   data-testid="contacts__add-contact-btn"
                   type="button"
                 >
@@ -1456,7 +1456,7 @@ exports[`Contacts should render with contacts of live networks only 1`] = `
         </div>
       </div>
       <div
-        class="Section__SectionWrapper-sc-plnv9l-0 efrBqv"
+        class="Section__SectionWrapper-sc-plnv9l-0 fYoPaw"
       >
         <div
           class="container px-10 mx-auto"
@@ -1466,7 +1466,7 @@ exports[`Contacts should render with contacts of live networks only 1`] = `
             data-testid="ContactList"
           >
             <div
-              class="Table__TableWrapper-sc-1gcp0fb-0 fDAVsO -mt-3"
+              class="Table__TableWrapper-sc-1gcp0fb-0 jHfvAR -mt-3"
               role="table"
             >
               <table
@@ -1496,7 +1496,7 @@ exports[`Contacts should render with contacts of live networks only 1`] = `
                           class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                         >
                           <div
-                            class="sc-bdnxRM AkeAK transition-transform transform rotate-180"
+                            class="sc-bdvvtL Cfvxc transition-transform transform rotate-180"
                             height="10"
                             role="img"
                             width="10"
@@ -1570,15 +1570,15 @@ exports[`Contacts should render with contacts of live networks only 1`] = `
                   role="rowgroup"
                 >
                   <tr
-                    class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
+                    class="TableRow__TableRowStyled-sc-y9j4av-0 jRikRC"
                     data-testid="TableRow"
                   >
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY space-x-4"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 gljhIf flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -1606,15 +1606,15 @@ exports[`Contacts should render with contacts of live networks only 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq justify-center"
                       >
                         <div
                           aria-label="ARK"
-                          class="Circle__CircleWrapper-sc-d5u41q-0 fgSjup text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600 ring-theme-background"
+                          class="Circle__CircleWrapper-sc-d5u41q-0 ePUgJq text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600 ring-theme-background"
                           data-testid="NetworkIcon-ARK-ark.mainnet"
                         >
                           <div
-                            class="sc-bdnxRM NjstW"
+                            class="sc-bdvvtL qGXhc"
                             data-testid="NetworkIcon__icon"
                             height="20"
                             width="20"
@@ -1631,10 +1631,10 @@ exports[`Contacts should render with contacts of live networks only 1`] = `
                       data-testid="ContactListItem__address"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq space-x-4"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 gljhIf flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -1663,7 +1663,7 @@ exports[`Contacts should render with contacts of live networks only 1`] = `
                       class=""
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4 justify-center"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq space-x-4 justify-center"
                       >
                         <button
                           class="relative focus:outline-none ring-focus"
@@ -1675,7 +1675,7 @@ exports[`Contacts should render with contacts of live networks only 1`] = `
                             class="text-theme-primary-300 dark:text-theme-secondary-700"
                           >
                             <div
-                              class="sc-bdnxRM AFVmm"
+                              class="sc-bdvvtL fCrhkg"
                               height="16"
                               width="16"
                             >
@@ -1691,13 +1691,13 @@ exports[`Contacts should render with contacts of live networks only 1`] = `
                       class=""
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end"
                       >
                         <div
                           class="flex items-center space-x-2"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
                             data-testid="ContactListItem__send-button"
                             type="button"
                           >
@@ -1717,14 +1717,14 @@ exports[`Contacts should render with contacts of live networks only 1`] = `
                                 data-testid="dropdown__toggle"
                               >
                                 <button
-                                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cpPdwA"
+                                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hSJSpT"
                                   type="button"
                                 >
                                   <div
                                     class="flex items-center space-x-2"
                                   >
                                     <div
-                                      class="sc-bdnxRM NjstW"
+                                      class="sc-bdvvtL qGXhc"
                                       height="20"
                                       width="20"
                                     >
@@ -1759,16 +1759,16 @@ exports[`Contacts should render without contacts 1`] = `
   >
     <nav
       aria-labelledby="main menu"
-      class="NavigationBarblocks__NavWrapper-sc-nciu2a-0 gKHJQe"
+      class="NavigationBarblocks__NavWrapper-sc-nciu2a-0 iVVfMx"
     >
       <div
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 tELEj flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
         >
           <div
-            class="sc-bdnxRM AkeAK mx-auto"
+            class="sc-bdvvtL Cfvxc mx-auto"
             height="10"
             width="10"
           >
@@ -1858,10 +1858,10 @@ exports[`Contacts should render without contacts 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 hAcKQs group"
+                    class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -1869,7 +1869,7 @@ exports[`Contacts should render without contacts 1`] = `
                         class="flex items-center space-x-2"
                       >
                         <div
-                          class="sc-bdnxRM NjstW p-1"
+                          class="sc-bdvvtL qGXhc p-1"
                           height="20"
                           width="20"
                         >
@@ -1897,10 +1897,10 @@ exports[`Contacts should render without contacts 1`] = `
               class="flex items-center"
             >
               <div
-                class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 hAcKQs"
+                class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -1908,7 +1908,7 @@ exports[`Contacts should render without contacts 1`] = `
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="sc-bdnxRM NjstW p-1"
+                      class="sc-bdvvtL qGXhc p-1"
                       height="20"
                       width="20"
                     >
@@ -1927,10 +1927,10 @@ exports[`Contacts should render without contacts 1`] = `
               class="flex items-center"
             >
               <div
-                class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 hAcKQs"
+                class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -1938,7 +1938,7 @@ exports[`Contacts should render without contacts 1`] = `
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="sc-bdnxRM NjstW p-1"
+                      class="sc-bdvvtL qGXhc p-1"
                       height="20"
                       width="20"
                     >
@@ -1989,7 +1989,7 @@ exports[`Contacts should render without contacts 1`] = `
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -2017,7 +2017,7 @@ exports[`Contacts should render without contacts 1`] = `
       class="flex flex-col flex-1"
     >
       <div
-        class="Section__SectionWrapper-sc-plnv9l-0 eFeTGz border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder"
+        class="Section__SectionWrapper-sc-plnv9l-0 gIRSYc border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder"
       >
         <div
           class="container px-10 mx-auto"
@@ -2046,7 +2046,7 @@ exports[`Contacts should render without contacts 1`] = `
                 class="flex justify-end items-top"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC whitespace-nowrap"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ whitespace-nowrap"
                   data-testid="contacts__add-contact-btn"
                   type="button"
                 >
@@ -2062,7 +2062,7 @@ exports[`Contacts should render without contacts 1`] = `
         </div>
       </div>
       <div
-        class="Section__SectionWrapper-sc-plnv9l-0 efrBqv"
+        class="Section__SectionWrapper-sc-plnv9l-0 fYoPaw"
       >
         <div
           class="container px-10 mx-auto"

@@ -9,7 +9,7 @@ exports[`CreateContact should render 1`] = `
     data-testid="modal__overlay"
   >
     <div
-      class="Modal__ModalContainer-sc-5lu2mc-0 wWqtC"
+      class="Modal__ModalContainer-sc-5lu2mc-0 epQFkJ"
       tabindex="-1"
     >
       <div
@@ -20,7 +20,7 @@ exports[`CreateContact should render 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -28,7 +28,7 @@ exports[`CreateContact should render 1`] = `
               class="flex items-center space-x-2"
             >
               <div
-                class="sc-bdnxRM AFVmm"
+                class="sc-bdvvtL fCrhkg"
                 height="16"
                 width="16"
               >
@@ -63,7 +63,7 @@ exports[`CreateContact should render 1`] = `
                 data-testid="contact-form"
               >
                 <fieldset
-                  class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
+                  class="FormField__FormFieldStyled-sc-q4bblx-0 dFNJMk flex flex-col space-y-2"
                 >
                   <label
                     class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -73,13 +73,13 @@ exports[`CreateContact should render 1`] = `
                     Name
                   </label>
                   <div
-                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
                   >
                     <div
                       class="relative flex flex-1 h-full"
                     >
                       <input
-                        class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                        class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                         data-testid="contact-form__name-input"
                         name="name"
                         value=""
@@ -88,10 +88,10 @@ exports[`CreateContact should render 1`] = `
                   </div>
                 </fieldset>
                 <div
-                  class="SubForm__SubFormWrapper-sc-1x20s74-0 eYhvbV"
+                  class="SubForm__SubFormWrapper-sc-1x20s74-0 fTuEVK"
                 >
                   <fieldset
-                    class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
+                    class="FormField__FormFieldStyled-sc-q4bblx-0 dFNJMk flex flex-col space-y-2"
                   >
                     <label
                       class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -104,13 +104,13 @@ exports[`CreateContact should render 1`] = `
                       class="relative w-full"
                     >
                       <div
-                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
+                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF sr-only"
                       >
                         <div
                           class="relative flex flex-1 h-full"
                         >
                           <input
-                            class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                            class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                             data-testid="select-list__input"
                             name="network"
                             readonly=""
@@ -133,7 +133,7 @@ exports[`CreateContact should render 1`] = `
                             id="downshift-0-label"
                           />
                           <div
-                            class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
+                            class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
                           >
                             <div
                               class="relative flex flex-1 h-full"
@@ -143,7 +143,7 @@ exports[`CreateContact should render 1`] = `
                                 aria-controls="downshift-0-menu"
                                 aria-labelledby="downshift-0-label"
                                 autocomplete="off"
-                                class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full cursor-default"
+                                class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full cursor-default"
                                 data-testid="SelectDropdown__input"
                                 id="downshift-0-input"
                                 name="network"
@@ -162,7 +162,7 @@ exports[`CreateContact should render 1`] = `
                                   data-testid="SelectDropdown__caret"
                                 >
                                   <div
-                                    class="sc-bdnxRM AkeAK transition-transform text-theme-secondary-500"
+                                    class="sc-bdvvtL Cfvxc transition-transform text-theme-secondary-500"
                                     height="10"
                                     width="10"
                                   >
@@ -176,7 +176,7 @@ exports[`CreateContact should render 1`] = `
                           </div>
                           <ul
                             aria-labelledby="downshift-0-label"
-                            class="styles__SelectOptionsList-sc-120rtxy-0 eqsPyr"
+                            class="styles__SelectOptionsList-sc-120rtxy-0 HcHWp"
                             id="downshift-0-menu"
                             role="listbox"
                           />
@@ -185,7 +185,7 @@ exports[`CreateContact should render 1`] = `
                     </div>
                   </fieldset>
                   <fieldset
-                    class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
+                    class="FormField__FormFieldStyled-sc-q4bblx-0 dFNJMk flex flex-col space-y-2"
                     data-testid="ContactForm__address"
                   >
                     <label
@@ -196,13 +196,13 @@ exports[`CreateContact should render 1`] = `
                       Address
                     </label>
                     <div
-                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
+                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
                     >
                       <div
                         class="relative flex flex-1 h-full"
                       >
                         <input
-                          class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                          class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                           data-testid="contact-form__address-input"
                           name="address"
                           type="text"
@@ -215,7 +215,7 @@ exports[`CreateContact should render 1`] = `
                     class="mt-4"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd w-full"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 dQCpEO w-full"
                       data-testid="contact-form__add-address-btn"
                       disabled=""
                       type="button"
@@ -235,7 +235,7 @@ exports[`CreateContact should render 1`] = `
                     class="space-x-3"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
                       data-testid="contact-form__cancel-btn"
                       type="button"
                     >
@@ -246,7 +246,7 @@ exports[`CreateContact should render 1`] = `
                       </div>
                     </button>
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 dQCpEO"
                       data-testid="contact-form__save-btn"
                       disabled=""
                       type="submit"

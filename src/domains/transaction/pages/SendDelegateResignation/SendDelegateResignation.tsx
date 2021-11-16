@@ -1,4 +1,4 @@
-import { DTO } from "@payvo/profiles";
+import { DTO } from "@payvo/sdk-profiles";
 import { Form } from "app/components/Form";
 import { Page, Section } from "app/components/Layout";
 import { StepIndicator } from "app/components/StepIndicator";
@@ -38,7 +38,7 @@ export const SendDelegateResignation = () => {
 	const { common } = useValidation();
 
 	const [activeTab, setActiveTab] = useState<Step>(Step.FormStep);
-	const [transaction, setTransaction] = useState((null as unknown) as DTO.ExtendedSignedTransactionData);
+	const [transaction, setTransaction] = useState(null as unknown as DTO.ExtendedSignedTransactionData);
 	const [errorMessage, setErrorMessage] = useState<string | undefined>();
 
 	const { persist } = useEnvironmentContext();
@@ -54,13 +54,8 @@ export const SendDelegateResignation = () => {
 		register("suppressWarning");
 	}, [activeWallet, common, register]);
 
-	const {
-		dismissFeeWarning,
-		feeWarningVariant,
-		requireFeeConfirmation,
-		showFeeWarning,
-		setShowFeeWarning,
-	} = useFeeConfirmation(fee, fees);
+	const { dismissFeeWarning, feeWarningVariant, requireFeeConfirmation, showFeeWarning, setShowFeeWarning } =
+		useFeeConfirmation(fee, fees);
 
 	useKeydown("Enter", () => {
 		const isButton = (document.activeElement as any)?.type === "button";
@@ -91,16 +86,8 @@ export const SendDelegateResignation = () => {
 	};
 
 	const handleSubmit = async () => {
-		const {
-			fee,
-			mnemonic,
-			secondMnemonic,
-			encryptionPassword,
-			wif,
-			privateKey,
-			secret,
-			secondSecret,
-		} = getValues();
+		const { fee, mnemonic, secondMnemonic, encryptionPassword, wif, privateKey, secret, secondSecret } =
+			getValues();
 
 		try {
 			const signatory = await activeWallet.signatoryFactory().make({

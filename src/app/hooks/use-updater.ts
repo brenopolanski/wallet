@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { toasts } from "app/services";
 import { ipcRenderer } from "electron";
 import { useCallback, useEffect, useState } from "react";

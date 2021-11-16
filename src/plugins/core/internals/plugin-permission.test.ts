@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { EventsPluginService } from "plugins/services";
 import { env, getDefaultProfileId } from "utils/testing-library";
 

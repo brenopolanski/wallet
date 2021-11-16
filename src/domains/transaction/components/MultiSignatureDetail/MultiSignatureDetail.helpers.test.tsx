@@ -1,4 +1,4 @@
-import { Contracts, DTO } from "@payvo/profiles";
+import { Contracts, DTO } from "@payvo/sdk-profiles";
 import React from "react";
 import { env, getDefaultProfileId, getDefaultWalletMnemonic, render, syncDelegates } from "utils/testing-library";
 

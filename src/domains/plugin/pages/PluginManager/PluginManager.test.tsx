@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { translations as commonTranslations } from "app/i18n/common/i18n";
 import { toasts } from "app/services";
 import { ipcRenderer } from "electron";
@@ -526,8 +526,7 @@ describe("PluginManager", () => {
 		await waitFor(() =>
 			expect(ipcRendererSpy).toHaveBeenLastCalledWith("plugin:download", {
 				name: "@dated/delegate-calculator-wallet-plugin",
-				url:
-					"https://registry.npmjs.org/@dated/delegate-calculator-wallet-plugin/-/delegate-calculator-wallet-plugin-1.0.0.tgz",
+				url: "https://registry.npmjs.org/@dated/delegate-calculator-wallet-plugin/-/delegate-calculator-wallet-plugin-1.0.0.tgz",
 			}),
 		);
 
@@ -566,8 +565,7 @@ describe("PluginManager", () => {
 		await waitFor(() =>
 			expect(ipcRendererSpy).toHaveBeenLastCalledWith("plugin:download", {
 				name: "@dated/delegate-calculator-wallet-plugin",
-				url:
-					"https://registry.npmjs.org/@dated/delegate-calculator-wallet-plugin/-/delegate-calculator-wallet-plugin-1.0.0.tgz",
+				url: "https://registry.npmjs.org/@dated/delegate-calculator-wallet-plugin/-/delegate-calculator-wallet-plugin-1.0.0.tgz",
 			}),
 		);
 
@@ -781,8 +779,7 @@ describe("PluginManager", () => {
 		await waitFor(() =>
 			expect(ipcRendererSpy).toHaveBeenCalledWith("plugin:download", {
 				name: "@dated/delegate-calculator-wallet-plugin",
-				url:
-					"https://registry.npmjs.org/@dated/delegate-calculator-wallet-plugin/-/delegate-calculator-wallet-plugin-1.0.0.tgz",
+				url: "https://registry.npmjs.org/@dated/delegate-calculator-wallet-plugin/-/delegate-calculator-wallet-plugin-1.0.0.tgz",
 			}),
 		);
 

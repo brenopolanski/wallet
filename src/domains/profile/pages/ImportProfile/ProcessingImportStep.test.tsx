@@ -1,4 +1,4 @@
-import { Profile } from "@payvo/profiles";
+import { Profile } from "@payvo/sdk-profiles";
 import { ProcessingImport } from "domains/profile/pages/ImportProfile/ProcessingImportStep";
 import fs from "fs";
 import React from "react";

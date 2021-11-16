@@ -77,7 +77,11 @@ export const SearchRecipient: FC<SearchRecipientProperties> = ({
 	recipients,
 	selectedAddress,
 }) => {
-	const { setSearchKeyword, filteredList: filteredRecipients, isEmptyResults } = useSearchWallet({
+	const {
+		setSearchKeyword,
+		filteredList: filteredRecipients,
+		isEmptyResults,
+	} = useSearchWallet({
 		wallets: recipients,
 	});
 

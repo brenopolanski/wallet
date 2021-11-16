@@ -1,4 +1,4 @@
-import { Contracts, Environment } from "@payvo/profiles";
+import { Contracts, Environment } from "@payvo/sdk-profiles";
 import { ReadableFile } from "app/hooks/use-files";
 
 interface ImportFileProperties {

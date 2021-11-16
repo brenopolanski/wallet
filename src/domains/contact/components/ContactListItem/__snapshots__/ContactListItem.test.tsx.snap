@@ -5,15 +5,15 @@ exports[`ContactListItem should render 1`] = `
   <table>
     <tbody>
       <tr
-        class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
+        class="TableRow__TableRowStyled-sc-y9j4av-0 jRikRC"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY space-x-4"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 gljhIf flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -41,15 +41,15 @@ exports[`ContactListItem should render 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq justify-center"
           >
             <div
               aria-label="ARK Devnet"
-              class="Circle__CircleWrapper-sc-d5u41q-0 fgSjup text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+              class="Circle__CircleWrapper-sc-d5u41q-0 ePUgJq text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
               data-testid="NetworkIcon-ARK-ark.devnet"
             >
               <div
-                class="sc-bdnxRM NjstW"
+                class="sc-bdvvtL qGXhc"
                 data-testid="NetworkIcon__icon"
                 height="20"
                 width="20"
@@ -66,10 +66,10 @@ exports[`ContactListItem should render 1`] = `
           data-testid="ContactListItem__address"
         >
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq space-x-4"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 gljhIf flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -98,7 +98,7 @@ exports[`ContactListItem should render 1`] = `
           class=""
         >
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4 justify-center"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq space-x-4 justify-center"
           >
             <button
               class="relative focus:outline-none ring-focus"
@@ -110,7 +110,7 @@ exports[`ContactListItem should render 1`] = `
                 class="text-theme-primary-300 dark:text-theme-secondary-700"
               >
                 <div
-                  class="sc-bdnxRM AFVmm"
+                  class="sc-bdvvtL fCrhkg"
                   height="16"
                   width="16"
                 >
@@ -126,13 +126,13 @@ exports[`ContactListItem should render 1`] = `
           class=""
         >
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end"
           >
             <div
               class="flex items-center space-x-2"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
                 data-testid="ContactListItem__send-button"
                 type="button"
               >
@@ -152,14 +152,14 @@ exports[`ContactListItem should render 1`] = `
                     data-testid="dropdown__toggle"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 cpPdwA"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hSJSpT"
                       type="button"
                     >
                       <div
                         class="flex items-center space-x-2"
                       >
                         <div
-                          class="sc-bdnxRM NjstW"
+                          class="sc-bdvvtL qGXhc"
                           height="20"
                           width="20"
                         >
@@ -186,15 +186,15 @@ exports[`ContactListItem should render as delegate 1`] = `
   <table>
     <tbody>
       <tr
-        class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
+        class="TableRow__TableRowStyled-sc-y9j4av-0 jRikRC"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY space-x-4"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 gljhIf flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -222,15 +222,15 @@ exports[`ContactListItem should render as delegate 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq justify-center"
           >
             <div
               aria-label="ARK Devnet"
-              class="Circle__CircleWrapper-sc-d5u41q-0 fgSjup text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+              class="Circle__CircleWrapper-sc-d5u41q-0 ePUgJq text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
               data-testid="NetworkIcon-ARK-ark.devnet"
             >
               <div
-                class="sc-bdnxRM NjstW"
+                class="sc-bdvvtL qGXhc"
                 data-testid="NetworkIcon__icon"
                 height="20"
                 width="20"
@@ -247,10 +247,10 @@ exports[`ContactListItem should render as delegate 1`] = `
           data-testid="ContactListItem__address"
         >
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq space-x-4"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 gljhIf flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -279,7 +279,7 @@ exports[`ContactListItem should render as delegate 1`] = `
           class=""
         >
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4 justify-center"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq space-x-4 justify-center"
           >
             <button
               class="relative focus:outline-none ring-focus"
@@ -291,7 +291,7 @@ exports[`ContactListItem should render as delegate 1`] = `
                 class="text-theme-primary-300 dark:text-theme-secondary-700"
               >
                 <div
-                  class="sc-bdnxRM AFVmm"
+                  class="sc-bdvvtL fCrhkg"
                   height="16"
                   width="16"
                 >
@@ -307,13 +307,13 @@ exports[`ContactListItem should render as delegate 1`] = `
           class=""
         >
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end"
           >
             <div
               class="flex items-center space-x-2"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
                 data-testid="ContactListItem__send-button"
                 type="button"
               >
@@ -333,14 +333,14 @@ exports[`ContactListItem should render as delegate 1`] = `
                     data-testid="dropdown__toggle"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 cpPdwA"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hSJSpT"
                       type="button"
                     >
                       <div
                         class="flex items-center space-x-2"
                       >
                         <div
-                          class="sc-bdnxRM NjstW"
+                          class="sc-bdvvtL qGXhc"
                           height="20"
                           width="20"
                         >
@@ -367,15 +367,15 @@ exports[`ContactListItem should render with live networks only 1`] = `
   <table>
     <tbody>
       <tr
-        class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
+        class="TableRow__TableRowStyled-sc-y9j4av-0 jRikRC"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY space-x-4"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 gljhIf flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -403,15 +403,15 @@ exports[`ContactListItem should render with live networks only 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq justify-center"
           >
             <div
               aria-label="ARK"
-              class="Circle__CircleWrapper-sc-d5u41q-0 fgSjup text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600 ring-theme-background"
+              class="Circle__CircleWrapper-sc-d5u41q-0 ePUgJq text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600 ring-theme-background"
               data-testid="NetworkIcon-ARK-ark.mainnet"
             >
               <div
-                class="sc-bdnxRM NjstW"
+                class="sc-bdvvtL qGXhc"
                 data-testid="NetworkIcon__icon"
                 height="20"
                 width="20"
@@ -428,10 +428,10 @@ exports[`ContactListItem should render with live networks only 1`] = `
           data-testid="ContactListItem__address"
         >
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq space-x-4"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 gljhIf flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -460,7 +460,7 @@ exports[`ContactListItem should render with live networks only 1`] = `
           class=""
         >
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4 justify-center"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq space-x-4 justify-center"
           >
             <button
               class="relative focus:outline-none ring-focus"
@@ -472,7 +472,7 @@ exports[`ContactListItem should render with live networks only 1`] = `
                 class="text-theme-primary-300 dark:text-theme-secondary-700"
               >
                 <div
-                  class="sc-bdnxRM AFVmm"
+                  class="sc-bdvvtL fCrhkg"
                   height="16"
                   width="16"
                 >
@@ -488,13 +488,13 @@ exports[`ContactListItem should render with live networks only 1`] = `
           class=""
         >
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end"
           >
             <div
               class="flex items-center space-x-2"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
                 data-testid="ContactListItem__send-button"
                 type="button"
               >
@@ -514,14 +514,14 @@ exports[`ContactListItem should render with live networks only 1`] = `
                     data-testid="dropdown__toggle"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 cpPdwA"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hSJSpT"
                       type="button"
                     >
                       <div
                         class="flex items-center space-x-2"
                       >
                         <div
-                          class="sc-bdnxRM NjstW"
+                          class="sc-bdvvtL qGXhc"
                           height="20"
                           width="20"
                         >
@@ -548,15 +548,15 @@ exports[`ContactListItem should render with multiple addresses 1`] = `
   <table>
     <tbody>
       <tr
-        class="TableRow__TableRowStyled-sc-y9j4av-0 jzTbDS"
+        class="TableRow__TableRowStyled-sc-y9j4av-0 fXMgbp"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY space-x-4"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 gljhIf flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -584,15 +584,15 @@ exports[`ContactListItem should render with multiple addresses 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq justify-center"
           >
             <div
               aria-label="ARK Devnet"
-              class="Circle__CircleWrapper-sc-d5u41q-0 fgSjup text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+              class="Circle__CircleWrapper-sc-d5u41q-0 ePUgJq text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
               data-testid="NetworkIcon-ARK-ark.devnet"
             >
               <div
-                class="sc-bdnxRM NjstW"
+                class="sc-bdvvtL qGXhc"
                 data-testid="NetworkIcon__icon"
                 height="20"
                 width="20"
@@ -609,10 +609,10 @@ exports[`ContactListItem should render with multiple addresses 1`] = `
           data-testid="ContactListItem__address"
         >
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq space-x-4"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 gljhIf flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -641,7 +641,7 @@ exports[`ContactListItem should render with multiple addresses 1`] = `
           class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
         >
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4 justify-center"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq space-x-4 justify-center"
           >
             <button
               class="relative focus:outline-none ring-focus"
@@ -653,7 +653,7 @@ exports[`ContactListItem should render with multiple addresses 1`] = `
                 class="text-theme-primary-300 dark:text-theme-secondary-700"
               >
                 <div
-                  class="sc-bdnxRM AFVmm"
+                  class="sc-bdvvtL fCrhkg"
                   height="16"
                   width="16"
                 >
@@ -669,13 +669,13 @@ exports[`ContactListItem should render with multiple addresses 1`] = `
           class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
         >
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end"
           >
             <div
               class="flex items-center space-x-2"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
                 data-testid="ContactListItem__send-button"
                 type="button"
               >
@@ -695,14 +695,14 @@ exports[`ContactListItem should render with multiple addresses 1`] = `
                     data-testid="dropdown__toggle"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 cpPdwA"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hSJSpT"
                       type="button"
                     >
                       <div
                         class="flex items-center space-x-2"
                       >
                         <div
-                          class="sc-bdnxRM NjstW"
+                          class="sc-bdvvtL qGXhc"
                           height="20"
                           width="20"
                         >
@@ -720,25 +720,25 @@ exports[`ContactListItem should render with multiple addresses 1`] = `
         </td>
       </tr>
       <tr
-        class="TableRow__TableRowStyled-sc-y9j4av-0 jzTbDS"
+        class="TableRow__TableRowStyled-sc-y9j4av-0 fXMgbp"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY space-x-4"
           />
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq justify-center"
           >
             <div
               aria-label="ARK Devnet"
-              class="Circle__CircleWrapper-sc-d5u41q-0 fgSjup text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+              class="Circle__CircleWrapper-sc-d5u41q-0 ePUgJq text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
               data-testid="NetworkIcon-ARK-ark.devnet"
             >
               <div
-                class="sc-bdnxRM NjstW"
+                class="sc-bdvvtL qGXhc"
                 data-testid="NetworkIcon__icon"
                 height="20"
                 width="20"
@@ -755,10 +755,10 @@ exports[`ContactListItem should render with multiple addresses 1`] = `
           data-testid="ContactListItem__address"
         >
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq space-x-4"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 gljhIf flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -787,7 +787,7 @@ exports[`ContactListItem should render with multiple addresses 1`] = `
           class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
         >
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4 justify-center"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq space-x-4 justify-center"
           >
             <button
               class="relative focus:outline-none ring-focus"
@@ -799,7 +799,7 @@ exports[`ContactListItem should render with multiple addresses 1`] = `
                 class="text-theme-primary-300 dark:text-theme-secondary-700"
               >
                 <div
-                  class="sc-bdnxRM AFVmm"
+                  class="sc-bdvvtL fCrhkg"
                   height="16"
                   width="16"
                 >
@@ -815,13 +815,13 @@ exports[`ContactListItem should render with multiple addresses 1`] = `
           class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
         >
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end"
           >
             <div
               class="flex items-center space-x-2"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
                 data-testid="ContactListItem__send-button"
                 type="button"
               >
@@ -841,14 +841,14 @@ exports[`ContactListItem should render with multiple addresses 1`] = `
                     data-testid="dropdown__toggle"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 cpPdwA"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hSJSpT"
                       type="button"
                     >
                       <div
                         class="flex items-center space-x-2"
                       >
                         <div
-                          class="sc-bdnxRM NjstW"
+                          class="sc-bdvvtL qGXhc"
                           height="20"
                           width="20"
                         >
@@ -866,25 +866,25 @@ exports[`ContactListItem should render with multiple addresses 1`] = `
         </td>
       </tr>
       <tr
-        class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
+        class="TableRow__TableRowStyled-sc-y9j4av-0 jRikRC"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY space-x-4"
           />
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq justify-center"
           >
             <div
               aria-label="ARK Devnet"
-              class="Circle__CircleWrapper-sc-d5u41q-0 fgSjup text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+              class="Circle__CircleWrapper-sc-d5u41q-0 ePUgJq text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
               data-testid="NetworkIcon-ARK-ark.devnet"
             >
               <div
-                class="sc-bdnxRM NjstW"
+                class="sc-bdvvtL qGXhc"
                 data-testid="NetworkIcon__icon"
                 height="20"
                 width="20"
@@ -901,10 +901,10 @@ exports[`ContactListItem should render with multiple addresses 1`] = `
           data-testid="ContactListItem__address"
         >
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq space-x-4"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 gljhIf flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -933,7 +933,7 @@ exports[`ContactListItem should render with multiple addresses 1`] = `
           class=""
         >
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4 justify-center"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq space-x-4 justify-center"
           >
             <button
               class="relative focus:outline-none ring-focus"
@@ -945,7 +945,7 @@ exports[`ContactListItem should render with multiple addresses 1`] = `
                 class="text-theme-primary-300 dark:text-theme-secondary-700"
               >
                 <div
-                  class="sc-bdnxRM AFVmm"
+                  class="sc-bdvvtL fCrhkg"
                   height="16"
                   width="16"
                 >
@@ -961,13 +961,13 @@ exports[`ContactListItem should render with multiple addresses 1`] = `
           class=""
         >
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end"
           >
             <div
               class="flex items-center space-x-2"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
                 data-testid="ContactListItem__send-button"
                 type="button"
               >
@@ -987,14 +987,14 @@ exports[`ContactListItem should render with multiple addresses 1`] = `
                     data-testid="dropdown__toggle"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 cpPdwA"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hSJSpT"
                       type="button"
                     >
                       <div
                         class="flex items-center space-x-2"
                       >
                         <div
-                          class="sc-bdnxRM NjstW"
+                          class="sc-bdvvtL qGXhc"
                           height="20"
                           width="20"
                         >
@@ -1021,15 +1021,15 @@ exports[`ContactListItem should render with multiple options 1`] = `
   <table>
     <tbody>
       <tr
-        class="TableRow__TableRowStyled-sc-y9j4av-0 jzTbDS"
+        class="TableRow__TableRowStyled-sc-y9j4av-0 fXMgbp"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY space-x-4"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 gljhIf flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -1057,15 +1057,15 @@ exports[`ContactListItem should render with multiple options 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq justify-center"
           >
             <div
               aria-label="ARK Devnet"
-              class="Circle__CircleWrapper-sc-d5u41q-0 fgSjup text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+              class="Circle__CircleWrapper-sc-d5u41q-0 ePUgJq text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
               data-testid="NetworkIcon-ARK-ark.devnet"
             >
               <div
-                class="sc-bdnxRM NjstW"
+                class="sc-bdvvtL qGXhc"
                 data-testid="NetworkIcon__icon"
                 height="20"
                 width="20"
@@ -1082,10 +1082,10 @@ exports[`ContactListItem should render with multiple options 1`] = `
           data-testid="ContactListItem__address"
         >
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq space-x-4"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 gljhIf flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -1114,7 +1114,7 @@ exports[`ContactListItem should render with multiple options 1`] = `
           class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
         >
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4 justify-center"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq space-x-4 justify-center"
           >
             <button
               class="relative focus:outline-none ring-focus"
@@ -1126,7 +1126,7 @@ exports[`ContactListItem should render with multiple options 1`] = `
                 class="text-theme-primary-300 dark:text-theme-secondary-700"
               >
                 <div
-                  class="sc-bdnxRM AFVmm"
+                  class="sc-bdvvtL fCrhkg"
                   height="16"
                   width="16"
                 >
@@ -1142,13 +1142,13 @@ exports[`ContactListItem should render with multiple options 1`] = `
           class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
         >
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end"
           >
             <div
               class="flex items-center space-x-2"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
                 data-testid="ContactListItem__send-button"
                 type="button"
               >
@@ -1168,14 +1168,14 @@ exports[`ContactListItem should render with multiple options 1`] = `
                     data-testid="dropdown__toggle"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 cpPdwA"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hSJSpT"
                       type="button"
                     >
                       <div
                         class="flex items-center space-x-2"
                       >
                         <div
-                          class="sc-bdnxRM NjstW"
+                          class="sc-bdvvtL qGXhc"
                           height="20"
                           width="20"
                         >
@@ -1193,25 +1193,25 @@ exports[`ContactListItem should render with multiple options 1`] = `
         </td>
       </tr>
       <tr
-        class="TableRow__TableRowStyled-sc-y9j4av-0 jzTbDS"
+        class="TableRow__TableRowStyled-sc-y9j4av-0 fXMgbp"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY space-x-4"
           />
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq justify-center"
           >
             <div
               aria-label="ARK Devnet"
-              class="Circle__CircleWrapper-sc-d5u41q-0 fgSjup text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+              class="Circle__CircleWrapper-sc-d5u41q-0 ePUgJq text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
               data-testid="NetworkIcon-ARK-ark.devnet"
             >
               <div
-                class="sc-bdnxRM NjstW"
+                class="sc-bdvvtL qGXhc"
                 data-testid="NetworkIcon__icon"
                 height="20"
                 width="20"
@@ -1228,10 +1228,10 @@ exports[`ContactListItem should render with multiple options 1`] = `
           data-testid="ContactListItem__address"
         >
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq space-x-4"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 gljhIf flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -1260,7 +1260,7 @@ exports[`ContactListItem should render with multiple options 1`] = `
           class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
         >
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4 justify-center"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq space-x-4 justify-center"
           >
             <button
               class="relative focus:outline-none ring-focus"
@@ -1272,7 +1272,7 @@ exports[`ContactListItem should render with multiple options 1`] = `
                 class="text-theme-primary-300 dark:text-theme-secondary-700"
               >
                 <div
-                  class="sc-bdnxRM AFVmm"
+                  class="sc-bdvvtL fCrhkg"
                   height="16"
                   width="16"
                 >
@@ -1288,13 +1288,13 @@ exports[`ContactListItem should render with multiple options 1`] = `
           class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
         >
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end"
           >
             <div
               class="flex items-center space-x-2"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
                 data-testid="ContactListItem__send-button"
                 type="button"
               >
@@ -1314,14 +1314,14 @@ exports[`ContactListItem should render with multiple options 1`] = `
                     data-testid="dropdown__toggle"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 cpPdwA"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hSJSpT"
                       type="button"
                     >
                       <div
                         class="flex items-center space-x-2"
                       >
                         <div
-                          class="sc-bdnxRM NjstW"
+                          class="sc-bdvvtL qGXhc"
                           height="20"
                           width="20"
                         >
@@ -1339,25 +1339,25 @@ exports[`ContactListItem should render with multiple options 1`] = `
         </td>
       </tr>
       <tr
-        class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
+        class="TableRow__TableRowStyled-sc-y9j4av-0 jRikRC"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY space-x-4"
           />
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq justify-center"
           >
             <div
               aria-label="ARK Devnet"
-              class="Circle__CircleWrapper-sc-d5u41q-0 fgSjup text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+              class="Circle__CircleWrapper-sc-d5u41q-0 ePUgJq text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
               data-testid="NetworkIcon-ARK-ark.devnet"
             >
               <div
-                class="sc-bdnxRM NjstW"
+                class="sc-bdvvtL qGXhc"
                 data-testid="NetworkIcon__icon"
                 height="20"
                 width="20"
@@ -1374,10 +1374,10 @@ exports[`ContactListItem should render with multiple options 1`] = `
           data-testid="ContactListItem__address"
         >
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq space-x-4"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 gljhIf flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -1406,7 +1406,7 @@ exports[`ContactListItem should render with multiple options 1`] = `
           class=""
         >
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4 justify-center"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq space-x-4 justify-center"
           >
             <button
               class="relative focus:outline-none ring-focus"
@@ -1418,7 +1418,7 @@ exports[`ContactListItem should render with multiple options 1`] = `
                 class="text-theme-primary-300 dark:text-theme-secondary-700"
               >
                 <div
-                  class="sc-bdnxRM AFVmm"
+                  class="sc-bdvvtL fCrhkg"
                   height="16"
                   width="16"
                 >
@@ -1434,13 +1434,13 @@ exports[`ContactListItem should render with multiple options 1`] = `
           class=""
         >
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end"
           >
             <div
               class="flex items-center space-x-2"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
                 data-testid="ContactListItem__send-button"
                 type="button"
               >
@@ -1460,14 +1460,14 @@ exports[`ContactListItem should render with multiple options 1`] = `
                     data-testid="dropdown__toggle"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 cpPdwA"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hSJSpT"
                       type="button"
                     >
                       <div
                         class="flex items-center space-x-2"
                       >
                         <div
-                          class="sc-bdnxRM NjstW"
+                          class="sc-bdvvtL qGXhc"
                           height="20"
                           width="20"
                         >
@@ -1494,15 +1494,15 @@ exports[`ContactListItem should render with one option 1`] = `
   <table>
     <tbody>
       <tr
-        class="TableRow__TableRowStyled-sc-y9j4av-0 jzTbDS"
+        class="TableRow__TableRowStyled-sc-y9j4av-0 fXMgbp"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY space-x-4"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 gljhIf flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -1530,15 +1530,15 @@ exports[`ContactListItem should render with one option 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq justify-center"
           >
             <div
               aria-label="ARK Devnet"
-              class="Circle__CircleWrapper-sc-d5u41q-0 fgSjup text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+              class="Circle__CircleWrapper-sc-d5u41q-0 ePUgJq text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
               data-testid="NetworkIcon-ARK-ark.devnet"
             >
               <div
-                class="sc-bdnxRM NjstW"
+                class="sc-bdvvtL qGXhc"
                 data-testid="NetworkIcon__icon"
                 height="20"
                 width="20"
@@ -1555,10 +1555,10 @@ exports[`ContactListItem should render with one option 1`] = `
           data-testid="ContactListItem__address"
         >
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq space-x-4"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 gljhIf flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -1587,7 +1587,7 @@ exports[`ContactListItem should render with one option 1`] = `
           class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
         >
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4 justify-center"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq space-x-4 justify-center"
           >
             <button
               class="relative focus:outline-none ring-focus"
@@ -1599,7 +1599,7 @@ exports[`ContactListItem should render with one option 1`] = `
                 class="text-theme-primary-300 dark:text-theme-secondary-700"
               >
                 <div
-                  class="sc-bdnxRM AFVmm"
+                  class="sc-bdvvtL fCrhkg"
                   height="16"
                   width="16"
                 >
@@ -1615,13 +1615,13 @@ exports[`ContactListItem should render with one option 1`] = `
           class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
         >
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end"
           >
             <div
               class="flex items-center space-x-2"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
                 data-testid="ContactListItem__send-button"
                 type="button"
               >
@@ -1635,7 +1635,7 @@ exports[`ContactListItem should render with one option 1`] = `
                 class="visible"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
                   data-testid="ContactListItem__one-option-button-0"
                   type="button"
                 >
@@ -1651,25 +1651,25 @@ exports[`ContactListItem should render with one option 1`] = `
         </td>
       </tr>
       <tr
-        class="TableRow__TableRowStyled-sc-y9j4av-0 jzTbDS"
+        class="TableRow__TableRowStyled-sc-y9j4av-0 fXMgbp"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY space-x-4"
           />
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq justify-center"
           >
             <div
               aria-label="ARK Devnet"
-              class="Circle__CircleWrapper-sc-d5u41q-0 fgSjup text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+              class="Circle__CircleWrapper-sc-d5u41q-0 ePUgJq text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
               data-testid="NetworkIcon-ARK-ark.devnet"
             >
               <div
-                class="sc-bdnxRM NjstW"
+                class="sc-bdvvtL qGXhc"
                 data-testid="NetworkIcon__icon"
                 height="20"
                 width="20"
@@ -1686,10 +1686,10 @@ exports[`ContactListItem should render with one option 1`] = `
           data-testid="ContactListItem__address"
         >
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq space-x-4"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 gljhIf flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -1718,7 +1718,7 @@ exports[`ContactListItem should render with one option 1`] = `
           class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
         >
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4 justify-center"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq space-x-4 justify-center"
           >
             <button
               class="relative focus:outline-none ring-focus"
@@ -1730,7 +1730,7 @@ exports[`ContactListItem should render with one option 1`] = `
                 class="text-theme-primary-300 dark:text-theme-secondary-700"
               >
                 <div
-                  class="sc-bdnxRM AFVmm"
+                  class="sc-bdvvtL fCrhkg"
                   height="16"
                   width="16"
                 >
@@ -1746,13 +1746,13 @@ exports[`ContactListItem should render with one option 1`] = `
           class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
         >
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end"
           >
             <div
               class="flex items-center space-x-2"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
                 data-testid="ContactListItem__send-button"
                 type="button"
               >
@@ -1766,7 +1766,7 @@ exports[`ContactListItem should render with one option 1`] = `
                 class="invisible"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
                   data-testid="ContactListItem__one-option-button-1"
                   type="button"
                 >
@@ -1782,25 +1782,25 @@ exports[`ContactListItem should render with one option 1`] = `
         </td>
       </tr>
       <tr
-        class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
+        class="TableRow__TableRowStyled-sc-y9j4av-0 jRikRC"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY space-x-4"
           />
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq justify-center"
           >
             <div
               aria-label="ARK Devnet"
-              class="Circle__CircleWrapper-sc-d5u41q-0 fgSjup text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+              class="Circle__CircleWrapper-sc-d5u41q-0 ePUgJq text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
               data-testid="NetworkIcon-ARK-ark.devnet"
             >
               <div
-                class="sc-bdnxRM NjstW"
+                class="sc-bdvvtL qGXhc"
                 data-testid="NetworkIcon__icon"
                 height="20"
                 width="20"
@@ -1817,10 +1817,10 @@ exports[`ContactListItem should render with one option 1`] = `
           data-testid="ContactListItem__address"
         >
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq space-x-4"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 gljhIf flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -1849,7 +1849,7 @@ exports[`ContactListItem should render with one option 1`] = `
           class=""
         >
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4 justify-center"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq space-x-4 justify-center"
           >
             <button
               class="relative focus:outline-none ring-focus"
@@ -1861,7 +1861,7 @@ exports[`ContactListItem should render with one option 1`] = `
                 class="text-theme-primary-300 dark:text-theme-secondary-700"
               >
                 <div
-                  class="sc-bdnxRM AFVmm"
+                  class="sc-bdvvtL fCrhkg"
                   height="16"
                   width="16"
                 >
@@ -1877,13 +1877,13 @@ exports[`ContactListItem should render with one option 1`] = `
           class=""
         >
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end"
           >
             <div
               class="flex items-center space-x-2"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
                 data-testid="ContactListItem__send-button"
                 type="button"
               >
@@ -1897,7 +1897,7 @@ exports[`ContactListItem should render with one option 1`] = `
                 class="invisible"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
                   data-testid="ContactListItem__one-option-button-2"
                   type="button"
                 >

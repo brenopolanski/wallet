@@ -12,11 +12,11 @@ exports[`LayoutControls should render 1`] = `
         class="group"
       >
         <button
-          class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus"
+          class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus"
           data-testid="LayoutControls__list--icon"
         >
           <div
-            class="sc-bdnxRM NjstW"
+            class="sc-bdvvtL qGXhc"
             height="20"
             width="20"
           >
@@ -34,11 +34,11 @@ exports[`LayoutControls should render 1`] = `
         class="group"
       >
         <button
-          class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus active"
+          class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus active"
           data-testid="LayoutControls__grid--icon"
         >
           <div
-            class="sc-bdnxRM NjstW"
+            class="sc-bdvvtL qGXhc"
             height="20"
             width="20"
           >
