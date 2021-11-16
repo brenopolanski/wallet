@@ -3781,7 +3781,7 @@ exports[`CreateWallet should show an error message if wallet generation failed 1
                       </label>
                       <div>
                         <div
-                          aria-expanded="true"
+                          aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-owns="NetworkStep__network-menu"
                           data-testid="SelectNetwork"

@@ -151,17 +151,17 @@ describe("Dashboard", () => {
 
 		await waitFor(() => expect(getAllByRole("row")).toHaveLength(5));
 
-		fireEvent.click(getByText(dashboardTranslations.WALLET_CONTROLS.IMPORT_LEDGER));
+		userEvent.click(getByText(dashboardTranslations.WALLET_CONTROLS.IMPORT_LEDGER));
 
 		await findByText(walletTranslations.MODAL_LEDGER_WALLET.CONNECT_DEVICE);
 
-		fireEvent.click(getByTestId("modal__close-btn"));
+		userEvent.click(getByTestId("modal__close-btn"));
 
 		await waitFor(() =>
 			expect(queryByText(walletTranslations.MODAL_LEDGER_WALLET.CONNECT_DEVICE)).not.toBeInTheDocument(),
 		);
 
-		fireEvent.click(getByText(dashboardTranslations.WALLET_CONTROLS.IMPORT_LEDGER));
+		userEvent.click(getByText(dashboardTranslations.WALLET_CONTROLS.IMPORT_LEDGER));
 
 		await findByText(walletTranslations.MODAL_LEDGER_WALLET.CONNECT_DEVICE);
 
@@ -192,7 +192,7 @@ describe("Dashboard", () => {
 			{ timeout: 5000 },
 		);
 
-		fireEvent.click(getByText("Create"));
+		userEvent.click(getByText("Create"));
 
 		expect(history.location.pathname).toBe(`/profiles/${fixtureProfileId}/wallets/create`);
 		expect(asFragment()).toMatchSnapshot();
@@ -215,7 +215,7 @@ describe("Dashboard", () => {
 			{ timeout: 5000 },
 		);
 
-		fireEvent.click(getByText("Import"));
+		userEvent.click(getByText("Import"));
 
 		expect(history.location.pathname).toBe(`/profiles/${fixtureProfileId}/wallets/import`);
 		expect(asFragment()).toMatchSnapshot();

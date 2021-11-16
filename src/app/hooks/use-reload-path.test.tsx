@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import { fireEvent } from "@testing-library/react";
 import React from "react";
 import { Route } from "react-router-dom";
@@ -28,7 +29,7 @@ describe("useReloadPath hook", () => {
 
 		expect(getByTestId("header_test")).toBeInTheDocument();
 
-		fireEvent.click(getByTestId("header_test"));
+		userEvent.click(getByTestId("header_test"));
 
 		expect(getByText("UseReloadPath Test Component")).toBeInTheDocument();
 	});

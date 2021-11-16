@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import { Observer } from "@ledgerhq/hw-transport";
 import { Contracts } from "@payvo/profiles";
 import { WalletData, WalletLedgerModel } from "@payvo/profiles/distribution/contracts";
@@ -152,7 +153,7 @@ describe("Use Ledger Connection", () => {
 
 		listenSpy.mockReset();
 
-		fireEvent.click(screen.getByText("Import"));
+		userEvent.click(screen.getByText("Import"));
 
 		await waitFor(() => {
 			expect(getAllByTestId("Wallet")).toHaveLength(2);
@@ -228,7 +229,7 @@ describe("Use Ledger Connection", () => {
 
 			render(<Component />);
 
-			fireEvent.click(screen.getByText("Connect"));
+			userEvent.click(screen.getByText("Connect"));
 
 			expect(screen.getByText("Waiting Device")).toBeInTheDocument();
 
@@ -247,14 +248,14 @@ describe("Use Ledger Connection", () => {
 
 			render(<Component />);
 
-			fireEvent.click(screen.getByText("Connect"));
+			userEvent.click(screen.getByText("Connect"));
 
 			expect(screen.getByText("Waiting Device")).toBeInTheDocument();
 
 			await waitFor(() => expect(screen.queryByText("Waiting Device")).not.toBeInTheDocument());
 			await screen.findByText("Connected");
 
-			fireEvent.click(screen.getByText("Disconnect"));
+			userEvent.click(screen.getByText("Disconnect"));
 
 			await waitFor(() => expect(screen.queryByText("Connected")).not.toBeInTheDocument());
 
@@ -268,8 +269,8 @@ describe("Use Ledger Connection", () => {
 
 			render(<Component retries={50} />);
 
-			fireEvent.click(screen.getByText("Connect"));
-			fireEvent.click(screen.getByText("Abort"));
+			userEvent.click(screen.getByText("Connect"));
+			userEvent.click(screen.getByText("Abort"));
 
 			await screen.findByText(walletTranslations.MODAL_LEDGER_WALLET.GENERIC_CONNECTION_ERROR);
 			await waitFor(() => expect(screen.queryByText("Waiting Device")).not.toBeInTheDocument());
@@ -289,7 +290,7 @@ describe("Use Ledger Connection", () => {
 
 			expect(screen.getByText("Connect")).toBeInTheDocument();
 
-			fireEvent.click(screen.getByText("Connect"));
+			userEvent.click(screen.getByText("Connect"));
 
 			expect(screen.getByText("Waiting Device")).toBeInTheDocument();
 
@@ -319,7 +320,7 @@ describe("Use Ledger Connection", () => {
 
 			expect(screen.getByText("Connect")).toBeInTheDocument();
 
-			fireEvent.click(screen.getByText("Connect"));
+			userEvent.click(screen.getByText("Connect"));
 
 			expect(screen.getByText("Waiting Device")).toBeInTheDocument();
 
@@ -355,7 +356,7 @@ describe("Use Ledger Connection", () => {
 
 			render(<Component userProfile={profile} userWallet={wallet} />);
 
-			fireEvent.click(screen.getByText("Connect"));
+			userEvent.click(screen.getByText("Connect"));
 
 			expect(screen.getByText("Waiting Device")).toBeInTheDocument();
 
@@ -421,7 +422,7 @@ describe("Use Ledger Connection", () => {
 			});
 
 			toastSpy = jest.spyOn(toasts, "success").mockImplementationOnce();
-			fireEvent.click(screen.getByText("Connect"));
+			userEvent.click(screen.getByText("Connect"));
 
 			expect(screen.getByText("Waiting Device")).toBeInTheDocument();
 
@@ -431,7 +432,7 @@ describe("Use Ledger Connection", () => {
 			expect(toastSpy).toHaveBeenCalledWith("Nano S connected");
 
 			toastSpy = jest.spyOn(toasts, "warning").mockImplementationOnce();
-			fireEvent.click(screen.getByText("Disconnect"));
+			userEvent.click(screen.getByText("Disconnect"));
 
 			await waitFor(() => expect(toastSpy).toHaveBeenCalledWith("Nano S disconnected"));
 

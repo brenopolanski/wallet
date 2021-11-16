@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import { Contracts, DTO } from "@payvo/profiles";
 import { httpClient } from "app/services";
 import nock from "nock";
@@ -76,7 +77,7 @@ describe("Notifications", () => {
 		);
 		await waitFor(() => expect(getAllByTestId("TransactionRowMode")).toHaveLength(1));
 
-		fireEvent.click(getByTestId("TransactionRowMode"));
+		userEvent.click(getByTestId("TransactionRowMode"));
 
 		await waitFor(() => expect(onTransactionClick).toHaveBeenCalledWith(notificationTransaction));
 	});

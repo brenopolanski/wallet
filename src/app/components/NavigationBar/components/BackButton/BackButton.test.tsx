@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { fireEvent, render } from "utils/testing-library";
@@ -25,7 +26,7 @@ describe("BackButton", () => {
 
 		const { container, getByRole } = render(<BackButton />, { history });
 
-		fireEvent.click(getByRole("button"));
+		userEvent.click(getByRole("button"));
 
 		expect(historySpy).toHaveBeenCalledWith(-1);
 
@@ -40,7 +41,7 @@ describe("BackButton", () => {
 
 		const { container, getByRole } = render(<BackButton backToUrl="new-url" />, { history });
 
-		fireEvent.click(getByRole("button"));
+		userEvent.click(getByRole("button"));
 
 		expect(historySpy).toHaveBeenCalledWith("new-url");
 
@@ -55,7 +56,7 @@ describe("BackButton", () => {
 
 		const { container, getByRole } = render(<BackButton disabled />, { history });
 
-		fireEvent.click(getByRole("button"));
+		userEvent.click(getByRole("button"));
 
 		expect(historySpy).not.toHaveBeenCalled();
 
@@ -70,7 +71,7 @@ describe("BackButton", () => {
 
 		const { container, getByRole } = render(<BackButton backToUrl="new-url" disabled />, { history });
 
-		fireEvent.click(getByRole("button"));
+		userEvent.click(getByRole("button"));
 
 		expect(historySpy).not.toHaveBeenCalled();
 

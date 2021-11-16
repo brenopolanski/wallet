@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import { Contracts } from "@payvo/profiles";
 import React from "react";
 import { fireEvent, render } from "utils/testing-library";
@@ -17,7 +18,7 @@ describe("LedgerDeviceError", () => {
 			/>,
 		);
 
-		fireEvent.click(getByTestId("modal__close-btn"));
+		userEvent.click(getByTestId("modal__close-btn"));
 
 		expect(onClose).toHaveBeenCalledWith();
 	});

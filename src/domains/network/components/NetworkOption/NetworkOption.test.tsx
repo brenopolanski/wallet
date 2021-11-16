@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import { Networks } from "@payvo/sdk";
 import React from "react";
 import { env, fireEvent, getDefaultProfileId, MNEMONICS, render } from "utils/testing-library";
@@ -38,7 +39,7 @@ describe("NetworkIcon", () => {
 		expect(getByTestId("NetworkIcon-ARK-ark.mainnet")).toHaveAttribute("aria-label", network.displayName());
 		expect(getByTestId("NetworkIcon__icon")).toBeInTheDocument();
 
-		fireEvent.click(getByTestId("SelectNetwork__NetworkIcon--container"));
+		userEvent.click(getByTestId("SelectNetwork__NetworkIcon--container"));
 
 		expect(onClick).toHaveBeenCalledWith();
 	});
@@ -51,7 +52,7 @@ describe("NetworkIcon", () => {
 		expect(getByTestId("NetworkIcon-ARK-ark.mainnet")).toHaveAttribute("aria-label", network.displayName());
 		expect(getByTestId("NetworkIcon__icon")).toBeInTheDocument();
 
-		fireEvent.click(getByTestId("SelectNetwork__NetworkIcon--container"));
+		userEvent.click(getByTestId("SelectNetwork__NetworkIcon--container"));
 
 		expect(onClick).not.toHaveBeenCalled();
 	});

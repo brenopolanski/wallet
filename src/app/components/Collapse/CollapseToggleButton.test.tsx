@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import { translations } from "app/i18n/common/i18n";
 import React from "react";
 import { fireEvent, render } from "utils/testing-library";
@@ -14,7 +15,7 @@ describe("CollapseToggleButton", () => {
 
 		expect(button).toHaveTextContent(translations.SHOW);
 
-		fireEvent.click(button);
+		userEvent.click(button);
 
 		expect(onClick).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});

@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import { Contracts as ProfilesContracts } from "@payvo/profiles";
 import { Contracts } from "@payvo/sdk";
 import { RenderResult } from "@testing-library/react";
@@ -92,7 +93,7 @@ describe("MultiSignature Registration Form", () => {
 	it("should set fee if dynamic", async () => {
 		renderComponent();
 
-		fireEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
+		userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
 
 		await waitFor(() => expect(screen.getByTestId("InputCurrency")).toBeVisible());
 
@@ -108,7 +109,7 @@ describe("MultiSignature Registration Form", () => {
 	it("should fill form", async () => {
 		const { form } = renderComponent();
 
-		fireEvent.click(screen.getByText(translations.FEES.AVERAGE));
+		userEvent.click(screen.getByText(translations.FEES.AVERAGE));
 
 		fireEvent.input(screen.getByTestId("MultiSignatureRegistrationForm__min-participants"), {
 			target: {
@@ -125,7 +126,7 @@ describe("MultiSignature Registration Form", () => {
 			},
 		});
 
-		fireEvent.click(screen.getByText(translations.MULTISIGNATURE.ADD_PARTICIPANT));
+		userEvent.click(screen.getByText(translations.MULTISIGNATURE.ADD_PARTICIPANT));
 
 		await waitFor(() => expect(form?.getValues("minParticipants")).toBe("3"));
 		await waitFor(() =>
@@ -155,7 +156,7 @@ describe("MultiSignature Registration Form", () => {
 			},
 		});
 
-		fireEvent.click(screen.getByText(translations.MULTISIGNATURE.ADD_PARTICIPANT));
+		userEvent.click(screen.getByText(translations.MULTISIGNATURE.ADD_PARTICIPANT));
 
 		await waitFor(() => expect(form?.getValues("participants")).toHaveLength(2));
 
@@ -293,7 +294,7 @@ describe("MultiSignature Registration Form", () => {
 		expect(removeButton).toBeInTheDocument();
 		expect(removeButton).toBeEnabled();
 
-		fireEvent.click(removeButton);
+		userEvent.click(removeButton);
 
 		await waitFor(() => expect(form?.getValues("minParticipants")).toBe(2));
 	});

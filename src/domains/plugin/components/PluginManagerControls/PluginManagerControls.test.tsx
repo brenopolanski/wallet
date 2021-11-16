@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import React from "react";
 import { fireEvent, render } from "utils/testing-library";
 
@@ -32,11 +33,11 @@ describe("PluginManagerControls", () => {
 		const gridIcon = getByTestId("LayoutControls__grid--icon");
 		const listIcon = getByTestId("LayoutControls__list--icon");
 
-		fireEvent.click(listIcon);
+		userEvent.click(listIcon);
 
 		expect(getByTestId("viewType")).toHaveTextContent("list");
 
-		fireEvent.click(gridIcon);
+		userEvent.click(gridIcon);
 
 		expect(getByTestId("viewType")).toHaveTextContent("grid");
 

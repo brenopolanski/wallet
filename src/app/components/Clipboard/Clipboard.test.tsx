@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import { waitFor } from "@testing-library/react";
 import React from "react";
 import { act, fireEvent, render, screen } from "utils/testing-library";
@@ -50,7 +51,7 @@ describe("Clipboard", () => {
 			</Clipboard>,
 		);
 
-		fireEvent.click(getByTestId("clipboard-icon__wrapper"));
+		userEvent.click(getByTestId("clipboard-icon__wrapper"));
 
 		act(() => {
 			jest.runOnlyPendingTimers();
@@ -71,7 +72,7 @@ describe("Clipboard", () => {
 					</Clipboard>,
 				);
 
-				fireEvent.click(getByTestId(`clipboard-${variant}__wrapper`));
+				userEvent.click(getByTestId(`clipboard-${variant}__wrapper`));
 
 				await waitFor(() => expect(onSuccess).toHaveBeenCalledWith(""));
 			},
@@ -88,7 +89,7 @@ describe("Clipboard", () => {
 					</Clipboard>,
 				);
 
-				fireEvent.click(getByTestId(`clipboard-${variant}__wrapper`));
+				userEvent.click(getByTestId(`clipboard-${variant}__wrapper`));
 
 				await waitFor(() => expect(onSuccess).not.toHaveBeenCalled());
 			},
@@ -113,7 +114,7 @@ describe("Clipboard", () => {
 					</Clipboard>,
 				);
 
-				fireEvent.click(getByTestId(`clipboard-${variant}__wrapper`));
+				userEvent.click(getByTestId(`clipboard-${variant}__wrapper`));
 
 				await waitFor(() => expect(onError).toHaveBeenCalledWith());
 			},
@@ -130,7 +131,7 @@ describe("Clipboard", () => {
 					</Clipboard>,
 				);
 
-				fireEvent.click(getByTestId(`clipboard-${variant}__wrapper`));
+				userEvent.click(getByTestId(`clipboard-${variant}__wrapper`));
 
 				await waitFor(() => expect(onError).not.toHaveBeenCalledWith());
 			},

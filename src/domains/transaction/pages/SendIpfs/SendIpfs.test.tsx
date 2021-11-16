@@ -210,24 +210,24 @@ describe("SendIpfs", () => {
 			expect(screen.getByTestId("Input__hash")).toHaveValue("QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco"),
 		);
 
-		fireEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
+		userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
 		fireEvent.change(screen.getByTestId("InputCurrency"), { target: { value: "10" } });
 		await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("10"));
 
-		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 		await screen.findByTestId("SendIpfs__review-step");
 
-		fireEvent.click(screen.getByTestId("StepNavigation__back-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__back-button"));
 		await screen.findByTestId("SendIpfs__form-step");
 
-		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 		await screen.findByTestId("SendIpfs__review-step");
 
-		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 
 		if (!profile.settings().get(Contracts.ProfileSetting.DoNotShowFeeWarning)) {
 			await screen.findByTestId("FeeWarning__continue-button");
-			fireEvent.click(screen.getByTestId("FeeWarning__continue-button"));
+			userEvent.click(screen.getByTestId("FeeWarning__continue-button"));
 		}
 
 		await screen.findByTestId("AuthenticationStep");
@@ -266,21 +266,21 @@ describe("SendIpfs", () => {
 
 		expect(within(screen.getByTestId("InputFee")).getAllByRole("radio")[1]).toBeChecked();
 
-		fireEvent.click(within(screen.getByTestId("InputFee")).getAllByRole("radio")[2]);
+		userEvent.click(within(screen.getByTestId("InputFee")).getAllByRole("radio")[2]);
 		await waitFor(() => expect(within(screen.getByTestId("InputFee")).getAllByRole("radio")[2]).toBeChecked());
 
-		fireEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
+		userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
 		fireEvent.change(screen.getByTestId("InputCurrency"), { target: { value: "10" } });
 		await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("10"));
 
-		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 		await screen.findByTestId("SendIpfs__review-step");
 
-		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 
 		if (!profile.settings().get(Contracts.ProfileSetting.DoNotShowFeeWarning)) {
 			await screen.findByTestId("FeeWarning__continue-button");
-			fireEvent.click(screen.getByTestId("FeeWarning__continue-button"));
+			userEvent.click(screen.getByTestId("FeeWarning__continue-button"));
 		}
 
 		await screen.findByTestId("AuthenticationStep");
@@ -301,7 +301,7 @@ describe("SendIpfs", () => {
 
 		await waitFor(() => expect(screen.getByTestId("StepNavigation__send-button")).not.toBeDisabled());
 
-		fireEvent.click(screen.getByTestId("StepNavigation__send-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__send-button"));
 		await screen.findByTestId("TransactionSuccessful");
 
 		expect(screen.getByTestId("TransactionSuccessful")).toHaveTextContent(
@@ -317,7 +317,7 @@ describe("SendIpfs", () => {
 		// Go back to wallet
 		const historySpy = jest.spyOn(history, "push");
 
-		fireEvent.click(screen.getByTestId("StepNavigation__back-to-wallet-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__back-to-wallet-button"));
 
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
 
@@ -359,10 +359,10 @@ describe("SendIpfs", () => {
 
 		expect(within(screen.getByTestId("InputFee")).getAllByRole("radio")[1]).toBeChecked();
 
-		fireEvent.click(within(screen.getByTestId("InputFee")).getAllByRole("radio")[2]);
+		userEvent.click(within(screen.getByTestId("InputFee")).getAllByRole("radio")[2]);
 		await waitFor(() => expect(within(screen.getByTestId("InputFee")).getAllByRole("radio")[2]).toBeChecked());
 
-		fireEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
+		userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
 		fireEvent.change(screen.getByTestId("InputCurrency"), { target: { value: "10" } });
 		await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("10"));
 
@@ -373,7 +373,7 @@ describe("SendIpfs", () => {
 
 		if (!profile.settings().get(Contracts.ProfileSetting.DoNotShowFeeWarning)) {
 			await screen.findByTestId("FeeWarning__continue-button");
-			fireEvent.click(screen.getByTestId("FeeWarning__continue-button"));
+			userEvent.click(screen.getByTestId("FeeWarning__continue-button"));
 		}
 
 		await screen.findByTestId("AuthenticationStep");
@@ -395,7 +395,7 @@ describe("SendIpfs", () => {
 		await waitFor(() => expect(screen.getByTestId("StepNavigation__send-button")).not.toBeDisabled());
 
 		userEvent.keyboard("{enter}");
-		fireEvent.click(screen.getByTestId("StepNavigation__send-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__send-button"));
 		await screen.findByTestId("TransactionSuccessful");
 
 		expect(screen.getByTestId("TransactionSuccessful")).toHaveTextContent(
@@ -438,20 +438,20 @@ describe("SendIpfs", () => {
 			expect(screen.getByTestId("Input__hash")).toHaveValue("QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco"),
 		);
 
-		fireEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
+		userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
 		fireEvent.change(screen.getByTestId("InputCurrency"), { target: { value: "10" } });
 		await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("10"));
 
 		expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
 
-		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 		await screen.findByTestId("SendIpfs__review-step");
 
-		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 
 		expect(screen.getByTestId("FeeWarning__cancel-button")).toBeInTheDocument();
 
-		fireEvent.click(screen.getByTestId("FeeWarning__cancel-button"));
+		userEvent.click(screen.getByTestId("FeeWarning__cancel-button"));
 		await screen.findByTestId("SendIpfs__form-step");
 	});
 
@@ -487,19 +487,19 @@ describe("SendIpfs", () => {
 		);
 
 		// Fee
-		fireEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
+		userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
 		fireEvent.change(screen.getByTestId("InputCurrency"), { target: { value: "10" } });
 		await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("10"));
 
 		expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
 
-		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 		await screen.findByTestId("SendIpfs__review-step");
 
-		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 		await screen.findByTestId("FeeWarning__continue-button");
 
-		fireEvent.click(screen.getByTestId("FeeWarning__continue-button"));
+		userEvent.click(screen.getByTestId("FeeWarning__continue-button"));
 		await screen.findByTestId("AuthenticationStep");
 	});
 
@@ -535,20 +535,20 @@ describe("SendIpfs", () => {
 		);
 
 		// Fee
-		fireEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
+		userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
 		fireEvent.change(screen.getByTestId("InputCurrency"), { target: { value: "10" } });
 		await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("10"));
 
 		expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
 
-		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 		await screen.findByTestId("SendIpfs__review-step");
 
-		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 
 		if (!profile.settings().get(Contracts.ProfileSetting.DoNotShowFeeWarning)) {
 			await screen.findByTestId("FeeWarning__continue-button");
-			fireEvent.click(screen.getByTestId("FeeWarning__continue-button"));
+			userEvent.click(screen.getByTestId("FeeWarning__continue-button"));
 		}
 
 		// Auth Step
@@ -595,7 +595,7 @@ describe("SendIpfs", () => {
 
 		const historySpy = jest.spyOn(history, "push").mockImplementation();
 
-		fireEvent.click(screen.getByTestId("StepNavigation__back-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__back-button"));
 
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
 
@@ -633,20 +633,20 @@ describe("SendIpfs", () => {
 			expect(screen.getByTestId("Input__hash")).toHaveValue("QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco"),
 		);
 
-		fireEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
+		userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
 		fireEvent.change(screen.getByTestId("InputCurrency"), { target: { value: "10" } });
 		await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("10"));
 
 		expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
 
-		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 		await screen.findByTestId("SendIpfs__review-step");
 
-		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 
 		if (!profile.settings().get(Contracts.ProfileSetting.DoNotShowFeeWarning)) {
 			await screen.findByTestId("FeeWarning__continue-button");
-			fireEvent.click(screen.getByTestId("FeeWarning__continue-button"));
+			userEvent.click(screen.getByTestId("FeeWarning__continue-button"));
 		}
 
 		await screen.findByTestId("AuthenticationStep");
@@ -659,7 +659,7 @@ describe("SendIpfs", () => {
 			throw new Error("broadcast error");
 		});
 
-		fireEvent.click(screen.getByTestId("StepNavigation__send-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__send-button"));
 
 		await screen.findByTestId("ErrorStep");
 
@@ -669,7 +669,7 @@ describe("SendIpfs", () => {
 
 		const historyMock = jest.spyOn(history, "push").mockReturnValue();
 
-		fireEvent.click(screen.getByTestId("ErrorStep__wallet-button"));
+		userEvent.click(screen.getByTestId("ErrorStep__wallet-button"));
 
 		expect(historyMock).toHaveBeenCalledWith(`/profiles/${getDefaultProfileId()}/wallets/${getDefaultWalletId()}`);
 
@@ -740,20 +740,20 @@ describe("SendIpfs", () => {
 			expect(screen.getByTestId("Input__hash")).toHaveValue("QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco"),
 		);
 
-		fireEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
+		userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
 		fireEvent.change(screen.getByTestId("InputCurrency"), { target: { value: "10" } });
 		await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("10"));
 
 		expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
 
-		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 		await screen.findByTestId("SendIpfs__review-step");
 
-		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 
 		if (!profile.settings().get(Contracts.ProfileSetting.DoNotShowFeeWarning)) {
 			await screen.findByTestId("FeeWarning__continue-button");
-			fireEvent.click(screen.getByTestId("FeeWarning__continue-button"));
+			userEvent.click(screen.getByTestId("FeeWarning__continue-button"));
 		}
 
 		// Step 4
@@ -769,7 +769,7 @@ describe("SendIpfs", () => {
 
 		const transactionMock = createTransactionMock(wallet);
 
-		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 		await screen.findByTestId("TransactionSuccessful");
 
 		expect(screen.getByTestId("TransactionSuccessful")).toHaveTextContent(
@@ -845,7 +845,7 @@ describe("SendIpfs", () => {
 			expect(screen.getByTestId("Input__hash")).toHaveValue("QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco"),
 		);
 
-		fireEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
+		userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
 		fireEvent.change(screen.getByTestId("InputCurrency"), { target: { value: "10" } });
 		await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("10"));
 
@@ -882,14 +882,14 @@ describe("SendIpfs", () => {
 
 		expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
 
-		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 		await screen.findByTestId("SendIpfs__review-step");
 
-		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 
 		if (!profile.settings().get(Contracts.ProfileSetting.DoNotShowFeeWarning)) {
 			await screen.findByTestId("FeeWarning__continue-button");
-			fireEvent.click(screen.getByTestId("FeeWarning__continue-button"));
+			userEvent.click(screen.getByTestId("FeeWarning__continue-button"));
 		}
 
 		// Auto broadcast
@@ -946,20 +946,20 @@ describe("SendIpfs", () => {
 			expect(screen.getByTestId("Input__hash")).toHaveValue("QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco"),
 		);
 
-		fireEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
+		userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
 		fireEvent.change(screen.getByTestId("InputCurrency"), { target: { value: "10" } });
 		await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("10"));
 
 		expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
 
-		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 		await screen.findByTestId("SendIpfs__review-step");
 
-		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 
 		if (!profile.settings().get(Contracts.ProfileSetting.DoNotShowFeeWarning)) {
 			await screen.findByTestId("FeeWarning__continue-button");
-			fireEvent.click(screen.getByTestId("FeeWarning__continue-button"));
+			userEvent.click(screen.getByTestId("FeeWarning__continue-button"));
 		}
 
 		await screen.findByTestId("AuthenticationStep");
@@ -985,7 +985,7 @@ describe("SendIpfs", () => {
 
 		await waitFor(() => expect(screen.getByTestId("StepNavigation__send-button")).not.toBeDisabled());
 
-		fireEvent.click(screen.getByTestId("StepNavigation__send-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__send-button"));
 		await screen.findByTestId("TransactionSuccessful");
 
 		signMock.mockRestore();

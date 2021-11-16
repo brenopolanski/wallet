@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
+import userEvent from "@testing-library/user-event";
 import { ARK } from "@payvo/sdk-ark";
 import { httpClient } from "app/services";
 import electron from "electron";
@@ -73,7 +74,7 @@ describe("CreateProfile", () => {
 	it("should render", async () => {
 		const { asFragment } = await renderComponent();
 
-		fireEvent.click(screen.getByText("Back"));
+		userEvent.click(screen.getByText("Back"));
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -98,7 +99,7 @@ describe("CreateProfile", () => {
 		await renderComponent();
 
 		// Upload avatar image
-		fireEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
+		userEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
 
 		await waitFor(() => expect(showOpenDialogMock).toHaveBeenCalledWith(showOpenDialogParameters));
 
@@ -112,13 +113,13 @@ describe("CreateProfile", () => {
 		fireEvent.change(selectDropdown, { target: { value: "BTC" } });
 		await waitFor(() => expect(selectDropdown).toHaveValue("BTC"));
 
-		fireEvent.click(screen.getByTestId("SelectDropdown__option--0"));
+		userEvent.click(screen.getByTestId("SelectDropdown__option--0"));
 
-		fireEvent.click(screen.getByRole("checkbox"));
+		userEvent.click(screen.getByRole("checkbox"));
 
 		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).toBeEnabled());
 
-		fireEvent.click(screen.getByTestId("CreateProfile__submit-button"));
+		userEvent.click(screen.getByTestId("CreateProfile__submit-button"));
 
 		await waitFor(() => expect(env.profiles().count()).toBe(1));
 
@@ -192,7 +193,7 @@ describe("CreateProfile", () => {
 
 		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).toBeEnabled());
 
-		fireEvent.click(screen.getByTestId("CreateProfile__submit-button"));
+		userEvent.click(screen.getByTestId("CreateProfile__submit-button"));
 
 		await waitFor(() => expect(env.profiles().last().usesPassword()).toBe(true));
 	});
@@ -265,7 +266,7 @@ describe("CreateProfile", () => {
 		await renderComponent();
 
 		// Upload avatar image
-		fireEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
+		userEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
 
 		await waitFor(() => expect(showOpenDialogMock).toHaveBeenCalledWith(showOpenDialogParameters));
 
@@ -286,17 +287,17 @@ describe("CreateProfile", () => {
 		const profileCount = env.profiles().count();
 
 		// Upload avatar image
-		fireEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
+		userEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
 
 		await waitFor(() => expect(showOpenDialogMock).toHaveBeenCalledWith(showOpenDialogParameters));
 
-		fireEvent.click(screen.getByTestId("SelectProfileImage__remove-button"));
+		userEvent.click(screen.getByTestId("SelectProfileImage__remove-button"));
 
 		fireEvent.input(screen.getAllByTestId("Input")[0], { target: { value: "test profile 4" } });
 
 		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).toBeEnabled());
 
-		fireEvent.click(screen.getByTestId("CreateProfile__submit-button"));
+		userEvent.click(screen.getByTestId("CreateProfile__submit-button"));
 
 		await waitFor(() => expect(env.profiles().count()).toBe(profileCount + 1));
 	});
@@ -307,11 +308,11 @@ describe("CreateProfile", () => {
 		fireEvent.input(screen.getAllByTestId("Input")[0], { target: { value: "test profile 1" } });
 
 		// Upload avatar image
-		fireEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
+		userEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
 
 		await waitFor(() => expect(showOpenDialogMock).toHaveBeenCalledWith(showOpenDialogParameters));
 
-		fireEvent.click(screen.getByTestId("SelectProfileImage__remove-button"));
+		userEvent.click(screen.getByTestId("SelectProfileImage__remove-button"));
 
 		expect(screen.getByTestId("SelectProfileImage__avatar-identicon")).toBeInTheDocument();
 	});
@@ -326,14 +327,14 @@ describe("CreateProfile", () => {
 			filePaths: undefined,
 		}));
 
-		fireEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
+		userEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
 		await waitFor(() => expect(showOpenDialogMock).toHaveBeenCalledWith(showOpenDialogParameters));
 
 		fireEvent.input(screen.getAllByTestId("Input")[0], { target: { value: "test profile 5" } });
 
 		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).toBeEnabled());
 
-		fireEvent.click(screen.getByTestId("CreateProfile__submit-button"));
+		userEvent.click(screen.getByTestId("CreateProfile__submit-button"));
 
 		await waitFor(() => expect(env.profiles().count()).toBe(profileCount + 1));
 	});

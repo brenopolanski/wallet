@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
+import userEvent from "@testing-library/user-event";
 import { Contracts } from "@payvo/profiles";
 import { ExportSettings } from "domains/setting/pages";
 import electron from "electron";
@@ -60,7 +61,7 @@ describe("Export Settings", () => {
 
 		expect(container).toBeInTheDocument();
 
-		fireEvent.click(await findByTestId("Export-settings__submit-button"));
+		userEvent.click(await findByTestId("Export-settings__submit-button"));
 
 		await waitFor(() =>
 			expect(dialogMock).toHaveBeenCalledWith({

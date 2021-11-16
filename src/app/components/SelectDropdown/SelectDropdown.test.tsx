@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import React, { useState } from "react";
 import { fireEvent, render, screen, waitFor } from "utils/testing-library";
 
@@ -101,11 +102,11 @@ describe("SelectDropdown", () => {
 		async (optType) => {
 			render(<Select options={getOptions(optType)} showCaret />);
 
-			fireEvent.click(screen.getByTestId("SelectDropdown__caret"));
+			userEvent.click(screen.getByTestId("SelectDropdown__caret"));
 
 			await screen.findByTestId("SelectDropdown__option--0");
 
-			fireEvent.click(screen.getByTestId("SelectDropdown__caret"));
+			userEvent.click(screen.getByTestId("SelectDropdown__caret"));
 
 			await waitFor(() => expect(screen.queryByTestId("SelectDropdown__option--0")).not.toBeInTheDocument());
 		},
@@ -146,7 +147,7 @@ describe("SelectDropdown", () => {
 
 		expect(firstOption).toBeInTheDocument();
 
-		fireEvent.click(firstOption);
+		userEvent.click(firstOption);
 	});
 
 	it.each([OptionType.base, OptionType.group])("should select option %s", (optType) => {
@@ -428,7 +429,7 @@ describe("SelectDropdown", () => {
 		expect(screen.queryByText("Option 2")).not.toBeInTheDocument();
 
 		// set null value
-		fireEvent.click(screen.getByTestId("btn-reset"));
+		userEvent.click(screen.getByTestId("btn-reset"));
 
 		// check value reset and dropdown not open
 		expect(screen.getByTestId("select-list__input")).not.toHaveValue();

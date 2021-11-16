@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import React from "react";
 import { fireEvent, render } from "utils/testing-library";
 
@@ -82,7 +83,7 @@ describe("Tabs", () => {
 			</Tabs>,
 		);
 
-		fireEvent.click(getByTestId("tabs__tab-button-1"));
+		userEvent.click(getByTestId("tabs__tab-button-1"));
 
 		expect(container).toBeInTheDocument();
 		expect(getByTestId("tab-pabel__active-panel")).toHaveTextContent("1");

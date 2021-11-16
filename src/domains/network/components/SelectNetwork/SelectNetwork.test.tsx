@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import React from "react";
 import { availableNetworksMock } from "tests/mocks/networks";
 import { fireEvent, render, screen, within } from "utils/testing-library";
@@ -164,13 +165,13 @@ describe("SelectNetwork", () => {
 		expect(screen.getByTestId("Input__suggestion")).toBeInTheDocument();
 		expect(screen.getByTestId("NetworkIcon-ARK-ark.mainnet")).toBeInTheDocument();
 
-		fireEvent.click(screen.getByTestId("NetworkIcon-ARK-ark.mainnet"));
+		userEvent.click(screen.getByTestId("NetworkIcon-ARK-ark.mainnet"));
 
 		expect(screen.queryByTestId("Input__suggestion")).not.toBeInTheDocument();
 		expect(screen.getByTestId("SelectNetworkInput__network")).toHaveAttribute("aria-label", "ARK");
 		expect(screen.getByTestId("NetworkIcon-ARK-ark.devnet")).toBeInTheDocument();
 
-		fireEvent.click(screen.getByTestId("NetworkIcon-ARK-ark.devnet"));
+		userEvent.click(screen.getByTestId("NetworkIcon-ARK-ark.devnet"));
 
 		expect(screen.getByTestId("SelectNetworkInput__network")).toHaveAttribute("aria-label", "ARK Devnet");
 	});
@@ -182,7 +183,7 @@ describe("SelectNetwork", () => {
 
 		expect(screen.getByTestId("NetworkIcon-ARK-ark.mainnet")).toBeInTheDocument();
 
-		fireEvent.click(screen.getByTestId("NetworkIcon-ARK-ark.mainnet"));
+		userEvent.click(screen.getByTestId("NetworkIcon-ARK-ark.mainnet"));
 
 		expect(screen.getByTestId("SelectNetworkInput__network")).toHaveAttribute("aria-label", "ARK");
 
@@ -190,7 +191,7 @@ describe("SelectNetwork", () => {
 
 		expect(screen.getByTestId("NetworkIcon-ARK-ark.mainnet")).toBeInTheDocument();
 
-		fireEvent.click(screen.getByTestId("NetworkIcon-ARK-ark.mainnet"));
+		userEvent.click(screen.getByTestId("NetworkIcon-ARK-ark.mainnet"));
 
 		expect(screen.getByTestId("SelectNetworkInput__network")).not.toHaveAttribute("aria-label");
 	});
@@ -200,11 +201,11 @@ describe("SelectNetwork", () => {
 
 		expect(screen.getAllByRole("listbox")[1]).toHaveClass("hidden");
 
-		fireEvent.click(screen.getByTestId("SelectNetwork__developmentNetworks-toggle"));
+		userEvent.click(screen.getByTestId("SelectNetwork__developmentNetworks-toggle"));
 
 		expect(screen.getAllByRole("listbox")[1]).not.toHaveClass("hidden");
 
-		fireEvent.click(screen.getByTestId("SelectNetwork__developmentNetworks-toggle"));
+		userEvent.click(screen.getByTestId("SelectNetwork__developmentNetworks-toggle"));
 
 		expect(screen.getAllByRole("listbox")[1]).toHaveClass("hidden");
 	});

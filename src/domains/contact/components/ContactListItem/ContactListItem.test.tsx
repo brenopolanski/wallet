@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import { Contracts } from "@payvo/profiles";
 import { ContactAddress } from "@payvo/profiles/distribution/contact-address";
 import React from "react";
@@ -141,7 +142,7 @@ describe("ContactListItem", () => {
 			</table>,
 		);
 
-		fireEvent.click(getByTestId("ContactListItem__one-option-button-0"));
+		userEvent.click(getByTestId("ContactListItem__one-option-button-0"));
 
 		expect(onAction).toHaveBeenCalledWith(singleOption[0], contact.addresses().first().address());
 	});
@@ -157,7 +158,7 @@ describe("ContactListItem", () => {
 			</table>,
 		);
 
-		fireEvent.click(getByTestId("ContactListItem__one-option-button-0"));
+		userEvent.click(getByTestId("ContactListItem__one-option-button-0"));
 
 		expect(onAction).toHaveBeenCalledWith(singleOption[0], contact.addresses().first().address());
 	});
@@ -173,8 +174,8 @@ describe("ContactListItem", () => {
 			</table>,
 		);
 
-		fireEvent.click(getAllByTestId("dropdown__toggle")[0]);
-		fireEvent.click(getByTestId("dropdown__option--0"));
+		userEvent.click(getAllByTestId("dropdown__toggle")[0]);
+		userEvent.click(getByTestId("dropdown__option--0"));
 
 		expect(onAction).toHaveBeenCalledWith(singleOption[0], contact.addresses().first().address());
 	});
@@ -190,8 +191,8 @@ describe("ContactListItem", () => {
 			</table>,
 		);
 
-		fireEvent.click(getAllByTestId("dropdown__toggle")[0]);
-		fireEvent.click(getByTestId("dropdown__option--0"));
+		userEvent.click(getAllByTestId("dropdown__toggle")[0]);
+		userEvent.click(getByTestId("dropdown__option--0"));
 
 		expect(onAction).toHaveBeenCalledWith(singleOption[0], contact.addresses().first().address());
 	});
@@ -207,8 +208,8 @@ describe("ContactListItem", () => {
 			</table>,
 		);
 
-		fireEvent.click(getAllByTestId("dropdown__toggle")[0]);
-		fireEvent.click(getByTestId("dropdown__option--0"));
+		userEvent.click(getAllByTestId("dropdown__toggle")[0]);
+		userEvent.click(getByTestId("dropdown__option--0"));
 
 		expect(onAction).not.toHaveBeenCalled();
 	});
@@ -224,8 +225,8 @@ describe("ContactListItem", () => {
 			</table>,
 		);
 
-		fireEvent.click(getAllByTestId("dropdown__toggle")[0]);
-		fireEvent.click(getByTestId("dropdown__option--0"));
+		userEvent.click(getAllByTestId("dropdown__toggle")[0]);
+		userEvent.click(getByTestId("dropdown__option--0"));
 
 		expect(onAction).not.toHaveBeenCalled();
 	});
@@ -241,7 +242,7 @@ describe("ContactListItem", () => {
 			</table>,
 		);
 
-		fireEvent.click(getByTestId("ContactListItem__one-option-button-0"));
+		userEvent.click(getByTestId("ContactListItem__one-option-button-0"));
 
 		expect(onAction).toHaveBeenCalledWith(
 			{ label: "Option 1", value: "option_1" },
@@ -260,7 +261,7 @@ describe("ContactListItem", () => {
 			</table>,
 		);
 
-		fireEvent.click(getByTestId("ContactListItem__one-option-button-0"));
+		userEvent.click(getByTestId("ContactListItem__one-option-button-0"));
 
 		expect(onAction).toHaveBeenCalledWith(
 			{ label: "Option 1", value: "option_1" },
@@ -279,7 +280,7 @@ describe("ContactListItem", () => {
 			</table>,
 		);
 
-		fireEvent.click(getAllByTestId("ContactListItem__send-button")[0]);
+		userEvent.click(getAllByTestId("ContactListItem__send-button")[0]);
 
 		expect(onSend).toHaveBeenCalledWith(expect.any(ContactAddress));
 	});

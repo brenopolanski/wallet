@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import { Contracts } from "@payvo/profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import { httpClient, toasts } from "app/services";
@@ -91,7 +92,7 @@ describe("ExchangeForm", () => {
 			fireEvent.change(screen.getAllByTestId("SelectDropdown__input")[0], { target: { value: from.name } });
 
 			await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__option--0")[0]).toBeInTheDocument());
-			fireEvent.click(screen.getAllByTestId("SelectDropdown__option--0")[0]);
+			userEvent.click(screen.getAllByTestId("SelectDropdown__option--0")[0]);
 
 			await waitFor(() => {
 				expect(screen.getAllByTestId("SelectDropdown__input")[0]).toHaveValue(from.name);
@@ -111,7 +112,7 @@ describe("ExchangeForm", () => {
 			fireEvent.change(screen.getAllByTestId("SelectDropdown__input")[1], { target: { value: to.name } });
 
 			await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__option--0")[0]).toBeInTheDocument());
-			fireEvent.click(screen.getAllByTestId("SelectDropdown__option--0")[0]);
+			userEvent.click(screen.getAllByTestId("SelectDropdown__option--0")[0]);
 
 			await waitFor(() => {
 				expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(to.name);
@@ -261,7 +262,7 @@ describe("ExchangeForm", () => {
 		});
 
 		const historySpy = jest.spyOn(history, "push").mockImplementation();
-		fireEvent.click(screen.getByTestId("ExchangeForm__back-button"));
+		userEvent.click(screen.getByTestId("ExchangeForm__back-button"));
 
 		await waitFor(() => {
 			expect(historySpy).toHaveBeenCalledWith(`/profiles/${getDefaultProfileId()}/exchange`);
@@ -328,7 +329,7 @@ describe("ExchangeForm", () => {
 			expect(toCurrencyDropdown).not.toBeDisabled();
 		});
 
-		fireEvent.click(screen.getByTestId("ExchangeForm__add-refund-address"));
+		userEvent.click(screen.getByTestId("ExchangeForm__add-refund-address"));
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm__refund-address")).toBeInTheDocument();
 		});
@@ -337,7 +338,7 @@ describe("ExchangeForm", () => {
 			expect(screen.getByTestId("ExchangeForm__remove-refund-address")).toBeInTheDocument();
 		});
 
-		fireEvent.click(screen.getByTestId("ExchangeForm__remove-refund-address"));
+		userEvent.click(screen.getByTestId("ExchangeForm__remove-refund-address"));
 
 		await waitFor(() => {
 			expect(() => screen.getByTestId("ExchangeForm__refund-address")).toThrow(/Unable to find an element by/);
@@ -410,7 +411,7 @@ describe("ExchangeForm", () => {
 			to: { name: "Bitcoin", ticker: "BTC" },
 		});
 
-		fireEvent.click(screen.getByTestId("ExchangeForm__add-refund-address"));
+		userEvent.click(screen.getByTestId("ExchangeForm__add-refund-address"));
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm__refund-address")).toBeInTheDocument();
 		});
@@ -454,7 +455,7 @@ describe("ExchangeForm", () => {
 		const fromCurrencyDropdown = screen.getAllByTestId("SelectDropdown__input")[0];
 		const toCurrencyDropdown = screen.getAllByTestId("SelectDropdown__input")[1];
 
-		fireEvent.click(screen.getByTestId("ExchangeForm__swap-button"));
+		userEvent.click(screen.getByTestId("ExchangeForm__swap-button"));
 
 		await waitFor(() => {
 			expect(fromCurrencyDropdown).toHaveValue("Ark");
@@ -790,7 +791,7 @@ describe("ExchangeForm", () => {
 			to: { name: "Bitcoin", ticker: "BTC" },
 		});
 
-		fireEvent.click(screen.getByTestId("ExchangeForm__add-refund-address"));
+		userEvent.click(screen.getByTestId("ExchangeForm__add-refund-address"));
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm__refund-address")).toBeInTheDocument();
 		});
@@ -871,13 +872,13 @@ describe("ExchangeForm", () => {
 		expect(screen.getByTestId("ExchangeForm__continue-button")).not.toBeDisabled();
 
 		// go to review step
-		fireEvent.click(screen.getByTestId("ExchangeForm__continue-button"));
+		userEvent.click(screen.getByTestId("ExchangeForm__continue-button"));
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm__review-step")).toBeInTheDocument();
 		});
 
 		// back to form step
-		fireEvent.click(screen.getByTestId("ExchangeForm__back-button"));
+		userEvent.click(screen.getByTestId("ExchangeForm__back-button"));
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm__form-step")).toBeInTheDocument();
 		});
@@ -887,14 +888,14 @@ describe("ExchangeForm", () => {
 		});
 
 		// go to review step
-		fireEvent.click(screen.getByTestId("ExchangeForm__continue-button"));
+		userEvent.click(screen.getByTestId("ExchangeForm__continue-button"));
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm__review-step")).toBeInTheDocument();
 		});
 
 		expect(screen.getByTestId("ExchangeForm__continue-button")).toBeDisabled();
 
-		fireEvent.click(screen.getByRole("checkbox"));
+		userEvent.click(screen.getByRole("checkbox"));
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm__continue-button")).not.toBeDisabled();
@@ -903,7 +904,7 @@ describe("ExchangeForm", () => {
 		const toastSpy = jest.spyOn(toasts, "error").mockImplementation();
 
 		// submit form
-		fireEvent.click(screen.getByTestId("ExchangeForm__continue-button"));
+		userEvent.click(screen.getByTestId("ExchangeForm__continue-button"));
 
 		await waitFor(() => {
 			expect(toastSpy).toHaveBeenCalledWith(t("EXCHANGE.ERROR.GENERIC"));
@@ -966,14 +967,14 @@ describe("ExchangeForm", () => {
 		expect(screen.getByTestId("ExchangeForm__continue-button")).not.toBeDisabled();
 
 		// go to review step
-		fireEvent.click(screen.getByTestId("ExchangeForm__continue-button"));
+		userEvent.click(screen.getByTestId("ExchangeForm__continue-button"));
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm__review-step")).toBeInTheDocument();
 		});
 
 		expect(screen.getByTestId("ExchangeForm__continue-button")).toBeDisabled();
 
-		fireEvent.click(screen.getByRole("checkbox"));
+		userEvent.click(screen.getByRole("checkbox"));
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm__continue-button")).not.toBeDisabled();
@@ -982,7 +983,7 @@ describe("ExchangeForm", () => {
 		const toastSpy = jest.spyOn(toasts, "error").mockImplementation();
 
 		// submit form
-		fireEvent.click(screen.getByTestId("ExchangeForm__continue-button"));
+		userEvent.click(screen.getByTestId("ExchangeForm__continue-button"));
 
 		await waitFor(() => {
 			expect(toastSpy).toHaveBeenCalledWith(t("EXCHANGE.ERROR.INVALID_ADDRESS", { ticker: "ARK" }));
@@ -1042,7 +1043,7 @@ describe("ExchangeForm", () => {
 
 		expect(screen.getByTestId("FormDivider__exchange-rate")).toBeInTheDocument();
 
-		fireEvent.click(screen.getByTestId("ExchangeForm__add-refund-address"));
+		userEvent.click(screen.getByTestId("ExchangeForm__add-refund-address"));
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm__refund-address")).toBeInTheDocument();
 		});
@@ -1059,14 +1060,14 @@ describe("ExchangeForm", () => {
 		expect(screen.getByTestId("ExchangeForm__continue-button")).not.toBeDisabled();
 
 		// go to review step
-		fireEvent.click(screen.getByTestId("ExchangeForm__continue-button"));
+		userEvent.click(screen.getByTestId("ExchangeForm__continue-button"));
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm__review-step")).toBeInTheDocument();
 		});
 
 		expect(screen.getByTestId("ExchangeForm__continue-button")).toBeDisabled();
 
-		fireEvent.click(screen.getByRole("checkbox"));
+		userEvent.click(screen.getByRole("checkbox"));
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm__continue-button")).not.toBeDisabled();
@@ -1075,7 +1076,7 @@ describe("ExchangeForm", () => {
 		const toastSpy = jest.spyOn(toasts, "error").mockImplementation();
 
 		// submit form
-		fireEvent.click(screen.getByTestId("ExchangeForm__continue-button"));
+		userEvent.click(screen.getByTestId("ExchangeForm__continue-button"));
 
 		await waitFor(() => {
 			expect(toastSpy).toHaveBeenCalledWith(t("EXCHANGE.ERROR.INVALID_REFUND_ADDRESS", { ticker: "BTC" }));
@@ -1165,13 +1166,13 @@ describe("ExchangeForm", () => {
 		expect(screen.getByTestId("ExchangeForm__continue-button")).not.toBeDisabled();
 
 		// go to review step
-		fireEvent.click(screen.getByTestId("ExchangeForm__continue-button"));
+		userEvent.click(screen.getByTestId("ExchangeForm__continue-button"));
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm__review-step")).toBeInTheDocument();
 		});
 
 		// back to form step
-		fireEvent.click(screen.getByTestId("ExchangeForm__back-button"));
+		userEvent.click(screen.getByTestId("ExchangeForm__back-button"));
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm__form-step")).toBeInTheDocument();
 		});
@@ -1181,21 +1182,21 @@ describe("ExchangeForm", () => {
 		});
 
 		// go to review step
-		fireEvent.click(screen.getByTestId("ExchangeForm__continue-button"));
+		userEvent.click(screen.getByTestId("ExchangeForm__continue-button"));
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm__review-step")).toBeInTheDocument();
 		});
 
 		expect(screen.getByTestId("ExchangeForm__continue-button")).toBeDisabled();
 
-		fireEvent.click(screen.getByRole("checkbox"));
+		userEvent.click(screen.getByRole("checkbox"));
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm__continue-button")).not.toBeDisabled();
 		});
 
 		// submit form
-		fireEvent.click(screen.getByTestId("ExchangeForm__continue-button"));
+		userEvent.click(screen.getByTestId("ExchangeForm__continue-button"));
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm__status-step")).toBeInTheDocument();
@@ -1226,7 +1227,7 @@ describe("ExchangeForm", () => {
 
 		const historySpy = jest.spyOn(history, "push").mockImplementation();
 		await findByTestId("ExchangeForm__finish-button", undefined, { timeout: 4000 });
-		fireEvent.click(screen.getByTestId("ExchangeForm__finish-button"));
+		userEvent.click(screen.getByTestId("ExchangeForm__finish-button"));
 
 		await waitFor(() => {
 			expect(historySpy).toHaveBeenCalledWith(`/profiles/${getDefaultProfileId()}/dashboard`);

@@ -261,7 +261,7 @@ describe("ImportWallet", () => {
 		expect(getByText("ARK Devnet")).toBeInTheDocument();
 		expect(getByText(importedWallet.address())).toBeInTheDocument();
 
-		fireEvent.click(getByTestId("ImportWallet__edit-alias"));
+		userEvent.click(getByTestId("ImportWallet__edit-alias"));
 
 		expect(onClickEditAlias).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
@@ -285,7 +285,7 @@ describe("ImportWallet", () => {
 		await findByTestId("NetworkStep");
 
 		await waitFor(() => expect(getByTestId("ImportWallet__back-button")).toBeEnabled());
-		fireEvent.click(getByTestId("ImportWallet__back-button"));
+		userEvent.click(getByTestId("ImportWallet__back-button"));
 
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${fixtureProfileId}/dashboard`);
 
@@ -316,14 +316,14 @@ describe("ImportWallet", () => {
 		expect(selectNetworkInput).toHaveValue("ARK Devnet");
 
 		await waitFor(() => expect(getByTestId("ImportWallet__continue-button")).toBeEnabled());
-		fireEvent.click(getByTestId("ImportWallet__continue-button"));
+		userEvent.click(getByTestId("ImportWallet__continue-button"));
 
 		await waitFor(() => {
 			expect(getByTestId("ImportWallet__method-step")).toBeInTheDocument();
 		});
 
 		await waitFor(() => expect(getByTestId("ImportWallet__back-button")).toBeEnabled());
-		fireEvent.click(getByTestId("ImportWallet__back-button"));
+		userEvent.click(getByTestId("ImportWallet__back-button"));
 
 		await waitFor(() => {
 			expect(getByTestId("NetworkStep")).toBeInTheDocument();
@@ -370,7 +370,7 @@ describe("ImportWallet", () => {
 			expect(getByTestId("ImportWallet__success-step")).toBeInTheDocument();
 		});
 
-		fireEvent.click(getByTestId("ImportWallet__edit-alias"));
+		userEvent.click(getByTestId("ImportWallet__edit-alias"));
 
 		await findByTestId("modal__inner");
 
@@ -383,7 +383,7 @@ describe("ImportWallet", () => {
 
 		await waitFor(() => expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/));
 
-		fireEvent.click(getByTestId("ImportWallet__finish-button"));
+		userEvent.click(getByTestId("ImportWallet__finish-button"));
 
 		await waitFor(() => {
 			expect(profile.wallets().findByAddressWithNetwork(identityAddress, "ark.devnet")).toBeInstanceOf(Wallet);
@@ -414,7 +414,7 @@ describe("ImportWallet", () => {
 		expect(selectNetworkInput).toHaveValue("ARK Devnet");
 
 		await waitFor(() => expect(getByTestId("ImportWallet__continue-button")).toBeEnabled());
-		fireEvent.click(getByTestId("ImportWallet__continue-button"));
+		userEvent.click(getByTestId("ImportWallet__continue-button"));
 
 		await waitFor(() => expect(() => getByTestId("ImportWallet__method-step")).not.toThrow());
 
@@ -428,9 +428,9 @@ describe("ImportWallet", () => {
 
 		await waitFor(() => expect(getByTestId("ImportWallet__continue-button")).toBeEnabled());
 
-		fireEvent.click(screen.getByTestId("ImportWallet__encryption-toggle"));
+		userEvent.click(screen.getByTestId("ImportWallet__encryption-toggle"));
 
-		fireEvent.click(getByTestId("ImportWallet__continue-button"));
+		userEvent.click(getByTestId("ImportWallet__continue-button"));
 
 		await waitFor(() => {
 			expect(getByTestId("EncryptPassword")).toBeInTheDocument();
@@ -441,7 +441,7 @@ describe("ImportWallet", () => {
 		fireEvent.input(getAllByTestId("InputPassword")[1], { target: { value: "S3cUrePa$sword" } });
 
 		await waitFor(() => expect(getByTestId("ImportWallet__continue-button")).toBeEnabled());
-		fireEvent.click(getByTestId("ImportWallet__continue-button"));
+		userEvent.click(getByTestId("ImportWallet__continue-button"));
 
 		await waitFor(
 			() => {
@@ -475,7 +475,7 @@ describe("ImportWallet", () => {
 		expect(selectNetworkInput).toHaveValue("ARK Devnet");
 
 		await waitFor(() => expect(getByTestId("ImportWallet__continue-button")).toBeEnabled());
-		fireEvent.click(getByTestId("ImportWallet__continue-button"));
+		userEvent.click(getByTestId("ImportWallet__continue-button"));
 
 		await waitFor(() => expect(() => getByTestId("ImportWallet__method-step")).not.toThrow());
 
@@ -489,9 +489,9 @@ describe("ImportWallet", () => {
 
 		await waitFor(() => expect(getByTestId("ImportWallet__continue-button")).toBeEnabled());
 
-		fireEvent.click(screen.getByTestId("ImportWallet__encryption-toggle"));
+		userEvent.click(screen.getByTestId("ImportWallet__encryption-toggle"));
 
-		fireEvent.click(getByTestId("ImportWallet__continue-button"));
+		userEvent.click(getByTestId("ImportWallet__continue-button"));
 
 		await waitFor(() => {
 			expect(getByTestId("EncryptPassword")).toBeInTheDocument();
@@ -504,7 +504,7 @@ describe("ImportWallet", () => {
 		fireEvent.input(getAllByTestId("InputPassword")[1], { target: { value: "S3cUrePa$sword" } });
 
 		await waitFor(() => expect(getByTestId("ImportWallet__continue-button")).toBeEnabled());
-		fireEvent.click(getByTestId("ImportWallet__continue-button"));
+		userEvent.click(getByTestId("ImportWallet__continue-button"));
 
 		await waitFor(
 			() => {
@@ -538,7 +538,7 @@ describe("ImportWallet", () => {
 		expect(selectNetworkInput).toHaveValue("ARK Devnet");
 
 		await waitFor(() => expect(getByTestId("ImportWallet__continue-button")).toBeEnabled());
-		fireEvent.click(getByTestId("ImportWallet__continue-button"));
+		userEvent.click(getByTestId("ImportWallet__continue-button"));
 
 		await waitFor(() => expect(() => getByTestId("ImportWallet__method-step")).not.toThrow());
 
@@ -553,13 +553,13 @@ describe("ImportWallet", () => {
 		fireEvent.input(getByTestId("ImportWallet__address-input"), { target: { value: randomAddress } });
 
 		await waitFor(() => expect(getByTestId("ImportWallet__continue-button")).toBeEnabled());
-		fireEvent.click(getByTestId("ImportWallet__continue-button"));
+		userEvent.click(getByTestId("ImportWallet__continue-button"));
 
 		await waitFor(() => {
 			expect(getByTestId("ImportWallet__success-step")).toBeInTheDocument();
 		});
 
-		fireEvent.click(getByTestId("ImportWallet__finish-button"));
+		userEvent.click(getByTestId("ImportWallet__finish-button"));
 
 		await waitFor(() => {
 			expect(profile.wallets().findByAddressWithNetwork(randomAddress, "ark.devnet")).toBeInstanceOf(Wallet);
@@ -590,7 +590,7 @@ describe("ImportWallet", () => {
 		expect(selectNetworkInput).toHaveValue("ARK Devnet");
 
 		await waitFor(() => expect(getByTestId("ImportWallet__continue-button")).toBeEnabled());
-		fireEvent.click(getByTestId("ImportWallet__continue-button"));
+		userEvent.click(getByTestId("ImportWallet__continue-button"));
 
 		await waitFor(() => expect(() => getByTestId("ImportWallet__method-step")).not.toThrow());
 
@@ -605,13 +605,13 @@ describe("ImportWallet", () => {
 		fireEvent.input(getByTestId("ImportWallet__publicKey-input"), { target: { value: randomPublicKey } });
 
 		await waitFor(() => expect(getByTestId("ImportWallet__continue-button")).toBeEnabled());
-		fireEvent.click(getByTestId("ImportWallet__continue-button"));
+		userEvent.click(getByTestId("ImportWallet__continue-button"));
 
 		await waitFor(() => {
 			expect(getByTestId("ImportWallet__success-step")).toBeInTheDocument();
 		});
 
-		fireEvent.click(getByTestId("ImportWallet__finish-button"));
+		userEvent.click(getByTestId("ImportWallet__finish-button"));
 
 		await waitFor(() => {
 			expect(profile.wallets().findByAddressWithNetwork(randomAddress, "ark.devnet")).toBeInstanceOf(Wallet);
@@ -642,7 +642,7 @@ describe("ImportWallet", () => {
 		expect(selectNetworkInput).toHaveValue("ARK Devnet");
 
 		await waitFor(() => expect(getByTestId("ImportWallet__continue-button")).toBeEnabled());
-		fireEvent.click(getByTestId("ImportWallet__continue-button"));
+		userEvent.click(getByTestId("ImportWallet__continue-button"));
 
 		await waitFor(() => expect(() => getByTestId("ImportWallet__method-step")).not.toThrow());
 
@@ -685,7 +685,7 @@ describe("ImportWallet", () => {
 		expect(selectNetworkInput).toHaveValue("ARK Devnet");
 
 		await waitFor(() => expect(getByTestId("ImportWallet__continue-button")).toBeEnabled());
-		fireEvent.click(getByTestId("ImportWallet__continue-button"));
+		userEvent.click(getByTestId("ImportWallet__continue-button"));
 
 		await waitFor(() => expect(() => getByTestId("ImportWallet__method-step")).not.toThrow());
 
@@ -700,13 +700,13 @@ describe("ImportWallet", () => {
 		fireEvent.input(getByTestId("ImportWallet__secret-input"), { target: { value: "secret.111" } });
 
 		await waitFor(() => expect(getByTestId("ImportWallet__continue-button")).toBeEnabled());
-		fireEvent.click(getByTestId("ImportWallet__continue-button"));
+		userEvent.click(getByTestId("ImportWallet__continue-button"));
 
 		await waitFor(() => {
 			expect(getByTestId("ImportWallet__success-step")).toBeInTheDocument();
 		});
 
-		fireEvent.click(getByTestId("ImportWallet__finish-button"));
+		userEvent.click(getByTestId("ImportWallet__finish-button"));
 
 		await waitFor(() => expect(profile.wallets().count()).toBe(countBefore + 1));
 	});
@@ -735,7 +735,7 @@ describe("ImportWallet", () => {
 		expect(selectNetworkInput).toHaveValue("ARK Devnet");
 
 		await waitFor(() => expect(getByTestId("ImportWallet__continue-button")).toBeEnabled());
-		fireEvent.click(getByTestId("ImportWallet__continue-button"));
+		userEvent.click(getByTestId("ImportWallet__continue-button"));
 
 		await waitFor(() => expect(() => getByTestId("ImportWallet__method-step")).not.toThrow());
 
@@ -751,9 +751,9 @@ describe("ImportWallet", () => {
 
 		await waitFor(() => expect(getByTestId("ImportWallet__continue-button")).toBeEnabled());
 
-		fireEvent.click(screen.getByTestId("ImportWallet__encryption-toggle"));
+		userEvent.click(screen.getByTestId("ImportWallet__encryption-toggle"));
 
-		fireEvent.click(getByTestId("ImportWallet__continue-button"));
+		userEvent.click(getByTestId("ImportWallet__continue-button"));
 
 		await waitFor(() => {
 			expect(getByTestId("EncryptPassword")).toBeInTheDocument();
@@ -764,7 +764,7 @@ describe("ImportWallet", () => {
 		fireEvent.input(getAllByTestId("InputPassword")[1], { target: { value: "S3cUrePa$sword" } });
 
 		await waitFor(() => expect(getByTestId("ImportWallet__continue-button")).toBeEnabled());
-		fireEvent.click(getByTestId("ImportWallet__continue-button"));
+		userEvent.click(getByTestId("ImportWallet__continue-button"));
 
 		await waitFor(
 			() => {
@@ -798,7 +798,7 @@ describe("ImportWallet", () => {
 		expect(selectNetworkInput).toHaveValue("ARK Devnet");
 
 		await waitFor(() => expect(getByTestId("ImportWallet__continue-button")).toBeEnabled());
-		fireEvent.click(getByTestId("ImportWallet__continue-button"));
+		userEvent.click(getByTestId("ImportWallet__continue-button"));
 
 		await waitFor(() => expect(() => getByTestId("ImportWallet__method-step")).not.toThrow());
 
@@ -817,9 +817,9 @@ describe("ImportWallet", () => {
 
 		await waitFor(() => expect(getByTestId("ImportWallet__continue-button")).toBeEnabled());
 
-		fireEvent.click(getByTestId("ImportWallet__encryption-toggle"));
+		userEvent.click(getByTestId("ImportWallet__encryption-toggle"));
 
-		fireEvent.click(getByTestId("ImportWallet__continue-button"));
+		userEvent.click(getByTestId("ImportWallet__continue-button"));
 
 		await waitFor(() => {
 			expect(getByTestId("EncryptPassword")).toBeInTheDocument();
@@ -832,7 +832,7 @@ describe("ImportWallet", () => {
 		fireEvent.input(getAllByTestId("InputPassword")[1], { target: { value: "S3cUrePa$sword" } });
 
 		await waitFor(() => expect(getByTestId("ImportWallet__continue-button")).toBeEnabled());
-		fireEvent.click(getByTestId("ImportWallet__continue-button"));
+		userEvent.click(getByTestId("ImportWallet__continue-button"));
 
 		await waitFor(
 			() => {
@@ -866,7 +866,7 @@ describe("ImportWallet", () => {
 		expect(selectNetworkInput).toHaveValue("ARK Devnet");
 
 		await waitFor(() => expect(getByTestId("ImportWallet__continue-button")).toBeEnabled());
-		fireEvent.click(getByTestId("ImportWallet__continue-button"));
+		userEvent.click(getByTestId("ImportWallet__continue-button"));
 
 		await waitFor(() => expect(() => getByTestId("ImportWallet__method-step")).not.toThrow());
 
@@ -913,7 +913,7 @@ describe("ImportWallet", () => {
 		expect(selectNetworkInput).toHaveValue("ARK Devnet");
 
 		await waitFor(() => expect(getByTestId("ImportWallet__continue-button")).toBeEnabled());
-		fireEvent.click(getByTestId("ImportWallet__continue-button"));
+		userEvent.click(getByTestId("ImportWallet__continue-button"));
 
 		await waitFor(() => expect(() => getByTestId("ImportWallet__method-step")).not.toThrow());
 
@@ -962,7 +962,7 @@ describe("ImportWallet", () => {
 		expect(selectNetworkInput).toHaveValue("ARK Devnet");
 
 		await waitFor(() => expect(getByTestId("ImportWallet__continue-button")).toBeEnabled());
-		fireEvent.click(getByTestId("ImportWallet__continue-button"));
+		userEvent.click(getByTestId("ImportWallet__continue-button"));
 
 		await waitFor(() => expect(() => getByTestId("ImportWallet__method-step")).not.toThrow());
 
@@ -1015,7 +1015,7 @@ describe("ImportWallet", () => {
 		expect(selectNetworkInput).toHaveValue("ARK Devnet");
 
 		await waitFor(() => expect(getByTestId("ImportWallet__continue-button")).toBeEnabled());
-		fireEvent.click(getByTestId("ImportWallet__continue-button"));
+		userEvent.click(getByTestId("ImportWallet__continue-button"));
 
 		await waitFor(() => expect(() => getByTestId("ImportWallet__method-step")).not.toThrow());
 
@@ -1099,7 +1099,7 @@ describe("ImportWallet", () => {
 		expect(selectNetworkInput).toHaveValue("ARK Devnet");
 
 		await waitFor(() => expect(getByTestId("ImportWallet__continue-button")).toBeEnabled());
-		fireEvent.click(getByTestId("ImportWallet__continue-button"));
+		userEvent.click(getByTestId("ImportWallet__continue-button"));
 
 		await waitFor(() => expect(() => getByTestId("ImportWallet__method-step")).not.toThrow());
 
@@ -1114,13 +1114,13 @@ describe("ImportWallet", () => {
 		fireEvent.input(getByTestId("ImportWallet__address-input"), { target: { value: randomNewAddress } });
 
 		await waitFor(() => expect(getByTestId("ImportWallet__continue-button")).toBeEnabled(), { timeout: 4000 });
-		fireEvent.click(getByTestId("ImportWallet__continue-button"));
+		userEvent.click(getByTestId("ImportWallet__continue-button"));
 
 		await waitFor(() => {
 			expect(getByTestId("ImportWallet__success-step")).toBeInTheDocument();
 		});
 
-		fireEvent.click(getByTestId("ImportWallet__finish-button"));
+		userEvent.click(getByTestId("ImportWallet__finish-button"));
 
 		await waitFor(() => {
 			expect(historySpy).toHaveBeenCalledWith(expect.stringContaining(`/profiles/${profile.id()}/wallets/`));
@@ -1170,7 +1170,7 @@ describe("ImportWallet", () => {
 		expect(selectNetworkInput).toHaveValue("ARK Devnet");
 
 		await waitFor(() => expect(getByTestId("ImportWallet__continue-button")).toBeEnabled());
-		fireEvent.click(getByTestId("ImportWallet__continue-button"));
+		userEvent.click(getByTestId("ImportWallet__continue-button"));
 
 		await waitFor(() => expect(() => getByTestId("ImportWallet__method-step")).not.toThrow());
 
@@ -1185,7 +1185,7 @@ describe("ImportWallet", () => {
 		fireEvent.input(getByTestId("ImportWallet__address-input"), { target: { value: randomNewAddress } });
 
 		await waitFor(() => expect(getByTestId("ImportWallet__continue-button")).toBeEnabled(), { timeout: 4000 });
-		fireEvent.click(getByTestId("ImportWallet__continue-button"));
+		userEvent.click(getByTestId("ImportWallet__continue-button"));
 
 		await waitFor(() => {
 			expect(getByTestId("ImportWallet__success-step")).toBeInTheDocument();
@@ -1193,7 +1193,7 @@ describe("ImportWallet", () => {
 
 		const alias = "My Wallet";
 
-		fireEvent.click(getByTestId("ImportWallet__edit-alias"));
+		userEvent.click(getByTestId("ImportWallet__edit-alias"));
 
 		await findByTestId("UpdateWalletName__input");
 
@@ -1241,12 +1241,12 @@ describe("ImportWallet", () => {
 		});
 
 		await waitFor(() => expect(getByTestId("ImportWallet__continue-button")).toBeEnabled());
-		fireEvent.click(getByTestId("ImportWallet__continue-button"));
+		userEvent.click(getByTestId("ImportWallet__continue-button"));
 
 		await findByTestId("SyncErrorMessage__retry");
 
 		const toastDismissMock = jest.spyOn(toasts, "dismiss").mockResolvedValue(undefined);
-		fireEvent.click(getByTestId("SyncErrorMessage__retry"));
+		userEvent.click(getByTestId("SyncErrorMessage__retry"));
 
 		await findByTestId("SyncErrorMessage__retry");
 

@@ -1,5 +1,5 @@
-import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+import { screen } from "@testing-library/react";
 import { translations } from "domains/transaction/i18n";
 import React from "react";
 import { renderWithForm } from "utils/testing-library";

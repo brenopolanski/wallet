@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
+import userEvent from "@testing-library/user-event";
 import { Contracts } from "@payvo/profiles";
 import { LedgerProvider } from "app/contexts/Ledger/Ledger";
 import { toasts } from "app/services";
@@ -175,7 +176,7 @@ describe("SignMessage", () => {
 
 		await waitFor(() => expect(screen.getByTestId("SignMessage__submit-button")).toBeEnabled());
 
-		fireEvent.click(screen.getByTestId("SignMessage__submit-button"));
+		userEvent.click(screen.getByTestId("SignMessage__submit-button"));
 
 		await screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.SIGNED_STEP.TITLE);
 
@@ -185,7 +186,7 @@ describe("SignMessage", () => {
 		// @ts-ignore
 		navigator.clipboard = { writeText: writeTextMock };
 
-		fireEvent.click(screen.getByTestId("SignMessage__copy-button"));
+		userEvent.click(screen.getByTestId("SignMessage__copy-button"));
 
 		await waitFor(() => expect(writeTextMock).toHaveBeenCalledWith(JSON.stringify(signedMessage)));
 
@@ -220,11 +221,11 @@ describe("SignMessage", () => {
 
 		await waitFor(() => expect(screen.getByTestId("SignMessage__submit-button")).toBeEnabled());
 
-		fireEvent.click(screen.getByTestId("SignMessage__submit-button"));
+		userEvent.click(screen.getByTestId("SignMessage__submit-button"));
 
 		await screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.SIGNED_STEP.TITLE);
 
-		fireEvent.click(screen.getByTestId("SignMessage__back-button"));
+		userEvent.click(screen.getByTestId("SignMessage__back-button"));
 
 		await screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE);
 	});
@@ -270,7 +271,7 @@ describe("SignMessage", () => {
 
 		await waitFor(() => expect(screen.getByTestId("SignMessage__submit-button")).toBeEnabled());
 
-		fireEvent.click(screen.getByTestId("SignMessage__submit-button"));
+		userEvent.click(screen.getByTestId("SignMessage__submit-button"));
 
 		await screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.SIGNED_STEP.TITLE);
 
@@ -326,7 +327,7 @@ describe("SignMessage", () => {
 
 		await waitFor(() => expect(screen.getByTestId("SignMessage__submit-button")).toBeEnabled());
 
-		fireEvent.click(screen.getByTestId("SignMessage__submit-button"));
+		userEvent.click(screen.getByTestId("SignMessage__submit-button"));
 
 		await screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.SIGNED_STEP.TITLE);
 
@@ -384,7 +385,7 @@ describe("SignMessage", () => {
 
 		await waitFor(() => expect(screen.getByTestId("SignMessage__submit-button")).toBeEnabled());
 
-		fireEvent.click(screen.getByTestId("SignMessage__submit-button"));
+		userEvent.click(screen.getByTestId("SignMessage__submit-button"));
 
 		act(() => {
 			observer.next({ descriptor: "", deviceModel: { id: "nanoX" }, type: "add" });
@@ -442,7 +443,7 @@ describe("SignMessage", () => {
 			observer.next({ descriptor: "", deviceModel: { id: "nanoX" }, type: "add" });
 		});
 
-		fireEvent.click(screen.getByTestId("SignMessage__submit-button"));
+		userEvent.click(screen.getByTestId("SignMessage__submit-button"));
 
 		await waitFor(() =>
 			expect(toastSpy).toHaveBeenCalledWith(transactionTranslations.LEDGER_CONFIRMATION.REJECTED),
@@ -490,7 +491,7 @@ describe("SignMessage", () => {
 
 		await waitFor(() => expect(screen.getByTestId("SignMessage__submit-button")).toBeEnabled());
 
-		fireEvent.click(screen.getByTestId("SignMessage__submit-button"));
+		userEvent.click(screen.getByTestId("SignMessage__submit-button"));
 
 		await waitFor(
 			() => {

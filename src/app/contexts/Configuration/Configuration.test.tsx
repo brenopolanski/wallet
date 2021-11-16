@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import React from "react";
 import { fireEvent, render, waitFor } from "utils/testing-library";
 
@@ -62,7 +63,7 @@ describe("Configuration Context", () => {
 
 		await waitFor(() => expect(() => getByTestId("Configuration__list")).toThrow(/Unable to find/));
 
-		fireEvent.click(getByTestId("Configuration__consumer"));
+		userEvent.click(getByTestId("Configuration__consumer"));
 
 		await findByTestId("Configuration__list");
 

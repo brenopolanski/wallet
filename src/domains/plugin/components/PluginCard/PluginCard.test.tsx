@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import { translations as commonTranslations } from "app/i18n/common/i18n";
 import { translations as pluginTranslations } from "domains/plugin/i18n";
 import React from "react";
@@ -50,7 +51,7 @@ describe("PluginCard", () => {
 
 		const { asFragment } = render(<PluginCard plugin={plugin} onClick={onClick} />);
 
-		fireEvent.click(screen.getByTestId("Card"));
+		userEvent.click(screen.getByTestId("Card"));
 
 		expect(onClick).toHaveBeenCalledTimes(1);
 		expect(asFragment()).toMatchSnapshot();
@@ -115,7 +116,7 @@ describe("PluginCard", () => {
 
 		render(<PluginCard plugin={plugin} onSelect={onSelect} />);
 
-		fireEvent.click(screen.getByText("arrows-rotate.svg"));
+		userEvent.click(screen.getByText("arrows-rotate.svg"));
 
 		expect(onSelect).toHaveBeenCalledWith({ value: "update" });
 	});

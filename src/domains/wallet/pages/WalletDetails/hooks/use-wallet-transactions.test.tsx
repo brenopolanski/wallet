@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import { Contracts, DTO } from "@payvo/profiles";
 import { PendingTransaction } from "domains/transaction/components/TransactionTable/PendingTransactionsTable/PendingTransactionsTable.contracts";
 import nock from "nock";
@@ -141,7 +142,7 @@ describe("Wallet Transactions Hook", () => {
 
 		render(<Component />);
 
-		fireEvent.click(screen.getByRole("button"));
+		userEvent.click(screen.getByRole("button"));
 
 		await waitFor(() => expect(screen.queryByText("Loading")).not.toBeInTheDocument());
 		await waitFor(() => expect(allPendingTransactions).toHaveLength(0));
@@ -174,7 +175,7 @@ describe("Wallet Transactions Hook", () => {
 
 		render(<Component />);
 
-		fireEvent.click(screen.getByRole("button"));
+		userEvent.click(screen.getByRole("button"));
 
 		await waitFor(() => expect(screen.queryByText("Loading")).not.toBeInTheDocument());
 		await waitFor(() => expect(allPendingTransactions).toHaveLength(0));

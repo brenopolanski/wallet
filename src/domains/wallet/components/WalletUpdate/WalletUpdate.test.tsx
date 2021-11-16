@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
+import userEvent from "@testing-library/user-event";
 import * as updaterHook from "app/hooks/use-updater";
 import React from "react";
 import { fireEvent, render, waitFor } from "utils/testing-library";
@@ -55,7 +56,7 @@ describe("WalletUpdate", () => {
 		const onClose = jest.fn();
 		const { getByTestId, findByTestId } = render(<WalletUpdate isOpen={true} onClose={onClose} />);
 		await findByTestId("WalletUpdate__first-step");
-		fireEvent.click(getByTestId("modal__close-btn"));
+		userEvent.click(getByTestId("modal__close-btn"));
 		await waitFor(() => expect(onClose).toHaveBeenCalledWith());
 	});
 
@@ -63,14 +64,14 @@ describe("WalletUpdate", () => {
 		const onCancel = jest.fn();
 		const { getByTestId, findByTestId } = render(<WalletUpdate isOpen={true} onCancel={onCancel} />);
 		await findByTestId("WalletUpdate__first-step");
-		fireEvent.click(getByTestId("WalletUpdate__cancel-button"));
+		userEvent.click(getByTestId("WalletUpdate__cancel-button"));
 		await waitFor(() => expect(onCancel).toHaveBeenCalledWith());
 	});
 
 	it("should handle update", async () => {
 		const { getByTestId, findByTestId } = render(<WalletUpdate isOpen={true} />);
 		await findByTestId("WalletUpdate__first-step");
-		fireEvent.click(getByTestId("WalletUpdate__update-button"));
+		userEvent.click(getByTestId("WalletUpdate__update-button"));
 		await findByTestId("WalletUpdate__second-step");
 	});
 
@@ -83,7 +84,7 @@ describe("WalletUpdate", () => {
 		});
 
 		const { getByTestId } = render(<WalletUpdate isOpen={true} />);
-		fireEvent.click(getByTestId("WalletUpdate__install-button"));
+		userEvent.click(getByTestId("WalletUpdate__install-button"));
 		await waitFor(() => expect(quitInstall).toHaveBeenCalledWith(undefined));
 	});
 });

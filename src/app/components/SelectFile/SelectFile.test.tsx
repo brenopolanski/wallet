@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import { renderHook } from "@testing-library/react-hooks";
 import electron from "electron";
 import os from "os";
@@ -41,7 +42,7 @@ describe("SelectFile", () => {
 		const onSelect = jest.fn();
 		render(<SelectFile fileFormat=".json" onSelect={onSelect} />);
 
-		fireEvent.click(screen.getByTestId("SelectFile__browse-files"));
+		userEvent.click(screen.getByTestId("SelectFile__browse-files"));
 
 		expect(showOpenDialogMock).toHaveBeenCalledWith({
 			defaultPath: os.homedir(),
@@ -125,7 +126,7 @@ describe("SelectFile", () => {
 
 		expect(container).toContainHTML(errorHtml);
 
-		fireEvent.click(screen.getByRole("button"));
+		userEvent.click(screen.getByRole("button"));
 
 		expect(container).not.toContainHTML(errorHtml);
 	});
@@ -146,7 +147,7 @@ describe("SelectFile", () => {
 
 		expect(container).toContainHTML(errorHtml);
 
-		fireEvent.click(screen.getByRole("button"));
+		userEvent.click(screen.getByRole("button"));
 
 		expect(container).not.toContainHTML(errorHtml);
 	});

@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import { Contracts } from "@payvo/profiles";
 import nock from "nock";
 import React from "react";
@@ -43,7 +44,7 @@ describe("Notifications", () => {
 			</table>,
 		);
 
-		fireEvent.click(getByTestId("NotificationItem__action"));
+		userEvent.click(getByTestId("NotificationItem__action"));
 
 		await waitFor(() => expect(onAction).toHaveBeenCalledWith("29fdd62d-1c28-4d2c-b46f-667868c5afe1"));
 	});

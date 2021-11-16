@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import { Contracts } from "@payvo/profiles";
 import { ARK } from "@payvo/sdk-ark";
 import { httpClient } from "app/services";
@@ -75,7 +76,7 @@ describe("Environment Context", () => {
 
 		const { getByRole } = render(<App />, { withProviders: false });
 
-		fireEvent.click(getByRole("button"));
+		userEvent.click(getByRole("button"));
 
 		await waitFor(() => expect(getByRole("heading")).toHaveTextContent("Counter 1"));
 
@@ -108,7 +109,7 @@ describe("Environment Context", () => {
 
 		const { getByRole } = render(<App />, { history });
 
-		fireEvent.click(getByRole("button"));
+		userEvent.click(getByRole("button"));
 
 		await waitFor(() => expect(profile.settings().get(Contracts.ProfileSetting.Name)).toBe("bar"));
 	});
@@ -145,7 +146,7 @@ describe("Environment Context", () => {
 
 		const { getByRole } = render(<App />, { withProviders: false });
 
-		fireEvent.click(getByRole("button"));
+		userEvent.click(getByRole("button"));
 
 		await waitFor(() => expect(getByRole("heading")).toHaveTextContent("Counter 1"));
 

@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import { Contracts } from "@payvo/profiles";
 import { createMemoryHistory } from "history";
 import nock from "nock";
@@ -41,7 +42,7 @@ describe("Notifications", () => {
 	it("should render with transactions and plugins", async () => {
 		const { container } = render(<NotificationsDropdown profile={profile} />);
 
-		fireEvent.click(screen.getAllByRole("button")[0]);
+		userEvent.click(screen.getAllByRole("button")[0]);
 
 		await waitFor(() => expect(screen.getAllByTestId("NotificationItem")).toHaveLength(2));
 		await waitFor(() => expect(screen.queryAllByTestId("TransactionRowMode")).toHaveLength(3));
@@ -62,12 +63,12 @@ describe("Notifications", () => {
 			},
 		);
 
-		fireEvent.click(screen.getAllByRole("button")[0]);
+		userEvent.click(screen.getAllByRole("button")[0]);
 
 		await waitFor(() => expect(screen.getAllByTestId("NotificationItem")).toHaveLength(2));
 		await waitFor(() => expect(screen.queryAllByTestId("TransactionRowMode")).toHaveLength(3));
 
-		fireEvent.click(screen.getAllByTestId("TransactionRowMode")[0]);
+		userEvent.click(screen.getAllByTestId("TransactionRowMode")[0]);
 
 		await screen.findByTestId("modal__inner");
 
@@ -75,7 +76,7 @@ describe("Notifications", () => {
 
 		expect(container).toMatchSnapshot();
 
-		fireEvent.click(screen.getByTestId("modal__close-btn"));
+		userEvent.click(screen.getByTestId("modal__close-btn"));
 
 		await waitFor(() => expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument());
 	});
@@ -91,18 +92,18 @@ describe("Notifications", () => {
 			},
 		);
 
-		fireEvent.click(screen.getAllByRole("button")[0]);
+		userEvent.click(screen.getAllByRole("button")[0]);
 
 		await waitFor(() => expect(screen.getAllByTestId("NotificationItem")).toHaveLength(2));
 		await waitFor(() => expect(screen.queryAllByTestId("TransactionRowMode")).toHaveLength(3));
 
-		fireEvent.click(screen.getAllByTestId("NotificationItem__action")[0]);
+		userEvent.click(screen.getAllByTestId("NotificationItem__action")[0]);
 
 		await screen.findByTestId("WalletUpdate__first-step");
 
 		expect(container).toMatchSnapshot();
 
-		fireEvent.click(screen.getByTestId("modal__close-btn"));
+		userEvent.click(screen.getByTestId("modal__close-btn"));
 
 		await waitFor(() => expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument());
 
@@ -120,18 +121,18 @@ describe("Notifications", () => {
 			},
 		);
 
-		fireEvent.click(screen.getAllByRole("button")[0]);
+		userEvent.click(screen.getAllByRole("button")[0]);
 
 		await waitFor(() => expect(screen.getAllByTestId("NotificationItem")).toHaveLength(2));
 		await waitFor(() => expect(screen.queryAllByTestId("TransactionRowMode")).toHaveLength(3));
 
-		fireEvent.click(screen.getAllByTestId("NotificationItem__action")[0]);
+		userEvent.click(screen.getAllByTestId("NotificationItem__action")[0]);
 
 		await screen.findByTestId("WalletUpdate__first-step");
 
 		expect(container).toMatchSnapshot();
 
-		fireEvent.click(screen.getByTestId("WalletUpdate__cancel-button"));
+		userEvent.click(screen.getByTestId("WalletUpdate__cancel-button"));
 
 		await waitFor(() => expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument());
 

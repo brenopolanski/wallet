@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
+import userEvent from "@testing-library/user-event";
 import { Contracts } from "@payvo/profiles";
 import { EnvironmentProvider } from "app/contexts";
 import { translations as commonTranslations } from "app/i18n/common/i18n";
@@ -31,7 +32,7 @@ describe("Welcome", () => {
 
 		expect(container).toBeInTheDocument();
 
-		fireEvent.click(getByText(profile.name()));
+		userEvent.click(getByText(profile.name()));
 
 		expect(history.location.pathname).toBe(profileDashboardUrl);
 		expect(asFragment()).toMatchSnapshot();
@@ -46,7 +47,7 @@ describe("Welcome", () => {
 
 		expect(container).toBeInTheDocument();
 
-		fireEvent.click(getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		userEvent.click(getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
 
 		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/dashboard`);
 		expect(asFragment()).toMatchSnapshot();
@@ -66,13 +67,13 @@ describe("Welcome", () => {
 
 		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
-		fireEvent.click(getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		userEvent.click(getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
 
 		expect(getByTestId("modal__inner")).toBeInTheDocument();
 		expect(getByTestId("modal__inner")).toHaveTextContent(profileTranslations.MODAL_SIGN_IN.TITLE);
 		expect(getByTestId("modal__inner")).toHaveTextContent(profileTranslations.MODAL_SIGN_IN.DESCRIPTION);
 
-		fireEvent.click(getByTestId(buttonId));
+		userEvent.click(getByTestId(buttonId));
 
 		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 	});
@@ -89,7 +90,7 @@ describe("Welcome", () => {
 
 		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
-		fireEvent.click(getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		userEvent.click(getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
 
 		expect(getByTestId("modal__inner")).toBeInTheDocument();
 
@@ -99,7 +100,7 @@ describe("Welcome", () => {
 			expect(getByTestId("SignIn__submit-button")).toBeEnabled();
 		});
 
-		fireEvent.click(getByTestId("SignIn__submit-button"));
+		userEvent.click(getByTestId("SignIn__submit-button"));
 
 		await waitFor(() => {
 			expect(history.location.pathname).toBe(`/profiles/${profile.id()}/dashboard`);
@@ -123,14 +124,14 @@ describe("Welcome", () => {
 
 		const profileCardMenu = getAllByTestId("dropdown__toggle")[1];
 
-		fireEvent.click(profileCardMenu);
+		userEvent.click(profileCardMenu);
 
 		const settingsOption = getByTestId("dropdown__option--0");
 
 		expect(settingsOption).toBeInTheDocument();
 		expect(settingsOption).toHaveTextContent(commonTranslations.SETTINGS);
 
-		fireEvent.click(settingsOption);
+		userEvent.click(settingsOption);
 
 		await findByTestId("modal__inner");
 
@@ -139,7 +140,7 @@ describe("Welcome", () => {
 		// wait for formState.isValid to be updated
 		await findByTestId("SignIn__submit-button");
 
-		fireEvent.click(getByTestId("SignIn__submit-button"));
+		userEvent.click(getByTestId("SignIn__submit-button"));
 
 		await waitFor(() => {
 			expect(history.location.pathname).toBe(`/profiles/${profile.id()}/settings`);
@@ -159,14 +160,14 @@ describe("Welcome", () => {
 
 		const profileCardMenu = getAllByTestId("dropdown__toggle")[0];
 
-		fireEvent.click(profileCardMenu);
+		userEvent.click(profileCardMenu);
 
 		const settingsOption = getByTestId("dropdown__option--0");
 
 		expect(settingsOption).toBeInTheDocument();
 		expect(settingsOption).toHaveTextContent(commonTranslations.SETTINGS);
 
-		fireEvent.click(settingsOption);
+		userEvent.click(settingsOption);
 
 		await waitFor(() => {
 			expect(history.location.pathname).toBe(`/profiles/${profile.id()}/settings`);
@@ -182,17 +183,17 @@ describe("Welcome", () => {
 
 		await waitFor(() => expect(getAllByTestId("Card")).toHaveLength(3));
 
-		fireEvent.click(getAllByTestId("dropdown__toggle")[0]);
+		userEvent.click(getAllByTestId("dropdown__toggle")[0]);
 
 		const deleteOption = getByTestId("dropdown__option--1");
 
 		expect(deleteOption).toHaveTextContent(commonTranslations.DELETE);
 
-		fireEvent.click(deleteOption);
+		userEvent.click(deleteOption);
 
 		await findByTestId("modal__inner");
 
-		fireEvent.click(getByTestId("DeleteResource__submit-button"));
+		userEvent.click(getByTestId("DeleteResource__submit-button"));
 
 		await waitFor(() => expect(getAllByTestId("Card")).toHaveLength(2));
 	});
@@ -210,7 +211,7 @@ describe("Welcome", () => {
 
 		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
-		fireEvent.click(getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		userEvent.click(getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
 
 		for (const index of [1, 2, 3]) {
 			fireEvent.input(getByTestId("SignIn__input--password"), {
@@ -220,7 +221,7 @@ describe("Welcome", () => {
 			// wait for form to be updated
 			await findByTestId("SignIn__submit-button");
 
-			fireEvent.click(getByTestId("SignIn__submit-button"));
+			userEvent.click(getByTestId("SignIn__submit-button"));
 
 			// wait for form to be updated
 			await findByTestId("SignIn__submit-button");
@@ -234,10 +235,10 @@ describe("Welcome", () => {
 		});
 
 		// Close
-		fireEvent.click(getByTestId("SignIn__cancel-button"));
+		userEvent.click(getByTestId("SignIn__cancel-button"));
 
 		// Reopen
-		fireEvent.click(getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		userEvent.click(getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
 
 		// Still disabled
 		expect(getByTestId("SignIn__submit-button")).toBeDisabled();
@@ -264,7 +265,7 @@ describe("Welcome", () => {
 
 		expect(getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
 
-		fireEvent.click(getByText(profileTranslations.CREATE_PROFILE));
+		userEvent.click(getByText(profileTranslations.CREATE_PROFILE));
 
 		expect(history.location.pathname).toBe("/profiles/create");
 		expect(asFragment()).toMatchSnapshot();

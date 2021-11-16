@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import { Contracts } from "@payvo/profiles";
 import { translations } from "domains/exchange/i18n";
 import React from "react";
@@ -75,7 +76,7 @@ describe("DeleteExchangeTransaction", () => {
 			/>,
 		);
 
-		fireEvent.click(screen.getByTestId("DeleteResource__submit-button"));
+		userEvent.click(screen.getByTestId("DeleteResource__submit-button"));
 
 		await waitFor(() => expect(onDelete).toHaveBeenCalledWith(exchangeTransaction));
 

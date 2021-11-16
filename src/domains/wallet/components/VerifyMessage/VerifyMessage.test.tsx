@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
+import userEvent from "@testing-library/user-event";
 import { Contracts } from "@payvo/profiles";
 import React from "react";
 import { env, fireEvent, getDefaultProfileId, MNEMONICS, render, screen, waitFor } from "utils/testing-library";
@@ -57,11 +58,11 @@ describe("VerifyMessage", () => {
 
 		expect(screen.getByTestId("VerifyMessage__manual")).toBeInTheDocument();
 
-		fireEvent.click(toggle);
+		userEvent.click(toggle);
 
 		expect(screen.getByTestId("VerifyMessage__json")).toBeInTheDocument();
 
-		fireEvent.click(toggle);
+		userEvent.click(toggle);
 
 		expect(screen.getByTestId("VerifyMessage__manual")).toBeInTheDocument();
 	});
@@ -73,7 +74,7 @@ describe("VerifyMessage", () => {
 
 		const cancelButton = screen.getByTestId("VerifyMessage__cancel");
 
-		fireEvent.click(cancelButton);
+		userEvent.click(cancelButton);
 
 		expect(onCancel).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
@@ -85,7 +86,7 @@ describe("VerifyMessage", () => {
 
 		const closeButton = screen.getByTestId("modal__close-btn");
 
-		fireEvent.click(closeButton);
+		userEvent.click(closeButton);
 
 		expect(onClose).toHaveBeenCalledWith();
 	});
@@ -109,7 +110,7 @@ describe("VerifyMessage", () => {
 			expect(submitButton).not.toBeDisabled();
 		});
 
-		fireEvent.click(submitButton);
+		userEvent.click(submitButton);
 
 		await waitFor(() => {
 			expect(onSubmit).toHaveBeenCalledWith(true);
@@ -127,7 +128,7 @@ describe("VerifyMessage", () => {
 
 		const toggle = screen.getByRole("checkbox");
 
-		fireEvent.click(toggle);
+		userEvent.click(toggle);
 
 		const jsonStringInput = screen.getByTestId("VerifyMessage__json-jsonString");
 
@@ -141,7 +142,7 @@ describe("VerifyMessage", () => {
 			expect(submitButton).not.toBeDisabled();
 		});
 
-		fireEvent.click(submitButton);
+		userEvent.click(submitButton);
 
 		await waitFor(() => {
 			expect(onSubmit).toHaveBeenCalledWith(true);
@@ -170,7 +171,7 @@ describe("VerifyMessage", () => {
 			expect(screen.getByTestId("VerifyMessage__submit")).not.toBeDisabled();
 		});
 
-		fireEvent.click(screen.getByTestId("VerifyMessage__submit"));
+		userEvent.click(screen.getByTestId("VerifyMessage__submit"));
 
 		await waitFor(() => {
 			expect(onSubmit).toHaveBeenCalledWith(false);
@@ -180,7 +181,7 @@ describe("VerifyMessage", () => {
 			expect(screen.getByTestId("modal__inner")).toHaveTextContent("error-banner-dark-green.svg");
 		});
 
-		fireEvent.click(screen.getByTestId("modal__close-btn"));
+		userEvent.click(screen.getByTestId("modal__close-btn"));
 
 		await waitFor(() => {
 			expect(onClose).toHaveBeenCalledWith();
@@ -209,7 +210,7 @@ describe("VerifyMessage", () => {
 			expect(submitButton).not.toBeDisabled();
 		});
 
-		fireEvent.click(submitButton);
+		userEvent.click(submitButton);
 
 		await waitFor(() => {
 			expect(onSubmit).toHaveBeenCalledWith(false);
@@ -219,7 +220,7 @@ describe("VerifyMessage", () => {
 			expect(screen.getByTestId("modal__inner")).toHaveTextContent("error-banner-dark-green.svg");
 		});
 
-		fireEvent.click(screen.getByTestId("modal__close-btn"));
+		userEvent.click(screen.getByTestId("modal__close-btn"));
 
 		await waitFor(() => {
 			expect(onClose).toHaveBeenCalledWith();

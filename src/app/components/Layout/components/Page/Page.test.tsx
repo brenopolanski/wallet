@@ -1,4 +1,5 @@
 import { Contracts } from "@payvo/profiles";
+import userEvent from "@testing-library/user-event";
 import electron from "electron";
 import { createMemoryHistory } from "history";
 import React from "react";
@@ -55,11 +56,11 @@ describe("Page", () => {
 
 			const toggle = getByTestId("navbar__useractions");
 
-			fireEvent.click(toggle);
+			userEvent.click(toggle);
 
 			await findByText(label);
 
-			fireEvent.click(await findByText(label));
+			userEvent.click(await findByText(label));
 
 			if (label === "Support") {
 				expect(ipcRendererSpy).toHaveBeenCalledWith("open-external", "https://payvo.com/contact");
@@ -89,11 +90,11 @@ describe("Page", () => {
 
 		const toggle = getByTestId("navbar__useractions");
 
-		fireEvent.click(toggle);
+		userEvent.click(toggle);
 
 		await findByText("Sign Out");
 
-		fireEvent.click(await findByText("Sign Out"));
+		userEvent.click(await findByText("Sign Out"));
 
 		expect(historySpy).toHaveBeenCalledWith("/");
 

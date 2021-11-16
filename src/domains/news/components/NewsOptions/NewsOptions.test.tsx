@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import React from "react";
 import { fireEvent, render, waitFor } from "utils/testing-library";
 
@@ -19,14 +20,14 @@ describe("NewsOptions", () => {
 			<NewsOptions selectedCategories={categories} selectedCoins={coins} onSubmit={jest.fn()} />,
 		);
 
-		fireEvent.click(getByTestId("NewsOptions__category-Technical"));
+		userEvent.click(getByTestId("NewsOptions__category-Technical"));
 	});
 
 	it("should select asset", () => {
 		const { getByTestId } = render(<NewsOptions selectedCategories={categories} selectedCoins={coins} />);
 
 		const arkOption = getByTestId("NetworkOption__ark.mainnet");
-		fireEvent.click(arkOption);
+		userEvent.click(arkOption);
 	});
 
 	it("should emit onSubmit with all selected filters", async () => {
@@ -36,8 +37,8 @@ describe("NewsOptions", () => {
 			<NewsOptions selectedCategories={categories} selectedCoins={coins} onSubmit={onSubmit} />,
 		);
 
-		fireEvent.click(getByTestId("NewsOptions__category-Technical"));
-		fireEvent.click(getByTestId("NetworkOption__ark.mainnet"));
+		userEvent.click(getByTestId("NewsOptions__category-Technical"));
+		userEvent.click(getByTestId("NetworkOption__ark.mainnet"));
 
 		await waitFor(() =>
 			expect(onSubmit).toHaveBeenCalledWith({

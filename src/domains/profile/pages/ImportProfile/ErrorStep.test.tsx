@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import { ImportError } from "domains/profile/pages/ImportProfile/ErrorStep";
 import React from "react";
 import { fireEvent, render } from "utils/testing-library";
@@ -19,7 +20,7 @@ describe("Import Profile - Error Step", () => {
 	it("should emit back event", () => {
 		const onBack = jest.fn();
 		const { getByTestId } = render(<ImportError file={file} onBack={onBack} />);
-		fireEvent.click(getByTestId("ImportError__back"));
+		userEvent.click(getByTestId("ImportError__back"));
 
 		expect(onBack).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
@@ -27,7 +28,7 @@ describe("Import Profile - Error Step", () => {
 	it("should emit retry event", () => {
 		const onRetry = jest.fn();
 		const { getByTestId } = render(<ImportError file={file} onRetry={onRetry} />);
-		fireEvent.click(getByTestId("ImportError__retry"));
+		userEvent.click(getByTestId("ImportError__retry"));
 
 		expect(onRetry).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});

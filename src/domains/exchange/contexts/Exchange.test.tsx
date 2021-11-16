@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import { httpClient } from "app/services";
 import { ExchangeProvider } from "domains/exchange/contexts/Exchange";
 import nock from "nock";
@@ -39,7 +40,7 @@ describe("Exchange Context", () => {
 			</ExchangeProvider>,
 		);
 
-		fireEvent.click(screen.getByRole("button"));
+		userEvent.click(screen.getByRole("button"));
 
 		await waitFor(() => {
 			expect(container).toHaveTextContent("provider count: 2");
@@ -67,7 +68,7 @@ describe("Exchange Context", () => {
 			</ExchangeProvider>,
 		);
 
-		fireEvent.click(screen.getByRole("button"));
+		userEvent.click(screen.getByRole("button"));
 
 		await waitFor(() => {
 			expect(container).toHaveTextContent("provider count: 0");
@@ -94,7 +95,7 @@ describe("Exchange Context", () => {
 
 		expect(container).toHaveTextContent("exchangeService is undefined");
 
-		fireEvent.click(screen.getByRole("button"));
+		userEvent.click(screen.getByRole("button"));
 
 		await waitFor(() => {
 			expect(container).toHaveTextContent("exchangeService is set");

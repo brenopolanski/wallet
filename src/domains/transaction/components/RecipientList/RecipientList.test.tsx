@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
+import userEvent from "@testing-library/user-event";
 import { Contracts } from "@payvo/profiles";
 import { RecipientItem } from "domains/transaction/components/RecipientList/RecipientList.contracts";
 import React from "react";
@@ -166,7 +167,7 @@ describe("RecipientList", () => {
 
 		expect(removeButton[0]).toBeInTheDocument();
 
-		fireEvent.click(removeButton[0]);
+		userEvent.click(removeButton[0]);
 
 		expect(onRemove).toHaveBeenCalledWith(0);
 	});
@@ -193,7 +194,7 @@ describe("RecipientList", () => {
 
 		expect(removeButton[0]).toBeInTheDocument();
 
-		fireEvent.click(removeButton[0]);
+		userEvent.click(removeButton[0]);
 
 		expect(onRemove).not.toHaveBeenCalled();
 	});

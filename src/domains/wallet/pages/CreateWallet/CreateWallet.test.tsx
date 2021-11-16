@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
+import userEvent from "@testing-library/user-event";
 import { BIP39 } from "@payvo/cryptography";
 import { Contracts } from "@payvo/profiles";
 import { translations as walletTranslations } from "domains/wallet/i18n";
@@ -67,7 +68,7 @@ describe("CreateWallet", () => {
 
 		expect(backButton).toBeEnabled();
 
-		fireEvent.click(backButton);
+		userEvent.click(backButton);
 
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${fixtureProfileId}/dashboard`);
 
@@ -88,33 +89,33 @@ describe("CreateWallet", () => {
 
 		expect(continueButton).toBeEnabled();
 
-		fireEvent.click(continueButton);
+		userEvent.click(continueButton);
 
 		await waitFor(() => expect(profile.wallets().values()).toHaveLength(0));
 
 		await screen.findByTestId("CreateWallet__WalletOverviewStep");
 
-		fireEvent.click(backButton);
+		userEvent.click(backButton);
 		await screen.findByTestId("NetworkStep");
 
-		fireEvent.click(continueButton);
+		userEvent.click(continueButton);
 		await screen.findByTestId("CreateWallet__WalletOverviewStep");
 
-		fireEvent.click(continueButton);
+		userEvent.click(continueButton);
 		await screen.findByTestId("CreateWallet__ConfirmPassphraseStep");
 
-		fireEvent.click(backButton);
+		userEvent.click(backButton);
 
 		await screen.findByTestId("CreateWallet__WalletOverviewStep");
 
-		fireEvent.click(continueButton);
+		userEvent.click(continueButton);
 		await screen.findByTestId("CreateWallet__ConfirmPassphraseStep");
 
 		const walletMnemonic = passphrase.split(" ");
 		for (let index = 0; index < 3; index++) {
 			const wordNumber = Number.parseInt(screen.getByText(/Select the/).innerHTML.replace(/Select the/, ""));
 
-			fireEvent.click(screen.getByText(walletMnemonic[wordNumber - 1]));
+			userEvent.click(screen.getByText(walletMnemonic[wordNumber - 1]));
 			if (index < 2) {
 				await waitFor(() => expect(screen.queryAllByText(/The #(\d+) word/).length === 2 - index));
 			}
@@ -123,13 +124,13 @@ describe("CreateWallet", () => {
 
 		expect(profile.wallets().values()).toHaveLength(0);
 
-		fireEvent.click(continueButton);
+		userEvent.click(continueButton);
 
 		await screen.findByTestId("CreateWallet__SuccessStep");
 
 		expect(profile.wallets().values()).toHaveLength(1);
 
-		fireEvent.click(screen.getByTestId("CreateWallet__edit-alias"));
+		userEvent.click(screen.getByTestId("CreateWallet__edit-alias"));
 
 		await screen.findByTestId("modal__inner");
 
@@ -137,11 +138,11 @@ describe("CreateWallet", () => {
 
 		await waitFor(() => expect(screen.getByTestId("UpdateWalletName__submit")).toBeEnabled());
 
-		fireEvent.click(screen.getByTestId("UpdateWalletName__submit"));
+		userEvent.click(screen.getByTestId("UpdateWalletName__submit"));
 
 		await waitFor(() => expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/));
 
-		fireEvent.click(screen.getByTestId("CreateWallet__finish-button"));
+		userEvent.click(screen.getByTestId("CreateWallet__finish-button"));
 
 		const wallet = profile.wallets().first();
 
@@ -183,7 +184,7 @@ describe("CreateWallet", () => {
 
 		expect(backButton).toBeEnabled();
 
-		fireEvent.click(backButton);
+		userEvent.click(backButton);
 
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${fixtureProfileId}/dashboard`);
 
@@ -204,48 +205,48 @@ describe("CreateWallet", () => {
 
 		expect(continueButton).toBeEnabled();
 
-		fireEvent.click(continueButton);
+		userEvent.click(continueButton);
 
 		await waitFor(() => expect(profile.wallets().values()).toHaveLength(0));
 
 		await screen.findByTestId("CreateWallet__WalletOverviewStep");
 
-		fireEvent.click(backButton);
+		userEvent.click(backButton);
 		await screen.findByTestId("NetworkStep");
 
-		fireEvent.click(continueButton);
+		userEvent.click(continueButton);
 		await screen.findByTestId("CreateWallet__WalletOverviewStep");
 
 		const steps = within(screen.getByTestId("Form")).getAllByRole("list")[0];
 
 		expect(within(steps).getAllByRole("listitem")).toHaveLength(4);
 
-		fireEvent.click(screen.getByTestId("CreateWallet__encryption-toggle"));
+		userEvent.click(screen.getByTestId("CreateWallet__encryption-toggle"));
 
 		expect(within(steps).getAllByRole("listitem")).toHaveLength(5);
 
-		fireEvent.click(continueButton);
+		userEvent.click(continueButton);
 		await screen.findByTestId("CreateWallet__ConfirmPassphraseStep");
 
-		fireEvent.click(backButton);
+		userEvent.click(backButton);
 
 		await screen.findByTestId("CreateWallet__WalletOverviewStep");
 
-		fireEvent.click(continueButton);
+		userEvent.click(continueButton);
 		await screen.findByTestId("CreateWallet__ConfirmPassphraseStep");
 
 		const walletMnemonic = passphrase.split(" ");
 		for (let index = 0; index < 3; index++) {
 			const wordNumber = Number.parseInt(screen.getByText(/Select the/).innerHTML.replace(/Select the/, ""));
 
-			fireEvent.click(screen.getByText(walletMnemonic[wordNumber - 1]));
+			userEvent.click(screen.getByText(walletMnemonic[wordNumber - 1]));
 			if (index < 2) {
 				await waitFor(() => expect(screen.queryAllByText(/The #(\d+) word/).length === 2 - index));
 			}
 		}
 		await waitFor(() => expect(continueButton).toBeEnabled());
 
-		fireEvent.click(continueButton);
+		userEvent.click(continueButton);
 
 		await screen.findByTestId("EncryptPassword");
 
@@ -267,13 +268,13 @@ describe("CreateWallet", () => {
 
 		await waitFor(() => expect(continueEncryptionButton).toBeEnabled());
 
-		fireEvent.click(continueEncryptionButton);
+		userEvent.click(continueEncryptionButton);
 
 		await screen.findByTestId("CreateWallet__SuccessStep");
 
 		expect(profile.wallets().values()).toHaveLength(1);
 
-		fireEvent.click(screen.getByTestId("CreateWallet__finish-button"));
+		userEvent.click(screen.getByTestId("CreateWallet__finish-button"));
 
 		const wallet = profile.wallets().first();
 
@@ -336,15 +337,15 @@ describe("CreateWallet", () => {
 
 		await waitFor(() => expect(continueButton).toBeEnabled());
 
-		fireEvent.click(continueButton);
+		userEvent.click(continueButton);
 
 		await screen.findByTestId("CreateWallet__WalletOverviewStep");
 
-		fireEvent.click(screen.getByTestId("CreateWallet__back-button"));
+		userEvent.click(screen.getByTestId("CreateWallet__back-button"));
 
 		await screen.findByTestId("NetworkStep");
 
-		fireEvent.click(continueButton);
+		userEvent.click(continueButton);
 
 		await screen.findByTestId("CreateWallet__WalletOverviewStep");
 
@@ -390,7 +391,7 @@ describe("CreateWallet", () => {
 			expect(continueButton).toBeEnabled();
 		});
 
-		fireEvent.click(continueButton);
+		userEvent.click(continueButton);
 
 		await screen.findByText(walletTranslations.PAGE_CREATE_WALLET.NETWORK_STEP.GENERATION_ERROR);
 
@@ -444,11 +445,11 @@ describe("CreateWallet", () => {
 
 		await waitFor(() => expect(continueButton).toBeEnabled());
 
-		fireEvent.click(continueButton);
+		userEvent.click(continueButton);
 
 		await screen.findByTestId("CreateWallet__WalletOverviewStep");
 
-		fireEvent.click(continueButton);
+		userEvent.click(continueButton);
 
 		await screen.findByTestId("CreateWallet__ConfirmPassphraseStep");
 
@@ -456,18 +457,18 @@ describe("CreateWallet", () => {
 		for (let index = 0; index < 3; index++) {
 			const wordNumber = Number.parseInt(screen.getByText(/Select the/).innerHTML.replace(/Select the/, ""));
 
-			fireEvent.click(screen.getByText(walletMnemonic[wordNumber - 1]));
+			userEvent.click(screen.getByText(walletMnemonic[wordNumber - 1]));
 			if (index < 2) {
 				await waitFor(() => expect(screen.queryAllByText(/The #(\d+) word/).length === 2 - index));
 			}
 		}
 		await waitFor(() => expect(continueButton).toBeEnabled());
 
-		fireEvent.click(continueButton);
+		userEvent.click(continueButton);
 
 		await screen.findByTestId("CreateWallet__SuccessStep");
 
-		fireEvent.click(screen.getByTestId("CreateWallet__edit-alias"));
+		userEvent.click(screen.getByTestId("CreateWallet__edit-alias"));
 
 		await screen.findByTestId("modal__inner");
 
@@ -475,7 +476,7 @@ describe("CreateWallet", () => {
 
 		await waitFor(() => expect(screen.getByTestId("UpdateWalletName__submit")).toBeDisabled());
 
-		fireEvent.click(screen.getByTestId("UpdateWalletName__cancel"));
+		userEvent.click(screen.getByTestId("UpdateWalletName__cancel"));
 
 		await waitFor(() => expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/));
 	});

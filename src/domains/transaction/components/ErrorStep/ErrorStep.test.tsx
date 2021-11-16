@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import React from "react";
 import { fireEvent, render, waitFor } from "utils/testing-library";
 
@@ -28,7 +29,7 @@ describe("ErrorStep", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 
-		fireEvent.click(getByTestId("ErrorStep__wallet-button"));
+		userEvent.click(getByTestId("ErrorStep__wallet-button"));
 
 		await waitFor(() =>
 			expect(onBack).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) })),
@@ -41,7 +42,7 @@ describe("ErrorStep", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 
-		fireEvent.click(getByTestId("ErrorStep__repeat-button"));
+		userEvent.click(getByTestId("ErrorStep__repeat-button"));
 
 		await waitFor(() => expect(onRepeat).toHaveBeenCalledWith());
 	});

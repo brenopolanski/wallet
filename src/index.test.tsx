@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import { translations } from "app/i18n/common/i18n";
 import React from "react";
 import { Prompt, Route, Switch, useHistory } from "react-router-dom";
@@ -36,19 +37,19 @@ describe("Application root", () => {
 
 		expect(screen.getByText("First")).toBeInTheDocument();
 
-		fireEvent.click(screen.getByText("Navigate"));
+		userEvent.click(screen.getByText("Navigate"));
 
 		await screen.findByTestId("ConfirmationModal");
-		fireEvent.click(screen.getByText(translations.NO));
+		userEvent.click(screen.getByText(translations.NO));
 
 		// Same page without confirmation modal
 		expect(screen.getByText("First")).toBeInTheDocument();
 		expect(screen.queryByTestId("ConfirmationModal")).not.toBeInTheDocument();
 
-		fireEvent.click(screen.getByText("Navigate"));
+		userEvent.click(screen.getByText("Navigate"));
 
 		await screen.findByTestId("ConfirmationModal");
-		fireEvent.click(screen.getByText(translations.YES));
+		userEvent.click(screen.getByText(translations.YES));
 
 		expect(screen.getByText("Second")).toBeInTheDocument();
 	});

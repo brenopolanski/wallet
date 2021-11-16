@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import { Contracts } from "@payvo/profiles";
 // @README: This import is fine in tests but should be avoided in production code.
 import { ReadOnlyWallet } from "@payvo/profiles/distribution/read-only-wallet";
@@ -72,7 +73,7 @@ describe("DelegateRow", () => {
 		);
 		const selectButton = screen.getByTestId("DelegateRow__toggle-0");
 
-		fireEvent.click(selectButton);
+		userEvent.click(selectButton);
 
 		expect(container).toBeInTheDocument();
 		expect(toggleVotesSelected).toHaveBeenCalledWith(delegate.address());

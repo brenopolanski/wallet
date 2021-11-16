@@ -76,7 +76,7 @@ describe("Password Settings", () => {
 		// wait for formState.isValid to be updated
 		await findByTestId("Password-settings__submit-button");
 
-		fireEvent.click(getByTestId("Password-settings__submit-button"));
+		userEvent.click(getByTestId("Password-settings__submit-button"));
 
 		await findByTestId(currentPasswordInput);
 
@@ -116,7 +116,7 @@ describe("Password Settings", () => {
 			expect(getByTestId("Password-settings__submit-button")).toBeEnabled();
 		});
 
-		fireEvent.click(getByTestId("Password-settings__submit-button"));
+		userEvent.click(getByTestId("Password-settings__submit-button"));
 
 		await findByTestId("Password-settings__input--currentPassword");
 	});
@@ -143,7 +143,7 @@ describe("Password Settings", () => {
 			expect(getByTestId("side-menu__item--password")).toBeInTheDocument();
 		});
 
-		fireEvent.click(await findByTestId("side-menu__item--password"));
+		userEvent.click(await findByTestId("side-menu__item--password"));
 
 		const currentPasswordInput = "Password-settings__input--currentPassword";
 
@@ -167,7 +167,7 @@ describe("Password Settings", () => {
 			expect(getByTestId("Password-settings__submit-button")).toBeEnabled();
 		});
 
-		fireEvent.click(getByTestId("Password-settings__submit-button"));
+		userEvent.click(getByTestId("Password-settings__submit-button"));
 
 		await waitFor(() => {
 			expect(getByTestId("Password-settings__submit-button")).toBeEnabled();
@@ -197,7 +197,7 @@ describe("Password Settings", () => {
 			expect(getByTestId("side-menu__item--password")).toBeInTheDocument();
 		});
 
-		fireEvent.click(getByTestId("side-menu__item--password"));
+		userEvent.click(getByTestId("side-menu__item--password"));
 
 		const currentPasswordInput = "Password-settings__input--currentPassword";
 
@@ -254,7 +254,7 @@ describe("Password Settings", () => {
 			expect(getByTestId("side-menu__item--password")).toBeInTheDocument();
 		});
 
-		fireEvent.click(getByTestId("side-menu__item--password"));
+		userEvent.click(getByTestId("side-menu__item--password"));
 
 		await findByTestId("Password-settings__input--currentPassword");
 

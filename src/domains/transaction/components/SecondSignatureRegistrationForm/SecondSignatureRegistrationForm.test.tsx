@@ -174,7 +174,7 @@ describe("SecondSignatureRegistrationForm", () => {
 			const clipboardOriginal = navigator.clipboard;
 			(navigator as any).clipboard = { writeText: writeTextMock };
 
-			fireEvent.click(screen.getByTestId("SecondSignature__copy"));
+			userEvent.click(screen.getByTestId("SecondSignature__copy"));
 
 			await waitFor(() => expect(writeTextMock).toHaveBeenCalledWith("test mnemonic"));
 
@@ -204,7 +204,7 @@ describe("SecondSignatureRegistrationForm", () => {
 
 			const toastSpy = jest.spyOn(toasts, "success");
 
-			fireEvent.click(screen.getByTestId("SecondSignature__download"));
+			userEvent.click(screen.getByTestId("SecondSignature__download"));
 
 			await waitFor(() =>
 				expect(toastSpy).toHaveBeenCalledWith(
@@ -240,7 +240,7 @@ describe("SecondSignatureRegistrationForm", () => {
 
 			const toastSpy = jest.spyOn(toasts, "success");
 
-			fireEvent.click(screen.getByTestId("SecondSignature__download"));
+			userEvent.click(screen.getByTestId("SecondSignature__download"));
 
 			await waitFor(() => expect(toastSpy).not.toHaveBeenCalled());
 
@@ -268,7 +268,7 @@ describe("SecondSignatureRegistrationForm", () => {
 
 			const toastSpy = jest.spyOn(toasts, "error");
 
-			fireEvent.click(screen.getByTestId("SecondSignature__download"));
+			userEvent.click(screen.getByTestId("SecondSignature__download"));
 
 			await waitFor(() => expect(toastSpy).toHaveBeenCalledWith(expect.stringMatching(/Could not save file/)));
 
@@ -297,7 +297,7 @@ describe("SecondSignatureRegistrationForm", () => {
 		for (let index = 0; index < 3; index++) {
 			const wordNumber = Number.parseInt(screen.getByText(/Select the/).innerHTML.replace(/Select the/, ""));
 
-			fireEvent.click(screen.getByText(walletMnemonic[wordNumber - 1]));
+			userEvent.click(screen.getByText(walletMnemonic[wordNumber - 1]));
 
 			if (index < 2) {
 				await waitFor(() => expect(screen.queryAllByText(/The (\d+)/).length === 2 - index));

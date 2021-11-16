@@ -173,11 +173,11 @@ describe("General Settings", () => {
 		}));
 
 		// Upload avatar image
-		fireEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
+		userEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
 
 		await waitFor(() => expect(showOpenDialogMock).toHaveBeenCalledWith(showOpenDialogParameters));
 
-		fireEvent.click(screen.getByTestId("SelectProfileImage__remove-button"));
+		userEvent.click(screen.getByTestId("SelectProfileImage__remove-button"));
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -201,7 +201,7 @@ describe("General Settings", () => {
 			filePaths: ["banner.png"],
 		}));
 
-		fireEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
+		userEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
 
 		await waitFor(() => {
 			expect(showOpenDialogMock).toHaveBeenCalledWith(showOpenDialogParameters);
@@ -255,7 +255,7 @@ describe("General Settings", () => {
 			filePaths: ["banner.png"],
 		}));
 
-		fireEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
+		userEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
 
 		await waitFor(() => {
 			expect(showOpenDialogMock).toHaveBeenCalledWith(showOpenDialogParameters);
@@ -264,14 +264,14 @@ describe("General Settings", () => {
 		fireEvent.input(screen.getByTestId("General-settings__input--name"), { target: { value: "test profile" } });
 
 		// Toggle Screenshot Protection
-		fireEvent.click(screen.getByTestId("General-settings__toggle--screenshotProtection"));
+		userEvent.click(screen.getByTestId("General-settings__toggle--screenshotProtection"));
 
 		// change auto signout period
 		expect(
 			within(screen.getByTestId("General-settings__auto-signout")).getByTestId("select-list__input"),
 		).toHaveValue("15");
 
-		fireEvent.click(
+		userEvent.click(
 			within(screen.getByTestId("General-settings__auto-signout")).getByTestId("SelectDropdown__caret"),
 		);
 
@@ -288,7 +288,7 @@ describe("General Settings", () => {
 		).toHaveValue("1");
 
 		// Toggle Test Development Network
-		fireEvent.click(screen.getByTestId("General-settings__toggle--useTestNetworks"));
+		userEvent.click(screen.getByTestId("General-settings__toggle--useTestNetworks"));
 
 		expect(screen.getByTestId("modal__inner")).toHaveTextContent(
 			translations.SETTINGS.MODAL_DEVELOPMENT_NETWORK.TITLE,
@@ -297,23 +297,23 @@ describe("General Settings", () => {
 			translations.SETTINGS.MODAL_DEVELOPMENT_NETWORK.DESCRIPTION,
 		);
 
-		fireEvent.click(screen.getByTestId("DevelopmentNetwork__continue-button"));
+		userEvent.click(screen.getByTestId("DevelopmentNetwork__continue-button"));
 
 		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
 		// Toggle Test Development Network
-		fireEvent.click(screen.getByTestId("General-settings__toggle--useTestNetworks"));
+		userEvent.click(screen.getByTestId("General-settings__toggle--useTestNetworks"));
 
 		expect(screen.getByTestId("General-settings__submit-button")).toBeEnabled();
 
-		fireEvent.click(screen.getByTestId("General-settings__submit-button"));
+		userEvent.click(screen.getByTestId("General-settings__submit-button"));
 
 		await waitFor(() => {
 			expect(toastSpy).toHaveBeenCalledWith(translations.SETTINGS.GENERAL.SUCCESS);
 		});
 
 		// Upload and remove avatar image
-		fireEvent.click(screen.getByTestId("SelectProfileImage__remove-button"));
+		userEvent.click(screen.getByTestId("SelectProfileImage__remove-button"));
 
 		expect(showOpenDialogMock).toHaveBeenCalledWith(showOpenDialogParameters);
 
@@ -325,14 +325,14 @@ describe("General Settings", () => {
 
 		await waitFor(() => expect(screen.getByTestId("General-settings__submit-button")).toBeEnabled());
 
-		fireEvent.click(screen.getByTestId("General-settings__submit-button"));
+		userEvent.click(screen.getByTestId("General-settings__submit-button"));
 
 		// Not upload avatar image
 		showOpenDialogMock = jest.spyOn(electron.remote.dialog, "showOpenDialog").mockImplementation(() => ({
 			filePaths: undefined,
 		}));
 
-		fireEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
+		userEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
 
 		await waitFor(() => {
 			expect(showOpenDialogMock).toHaveBeenCalledWith(showOpenDialogParameters);
@@ -502,7 +502,7 @@ describe("General Settings", () => {
 
 		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
-		fireEvent.click(screen.getByTestId("General-settings__toggle--useTestNetworks"));
+		userEvent.click(screen.getByTestId("General-settings__toggle--useTestNetworks"));
 
 		expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
 		expect(screen.getByTestId("modal__inner")).toHaveTextContent(
@@ -512,7 +512,7 @@ describe("General Settings", () => {
 			translations.SETTINGS.MODAL_DEVELOPMENT_NETWORK.DESCRIPTION,
 		);
 
-		fireEvent.click(screen.getByTestId(buttonId));
+		userEvent.click(screen.getByTestId(buttonId));
 
 		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 	});
@@ -537,7 +537,7 @@ describe("General Settings", () => {
 
 		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
-		fireEvent.click(screen.getByText(translations.COMMON.RESET_SETTINGS));
+		userEvent.click(screen.getByText(translations.COMMON.RESET_SETTINGS));
 
 		await waitFor(() => {
 			expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
@@ -548,7 +548,7 @@ describe("General Settings", () => {
 			translations.PROFILE.MODAL_RESET_PROFILE.DESCRIPTION,
 		);
 
-		fireEvent.click(screen.getByTestId(buttonId));
+		userEvent.click(screen.getByTestId(buttonId));
 
 		await waitFor(() => {
 			expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
@@ -573,13 +573,13 @@ describe("General Settings", () => {
 			expect(screen.getByTestId("General-settings__submit-button")).toBeEnabled();
 		});
 
-		fireEvent.click(screen.getByTestId("General-settings__submit-button"));
+		userEvent.click(screen.getByTestId("General-settings__submit-button"));
 
 		await waitFor(() => {
 			expect(screen.getByText(translations.COMMON.RESET_SETTINGS)).toBeInTheDocument();
 		});
 
-		fireEvent.click(screen.getByText(translations.COMMON.RESET_SETTINGS));
+		userEvent.click(screen.getByText(translations.COMMON.RESET_SETTINGS));
 
 		await waitFor(() => {
 			expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
@@ -594,7 +594,7 @@ describe("General Settings", () => {
 			expect(screen.getByTestId("ResetProfile__submit-button")).toBeEnabled();
 		});
 
-		fireEvent.click(screen.getByTestId("ResetProfile__submit-button"));
+		userEvent.click(screen.getByTestId("ResetProfile__submit-button"));
 
 		await waitFor(() => {
 			expect(toastSpy).toHaveBeenCalledWith(translations.SETTINGS.GENERAL.SUCCESS);
@@ -676,7 +676,7 @@ describe("General Settings", () => {
 		expect(getSelectInput("MARKET_PROVIDER")).toHaveValue("CryptoCompare");
 		expect(getSelectInput("CURRENCY")).toHaveValue("BTC (Ƀ)");
 
-		fireEvent.click(
+		userEvent.click(
 			within((getSelectInput("CURRENCY") as any).parentNode.parentNode).getByTestId("SelectDropdown__caret"),
 		);
 
@@ -684,37 +684,37 @@ describe("General Settings", () => {
 
 		expect(() => screen.getByText("VND (₫)")).toThrow(/Unable to find an element/);
 
-		fireEvent.click(screen.getByText("EUR (€)"));
+		userEvent.click(screen.getByText("EUR (€)"));
 
 		await waitFor(() => expect(getSelectInput("CURRENCY")).toHaveValue("EUR (€)"));
 
-		fireEvent.click(
+		userEvent.click(
 			within((getSelectInput("MARKET_PROVIDER") as any).parentNode.parentNode).getByTestId(
 				"SelectDropdown__caret",
 			),
 		);
 
-		fireEvent.click(screen.getByText("CoinGecko"));
+		userEvent.click(screen.getByText("CoinGecko"));
 
 		await waitFor(() => expect(getSelectInput("MARKET_PROVIDER")).toHaveValue("CoinGecko"));
 
-		fireEvent.click(
+		userEvent.click(
 			within((getSelectInput("CURRENCY") as any).parentNode.parentNode).getByTestId("SelectDropdown__caret"),
 		);
 
 		await screen.findByText("VND (₫)");
 
-		fireEvent.click(screen.getByText("VND (₫)"));
+		userEvent.click(screen.getByText("VND (₫)"));
 
 		await waitFor(() => expect(getSelectInput("CURRENCY")).toHaveValue("VND (₫)"));
 
-		fireEvent.click(
+		userEvent.click(
 			within((getSelectInput("MARKET_PROVIDER") as any).parentNode.parentNode).getByTestId(
 				"SelectDropdown__caret",
 			),
 		);
 
-		fireEvent.click(screen.getByText("CryptoCompare"));
+		userEvent.click(screen.getByText("CryptoCompare"));
 
 		await waitFor(() => expect(getSelectInput("MARKET_PROVIDER")).toHaveValue("CryptoCompare"));
 

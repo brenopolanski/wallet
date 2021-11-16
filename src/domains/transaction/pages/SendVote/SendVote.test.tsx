@@ -148,7 +148,7 @@ describe("SendVote", () => {
 		// Back to select a delegate page
 		await waitFor(() => expect(getByTestId("StepNavigation__back-button")).not.toBeDisabled());
 
-		fireEvent.click(getByTestId("StepNavigation__back-button"));
+		userEvent.click(getByTestId("StepNavigation__back-button"));
 
 		expect(container).toMatchSnapshot();
 	});
@@ -192,7 +192,7 @@ describe("SendVote", () => {
 		// Back to select a delegate page
 		await waitFor(() => expect(getByTestId("StepNavigation__back-button")).not.toBeDisabled());
 
-		fireEvent.click(getByTestId("StepNavigation__back-button"));
+		userEvent.click(getByTestId("StepNavigation__back-button"));
 
 		expect(container).toMatchSnapshot();
 	});
@@ -245,7 +245,7 @@ describe("SendVote", () => {
 		// Back to select a delegate page
 		await waitFor(() => expect(getByTestId("StepNavigation__back-button")).not.toBeDisabled());
 
-		fireEvent.click(getByTestId("StepNavigation__back-button"));
+		userEvent.click(getByTestId("StepNavigation__back-button"));
 
 		expect(container).toMatchSnapshot();
 	});
@@ -314,12 +314,12 @@ describe("SendVote", () => {
 		expect(screen.getAllByRole("radio")[1]).toBeChecked();
 
 		await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
-		fireEvent.click(getByTestId("StepNavigation__continue-button"));
+		userEvent.click(getByTestId("StepNavigation__continue-button"));
 
 		// Review Step
 		expect(getByTestId("SendVote__review-step")).toBeInTheDocument();
 
-		fireEvent.click(getByTestId("StepNavigation__continue-button"));
+		userEvent.click(getByTestId("StepNavigation__continue-button"));
 
 		// AuthenticationStep
 		expect(getByTestId("AuthenticationStep")).toBeInTheDocument();
@@ -352,7 +352,7 @@ describe("SendVote", () => {
 		await waitFor(() => expect(getByTestId("StepNavigation__send-button")).not.toBeDisabled());
 
 		await act(async () => {
-			fireEvent.click(getByTestId("StepNavigation__send-button"));
+			userEvent.click(getByTestId("StepNavigation__send-button"));
 		});
 
 		act(() => {
@@ -373,7 +373,7 @@ describe("SendVote", () => {
 		const historySpy = jest.spyOn(history, "push");
 
 		// Go back to wallet
-		fireEvent.click(getByTestId("StepNavigation__back-to-wallet-button"));
+		userEvent.click(getByTestId("StepNavigation__back-to-wallet-button"));
 
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
 
@@ -452,12 +452,12 @@ describe("SendVote", () => {
 		expect(screen.getAllByRole("radio")[1]).toBeChecked();
 
 		await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
-		fireEvent.click(getByTestId("StepNavigation__continue-button"));
+		userEvent.click(getByTestId("StepNavigation__continue-button"));
 
 		// Review Step
 		expect(getByTestId("SendVote__review-step")).toBeInTheDocument();
 
-		fireEvent.click(getByTestId("StepNavigation__continue-button"));
+		userEvent.click(getByTestId("StepNavigation__continue-button"));
 
 		// AuthenticationStep
 		expect(getByTestId("AuthenticationStep")).toBeInTheDocument();
@@ -493,7 +493,7 @@ describe("SendVote", () => {
 		await waitFor(() => expect(getByTestId("StepNavigation__send-button")).not.toBeDisabled());
 
 		await act(async () => {
-			fireEvent.click(getByTestId("StepNavigation__send-button"));
+			userEvent.click(getByTestId("StepNavigation__send-button"));
 		});
 
 		act(() => {
@@ -601,15 +601,19 @@ describe("SendVote", () => {
 		// Fee
 		expect(screen.getAllByRole("radio")[1]).toBeChecked();
 
-		fireEvent.click(within(screen.getByTestId("InputFee")).getAllByRole("radio")[2]);
+		userEvent.click(within(screen.getByTestId("InputFee")).getAllByRole("radio")[2]);
 
 		expect(screen.getAllByRole("radio")[2]).toBeChecked();
 
+		// remove focus from fee button
+		userEvent.click(document.body);
+
 		await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
+
 		if (inputMethod === "with keyboard") {
 			userEvent.keyboard("{enter}");
 		} else {
-			fireEvent.click(getByTestId("StepNavigation__continue-button"));
+			userEvent.click(getByTestId("StepNavigation__continue-button"));
 		}
 
 		// Review Step
@@ -618,7 +622,7 @@ describe("SendVote", () => {
 		if (inputMethod === "with keyboard") {
 			userEvent.keyboard("{enter}");
 		} else {
-			fireEvent.click(getByTestId("StepNavigation__continue-button"));
+			userEvent.click(getByTestId("StepNavigation__continue-button"));
 		}
 
 		// AuthenticationStep
@@ -643,7 +647,7 @@ describe("SendVote", () => {
 		await waitFor(() => expect(getByTestId("StepNavigation__send-button")).not.toBeDisabled());
 
 		await act(async () => {
-			fireEvent.click(getByTestId("StepNavigation__send-button"));
+			userEvent.click(getByTestId("StepNavigation__send-button"));
 		});
 
 		act(() => {
@@ -694,22 +698,22 @@ describe("SendVote", () => {
 
 		await waitFor(() => expect(getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[1].username));
 
-		fireEvent.click(getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
+		userEvent.click(getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
 
 		fireEvent.input(getByTestId("InputCurrency"), { target: { value: "0.02" } });
 
 		await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
-		fireEvent.click(getByTestId("StepNavigation__continue-button"));
+		userEvent.click(getByTestId("StepNavigation__continue-button"));
 
 		// Review Step
 		expect(getByTestId("SendVote__review-step")).toBeInTheDocument();
 
 		// Back to form
-		fireEvent.click(getByTestId("StepNavigation__back-button"));
+		userEvent.click(getByTestId("StepNavigation__back-button"));
 		await waitFor(() => expect(getByTestId("InputCurrency")).toHaveValue("0.02"));
 
 		// Back to review step
-		fireEvent.click(getByTestId("StepNavigation__continue-button"));
+		userEvent.click(getByTestId("StepNavigation__continue-button"));
 
 		expect(getByTestId("SendVote__review-step")).toBeInTheDocument();
 
@@ -754,36 +758,36 @@ describe("SendVote", () => {
 
 		await waitFor(() => expect(getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[1].username));
 
-		fireEvent.click(getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
+		userEvent.click(getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
 
 		fireEvent.input(getByTestId("InputCurrency"), { target: { value: "0.02" } });
 
 		await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
-		fireEvent.click(getByTestId("StepNavigation__continue-button"));
+		userEvent.click(getByTestId("StepNavigation__continue-button"));
 
 		// Review Step
 		expect(getByTestId("SendVote__review-step")).toBeInTheDocument();
 
 		// Back to form
-		fireEvent.click(getByTestId("StepNavigation__back-button"));
+		userEvent.click(getByTestId("StepNavigation__back-button"));
 		await waitFor(() => expect(getByTestId("InputCurrency")).toHaveValue("0.02"));
 
 		// Back to review step
-		fireEvent.click(getByTestId("StepNavigation__continue-button"));
+		userEvent.click(getByTestId("StepNavigation__continue-button"));
 
 		expect(getByTestId("SendVote__review-step")).toBeInTheDocument();
 
-		fireEvent.click(getByTestId("StepNavigation__continue-button"));
+		userEvent.click(getByTestId("StepNavigation__continue-button"));
 
 		// Authentication Step
 		expect(getByTestId("AuthenticationStep")).toBeInTheDocument();
 
-		fireEvent.click(getByTestId("StepNavigation__back-button"));
+		userEvent.click(getByTestId("StepNavigation__back-button"));
 
 		// Back to Review Step
 		expect(getByTestId("SendVote__review-step")).toBeInTheDocument();
 
-		fireEvent.click(getByTestId("StepNavigation__continue-button"));
+		userEvent.click(getByTestId("StepNavigation__continue-button"));
 
 		// Back to AuthenticationStep
 		expect(getByTestId("AuthenticationStep")).toBeInTheDocument();
@@ -830,12 +834,12 @@ describe("SendVote", () => {
 		await waitFor(() => expect(getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[1].username));
 
 		await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
-		fireEvent.click(getByTestId("StepNavigation__continue-button"));
+		userEvent.click(getByTestId("StepNavigation__continue-button"));
 
 		// Review Step
 		expect(getByTestId("SendVote__review-step")).toBeInTheDocument();
 
-		fireEvent.click(getByTestId("StepNavigation__continue-button"));
+		userEvent.click(getByTestId("StepNavigation__continue-button"));
 
 		// AuthenticationStep
 		expect(getByTestId("AuthenticationStep")).toBeInTheDocument();
@@ -858,7 +862,7 @@ describe("SendVote", () => {
 		await waitFor(() => expect(getByTestId("StepNavigation__send-button")).not.toBeDisabled());
 
 		await act(async () => {
-			fireEvent.click(getByTestId("StepNavigation__send-button"));
+			userEvent.click(getByTestId("StepNavigation__send-button"));
 		});
 
 		act(() => {
@@ -910,23 +914,23 @@ describe("SendVote", () => {
 		await waitFor(() => expect(getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[0].username));
 
 		// Fee
-		fireEvent.click(getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
+		userEvent.click(getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
 		fireEvent.change(getByTestId("InputCurrency"), { target: { value: "10" } });
 
 		expect(getByTestId("InputCurrency")).toHaveValue("10");
 
 		await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
-		fireEvent.click(getByTestId("StepNavigation__continue-button"));
+		userEvent.click(getByTestId("StepNavigation__continue-button"));
 
 		// Review Step
 		expect(getByTestId("SendVote__review-step")).toBeInTheDocument();
 
-		fireEvent.click(getByTestId("StepNavigation__continue-button"));
+		userEvent.click(getByTestId("StepNavigation__continue-button"));
 
 		// Fee warning
 		expect(getByTestId("FeeWarning__cancel-button")).toBeInTheDocument();
 
-		fireEvent.click(getByTestId("FeeWarning__cancel-button"));
+		userEvent.click(getByTestId("FeeWarning__cancel-button"));
 
 		await findByTestId("SendVote__form-step");
 	});
@@ -968,23 +972,23 @@ describe("SendVote", () => {
 		await waitFor(() => expect(getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[0].username));
 
 		// Fee
-		fireEvent.click(getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
+		userEvent.click(getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
 		fireEvent.change(getByTestId("InputCurrency"), { target: { value: "10" } });
 
 		expect(getByTestId("InputCurrency")).toHaveValue("10");
 
 		await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
-		fireEvent.click(getByTestId("StepNavigation__continue-button"));
+		userEvent.click(getByTestId("StepNavigation__continue-button"));
 
 		// Review Step
 		expect(getByTestId("SendVote__review-step")).toBeInTheDocument();
 
-		fireEvent.click(getByTestId("StepNavigation__continue-button"));
+		userEvent.click(getByTestId("StepNavigation__continue-button"));
 
 		// Fee warning
 		expect(getByTestId("FeeWarning__continue-button")).toBeInTheDocument();
 
-		fireEvent.click(getByTestId("FeeWarning__continue-button"));
+		userEvent.click(getByTestId("FeeWarning__continue-button"));
 
 		await findByTestId("AuthenticationStep");
 	});
@@ -1030,12 +1034,12 @@ describe("SendVote", () => {
 		await waitFor(() => expect(getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[0].username));
 
 		await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
-		fireEvent.click(getByTestId("StepNavigation__continue-button"));
+		userEvent.click(getByTestId("StepNavigation__continue-button"));
 
 		// Review Step
 		expect(getByTestId("SendVote__review-step")).toBeInTheDocument();
 
-		fireEvent.click(getByTestId("StepNavigation__continue-button"));
+		userEvent.click(getByTestId("StepNavigation__continue-button"));
 
 		// AuthenticationStep
 		expect(getByTestId("AuthenticationStep")).toBeInTheDocument();
@@ -1094,12 +1098,12 @@ describe("SendVote", () => {
 		await waitFor(() => expect(getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[0].username));
 
 		await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
-		fireEvent.click(getByTestId("StepNavigation__continue-button"));
+		userEvent.click(getByTestId("StepNavigation__continue-button"));
 
 		// Review Step
 		await findByTestId("SendVote__review-step");
 
-		fireEvent.click(getByTestId("StepNavigation__continue-button"));
+		userEvent.click(getByTestId("StepNavigation__continue-button"));
 
 		// AuthenticationStep
 		await findByTestId("AuthenticationStep");
@@ -1115,14 +1119,14 @@ describe("SendVote", () => {
 		const historyMock = jest.spyOn(history, "push").mockReturnValue();
 		await waitFor(() => expect(getByTestId("StepNavigation__send-button")).not.toBeDisabled());
 
-		fireEvent.click(getByTestId("StepNavigation__send-button"));
+		userEvent.click(getByTestId("StepNavigation__send-button"));
 		await findByTestId("ErrorStep");
 
 		expect(getByTestId("ErrorStep__errorMessage")).toHaveTextContent("broadcast error");
 		expect(getByTestId("ErrorStep__wallet-button")).toBeInTheDocument();
 		expect(container).toMatchSnapshot();
 
-		fireEvent.click(getByTestId("ErrorStep__wallet-button"));
+		userEvent.click(getByTestId("ErrorStep__wallet-button"));
 
 		const walletDetailPage = `/profiles/${getDefaultProfileId()}/wallets/${getDefaultWalletId()}`;
 		await waitFor(() => expect(historyMock).toHaveBeenCalledWith(walletDetailPage));
@@ -1172,7 +1176,7 @@ describe("SendVote", () => {
 		await waitFor(() => expect(getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[1].username));
 
 		await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
-		fireEvent.click(getByTestId("StepNavigation__continue-button"));
+		userEvent.click(getByTestId("StepNavigation__continue-button"));
 
 		// Review Step
 		expect(getByTestId("SendVote__review-step")).toBeInTheDocument();
@@ -1190,7 +1194,7 @@ describe("SendVote", () => {
 		await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
 
 		await act(async () => {
-			fireEvent.click(getByTestId("StepNavigation__continue-button"));
+			userEvent.click(getByTestId("StepNavigation__continue-button"));
 		});
 
 		act(() => {
@@ -1272,7 +1276,7 @@ describe("SendVote", () => {
 		await waitFor(() => expect(getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[1].username));
 
 		await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
-		fireEvent.click(getByTestId("StepNavigation__continue-button"));
+		userEvent.click(getByTestId("StepNavigation__continue-button"));
 
 		// Review Step
 		expect(getByTestId("SendVote__review-step")).toBeInTheDocument();
@@ -1311,7 +1315,7 @@ describe("SendVote", () => {
 		await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
 
 		await act(async () => {
-			fireEvent.click(getByTestId("StepNavigation__continue-button"));
+			userEvent.click(getByTestId("StepNavigation__continue-button"));
 		});
 
 		act(() => {
@@ -1381,12 +1385,12 @@ describe("SendVote", () => {
 		await waitFor(() => expect(getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[0].username));
 
 		await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
-		fireEvent.click(getByTestId("StepNavigation__continue-button"));
+		userEvent.click(getByTestId("StepNavigation__continue-button"));
 
 		// Review Step
 		expect(getByTestId("SendVote__review-step")).toBeInTheDocument();
 
-		fireEvent.click(getByTestId("StepNavigation__continue-button"));
+		userEvent.click(getByTestId("StepNavigation__continue-button"));
 
 		// AuthenticationStep
 		expect(getByTestId("AuthenticationStep")).toBeInTheDocument();
@@ -1409,7 +1413,7 @@ describe("SendVote", () => {
 		await waitFor(() => expect(getByTestId("StepNavigation__send-button")).not.toBeDisabled());
 
 		await act(async () => {
-			fireEvent.click(getByTestId("StepNavigation__send-button"));
+			userEvent.click(getByTestId("StepNavigation__send-button"));
 		});
 
 		await findByTestId("TransactionSuccessful", undefined, { timeout: 4000 });

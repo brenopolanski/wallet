@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import { waitFor } from "@testing-library/react";
 import { translations } from "app/i18n/common/i18n";
 import React from "react";
@@ -40,7 +41,7 @@ describe("ClipboardIcon", () => {
 		expect(baseElement).toHaveTextContent(translations.CLIPBOARD.TOOLTIP_TEXT);
 		expect(baseElement).not.toHaveTextContent(translations.CLIPBOARD.SUCCESS);
 
-		fireEvent.click(getByTestId("clipboard-icon__wrapper"));
+		userEvent.click(getByTestId("clipboard-icon__wrapper"));
 
 		await waitFor(() => expect(baseElement).not.toHaveTextContent(translations.CLIPBOARD.TOOLTIP_TEXT));
 

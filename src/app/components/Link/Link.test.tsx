@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import { buildTranslations } from "app/i18n/helpers";
 import { toasts } from "app/services";
 import electron from "electron";
@@ -41,7 +42,7 @@ describe("Link", () => {
 
 		const { asFragment, getByTestId } = render(<Link to={externalLink} isExternal />);
 
-		fireEvent.click(getByTestId("Link"));
+		userEvent.click(getByTestId("Link"));
 
 		expect(ipcRendererMock).toHaveBeenCalledWith("open-external", externalLink);
 		expect(asFragment()).toMatchSnapshot();
@@ -54,7 +55,7 @@ describe("Link", () => {
 
 		const { asFragment, getByTestId } = render(<Link to={externalLink} isExternal />);
 
-		fireEvent.click(getByTestId("Link"));
+		userEvent.click(getByTestId("Link"));
 
 		expect(toastSpy).toHaveBeenCalledWith(translations.COMMON.ERRORS.INVALID_URL.replace("{{url}}", "invalid-url"));
 		expect(asFragment()).toMatchSnapshot();
@@ -72,7 +73,7 @@ describe("Link", () => {
 
 		expect(baseElement).toHaveTextContent("Custom Tooltip");
 
-		fireEvent.click(link);
+		userEvent.click(link);
 
 		expect(asFragment()).toMatchSnapshot();
 	});

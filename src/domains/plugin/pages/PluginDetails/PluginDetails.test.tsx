@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import { Contracts } from "@payvo/profiles";
 import { buildTranslations } from "app/i18n/helpers";
 import { toasts } from "app/services";
@@ -54,7 +55,7 @@ describe("PluginDetails", () => {
 
 		await waitFor(() => expect(screen.getByTestId("PluginSpecs__size")).toHaveTextContent("N/A"));
 
-		fireEvent.click(screen.getByText("Fetch Packages"));
+		userEvent.click(screen.getByText("Fetch Packages"));
 
 		await screen.findByText("ARK Delegate Calculator");
 
@@ -89,7 +90,7 @@ describe("PluginDetails", () => {
 			},
 		);
 
-		fireEvent.click(screen.getByText("Fetch Packages"));
+		userEvent.click(screen.getByText("Fetch Packages"));
 
 		await screen.findByText("Test Plugin");
 
@@ -127,7 +128,7 @@ describe("PluginDetails", () => {
 			},
 		);
 
-		fireEvent.click(screen.getByText("Fetch Package"));
+		userEvent.click(screen.getByText("Fetch Package"));
 
 		await screen.findByText("Remote Plugin");
 
@@ -162,13 +163,13 @@ describe("PluginDetails", () => {
 			},
 		);
 
-		fireEvent.click(screen.getByText("Fetch Packages"));
+		userEvent.click(screen.getByText("Fetch Packages"));
 
 		await screen.findByText("Test Plugin");
 
 		expect(container).toMatchSnapshot();
 
-		fireEvent.click(screen.getByTestId("PluginHeader__button--report"));
+		userEvent.click(screen.getByTestId("PluginHeader__button--report"));
 
 		expect(ipcRendererMock).toHaveBeenCalledWith(
 			"open-external",
@@ -207,11 +208,11 @@ describe("PluginDetails", () => {
 			},
 		);
 
-		fireEvent.click(screen.getByText("Fetch Packages"));
+		userEvent.click(screen.getByText("Fetch Packages"));
 
 		await screen.findByText("Test Plugin");
 
-		fireEvent.click(screen.getByTestId("PluginHeader__button--launch"));
+		userEvent.click(screen.getByTestId("PluginHeader__button--launch"));
 
 		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/plugins/view`);
 		expect(history.location.search).toBe(`?pluginId=${plugin.config().id()}`);
@@ -247,12 +248,12 @@ describe("PluginDetails", () => {
 			},
 		);
 
-		fireEvent.click(screen.getByText("Fetch Packages"));
+		userEvent.click(screen.getByText("Fetch Packages"));
 
 		await screen.findByText("Test Plugin");
 
-		fireEvent.click(within(screen.getByTestId("plugin-details__header")).getByTestId("dropdown__toggle"));
-		fireEvent.click(screen.getByText(translations.COMMON.ENABLE));
+		userEvent.click(within(screen.getByTestId("plugin-details__header")).getByTestId("dropdown__toggle"));
+		userEvent.click(screen.getByText(translations.COMMON.ENABLE));
 
 		await waitFor(() => expect(plugin.isEnabled(profile)).toBe(true));
 
@@ -293,12 +294,12 @@ describe("PluginDetails", () => {
 			},
 		);
 
-		fireEvent.click(screen.getByText("Fetch Packages"));
+		userEvent.click(screen.getByText("Fetch Packages"));
 
 		await screen.findByText("Test Plugin");
 
-		fireEvent.click(within(screen.getByTestId("plugin-details__header")).getByTestId("dropdown__toggle"));
-		fireEvent.click(screen.getByText(translations.COMMON.ENABLE));
+		userEvent.click(within(screen.getByTestId("plugin-details__header")).getByTestId("dropdown__toggle"));
+		userEvent.click(screen.getByText(translations.COMMON.ENABLE));
 
 		await waitFor(() => expect(toastSpy).toHaveBeenCalledWith(expect.stringMatching(/Failed to enable/)));
 
@@ -334,12 +335,12 @@ describe("PluginDetails", () => {
 			},
 		);
 
-		fireEvent.click(screen.getByText("Fetch Packages"));
+		userEvent.click(screen.getByText("Fetch Packages"));
 
 		await screen.findByText("Test Plugin");
 
-		fireEvent.click(within(screen.getByTestId("plugin-details__header")).getByTestId("dropdown__toggle"));
-		fireEvent.click(screen.getByText(translations.COMMON.DISABLE));
+		userEvent.click(within(screen.getByTestId("plugin-details__header")).getByTestId("dropdown__toggle"));
+		userEvent.click(screen.getByText(translations.COMMON.DISABLE));
 
 		await waitFor(() => expect(plugin.isEnabled(profile)).toBe(false));
 		pluginManager.plugins().removeById(plugin.config().id(), profile);
@@ -371,15 +372,15 @@ describe("PluginDetails", () => {
 			},
 		);
 
-		fireEvent.click(screen.getByText("Fetch Packages"));
+		userEvent.click(screen.getByText("Fetch Packages"));
 
 		await screen.findByText("Test Plugin");
 
-		fireEvent.click(within(screen.getByTestId("plugin-details__header")).getByTestId("dropdown__toggle"));
-		fireEvent.click(screen.getByText(translations.COMMON.DELETE));
+		userEvent.click(within(screen.getByTestId("plugin-details__header")).getByTestId("dropdown__toggle"));
+		userEvent.click(screen.getByText(translations.COMMON.DELETE));
 
 		const invokeMock = jest.spyOn(ipcRenderer, "invoke").mockResolvedValue([]);
-		fireEvent.click(screen.getByTestId("PluginUninstall__submit-button"));
+		userEvent.click(screen.getByTestId("PluginUninstall__submit-button"));
 
 		await waitFor(() => expect(pluginManager.plugins().findById(plugin.config().id())).toBeUndefined());
 		await waitFor(() => expect(history.location.pathname).toBe(`/profiles/${profile.id()}/plugins`));
@@ -415,15 +416,15 @@ describe("PluginDetails", () => {
 			},
 		);
 
-		fireEvent.click(screen.getByText("Fetch Packages"));
+		userEvent.click(screen.getByText("Fetch Packages"));
 
 		await screen.findByText("Test Plugin");
 
-		fireEvent.click(within(screen.getByTestId("plugin-details__header")).getByTestId("dropdown__toggle"));
-		fireEvent.click(screen.getByText(translations.COMMON.DELETE));
+		userEvent.click(within(screen.getByTestId("plugin-details__header")).getByTestId("dropdown__toggle"));
+		userEvent.click(screen.getByText(translations.COMMON.DELETE));
 
 		const invokeMock = jest.spyOn(ipcRenderer, "invoke").mockResolvedValue([]);
-		fireEvent.click(screen.getByTestId("PluginUninstall__cancel-button"));
+		userEvent.click(screen.getByTestId("PluginUninstall__cancel-button"));
 		await waitFor(() => expect(screen.queryByTestId("PluginUninstallConfirmation")).not.toBeInTheDocument());
 
 		invokeMock.mockRestore();
@@ -468,11 +469,11 @@ describe("PluginDetails", () => {
 			},
 		);
 
-		fireEvent.click(screen.getByText("Fetch"));
+		userEvent.click(screen.getByText("Fetch"));
 
 		await screen.findByText("Remote Plugin");
 
-		fireEvent.click(screen.getByTestId("PluginHeader__button--install"));
+		userEvent.click(screen.getByTestId("PluginHeader__button--install"));
 
 		expect(screen.getByTestId("modal__inner")).toHaveTextContent(
 			translations.PLUGINS.MODAL_INSTALL_PLUGIN.DESCRIPTION,
@@ -480,7 +481,7 @@ describe("PluginDetails", () => {
 
 		const toastSpy = jest.spyOn(toasts, "error");
 
-		fireEvent.click(screen.getByTestId("InstallPlugin__allow-button"));
+		userEvent.click(screen.getByTestId("InstallPlugin__allow-button"));
 
 		await waitFor(() => {
 			expect(toastSpy).toHaveBeenCalledWith(expect.stringMatching(/Failed to download/));
@@ -533,17 +534,17 @@ describe("PluginDetails", () => {
 			},
 		);
 
-		fireEvent.click(screen.getByText("Fetch"));
+		userEvent.click(screen.getByText("Fetch"));
 
 		await screen.findByText("Remote Plugin");
 
-		fireEvent.click(screen.getByTestId("PluginHeader__button--install"));
+		userEvent.click(screen.getByTestId("PluginHeader__button--install"));
 
 		expect(screen.getByTestId("modal__inner")).toHaveTextContent(
 			translations.PLUGINS.MODAL_INSTALL_PLUGIN.DESCRIPTION,
 		);
 
-		fireEvent.click(screen.getByTestId("InstallPlugin__allow-button"));
+		userEvent.click(screen.getByTestId("InstallPlugin__allow-button"));
 
 		await waitFor(() =>
 			expect(ipcRendererSpy).toHaveBeenLastCalledWith("plugin:download", {
@@ -584,12 +585,12 @@ describe("PluginDetails", () => {
 			},
 		);
 
-		fireEvent.click(screen.getByText("Fetch Packages"));
+		userEvent.click(screen.getByText("Fetch Packages"));
 
-		fireEvent.click(within(screen.getByTestId("plugin-details__header")).getByTestId("dropdown__toggle"));
+		userEvent.click(within(screen.getByTestId("plugin-details__header")).getByTestId("dropdown__toggle"));
 
 		await screen.findByText(translations.COMMON.UPDATE);
-		fireEvent.click(screen.getByText(translations.COMMON.UPDATE));
+		userEvent.click(screen.getByText(translations.COMMON.UPDATE));
 
 		await waitFor(() =>
 			expect(ipcRendererSpy).toHaveBeenLastCalledWith("plugin:download", {

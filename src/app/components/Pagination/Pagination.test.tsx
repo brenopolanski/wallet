@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import React from "react";
 import { fireEvent, render, waitFor } from "utils/testing-library";
 
@@ -28,7 +29,7 @@ describe("Pagination", () => {
 			<Pagination totalCount={12} itemsPerPage={4} onSelectPage={handleSelectPage} currentPage={1} />,
 		);
 
-		fireEvent.click(getByText("2"));
+		userEvent.click(getByText("2"));
 
 		expect(handleSelectPage).toHaveBeenCalledWith(2);
 		expect(asFragment()).toMatchSnapshot();
@@ -97,7 +98,7 @@ describe("Pagination", () => {
 			<Pagination totalCount={150} itemsPerPage={1} onSelectPage={handleSelectPage} currentPage={101} />,
 		);
 
-		fireEvent.click(getByTestId("Pagination__first"));
+		userEvent.click(getByTestId("Pagination__first"));
 
 		expect(handleSelectPage).toHaveBeenCalledWith(1);
 		expect(asFragment()).toMatchSnapshot();
@@ -108,7 +109,7 @@ describe("Pagination", () => {
 			<Pagination totalCount={40} itemsPerPage={4} onSelectPage={handleSelectPage} currentPage={9} />,
 		);
 
-		fireEvent.click(getByTestId("Pagination__previous"));
+		userEvent.click(getByTestId("Pagination__previous"));
 
 		expect(handleSelectPage).toHaveBeenCalledWith(8);
 		expect(asFragment()).toMatchSnapshot();
@@ -119,7 +120,7 @@ describe("Pagination", () => {
 			<Pagination totalCount={12} itemsPerPage={4} onSelectPage={handleSelectPage} currentPage={2} />,
 		);
 
-		fireEvent.click(getByTestId("Pagination__next"));
+		userEvent.click(getByTestId("Pagination__next"));
 
 		expect(handleSelectPage).toHaveBeenCalledWith(3);
 		expect(asFragment()).toMatchSnapshot();
@@ -130,7 +131,7 @@ describe("Pagination", () => {
 			<Pagination totalCount={30} itemsPerPage={1} onSelectPage={handleSelectPage} currentPage={1} />,
 		);
 
-		fireEvent.click(getByTestId("Pagination__last"));
+		userEvent.click(getByTestId("Pagination__last"));
 
 		expect(handleSelectPage).toHaveBeenCalledWith(30);
 		expect(asFragment()).toMatchSnapshot();
@@ -141,7 +142,7 @@ describe("Pagination", () => {
 			<Pagination totalCount={30} itemsPerPage={1} onSelectPage={handleSelectPage} currentPage={15} />,
 		);
 
-		fireEvent.click(getAllByTestId("PaginationSearchButton")[0]);
+		userEvent.click(getAllByTestId("PaginationSearchButton")[0]);
 
 		expect(getByTestId("PaginationSearch__input")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
@@ -152,7 +153,7 @@ describe("Pagination", () => {
 			<Pagination totalCount={30} itemsPerPage={1} onSelectPage={handleSelectPage} currentPage={15} />,
 		);
 
-		fireEvent.click(getAllByTestId("PaginationSearchButton")[1]);
+		userEvent.click(getAllByTestId("PaginationSearchButton")[1]);
 
 		expect(getByTestId("PaginationSearch__input")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
@@ -163,7 +164,7 @@ describe("Pagination", () => {
 			<Pagination totalCount={10} itemsPerPage={1} onSelectPage={handleSelectPage} currentPage={1} />,
 		);
 
-		fireEvent.click(getByTestId("PaginationSearchButton"));
+		userEvent.click(getByTestId("PaginationSearchButton"));
 
 		fireEvent.input(getByTestId("PaginationSearch__input"), {
 			target: {
@@ -173,7 +174,7 @@ describe("Pagination", () => {
 
 		await waitFor(() => expect(getByTestId("PaginationSearch__input")).toHaveValue(5));
 
-		fireEvent.click(getByTestId("PaginationSearch__submit"));
+		userEvent.click(getByTestId("PaginationSearch__submit"));
 
 		await waitFor(() => expect(handleSelectPage).toHaveBeenCalledWith(5));
 	});
@@ -183,11 +184,11 @@ describe("Pagination", () => {
 			<Pagination totalCount={10} itemsPerPage={1} onSelectPage={handleSelectPage} currentPage={1} />,
 		);
 
-		fireEvent.click(getByTestId("PaginationSearchButton"));
+		userEvent.click(getByTestId("PaginationSearchButton"));
 
 		expect(getByTestId("PaginationSearch__input")).toBeInTheDocument();
 
-		fireEvent.click(getByTestId("PaginationSearch__cancel"));
+		userEvent.click(getByTestId("PaginationSearch__cancel"));
 		await waitFor(() => expect(handleSelectPage).not.toHaveBeenCalled());
 	});
 });

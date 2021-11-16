@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import { Contracts } from "@payvo/profiles";
 import { ConfigurationProvider } from "app/contexts";
 import { translations as commonTranslations } from "app/i18n/common/i18n";
@@ -62,7 +63,7 @@ describe("WelcomeModal", () => {
 
 		// Intermediate steps
 		[1, 2, 3].forEach(() => {
-			fireEvent.click(getByTestId("WelcomeModal-next"));
+			userEvent.click(getByTestId("WelcomeModal-next"));
 
 			expect(getByTestId("WelcomeModal-next")).toBeDefined();
 			expect(getByTestId("WelcomeModal-prev")).toBeDefined();
@@ -72,7 +73,7 @@ describe("WelcomeModal", () => {
 		});
 
 		// Final step
-		fireEvent.click(getByTestId("WelcomeModal-next"));
+		userEvent.click(getByTestId("WelcomeModal-next"));
 
 		expect(getByTestId("WelcomeModal-finish")).toBeDefined();
 		expect(getByTestId("WelcomeModal-prev")).toBeDefined();
@@ -87,10 +88,10 @@ describe("WelcomeModal", () => {
 		const { getByTestId } = render(<Wrapper />);
 
 		// Got to first step (to show the navigation dots)
-		fireEvent.click(getByTestId("WelcomeModal-next"));
+		userEvent.click(getByTestId("WelcomeModal-next"));
 
 		// Go to final step
-		fireEvent.click(getByTestId("DotNavigation-Step-3"));
+		userEvent.click(getByTestId("DotNavigation-Step-3"));
 
 		expect(getByTestId("WelcomeModal-finish")).toBeDefined();
 		expect(getByTestId("WelcomeModal-prev")).toBeDefined();

@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
+import userEvent from "@testing-library/user-event";
 import React from "react";
 import { fireEvent, render, waitFor } from "utils/testing-library";
 
@@ -40,7 +41,7 @@ describe("PasswordModal", () => {
 		// wait for formState.isValid to be updated
 		await findByTestId("PasswordModal__submit-button");
 
-		fireEvent.click(getByTestId("PasswordModal__submit-button"));
+		userEvent.click(getByTestId("PasswordModal__submit-button"));
 
 		await waitFor(() => {
 			expect(onSuccess).toHaveBeenCalledWith("password");

@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import { Contracts } from "@payvo/profiles";
 import * as useRandomNumberHook from "app/hooks/use-random-number";
 import { createMemoryHistory } from "history";
@@ -152,7 +153,7 @@ describe("Wallet Card", () => {
 
 		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/dashboard`);
 
-		fireEvent.click(screen.getByText("D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"));
+		userEvent.click(screen.getByText("D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"));
 
 		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
 	});
@@ -172,7 +173,7 @@ describe("Wallet Card", () => {
 
 		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/dashboard`);
 
-		fireEvent.click(screen.getByText(wallet.alias()!));
+		userEvent.click(screen.getByText(wallet.alias()!));
 
 		expect(history.location.pathname).not.toBe(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
 
@@ -195,12 +196,12 @@ describe("Wallet Card", () => {
 
 		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/dashboard`);
 
-		fireEvent.click(screen.getByTestId("dropdown__toggle"));
+		userEvent.click(screen.getByTestId("dropdown__toggle"));
 
 		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
 		expect(screen.getByTestId("dropdown__option--0")).toBeInTheDocument();
 
-		fireEvent.click(screen.getByTestId("dropdown__option--0"));
+		userEvent.click(screen.getByTestId("dropdown__option--0"));
 
 		expect(onWalletAction).toHaveBeenCalledWith(actions[0].value, wallet);
 	});

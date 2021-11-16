@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
+import userEvent from "@testing-library/user-event";
 import { Contracts } from "@payvo/profiles";
 import { translations } from "domains/profile/i18n";
 import React from "react";
@@ -53,7 +54,7 @@ describe("SignIn", () => {
 
 		const { getByTestId } = render(<SignIn isOpen={true} profile={profile} onCancel={onCancel} />);
 
-		fireEvent.click(getByTestId("SignIn__cancel-button"));
+		userEvent.click(getByTestId("SignIn__cancel-button"));
 
 		await waitFor(() => {
 			expect(onCancel).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
@@ -70,7 +71,7 @@ describe("SignIn", () => {
 		// wait for formState.isValid to be updated
 		await findByTestId("SignIn__submit-button");
 
-		fireEvent.click(getByTestId("SignIn__submit-button"));
+		userEvent.click(getByTestId("SignIn__submit-button"));
 
 		await waitFor(() => {
 			expect(onSuccess).toHaveBeenCalledWith(getDefaultPassword());
@@ -87,7 +88,7 @@ describe("SignIn", () => {
 		// wait for formState.isValid to be updated
 		await findByTestId("SignIn__submit-button");
 
-		fireEvent.click(getByTestId("SignIn__submit-button"));
+		userEvent.click(getByTestId("SignIn__submit-button"));
 
 		// wait for formState.isValid to be updated
 		await findByTestId("SignIn__submit-button");
@@ -109,7 +110,7 @@ describe("SignIn", () => {
 			// wait for form to be updated
 			await findByTestId("SignIn__submit-button");
 
-			fireEvent.click(getByTestId("SignIn__submit-button"));
+			userEvent.click(getByTestId("SignIn__submit-button"));
 
 			// wait for form to be updated
 			await findByTestId("SignIn__submit-button");

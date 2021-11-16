@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
+import userEvent from "@testing-library/user-event";
 import { Contracts } from "@payvo/profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import { toasts } from "app/services";
@@ -51,7 +52,7 @@ describe("WalletOverviewStep", () => {
 			// @ts-ignore
 			navigator.clipboard = { writeText: writeTextMock };
 
-			fireEvent.click(getByTestId("CreateWallet__copy"));
+			userEvent.click(getByTestId("CreateWallet__copy"));
 
 			await waitFor(() => expect(writeTextMock).toHaveBeenCalledWith(MNEMONICS[0]));
 
@@ -83,7 +84,7 @@ describe("WalletOverviewStep", () => {
 				</FormProvider>,
 			);
 
-			fireEvent.click(getByTestId("CreateWallet__download"));
+			userEvent.click(getByTestId("CreateWallet__download"));
 
 			await waitFor(() => {
 				expect(toastSpy).toHaveBeenCalledWith(
@@ -122,7 +123,7 @@ describe("WalletOverviewStep", () => {
 				</FormProvider>,
 			);
 
-			fireEvent.click(getByTestId("CreateWallet__download"));
+			userEvent.click(getByTestId("CreateWallet__download"));
 
 			expect(toastSpy).not.toHaveBeenCalled();
 
@@ -153,7 +154,7 @@ describe("WalletOverviewStep", () => {
 				</FormProvider>,
 			);
 
-			fireEvent.click(getByTestId("CreateWallet__download"));
+			userEvent.click(getByTestId("CreateWallet__download"));
 
 			await waitFor(() => {
 				expect(toastSpy).toHaveBeenCalledWith(expect.stringMatching(/Could not save/));

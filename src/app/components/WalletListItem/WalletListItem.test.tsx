@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import { Contracts } from "@payvo/profiles";
 import { createMemoryHistory } from "history";
 import React from "react";
@@ -133,7 +134,7 @@ describe("WalletListItem", () => {
 			},
 		);
 
-		fireEvent.click(getByText(wallet.alias()!));
+		userEvent.click(getByText(wallet.alias()!));
 
 		expect(onClick).toHaveBeenCalledWith(wallet.id());
 	});
@@ -157,7 +158,7 @@ describe("WalletListItem", () => {
 			},
 		);
 
-		fireEvent.click(getByText(wallet.alias()!));
+		userEvent.click(getByText(wallet.alias()!));
 
 		expect(onClick).not.toHaveBeenCalled();
 

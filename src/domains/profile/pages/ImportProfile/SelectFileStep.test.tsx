@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import { SelectFileStep } from "domains/profile/pages/ImportProfile/SelectFileStep";
 import React from "react";
 import { fireEvent, render, screen } from "utils/testing-library";
@@ -25,7 +26,7 @@ describe("Import Profile Select File Step", () => {
 
 		const { container } = render(<SelectFileStep fileFormat=".dwe" onFileFormatChange={onFileFormatChange} />);
 
-		fireEvent.click(screen.getByTestId("SelectFileStep__change-file"));
+		userEvent.click(screen.getByTestId("SelectFileStep__change-file"));
 
 		expect(onFileFormatChange).toHaveBeenCalledWith(".json");
 		expect(container).toMatchSnapshot();
@@ -36,7 +37,7 @@ describe("Import Profile Select File Step", () => {
 
 		const { container } = render(<SelectFileStep fileFormat=".dwe" onBack={onBack} />);
 
-		fireEvent.click(screen.getByTestId("SelectFileStep__back"));
+		userEvent.click(screen.getByTestId("SelectFileStep__back"));
 
 		expect(onBack).toHaveBeenCalledWith();
 		expect(container).toMatchSnapshot();
@@ -47,7 +48,7 @@ describe("Import Profile Select File Step", () => {
 
 		const { container } = render(<SelectFileStep fileFormat=".json" onFileFormatChange={onFileFormatChange} />);
 
-		fireEvent.click(screen.getByTestId("SelectFileStep__back"));
+		userEvent.click(screen.getByTestId("SelectFileStep__back"));
 
 		expect(onFileFormatChange).toHaveBeenCalledWith(".dwe");
 		expect(container).toMatchSnapshot();

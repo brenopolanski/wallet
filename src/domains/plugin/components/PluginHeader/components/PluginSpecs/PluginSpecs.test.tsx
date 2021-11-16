@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import { fireEvent } from "@testing-library/react";
 import { ipcRenderer } from "electron";
 import React from "react";
@@ -19,7 +20,7 @@ describe("PluginSpecs", () => {
 			/>,
 		);
 
-		fireEvent.click(getByTestId("PluginSpecs__website"));
+		userEvent.click(getByTestId("PluginSpecs__website"));
 
 		expect(ipcRendererMock).toHaveBeenLastCalledWith("open-external", "https://github.com/arkecosystem/explorer");
 

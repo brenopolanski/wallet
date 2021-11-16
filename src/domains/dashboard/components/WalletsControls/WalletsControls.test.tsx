@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import React from "react";
 import { fireEvent, render } from "utils/testing-library";
 
@@ -32,7 +33,7 @@ describe("WalletsControls", () => {
 		);
 		const toggle = getByTestId("LayoutControls__grid--icon");
 
-		fireEvent.click(toggle);
+		userEvent.click(toggle);
 
 		expect(function_).toHaveBeenCalledWith();
 	});
@@ -42,7 +43,7 @@ describe("WalletsControls", () => {
 		const { getByTestId } = render(<WalletsControls filterProperties={filterProperties as any} />);
 		const toggle = getByTestId("LayoutControls__grid--icon");
 
-		fireEvent.click(toggle);
+		userEvent.click(toggle);
 
 		expect(function_).not.toHaveBeenCalled();
 	});
@@ -57,7 +58,7 @@ describe("WalletsControls", () => {
 		);
 		const toggle = getByTestId("LayoutControls__grid--icon");
 
-		fireEvent.click(toggle);
+		userEvent.click(toggle);
 
 		expect(function_).not.toHaveBeenCalled();
 	});
@@ -72,7 +73,7 @@ describe("WalletsControls", () => {
 		);
 		const toggle = getByTestId("LayoutControls__list--icon");
 
-		fireEvent.click(toggle);
+		userEvent.click(toggle);
 
 		expect(function_).toHaveBeenCalledWith();
 	});
@@ -82,7 +83,7 @@ describe("WalletsControls", () => {
 		const { getByTestId } = render(<WalletsControls filterProperties={filterProperties as any} />);
 		const toggle = getByTestId("LayoutControls__list--icon");
 
-		fireEvent.click(toggle);
+		userEvent.click(toggle);
 
 		expect(function_).not.toHaveBeenCalled();
 	});
@@ -92,7 +93,7 @@ describe("WalletsControls", () => {
 		const { getByTestId } = render(<WalletsControls viewType="list" filterProperties={filterProperties as any} />);
 		const toggle = getByTestId("LayoutControls__list--icon");
 
-		fireEvent.click(toggle);
+		userEvent.click(toggle);
 
 		expect(function_).not.toHaveBeenCalled();
 	});

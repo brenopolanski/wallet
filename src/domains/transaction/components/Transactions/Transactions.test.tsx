@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
+import userEvent from "@testing-library/user-event";
 import { Contracts } from "@payvo/profiles";
 import { translations as commonTranslations } from "app/i18n/common/i18n";
 import { createMemoryHistory } from "history";
@@ -151,11 +152,11 @@ describe("Transactions", () => {
 
 		expect(getByRole("button", { name: /Type/ })).toBeInTheDocument();
 
-		fireEvent.click(getByRole("button", { name: /Type/ }));
+		userEvent.click(getByRole("button", { name: /Type/ }));
 
 		await findByTestId("dropdown__option--core-0");
 
-		fireEvent.click(getByTestId("dropdown__option--core-0"));
+		userEvent.click(getByTestId("dropdown__option--core-0"));
 
 		await waitFor(() => expect(within(getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4));
 	});
@@ -183,11 +184,11 @@ describe("Transactions", () => {
 
 		expect(getByRole("button", { name: /Type/ })).toBeInTheDocument();
 
-		fireEvent.click(getByRole("button", { name: /Type/ }));
+		userEvent.click(getByRole("button", { name: /Type/ }));
 
 		await findByTestId("dropdown__option--core-9");
 
-		fireEvent.click(getByTestId("dropdown__option--core-9"));
+		userEvent.click(getByTestId("dropdown__option--core-9"));
 
 		await findByTestId("EmptyBlock");
 	});
@@ -219,11 +220,11 @@ describe("Transactions", () => {
 
 		expect(getByRole("button", { name: /Type/ })).toBeInTheDocument();
 
-		fireEvent.click(getByRole("button", { name: /Type/ }));
+		userEvent.click(getByRole("button", { name: /Type/ }));
 
 		await findByTestId("dropdown__option--magistrate-0");
 
-		fireEvent.click(getByTestId("dropdown__option--magistrate-0"));
+		userEvent.click(getByTestId("dropdown__option--magistrate-0"));
 
 		await findByTestId("EmptyBlock");
 		transactionsAggregateMock.mockRestore();
@@ -248,13 +249,13 @@ describe("Transactions", () => {
 			{ timeout: 4000 },
 		);
 
-		fireEvent.click(within(getByTestId("TransactionTable")).getAllByTestId("TableRow")[0]);
+		userEvent.click(within(getByTestId("TransactionTable")).getAllByTestId("TableRow")[0]);
 
 		await waitFor(() => {
 			expect(getByTestId("modal__inner")).toBeInTheDocument();
 		});
 
-		fireEvent.click(getByTestId("modal__close-btn"));
+		userEvent.click(getByTestId("modal__close-btn"));
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -280,7 +281,7 @@ describe("Transactions", () => {
 			expect(within(getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4);
 		});
 
-		fireEvent.click(getByTestId("transactions__fetch-more-button"));
+		userEvent.click(getByTestId("transactions__fetch-more-button"));
 
 		expect(getByTestId("transactions__fetch-more-button")).toHaveTextContent(commonTranslations.LOADING);
 
@@ -376,8 +377,8 @@ describe("Transactions", () => {
 
 		await waitFor(() => expect(getAllByTestId("TableRow")).toHaveLength(4), { timeout: 500 });
 
-		fireEvent.click(getByTestId("tabs__tab-button-received"));
-		fireEvent.click(getByTestId("tabs__tab-button-sent"));
+		userEvent.click(getByTestId("tabs__tab-button-received"));
+		userEvent.click(getByTestId("tabs__tab-button-sent"));
 
 		await waitFor(() => expect(getAllByTestId("TableRow")).toHaveLength(1), { timeout: 1000 });
 	});
@@ -395,7 +396,7 @@ describe("Transactions", () => {
 
 		await waitFor(() => expect(within(getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4));
 
-		fireEvent.click(getByTestId("tabs__tab-button-sent"));
+		userEvent.click(getByTestId("tabs__tab-button-sent"));
 
 		await waitFor(() => expect(within(getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(1));
 	});
@@ -413,7 +414,7 @@ describe("Transactions", () => {
 
 		await waitFor(() => expect(within(getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8));
 
-		fireEvent.click(getByTestId("tabs__tab-button-sent"));
+		userEvent.click(getByTestId("tabs__tab-button-sent"));
 
 		await waitFor(() => expect(within(getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8));
 	});

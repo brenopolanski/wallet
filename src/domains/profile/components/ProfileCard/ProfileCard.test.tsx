@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import { Contracts } from "@payvo/profiles";
 import React from "react";
 import { env, fireEvent, getDefaultProfileId, render, screen } from "utils/testing-library";
@@ -53,7 +54,7 @@ describe("ProfileCard", () => {
 		const { getByTestId } = render(<ProfileCard profile={profile} actions={options} />);
 		const toggle = getByTestId("dropdown__toggle");
 
-		fireEvent.click(toggle);
+		userEvent.click(toggle);
 
 		expect(getByTestId("dropdown__content")).toBeInTheDocument();
 	});
@@ -63,7 +64,7 @@ describe("ProfileCard", () => {
 		const { getByTestId } = render(<ProfileCard profile={profile} actions={options} onSelect={onSelect} />);
 		const toggle = getByTestId("dropdown__toggle");
 
-		fireEvent.click(toggle);
+		userEvent.click(toggle);
 
 		expect(getByTestId("dropdown__content")).toBeInTheDocument();
 
@@ -71,7 +72,7 @@ describe("ProfileCard", () => {
 
 		expect(firstOption).toBeInTheDocument();
 
-		fireEvent.click(firstOption);
+		userEvent.click(firstOption);
 
 		expect(onSelect).toHaveBeenCalledWith({ label: "Option 1", value: "1" });
 	});
@@ -80,7 +81,7 @@ describe("ProfileCard", () => {
 		const { getByTestId } = render(<ProfileCard profile={profile} actions={options} />);
 		const toggle = getByTestId("dropdown__toggle");
 
-		fireEvent.click(toggle);
+		userEvent.click(toggle);
 
 		expect(getByTestId("dropdown__content")).toBeInTheDocument();
 
@@ -88,7 +89,7 @@ describe("ProfileCard", () => {
 
 		expect(firstOption).toBeInTheDocument();
 
-		fireEvent.click(firstOption);
+		userEvent.click(firstOption);
 
 		expect(screen.queryAllByRole("listbox")).toHaveLength(0);
 	});

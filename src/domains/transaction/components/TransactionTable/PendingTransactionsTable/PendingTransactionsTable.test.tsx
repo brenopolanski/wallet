@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import { Contracts, DTO } from "@payvo/profiles";
 import { buildTranslations } from "app/i18n/helpers";
 import { PendingTransactions } from "domains/transaction/components/TransactionTable/PendingTransactionsTable";
@@ -303,7 +304,7 @@ describe("Signed Transaction Table", () => {
 			/>,
 		);
 
-		fireEvent.click(getAllByTestId("TableRow")[0]);
+		userEvent.click(getAllByTestId("TableRow")[0]);
 
 		await waitFor(() => expect(onClick).toHaveBeenCalledWith(expect.any(DTO.ExtendedSignedTransactionData)));
 
@@ -502,7 +503,7 @@ describe("Signed Transaction Table", () => {
 			/>,
 		);
 
-		fireEvent.click(screen.getAllByTestId("TransactionRow__sign")[0]);
+		userEvent.click(screen.getAllByTestId("TransactionRow__sign")[0]);
 
 		expect(onClick).toHaveBeenCalledWith(expect.any(DTO.ExtendedSignedTransactionData));
 		expect(asFragment()).toMatchSnapshot();
@@ -584,13 +585,13 @@ describe("Signed Transaction Table", () => {
 			translations.TRANSACTION.TRANSACTION_TYPES.MULTI_SIGNATURE,
 		);
 
-		fireEvent.click(getAllByTestId("TableRemoveButton")[0]);
+		userEvent.click(getAllByTestId("TableRemoveButton")[0]);
 
 		expect(getByTestId("modal__inner")).toBeInTheDocument();
 		expect(getByTestId("ConfirmRemovePendingTransaction__remove")).toBeInTheDocument();
 		expect(getByTestId("ConfirmRemovePendingTransaction__cancel")).toBeInTheDocument();
 
-		fireEvent.click(getByTestId("ConfirmRemovePendingTransaction__remove"));
+		userEvent.click(getByTestId("ConfirmRemovePendingTransaction__remove"));
 
 		await waitFor(() => expect(onRemove).toHaveBeenCalledWith(expect.any(DTO.ExtendedSignedTransactionData)));
 
@@ -621,12 +622,12 @@ describe("Signed Transaction Table", () => {
 			translations.TRANSACTION.TRANSACTION_TYPES.MULTI_SIGNATURE,
 		);
 
-		fireEvent.click(getAllByTestId("TableRemoveButton")[0]);
+		userEvent.click(getAllByTestId("TableRemoveButton")[0]);
 
 		expect(getByTestId("modal__inner")).toBeInTheDocument();
 		expect(getByTestId("ConfirmRemovePendingTransaction__cancel")).toBeInTheDocument();
 
-		fireEvent.click(getByTestId("ConfirmRemovePendingTransaction__cancel"));
+		userEvent.click(getByTestId("ConfirmRemovePendingTransaction__cancel"));
 
 		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 

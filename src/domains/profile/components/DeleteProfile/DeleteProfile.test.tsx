@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import { Contracts } from "@payvo/profiles";
 import React from "react";
 import { env, fireEvent, getDefaultProfileId, render, waitFor } from "utils/testing-library";
@@ -25,7 +26,7 @@ describe("DeleteProfile", () => {
 
 		await findByTestId("modal__inner");
 
-		fireEvent.click(getByTestId("DeleteResource__submit-button"));
+		userEvent.click(getByTestId("DeleteResource__submit-button"));
 
 		await waitFor(() => expect(env.profiles().values()).toHaveLength(1));
 	});

@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import { Contracts } from "@payvo/profiles";
 import { ipcRenderer } from "electron";
 import { PluginController, PluginManager } from "plugins";
@@ -30,7 +31,7 @@ describe("Plugin Uninstall Confirmation", () => {
 			</PluginManagerProvider>,
 		);
 
-		fireEvent.click(screen.getByTestId("PluginUninstall__submit-button"));
+		userEvent.click(screen.getByTestId("PluginUninstall__submit-button"));
 
 		await waitFor(() => expect(invokeMock).toHaveBeenLastCalledWith("plugin:loader-fs.remove", "/plugins/example"));
 
@@ -52,7 +53,7 @@ describe("Plugin Uninstall Confirmation", () => {
 			</PluginManagerProvider>,
 		);
 
-		fireEvent.click(screen.getByTestId("PluginUninstall__cancel-button"));
+		userEvent.click(screen.getByTestId("PluginUninstall__cancel-button"));
 
 		expect(onClose).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});

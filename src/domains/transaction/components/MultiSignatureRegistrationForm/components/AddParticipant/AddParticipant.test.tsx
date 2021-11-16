@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
+import userEvent from "@testing-library/user-event";
 import { Contracts } from "@payvo/profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import { translations as transactionTranslations } from "domains/transaction/i18n";
@@ -55,7 +56,7 @@ describe("Add Participant", () => {
 			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue("D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyiba");
 		});
 
-		fireEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
+		userEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
 
 		await waitFor(() => {
 			expect(screen.getAllByTestId("Input__error")[0]).toBeVisible();
@@ -96,7 +97,7 @@ describe("Add Participant", () => {
 			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue("DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P");
 		});
 
-		fireEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
+		userEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
 
 		await waitFor(() => {
 			expect(screen.getAllByTestId("Input__error")[0]).toBeVisible();
@@ -138,7 +139,7 @@ describe("Add Participant", () => {
 			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(wallet.address());
 		});
 
-		fireEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
+		userEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
 
 		await waitFor(() => {
 			expect(screen.getAllByTestId("Input__error")[0]).toBeVisible();
@@ -179,7 +180,7 @@ describe("Add Participant", () => {
 			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue("DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq20");
 		});
 
-		fireEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
+		userEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
 
 		await waitFor(() => {
 			expect(screen.getAllByTestId("Input__error")[0]).toBeVisible();
@@ -209,7 +210,7 @@ describe("Add Participant", () => {
 			},
 		});
 
-		fireEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
+		userEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
 
 		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(2));
 
@@ -256,7 +257,7 @@ describe("Add Participant", () => {
 			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(walletFixture.data.address),
 		);
 
-		fireEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
+		userEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
 
 		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(2));
 
@@ -314,7 +315,7 @@ describe("Add Participant", () => {
 			},
 		});
 
-		fireEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
+		userEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
 
 		await waitFor(() => expect(screen.queryAllByTestId("recipient-list__recipient-list-item")).toHaveLength(2));
 
@@ -327,7 +328,7 @@ describe("Add Participant", () => {
 			},
 		});
 
-		fireEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
+		userEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
 
 		await waitFor(() => expect(screen.queryAllByTestId("recipient-list__recipient-list-item")).toHaveLength(3));
 
@@ -364,7 +365,7 @@ describe("Add Participant", () => {
 
 		expect(screen.getAllByTestId("recipient-list__remove-recipient")[1]).not.toBeDisabled();
 
-		fireEvent.click(screen.getAllByTestId("recipient-list__remove-recipient")[1]);
+		userEvent.click(screen.getAllByTestId("recipient-list__remove-recipient")[1]);
 
 		expect(onChange).toHaveBeenCalledWith([
 			{
@@ -388,7 +389,7 @@ describe("Add Participant", () => {
 
 		expect(screen.getByTestId("recipient-list__remove-recipient")).toBeDisabled();
 
-		fireEvent.click(screen.getByTestId("recipient-list__remove-recipient"));
+		userEvent.click(screen.getByTestId("recipient-list__remove-recipient"));
 
 		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(1));
 	});

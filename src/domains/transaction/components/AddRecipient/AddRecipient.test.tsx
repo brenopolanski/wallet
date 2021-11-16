@@ -176,7 +176,7 @@ describe("AddRecipient", () => {
 			<AddRecipient profile={profile} wallet={wallet} recipients={[]} onChange={jest.fn()} />,
 		);
 
-		fireEvent.click(getByTestId("AddRecipient__send-all"));
+		userEvent.click(getByTestId("AddRecipient__send-all"));
 
 		await waitFor(() => expect(getByTestId("AddRecipient__amount")).toHaveValue(`${wallet.balance()}`));
 
@@ -201,7 +201,7 @@ describe("AddRecipient", () => {
 			<AddRecipient profile={emptyProfile} wallet={emptyWallet} recipients={[]} onChange={jest.fn()} />,
 		);
 
-		fireEvent.click(getByTestId("AddRecipient__send-all"));
+		userEvent.click(getByTestId("AddRecipient__send-all"));
 
 		await waitFor(() => expect(getByTestId("AddRecipient__amount")).not.toHaveValue());
 
@@ -310,7 +310,7 @@ describe("AddRecipient", () => {
 
 		await waitFor(() => expect(screen.getByTestId("AddRecipient__add-button")).not.toBeDisabled());
 
-		fireEvent.click(screen.getByTestId("AddRecipient__add-button"));
+		userEvent.click(screen.getByTestId("AddRecipient__add-button"));
 
 		await waitFor(() => expect(screen.getAllByTestId("recipient-list__recipient-list-item")).toHaveLength(4));
 	});
@@ -471,12 +471,12 @@ describe("AddRecipient", () => {
 
 		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
-		fireEvent.click(getByTestId("SelectRecipient__select-recipient"));
+		userEvent.click(getByTestId("SelectRecipient__select-recipient"));
 
 		await findByTestId("modal__inner");
 		await waitFor(() => expect(() => getByTestId("Input__error")).toThrow(/Unable to find an element by/));
 
-		fireEvent.click(getByTestId("RecipientListItem__select-button-0"));
+		userEvent.click(getByTestId("RecipientListItem__select-button-0"));
 
 		fireEvent.change(getByTestId("SelectDropdown__input"), {
 			target: {
@@ -552,7 +552,7 @@ describe("AddRecipient", () => {
 
 		expect(removeButton[0]).toBeInTheDocument();
 
-		fireEvent.click(removeButton[0]);
+		userEvent.click(removeButton[0]);
 
 		await waitFor(() => expect(screen.getAllByTestId("recipient-list__recipient-list-item")).toHaveLength(1));
 	});
@@ -620,7 +620,7 @@ describe("AddRecipient", () => {
 			routes: [`/profiles/${profile.id()}`],
 		});
 
-		fireEvent.click(screen.getByText(translations.TRANSACTION.MULTIPLE));
+		userEvent.click(screen.getByText(translations.TRANSACTION.MULTIPLE));
 
 		fireEvent.input(screen.getByTestId("SelectDropdown__input"), {
 			target: {
@@ -634,11 +634,11 @@ describe("AddRecipient", () => {
 			},
 		});
 
-		fireEvent.click(screen.getByTestId("AddRecipient__add-button"));
+		userEvent.click(screen.getByTestId("AddRecipient__add-button"));
 
 		await waitFor(() => expect(screen.getAllByTestId("recipient-list__recipient-list-item")).toHaveLength(1));
 
-		fireEvent.click(screen.getByText(translations.TRANSACTION.SINGLE));
+		userEvent.click(screen.getByText(translations.TRANSACTION.SINGLE));
 
 		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue(values.amount.toString()));
 	});

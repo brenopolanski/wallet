@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
+import userEvent from "@testing-library/user-event";
 import { Contracts } from "@payvo/profiles";
 import React from "react";
 import { env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
@@ -92,7 +93,7 @@ describe("ContactForm", () => {
 			expect(screen.getByTestId("contact-form__add-address-btn")).not.toBeDisabled();
 		});
 
-		fireEvent.click(screen.getByTestId("contact-form__add-address-btn"));
+		userEvent.click(screen.getByTestId("contact-form__add-address-btn"));
 
 		await waitFor(() => {
 			expect(screen.getAllByTestId("contact-form__address-list-item")).toHaveLength(1);
@@ -179,7 +180,7 @@ describe("ContactForm", () => {
 			expect(screen.getByTestId("contact-form__add-address-btn")).not.toBeDisabled();
 		});
 
-		fireEvent.click(screen.getByTestId("contact-form__add-address-btn"));
+		userEvent.click(screen.getByTestId("contact-form__add-address-btn"));
 
 		await waitFor(() => {
 			expect(screen.getAllByTestId("contact-form__address-list-item")).toHaveLength(1);
@@ -220,7 +221,7 @@ describe("ContactForm", () => {
 			expect(screen.getByTestId("contact-form__add-address-btn")).not.toBeDisabled();
 		});
 
-		fireEvent.click(screen.getByTestId("contact-form__add-address-btn"));
+		userEvent.click(screen.getByTestId("contact-form__add-address-btn"));
 
 		await waitFor(() => {
 			expect(screen.getByTestId("Input__error")).toBeVisible();
@@ -265,7 +266,7 @@ describe("ContactForm", () => {
 			expect(screen.getByTestId("contact-form__add-address-btn")).not.toBeDisabled();
 		});
 
-		fireEvent.click(screen.getByTestId("contact-form__add-address-btn"));
+		userEvent.click(screen.getByTestId("contact-form__add-address-btn"));
 
 		await waitFor(() => {
 			expect(screen.getByTestId("Input__error")).toBeVisible();
@@ -308,7 +309,7 @@ describe("ContactForm", () => {
 			expect(screen.getByTestId("contact-form__add-address-btn")).not.toBeDisabled();
 		});
 
-		fireEvent.click(screen.getByTestId("contact-form__add-address-btn"));
+		userEvent.click(screen.getByTestId("contact-form__add-address-btn"));
 
 		await waitFor(() => {
 			expect(screen.getAllByTestId("contact-form__address-list-item")).toHaveLength(1);
@@ -329,7 +330,7 @@ describe("ContactForm", () => {
 
 		expect(screen.getAllByTestId("contact-form__address-list-item")).toHaveLength(contact.addresses().count());
 
-		fireEvent.click(screen.getAllByTestId("contact-form__remove-address-btn")[0]);
+		userEvent.click(screen.getAllByTestId("contact-form__remove-address-btn")[0]);
 
 		await waitFor(() => {
 			expect(() => screen.getByTestId("contact-form__address-list-item")).toThrow(/Unable to find an element by/);
@@ -370,7 +371,7 @@ describe("ContactForm", () => {
 			expect(screen.queryByTestId("contact-form__add-address-btn")).not.toBeDisabled();
 		});
 
-		fireEvent.click(screen.getByTestId("contact-form__add-address-btn"));
+		userEvent.click(screen.getByTestId("contact-form__add-address-btn"));
 
 		await waitFor(() => {
 			expect(screen.getAllByTestId("contact-form__address-list-item")).toHaveLength(1);
@@ -380,7 +381,7 @@ describe("ContactForm", () => {
 			expect(screen.getByTestId("contact-form__save-btn")).not.toBeDisabled();
 		});
 
-		fireEvent.click(screen.getByTestId("contact-form__save-btn"));
+		userEvent.click(screen.getByTestId("contact-form__save-btn"));
 
 		await waitFor(() => {
 			expect(onSave).toHaveBeenCalledWith({

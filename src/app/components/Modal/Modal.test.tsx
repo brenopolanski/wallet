@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
+import userEvent from "@testing-library/user-event";
 import React from "react";
 import { fireEvent, render, screen } from "utils/testing-library";
 
@@ -34,7 +35,7 @@ describe("Modal", () => {
 		expect(screen.getByTestId("modal__overlay")).toBeInTheDocument();
 		expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
 
-		fireEvent.click(screen.getByTestId("modal__overlay"));
+		userEvent.click(screen.getByTestId("modal__overlay"));
 
 		expect(onClose).toHaveBeenCalledWith();
 	});
@@ -50,7 +51,7 @@ describe("Modal", () => {
 		expect(screen.getByTestId("modal__overlay")).toBeInTheDocument();
 		expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
 
-		fireEvent.click(screen.getByTestId("modal__inner"));
+		userEvent.click(screen.getByTestId("modal__inner"));
 
 		expect(onClose).not.toHaveBeenCalled();
 	});

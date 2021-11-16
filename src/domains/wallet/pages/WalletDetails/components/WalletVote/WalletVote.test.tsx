@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import { Contracts } from "@payvo/profiles";
 // @README: This import is fine in tests but should be avoided in production code.
 import { ReadOnlyWallet } from "@payvo/profiles/distribution/read-only-wallet";
@@ -540,7 +541,7 @@ describe("WalletVote", () => {
 		);
 
 		await findByTestId("WalletVote");
-		fireEvent.click(getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE")));
+		userEvent.click(getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE")));
 
 		expect(onButtonClick).toHaveBeenCalledWith("current");
 
@@ -562,7 +563,7 @@ describe("WalletVote", () => {
 		await findByTestId("WalletVote");
 		await waitFor(() => expect(getByTestId("WalletVote")).not.toBeDisabled());
 
-		fireEvent.click(getByText(t("COMMON.VOTE")));
+		userEvent.click(getByText(t("COMMON.VOTE")));
 
 		expect(onButtonClick).toHaveBeenCalledWith();
 

@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import { Contracts, Profile } from "@payvo/profiles";
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import { EnvironmentProvider } from "app/contexts";
@@ -40,7 +41,7 @@ describe("PluginManagerProvider", () => {
 			</EnvironmentProvider>,
 		);
 
-		fireEvent.click(screen.getByRole("button"));
+		userEvent.click(screen.getByRole("button"));
 
 		await waitFor(() => expect(invokeMock).toHaveBeenCalledWith("plugin:loader-fs.search", profile.id()));
 	});
@@ -64,7 +65,7 @@ describe("PluginManagerProvider", () => {
 			</EnvironmentProvider>,
 		);
 
-		fireEvent.click(screen.getByRole("button"));
+		userEvent.click(screen.getByRole("button"));
 
 		expect(ipcRendererMock).toHaveBeenCalledWith(
 			"open-external",
@@ -91,7 +92,7 @@ describe("PluginManagerProvider", () => {
 			</EnvironmentProvider>,
 		);
 
-		fireEvent.click(screen.getByRole("button"));
+		userEvent.click(screen.getByRole("button"));
 
 		await waitFor(() => expect(restoreSpy).toHaveBeenCalledWith(expect.any(Profile)));
 
@@ -115,7 +116,7 @@ describe("PluginManagerProvider", () => {
 			</EnvironmentProvider>,
 		);
 
-		fireEvent.click(screen.getByRole("button"));
+		userEvent.click(screen.getByRole("button"));
 
 		expect(disposeSpy).toHaveBeenCalledWith();
 
@@ -141,7 +142,7 @@ describe("PluginManagerProvider", () => {
 			</EnvironmentProvider>,
 		);
 
-		fireEvent.click(screen.getByRole("button"));
+		userEvent.click(screen.getByRole("button"));
 
 		expect(invokeMock).toHaveBeenLastCalledWith("plugin:loader-fs.remove", "/plugins/example");
 
@@ -177,7 +178,7 @@ describe("PluginManagerProvider", () => {
 			</EnvironmentProvider>,
 		);
 
-		fireEvent.click(screen.getByRole("button"));
+		userEvent.click(screen.getByRole("button"));
 
 		await waitFor(() => expect(screen.getAllByRole("listitem")).toHaveLength(3));
 
@@ -232,11 +233,11 @@ describe("PluginManagerProvider", () => {
 			</EnvironmentProvider>,
 		);
 
-		fireEvent.click(screen.getByText("Fetch"));
+		userEvent.click(screen.getByText("Fetch"));
 
 		await waitFor(() => expect(screen.getAllByRole("listitem")).toHaveLength(2));
 
-		fireEvent.click(screen.getAllByText("Install")[0]);
+		userEvent.click(screen.getAllByText("Install")[0]);
 
 		await waitFor(() =>
 			expect(ipcRendererSpy).toHaveBeenLastCalledWith("plugin:install", {
@@ -285,7 +286,7 @@ describe("PluginManagerProvider", () => {
 			</EnvironmentProvider>,
 		);
 
-		fireEvent.click(screen.getByText("Fetch"));
+		userEvent.click(screen.getByText("Fetch"));
 
 		await waitFor(() =>
 			expect(ipcRendererSpy).toHaveBeenLastCalledWith("plugin:download", {
@@ -336,7 +337,7 @@ describe("PluginManagerProvider", () => {
 			</EnvironmentProvider>,
 		);
 
-		fireEvent.click(screen.getByText("Fetch"));
+		userEvent.click(screen.getByText("Fetch"));
 
 		await waitFor(() =>
 			expect(ipcRendererSpy).toHaveBeenLastCalledWith("plugin:download", {
@@ -390,7 +391,7 @@ describe("PluginManagerProvider", () => {
 			</EnvironmentProvider>,
 		);
 
-		fireEvent.click(screen.getByText("Fetch"));
+		userEvent.click(screen.getByText("Fetch"));
 
 		await waitFor(() =>
 			expect(ipcRendererSpy).toHaveBeenLastCalledWith("plugin:download", {
@@ -433,7 +434,7 @@ describe("PluginManagerProvider", () => {
 			</EnvironmentProvider>,
 		);
 
-		fireEvent.click(screen.getByText("Fetch Package"));
+		userEvent.click(screen.getByText("Fetch Package"));
 
 		await waitFor(() => expect(screen.getAllByRole("listitem")).toHaveLength(1));
 	});
@@ -473,7 +474,7 @@ describe("PluginManagerProvider", () => {
 			</EnvironmentProvider>,
 		);
 
-		fireEvent.click(screen.getByText("Fetch Package"));
+		userEvent.click(screen.getByText("Fetch Package"));
 
 		await waitFor(() => expect(screen.getAllByRole("listitem")).toHaveLength(1));
 	});
@@ -535,7 +536,7 @@ describe("PluginManagerProvider", () => {
 			</EnvironmentProvider>,
 		);
 
-		fireEvent.click(screen.getByText("Click"));
+		userEvent.click(screen.getByText("Click"));
 
 		await screen.findByText("Update Available");
 	});
@@ -576,7 +577,7 @@ describe("PluginManagerProvider", () => {
 			</EnvironmentProvider>,
 		);
 
-		fireEvent.click(screen.getByText("Click"));
+		userEvent.click(screen.getByText("Click"));
 
 		await screen.findByText("Update Available");
 	});
@@ -674,11 +675,11 @@ describe("PluginManagerProvider", () => {
 			</EnvironmentProvider>,
 		);
 
-		fireEvent.click(screen.getByText("Fetch"));
+		userEvent.click(screen.getByText("Fetch"));
 
 		await screen.findByText("Update Available");
 
-		fireEvent.click(screen.getAllByText("Update")[0]);
+		userEvent.click(screen.getAllByText("Update")[0]);
 
 		await waitFor(() =>
 			expect(ipcRendererSpy).toHaveBeenCalledWith("plugin:download", {
@@ -778,11 +779,11 @@ describe("PluginManagerProvider", () => {
 			</EnvironmentProvider>,
 		);
 
-		fireEvent.click(screen.getByText("Fetch"));
+		userEvent.click(screen.getByText("Fetch"));
 
 		await screen.findByText("Update Available");
 
-		fireEvent.click(screen.getAllByText("Update")[0]);
+		userEvent.click(screen.getAllByText("Update")[0]);
 
 		await waitFor(() =>
 			expect(manager.plugins().findById("@dated/delegate-calculator-wallet-plugin")?.config().version()).toBe(
@@ -832,11 +833,11 @@ describe("PluginManagerProvider", () => {
 			</EnvironmentProvider>,
 		);
 
-		fireEvent.click(screen.getByRole("button"));
+		userEvent.click(screen.getByRole("button"));
 
 		await waitFor(() => expect(screen.getAllByRole("listitem")).toHaveLength(3));
 
-		fireEvent.click(screen.getByTestId("QueryByText"));
+		userEvent.click(screen.getByTestId("QueryByText"));
 		await waitFor(() => expect(screen.getAllByRole("listitem")).toHaveLength(1));
 
 		manager.plugins().removeById(plugin.config().id(), profile);
@@ -886,14 +887,14 @@ describe("PluginManagerProvider", () => {
 			</EnvironmentProvider>,
 		);
 
-		fireEvent.click(screen.getByRole("button"));
+		userEvent.click(screen.getByRole("button"));
 
 		await waitFor(() => expect(screen.getAllByRole("listitem")).toHaveLength(3));
 
-		fireEvent.click(screen.getByTestId("QueryByText"));
+		userEvent.click(screen.getByTestId("QueryByText"));
 		await waitFor(() => expect(screen.getAllByRole("listitem")).toHaveLength(1));
 
-		fireEvent.click(screen.getByTestId("ResetFilters"));
+		userEvent.click(screen.getByTestId("ResetFilters"));
 		await waitFor(() => expect(screen.getAllByRole("listitem")).toHaveLength(3));
 
 		manager.plugins().removeById(plugin.config().id(), profile);
@@ -922,14 +923,14 @@ describe("PluginManagerProvider", () => {
 			</EnvironmentProvider>,
 		);
 
-		fireEvent.click(screen.getByText("Fetch Size"));
+		userEvent.click(screen.getByText("Fetch Size"));
 
 		expect(screen.getByText("Size N/A")).toBeInTheDocument();
 
-		fireEvent.click(screen.getByText("Fetch Plugins"));
+		userEvent.click(screen.getByText("Fetch Plugins"));
 		await screen.findByText("Plugins 2");
 
-		fireEvent.click(screen.getByText("Fetch Size"));
+		userEvent.click(screen.getByText("Fetch Size"));
 		await screen.findByText("Size 122515");
 	});
 });

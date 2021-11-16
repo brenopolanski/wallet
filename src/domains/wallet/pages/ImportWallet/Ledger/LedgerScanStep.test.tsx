@@ -111,23 +111,23 @@ describe("LedgerScanStep", () => {
 
 		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(6));
 
-		fireEvent.click(screen.getByTestId("LedgerScanStep__select-all"));
+		userEvent.click(screen.getByTestId("LedgerScanStep__select-all"));
 
 		await waitFor(() => expect(screen.getAllByRole("checkbox", { checked: true })).toHaveLength(2));
 
 		// Unselect All
 
-		fireEvent.click(screen.getByTestId("LedgerScanStep__select-all"));
+		userEvent.click(screen.getByTestId("LedgerScanStep__select-all"));
 
 		await waitFor(() => expect(screen.getAllByRole("checkbox", { checked: false })).toHaveLength(2));
 
 		// Select just first
 
-		fireEvent.click(screen.getAllByRole("checkbox")[1]);
+		userEvent.click(screen.getAllByRole("checkbox")[1]);
 
 		await waitFor(() => expect(formReference.getValues("wallets")).toHaveLength(1));
 
-		fireEvent.click(screen.getAllByRole("checkbox")[1]);
+		userEvent.click(screen.getAllByRole("checkbox")[1]);
 
 		await waitFor(() => expect(formReference.getValues("wallets")).toHaveLength(0));
 	});

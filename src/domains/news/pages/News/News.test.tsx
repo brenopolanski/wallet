@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
+import userEvent from "@testing-library/user-event";
 import { translations as commonTranslations } from "app/i18n/common/i18n";
 import { buildTranslations } from "app/i18n/helpers";
 import { toasts } from "app/services";
@@ -94,7 +95,7 @@ describe("News", () => {
 
 		await waitFor(() => expect(screen.getAllByTestId("NewsCard")).toHaveLength(1));
 
-		fireEvent.click(screen.getByTestId("Pagination__next"));
+		userEvent.click(screen.getByTestId("Pagination__next"));
 
 		await waitFor(() => expect(screen.queryAllByTestId("NewsCard")).toHaveLength(0));
 		await waitFor(() => expect(screen.queryAllByTestId("EmptyResults")).toHaveLength(1));
@@ -112,13 +113,13 @@ describe("News", () => {
 
 		expect(screen.getAllByTestId("NewsCard__content")[0]).toHaveTextContent(page1Fixture.data[0].text);
 
-		fireEvent.click(screen.getByTestId("Pagination__next"));
+		userEvent.click(screen.getByTestId("Pagination__next"));
 
 		await waitFor(() => expect(screen.getAllByTestId("NewsCard")).toHaveLength(1));
 
 		expect(screen.getAllByTestId("NewsCard__content")[0]).toHaveTextContent(page2Fixture.data[0].text);
 
-		fireEvent.click(screen.getByTestId("Pagination__previous"));
+		userEvent.click(screen.getByTestId("Pagination__previous"));
 
 		await waitFor(() => expect(screen.getAllByTestId("NewsCard")).toHaveLength(1));
 	});
@@ -128,7 +129,7 @@ describe("News", () => {
 
 		await waitFor(() => expect(screen.getAllByTestId("NewsCard")).toHaveLength(1));
 
-		fireEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
+		userEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
 
 		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 
@@ -152,11 +153,9 @@ describe("News", () => {
 		expect(screen.getAllByTestId("NewsCard__content")[0]).toHaveTextContent(page1Fixture.data[0].text);
 		expect(screen.getByTestId("NewsCard")).not.toHaveTextContent("Hacking");
 
-		fireEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
+		userEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
 
-		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
-
-		expect(searchInput).toBeInTheDocument();
+		let searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 
 		fireEvent.input(searchInput, {
 			target: { value: "Hacking" },
@@ -165,12 +164,16 @@ describe("News", () => {
 		await waitFor(() => expect(searchInput).toHaveValue("Hacking"));
 
 		for (const category of ["Marketing", "Community", "Emergency"]) {
-			fireEvent.click(screen.getByTestId(`NewsOptions__category-${category}`));
+			userEvent.click(screen.getByTestId(`NewsOptions__category-${category}`));
 		}
 
 		await waitFor(() => expect(screen.getAllByTestId("NewsCard")).toHaveLength(1));
 
 		expect(screen.getAllByTestId("NewsCard__content")[0]).toHaveTextContent(filteredFixture.data[0].text);
+
+		userEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
+
+		searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 
 		fireEvent.change(searchInput, {
 			target: {
@@ -180,7 +183,7 @@ describe("News", () => {
 
 		await waitFor(() => expect(searchInput).not.toHaveValue());
 
-		fireEvent.click(screen.getByText(commonTranslations.SELECT_ALL));
+		userEvent.click(screen.getByText(commonTranslations.SELECT_ALL));
 
 		await waitFor(() => expect(screen.getAllByTestId("NewsCard")).toHaveLength(1));
 
@@ -196,7 +199,7 @@ describe("News", () => {
 
 		await waitFor(() => expect(screen.queryAllByTestId("NewsCard")).toHaveLength(1));
 
-		fireEvent.click(screen.getByTestId("NetworkOption__ark.mainnet"));
+		userEvent.click(screen.getByTestId("NetworkOption__ark.mainnet"));
 
 		await waitFor(() => expect(screen.queryAllByTestId("NewsCard")).toHaveLength(0));
 		await waitFor(() => expect(screen.queryAllByTestId("EmptyResults")).toHaveLength(1));

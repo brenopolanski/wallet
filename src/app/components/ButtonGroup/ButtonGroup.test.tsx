@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import { screen } from "@testing-library/react";
 import React from "react";
 import { fireEvent, render } from "utils/testing-library";
@@ -35,7 +36,7 @@ describe("ButtonGroupOption", () => {
 		expect(buttons[0]).toHaveAttribute("aria-checked", "true");
 		expect(buttons[1]).toHaveAttribute("aria-checked", "false");
 
-		fireEvent.click(buttons[0]);
+		userEvent.click(buttons[0]);
 
 		expect(setSelectedValue).toHaveBeenCalledWith(1);
 
@@ -82,7 +83,7 @@ describe("ButtonGroupOption", () => {
 		expect(buttons[0]).toHaveAttribute("aria-checked", "false");
 		expect(buttons[1]).toHaveAttribute("aria-checked", "false");
 
-		fireEvent.click(buttons[0]);
+		userEvent.click(buttons[0]);
 
 		expect(screen.getByTestId("selectedValue")).toHaveTextContent("1");
 	});

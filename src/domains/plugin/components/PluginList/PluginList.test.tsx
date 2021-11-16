@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import { translations as commonTranslations } from "app/i18n/common/i18n";
 import React from "react";
 import { fireEvent, render, within } from "utils/testing-library";
@@ -117,7 +118,7 @@ describe("PluginList", () => {
 		expect(getByText("ARK Explorer")).toBeInTheDocument();
 		expect(() => getByText("ARK Avatars")).toThrow(/Unable to find an element with/);
 
-		fireEvent.click(getByTestId("Pagination__next"));
+		userEvent.click(getByTestId("Pagination__next"));
 
 		expect(getByText("ARK Avatars")).toBeInTheDocument();
 		expect(() => getByText("ARK Explorer")).toThrow(/Unable to find an element with/);
@@ -130,7 +131,7 @@ describe("PluginList", () => {
 
 		const { asFragment, getAllByTestId } = render(<PluginList plugins={plugins} onInstall={onInstall} />);
 
-		fireEvent.click(within(getAllByTestId("TableRow")[1]).getByTestId("PluginListItem__install"));
+		userEvent.click(within(getAllByTestId("TableRow")[1]).getByTestId("PluginListItem__install"));
 
 		expect(onInstall).toHaveBeenCalledTimes(1);
 		expect(asFragment()).toMatchSnapshot();
@@ -141,8 +142,8 @@ describe("PluginList", () => {
 
 		const { asFragment, getAllByTestId } = render(<PluginList plugins={plugins} onDelete={onDelete} />);
 
-		fireEvent.click(within(getAllByTestId("TableRow")[0]).getByTestId("dropdown__toggle"));
-		fireEvent.click(within(getAllByTestId("TableRow")[0]).getByText(commonTranslations.DELETE));
+		userEvent.click(within(getAllByTestId("TableRow")[0]).getByTestId("dropdown__toggle"));
+		userEvent.click(within(getAllByTestId("TableRow")[0]).getByText(commonTranslations.DELETE));
 
 		expect(onDelete).toHaveBeenCalledTimes(1);
 		expect(asFragment()).toMatchSnapshot();

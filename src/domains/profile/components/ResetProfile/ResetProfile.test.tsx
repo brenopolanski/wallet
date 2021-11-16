@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import { Contracts } from "@payvo/profiles";
 import React from "react";
 import { env, fireEvent, getDefaultProfileId, render, waitFor } from "utils/testing-library";
@@ -31,7 +32,7 @@ describe("ResetProfile", () => {
 
 		await findByTestId("modal__inner");
 
-		fireEvent.click(getByTestId("ResetProfile__submit-button"));
+		userEvent.click(getByTestId("ResetProfile__submit-button"));
 
 		await waitFor(() => expect(profile.settings().get(Contracts.ProfileSetting.Theme)).not.toBe(theme));
 

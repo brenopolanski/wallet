@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import { Contracts } from "@payvo/profiles";
 import { translations } from "domains/contact/i18n";
 import React from "react";
@@ -45,7 +46,7 @@ describe("DeleteContact", () => {
 		);
 		const deleteButton = getByTestId("DeleteResource__submit-button");
 
-		fireEvent.click(deleteButton);
+		userEvent.click(deleteButton);
 
 		await waitFor(() => expect(onDelete).toHaveBeenCalledWith(contact.id()));
 

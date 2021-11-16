@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
+import userEvent from "@testing-library/user-event";
 import { Contracts } from "@payvo/profiles";
 import * as navigation from "app/constants/navigation";
 import * as environmentHooks from "app/hooks/env";
@@ -84,7 +85,7 @@ describe("NavigationBar", () => {
 	it("should handle menu click", () => {
 		const { getByText, history } = render(<NavigationBar />);
 
-		fireEvent.click(getByText("test"));
+		userEvent.click(getByText("test"));
 
 		expect(history.location.pathname).toBe("/test");
 	});
@@ -98,11 +99,11 @@ describe("NavigationBar", () => {
 		const { getByTestId, getByText, history } = render(<NavigationBar />);
 		const toggle = getByTestId("navbar__useractions");
 
-		fireEvent.click(toggle);
+		userEvent.click(toggle);
 
 		expect(getByText("Option 1")).toBeInTheDocument();
 
-		fireEvent.click(getByText("Option 1"));
+		userEvent.click(getByText("Option 1"));
 
 		expect(history.location.pathname).toBe("/test");
 
@@ -115,7 +116,7 @@ describe("NavigationBar", () => {
 
 		const sendButton = getByTestId("navbar__buttons--send");
 
-		fireEvent.click(sendButton);
+		userEvent.click(sendButton);
 
 		expect(history.location.pathname).toBe(`/profiles/${mockProfile.id()}/send-transfer`);
 	});
@@ -131,17 +132,17 @@ describe("NavigationBar", () => {
 			},
 		);
 
-		fireEvent.click(getByTestId("navbar__buttons--receive"));
+		userEvent.click(getByTestId("navbar__buttons--receive"));
 
 		await expect(findByTestId("modal__inner")).resolves.toHaveTextContent("Select Account");
 
-		fireEvent.click(getAllByText("Select")[0]);
+		userEvent.click(getAllByText("Select")[0]);
 
 		await findByTestId("ReceiveFunds__name");
 		await findByTestId("ReceiveFunds__address");
 		await waitFor(() => expect(queryAllByTestId("ReceiveFunds__qrcode")).toHaveLength(1));
 
-		fireEvent.click(getByTestId("modal__close-btn"));
+		userEvent.click(getByTestId("modal__close-btn"));
 
 		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 	});
@@ -159,11 +160,11 @@ describe("NavigationBar", () => {
 
 		const receiveFundsButton = getByTestId("navbar__buttons--receive");
 
-		fireEvent.click(receiveFundsButton);
+		userEvent.click(receiveFundsButton);
 
 		await expect(findByTestId("modal__inner")).resolves.toHaveTextContent("Select Account");
 
-		fireEvent.click(getByTestId("modal__close-btn"));
+		userEvent.click(getByTestId("modal__close-btn"));
 
 		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 	});

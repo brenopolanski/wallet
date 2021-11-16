@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import React from "react";
 import { act, fireEvent, render, screen, waitFor } from "utils/testing-library";
 
@@ -14,7 +15,7 @@ describe("HeaderSearchBar", () => {
 	it("should show the searchbar", () => {
 		render(<HeaderSearchBar />);
 
-		fireEvent.click(screen.getByRole("button"));
+		userEvent.click(screen.getByRole("button"));
 
 		expect(screen.getByTestId("HeaderSearchBar__input")).toBeInTheDocument();
 	});
@@ -22,7 +23,7 @@ describe("HeaderSearchBar", () => {
 	it("should limit search letters", () => {
 		render(<HeaderSearchBar maxLength={32} />);
 
-		fireEvent.click(screen.getByRole("button"));
+		userEvent.click(screen.getByRole("button"));
 
 		const input = screen.getByTestId("Input");
 
@@ -42,7 +43,7 @@ describe("HeaderSearchBar", () => {
 		const onReset = jest.fn();
 		const { rerender } = render(<HeaderSearchBar onReset={onReset} />);
 
-		fireEvent.click(screen.getByRole("button"));
+		userEvent.click(screen.getByRole("button"));
 
 		const input = screen.getByTestId("Input");
 
@@ -64,7 +65,7 @@ describe("HeaderSearchBar", () => {
 	it("should show extra slot", () => {
 		render(<HeaderSearchBar extra={<div data-testid="extra-slot" />} />);
 
-		fireEvent.click(screen.getByRole("button"));
+		userEvent.click(screen.getByRole("button"));
 
 		expect(screen.getByTestId("extra-slot")).toBeInTheDocument();
 	});
@@ -82,7 +83,7 @@ describe("HeaderSearchBar", () => {
 			</div>,
 		);
 
-		fireEvent.click(screen.getByRole("button"));
+		userEvent.click(screen.getByRole("button"));
 
 		const outsideElement = screen.getByTestId("header-search-bar__outside");
 
@@ -99,7 +100,7 @@ describe("HeaderSearchBar", () => {
 		const onReset = jest.fn();
 		render(<HeaderSearchBar onReset={onReset} />);
 
-		fireEvent.click(screen.getByRole("button"));
+		userEvent.click(screen.getByRole("button"));
 
 		const input = screen.getByTestId("Input");
 
@@ -111,7 +112,7 @@ describe("HeaderSearchBar", () => {
 
 		expect(input.value).toBe("test");
 
-		fireEvent.click(screen.getByTestId("header-search-bar__reset"));
+		userEvent.click(screen.getByTestId("header-search-bar__reset"));
 
 		expect(input.value).not.toBe("test");
 		expect(onReset).toHaveBeenCalledWith();
@@ -124,7 +125,7 @@ describe("HeaderSearchBar", () => {
 
 		render(<HeaderSearchBar onSearch={onSearch} />);
 
-		fireEvent.click(screen.getByRole("button"));
+		userEvent.click(screen.getByRole("button"));
 
 		fireEvent.change(screen.getByTestId("Input"), {
 			target: {
@@ -146,7 +147,7 @@ describe("HeaderSearchBar", () => {
 
 		render(<HeaderSearchBar onSearch={onSearch} debounceTimeout={100} />);
 
-		fireEvent.click(screen.getByRole("button"));
+		userEvent.click(screen.getByRole("button"));
 
 		fireEvent.change(screen.getByTestId("Input"), {
 			target: {

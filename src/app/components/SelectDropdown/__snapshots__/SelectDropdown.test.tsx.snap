@@ -656,12 +656,12 @@ exports[`SelectDropdown should render option base with default value when free t
       <div
         aria-expanded="false"
         aria-haspopup="listbox"
-        aria-owns="downshift-314-menu"
+        aria-owns="downshift-316-menu"
         role="combobox"
       >
         <label
-          for="downshift-314-input"
-          id="downshift-314-label"
+          for="downshift-316-input"
+          id="downshift-316-label"
         />
         <div
           class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
@@ -671,12 +671,12 @@ exports[`SelectDropdown should render option base with default value when free t
           >
             <input
               aria-autocomplete="list"
-              aria-controls="downshift-314-menu"
-              aria-labelledby="downshift-314-label"
+              aria-controls="downshift-316-menu"
+              aria-labelledby="downshift-316-label"
               autocomplete="off"
               class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
               data-testid="SelectDropdown__input"
-              id="downshift-314-input"
+              id="downshift-316-input"
               placeholder="Select option"
               value="3"
             />
@@ -705,9 +705,9 @@ exports[`SelectDropdown should render option base with default value when free t
           </div>
         </div>
         <ul
-          aria-labelledby="downshift-314-label"
+          aria-labelledby="downshift-316-label"
           class="styles__SelectOptionsList-sc-120rtxy-0 eqsPyr"
-          id="downshift-314-menu"
+          id="downshift-316-menu"
           role="listbox"
         />
       </div>
@@ -1255,12 +1255,12 @@ exports[`SelectDropdown should render option group with default value when free 
       <div
         aria-expanded="false"
         aria-haspopup="listbox"
-        aria-owns="downshift-317-menu"
+        aria-owns="downshift-319-menu"
         role="combobox"
       >
         <label
-          for="downshift-317-input"
-          id="downshift-317-label"
+          for="downshift-319-input"
+          id="downshift-319-label"
         />
         <div
           class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
@@ -1270,12 +1270,12 @@ exports[`SelectDropdown should render option group with default value when free 
           >
             <input
               aria-autocomplete="list"
-              aria-controls="downshift-317-menu"
-              aria-labelledby="downshift-317-label"
+              aria-controls="downshift-319-menu"
+              aria-labelledby="downshift-319-label"
               autocomplete="off"
               class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
               data-testid="SelectDropdown__input"
-              id="downshift-317-input"
+              id="downshift-319-input"
               placeholder="Select option"
               value="3"
             />
@@ -1304,9 +1304,9 @@ exports[`SelectDropdown should render option group with default value when free 
           </div>
         </div>
         <ul
-          aria-labelledby="downshift-317-label"
+          aria-labelledby="downshift-319-label"
           class="styles__SelectOptionsList-sc-120rtxy-0 eqsPyr"
-          id="downshift-317-menu"
+          id="downshift-319-menu"
           role="listbox"
         />
       </div>

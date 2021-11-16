@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
+import userEvent from "@testing-library/user-event";
 import { Contracts } from "@payvo/profiles";
 import React from "react";
 import { env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
@@ -40,7 +41,7 @@ describe("UpdateContact", () => {
 			expect(screen.getByTestId("contact-form__name-input")).toHaveValue(contact.name());
 		});
 
-		fireEvent.click(screen.getByTestId("contact-form__cancel-btn"));
+		userEvent.click(screen.getByTestId("contact-form__cancel-btn"));
 
 		expect(onCancel).toHaveBeenCalledWith();
 	});
@@ -83,7 +84,7 @@ describe("UpdateContact", () => {
 			expect(screen.getByTestId("contact-form__add-address-btn")).not.toBeDisabled();
 		});
 
-		fireEvent.click(screen.getByTestId("contact-form__add-address-btn"));
+		userEvent.click(screen.getByTestId("contact-form__add-address-btn"));
 
 		fireEvent.input(screen.getByTestId("contact-form__name-input"), { target: { value: contact.name() } });
 
@@ -97,7 +98,7 @@ describe("UpdateContact", () => {
 			expect(screen.getByTestId("contact-form__save-btn")).toBeDisabled();
 		});
 
-		fireEvent.click(screen.getByTestId("contact-form__save-btn"));
+		userEvent.click(screen.getByTestId("contact-form__save-btn"));
 
 		expect(onSave).not.toHaveBeenCalled();
 	});
@@ -113,7 +114,7 @@ describe("UpdateContact", () => {
 			expect(screen.getByTestId("contact-form__name-input")).toHaveValue(contact.name());
 		});
 
-		fireEvent.click(screen.getByTestId("contact-form__delete-btn"));
+		userEvent.click(screen.getByTestId("contact-form__delete-btn"));
 
 		await waitFor(() => {
 			expect(onDelete).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
@@ -139,7 +140,7 @@ describe("UpdateContact", () => {
 			expect(screen.getByTestId("contact-form__name-input")).toHaveValue(contact.name());
 		});
 
-		fireEvent.click(screen.getAllByTestId("contact-form__remove-address-btn")[0]);
+		userEvent.click(screen.getAllByTestId("contact-form__remove-address-btn")[0]);
 
 		await waitFor(() => {
 			expect(() => screen.getByTestId("contact-form__address-list-item")).toThrow(/Unable to find an element by/);
@@ -172,13 +173,13 @@ describe("UpdateContact", () => {
 			expect(screen.getByTestId("contact-form__add-address-btn")).not.toBeDisabled();
 		});
 
-		fireEvent.click(screen.getByTestId("contact-form__add-address-btn"));
+		userEvent.click(screen.getByTestId("contact-form__add-address-btn"));
 
 		await waitFor(() => {
 			expect(screen.getByTestId("contact-form__save-btn")).not.toBeDisabled();
 		});
 
-		fireEvent.click(screen.getByTestId("contact-form__save-btn"));
+		userEvent.click(screen.getByTestId("contact-form__save-btn"));
 
 		await waitFor(() => {
 			expect(onSave).toHaveBeenCalledWith(contact.id());

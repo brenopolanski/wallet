@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import { Contracts } from "@payvo/profiles";
 import { ReadOnlyWallet } from "@payvo/profiles/distribution/read-only-wallet";
 import { fireEvent } from "@testing-library/react";
@@ -157,7 +158,7 @@ describe("DelegateVoteAmount", () => {
 
 		expect(amountField).toHaveClass("text-right");
 
-		fireEvent.click(screen.getByTestId("DelegateVoteAmount__ticker"));
+		userEvent.click(screen.getByTestId("DelegateVoteAmount__ticker"));
 
 		await waitFor(() => expect(amountField).toHaveClass("text-left"), { timeout: 4000 });
 	});
@@ -184,7 +185,7 @@ describe("DelegateVoteAmount", () => {
 
 		expect(amountField).toHaveClass("text-right");
 
-		fireEvent.click(screen.getByTestId("DelegateVoteAmount__ticker"));
+		userEvent.click(screen.getByTestId("DelegateVoteAmount__ticker"));
 
 		await waitFor(() => expect(amountField).not.toHaveClass("text-left"), { timeout: 4000 });
 	});

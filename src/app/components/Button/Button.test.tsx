@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import React from "react";
 import { ButtonVariant } from "types";
 import { fireEvent, render } from "utils/testing-library";
@@ -53,7 +54,7 @@ describe("Button", () => {
 		const onClick = jest.fn();
 		const { getByText } = render(<Button onClick={onClick}>Click Me</Button>);
 
-		fireEvent.click(getByText("Click Me"));
+		userEvent.click(getByText("Click Me"));
 
 		expect(onClick).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});

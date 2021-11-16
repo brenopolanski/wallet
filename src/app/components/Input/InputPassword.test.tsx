@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import { FormFieldProvider } from "app/components/Form/useFormField";
 import React from "react";
 import { fireEvent, render } from "utils/testing-library";
@@ -17,11 +18,11 @@ describe("InputPassword", () => {
 		const { getByTestId } = render(<InputPassword />);
 		const input = getByTestId("InputPassword");
 		const toggle = getByTestId("InputPassword__toggle");
-		fireEvent.click(toggle);
+		userEvent.click(toggle);
 
 		expect(input).toHaveAttribute("type", "text");
 
-		fireEvent.click(toggle);
+		userEvent.click(toggle);
 
 		expect(input).toHaveAttribute("type", "password");
 	});

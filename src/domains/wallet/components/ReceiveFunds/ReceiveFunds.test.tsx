@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
+import userEvent from "@testing-library/user-event";
 import { Networks } from "@payvo/sdk";
 import React from "react";
 import { env, fireEvent, getDefaultProfileId, getDefaultWalletId, render, waitFor } from "utils/testing-library";
@@ -58,7 +59,7 @@ describe("ReceiveFunds", () => {
 		await waitFor(() => expect(queryAllByTestId("ReceiveFunds__address")).toHaveLength(1));
 		await waitFor(() => expect(queryAllByTestId("ReceiveFunds__qrcode")).toHaveLength(1));
 
-		fireEvent.click(getByTestId("modal__close-btn"));
+		userEvent.click(getByTestId("modal__close-btn"));
 
 		expect(onClose).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
@@ -72,7 +73,7 @@ describe("ReceiveFunds", () => {
 		await waitFor(() => expect(queryAllByTestId("ReceiveFunds__address")).toHaveLength(1));
 		await waitFor(() => expect(queryAllByTestId("ReceiveFunds__qrcode")).toHaveLength(1));
 
-		fireEvent.click(getByTestId("ReceiveFunds__toggle"));
+		userEvent.click(getByTestId("ReceiveFunds__toggle"));
 
 		await waitFor(() => expect(getByTestId("ReceiveFundsForm__amount")).not.toHaveValue());
 		await waitFor(() => expect(getByTestId("ReceiveFundsForm__memo")).not.toHaveValue());

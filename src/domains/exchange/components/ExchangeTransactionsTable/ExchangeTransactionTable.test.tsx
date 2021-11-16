@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import { Contracts } from "@payvo/profiles";
 import { ExchangeProvider } from "domains/exchange/contexts/Exchange";
 import React from "react";
@@ -86,7 +87,7 @@ describe("ExchangeTransactionsTable", () => {
 
 		expect(screen.getAllByTestId("TableRow")).toHaveLength(profile.exchangeTransactions().count());
 
-		fireEvent.click(within(screen.getAllByTestId("TableRow")[0]).getAllByRole("button")[0]);
+		userEvent.click(within(screen.getAllByTestId("TableRow")[0]).getAllByRole("button")[0]);
 
 		// reverse() is called because display items are sorted by creation date desc.
 		const exchangeTransaction = profile.exchangeTransactions().values().reverse()[0];
@@ -109,7 +110,7 @@ describe("ExchangeTransactionsTable", () => {
 
 		expect(screen.getAllByTestId("TableRow")).toHaveLength(profile.exchangeTransactions().count());
 
-		fireEvent.click(within(screen.getAllByTestId("TableRow")[0]).getAllByRole("button")[1]);
+		userEvent.click(within(screen.getAllByTestId("TableRow")[0]).getAllByRole("button")[1]);
 
 		expect(onRemove).toHaveBeenCalledWith(profile.exchangeTransactions().values()[0]);
 	});

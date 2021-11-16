@@ -23,6 +23,13 @@ interface NewsFilters {
 	searchQuery?: string;
 }
 
+interface NewsQuery {
+	categories?: string[];
+	coins: string[];
+	page?: number;
+	query?: string;
+}
+
 interface Properties {
 	itemsPerPage?: number;
 }
@@ -66,12 +73,18 @@ export const News = ({ itemsPerPage = 15 }: Properties) => {
 			setNews([]);
 
 			if (categories.length > 0 && coins.length > 0) {
-				const query = {
+				const query: NewsQuery = {
 					coins,
 					page: currentPage,
-					...(categories.length && categories.length !== AVAILABLE_CATEGORIES.length && { categories }),
-					...(searchQuery && { query: searchQuery }),
 				};
+
+				if (categories.length && categories.length !== AVAILABLE_CATEGORIES.length) {
+					query.categories = categories;
+				}
+
+				if (searchQuery) {
+					query.query = searchQuery;
+				}
 
 				try {
 					const { data, meta }: FTXResponse = await ftx.findByCoin(query);

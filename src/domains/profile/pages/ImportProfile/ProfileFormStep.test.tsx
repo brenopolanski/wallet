@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
+import userEvent from "@testing-library/user-event";
 import { Contracts } from "@payvo/profiles";
 import { EnvironmentProvider } from "app/contexts";
 import { ImportProfileForm } from "domains/profile/pages/ImportProfile/ProfileFormStep";
@@ -114,7 +115,7 @@ describe("Import Profile - Profile Form Step", () => {
 		await waitFor(() => expect(getByTestId("CreateProfile__submit-button")).toHaveAttribute("disabled"));
 
 		// Upload avatar image
-		fireEvent.click(getByTestId("SelectProfileImage__upload-button"));
+		userEvent.click(getByTestId("SelectProfileImage__upload-button"));
 
 		expect(showOpenDialogMock).toHaveBeenCalledWith(showOpenDialogParameters);
 
@@ -122,21 +123,21 @@ describe("Import Profile - Profile Form Step", () => {
 
 		fireEvent.focus(getByTestId("SelectDropdown__input"));
 
-		fireEvent.click(getByTestId("SelectDropdown__option--0"));
+		userEvent.click(getByTestId("SelectDropdown__option--0"));
 
 		await waitFor(() => {
 			expect(getByTestId("CreateProfile__submit-button")).toBeEnabled();
 		});
 
-		fireEvent.click(getByTestId("CreateProfile__submit-button"));
+		userEvent.click(getByTestId("CreateProfile__submit-button"));
 
 		expect(emptyProfile.usesPassword()).toBe(false);
 
 		fireEvent.input(getAllByTestId("Input")[0], { target: { value: "test profile 2" } });
 
-		fireEvent.click(screen.getByRole("checkbox"));
+		userEvent.click(screen.getByRole("checkbox"));
 
-		fireEvent.click(getByTestId("CreateProfile__submit-button"));
+		userEvent.click(getByTestId("CreateProfile__submit-button"));
 
 		const newProfile = env.profiles().findById(emptyProfile.id());
 
@@ -164,7 +165,7 @@ describe("Import Profile - Profile Form Step", () => {
 
 		const selectDropdown = getByTestId("SelectDropdown__input");
 		fireEvent.focus(selectDropdown);
-		fireEvent.click(getByTestId("SelectDropdown__option--0"));
+		userEvent.click(getByTestId("SelectDropdown__option--0"));
 
 		fireEvent.change(getAllByTestId("InputPassword")[0], { target: { value: "753lk6JD!&" } });
 		fireEvent.change(getAllByTestId("InputPassword")[1], { target: { value: "753lk6JD!" } });
@@ -246,7 +247,7 @@ describe("Import Profile - Profile Form Step", () => {
 		expect(() => getByTestId("SelectProfileImage__avatar")).toThrow(/^Unable to find an element by/);
 
 		// Upload avatar image
-		fireEvent.click(getByTestId("SelectProfileImage__upload-button"));
+		userEvent.click(getByTestId("SelectProfileImage__upload-button"));
 
 		expect(() => getByTestId("SelectProfileImage__avatar")).toBeTruthy();
 

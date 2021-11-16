@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import { translations } from "app/i18n/common/i18n";
 import React from "react";
 import { fireEvent, render, screen } from "utils/testing-library";
@@ -28,7 +29,7 @@ describe("Confirmation Modal", () => {
 
 		render(<ConfirmationModal onCancel={onCancel} isOpen />);
 
-		fireEvent.click(screen.getByText(translations.NO));
+		userEvent.click(screen.getByText(translations.NO));
 
 		expect(onCancel).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
@@ -38,7 +39,7 @@ describe("Confirmation Modal", () => {
 
 		render(<ConfirmationModal onConfirm={onConfirm} isOpen />);
 
-		fireEvent.click(screen.getByText(translations.YES));
+		userEvent.click(screen.getByText(translations.YES));
 
 		expect(onConfirm).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});

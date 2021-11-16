@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import { Contracts, DTO } from "@payvo/profiles";
 import nock from "nock";
 import React from "react";
@@ -70,7 +71,7 @@ describe("NotificationsTransactionTable", () => {
 
 		expect(getAllByTestId("TableRow")).toHaveLength(transactions.length);
 
-		fireEvent.click(getAllByTestId("TableRow")[0]);
+		userEvent.click(getAllByTestId("TableRow")[0]);
 
 		await waitFor(() => expect(onClick).toHaveBeenCalledWith(expect.any(DTO.ExtendedConfirmedTransactionData)));
 	});

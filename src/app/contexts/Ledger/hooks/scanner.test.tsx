@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import { Contracts } from "@payvo/profiles";
 import { LedgerProvider, useLedgerContext } from "app/contexts/Ledger";
 import nock from "nock";
@@ -116,7 +117,7 @@ describe("Use Ledger Scanner", () => {
 			</LedgerProvider>,
 		);
 
-		fireEvent.click(screen.getByRole("button"));
+		userEvent.click(screen.getByRole("button"));
 
 		await waitFor(() => expect(screen.queryAllByRole("listitem")).toHaveLength(1));
 		await waitFor(() => expect(screen.queryAllByText("Balance: Loading")).toHaveLength(0));
@@ -162,12 +163,12 @@ describe("Use Ledger Scanner", () => {
 			</LedgerProvider>,
 		);
 
-		fireEvent.click(getByTestId("scan"));
+		userEvent.click(getByTestId("scan"));
 
 		await waitFor(() => expect(screen.queryAllByRole("listitem")).toHaveLength(1));
 		await waitFor(() => expect(screen.queryAllByText("Balance: Loading")).toHaveLength(0));
 
-		fireEvent.click(getByTestId("input--0"));
+		userEvent.click(getByTestId("input--0"));
 
 		await waitFor(() => expect(screen.queryAllByText("Selected: false")).toHaveLength(1));
 
@@ -209,11 +210,11 @@ describe("Use Ledger Scanner", () => {
 			</LedgerProvider>,
 		);
 
-		fireEvent.click(screen.getByText("Scan"));
+		userEvent.click(screen.getByText("Scan"));
 
 		await waitFor(() => expect(screen.queryAllByText("Selected: true")).toHaveLength(1));
 
-		fireEvent.click(screen.getByText("Toggle All"));
+		userEvent.click(screen.getByText("Toggle All"));
 
 		await waitFor(() => expect(screen.queryAllByText("Selected: false")).toHaveLength(1));
 
@@ -252,7 +253,7 @@ describe("Use Ledger Scanner", () => {
 			</LedgerProvider>,
 		);
 
-		fireEvent.click(screen.getByText("Scan"));
+		userEvent.click(screen.getByText("Scan"));
 
 		await screen.findByText("Retry");
 
@@ -288,8 +289,8 @@ describe("Use Ledger Scanner", () => {
 			</LedgerProvider>,
 		);
 
-		fireEvent.click(screen.getByTestId("scan"));
-		fireEvent.click(screen.getByTestId("abort"));
+		userEvent.click(screen.getByTestId("scan"));
+		userEvent.click(screen.getByTestId("abort"));
 
 		await screen.findByText("Idle");
 		await new Promise((resolve) => setTimeout(resolve, 3000));

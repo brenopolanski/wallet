@@ -159,7 +159,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 			},
 		);
 
-		fireEvent.click(getByTestId("modal__close-btn"));
+		userEvent.click(getByTestId("modal__close-btn"));
 
 		expect(onClose).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
@@ -194,7 +194,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 
 		await waitFor(() => expect(queryAllByTestId("TableRow")).toHaveLength(2));
 
-		fireEvent.click(within(getByTestId("HeaderSearchBar")).getByRole("button"));
+		userEvent.click(within(getByTestId("HeaderSearchBar")).getByRole("button"));
 
 		await findByTestId("HeaderSearchBar__input");
 		const searchInput = within(getByTestId("HeaderSearchBar__input")).getByTestId("Input");
@@ -240,7 +240,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 
 		await waitFor(() => expect(queryAllByTestId("TableRow")).toHaveLength(2));
 
-		fireEvent.click(within(getByTestId("HeaderSearchBar")).getByRole("button"));
+		userEvent.click(within(getByTestId("HeaderSearchBar")).getByRole("button"));
 
 		await findByTestId("HeaderSearchBar__input");
 		const searchInput = within(getByTestId("HeaderSearchBar__input")).getByTestId("Input");
@@ -287,7 +287,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 
 		await waitFor(() => expect(queryAllByTestId("TableRow")).toHaveLength(2));
 
-		fireEvent.click(within(getByTestId("HeaderSearchBar")).getByRole("button"));
+		userEvent.click(within(getByTestId("HeaderSearchBar")).getByRole("button"));
 
 		await findByTestId("HeaderSearchBar__input");
 		const searchInput = within(getByTestId("HeaderSearchBar__input")).getByTestId("Input");
@@ -303,7 +303,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 		await waitFor(() => expect(queryAllByTestId("TableRow")).toHaveLength(1));
 
 		// Reset search
-		fireEvent.click(getByTestId("header-search-bar__reset"));
+		userEvent.click(getByTestId("header-search-bar__reset"));
 
 		await waitFor(() => expect(searchInput).not.toHaveValue());
 		await waitFor(() => expect(queryAllByTestId("TableRow")).toHaveLength(2));
@@ -341,7 +341,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 
 		await waitFor(() => expect(queryAllByTestId("TableRow")).toHaveLength(2));
 
-		fireEvent.click(within(getByTestId("HeaderSearchBar")).getByRole("button"));
+		userEvent.click(within(getByTestId("HeaderSearchBar")).getByRole("button"));
 
 		await findByTestId("HeaderSearchBar__input");
 		const searchInput = within(getByTestId("HeaderSearchBar__input")).getByTestId("Input");

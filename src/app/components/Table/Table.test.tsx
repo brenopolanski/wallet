@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import React from "react";
 import { Column } from "react-table";
 import { fireEvent, render, within } from "utils/testing-library";
@@ -58,13 +59,13 @@ describe("Table", () => {
 
 		const th = getAllByRole("columnheader")[0];
 
-		fireEvent.click(th);
+		userEvent.click(th);
 
 		expect(th).toHaveTextContent("chevron-down-small.svg");
 
 		expect(within(th).getByRole("img")).toHaveClass("rotate-180");
 
-		fireEvent.click(th);
+		userEvent.click(th);
 
 		expect(within(th).getByRole("img")).not.toHaveClass("rotate-180");
 	});

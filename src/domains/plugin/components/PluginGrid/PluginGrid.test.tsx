@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import * as useRandomNumberHook from "app/hooks/use-random-number";
 import { translations as commonTranslations } from "app/i18n/common/i18n";
 import { translations as pluginTranslations } from "domains/plugin/i18n";
@@ -163,7 +164,7 @@ describe("PluginGrid", () => {
 
 		await expect(findByText(plugins[1].title)).rejects.toThrow(/Unable to find an element/);
 
-		fireEvent.click(getByTestId("Pagination__next"));
+		userEvent.click(getByTestId("Pagination__next"));
 
 		await findByText(plugins[1].title);
 
@@ -177,7 +178,7 @@ describe("PluginGrid", () => {
 
 		const { findByText } = render(<PluginGrid plugins={plugins} onSelect={onSelect} />);
 
-		fireEvent.click(await findByText(plugins[0].title));
+		userEvent.click(await findByText(plugins[0].title));
 
 		expect(onSelect).toHaveBeenCalledTimes(1);
 	});
@@ -202,8 +203,8 @@ describe("PluginGrid", () => {
 			/>,
 		);
 
-		fireEvent.click(screen.queryAllByTestId("dropdown__toggle")[0]);
-		fireEvent.click(screen.getByText(commonTranslations.UPDATE));
+		userEvent.click(screen.queryAllByTestId("dropdown__toggle")[0]);
+		userEvent.click(screen.getByText(commonTranslations.UPDATE));
 
 		expect(onUpdate).toHaveBeenCalledTimes(1);
 	});
@@ -228,7 +229,7 @@ describe("PluginGrid", () => {
 			/>,
 		);
 
-		fireEvent.click(screen.getByTestId("PluginCard__update-available"));
+		userEvent.click(screen.getByTestId("PluginCard__update-available"));
 
 		expect(onUpdate).toHaveBeenCalledTimes(1);
 
@@ -240,8 +241,8 @@ describe("PluginGrid", () => {
 
 		render(<PluginGrid plugins={plugins} onSelect={jest.fn()} onDelete={onDelete} />);
 
-		fireEvent.click(screen.queryAllByTestId("dropdown__toggle")[1]);
-		fireEvent.click(screen.getByText(commonTranslations.DELETE));
+		userEvent.click(screen.queryAllByTestId("dropdown__toggle")[1]);
+		userEvent.click(screen.getByText(commonTranslations.DELETE));
 
 		expect(onDelete).toHaveBeenCalledTimes(1);
 	});
@@ -251,8 +252,8 @@ describe("PluginGrid", () => {
 
 		render(<PluginGrid plugins={plugins} onSelect={jest.fn()} onEnable={onEnable} />);
 
-		fireEvent.click(screen.queryAllByTestId("dropdown__toggle")[1]);
-		fireEvent.click(screen.getByText(commonTranslations.ENABLE));
+		userEvent.click(screen.queryAllByTestId("dropdown__toggle")[1]);
+		userEvent.click(screen.getByText(commonTranslations.ENABLE));
 
 		expect(onEnable).toHaveBeenCalledTimes(1);
 	});
@@ -262,8 +263,8 @@ describe("PluginGrid", () => {
 
 		render(<PluginGrid plugins={plugins} onSelect={jest.fn()} onDisable={onDisable} />);
 
-		fireEvent.click(screen.queryAllByTestId("dropdown__toggle")[2]);
-		fireEvent.click(screen.getByText(commonTranslations.DISABLE));
+		userEvent.click(screen.queryAllByTestId("dropdown__toggle")[2]);
+		userEvent.click(screen.getByText(commonTranslations.DISABLE));
 
 		expect(onDisable).toHaveBeenCalledTimes(1);
 	});
@@ -273,8 +274,8 @@ describe("PluginGrid", () => {
 
 		render(<PluginGrid plugins={plugins} onSelect={jest.fn()} onInstall={onInstall} />);
 
-		fireEvent.click(screen.queryAllByTestId("dropdown__toggle")[0]);
-		fireEvent.click(screen.getByText(commonTranslations.INSTALL));
+		userEvent.click(screen.queryAllByTestId("dropdown__toggle")[0]);
+		userEvent.click(screen.getByText(commonTranslations.INSTALL));
 
 		expect(onInstall).toHaveBeenCalledTimes(1);
 	});
@@ -290,8 +291,8 @@ describe("PluginGrid", () => {
 			/>,
 		);
 
-		fireEvent.click(screen.queryAllByTestId("dropdown__toggle")[0]);
-		fireEvent.click(screen.getByText(commonTranslations.LAUNCH));
+		userEvent.click(screen.queryAllByTestId("dropdown__toggle")[0]);
+		userEvent.click(screen.getByText(commonTranslations.LAUNCH));
 
 		expect(onLaunch).toHaveBeenCalledTimes(1);
 	});

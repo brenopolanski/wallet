@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
+import userEvent from "@testing-library/user-event";
 import { buildTranslations } from "app/i18n/helpers";
 import { toasts } from "app/services";
 import nock from "nock";
@@ -57,7 +58,7 @@ describe("PluginManualInstallModal", () => {
 			expect(screen.getByTestId("PluginManualInstallModal__submit-button")).not.toBeDisabled();
 		});
 
-		fireEvent.click(screen.getByTestId("PluginManualInstallModal__submit-button"));
+		userEvent.click(screen.getByTestId("PluginManualInstallModal__submit-button"));
 
 		await waitFor(() =>
 			expect(toastSpy).toHaveBeenCalledWith(translations.PLUGINS.MODAL_MANUAL_INSTALL_PLUGIN.ERROR),
@@ -67,7 +68,7 @@ describe("PluginManualInstallModal", () => {
 			target: { value: "https://github.com/arkecosystem/test-plugin" },
 		});
 
-		fireEvent.click(screen.getByTestId("PluginManualInstallModal__submit-button"));
+		userEvent.click(screen.getByTestId("PluginManualInstallModal__submit-button"));
 
 		await waitFor(() =>
 			expect(onSuccess).toHaveBeenCalledWith({

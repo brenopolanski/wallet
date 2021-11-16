@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import { Networks } from "@payvo/sdk";
 import React from "react";
 import { env, fireEvent, render, waitFor, within } from "utils/testing-library";
@@ -29,7 +30,7 @@ describe("NetworkOptions", () => {
 	it("should trigger onClick", () => {
 		const onClick = jest.fn();
 		const { getByTestId } = render(<NetworkOptions networks={networkOptions} onClick={onClick} />);
-		fireEvent.click(getByTestId(`NetworkOption__${networkOptions[0].network.id()}`));
+		userEvent.click(getByTestId(`NetworkOption__${networkOptions[0].network.id()}`));
 
 		expect(onClick).toHaveBeenCalledWith(
 			{
@@ -63,7 +64,7 @@ describe("ToggleAllOption", () => {
 	it("should handle onClick", () => {
 		const onClick = jest.fn();
 		const { getByTestId } = render(<ToggleAllOption isSelected onClick={onClick} />);
-		fireEvent.click(getByTestId("network__viewall"));
+		userEvent.click(getByTestId("network__viewall"));
 
 		expect(onClick).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
@@ -96,7 +97,7 @@ describe("FilterNetwork", () => {
 
 		expect(getAllByTestId("FilterNetwork")).toHaveLength(1);
 
-		fireEvent.click(getByTestId(`NetworkOption__${networkOptions[0].network.id()}`));
+		userEvent.click(getByTestId(`NetworkOption__${networkOptions[0].network.id()}`));
 
 		expect(onChange).toHaveBeenCalledWith(
 			{
@@ -145,13 +146,13 @@ describe("FilterNetworks", () => {
 
 		expect(getAllByTestId("FilterNetwork")).toHaveLength(2);
 
-		fireEvent.click(within(getAllByTestId("FilterNetwork")[0]).getByTestId("network__viewall"));
+		userEvent.click(within(getAllByTestId("FilterNetwork")[0]).getByTestId("network__viewall"));
 
 		await findByTestId("FilterNetwork__select-all-checkbox");
 
 		expect(container).toMatchSnapshot();
 
-		fireEvent.click(within(getAllByTestId("FilterNetwork")[0]).getByTestId("network__viewall"));
+		userEvent.click(within(getAllByTestId("FilterNetwork")[0]).getByTestId("network__viewall"));
 
 		await waitFor(() =>
 			expect(() => getByTestId("FilterNetwork__select-all-checkbox")).toThrow(/Unable to find an element by/),
@@ -168,11 +169,11 @@ describe("FilterNetworks", () => {
 
 		expect(getAllByTestId("FilterNetwork")).toHaveLength(2);
 
-		fireEvent.click(within(getAllByTestId("FilterNetwork")[0]).getByTestId("network__viewall"));
+		userEvent.click(within(getAllByTestId("FilterNetwork")[0]).getByTestId("network__viewall"));
 
 		await findAllByTestId("FilterNetwork__select-all-checkbox");
 
-		fireEvent.click(getAllByTestId("FilterNetwork__select-all-checkbox")[0]);
+		userEvent.click(getAllByTestId("FilterNetwork__select-all-checkbox")[0]);
 
 		expect(onChange).toHaveBeenCalledWith(expect.anything(), [
 			...networkOptions
@@ -190,7 +191,7 @@ describe("FilterNetworks", () => {
 
 		expect(getAllByTestId("FilterNetwork")).toHaveLength(1);
 
-		fireEvent.click(getByTestId(`NetworkOption__${networkOptions[0].network.id()}`));
+		userEvent.click(getByTestId(`NetworkOption__${networkOptions[0].network.id()}`));
 
 		expect(onChange).toHaveBeenCalledWith(
 			{
@@ -210,7 +211,7 @@ describe("FilterNetworks", () => {
 		expect(container).toMatchSnapshot();
 		expect(getAllByTestId("FilterNetwork")).toHaveLength(2);
 
-		fireEvent.click(getByTestId(`NetworkOption__${networkOptions[1].network.id()}`));
+		userEvent.click(getByTestId(`NetworkOption__${networkOptions[1].network.id()}`));
 
 		expect(onChange).toHaveBeenCalledWith(
 			{
