@@ -41,8 +41,8 @@ interface LineGraphProperties<TItem> {
 
 export type {
 	LineGraphAnimationProperties,
-	LineGraphDataPoint,
 	LineGraphConfig,
+	LineGraphDataPoint,
 	LineGraphMapper,
 	LineGraphProperties,
 	LineGraphSegmentProperties,
