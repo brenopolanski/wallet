@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/require-await */
 import userEvent from "@testing-library/user-event";
 import React from "react";
-import { fireEvent, render, screen, waitFor } from "utils/testing-library";
+import { render, screen, waitFor } from "utils/testing-library";
 
 import { Clipboard } from "./Clipboard";
 

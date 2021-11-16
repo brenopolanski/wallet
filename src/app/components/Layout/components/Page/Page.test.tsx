@@ -4,7 +4,7 @@ import electron from "electron";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
-import { env, fireEvent, getDefaultProfileId, render } from "utils/testing-library";
+import { env, getDefaultProfileId, render } from "utils/testing-library";
 
 import { Page } from "./Page";
 

@@ -1,11 +1,11 @@
-import userEvent from "@testing-library/user-event";
 import { Contracts } from "@payvo/profiles";
 // @README: This import is fine in tests but should be avoided in production code.
 import { ReadOnlyWallet } from "@payvo/profiles/distribution/read-only-wallet";
 import { renderHook } from "@testing-library/react-hooks";
+import userEvent from "@testing-library/user-event";
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { env, fireEvent, getDefaultProfileId, render, syncDelegates, waitFor } from "utils/testing-library";
+import { env, getDefaultProfileId, render, syncDelegates, waitFor } from "utils/testing-library";
 
 import { WalletVote } from "./WalletVote";
 

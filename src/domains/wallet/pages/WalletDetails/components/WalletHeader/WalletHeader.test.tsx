@@ -1,5 +1,5 @@
-import userEvent from "@testing-library/user-event";
 import { Contracts } from "@payvo/profiles";
+import userEvent from "@testing-library/user-event";
 import { LedgerProvider } from "app/contexts/Ledger/Ledger";
 import { translations as commonTranslations } from "app/i18n/common/i18n";
 import * as useQRCodeHook from "domains/wallet/components/ReceiveFunds/hooks";
@@ -9,7 +9,6 @@ import React from "react";
 import { Route } from "react-router-dom";
 import {
 	env,
-	fireEvent,
 	getDefaultLedgerTransport,
 	getDefaultProfileId,
 	render,

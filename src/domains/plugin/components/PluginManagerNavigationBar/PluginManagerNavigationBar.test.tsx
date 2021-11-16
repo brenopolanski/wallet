@@ -1,7 +1,7 @@
 import userEvent from "@testing-library/user-event";
 import { translations as pluginTranslations } from "domains/plugin/i18n";
 import React from "react";
-import { fireEvent, render } from "utils/testing-library";
+import { render } from "utils/testing-library";
 
 import { PluginManagerNavigationBar } from "./PluginManagerNavigationBar";
 

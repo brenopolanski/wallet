@@ -1,8 +1,8 @@
-import userEvent from "@testing-library/user-event";
 import { Contracts, DTO } from "@payvo/profiles";
+import userEvent from "@testing-library/user-event";
 import { translations } from "domains/transaction/i18n";
 import React from "react";
-import { env, fireEvent, getDefaultProfileId, render } from "utils/testing-library";
+import { env, getDefaultProfileId, render } from "utils/testing-library";
 
 import { ConfirmRemovePendingTransaction } from "./ConfirmRemovePendingTransaction";
 

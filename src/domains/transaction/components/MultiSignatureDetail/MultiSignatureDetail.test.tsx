@@ -1,6 +1,6 @@
-import userEvent from "@testing-library/user-event";
 import { Contracts, DTO } from "@payvo/profiles";
 import { Signatories } from "@payvo/sdk";
+import userEvent from "@testing-library/user-event";
 import { LedgerProvider, minVersionList } from "app/contexts";
 import { translations } from "domains/transaction/i18n";
 import React from "react";

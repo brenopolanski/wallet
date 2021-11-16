@@ -15,7 +15,6 @@ import { Route } from "react-router-dom";
 import {
 	act,
 	env,
-	fireEvent,
 	getDefaultLedgerTransport,
 	getDefaultProfileId,
 	render,

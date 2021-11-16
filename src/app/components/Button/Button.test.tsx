@@ -1,7 +1,7 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 import { ButtonVariant } from "types";
-import { fireEvent, render } from "utils/testing-library";
+import { render } from "utils/testing-library";
 
 import { Button } from "./Button";
 

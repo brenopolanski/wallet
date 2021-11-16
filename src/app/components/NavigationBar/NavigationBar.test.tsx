@@ -1,13 +1,13 @@
 /* eslint-disable @typescript-eslint/require-await */
-import userEvent from "@testing-library/user-event";
 import { Contracts } from "@payvo/profiles";
+import userEvent from "@testing-library/user-event";
 import * as navigation from "app/constants/navigation";
 import * as environmentHooks from "app/hooks/env";
 import * as useScrollHook from "app/hooks/use-scroll";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
-import { env as mockedTestEnvironment, fireEvent, getDefaultProfileId, render, waitFor } from "utils/testing-library";
+import { env as mockedTestEnvironment, getDefaultProfileId, render, waitFor } from "utils/testing-library";
 
 import { NavigationBar } from "./NavigationBar";
 

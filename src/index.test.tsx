@@ -2,7 +2,7 @@ import userEvent from "@testing-library/user-event";
 import { translations } from "app/i18n/common/i18n";
 import React from "react";
 import { Prompt, Route, Switch, useHistory } from "react-router-dom";
-import { fireEvent, render, screen } from "utils/testing-library";
+import { render, screen } from "utils/testing-library";
 
 import { AppRouter } from "./index";
 

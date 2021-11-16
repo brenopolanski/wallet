@@ -1,8 +1,8 @@
-import userEvent from "@testing-library/user-event";
 import { Contracts } from "@payvo/profiles";
+import userEvent from "@testing-library/user-event";
 import { ExchangeProvider } from "domains/exchange/contexts/Exchange";
 import React from "react";
-import { env, fireEvent, getDefaultProfileId, render, screen, within } from "utils/testing-library";
+import { env, getDefaultProfileId, render, screen, within } from "utils/testing-library";
 
 import { ExchangeTransactionsTable } from "./ExchangeTransactionsTable";
 

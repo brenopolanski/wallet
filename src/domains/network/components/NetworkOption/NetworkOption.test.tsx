@@ -1,7 +1,7 @@
-import userEvent from "@testing-library/user-event";
 import { Networks } from "@payvo/sdk";
+import userEvent from "@testing-library/user-event";
 import React from "react";
-import { env, fireEvent, getDefaultProfileId, MNEMONICS, render } from "utils/testing-library";
+import { env, getDefaultProfileId, MNEMONICS, render } from "utils/testing-library";
 
 import { NetworkOption } from "./NetworkOption";
 

@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/require-await */
-import userEvent from "@testing-library/user-event";
 import { Contracts } from "@payvo/profiles";
+import userEvent from "@testing-library/user-event";
 import { RecipientItem } from "domains/transaction/components/RecipientList/RecipientList.contracts";
 import React from "react";
 import { Route } from "react-router-dom";
-import { env, fireEvent, getDefaultProfileId, render, screen } from "utils/testing-library";
+import { env, getDefaultProfileId, render, screen } from "utils/testing-library";
 
 import { RecipientList } from "./RecipientList";
 

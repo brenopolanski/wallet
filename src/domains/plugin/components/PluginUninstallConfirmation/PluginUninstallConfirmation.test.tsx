@@ -1,10 +1,10 @@
-import userEvent from "@testing-library/user-event";
 import { Contracts } from "@payvo/profiles";
+import userEvent from "@testing-library/user-event";
 import { ipcRenderer } from "electron";
 import { PluginController, PluginManager } from "plugins";
 import { PluginManagerProvider } from "plugins/context/PluginManagerProvider";
 import React from "react";
-import { env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
+import { env, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
 
 import { PluginUninstallConfirmation } from "./PluginUninstallConfirmation";
 

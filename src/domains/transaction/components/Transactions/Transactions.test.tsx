@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
-import userEvent from "@testing-library/user-event";
 import { Contracts } from "@payvo/profiles";
+import userEvent from "@testing-library/user-event";
 import { translations as commonTranslations } from "app/i18n/common/i18n";
 import { createMemoryHistory } from "history";
 import nock from "nock";
@@ -8,7 +8,6 @@ import React from "react";
 import { Route } from "react-router-dom";
 import {
 	env,
-	fireEvent,
 	getDefaultProfileId,
 	MNEMONICS,
 	render,

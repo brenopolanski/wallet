@@ -1,5 +1,5 @@
-import userEvent from "@testing-library/user-event";
 import { Profile, ReadWriteWallet } from "@payvo/profiles";
+import userEvent from "@testing-library/user-event";
 import { LedgerProvider } from "app/contexts";
 import { PluginController, PluginManager } from "plugins/core";
 import { PluginAPI } from "plugins/types";

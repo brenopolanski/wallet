@@ -1,7 +1,7 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 import { Column } from "react-table";
-import { fireEvent, render, within } from "utils/testing-library";
+import { render, within } from "utils/testing-library";
 
 import { Table } from "./Table";
 

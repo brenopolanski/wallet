@@ -1,5 +1,5 @@
-import userEvent from "@testing-library/user-event";
 import { Contracts } from "@payvo/profiles";
+import userEvent from "@testing-library/user-event";
 import { buildTranslations } from "app/i18n/helpers";
 import { toasts } from "app/services";
 import { ipcRenderer } from "electron";
@@ -8,16 +8,7 @@ import { LaunchPluginService, PluginController } from "plugins";
 import { PluginManagerProvider, usePluginManagerContext } from "plugins/context/PluginManagerProvider";
 import React from "react";
 import { Route } from "react-router-dom";
-import {
-	env,
-	fireEvent,
-	getDefaultProfileId,
-	pluginManager,
-	render,
-	screen,
-	waitFor,
-	within,
-} from "utils/testing-library";
+import { env, getDefaultProfileId, pluginManager, render, screen, waitFor, within } from "utils/testing-library";
 
 import { PluginDetails } from "./PluginDetails";
 

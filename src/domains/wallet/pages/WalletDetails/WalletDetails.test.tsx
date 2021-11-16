@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts, DTO } from "@payvo/profiles";
-// @README: This import is fine in tests but should be avoided in production code.
-import userEvent from "@testing-library/user-event";
 import { ReadOnlyWallet } from "@payvo/profiles/distribution/read-only-wallet";
 import { Enums } from "@payvo/sdk";
+// @README: This import is fine in tests but should be avoided in production code.
+import userEvent from "@testing-library/user-event";
 import { LedgerProvider } from "app/contexts";
 import { buildTranslations } from "app/i18n/helpers";
 import { toasts } from "app/services";

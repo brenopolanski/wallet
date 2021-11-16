@@ -1,7 +1,7 @@
-import userEvent from "@testing-library/user-event";
 import { screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import React from "react";
-import { fireEvent, render } from "utils/testing-library";
+import { render } from "utils/testing-library";
 
 import { ButtonGroup, ButtonGroupOption } from "./ButtonGroup";
 import { useSelectionState } from "./useSelectionState";

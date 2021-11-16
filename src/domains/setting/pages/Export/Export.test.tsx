@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/require-await */
-import userEvent from "@testing-library/user-event";
 import { Contracts } from "@payvo/profiles";
+import userEvent from "@testing-library/user-event";
 import { ExportSettings } from "domains/setting/pages";
 import electron from "electron";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
-import { env, fireEvent, getDefaultProfileId, render, waitFor } from "utils/testing-library";
+import { env, getDefaultProfileId, render, waitFor } from "utils/testing-library";
 
 const history = createMemoryHistory();
 let profile: Contracts.IProfile;

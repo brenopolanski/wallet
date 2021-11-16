@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
-import userEvent from "@testing-library/user-event";
 import { waitFor } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import { translations } from "app/i18n/common/i18n";
 import React from "react";
 import { fireEvent, render } from "utils/testing-library";

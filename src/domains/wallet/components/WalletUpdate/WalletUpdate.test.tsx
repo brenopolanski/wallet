@@ -2,7 +2,7 @@
 import userEvent from "@testing-library/user-event";
 import * as updaterHook from "app/hooks/use-updater";
 import React from "react";
-import { fireEvent, render, waitFor } from "utils/testing-library";
+import { render, waitFor } from "utils/testing-library";
 
 import { FirstStep } from "./Step1";
 import { SecondStep } from "./Step2";

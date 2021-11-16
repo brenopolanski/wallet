@@ -1,17 +1,9 @@
-import userEvent from "@testing-library/user-event";
 import { Contracts } from "@payvo/profiles";
+import userEvent from "@testing-library/user-event";
 import { LedgerProvider, useLedgerContext } from "app/contexts/Ledger";
 import nock from "nock";
 import React from "react";
-import {
-	env,
-	fireEvent,
-	getDefaultLedgerTransport,
-	getDefaultProfileId,
-	render,
-	screen,
-	waitFor,
-} from "utils/testing-library";
+import { env, getDefaultLedgerTransport, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
 
 import { useLedgerScanner } from "./scanner";
 

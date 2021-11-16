@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/require-await */
-import userEvent from "@testing-library/user-event";
 import { Contracts } from "@payvo/profiles";
 import { ProfileSetting } from "@payvo/profiles/distribution/contracts";
+import userEvent from "@testing-library/user-event";
 import { translations as commonTranslations } from "app/i18n/common/i18n";
 import { translations } from "domains/contact/i18n";
 import { createMemoryHistory } from "history";

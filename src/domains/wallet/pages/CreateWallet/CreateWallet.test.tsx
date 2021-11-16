@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/require-await */
-import userEvent from "@testing-library/user-event";
 import { BIP39 } from "@payvo/cryptography";
 import { Contracts } from "@payvo/profiles";
+import userEvent from "@testing-library/user-event";
 import { translations as walletTranslations } from "domains/wallet/i18n";
 import { createMemoryHistory } from "history";
 import React from "react";

@@ -1,7 +1,7 @@
-import userEvent from "@testing-library/user-event";
 import { Contracts } from "@payvo/profiles";
 // @README: This import is fine in tests but should be avoided in production code.
 import { ReadOnlyWallet } from "@payvo/profiles/distribution/read-only-wallet";
+import userEvent from "@testing-library/user-event";
 import * as useRandomNumberHook from "app/hooks/use-random-number";
 import { translations } from "app/i18n/common/i18n";
 import React from "react";

@@ -1,9 +1,9 @@
-import userEvent from "@testing-library/user-event";
 import { Contracts } from "@payvo/profiles";
+import userEvent from "@testing-library/user-event";
 import { FilterOption } from "app/components/FilterNetwork";
 import { DashboardConfiguration } from "domains/dashboard/pages/Dashboard";
 import React from "react";
-import { env, fireEvent, getDefaultProfileId, render } from "utils/testing-library";
+import { env, getDefaultProfileId, render } from "utils/testing-library";
 
 import { FilterWallets } from "./FilterWallets";
 

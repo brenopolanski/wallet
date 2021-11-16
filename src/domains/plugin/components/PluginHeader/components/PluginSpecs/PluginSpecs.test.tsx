@@ -1,5 +1,4 @@
 import userEvent from "@testing-library/user-event";
-import { fireEvent } from "@testing-library/react";
 import { ipcRenderer } from "electron";
 import React from "react";
 import { render, screen } from "utils/testing-library";

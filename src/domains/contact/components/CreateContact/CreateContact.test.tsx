@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
-import userEvent from "@testing-library/user-event";
 import { Contracts } from "@payvo/profiles";
+import userEvent from "@testing-library/user-event";
 import { translations } from "domains/contact/i18n";
 import React from "react";
 import { env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";

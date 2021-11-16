@@ -1,7 +1,7 @@
-import userEvent from "@testing-library/user-event";
 import { Contracts } from "@payvo/profiles";
+import userEvent from "@testing-library/user-event";
 import React from "react";
-import { fireEvent, render } from "utils/testing-library";
+import { render } from "utils/testing-library";
 
 import { LedgerDeviceError } from "./LedgerDeviceError";
 

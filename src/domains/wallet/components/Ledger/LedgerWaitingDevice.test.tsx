@@ -1,8 +1,8 @@
-import userEvent from "@testing-library/user-event";
 import { Observer } from "@ledgerhq/hw-transport";
+import userEvent from "@testing-library/user-event";
 import { LedgerProvider } from "app/contexts/Ledger/Ledger";
 import React from "react";
-import { act, fireEvent, getDefaultLedgerTransport, render } from "utils/testing-library";
+import { act, getDefaultLedgerTransport, render } from "utils/testing-library";
 
 import { LedgerWaitingDevice } from "./LedgerWaitingDevice";
 

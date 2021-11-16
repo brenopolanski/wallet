@@ -1,11 +1,11 @@
-import userEvent from "@testing-library/user-event";
 import { Contracts } from "@payvo/profiles";
 import { ARK } from "@payvo/sdk-ark";
+import userEvent from "@testing-library/user-event";
 import { httpClient } from "app/services";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { StubStorage } from "tests/mocks";
-import { env, fireEvent, render, waitFor } from "utils/testing-library";
+import { env, render, waitFor } from "utils/testing-library";
 
 import { EnvironmentProvider, useEnvironmentContext } from "./Environment";
 

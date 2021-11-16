@@ -3,7 +3,7 @@ import { httpClient } from "app/services";
 import { ExchangeProvider } from "domains/exchange/contexts/Exchange";
 import nock from "nock";
 import React from "react";
-import { fireEvent, render, screen, waitFor } from "utils/testing-library";
+import { render, screen, waitFor } from "utils/testing-library";
 
 import { useExchangeContext } from "./Exchange";
 

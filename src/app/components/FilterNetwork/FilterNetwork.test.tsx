@@ -1,7 +1,7 @@
-import userEvent from "@testing-library/user-event";
 import { Networks } from "@payvo/sdk";
+import userEvent from "@testing-library/user-event";
 import React from "react";
-import { env, fireEvent, render, waitFor, within } from "utils/testing-library";
+import { env, render, waitFor, within } from "utils/testing-library";
 
 import { FilterNetwork, FilterNetworks, FilterOption, NetworkOptions, ToggleAllOption } from ".";
 

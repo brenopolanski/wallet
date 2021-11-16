@@ -1,8 +1,8 @@
-import userEvent from "@testing-library/user-event";
 import { Contracts } from "@payvo/profiles";
+import userEvent from "@testing-library/user-event";
 import { translations } from "domains/contact/i18n";
 import React from "react";
-import { env, fireEvent, getDefaultProfileId, render, waitFor } from "utils/testing-library";
+import { env, getDefaultProfileId, render, waitFor } from "utils/testing-library";
 
 import { DeleteContact } from "./DeleteContact";
 

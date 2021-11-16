@@ -1,7 +1,7 @@
-import userEvent from "@testing-library/user-event";
 import { Contracts as ProfilesContracts } from "@payvo/profiles";
 import { Contracts } from "@payvo/sdk";
 import { RenderResult } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import { translations } from "domains/transaction/i18n";
 import React, { useEffect } from "react";
 import { FormProvider, useForm, UseFormMethods } from "react-hook-form";

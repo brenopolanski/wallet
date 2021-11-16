@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
-import userEvent from "@testing-library/user-event";
 import { screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import { EnvironmentProvider } from "app/contexts";
 import { ImportProfile } from "domains/profile/pages/ImportProfile/ImportProfile";
 import fs from "fs";

@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
-import userEvent from "@testing-library/user-event";
 import { act, renderHook } from "@testing-library/react-hooks";
+import userEvent from "@testing-library/user-event";
 import { ConfigurationProvider, EnvironmentProvider, useConfiguration } from "app/contexts";
 import { toasts } from "app/services";
 import electron from "electron";
@@ -11,7 +11,6 @@ import { Route } from "react-router-dom";
 import {
 	act as renderAct,
 	env,
-	fireEvent,
 	getDefaultProfileId,
 	MNEMONICS,
 	pluginManager,

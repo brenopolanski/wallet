@@ -1,7 +1,7 @@
 import userEvent from "@testing-library/user-event";
 import { ImportError } from "domains/profile/pages/ImportProfile/ErrorStep";
 import React from "react";
-import { fireEvent, render } from "utils/testing-library";
+import { render } from "utils/testing-library";
 
 jest.mock("fs", () => ({
 	readFileSync: jest.fn().mockReturnValue({ toString: () => "{test:'test'}" }),

@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/require-await */
-import userEvent from "@testing-library/user-event";
 import { Contracts } from "@payvo/profiles";
 import { renderHook } from "@testing-library/react-hooks";
+import userEvent from "@testing-library/user-event";
 import { translations as transactionTranslations } from "domains/transaction/i18n";
 import nock from "nock";
 import React from "react";

@@ -1,5 +1,5 @@
-import userEvent from "@testing-library/user-event";
 import { Contracts, DTO } from "@payvo/profiles";
+import userEvent from "@testing-library/user-event";
 import { buildTranslations } from "app/i18n/helpers";
 import { PendingTransactions } from "domains/transaction/components/TransactionTable/PendingTransactionsTable";
 import nock from "nock";

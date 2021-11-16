@@ -1,6 +1,6 @@
-import userEvent from "@testing-library/user-event";
 import { Contracts, Profile } from "@payvo/profiles";
-import { fireEvent, render, screen, waitFor } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import { EnvironmentProvider } from "app/contexts";
 import electron, { ipcRenderer } from "electron";
 import nock from "nock";

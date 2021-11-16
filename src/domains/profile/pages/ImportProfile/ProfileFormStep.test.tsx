@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
-import userEvent from "@testing-library/user-event";
 import { Contracts } from "@payvo/profiles";
+import userEvent from "@testing-library/user-event";
 import { EnvironmentProvider } from "app/contexts";
 import { ImportProfileForm } from "domains/profile/pages/ImportProfile/ProfileFormStep";
 import electron from "electron";

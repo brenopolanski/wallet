@@ -1,10 +1,10 @@
-import userEvent from "@testing-library/user-event";
 import { Contracts, DTO } from "@payvo/profiles";
+import userEvent from "@testing-library/user-event";
 import { httpClient } from "app/services";
 import nock from "nock";
 import React from "react";
 import { TransactionFixture } from "tests/fixtures/transactions";
-import { env, fireEvent, getDefaultProfileId, render, waitFor } from "utils/testing-library";
+import { env, getDefaultProfileId, render, waitFor } from "utils/testing-library";
 
 import { NotificationTransactionItem } from "./NotificationTransactionItem";
 const NotificationTransactionsFixtures = require("tests/fixtures/coins/ark/devnet/notification-transactions.json");

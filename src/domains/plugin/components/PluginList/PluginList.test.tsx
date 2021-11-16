@@ -1,7 +1,7 @@
 import userEvent from "@testing-library/user-event";
 import { translations as commonTranslations } from "app/i18n/common/i18n";
 import React from "react";
-import { fireEvent, render, within } from "utils/testing-library";
+import { render, within } from "utils/testing-library";
 
 import { PluginList } from "./PluginList";
 

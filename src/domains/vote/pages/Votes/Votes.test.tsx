@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/require-await */
-import userEvent from "@testing-library/user-event";
 import { Contracts } from "@payvo/profiles";
 import { ProfileSetting } from "@payvo/profiles/distribution/contracts";
 import { ReadOnlyWallet } from "@payvo/profiles/distribution/read-only-wallet";
 import { LSK } from "@payvo/sdk-lsk";
+import userEvent from "@testing-library/user-event";
 import { useProfileStatusWatcher } from "app/hooks";
 import { createMemoryHistory } from "history";
 import nock from "nock";

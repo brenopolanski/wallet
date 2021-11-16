@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
-import userEvent from "@testing-library/user-event";
 import { Contracts } from "@payvo/profiles";
+import userEvent from "@testing-library/user-event";
 import { LedgerProvider } from "app/contexts/Ledger/Ledger";
 import { toasts } from "app/services";
 import { translations as transactionTranslations } from "domains/transaction/i18n";

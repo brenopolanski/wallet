@@ -1,7 +1,7 @@
-import userEvent from "@testing-library/user-event";
 import { Contracts } from "@payvo/profiles";
+import userEvent from "@testing-library/user-event";
 import React from "react";
-import { env, fireEvent, getDefaultProfileId, render, screen } from "utils/testing-library";
+import { env, getDefaultProfileId, render, screen } from "utils/testing-library";
 
 import { ConfirmSendTransaction } from "./ConfirmSendTransaction";
 

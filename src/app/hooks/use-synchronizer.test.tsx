@@ -1,8 +1,8 @@
-import userEvent from "@testing-library/user-event";
 import { act as hookAct, renderHook } from "@testing-library/react-hooks";
+import userEvent from "@testing-library/user-event";
 import { ConfigurationProvider, EnvironmentProvider } from "app/contexts";
 import React, { useEffect } from "react";
-import { act, env, fireEvent, render, screen, waitFor } from "utils/testing-library";
+import { act, env, render, screen, waitFor } from "utils/testing-library";
 
 import { useSynchronizer } from "./use-synchronizer";
 

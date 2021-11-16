@@ -1,8 +1,8 @@
-import userEvent from "@testing-library/user-event";
 import { Contracts, DTO } from "@payvo/profiles";
+import userEvent from "@testing-library/user-event";
 import nock from "nock";
 import React from "react";
-import { env, fireEvent, getDefaultProfileId, getDefaultWalletId, render, waitFor } from "utils/testing-library";
+import { env, getDefaultProfileId, getDefaultWalletId, render, waitFor } from "utils/testing-library";
 
 import { NotificationTransactionsTable } from "./NotificationTransactionsTable";
 

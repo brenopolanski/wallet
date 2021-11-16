@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
-import userEvent from "@testing-library/user-event";
 import { ARK } from "@payvo/sdk-ark";
+import userEvent from "@testing-library/user-event";
 import { httpClient } from "app/services";
 import electron from "electron";
 import { getCurrency } from "locale-currency";

@@ -5,15 +5,7 @@ import { LedgerProvider } from "app/contexts/Ledger/Ledger";
 import nock from "nock";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
-import {
-	env,
-	fireEvent,
-	getDefaultLedgerTransport,
-	getDefaultProfileId,
-	render,
-	screen,
-	waitFor,
-} from "utils/testing-library";
+import { env, getDefaultLedgerTransport, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
 
 import { LedgerScanStep } from "./LedgerScanStep";
 

@@ -1,7 +1,7 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 import { Route } from "react-router-dom";
-import { fireEvent, render, waitFor } from "utils/testing-library";
+import { render, waitFor } from "utils/testing-library";
 
 import { SyncErrorMessage } from "./ProfileSyncStatusMessage";
 

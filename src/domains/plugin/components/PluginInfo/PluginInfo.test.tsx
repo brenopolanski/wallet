@@ -1,8 +1,8 @@
-import userEvent from "@testing-library/user-event";
 import { renderHook } from "@testing-library/react-hooks";
+import userEvent from "@testing-library/user-event";
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { fireEvent, render, screen, within } from "utils/testing-library";
+import { render, screen, within } from "utils/testing-library";
 
 import { PluginInfo } from "./PluginInfo";
 

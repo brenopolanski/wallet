@@ -1,7 +1,7 @@
-import userEvent from "@testing-library/user-event";
 import { Contracts } from "@payvo/profiles";
+import userEvent from "@testing-library/user-event";
 import React from "react";
-import { env, fireEvent, getDefaultProfileId, MNEMONICS, render, waitFor } from "utils/testing-library";
+import { env, getDefaultProfileId, MNEMONICS, render, waitFor } from "utils/testing-library";
 
 import { SelectAddress } from "./SelectAddress";
 

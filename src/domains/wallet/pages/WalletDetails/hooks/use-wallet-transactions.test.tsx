@@ -1,9 +1,9 @@
-import userEvent from "@testing-library/user-event";
 import { Contracts, DTO } from "@payvo/profiles";
+import userEvent from "@testing-library/user-event";
 import { PendingTransaction } from "domains/transaction/components/TransactionTable/PendingTransactionsTable/PendingTransactionsTable.contracts";
 import nock from "nock";
 import React, { useEffect, useState } from "react";
-import { env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
+import { env, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
 
 import { useWalletTransactions } from "./use-wallet-transactions";
 

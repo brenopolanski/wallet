@@ -1,9 +1,9 @@
-import userEvent from "@testing-library/user-event";
 import { Observer } from "@ledgerhq/hw-transport";
 import { Contracts } from "@payvo/profiles";
 import { WalletData, WalletLedgerModel } from "@payvo/profiles/distribution/contracts";
 import { LSK } from "@payvo/sdk-lsk";
 import { renderHook } from "@testing-library/react-hooks";
+import userEvent from "@testing-library/user-event";
 import { minVersionList } from "app/contexts/Ledger/contracts";
 import { toasts } from "app/services";
 import { translations as walletTranslations } from "domains/wallet/i18n";
@@ -13,7 +13,6 @@ import { useTranslation } from "react-i18next";
 import {
 	act,
 	env,
-	fireEvent,
 	getDefaultLedgerTransport,
 	getDefaultProfileId,
 	render,

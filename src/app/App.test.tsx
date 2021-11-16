@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/require-await */
-import userEvent from "@testing-library/user-event";
 import { Bcrypt } from "@payvo/cryptography";
 import { Contracts, Environment } from "@payvo/profiles";
+import userEvent from "@testing-library/user-event";
 import { buildTranslations } from "app/i18n/helpers";
 import { toasts } from "app/services";
 import { translations as errorTranslations } from "domains/error/i18n";

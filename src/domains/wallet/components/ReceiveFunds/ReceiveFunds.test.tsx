@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/require-await */
-import userEvent from "@testing-library/user-event";
 import { Networks } from "@payvo/sdk";
+import userEvent from "@testing-library/user-event";
 import React from "react";
-import { env, fireEvent, getDefaultProfileId, getDefaultWalletId, render, waitFor } from "utils/testing-library";
+import { env, getDefaultProfileId, getDefaultWalletId, render, waitFor } from "utils/testing-library";
 
 import { ReceiveFunds } from "./ReceiveFunds";
 

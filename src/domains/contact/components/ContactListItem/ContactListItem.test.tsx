@@ -1,8 +1,8 @@
-import userEvent from "@testing-library/user-event";
 import { Contracts } from "@payvo/profiles";
 import { ContactAddress } from "@payvo/profiles/distribution/contact-address";
+import userEvent from "@testing-library/user-event";
 import React from "react";
-import { env, fireEvent, getDefaultProfileId, render } from "utils/testing-library";
+import { env, getDefaultProfileId, render } from "utils/testing-library";
 
 import { ContactListItem } from "./ContactListItem";
 

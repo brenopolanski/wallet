@@ -1,5 +1,4 @@
 import userEvent from "@testing-library/user-event";
-import { fireEvent } from "@testing-library/react";
 import React from "react";
 import { Route } from "react-router-dom";
 import { render } from "utils/testing-library";

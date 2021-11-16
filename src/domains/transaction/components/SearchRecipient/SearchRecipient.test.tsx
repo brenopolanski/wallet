@@ -1,6 +1,6 @@
-import userEvent from "@testing-library/user-event";
 import { Contracts } from "@payvo/profiles";
 import { fireEvent, waitFor, within } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import { translations } from "domains/transaction/i18n";
 import React from "react";
 import { act, env, getDefaultProfileId, render, screen } from "utils/testing-library";

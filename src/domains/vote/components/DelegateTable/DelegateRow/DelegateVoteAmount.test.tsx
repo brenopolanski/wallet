@@ -1,8 +1,8 @@
-import userEvent from "@testing-library/user-event";
 import { Contracts } from "@payvo/profiles";
 import { ReadOnlyWallet } from "@payvo/profiles/distribution/read-only-wallet";
 import { fireEvent } from "@testing-library/react";
 import { renderHook } from "@testing-library/react-hooks";
+import userEvent from "@testing-library/user-event";
 import { translations as transactionTranslations } from "domains/transaction/i18n";
 import { VoteDelegateProperties } from "domains/vote/components/DelegateTable/DelegateTable.models";
 import React from "react";
