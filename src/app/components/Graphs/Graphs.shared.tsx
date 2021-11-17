@@ -1,4 +1,4 @@
-import React, { MouseEvent, MutableRefObject, useCallback, useEffect, useRef, useState } from "react";
+import React, { MouseEvent, MutableRefObject, useEffect, useRef, useState } from "react";
 
 const GRAPH_COLORS = ["success-600", "warning-600", "info-600", "danger-400", "hint-400", "secondary-400"];
 const GRAPH_COLORS_DARK = ["success-600", "warning-600", "info-600", "danger-400", "hint-400", "secondary-600"];
@@ -47,46 +47,43 @@ function useGraphTooltip<TDataPoint>(
 
 	const [tooltipDataPoint, setTooltipDataPoint] = useState<TDataPoint | undefined>(undefined);
 
-	const getMouseEventProperties = useCallback(
-		(dataPoint: TDataPoint) => ({
-			onMouseMove: (event: MouseEvent<SVGElement>) => {
-				const tooltipElement = tooltipReference.current;
+	const getMouseEventProperties = (dataPoint: TDataPoint) => ({
+		onMouseMove: (event: MouseEvent<SVGElement>) => {
+			const tooltipElement = tooltipReference.current;
 
-				if (!tooltipElement) {
-					return;
-				}
+			if (!tooltipElement) {
+				return;
+			}
 
-				setTooltipDataPoint(dataPoint);
+			setTooltipDataPoint(dataPoint);
 
-				const targetRect = (event.target as SVGElement).getBoundingClientRect();
+			const targetRect = (event.target as SVGElement).getBoundingClientRect();
 
-				if (type === "line") {
-					tooltipElement.style.left = `${event.pageX - Math.floor(tooltipElement.clientWidth / 2)}px`;
-					tooltipElement.style.top = `${targetRect.top - 48}px`;
-				}
+			if (type === "line") {
+				tooltipElement.style.left = `${event.pageX - Math.floor(tooltipElement.clientWidth / 2)}px`;
+				tooltipElement.style.top = `${targetRect.top - 48}px`;
+			}
 
-				if (type === "donut") {
-					tooltipElement.style.left = `${event.pageX - targetRect.left - 32}px`;
-					tooltipElement.style.top = `${event.pageY - targetRect.top - 24}px`;
-				}
+			if (type === "donut") {
+				tooltipElement.style.left = `${event.pageX - targetRect.left - 32}px`;
+				tooltipElement.style.top = `${event.pageY - targetRect.top - 24}px`;
+			}
 
-				window.clearTimeout(timeout.current);
+			window.clearTimeout(timeout.current);
 
-				tooltipElement.classList.remove("hidden");
-				tooltipElement.classList.remove("opacity-0");
-				tooltipElement.classList.add("opacity-100");
-			},
-			onMouseOut: () => {
-				tooltipReference.current?.classList.add("opacity-0");
-				tooltipReference.current?.classList.remove("opacity-100");
+			tooltipElement.classList.remove("hidden");
+			tooltipElement.classList.remove("opacity-0");
+			tooltipElement.classList.add("opacity-100");
+		},
+		onMouseOut: () => {
+			tooltipReference.current?.classList.add("opacity-0");
+			tooltipReference.current?.classList.remove("opacity-100");
 
-				timeout.current = window.setTimeout(() => {
-					tooltipReference.current?.classList.add("hidden");
-				}, 200);
-			},
-		}),
-		[type],
-	);
+			timeout.current = window.setTimeout(() => {
+				tooltipReference.current?.classList.add("hidden");
+			}, 200);
+		},
+	});
 
 	if (!renderFunction) {
 		return {
