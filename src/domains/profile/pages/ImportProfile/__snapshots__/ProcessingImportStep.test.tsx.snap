@@ -64,7 +64,7 @@ exports[`Import Profile - Processing import should enter password again 1`] = `
             </div>
           </div>
           <div
-            class="Spinner-sc-1rpx65r-0 jouzuN"
+            class="Spinner-sc-1rpx65r-0 eswuvT"
             color="info"
           />
         </div>
@@ -268,7 +268,7 @@ exports[`Import Profile - Processing import should handle import error 1`] = `
             </div>
           </div>
           <div
-            class="Spinner-sc-1rpx65r-0 jouzuN"
+            class="Spinner-sc-1rpx65r-0 eswuvT"
             color="info"
           />
         </div>
@@ -345,7 +345,7 @@ exports[`Import Profile - Processing import should handle invalid password 1`] =
             </div>
           </div>
           <div
-            class="Spinner-sc-1rpx65r-0 jouzuN"
+            class="Spinner-sc-1rpx65r-0 eswuvT"
             color="info"
           />
         </div>
@@ -590,7 +590,7 @@ exports[`Import Profile - Processing import should require password for password
             </div>
           </div>
           <div
-            class="Spinner-sc-1rpx65r-0 jouzuN"
+            class="Spinner-sc-1rpx65r-0 eswuvT"
             color="info"
           />
         </div>
@@ -794,7 +794,7 @@ exports[`Import Profile - Processing import should show error if json import has
             </div>
           </div>
           <div
-            class="Spinner-sc-1rpx65r-0 jouzuN"
+            class="Spinner-sc-1rpx65r-0 eswuvT"
             color="info"
           />
         </div>
@@ -871,7 +871,7 @@ exports[`Import Profile - Processing import should successfully import dwe profi
             </div>
           </div>
           <div
-            class="Spinner-sc-1rpx65r-0 jouzuN"
+            class="Spinner-sc-1rpx65r-0 eswuvT"
             color="info"
           />
         </div>
@@ -948,7 +948,7 @@ exports[`Import Profile - Processing import should successfully import json prof
             </div>
           </div>
           <div
-            class="Spinner-sc-1rpx65r-0 jouzuN"
+            class="Spinner-sc-1rpx65r-0 eswuvT"
             color="info"
           />
         </div>

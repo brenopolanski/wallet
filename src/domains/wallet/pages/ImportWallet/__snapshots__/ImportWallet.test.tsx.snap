@@ -218,7 +218,7 @@ exports[`ImportWallet should import with encryped wif 1`] = `
         </div>
       </fieldset>
       <div
-        class="Divider-sc-17ehhxk-0 hZpmpp border-theme-secondary-300 dark:border-theme-secondary-800"
+        class="Divider-sc-17ehhxk-0 ijSFXJ border-theme-secondary-300 dark:border-theme-secondary-800"
         type="horizontal"
       />
       <div
@@ -456,7 +456,7 @@ exports[`ImportWallet should import with wif 1`] = `
         </div>
       </fieldset>
       <div
-        class="Divider-sc-17ehhxk-0 hZpmpp border-theme-secondary-300 dark:border-theme-secondary-800"
+        class="Divider-sc-17ehhxk-0 ijSFXJ border-theme-secondary-300 dark:border-theme-secondary-800"
         type="horizontal"
       />
       <div
@@ -913,7 +913,7 @@ exports[`ImportWallet should render as ledger import 1`] = `
                             </ul>
                           </div>
                           <div
-                            class="Divider-sc-17ehhxk-0 hZpmpp border-theme-secondary-300 dark:border-theme-secondary-800"
+                            class="Divider-sc-17ehhxk-0 ijSFXJ border-theme-secondary-300 dark:border-theme-secondary-800"
                             type="horizontal"
                           />
                           <div
@@ -1212,7 +1212,7 @@ exports[`ImportWallet should render method step 1`] = `
         </div>
       </fieldset>
       <div
-        class="Divider-sc-17ehhxk-0 hZpmpp border-theme-secondary-300 dark:border-theme-secondary-800"
+        class="Divider-sc-17ehhxk-0 ijSFXJ border-theme-secondary-300 dark:border-theme-secondary-800"
         type="horizontal"
       />
       <div
@@ -1437,7 +1437,7 @@ exports[`ImportWallet should render network step 1`] = `
             </ul>
           </div>
           <div
-            class="Divider-sc-17ehhxk-0 hZpmpp border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="Divider-sc-17ehhxk-0 ijSFXJ border-theme-secondary-300 dark:border-theme-secondary-800"
             type="horizontal"
           />
           <div

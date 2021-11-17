@@ -1,9 +1,7 @@
 import tw, { css } from "twin.macro";
 import { Color } from "types";
 
-const baseStyle = [
-	tw`w-4 h-4 transition duration-150 ease-in-out cursor-pointer focus:ring-offset-0 border-theme-secondary-300`,
-];
+const baseStyle = tw`w-4 h-4 transition duration-150 ease-in-out cursor-pointer focus:ring-offset-0 border-theme-secondary-300`;
 
 const getColor = (color: Color) => {
 	const baseColors: Record<string, string> = {
@@ -19,4 +17,4 @@ const getColor = (color: Color) => {
 	`;
 };
 
-export const getStyles = ({ color }: { color?: Color }) => [...baseStyle, ...getColor(color!)];
+export const getStyles = ({ color }: { color?: Color }) => [baseStyle, ...getColor(color!)];

@@ -1,5 +1,7 @@
 import { LedgerData } from "app/contexts/Ledger/contracts";
 
+import { Handlers, OfUnion } from "./reducer.contracts";
+
 interface State {
 	error?: string;
 	selected: string[];
@@ -9,35 +11,36 @@ interface State {
 type Action =
 	| { type: "success"; payload: LedgerData[] }
 	| { type: "failed"; error: string }
-	| { type: "selectAll" }
 	| { type: "toggleSelect"; path: string }
 	| { type: "toggleSelectAll" };
 
 const pathMapper = (item: LedgerData) => item.path;
 
 export const scannerReducer = (state: State, action: Action): State => {
-	switch (action.type) {
-		case "success": {
-			return {
-				...state,
-				error: undefined,
-				selected: action.payload.map(pathMapper),
-				wallets: action.payload,
-			};
-		}
-		case "toggleSelect": {
+	const handlers: Handlers<OfUnion<Action>, State> = {
+		failed: ({ error }) => ({
+			...state,
+			error: error,
+		}),
+		success: ({ payload }) => ({
+			...state,
+			error: undefined,
+			selected: payload.map(pathMapper),
+			wallets: payload,
+		}),
+		toggleSelect: ({ path }) => {
 			const current = state.selected;
-			const indexOf = state.selected.indexOf(action.path);
+			const indexOf = state.selected.indexOf(path);
 
 			if (indexOf >= 0) {
 				current.splice(indexOf, 1);
 			} else {
-				current.push(action.path);
+				current.push(path);
 			}
 
 			return { ...state, selected: [...current] };
-		}
-		case "toggleSelectAll": {
+		},
+		toggleSelectAll: () => {
 			const { selected, wallets } = state;
 
 			if (selected.length === 0 || wallets.length > selected.length) {
@@ -45,15 +48,8 @@ export const scannerReducer = (state: State, action: Action): State => {
 			}
 
 			return { ...state, selected: [] };
-		}
-		case "failed": {
-			return {
-				...state,
-				error: action.error,
-			};
-		}
-		/* istanbul ignore next */
-		default:
-			throw new Error();
-	}
+		},
+	};
+
+	return handlers[action.type](action as any);
 };

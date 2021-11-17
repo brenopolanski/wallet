@@ -1,14 +1,9 @@
 import tw, { css } from "twin.macro";
 import { Color, Size } from "types";
 
-const baseStyle = [
-	tw`animate-spin rounded-full border border-theme-secondary-200 dark:border-black`,
-	css`
-		border-width: 5px;
-	`,
-];
+const baseStyle = tw`animate-spin rounded-full border border-theme-secondary-200 dark:border-black border-width[5px]`;
 
-const getColor = (color: Color): any => {
+const getColor = (color: Color) => {
 	const baseColors: Record<Color, string> = {
 		danger: "danger-400",
 		hint: "hint-500",
@@ -22,19 +17,19 @@ const getColor = (color: Color): any => {
 	`;
 };
 
-const getSize = (size?: Size): any => {
-	switch (size) {
-		case "sm":
-			return tw`w-5 h-5`;
-		case "lg":
-			return tw`w-12 h-12`;
-		default:
-			return tw`w-8 h-8`;
-	}
+const getSize = (size?: Size) => {
+	const sizes = {
+		default: () => tw`w-8 h-8`,
+		lg: () => tw`w-12 h-12`,
+		sm: () => tw`w-5 h-5`,
+	};
+
+	// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+	return (sizes[size as keyof typeof sizes] || sizes.default)();
 };
 
 export const getStyles = ({ color, size }: { color?: Color; size?: Size }) => [
-	...baseStyle,
+	baseStyle,
 	getSize(size),
 	...getColor(color!),
 ];

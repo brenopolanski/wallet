@@ -3,30 +3,25 @@ import { DropdownOption } from "app/components/Dropdown";
 import { EmptyBlock } from "app/components/EmptyBlock";
 import { Pagination } from "app/components/Pagination";
 import cn from "classnames";
-import { PluginCard } from "domains/plugin/components/PluginCard";
+import { BlankPluginCard, PluginCard } from "domains/plugin/components/PluginCard";
 import { PluginCardSkeleton } from "domains/plugin/components/PluginCard/PluginCardSkeleton";
+import { PluginActionsProperties } from "domains/plugin/pages";
 import { PluginCategories } from "domains/plugin/plugin.contracts";
+import { ExtendedSerializedPluginConfigurationData, SerializedPluginConfigurationData } from "plugins";
 import React, { useCallback } from "react";
 import { Trans, useTranslation } from "react-i18next";
 
-interface PluginGridProperties {
+type PluginGridProperties = {
 	category?: PluginCategories;
 	className?: string;
 	emptyMessage?: string;
 	isLoading?: boolean;
 	itemsPerPage?: number;
-	onDelete: any;
-	plugins: any[];
+	plugins: ExtendedSerializedPluginConfigurationData[];
 	showPagination?: boolean;
 	skeletonsLimit?: number;
-	updatingStats?: any;
-	onDisable?: (plugin: any) => void;
-	onEnable?: (plugin: any) => void;
-	onInstall?: (plugin: any) => void;
-	onLaunch?: (plugin: any) => void;
-	onSelect: any;
-	onUpdate?: (plugin: any) => void;
-}
+	updatingStats?: Record<string, SerializedPluginConfigurationData>;
+} & PluginActionsProperties;
 
 export const PluginGrid = ({
 	category,
@@ -57,11 +52,7 @@ export const PluginGrid = ({
 	}
 
 	const getActions = useCallback(
-		(plugin: any) => {
-			if (!plugin) {
-				return;
-			}
-
+		(plugin: ExtendedSerializedPluginConfigurationData) => {
 			if (plugin.isInstalled) {
 				const result: DropdownOption[] = [];
 
@@ -102,27 +93,17 @@ export const PluginGrid = ({
 		[t],
 	);
 
-	const handlePluginAction = (plugin: any, action: any) => {
-		switch (action?.value) {
-			case "delete":
-				onDelete(plugin);
-				break;
-			case "enable":
-				onEnable?.(plugin);
-				break;
-			case "disable":
-				onDisable?.(plugin);
-				break;
-			case "launch":
-				onLaunch?.(plugin);
-				break;
-			case "install":
-				onInstall?.(plugin);
-				break;
-			case "update":
-				onUpdate?.(plugin);
-				break;
-		}
+	const handlePluginAction = (plugin: ExtendedSerializedPluginConfigurationData, action: DropdownOption) => {
+		const actions = {
+			delete: () => onDelete(plugin),
+			disable: () => onDisable(plugin),
+			enable: () => onEnable(plugin),
+			install: () => onInstall(plugin),
+			launch: () => onLaunch(plugin),
+			update: () => onUpdate(plugin),
+		};
+
+		return actions[action.value as keyof typeof actions]();
 	};
 
 	if (isLoading) {
@@ -150,18 +131,21 @@ export const PluginGrid = ({
 	return (
 		<div data-testid="PluginGrid">
 			<div className={cn("grid grid-cols-3 gap-4.5", className)}>
-				{pagePlugins?.map((plugin: any, index: number) => (
-					<PluginCard
-						key={plugin?.id || `blank_${index}`}
-						actions={getActions(plugin)}
-						category={category}
-						plugin={plugin}
-						isUpdating={plugin && updatingStats?.[plugin.id]?.percent !== undefined}
-						updatingProgress={plugin && updatingStats?.[plugin.id]?.percent}
-						onClick={() => onSelect(plugin)}
-						onSelect={(action: any) => handlePluginAction(plugin, action)}
-					/>
-				))}
+				{pagePlugins.map((plugin: ExtendedSerializedPluginConfigurationData | undefined, index: number) =>
+					plugin ? (
+						<PluginCard
+							key={plugin.id}
+							actions={getActions(plugin)}
+							plugin={plugin}
+							isUpdating={updatingStats?.[plugin.id]?.percent !== undefined}
+							updatingProgress={updatingStats?.[plugin.id]?.percent}
+							onClick={() => onSelect(plugin)}
+							onSelect={(action) => handlePluginAction(plugin, action)}
+						/>
+					) : (
+						<BlankPluginCard key={`blank_${index}`} category={category} />
+					),
+				)}
 			</div>
 
 			{showPagination && (

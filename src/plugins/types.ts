@@ -101,6 +101,7 @@ export interface SerializedPluginConfigurationData {
 	title?: string;
 	url?: string;
 	version: string;
+	percent?: number;
 }
 
 export type ExtendedSerializedPluginConfigurationData = {

@@ -22,37 +22,31 @@ const colors = "bg-theme-background border-transparent";
 
 export const defaultClasses = `${shape} ${colors}`;
 
-const getPosition = (position?: Position): any => {
-	switch (position) {
-		case "bottom":
-			return tw`bottom-1 translate-y-full`;
-		case "bottom-left":
-			return tw`bottom-0 translate-y-1/2 left-0 -translate-x-1/2`;
-		case "left":
-			return tw`left-1 -translate-x-full`;
-		case "top-left":
-			return tw`top-0 -translate-y-1/2 left-0 -translate-x-1/2`;
-		case "top":
-			return tw`top-1 -translate-y-full`;
-		case "top-right":
-			return tw`top-0 -translate-y-1/2 right-0 translate-x-1/2`;
-		case "right":
-			return tw`right-1 translate-x-full`;
-		default:
-			// bottom-right
-			return tw`bottom-0 translate-y-1/2 right-0 translate-x-1/2`;
-	}
+const getPosition = (position?: Position) => {
+	const positions = {
+		bottom: () => tw`bottom-1 translate-y-full`,
+		"bottom-left": () => tw`bottom-0 translate-y-1/2 left-0 -translate-x-1/2`,
+		default: () => tw`bottom-0 translate-y-1/2 right-0 translate-x-1/2`,
+		left: () => tw`left-1 -translate-x-full`,
+		right: () => tw`right-1 translate-x-full`,
+		top: () => tw`top-1 -translate-y-full`,
+		"top-left": () => tw`top-0 -translate-y-1/2 left-0 -translate-x-1/2`,
+		"top-right": () => tw`top-0 -translate-y-1/2 right-0 translate-x-1/2`,
+	};
+
+	// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+	return (positions[position as keyof typeof positions] || positions.default)();
 };
 
 const getSize = (size?: Size) => {
-	switch (size) {
-		case "lg":
-			return tw`w-6 h-6`;
-		case "sm":
-			return tw`w-2 h-2`;
-		default:
-			return tw`w-5 h-5`;
-	}
+	const sizes = {
+		default: () => tw`w-5 h-5`,
+		lg: () => tw`w-6 h-6`,
+		sm: () => tw`w-2 h-2`,
+	};
+
+	// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+	return (sizes[size as keyof typeof sizes] || sizes.default)();
 };
 
 export interface BadgeStyleProperties {
@@ -61,7 +55,7 @@ export interface BadgeStyleProperties {
 	noShadow?: boolean;
 }
 export const getStyles = ({ position, size, noShadow }: BadgeStyleProperties) => [
-	...baseStyle(size, noShadow),
+	baseStyle(size, noShadow),
 	getPosition(position),
 	getSize(size),
 ];

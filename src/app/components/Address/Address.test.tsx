@@ -1,4 +1,5 @@
 import React from "react";
+import { Size } from "types";
 import { render } from "utils/testing-library";
 
 import { Address } from "./Address";
@@ -25,7 +26,9 @@ describe("Formatted Address", () => {
 	});
 
 	it.each(["sm", "lg", "xl"])("should render with size %s", (size) => {
-		const { getByTestId } = render(<Address address={sampleAddress} walletName="Sample Wallet" size={size} />);
+		const { getByTestId } = render(
+			<Address address={sampleAddress} walletName="Sample Wallet" size={size as Size} />,
+		);
 
 		expect(getByTestId("Address__alias")).toHaveClass(`text-${size}`);
 	});
