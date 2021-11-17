@@ -1,5 +1,5 @@
 import { GraphAnimation } from "app/components/Graphs/GraphHoverAnimation/GraphHoverAnimation.contract";
-import React, { useEffect, useMemo, useRef } from "react";
+import React, { useMemo } from "react";
 
 import { DonutGraphDataPoint } from "./DonutGraph.contracts";
 
@@ -116,39 +116,4 @@ const useDonutGraph = (data: DonutGraphDataPoint[], size: number): UseDonutGraph
 	};
 };
 
-interface UseContentInsideCircleResult {
-	ContentInsideCircle: React.VFC;
-}
-
-const useContentInsideCircle = (
-	renderFunction: (() => JSX.Element) | undefined,
-	size: number,
-): UseContentInsideCircleResult => {
-	console.log("re render");
-	const reference = useRef<HTMLDivElement | null>(null);
-
-	useEffect(() => {
-		const container = reference.current;
-
-		if (!container) {
-			return;
-		}
-
-		container.style.top = `${size}px`;
-		container.style.left = `${size}px`;
-	}, [size]);
-
-	if (!renderFunction) {
-		return { ContentInsideCircle: () => <></> };
-	}
-
-	const ContentInsideCircle: React.VFC = () => (
-		<div ref={reference} className="absolute">
-			{renderFunction()}
-		</div>
-	);
-
-	return { ContentInsideCircle };
-};
-
-export { useContentInsideCircle, useDonutGraph };
+export { useDonutGraph };

@@ -6,6 +6,7 @@ interface PortfolioBreakdownDetailsProperties {
 	assets: AssetItem[];
 	exchangeCurrency: string;
 	onClose: () => void;
+	balance: number;
 }
 
 interface AssetListItemProperties {
@@ -23,4 +24,15 @@ interface TooltipProperties {
 	dataPoint: DonutGraphDataPoint;
 }
 
-export type { AssetListItemProperties, AssetListProperties, PortfolioBreakdownDetailsProperties, TooltipProperties };
+interface BalanceProperties {
+	ticker: string;
+	value: number;
+}
+
+export type {
+	AssetListItemProperties,
+	AssetListProperties,
+	BalanceProperties,
+	PortfolioBreakdownDetailsProperties,
+	TooltipProperties,
+};

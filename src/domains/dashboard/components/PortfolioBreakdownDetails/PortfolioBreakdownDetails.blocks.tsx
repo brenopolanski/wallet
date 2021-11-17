@@ -7,7 +7,12 @@ import React, { useCallback, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Column, TableState } from "react-table";
 
-import { AssetListItemProperties, AssetListProperties, TooltipProperties } from "./PortfolioBreakdownDetails.contracts";
+import {
+	AssetListItemProperties,
+	AssetListProperties,
+	BalanceProperties,
+	TooltipProperties,
+} from "./PortfolioBreakdownDetails.contracts";
 
 const AssetListItem: React.VFC<AssetListItemProperties> = ({ asset, index, exchangeCurrency }) => {
 	const { isDarkMode } = useTheme();
@@ -103,4 +108,22 @@ const Tooltip: React.VFC<TooltipProperties> = ({ dataPoint: { color, data } }) =
 	</div>
 );
 
-export { AssetList, Tooltip };
+const Balance: React.VFC<BalanceProperties> = ({ ticker, value }) => {
+	const { t } = useTranslation();
+
+	return (
+		<div className="flex flex-col items-center justify-center space-y-2">
+			<span className="font-semibold text-sm text-theme-secondary-700 dark:text-theme-secondary-500">
+				{t("COMMON.YOUR_BALANCE")}
+			</span>
+			<h3 className="font-bold text-theme-secondary-900 dark:text-theme-secondary-200">
+				<Amount ticker={ticker} value={value} />
+			</h3>
+			<span className="font-semibold text-sm text-theme-secondary-700 dark:text-theme-secondary-500">
+				{ticker}
+			</span>
+		</div>
+	);
+};
+
+export { AssetList, Tooltip, Balance };

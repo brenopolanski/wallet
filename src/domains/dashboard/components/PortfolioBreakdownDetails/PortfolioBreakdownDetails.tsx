@@ -6,12 +6,13 @@ import { formatPercentage, getColor } from "domains/dashboard/components/Portfol
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
-import { AssetList, Tooltip } from "./PortfolioBreakdownDetails.blocks";
+import { AssetList, Tooltip, Balance } from "./PortfolioBreakdownDetails.blocks";
 import { PortfolioBreakdownDetailsProperties } from "./PortfolioBreakdownDetails.contracts";
 
 export const PortfolioBreakdownDetails: React.VFC<PortfolioBreakdownDetailsProperties> = ({
 	isOpen,
 	assets,
+	balance,
 	exchangeCurrency,
 	onClose,
 }) => {
@@ -67,7 +68,7 @@ export const PortfolioBreakdownDetails: React.VFC<PortfolioBreakdownDetailsPrope
 						]}
 						size={280}
 						renderTooltip={(dataPoint) => <Tooltip dataPoint={dataPoint} />}
-						renderContentInsideCircle={() => <text>Hello people</text>}
+						renderContentInsideCircle={() => <Balance value={balance} ticker={exchangeCurrency} />}
 					/>
 				</div>
 
