@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Graphs shared hooks useGraphWidth should return reference and width of the element where it is applied 1`] = `
+<DocumentFragment>
+  <div>
+    0
+  </div>
+</DocumentFragment>
+`;
