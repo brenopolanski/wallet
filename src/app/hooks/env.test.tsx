@@ -116,10 +116,11 @@ describe("useActiveProfile", () => {
 
 	it("should return undefined if wallet id is not provided in url", () => {
 		const consoleSpy = jest.spyOn(console, "error").mockImplementation(jest.fn());
+		let activeWallet: Contracts.IReadWriteWallet | undefined;
 		let activeWalletId: string | undefined;
 
 		const TestActiveWallet = () => {
-			const activeWallet = useActiveWalletWhenNeeded(false);
+			activeWallet = useActiveWalletWhenNeeded(false);
 			activeWalletId = activeWallet?.id();
 
 			return <TestWallet />;
@@ -137,6 +138,7 @@ describe("useActiveProfile", () => {
 			),
 		).toThrow("Failed to find a wallet for [1].");
 
+		expect(activeWallet).toBeUndefined();
 		expect(activeWalletId).toBeUndefined();
 
 		consoleSpy.mockRestore();
@@ -144,10 +146,11 @@ describe("useActiveProfile", () => {
 
 	it("should throw if wallet id is not provided in url", () => {
 		const consoleSpy = jest.spyOn(console, "error").mockImplementation(jest.fn());
+		let activeWallet: Contracts.IReadWriteWallet | undefined;
 		let activeWalletId: string | undefined;
 
 		const TestActiveWallet = () => {
-			const activeWallet = useActiveWalletWhenNeeded(true);
+			activeWallet = useActiveWalletWhenNeeded(true);
 			activeWalletId = activeWallet?.id();
 
 			return <TestWallet />;
@@ -165,6 +168,7 @@ describe("useActiveProfile", () => {
 			),
 		).toThrow("Failed to find a wallet for [1].");
 
+		expect(activeWallet).toBeUndefined();
 		expect(activeWalletId).toBeUndefined();
 
 		consoleSpy.mockRestore();
