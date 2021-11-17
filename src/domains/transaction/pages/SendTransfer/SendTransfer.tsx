@@ -158,9 +158,7 @@ export const SendTransfer: VFC = () => {
 		abortReference.current = new AbortController();
 
 		const { network, senderAddress } = getValues();
-		if (!network) {
-			return;
-		}
+		assertNetwork(network);
 		const senderWallet = activeProfile.wallets().findByAddressWithNetwork(senderAddress, network.id());
 
 		const nextStep = activeTab + 1;
