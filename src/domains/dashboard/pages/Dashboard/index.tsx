@@ -1,2 +1,2 @@
 export * from "./Dashboard";
-export * from "./models";
+export * from "./Dashboard.models";

@@ -1,11 +1,10 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { PluginController } from "plugins/core/plugin-controller";
-import { PluginServiceData } from "plugins/core/plugin-service";
+import { IPluginController, IPluginServiceData } from "plugins/core";
 
 interface MiddlewareContext {
 	profile: Contracts.IProfile;
-	plugin: PluginController;
-	service?: PluginServiceData;
+	plugin: IPluginController;
+	service?: IPluginServiceData;
 }
 
 type Rule<T = any> = (context: MiddlewareContext) => (result: T) => T | never;

@@ -1,5 +1,6 @@
 // @ts-ignore
 import Transport, { Observer } from "@ledgerhq/hw-transport";
+import { openTransportReplayer, RecordStore } from "@ledgerhq/hw-transport-mocker";
 import { TransportReplayer } from "@ledgerhq/hw-transport-mocker/lib/openTransportReplayer";
 import { ARK } from "@payvo/sdk-ark";
 import { Contracts, Environment } from "@payvo/sdk-profiles";
@@ -74,9 +75,9 @@ export function renderWithForm(
 		return <FormProvider {...form}>{component}</FormProvider>;
 	};
 
-	const renderResult: RenderResult = renderFunction(<Component />);
+	const utils: RenderResult = renderFunction(<Component />);
 
-	return { ...renderResult, form: () => form };
+	return { ...utils, form: () => form };
 }
 
 const renderWithRouter = (
@@ -308,9 +309,16 @@ export const defaultNetMocks = () => {
 
 export const useDefaultNetMocks = defaultNetMocks;
 
+export const getDefaultLedgerTransportReplayer = async () => await openTransportReplayer(RecordStore.fromString(""));
+
 const environmentWithMocks = () => {
 	defaultNetMocks();
-	return new Environment({ coins: { ARK }, httpClient, storage: new StubStorage() });
+	return new Environment({
+		coins: { ARK },
+		httpClient,
+		ledgerTransportFactory: getDefaultLedgerTransportReplayer,
+		storage: new StubStorage(),
+	});
 };
 
 export const env = environmentWithMocks();

@@ -20,7 +20,7 @@ describe("useWalletAlias", () => {
 	it("should return undefined alias when no wallet or contact or delegate was found", () => {
 		const { result } = renderHook(() => useWalletAlias(), { wrapper });
 
-		expect(result.current.getWalletAlias({ address: "wrong-address", profile })).toEqual({
+		expect(result.current.getWalletAlias({ address: "wrong-address", profile })).toStrictEqual({
 			alias: undefined,
 			isContact: false,
 			isDelegate: false,
@@ -57,7 +57,7 @@ describe("useWalletAlias", () => {
 
 		const { result } = renderHook(() => useWalletAlias(), { wrapper });
 
-		expect(result.current.getWalletAlias({ address: contactAddress.address(), profile })).toEqual({
+		expect(result.current.getWalletAlias({ address: contactAddress.address(), profile })).toStrictEqual({
 			alias: contact.name(),
 			isContact: true,
 			isDelegate: false,
@@ -73,7 +73,7 @@ describe("useWalletAlias", () => {
 				network: wallet.network(),
 				profile,
 			}),
-		).toEqual({
+		).toStrictEqual({
 			alias: wallet.displayName(),
 			isContact: false,
 			isDelegate: false,
@@ -93,7 +93,7 @@ describe("useWalletAlias", () => {
 				network: wallet.network(),
 				profile,
 			}),
-		).toEqual({
+		).toStrictEqual({
 			alias: wallet.displayName(),
 			isContact: false,
 			isDelegate: true,
@@ -116,7 +116,7 @@ describe("useWalletAlias", () => {
 				network: wallet.network(),
 				profile,
 			}),
-		).toEqual({
+		).toStrictEqual({
 			alias: delegate.username(),
 			isContact: false,
 			isDelegate: true,
@@ -141,7 +141,7 @@ describe("useWalletAlias", () => {
 				network: wallet.network(),
 				profile,
 			}),
-		).toEqual({
+		).toStrictEqual({
 			alias: "delegate username",
 			isContact: false,
 			isDelegate: true,

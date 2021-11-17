@@ -1,5 +1,5 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { PluginController, PluginManager } from "plugins/core";
+import { IPluginController, PluginController, PluginManager } from "plugins/core";
 import { PluginAPI } from "plugins/types";
 import { env, getDefaultProfileId } from "utils/testing-library";
 
@@ -14,7 +14,7 @@ const config = {
 describe("ProfilePluginService", () => {
 	let profile: Contracts.IProfile;
 	let manager: PluginManager;
-	let ctrl: PluginController;
+	let ctrl: IPluginController;
 
 	beforeEach(() => {
 		profile = env.profiles().findById(getDefaultProfileId());

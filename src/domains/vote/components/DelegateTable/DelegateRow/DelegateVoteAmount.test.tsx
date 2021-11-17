@@ -3,12 +3,12 @@ import { ReadOnlyWallet } from "@payvo/sdk-profiles/distribution/read-only-walle
 import { fireEvent } from "@testing-library/react";
 import { renderHook } from "@testing-library/react-hooks";
 import { translations as transactionTranslations } from "domains/transaction/i18n";
+import { VoteDelegateProperties } from "domains/vote/components/DelegateTable/DelegateTable.models";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { data } from "tests/fixtures/coins/ark/devnet/delegates.json";
 import { env, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
 
-import { VoteDelegateProperties } from "../DelegateTable.models";
 import { DelegateVoteAmount } from "./DelegateVoteAmount";
 
 let wallet: Contracts.IReadWriteWallet;

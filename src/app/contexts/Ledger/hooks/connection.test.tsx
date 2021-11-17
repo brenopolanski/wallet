@@ -3,6 +3,7 @@ import { LSK } from "@payvo/sdk-lsk";
 import { Contracts } from "@payvo/sdk-profiles";
 import { WalletData, WalletLedgerModel } from "@payvo/sdk-profiles/distribution/contracts";
 import { renderHook } from "@testing-library/react-hooks";
+import { minVersionList } from "app/contexts/Ledger/contracts";
 import { toasts } from "app/services";
 import { translations as walletTranslations } from "domains/wallet/i18n";
 import nock from "nock";
@@ -19,7 +20,6 @@ import {
 	waitFor,
 } from "utils/testing-library";
 
-import { minVersionList } from "../contracts";
 import { useLedgerConnection } from "./connection";
 
 const transport = getDefaultLedgerTransport();
@@ -27,8 +27,12 @@ const transport = getDefaultLedgerTransport();
 describe("Use Ledger Connection", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
-	let publicKeyPaths = new Map();
+	let publicKeyPaths: Map<string, string>;
 	let getVersionSpy: jest.SpyInstance;
+
+	beforeAll(() => {
+		publicKeyPaths = new Map<string, string>();
+	});
 
 	beforeEach(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
@@ -273,7 +277,6 @@ describe("Use Ledger Connection", () => {
 			getPublicKeySpy.mockReset();
 		});
 
-		//
 		it("should fail to connect with retries", async () => {
 			const getPublicKeySpy = jest
 				.spyOn(wallet.coin().ledger(), "getPublicKey")

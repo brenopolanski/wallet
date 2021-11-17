@@ -1,6 +1,7 @@
 import { Signatories } from "@payvo/sdk";
 import { Contracts, DTO } from "@payvo/sdk-profiles";
 import { LedgerProvider, minVersionList } from "app/contexts";
+import { translations } from "domains/transaction/i18n";
 import React from "react";
 import { Route } from "react-router-dom";
 import MultisignatureRegistrationFixture from "tests/fixtures/coins/ark/devnet/transactions/multisignature-registration.json";
@@ -17,7 +18,6 @@ import {
 	waitFor,
 } from "utils/testing-library";
 
-import { translations } from "../../i18n";
 import { MultiSignatureDetail } from "./MultiSignatureDetail";
 
 const passphrase = getDefaultWalletMnemonic();

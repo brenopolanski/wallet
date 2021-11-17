@@ -63,10 +63,10 @@ export const SignMessage = ({
 
 	const wallet = useMemo(() => profile.wallets().findById(walletId), [profile, walletId]);
 
-	const { abortConnectionRetry, connect, isConnected, hasDeviceAvailable, transport } = useLedgerContext();
+	const { abortConnectionRetry, connect, isConnected, hasDeviceAvailable } = useLedgerContext();
 
 	const abortReference = useRef(new AbortController());
-	const { sign } = useMessageSigner(transport);
+	const { sign } = useMessageSigner();
 
 	const isLedger = wallet.isLedger();
 

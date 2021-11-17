@@ -1,9 +1,9 @@
 import { Contracts } from "@payvo/sdk-profiles";
+import { translations } from "domains/transaction/i18n";
 import React from "react";
 import { Route } from "react-router-dom";
 import { env, getDefaultProfileId, render } from "utils/testing-library";
 
-import { translations as transactionTranslations } from "../../../i18n";
 import { TransactionRecipients } from "./TransactionRecipients";
 
 let profile: Contracts.IProfile;
@@ -18,7 +18,7 @@ describe("TransactionRecipients", () => {
 
 		const { container } = render(<TransactionRecipients currency="DARK" recipients={[{ address }]} />);
 
-		expect(container).toHaveTextContent(transactionTranslations.RECIPIENT);
+		expect(container).toHaveTextContent(translations.RECIPIENT);
 		expect(container).toHaveTextContent(address);
 
 		expect(container).toMatchSnapshot();
@@ -30,7 +30,7 @@ describe("TransactionRecipients", () => {
 
 		const { container } = render(<TransactionRecipients currency="DARK" recipients={[{ address, alias }]} />);
 
-		expect(container).toHaveTextContent(transactionTranslations.RECIPIENT);
+		expect(container).toHaveTextContent(translations.RECIPIENT);
 		expect(container).toHaveTextContent(address);
 		expect(container).toHaveTextContent(alias);
 
@@ -68,7 +68,7 @@ describe("TransactionRecipients", () => {
 			<TransactionRecipients currency="DARK" recipients={[{ address, isDelegate: true }]} />,
 		);
 
-		expect(container).toHaveTextContent(transactionTranslations.RECIPIENT);
+		expect(container).toHaveTextContent(translations.RECIPIENT);
 		expect(container).toHaveTextContent(address);
 
 		expect(container).toMatchSnapshot();

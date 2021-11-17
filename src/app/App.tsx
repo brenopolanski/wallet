@@ -135,40 +135,41 @@ const Main = () => {
 	);
 };
 
+export const initializeEnvironment = () => {
+	/* istanbul ignore next */
+	const storage = isE2E() || isUnit() ? new StubStorage() : "indexeddb";
+
+	return new Environment({
+		coins: {
+			// ADA,
+			ARK,
+			// ATOM,
+			// AVAX,
+			// BTC,
+			// DOT,
+			// ETH,
+			// EGLD,
+			LSK,
+			// NEO,
+			// NANO,
+			// LUNA,
+			// TRX,
+			// XLM,
+			// XRP,
+			// ZIL,
+		},
+		httpClient,
+		ledgerTransportFactory: async () => LedgerTransportNodeHID.open(),
+		storage,
+	});
+};
+
 export const App = () => {
 	/**
 	 * Ensure that the Environment object will not be recreated when the state changes,
 	 * as the data is stored in memory by the `DataRepository`.
 	 */
-
-	/* istanbul ignore next */
-	const storage = isE2E() || isUnit() ? new StubStorage() : "indexeddb";
-
-	const [environment] = useState(
-		() =>
-			new Environment({
-				coins: {
-					// ADA,
-					ARK,
-					// ATOM,
-					// AVAX,
-					// BTC,
-					// DOT,
-					// ETH,
-					// EGLD,
-					LSK,
-					// NEO,
-					// NANO,
-					// LUNA,
-					// TRX,
-					// XLM,
-					// XRP,
-					// ZIL,
-				},
-				httpClient,
-				storage,
-			}),
-	);
+	const [environment] = useState(() => initializeEnvironment());
 
 	return (
 		<I18nextProvider i18n={index18n}>

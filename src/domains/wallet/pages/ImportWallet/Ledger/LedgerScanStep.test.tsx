@@ -21,9 +21,11 @@ describe("LedgerScanStep", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
 	let transport: typeof Transport;
-	let publicKeyPaths = new Map();
+	let publicKeyPaths: Map<string, string>;
 
 	beforeAll(() => {
+		publicKeyPaths = new Map<string, string>();
+
 		nock("https://ark-test.payvo.com/api")
 			.get("/wallets")
 			.query((parameters) => !!parameters.address)

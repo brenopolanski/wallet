@@ -10,7 +10,7 @@ import {
 	waitFor,
 } from "utils/testing-library";
 
-import { ReceiveFundsForm } from ".";
+import { ReceiveFundsForm } from "./ReceiveFundsForm";
 
 let network: Networks.Network;
 

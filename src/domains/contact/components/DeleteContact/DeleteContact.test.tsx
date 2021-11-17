@@ -1,8 +1,8 @@
 import { Contracts } from "@payvo/sdk-profiles";
+import { translations } from "domains/contact/i18n";
 import React from "react";
 import { env, fireEvent, getDefaultProfileId, render, waitFor } from "utils/testing-library";
 
-import { translations } from "../../i18n";
 import { DeleteContact } from "./DeleteContact";
 
 let contact: Contracts.IContact;

@@ -19,8 +19,10 @@ import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 import { assertWallet } from "utils/assertions";
 
-import { FormStep, ReviewStep, SummaryStep } from ".";
+import { FormStep } from "./FormStep";
 import { IpfsLedgerReview } from "./LedgerReview";
+import { ReviewStep } from "./ReviewStep";
+import { SummaryStep } from "./SummaryStep";
 
 enum Step {
 	FormStep = 1,
@@ -46,7 +48,7 @@ export const SendIpfs = () => {
 
 	const form = useForm({ mode: "onChange" });
 
-	const { hasDeviceAvailable, isConnected, connect, transport } = useLedgerContext();
+	const { hasDeviceAvailable, isConnected, connect } = useLedgerContext();
 	const { clearErrors, formState, getValues, handleSubmit, register, setValue, watch } = form;
 	const { isDirty, isValid, isSubmitting } = formState;
 
@@ -114,7 +116,7 @@ export const SendIpfs = () => {
 		try {
 			if (activeWallet.isLedger()) {
 				await connect(activeProfile, activeWallet.coinId(), activeWallet.networkId());
-				await activeWallet.ledger().connect(transport);
+				await activeWallet.ledger().connect();
 			}
 
 			const abortSignal = abortReference.current?.signal;

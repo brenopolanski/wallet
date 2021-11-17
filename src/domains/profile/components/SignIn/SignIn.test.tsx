@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@payvo/sdk-profiles";
+import { translations } from "domains/profile/i18n";
 import React from "react";
 import {
 	act,
@@ -11,7 +12,6 @@ import {
 	waitFor,
 } from "utils/testing-library";
 
-import { translations } from "../../i18n";
 import { SignIn } from "./SignIn";
 
 let profile: Contracts.IProfile;

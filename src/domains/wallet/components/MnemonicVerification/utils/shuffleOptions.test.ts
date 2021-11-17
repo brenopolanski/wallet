@@ -9,7 +9,7 @@ describe("#shuffleOptions", () => {
 		const result1 = shuffleOptions({ limit, options, value });
 		const result2 = shuffleOptions({ limit, options, value });
 
-		expect(result1).not.toEqual(result2);
+		expect(result1).not.toStrictEqual(result2);
 	});
 
 	it("should contain the value", () => {
