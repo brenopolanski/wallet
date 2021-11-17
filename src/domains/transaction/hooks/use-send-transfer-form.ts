@@ -19,7 +19,7 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 	const activeProfile = useActiveProfile();
 	const networks = useNetworks();
 	const transactionBuilder = useTransactionBuilder();
-	const { transport, connect } = useLedgerContext();
+	const { connect } = useLedgerContext();
 	const { persist } = useEnvironmentContext();
 	const { hasAnyParameters, queryParameters } = useTransactionQueryParams();
 
