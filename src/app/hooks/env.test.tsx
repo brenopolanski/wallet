@@ -175,14 +175,6 @@ let networks: Networks.Network[];
 let wallets: Contracts.IReadWriteWallet[];
 
 describe("useNetworks", () => {
-	beforeEach(() => {
-		profile = env.profiles().findById(getDefaultProfileId());
-		wallets = profile.wallets().values();
-		networks = wallets
-			.map((wallet) => wallet.network())
-			.sort((a, b) => a.displayName().localeCompare(b.displayName()));
-	});
-
 	const TestNetworks = () => {
 		const networks = useNetworks();
 		return (
@@ -194,7 +186,14 @@ describe("useNetworks", () => {
 		);
 	};
 
-	it("should return networks", () => {
+	it.each([getDefaultProfileId(), getPasswordProtectedProfileId()])("should return networks", (profileId) => {
+		profile = env.profiles().findById(profileId);
+		wallets = profile.wallets().values();
+		networks = wallets
+			.map((wallet) => wallet.network())
+			.sort((a, b) => a.displayName().localeCompare(b.displayName()));
+		networks = [...new Set(networks)];
+
 		const { getByText } = render(
 			<Route path="/profiles/:profileId">
 				<TestNetworks />
