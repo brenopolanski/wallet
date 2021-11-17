@@ -96,7 +96,7 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 
 			if (wallet.isLedger()) {
 				await connect(activeProfile, wallet.coinId(), wallet.networkId());
-				await wallet.ledger().connect(transport);
+				await wallet.ledger().connect();
 			}
 
 			const abortSignal = abortReference.current.signal;
