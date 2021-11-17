@@ -114,7 +114,7 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 
 			return transaction;
 		},
-		[activeProfile, clearErrors, connect, getValues, persist, transactionBuilder, transport, wallet],
+		[activeProfile, clearErrors, connect, getValues, persist, transactionBuilder, wallet],
 	);
 
 	useEffect(() => {
