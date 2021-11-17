@@ -1,10 +1,10 @@
 import { styled } from "twin.macro";
 import { Size } from "types";
 
-import { getStyles } from "./Label.styles";
+import { ColorType, getStyles } from "./Label.styles";
 
-interface LabelProperties {
-	color?: "primary" | "success" | "danger" | "warning" | "neutral";
+export interface LabelProperties {
+	color?: ColorType;
 	size?: Size;
 	variant?: "solid";
 	noBorder?: boolean;

@@ -31,7 +31,7 @@ const useManager = (services: PluginService[], manager: PluginManager) => {
 		registryPlugins: [],
 	});
 	const [isFetchingPackages, setIsFetchingPackages] = useState(false);
-	const [updatingStats, setUpdatingStats] = useState<Record<string, any>>({});
+	const [updatingStats, setUpdatingStats] = useState<Record<string, ExtendedSerializedPluginConfigurationData>>({});
 	const [pluginRegistry] = useState(() => env.plugins());
 
 	const defaultFilters: { query?: string } = { query: "" };
@@ -254,7 +254,7 @@ const useManager = (services: PluginService[], manager: PluginManager) => {
 
 	const isRootRepositoryUrl = useCallback(
 		(url: string) => {
-			const matches = url.match(githubRepositoryRegex);
+			const matches = githubRepositoryRegex.exec(url);
 
 			return matches && matches[3] === undefined;
 		},
@@ -270,7 +270,7 @@ const useManager = (services: PluginService[], manager: PluginManager) => {
 					return { url };
 				}
 
-				const config = pluginPackages.find((pkg) => pkg.name() === plugin.id);
+				const config = pluginPackages.find((package_) => package_.name() === plugin.id);
 				url = config?.get<string>("archiveUrl");
 
 				if (url) {
@@ -283,7 +283,7 @@ const useManager = (services: PluginService[], manager: PluginManager) => {
 					return { url: `${repositoryURL}/archive/master.zip` };
 				}
 
-				const matches = repositoryURL.match(githubRepositoryRegex);
+				const matches = githubRepositoryRegex.exec(repositoryURL);
 
 				assertArray(matches);
 
@@ -332,7 +332,7 @@ const useManager = (services: PluginService[], manager: PluginManager) => {
 			let configurationURL = `${repositoryURL}/raw/master/package.json`;
 
 			if (!isRootRepositoryUrl(repositoryURL)) {
-				const matches = repositoryURL.match(githubRepositoryRegex);
+				const matches = githubRepositoryRegex.exec(repositoryURL);
 
 				assertArray(matches);
 
@@ -375,9 +375,9 @@ const useManager = (services: PluginService[], manager: PluginManager) => {
 	);
 
 	const updatePlugin = useCallback(
-		async (pluginData: SerializedPluginConfigurationData, profileId: string) => {
+		async (pluginData: ExtendedSerializedPluginConfigurationData, profileId: string) => {
 			// @ts-ignore
-			const listener = (_, value: SerializedPluginConfigurationData) => {
+			const listener = (_, value: ExtendedSerializedPluginConfigurationData) => {
 				if (value.name !== pluginData.id) {
 					return;
 				}
@@ -386,7 +386,7 @@ const useManager = (services: PluginService[], manager: PluginManager) => {
 
 			electron.ipcRenderer.on("plugin:download-progress", listener);
 
-			setUpdatingStats((previous) => ({ ...previous, [pluginData.id]: { percent: 0 } }));
+			setUpdatingStats((previous) => ({ ...previous, [pluginData.id]: { ...pluginData, percent: 0 } }));
 
 			try {
 				const { savedPath } = await downloadPlugin(pluginData);
@@ -395,11 +395,11 @@ const useManager = (services: PluginService[], manager: PluginManager) => {
 				setTimeout(() => {
 					setUpdatingStats((previous) => ({
 						...previous,
-						[pluginData.id]: { completed: true, failed: false },
+						[pluginData.id]: { ...pluginData, completed: true, failed: false },
 					}));
 				}, 1500);
 			} catch {
-				setUpdatingStats((previous) => ({ ...previous, [pluginData.id]: { failed: true } }));
+				setUpdatingStats((previous) => ({ ...previous, [pluginData.id]: { ...pluginData, failed: true } }));
 			} finally {
 				electron.ipcRenderer.removeListener("plugin:download-progress", listener);
 			}

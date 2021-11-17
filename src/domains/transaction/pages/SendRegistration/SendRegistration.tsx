@@ -91,17 +91,14 @@ export const SendRegistration = () => {
 	}, [activeWallet, env, setValue]);
 
 	useLayoutEffect(() => {
-		switch (registrationType) {
-			case "secondSignature": {
-				return setRegistrationForm(SecondSignatureRegistrationForm);
-			}
-			case "multiSignature": {
-				return setRegistrationForm(MultiSignatureRegistrationForm);
-			}
-			default: {
-				return setRegistrationForm(DelegateRegistrationForm);
-			}
-		}
+		const registrations = {
+			default: () => setRegistrationForm(DelegateRegistrationForm),
+			multiSignature: () => setRegistrationForm(MultiSignatureRegistrationForm),
+			secondSignature: () => setRegistrationForm(SecondSignatureRegistrationForm),
+		};
+
+		// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+		return (registrations[registrationType as keyof typeof registrations] || registrations.default)();
 	}, [registrationType]);
 
 	// Reset ledger authentication steps after reconnecting supported ledger

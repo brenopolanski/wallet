@@ -1,48 +1,44 @@
-import tw, { css } from "twin.macro";
+import tw from "twin.macro";
 
-const baseStyle = [tw`border-t border-solid`];
+import { DividerSizeProperties, DividerStylesProperties, DividerTypeProperties } from "./Divider";
 
-const getType = (type: string): any => {
-	switch (type) {
-		case "horizontal":
-			return tw`flex clear-both w-full min-w-full my-6`;
-		case "vertical":
-			return tw`relative inline-block align-middle border-t-0 border-l border-solid mx-2`;
-	}
-};
+const baseStyle = tw`border-t border-solid`;
 
-const getSize = (type: string, size: string): any => {
-	if (type === "vertical") {
-		switch (size) {
-			case "sm":
-				return tw`h-2`;
-			case "md":
-				return tw`h-5`;
-			case "lg":
-				return tw`h-8`;
-			default:
-				return tw`h-4`;
-		}
-	}
-};
-
-const isDashed = (dashed: boolean): any => {
-	if (dashed) {
-		return [
-			tw`border-dashed`,
-			css`
-				background: none;
-				border-width: 1px 0 0;
-			`,
-		];
+const getType = (type?: DividerTypeProperties) => {
+	if (type === "horizontal") {
+		return tw`flex clear-both w-full min-w-full my-6`;
 	}
 
-	return null;
+	return tw`relative inline-block align-middle border-t-0 border-l border-solid mx-2`;
 };
 
-export const getStyles = ({ size, type, dashed }: { size?: string; type?: string; dashed?: boolean }) => [
-	getSize(type!, size!),
-	...baseStyle,
-	getType(type!),
-	isDashed(dashed!),
+const getSize = (type?: DividerTypeProperties, size?: DividerSizeProperties) => {
+	if (type === "horizontal") {
+		return;
+	}
+
+	const sizes = {
+		default: () => tw`h-4`,
+		lg: () => tw`h-8`,
+		md: () => tw`h-5`,
+		sm: () => tw`h-2`,
+	};
+
+	// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+	return (sizes[size as keyof typeof sizes] || sizes.default)();
+};
+
+const isDashed = (dashed?: boolean) => {
+	if (!dashed) {
+		return;
+	}
+
+	return tw`border-dashed background[none]`;
+};
+
+export const getStyles = ({ size, type, dashed }: DividerStylesProperties) => [
+	getSize(type, size),
+	baseStyle,
+	getType(type),
+	isDashed(dashed),
 ];

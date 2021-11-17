@@ -365,7 +365,7 @@ exports[`WalletOverviewStep Render step should render 1`] = `
         </li>
       </ul>
       <div
-        class="Divider-sc-17ehhxk-0 ijjdey border-theme-secondary-300 dark:border-theme-secondary-800"
+        class="Divider-sc-17ehhxk-0 FRyyK border-theme-secondary-300 dark:border-theme-secondary-800"
         type="horizontal"
       />
       <div
@@ -448,7 +448,7 @@ exports[`WalletOverviewStep Render step should render 1`] = `
         </button>
       </div>
       <div
-        class="Divider-sc-17ehhxk-0 ijjdey border-theme-secondary-300 dark:border-theme-secondary-800"
+        class="Divider-sc-17ehhxk-0 FRyyK border-theme-secondary-300 dark:border-theme-secondary-800"
         type="horizontal"
       />
       <div
@@ -477,7 +477,7 @@ exports[`WalletOverviewStep Render step should render 1`] = `
                 class="Toggle__Handle-sc-6s3wfu-2 cobHFC"
               >
                 <span
-                  class="Toggle__HandleInner-sc-6s3wfu-3 klclKD"
+                  class="Toggle__HandleInner-sc-6s3wfu-3 ddepvC"
                 />
               </div>
             </label>

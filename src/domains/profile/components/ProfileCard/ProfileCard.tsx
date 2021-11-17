@@ -11,8 +11,8 @@ interface ProfileCardProperties {
 	className?: string;
 	profile: Contracts.IProfile;
 	showSettings?: boolean;
-	onClick?: any;
-	onSelect?: any;
+	onClick?: (profile: Contracts.IProfile) => void;
+	onSelect?: (option: DropdownOption) => void;
 }
 
 export const ProfileCard = ({

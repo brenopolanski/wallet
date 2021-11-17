@@ -55,47 +55,28 @@ export const TransactionDetailModal = ({
 		return { recipients, sender };
 	}, [getWalletAlias, profile, transactionItem]);
 
+	const transactionsDetail = {
+		default: () => undefined,
+		delegateRegistration: () => DelegateRegistrationDetail,
+		delegateResignation: () => DelegateResignationDetail,
+		ipfs: () => IpfsDetail,
+		magistrate: () => LegacyMagistrateDetail,
+		multiPayment: () => MultiPaymentDetail,
+		multiSignature: () => MultiSignatureRegistrationDetail,
+		secondSignature: () => SecondSignatureDetail,
+		transfer: () => TransferDetail,
+		unlockToken: () => UnlockTokenDetail,
+		unvote: () => VoteDetail,
+		vote: () => VoteDetail,
+		voteCombination: () => VoteDetail,
+	};
+
 	const transactionType = transactionItem.type();
 
-	let TransactionModal;
-
-	switch (transactionType) {
-		case "transfer":
-			TransactionModal = TransferDetail;
-			break;
-		case "multiSignature":
-			TransactionModal = MultiSignatureRegistrationDetail;
-			break;
-		case "multiPayment":
-			TransactionModal = MultiPaymentDetail;
-			break;
-		case "ipfs":
-			TransactionModal = IpfsDetail;
-			break;
-		case "delegateRegistration":
-			TransactionModal = DelegateRegistrationDetail;
-			break;
-		case "delegateResignation":
-			TransactionModal = DelegateResignationDetail;
-			break;
-		case "vote":
-		case "unvote":
-		case "voteCombination":
-			TransactionModal = VoteDetail;
-			break;
-		case "secondSignature":
-			TransactionModal = SecondSignatureDetail;
-			break;
-		case "magistrate":
-			TransactionModal = LegacyMagistrateDetail;
-			break;
-		case "unlockToken":
-			TransactionModal = UnlockTokenDetail;
-			break;
-
-		default:
-			break;
-	}
+	// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+	const TransactionModal = (
+		transactionsDetail[transactionType as keyof typeof transactionsDetail] || transactionsDetail.default
+	)();
 
 	if (!TransactionModal) {
 		throw new Error(`Transaction type [${transactionType}] is not supported.`);

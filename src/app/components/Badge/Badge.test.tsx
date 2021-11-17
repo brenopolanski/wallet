@@ -1,4 +1,5 @@
 import React from "react";
+import { Position, Size } from "types";
 import { render } from "utils/testing-library";
 
 import { Badge } from "./Badge";
@@ -19,14 +20,14 @@ describe("Badge", () => {
 	it.each(["top", "top-right", "right", "bottom-right", "bottom", "bottom-left", "left", "top-left"])(
 		"should render with position '%s'",
 		(position) => {
-			const { container } = render(<Badge icon="settings" position={position} />);
+			const { container } = render(<Badge icon="settings" position={position as Position} />);
 
 			expect(container).toMatchSnapshot();
 		},
 	);
 
 	it.each(["md", "lg"])("should render with size '%s'", (size) => {
-		const { container } = render(<Badge icon="settings" size={size} />);
+		const { container } = render(<Badge icon="settings" size={size as Size} />);
 
 		expect(container).toMatchSnapshot();
 	});

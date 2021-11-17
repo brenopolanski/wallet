@@ -11,6 +11,12 @@ type Address = string;
 
 export type WalletGenerationInput = PrivateKey | Mnemonic | WIF | Address;
 
+type ImportOptionsType = {
+	[key in OptionsValue]: () => Promise<Contracts.IReadWriteWallet>;
+} & {
+	default: () => undefined;
+};
+
 export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) => {
 	const { t } = useTranslation();
 
@@ -30,76 +36,68 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 			network: network.id(),
 		};
 
-		switch (type) {
-			case OptionsValue.BIP39:
-				return profile.wallets().push(
+		const importOptions: ImportOptionsType = {
+			[OptionsValue.BIP39]: async () =>
+				profile.wallets().push(
 					await profile.walletFactory().fromMnemonicWithBIP39({
 						...defaultOptions,
 						mnemonic: value,
 					}),
-				);
-
-			case OptionsValue.BIP44:
-				return profile.wallets().push(
+				),
+			[OptionsValue.BIP44]: async () =>
+				profile.wallets().push(
 					await profile.walletFactory().fromMnemonicWithBIP44({
 						...defaultOptions,
 						levels: { account: 0 },
 						mnemonic: value,
 					}),
-				);
-
-			case OptionsValue.BIP49:
-				return profile.wallets().push(
+				),
+			[OptionsValue.BIP49]: async () =>
+				profile.wallets().push(
 					await profile.walletFactory().fromMnemonicWithBIP49({
 						...defaultOptions,
 						levels: { account: 0 },
 						mnemonic: value,
 					}),
-				);
-
-			case OptionsValue.BIP84:
-				return profile.wallets().push(
+				),
+			[OptionsValue.BIP84]: async () =>
+				profile.wallets().push(
 					await profile.walletFactory().fromMnemonicWithBIP84({
 						...defaultOptions,
 						levels: { account: 0 },
 						mnemonic: value,
 					}),
-				);
-
-			case OptionsValue.ADDRESS:
-				return profile.wallets().push(
+				),
+			[OptionsValue.ADDRESS]: async () =>
+				profile.wallets().push(
 					await profile.walletFactory().fromAddress({
 						...defaultOptions,
 						address: value,
 					}),
-				);
-
-			case OptionsValue.PUBLIC_KEY:
-				return profile.wallets().push(
+				),
+			[OptionsValue.PUBLIC_KEY]: async () =>
+				profile.wallets().push(
 					await profile.walletFactory().fromPublicKey({
 						...defaultOptions,
 						publicKey: value,
 					}),
-				);
-
-			case OptionsValue.PRIVATE_KEY:
-				return profile.wallets().push(
+				),
+			[OptionsValue.PRIVATE_KEY]: async () =>
+				profile.wallets().push(
 					await profile.walletFactory().fromPrivateKey({
 						...defaultOptions,
 						privateKey: value,
 					}),
-				);
-
-			case OptionsValue.WIF:
-				return profile.wallets().push(
+				),
+			[OptionsValue.WIF]: async () =>
+				profile.wallets().push(
 					await profile.walletFactory().fromWIF({
 						...defaultOptions,
 						wif: value,
 					}),
-				);
-
-			case OptionsValue.ENCRYPTED_WIF:
-				return new Promise((resolve, reject) => {
+				),
+			[OptionsValue.ENCRYPTED_WIF]: async () =>
+				new Promise((resolve, reject) => {
 					// `setTimeout` being used here to avoid blocking the thread
 					// as the decryption is a expensive calculation
 					setTimeout(() => {
@@ -125,19 +123,19 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 								reject(error);
 							});
 					}, 0);
-				});
-
-			case OptionsValue.SECRET:
-				return profile.wallets().push(
+				}),
+			[OptionsValue.SECRET]: async () =>
+				profile.wallets().push(
 					await profile.walletFactory().fromSecret({
 						...defaultOptions,
 						secret: value,
 					}),
-				);
+				),
+			default: () => undefined,
+		};
 
-			default:
-				return;
-		}
+		// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+		return (importOptions[type as keyof typeof importOptions] || importOptions.default)();
 	};
 
 	return { importWalletByType };

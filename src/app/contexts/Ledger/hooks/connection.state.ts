@@ -1,5 +1,7 @@
 import { LedgerModel } from "app/hooks";
 
+import { Handlers, OfUnion } from "./reducer.contracts";
+
 interface State {
 	device?: {
 		path: string;
@@ -23,62 +25,49 @@ type Action =
 export const defaultConnectionState = { isBusy: false, isConnected: false, isWaiting: false };
 
 export const connectionReducer = (state: State, action: Action): State => {
-	switch (action.type) {
-		case "add":
-			return {
-				...state,
-				device: {
-					id: action.id as LedgerModel,
-					path: action.path,
-				},
-			};
-		case "remove":
-			return {
-				...state,
-				device: undefined,
-				isConnected: false,
-			};
-		case "connected":
-			return {
-				...state,
-				isBusy: false,
-				isConnected: true,
-				isWaiting: false,
-			};
-		case "busy": {
-			return {
-				...state,
-				isBusy: true,
-				isWaiting: false,
-			};
-		}
-		case "waiting": {
-			return {
-				...state,
-				error: undefined,
-				isBusy: false,
-				isWaiting: true,
-			};
-		}
-		case "disconnected": {
-			return {
-				...state,
-				isBusy: false,
-				isConnected: false,
-				isWaiting: false,
-			};
-		}
-		case "failed": {
-			return {
-				...state,
-				error: action.message,
-				isBusy: false,
-				isWaiting: false,
-			};
-		}
-		/* istanbul ignore next */
-		default: {
-			throw new Error();
-		}
-	}
+	const handlers: Handlers<OfUnion<Action>, State> = {
+		add: ({ id, path }) => ({
+			...state,
+			device: {
+				id: id as LedgerModel,
+				path: path,
+			},
+		}),
+		busy: () => ({
+			...state,
+			isBusy: true,
+			isWaiting: false,
+		}),
+		connected: () => ({
+			...state,
+			isBusy: false,
+			isConnected: true,
+			isWaiting: false,
+		}),
+		disconnected: () => ({
+			...state,
+			isBusy: false,
+			isConnected: false,
+			isWaiting: false,
+		}),
+		failed: ({ message }) => ({
+			...state,
+			error: message,
+			isBusy: false,
+			isWaiting: false,
+		}),
+		remove: () => ({
+			...state,
+			device: undefined,
+			isConnected: false,
+		}),
+		waiting: () => ({
+			...state,
+			error: undefined,
+			isBusy: false,
+			isWaiting: true,
+		}),
+	};
+
+	return handlers[action.type](action as any);
 };

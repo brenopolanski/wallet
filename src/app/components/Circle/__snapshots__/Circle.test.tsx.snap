@@ -11,7 +11,7 @@ exports[`Circle should render 1`] = `
 exports[`Circle should render as avatar 1`] = `
 <div>
   <div
-    class="Circle__CircleWrapper-sc-d5u41q-0 hCpKF ring-theme-background"
+    class="Circle__CircleWrapper-sc-d5u41q-0 kpHBSF ring-theme-background"
   />
 </div>
 `;
