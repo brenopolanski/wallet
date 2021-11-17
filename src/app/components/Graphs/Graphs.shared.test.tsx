@@ -1,9 +1,10 @@
 import { screen, waitFor } from "@testing-library/react";
+import { renderHook } from "@testing-library/react-hooks";
 import userEvent from "@testing-library/user-event";
-import { useGraphTooltip, useGraphWidth } from "app/components/Graphs/Graphs.shared";
 import React from "react";
 import { act, render } from "utils/testing-library";
-import { renderHook } from "@testing-library/react-hooks";
+
+import { useGraphTooltip, useGraphWidth } from "./Graphs.shared";
 
 describe("Graphs shared hooks", () => {
 	describe("useGraphWidth", () => {

@@ -1,0 +1,153 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DonutGraph.helpers useDonutGraph should plot data to svg circles needed to render the donut 1`] = `
+Object {
+  "backgroundCircle": Object {
+    "className": "fill-current text-theme-secondary-200 dark:text-black",
+    "cx": 50,
+    "cy": 50,
+    "fill": "inherit",
+    "r": 2,
+    "strokeLinecap": "round",
+    "strokeWidth": 0,
+  },
+  "circles": Array [
+    Object {
+      "animations": Array [
+        Object {
+          "attribute": "r",
+          "from": 18,
+          "to": 34,
+        },
+        Object {
+          "attribute": "stroke-dasharray",
+          "from": "36.548667764616276 76.54866776461628",
+          "to": "86.81415022205297 126.81415022205297",
+        },
+        Object {
+          "attribute": "stroke-dashoffset",
+          "from": 46.548667764616276,
+          "to": 96.81415022205297,
+        },
+      ],
+      "circleProperties": Object {
+        "className": "stroke-current text-theme-success-600",
+        "cx": 50,
+        "cy": 50,
+        "fill": "transparent",
+        "r": 18,
+        "strokeDasharray": "36.548667764616276 76.54866776461628",
+        "strokeDashoffset": 46.548667764616276,
+        "strokeLinecap": "round",
+        "strokeWidth": 16,
+      },
+    },
+    Object {
+      "animations": Array [
+        Object {
+          "attribute": "r",
+          "from": 18,
+          "to": 34,
+        },
+        Object {
+          "attribute": "stroke-dasharray",
+          "from": "13.929200658769766 99.1681348704628",
+          "to": "44.08849013323179 169.53981031087417",
+        },
+        Object {
+          "attribute": "stroke-dashoffset",
+          "from": 80.47786842338604,
+          "to": 160.90264035528475,
+        },
+      ],
+      "circleProperties": Object {
+        "className": "stroke-current text-theme-warning-600",
+        "cx": 50,
+        "cy": 50,
+        "fill": "transparent",
+        "r": 18,
+        "strokeDasharray": "13.929200658769766 99.1681348704628",
+        "strokeDashoffset": 80.47786842338604,
+        "strokeLinecap": "round",
+        "strokeWidth": 16,
+      },
+    },
+    Object {
+      "animations": Array [
+        Object {
+          "attribute": "r",
+          "from": 18,
+          "to": 34,
+        },
+        Object {
+          "attribute": "stroke-dasharray",
+          "from": "2.6194671058465104 110.47786842338604",
+          "to": "22.725660088821186 190.90264035528475",
+        },
+        Object {
+          "attribute": "stroke-dashoffset",
+          "from": 103.09733552923255,
+          "to": 203.62830044410595,
+        },
+      ],
+      "circleProperties": Object {
+        "className": "stroke-current text-theme-info-600",
+        "cx": 50,
+        "cy": 50,
+        "fill": "transparent",
+        "r": 18,
+        "strokeDasharray": "2.6194671058465104 110.47786842338604",
+        "strokeDashoffset": 103.09733552923255,
+        "strokeLinecap": "round",
+        "strokeWidth": 16,
+      },
+    },
+  ],
+}
+`;
+
+exports[`DonutGraph.helpers useDonutGraph should plot data to svg circles needed to render the donut 2`] = `
+Object {
+  "backgroundCircle": Object {
+    "className": "fill-current text-theme-secondary-200 dark:text-black",
+    "cx": 50,
+    "cy": 50,
+    "fill": "inherit",
+    "r": 2,
+    "strokeLinecap": "round",
+    "strokeWidth": 0,
+  },
+  "circles": Array [
+    Object {
+      "animations": Array [
+        Object {
+          "attribute": "r",
+          "from": 18,
+          "to": 34,
+        },
+        Object {
+          "attribute": "stroke-dasharray",
+          "from": "113.09733552923255 0",
+          "to": "213.62830044410595 0",
+        },
+        Object {
+          "attribute": "stroke-dashoffset",
+          "from": 113.09733552923255,
+          "to": 213.62830044410595,
+        },
+      ],
+      "circleProperties": Object {
+        "className": "stroke-current text-theme-success-600",
+        "cx": 50,
+        "cy": 50,
+        "fill": "transparent",
+        "r": 18,
+        "strokeDasharray": "113.09733552923255 0",
+        "strokeDashoffset": 113.09733552923255,
+        "strokeLinecap": "round",
+        "strokeWidth": 16,
+      },
+    },
+  ],
+}
+`;
