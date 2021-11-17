@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
+import LedgerTransportNodeHID from "@ledgerhq/hw-transport-node-hid-singleton";
 import { Bcrypt } from "@payvo/sdk-cryptography";
 import { Contracts, Environment } from "@payvo/sdk-profiles";
 import { buildTranslations } from "app/i18n/helpers";
@@ -19,7 +20,7 @@ import {
 	waitFor,
 } from "utils/testing-library";
 
-import { App } from "./App";
+import { App, initializeEnvironment } from "./App";
 
 let profile: Contracts.IProfile;
 let passwordProtectedProfile: Contracts.IProfile;
@@ -361,5 +362,36 @@ describe("App", () => {
 
 		const profileDashboardUrl = `/profiles/${passwordProtectedProfile.id()}/dashboard`;
 		await waitFor(() => expect(history.location.pathname).toBe(profileDashboardUrl));
+	});
+
+	it("should initialize environment with ledger transport", async () => {
+		const transport = await LedgerTransportNodeHID.open();
+		let isLedgerTransportNodeHIDCalled = false;
+
+		const transportMock = jest.spyOn(LedgerTransportNodeHID, "open").mockImplementation(async () => {
+			isLedgerTransportNodeHIDCalled = true;
+			return transport;
+		});
+
+		process.env.REACT_APP_IS_UNIT = "1";
+
+		const appEnv = initializeEnvironment();
+		const profile = appEnv.profiles().create("John Doe");
+
+		const wallet = await profile.walletFactory().fromMnemonicWithBIP39({
+			coin: "ARK",
+			mnemonic: MNEMONICS[0],
+			network: "ark.devnet",
+		});
+
+		profile.wallets().push(wallet);
+
+		const isLedgerMock = jest.spyOn(wallet, "isLedger").mockReturnValue(true);
+		wallet.ledger().connect();
+
+		expect(isLedgerTransportNodeHIDCalled).toBe(true);
+
+		isLedgerMock.mockRestore();
+		transportMock.mockRestore();
 	});
 });

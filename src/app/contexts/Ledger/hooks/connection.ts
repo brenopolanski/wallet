@@ -103,7 +103,7 @@ export const useLedgerConnection = (transport: typeof LedgerTransportNodeHID) =>
 					}
 
 					await instance.__construct();
-					await instance.ledger().connect(transport);
+					await instance.ledger().connect();
 
 					if (minVersionList[coin]) {
 						const currentVersion = await instance.ledger().getVersion();
@@ -138,7 +138,7 @@ export const useLedgerConnection = (transport: typeof LedgerTransportNodeHID) =>
 				throw connectError;
 			}
 		},
-		[t, transport],
+		[t],
 	);
 
 	const disconnect = useCallback(async (coin: Coins.Coin) => {

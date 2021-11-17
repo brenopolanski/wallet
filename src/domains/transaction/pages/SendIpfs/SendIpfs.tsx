@@ -46,7 +46,7 @@ export const SendIpfs = () => {
 
 	const form = useForm({ mode: "onChange" });
 
-	const { hasDeviceAvailable, isConnected, connect, transport } = useLedgerContext();
+	const { hasDeviceAvailable, isConnected, connect } = useLedgerContext();
 	const { clearErrors, formState, getValues, handleSubmit, register, setValue, watch } = form;
 	const { isDirty, isValid, isSubmitting } = formState;
 
@@ -114,7 +114,7 @@ export const SendIpfs = () => {
 		try {
 			if (activeWallet.isLedger()) {
 				await connect(activeProfile, activeWallet.coinId(), activeWallet.networkId());
-				await activeWallet.ledger().connect(transport);
+				await activeWallet.ledger().connect();
 			}
 
 			const abortSignal = abortReference.current?.signal;

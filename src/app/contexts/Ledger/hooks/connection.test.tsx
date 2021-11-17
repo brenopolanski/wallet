@@ -273,7 +273,6 @@ describe("Use Ledger Connection", () => {
 			getPublicKeySpy.mockReset();
 		});
 
-		//
 		it("should fail to connect with retries", async () => {
 			const getPublicKeySpy = jest
 				.spyOn(wallet.coin().ledger(), "getPublicKey")

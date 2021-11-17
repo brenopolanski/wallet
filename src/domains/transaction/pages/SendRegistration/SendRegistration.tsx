@@ -45,7 +45,7 @@ export const SendRegistration = () => {
 	const { sendMultiSignature, abortReference } = useMultiSignatureRegistration();
 	const { common } = useValidation();
 
-	const { hasDeviceAvailable, isConnected, connect, transport, ledgerDevice } = useLedgerContext();
+	const { hasDeviceAvailable, isConnected, connect, ledgerDevice } = useLedgerContext();
 
 	const { isLedgerModelSupported } = useLedgerModelStatus({
 		connectedModel: ledgerDevice?.id,
@@ -142,7 +142,7 @@ export const SendRegistration = () => {
 
 			if (activeWallet.isLedger()) {
 				await connect(activeProfile, activeWallet.coinId(), activeWallet.networkId());
-				await activeWallet.ledger().connect(transport);
+				await activeWallet.ledger().connect();
 			}
 
 			const signatory = await activeWallet.signatoryFactory().make({

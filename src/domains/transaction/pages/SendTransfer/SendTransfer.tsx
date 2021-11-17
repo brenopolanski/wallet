@@ -103,7 +103,7 @@ export const SendTransfer = () => {
 	const { senderAddress, fees, fee, remainingBalance, amount, isSendAllSelected, network } = watch();
 	const { sendTransfer, common } = useValidation();
 
-	const { hasDeviceAvailable, isConnected, transport, connect } = useLedgerContext();
+	const { hasDeviceAvailable, isConnected, connect } = useLedgerContext();
 
 	const [lastEstimatedExpiration, setLastEstimatedExpiration] = useState<number | undefined>();
 	const abortReference = useRef(new AbortController());
@@ -288,7 +288,7 @@ export const SendTransfer = () => {
 
 			if (wallet.isLedger()) {
 				await connect(activeProfile, wallet.coinId(), wallet.networkId());
-				await wallet.ledger().connect(transport);
+				await wallet.ledger().connect();
 			}
 
 			const abortSignal = abortReference.current?.signal;

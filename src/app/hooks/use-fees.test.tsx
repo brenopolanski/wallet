@@ -34,7 +34,12 @@ describe("useFees", () => {
 	});
 
 	it("should ensure fees are synced before find", async () => {
-		env.reset({ coins: { ARK }, httpClient, storage: new StubStorage() });
+		env.reset({
+			coins: { ARK },
+			httpClient,
+			ledgerTransportFactory: async () => {},
+			storage: new StubStorage(),
+		});
 
 		const profile = env.profiles().create("John Doe");
 		await env.profiles().restore(profile);
@@ -61,7 +66,12 @@ describe("useFees", () => {
 	});
 
 	it("should retry find fees by type", async () => {
-		env.reset({ coins: { ARK }, httpClient, storage: new StubStorage() });
+		env.reset({
+			coins: { ARK },
+			httpClient,
+			ledgerTransportFactory: async () => {},
+			storage: new StubStorage(),
+		});
 
 		const mockFind = jest.spyOn(env.fees(), "findByType").mockImplementationOnce(() => {
 			throw new Error("test");
@@ -94,7 +104,12 @@ describe("useFees", () => {
 	});
 
 	it("should calculate and return multisignature fees with one participant", async () => {
-		env.reset({ coins: { ARK }, httpClient, storage: new StubStorage() });
+		env.reset({
+			coins: { ARK },
+			httpClient,
+			ledgerTransportFactory: async () => {},
+			storage: new StubStorage(),
+		});
 
 		const profile = env.profiles().create("John Doe");
 		await env.profiles().restore(profile);
@@ -128,7 +143,12 @@ describe("useFees", () => {
 	});
 
 	it("should calculate and return multisignature fees with two participants", async () => {
-		env.reset({ coins: { ARK }, httpClient, storage: new StubStorage() });
+		env.reset({
+			coins: { ARK },
+			httpClient,
+			ledgerTransportFactory: async () => {},
+			storage: new StubStorage(),
+		});
 
 		const profile = env.profiles().create("John Doe");
 		await env.profiles().restore(profile);
@@ -176,7 +196,12 @@ describe("useFees", () => {
 	});
 
 	it("should calculate and return fees when feeType is size", async () => {
-		env.reset({ coins: { LSK }, httpClient, storage: new StubStorage() });
+		env.reset({
+			coins: { LSK },
+			httpClient,
+			ledgerTransportFactory: async () => {},
+			storage: new StubStorage(),
+		});
 
 		const profile = env.profiles().create("John Doe");
 		await env.profiles().restore(profile);
@@ -218,7 +243,12 @@ describe("useFees", () => {
 	});
 
 	it("should return a default value when error is thrown in the calculation", async () => {
-		env.reset({ coins: { LSK }, httpClient, storage: new StubStorage() });
+		env.reset({
+			coins: { LSK },
+			httpClient,
+			ledgerTransportFactory: async () => {},
+			storage: new StubStorage(),
+		});
 
 		const profile = env.profiles().create("John Doe");
 		await env.profiles().restore(profile);
