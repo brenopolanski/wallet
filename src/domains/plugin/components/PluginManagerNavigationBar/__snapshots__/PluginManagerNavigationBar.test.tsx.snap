@@ -13,7 +13,7 @@ exports[`PluginManagerNavigationBar should render 1`] = `
         class="-mx-6 w-full"
       >
         <div
-          class="Tabs__TabList-sc-1t8sbwb-1 hePfVa w-full h-18"
+          class="Tabs__TabList-sc-1t8sbwb-1 kukgZl w-full h-18"
         >
           <button
             aria-selected="true"
@@ -165,7 +165,7 @@ exports[`PluginManagerNavigationBar should update selected 1`] = `
         class="-mx-6 w-full"
       >
         <div
-          class="Tabs__TabList-sc-1t8sbwb-1 hePfVa w-full h-18"
+          class="Tabs__TabList-sc-1t8sbwb-1 kukgZl w-full h-18"
         >
           <button
             aria-selected="true"

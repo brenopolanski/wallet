@@ -6,7 +6,7 @@ exports[`Transactions should fetch more transactions 1`] = `
     class="mb-8"
   >
     <div
-      class="Tabs__TabList-sc-1t8sbwb-1 iruNrk w-full h-15"
+      class="Tabs__TabList-sc-1t8sbwb-1 hpBTif w-full h-15"
     >
       <button
         aria-selected="true"
@@ -1606,7 +1606,7 @@ exports[`Transactions should fetch more transactions 1`] = `
     </div>
   </div>
   <button
-    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc mt-10 mb-5 w-full"
+    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk mt-10 mb-5 w-full"
     data-testid="transactions__fetch-more-button"
     type="button"
   >
@@ -1625,7 +1625,7 @@ exports[`Transactions should hide view more button when there are no next pages 
     class="mb-8"
   >
     <div
-      class="Tabs__TabList-sc-1t8sbwb-1 iruNrk w-full h-15"
+      class="Tabs__TabList-sc-1t8sbwb-1 hpBTif w-full h-15"
     >
       <button
         aria-selected="true"
@@ -2549,7 +2549,7 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
     class="mb-8"
   >
     <div
-      class="Tabs__TabList-sc-1t8sbwb-1 iruNrk w-full h-15"
+      class="Tabs__TabList-sc-1t8sbwb-1 hpBTif w-full h-15"
     >
       <button
         aria-selected="true"
@@ -3473,7 +3473,7 @@ exports[`Transactions should render 1`] = `
     class="mb-8"
   >
     <div
-      class="Tabs__TabList-sc-1t8sbwb-1 iruNrk w-full h-15"
+      class="Tabs__TabList-sc-1t8sbwb-1 hpBTif w-full h-15"
     >
       <button
         aria-selected="true"
@@ -4410,7 +4410,7 @@ exports[`Transactions should render with custom title 1`] = `
     class="mb-8"
   >
     <div
-      class="Tabs__TabList-sc-1t8sbwb-1 iruNrk w-full h-15"
+      class="Tabs__TabList-sc-1t8sbwb-1 hpBTif w-full h-15"
     >
       <button
         aria-selected="true"
@@ -5334,7 +5334,7 @@ exports[`Transactions should update wallet filters 1`] = `
     class="mb-8"
   >
     <div
-      class="Tabs__TabList-sc-1t8sbwb-1 iruNrk w-full h-15"
+      class="Tabs__TabList-sc-1t8sbwb-1 hpBTif w-full h-15"
     >
       <button
         aria-selected="false"

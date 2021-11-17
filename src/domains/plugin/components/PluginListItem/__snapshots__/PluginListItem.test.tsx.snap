@@ -90,7 +90,7 @@ exports[`PluginListItem should render 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc flex-1"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk flex-1"
               data-testid="PluginListItem__install"
               type="button"
             >
@@ -207,7 +207,7 @@ exports[`PluginListItem should render official icon 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc flex-1"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk flex-1"
               data-testid="PluginListItem__install"
               type="button"
             >
@@ -315,7 +315,7 @@ exports[`PluginListItem should trigger install 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc flex-1"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk flex-1"
               data-testid="PluginListItem__install"
               type="button"
             >

@@ -160,7 +160,7 @@ exports[`Add Participant should fail if cannot find the address remotely 1`] = `
         </div>
       </fieldset>
       <button
-        class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc my-4 w-full"
+        class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk my-4 w-full"
         type="button"
       >
         <div
@@ -297,7 +297,7 @@ exports[`Add Participant should fail if cannot find the address remotely 1`] = `
                     class="inline-block"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 dQCpEO"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 kkDhXe"
                       data-testid="recipient-list__remove-recipient"
                       disabled=""
                       type="button"
@@ -492,7 +492,7 @@ exports[`Add Participant should fail to find 1`] = `
         </div>
       </fieldset>
       <button
-        class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc my-4 w-full"
+        class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk my-4 w-full"
         type="button"
       >
         <div
@@ -629,7 +629,7 @@ exports[`Add Participant should fail to find 1`] = `
                     class="inline-block"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 dQCpEO"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 kkDhXe"
                       data-testid="recipient-list__remove-recipient"
                       disabled=""
                       type="button"
@@ -897,7 +897,7 @@ exports[`Add Participant should fail with a duplicate address 1`] = `
         </div>
       </fieldset>
       <button
-        class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc my-4 w-full"
+        class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk my-4 w-full"
         type="button"
       >
         <div
@@ -1023,7 +1023,7 @@ exports[`Add Participant should fail with a duplicate address 1`] = `
                     class="inline-block"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 dQCpEO"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 kkDhXe"
                       data-testid="recipient-list__remove-recipient"
                       disabled=""
                       type="button"
@@ -1218,7 +1218,7 @@ exports[`Add Participant should fail with cold wallet 1`] = `
         </div>
       </fieldset>
       <button
-        class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc my-4 w-full"
+        class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk my-4 w-full"
         type="button"
       >
         <div
@@ -1355,7 +1355,7 @@ exports[`Add Participant should fail with cold wallet 1`] = `
                     class="inline-block"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 dQCpEO"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 kkDhXe"
                       data-testid="recipient-list__remove-recipient"
                       disabled=""
                       type="button"
@@ -1507,7 +1507,7 @@ exports[`Add Participant should render custom participants 1`] = `
         </div>
       </fieldset>
       <button
-        class="OriginalButton__StyledButton-sc-o0fs2j-0 dQCpEO my-4 w-full"
+        class="OriginalButton__StyledButton-sc-o0fs2j-0 kkDhXe my-4 w-full"
         disabled=""
         type="button"
       >
@@ -1634,7 +1634,7 @@ exports[`Add Participant should render custom participants 1`] = `
                     class="inline-block"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 dhaLpP"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 fxPCrX"
                       data-testid="recipient-list__remove-recipient"
                       type="button"
                     >
@@ -1888,7 +1888,7 @@ exports[`Add Participant should work with an imported wallet 1`] = `
         </div>
       </fieldset>
       <button
-        class="OriginalButton__StyledButton-sc-o0fs2j-0 dQCpEO my-4 w-full"
+        class="OriginalButton__StyledButton-sc-o0fs2j-0 kkDhXe my-4 w-full"
         disabled=""
         type="button"
       >
@@ -2026,7 +2026,7 @@ exports[`Add Participant should work with an imported wallet 1`] = `
                     class="inline-block"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 dQCpEO"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 kkDhXe"
                       data-testid="recipient-list__remove-recipient"
                       disabled=""
                       type="button"
@@ -2113,7 +2113,7 @@ exports[`Add Participant should work with an imported wallet 1`] = `
                     class="inline-block"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 dhaLpP"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 fxPCrX"
                       data-testid="recipient-list__remove-recipient"
                       type="button"
                     >

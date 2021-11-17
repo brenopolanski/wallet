@@ -59,7 +59,7 @@ exports[`UnlockTokensRow should render with isReady = false 1`] = `
                 </div>
               </div>
               <input
-                class="Checkbox-sc-1aq7nos-0 dZJFYi"
+                class="Checkbox-sc-1aq7nos-0 gdmzcT"
                 color="success"
                 disabled=""
                 type="checkbox"
@@ -133,7 +133,7 @@ exports[`UnlockTokensRow should render with isReady = true 1`] = `
               </div>
               <input
                 checked=""
-                class="Checkbox-sc-1aq7nos-0 dZJFYi"
+                class="Checkbox-sc-1aq7nos-0 gdmzcT"
                 color="success"
                 type="checkbox"
               />

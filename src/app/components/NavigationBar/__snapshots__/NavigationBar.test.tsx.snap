@@ -113,7 +113,7 @@ exports[`NavigationBar should render full variant when profile restored is false
                   class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                     data-testid="navbar__buttons--notifications"
                     type="button"
                   >
@@ -152,7 +152,7 @@ exports[`NavigationBar should render full variant when profile restored is false
               class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 nnGbn"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 lcpndT"
                 data-testid="navbar__buttons--send"
                 disabled=""
                 type="button"
@@ -183,7 +183,7 @@ exports[`NavigationBar should render full variant when profile restored is false
               class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 nnGbn"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 lcpndT"
                 data-testid="navbar__buttons--receive"
                 disabled=""
                 type="button"
@@ -356,7 +356,7 @@ exports[`NavigationBar should render full variant when profile restored is true 
                   class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                     data-testid="navbar__buttons--notifications"
                     type="button"
                   >
@@ -395,7 +395,7 @@ exports[`NavigationBar should render full variant when profile restored is true 
               class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                 data-testid="navbar__buttons--send"
                 type="button"
               >
@@ -425,7 +425,7 @@ exports[`NavigationBar should render full variant when profile restored is true 
               class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                 data-testid="navbar__buttons--receive"
                 type="button"
               >
@@ -593,7 +593,7 @@ exports[`NavigationBar should render with custom menu 1`] = `
                   class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                     data-testid="navbar__buttons--notifications"
                     type="button"
                   >
@@ -632,7 +632,7 @@ exports[`NavigationBar should render with custom menu 1`] = `
               class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                 data-testid="navbar__buttons--send"
                 type="button"
               >
@@ -662,7 +662,7 @@ exports[`NavigationBar should render with custom menu 1`] = `
               class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                 data-testid="navbar__buttons--receive"
                 type="button"
               >
@@ -830,7 +830,7 @@ exports[`NavigationBar should render with shadow if there is a scroll 1`] = `
                   class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                     data-testid="navbar__buttons--notifications"
                     type="button"
                   >
@@ -869,7 +869,7 @@ exports[`NavigationBar should render with shadow if there is a scroll 1`] = `
               class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                 data-testid="navbar__buttons--send"
                 type="button"
               >
@@ -899,7 +899,7 @@ exports[`NavigationBar should render with shadow if there is a scroll 1`] = `
               class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                 data-testid="navbar__buttons--receive"
                 type="button"
               >
@@ -1072,7 +1072,7 @@ exports[`NavigationBar should render with title 1`] = `
                   class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                     data-testid="navbar__buttons--notifications"
                     type="button"
                   >
@@ -1111,7 +1111,7 @@ exports[`NavigationBar should render with title 1`] = `
               class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                 data-testid="navbar__buttons--send"
                 type="button"
               >
@@ -1141,7 +1141,7 @@ exports[`NavigationBar should render with title 1`] = `
               class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                 data-testid="navbar__buttons--receive"
                 type="button"
               >

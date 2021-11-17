@@ -117,7 +117,7 @@ exports[`UnlockTokensSelect should render 1`] = `
                       Status
                     </span>
                     <input
-                      class="Checkbox-sc-1aq7nos-0 dZJFYi"
+                      class="Checkbox-sc-1aq7nos-0 gdmzcT"
                       color="success"
                       type="checkbox"
                     />
@@ -184,7 +184,7 @@ exports[`UnlockTokensSelect should render 1`] = `
                       </div>
                     </div>
                     <input
-                      class="Checkbox-sc-1aq7nos-0 dZJFYi"
+                      class="Checkbox-sc-1aq7nos-0 gdmzcT"
                       color="success"
                       type="checkbox"
                     />
@@ -247,7 +247,7 @@ exports[`UnlockTokensSelect should render 1`] = `
                       </div>
                     </div>
                     <input
-                      class="Checkbox-sc-1aq7nos-0 dZJFYi"
+                      class="Checkbox-sc-1aq7nos-0 gdmzcT"
                       color="success"
                       type="checkbox"
                     />
@@ -310,7 +310,7 @@ exports[`UnlockTokensSelect should render 1`] = `
                       </div>
                     </div>
                     <input
-                      class="Checkbox-sc-1aq7nos-0 dZJFYi"
+                      class="Checkbox-sc-1aq7nos-0 gdmzcT"
                       color="success"
                       disabled=""
                       type="checkbox"
@@ -374,7 +374,7 @@ exports[`UnlockTokensSelect should render 1`] = `
                       </div>
                     </div>
                     <input
-                      class="Checkbox-sc-1aq7nos-0 dZJFYi"
+                      class="Checkbox-sc-1aq7nos-0 gdmzcT"
                       color="success"
                       disabled=""
                       type="checkbox"
@@ -446,7 +446,7 @@ exports[`UnlockTokensSelect should render 1`] = `
     class="flex justify-end space-x-3"
   >
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
       type="button"
     >
       <div
@@ -456,7 +456,7 @@ exports[`UnlockTokensSelect should render 1`] = `
       </div>
     </button>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 dQCpEO"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 kkDhXe"
       disabled=""
       type="button"
     >
@@ -508,7 +508,7 @@ exports[`UnlockTokensSelect should render empty 1`] = `
     class="flex justify-end space-x-3"
   >
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
       type="button"
     >
       <div
@@ -518,7 +518,7 @@ exports[`UnlockTokensSelect should render empty 1`] = `
       </div>
     </button>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 dQCpEO"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 kkDhXe"
       disabled=""
       type="button"
     >

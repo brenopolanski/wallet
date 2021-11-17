@@ -49,7 +49,7 @@ exports[`SelectProfileImage should handle upload file 1`] = `
           class="absolute z-20 -top-3 -right-3 "
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jCXOtI flex justify-center items-center p-1 w-6 h-6"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 cHoyFs flex justify-center items-center p-1 w-6 h-6"
             data-testid="SelectProfileImage__remove-button"
             type="button"
           >
@@ -123,7 +123,7 @@ exports[`SelectProfileImage should not allow to upload an invalid file image 1`]
           class="absolute z-20 -top-3 -right-3 "
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jCXOtI flex justify-center items-center p-1 w-6 h-6"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 cHoyFs flex justify-center items-center p-1 w-6 h-6"
             data-testid="SelectProfileImage__remove-button"
             type="button"
           >
@@ -197,7 +197,7 @@ exports[`SelectProfileImage should not handle upload file 1`] = `
           class="absolute z-20 -top-3 -right-3 "
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jCXOtI flex justify-center items-center p-1 w-6 h-6"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 cHoyFs flex justify-center items-center p-1 w-6 h-6"
             data-testid="SelectProfileImage__remove-button"
             type="button"
           >
@@ -245,7 +245,7 @@ exports[`SelectProfileImage should render 1`] = `
             class="SelectProfileImage__UploadButtonWrapper-sc-vg16mg-0 hUQFjg"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
               data-testid="SelectProfileImage__upload-button"
               type="button"
             >
@@ -374,7 +374,7 @@ exports[`SelectProfileImage should render without value svg 1`] = `
           class="absolute z-20 -top-3 -right-3 "
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jCXOtI flex justify-center items-center p-1 w-6 h-6"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 cHoyFs flex justify-center items-center p-1 w-6 h-6"
             data-testid="SelectProfileImage__remove-button"
             type="button"
           >

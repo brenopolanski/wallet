@@ -755,7 +755,7 @@ exports[`DelegateTable loading state for base should render when isCompact = fal
             data-testid="DelegateTable__continue--wrapper"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 dQCpEO"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 kkDhXe"
               data-testid="DelegateTable__continue-button"
               disabled=""
               type="button"
@@ -1529,7 +1529,7 @@ exports[`DelegateTable loading state for base should render when isCompact = tru
             data-testid="DelegateTable__continue--wrapper"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 dQCpEO"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 kkDhXe"
               data-testid="DelegateTable__continue-button"
               disabled=""
               type="button"
@@ -2484,7 +2484,7 @@ exports[`DelegateTable loading state for requiresAmount should render when isCom
             data-testid="DelegateTable__continue--wrapper"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 dQCpEO"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 kkDhXe"
               data-testid="DelegateTable__continue-button"
               disabled=""
               type="button"
@@ -3439,7 +3439,7 @@ exports[`DelegateTable loading state for requiresAmount should render when isCom
             data-testid="DelegateTable__continue--wrapper"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 dQCpEO"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 kkDhXe"
               data-testid="DelegateTable__continue-button"
               disabled=""
               type="button"
@@ -3611,7 +3611,7 @@ exports[`DelegateTable should add resigned delegate to the unvote list 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="DelegateRow__toggle-0"
                     type="button"
                   >
@@ -3692,7 +3692,7 @@ exports[`DelegateTable should add resigned delegate to the unvote list 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="DelegateRow__toggle-1"
                     type="button"
                   >
@@ -3773,7 +3773,7 @@ exports[`DelegateTable should add resigned delegate to the unvote list 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="DelegateRow__toggle-2"
                     type="button"
                   >
@@ -3950,7 +3950,7 @@ exports[`DelegateTable should add resigned delegate to the unvote list 1`] = `
             data-testid="DelegateTable__continue--wrapper"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
               data-testid="DelegateTable__continue-button"
               type="button"
             >
@@ -4121,7 +4121,7 @@ exports[`DelegateTable should emit action on continue button to unvote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 dhaLpP"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 fxPCrX"
                     data-testid="DelegateRow__toggle-0"
                     type="button"
                   >
@@ -4202,7 +4202,7 @@ exports[`DelegateTable should emit action on continue button to unvote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="DelegateRow__toggle-1"
                     type="button"
                   >
@@ -4283,7 +4283,7 @@ exports[`DelegateTable should emit action on continue button to unvote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="DelegateRow__toggle-2"
                     type="button"
                   >
@@ -4460,7 +4460,7 @@ exports[`DelegateTable should emit action on continue button to unvote 1`] = `
             data-testid="DelegateTable__continue--wrapper"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
               data-testid="DelegateTable__continue-button"
               type="button"
             >
@@ -4631,7 +4631,7 @@ exports[`DelegateTable should emit action on continue button to vote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cGXmVu"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 IWDiW"
                     data-testid="DelegateRow__toggle-0"
                     type="button"
                   >
@@ -4712,7 +4712,7 @@ exports[`DelegateTable should emit action on continue button to vote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="DelegateRow__toggle-1"
                     type="button"
                   >
@@ -4793,7 +4793,7 @@ exports[`DelegateTable should emit action on continue button to vote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="DelegateRow__toggle-2"
                     type="button"
                   >
@@ -4970,7 +4970,7 @@ exports[`DelegateTable should emit action on continue button to vote 1`] = `
             data-testid="DelegateTable__continue--wrapper"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
               data-testid="DelegateTable__continue-button"
               type="button"
             >
@@ -5141,7 +5141,7 @@ exports[`DelegateTable should render 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="DelegateRow__toggle-0"
                     type="button"
                   >
@@ -5222,7 +5222,7 @@ exports[`DelegateTable should render 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="DelegateRow__toggle-1"
                     type="button"
                   >
@@ -5303,7 +5303,7 @@ exports[`DelegateTable should render 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="DelegateRow__toggle-2"
                     type="button"
                   >
@@ -5482,7 +5482,7 @@ exports[`DelegateTable should render 1`] = `
             data-testid="DelegateTable__continue--wrapper"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 dQCpEO"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 kkDhXe"
               data-testid="DelegateTable__continue-button"
               disabled=""
               type="button"
@@ -5733,7 +5733,7 @@ exports[`DelegateTable should render vote amount column 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="DelegateRow__toggle-0"
                     type="button"
                   >
@@ -5860,7 +5860,7 @@ exports[`DelegateTable should render vote amount column 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="DelegateRow__toggle-1"
                     type="button"
                   >
@@ -5987,7 +5987,7 @@ exports[`DelegateTable should render vote amount column 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="DelegateRow__toggle-2"
                     type="button"
                   >
@@ -6186,7 +6186,7 @@ exports[`DelegateTable should render vote amount column 1`] = `
             data-testid="DelegateTable__continue--wrapper"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 dQCpEO"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 kkDhXe"
               data-testid="DelegateTable__continue-button"
               disabled=""
               type="button"
@@ -6358,7 +6358,7 @@ exports[`DelegateTable should render with a delegate to unvote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="DelegateRow__toggle-0"
                     type="button"
                   >
@@ -6439,7 +6439,7 @@ exports[`DelegateTable should render with a delegate to unvote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="DelegateRow__toggle-1"
                     type="button"
                   >
@@ -6520,7 +6520,7 @@ exports[`DelegateTable should render with a delegate to unvote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="DelegateRow__toggle-2"
                     type="button"
                   >
@@ -6697,7 +6697,7 @@ exports[`DelegateTable should render with a delegate to unvote 1`] = `
             data-testid="DelegateTable__continue--wrapper"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
               data-testid="DelegateTable__continue-button"
               type="button"
             >
@@ -6868,7 +6868,7 @@ exports[`DelegateTable should render with a delegate to unvote/vote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 dhaLpP"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 fxPCrX"
                     data-testid="DelegateRow__toggle-0"
                     type="button"
                   >
@@ -6949,7 +6949,7 @@ exports[`DelegateTable should render with a delegate to unvote/vote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cGXmVu"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 IWDiW"
                     data-testid="DelegateRow__toggle-1"
                     type="button"
                   >
@@ -7031,7 +7031,7 @@ exports[`DelegateTable should render with a delegate to unvote/vote 1`] = `
                 >
                   <span>
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 dQCpEO"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 kkDhXe"
                       data-testid="DelegateRow__toggle-2"
                       disabled=""
                       type="button"
@@ -7208,7 +7208,7 @@ exports[`DelegateTable should render with a delegate to unvote/vote 1`] = `
             data-testid="DelegateTable__continue--wrapper"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
               data-testid="DelegateTable__continue-button"
               type="button"
             >
@@ -7379,7 +7379,7 @@ exports[`DelegateTable should render with a delegate to vote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cGXmVu"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 IWDiW"
                     data-testid="DelegateRow__toggle-0"
                     type="button"
                   >
@@ -7460,7 +7460,7 @@ exports[`DelegateTable should render with a delegate to vote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="DelegateRow__toggle-1"
                     type="button"
                   >
@@ -7541,7 +7541,7 @@ exports[`DelegateTable should render with a delegate to vote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="DelegateRow__toggle-2"
                     type="button"
                   >
@@ -7718,7 +7718,7 @@ exports[`DelegateTable should render with a delegate to vote 1`] = `
             data-testid="DelegateTable__continue--wrapper"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
               data-testid="DelegateTable__continue-button"
               type="button"
             >
@@ -7917,7 +7917,7 @@ exports[`DelegateTable should render with subtitle 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="DelegateRow__toggle-0"
                     type="button"
                   >
@@ -7998,7 +7998,7 @@ exports[`DelegateTable should render with subtitle 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="DelegateRow__toggle-1"
                     type="button"
                   >
@@ -8079,7 +8079,7 @@ exports[`DelegateTable should render with subtitle 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="DelegateRow__toggle-2"
                     type="button"
                   >
@@ -8258,7 +8258,7 @@ exports[`DelegateTable should render with subtitle 1`] = `
             data-testid="DelegateTable__continue--wrapper"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 dQCpEO"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 kkDhXe"
               data-testid="DelegateTable__continue-button"
               disabled=""
               type="button"
@@ -8507,7 +8507,7 @@ exports[`DelegateTable should select a changed delegate to unvote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
                     data-testid="DelegateRow__toggle-0"
                     type="button"
                   >
@@ -8634,7 +8634,7 @@ exports[`DelegateTable should select a changed delegate to unvote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="DelegateRow__toggle-1"
                     type="button"
                   >
@@ -8761,7 +8761,7 @@ exports[`DelegateTable should select a changed delegate to unvote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="DelegateRow__toggle-2"
                     type="button"
                   >
@@ -8960,7 +8960,7 @@ exports[`DelegateTable should select a changed delegate to unvote 1`] = `
             data-testid="DelegateTable__continue--wrapper"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 dQCpEO"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 kkDhXe"
               data-testid="DelegateTable__continue-button"
               disabled=""
               type="button"
@@ -9132,7 +9132,7 @@ exports[`DelegateTable should select a delegate to unvote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
                     data-testid="DelegateRow__toggle-0"
                     type="button"
                   >
@@ -9213,7 +9213,7 @@ exports[`DelegateTable should select a delegate to unvote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="DelegateRow__toggle-1"
                     type="button"
                   >
@@ -9294,7 +9294,7 @@ exports[`DelegateTable should select a delegate to unvote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="DelegateRow__toggle-2"
                     type="button"
                   >
@@ -9473,7 +9473,7 @@ exports[`DelegateTable should select a delegate to unvote 1`] = `
             data-testid="DelegateTable__continue--wrapper"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 dQCpEO"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 kkDhXe"
               data-testid="DelegateTable__continue-button"
               disabled=""
               type="button"
@@ -9645,7 +9645,7 @@ exports[`DelegateTable should select a delegate to unvote/vote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 dhaLpP"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 fxPCrX"
                     data-testid="DelegateRow__toggle-0"
                     type="button"
                   >
@@ -9726,7 +9726,7 @@ exports[`DelegateTable should select a delegate to unvote/vote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cGXmVu"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 IWDiW"
                     data-testid="DelegateRow__toggle-1"
                     type="button"
                   >
@@ -9808,7 +9808,7 @@ exports[`DelegateTable should select a delegate to unvote/vote 1`] = `
                 >
                   <span>
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 dQCpEO"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 kkDhXe"
                       data-testid="DelegateRow__toggle-2"
                       disabled=""
                       type="button"
@@ -9985,7 +9985,7 @@ exports[`DelegateTable should select a delegate to unvote/vote 1`] = `
             data-testid="DelegateTable__continue--wrapper"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
               data-testid="DelegateTable__continue-button"
               type="button"
             >
@@ -10156,7 +10156,7 @@ exports[`DelegateTable should select a delegate to vote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="DelegateRow__toggle-0"
                     type="button"
                   >
@@ -10237,7 +10237,7 @@ exports[`DelegateTable should select a delegate to vote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="DelegateRow__toggle-1"
                     type="button"
                   >
@@ -10318,7 +10318,7 @@ exports[`DelegateTable should select a delegate to vote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="DelegateRow__toggle-2"
                     type="button"
                   >
@@ -10497,7 +10497,7 @@ exports[`DelegateTable should select a delegate to vote 1`] = `
             data-testid="DelegateTable__continue--wrapper"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 dQCpEO"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 kkDhXe"
               data-testid="DelegateTable__continue-button"
               disabled=""
               type="button"
@@ -10746,7 +10746,7 @@ exports[`DelegateTable should select a delegate with vote amount and make it unv
                   class="-mr-0.5"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
                     data-testid="DelegateRow__toggle-0"
                     type="button"
                   >
@@ -10873,7 +10873,7 @@ exports[`DelegateTable should select a delegate with vote amount and make it unv
                   class="-mr-0.5"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="DelegateRow__toggle-1"
                     type="button"
                   >
@@ -11000,7 +11000,7 @@ exports[`DelegateTable should select a delegate with vote amount and make it unv
                   class="-mr-0.5"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="DelegateRow__toggle-2"
                     type="button"
                   >
@@ -11199,7 +11199,7 @@ exports[`DelegateTable should select a delegate with vote amount and make it unv
             data-testid="DelegateTable__continue--wrapper"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 dQCpEO"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 kkDhXe"
               data-testid="DelegateTable__continue-button"
               disabled=""
               type="button"
@@ -11371,7 +11371,7 @@ exports[`DelegateTable should select multiple delegates to unvote/vote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 dhaLpP"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 fxPCrX"
                     data-testid="DelegateRow__toggle-0"
                     type="button"
                   >
@@ -11452,7 +11452,7 @@ exports[`DelegateTable should select multiple delegates to unvote/vote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cGXmVu"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 IWDiW"
                     data-testid="DelegateRow__toggle-1"
                     type="button"
                   >
@@ -11533,7 +11533,7 @@ exports[`DelegateTable should select multiple delegates to unvote/vote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cGXmVu"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 IWDiW"
                     data-testid="DelegateRow__toggle-2"
                     type="button"
                   >
@@ -11708,7 +11708,7 @@ exports[`DelegateTable should select multiple delegates to unvote/vote 1`] = `
             data-testid="DelegateTable__continue--wrapper"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
               data-testid="DelegateTable__continue-button"
               type="button"
             >
@@ -11879,7 +11879,7 @@ exports[`DelegateTable should unselect a delegate to unvote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
                     data-testid="DelegateRow__toggle-0"
                     type="button"
                   >
@@ -11960,7 +11960,7 @@ exports[`DelegateTable should unselect a delegate to unvote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="DelegateRow__toggle-1"
                     type="button"
                   >
@@ -12041,7 +12041,7 @@ exports[`DelegateTable should unselect a delegate to unvote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="DelegateRow__toggle-2"
                     type="button"
                   >
@@ -12220,7 +12220,7 @@ exports[`DelegateTable should unselect a delegate to unvote 1`] = `
             data-testid="DelegateTable__continue--wrapper"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 dQCpEO"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 kkDhXe"
               data-testid="DelegateTable__continue-button"
               disabled=""
               type="button"
@@ -12392,7 +12392,7 @@ exports[`DelegateTable should unselect a delegate to vote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
                     data-testid="DelegateRow__toggle-0"
                     type="button"
                   >
@@ -12473,7 +12473,7 @@ exports[`DelegateTable should unselect a delegate to vote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="DelegateRow__toggle-1"
                     type="button"
                   >
@@ -12554,7 +12554,7 @@ exports[`DelegateTable should unselect a delegate to vote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="DelegateRow__toggle-2"
                     type="button"
                   >
@@ -12733,7 +12733,7 @@ exports[`DelegateTable should unselect a delegate to vote 1`] = `
             data-testid="DelegateTable__continue--wrapper"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 dQCpEO"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 kkDhXe"
               data-testid="DelegateTable__continue-button"
               disabled=""
               type="button"

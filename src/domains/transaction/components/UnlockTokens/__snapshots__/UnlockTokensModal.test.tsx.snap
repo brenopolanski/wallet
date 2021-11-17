@@ -18,7 +18,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with error 1`]
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -163,7 +163,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with error 1`]
                                 </span>
                                 <input
                                   checked=""
-                                  class="Checkbox-sc-1aq7nos-0 dZJFYi"
+                                  class="Checkbox-sc-1aq7nos-0 gdmzcT"
                                   color="success"
                                   type="checkbox"
                                 />
@@ -230,7 +230,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with error 1`]
                                   </div>
                                 </div>
                                 <input
-                                  class="Checkbox-sc-1aq7nos-0 dZJFYi"
+                                  class="Checkbox-sc-1aq7nos-0 gdmzcT"
                                   color="success"
                                   type="checkbox"
                                 />
@@ -315,7 +315,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with error 1`]
                 class="flex justify-end space-x-3"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                   type="button"
                 >
                   <div
@@ -325,7 +325,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with error 1`]
                   </div>
                 </button>
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
                   type="button"
                 >
                   <div
@@ -362,7 +362,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with error 2`]
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -525,7 +525,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with error 2`]
                 class="flex justify-end space-x-3"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                   type="button"
                 >
                   <div
@@ -535,7 +535,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with error 2`]
                   </div>
                 </button>
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
                   type="button"
                 >
                   <div
@@ -572,7 +572,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with error 3`]
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -680,7 +680,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with error 3`]
                 class="flex justify-end pt-3 space-x-3"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                   type="button"
                 >
                   <div
@@ -690,7 +690,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with error 3`]
                   </div>
                 </button>
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 dQCpEO"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 kkDhXe"
                   data-testid="UnlockTokensAuthentication__send"
                   disabled=""
                   type="submit"
@@ -740,7 +740,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with error 4`]
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -826,7 +826,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with error 4`]
                       class="relative"
                     >
                       <button
-                        class="ClipboardButton__StyledButton-sc-cammp1-0 jdMWag"
+                        class="ClipboardButton__StyledButton-sc-cammp1-0 bAhMDA"
                         data-testid="clipboard-button__wrapper"
                         type="button"
                       >
@@ -853,7 +853,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with error 4`]
                     class="flex space-x-3"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
                       data-testid="ErrorStep__repeat-button"
                       type="button"
                     >
@@ -893,7 +893,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with success 1
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -1038,7 +1038,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with success 1
                                 </span>
                                 <input
                                   checked=""
-                                  class="Checkbox-sc-1aq7nos-0 dZJFYi"
+                                  class="Checkbox-sc-1aq7nos-0 gdmzcT"
                                   color="success"
                                   type="checkbox"
                                 />
@@ -1105,7 +1105,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with success 1
                                   </div>
                                 </div>
                                 <input
-                                  class="Checkbox-sc-1aq7nos-0 dZJFYi"
+                                  class="Checkbox-sc-1aq7nos-0 gdmzcT"
                                   color="success"
                                   type="checkbox"
                                 />
@@ -1190,7 +1190,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with success 1
                 class="flex justify-end space-x-3"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                   type="button"
                 >
                   <div
@@ -1200,7 +1200,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with success 1
                   </div>
                 </button>
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
                   type="button"
                 >
                   <div
@@ -1237,7 +1237,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with success 2
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -1400,7 +1400,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with success 2
                 class="flex justify-end space-x-3"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                   type="button"
                 >
                   <div
@@ -1410,7 +1410,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with success 2
                   </div>
                 </button>
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
                   type="button"
                 >
                   <div
@@ -1447,7 +1447,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with success 3
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -1555,7 +1555,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with success 3
                 class="flex justify-end pt-3 space-x-3"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                   type="button"
                 >
                   <div
@@ -1565,7 +1565,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with success 3
                   </div>
                 </button>
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 dQCpEO"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 kkDhXe"
                   data-testid="UnlockTokensAuthentication__send"
                   disabled=""
                   type="submit"
@@ -1615,7 +1615,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with success 4
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -1978,7 +1978,7 @@ exports[`UnlockTokensModal should render 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -2123,7 +2123,7 @@ exports[`UnlockTokensModal should render 1`] = `
                                 </span>
                                 <input
                                   checked=""
-                                  class="Checkbox-sc-1aq7nos-0 dZJFYi"
+                                  class="Checkbox-sc-1aq7nos-0 gdmzcT"
                                   color="success"
                                   type="checkbox"
                                 />
@@ -2190,7 +2190,7 @@ exports[`UnlockTokensModal should render 1`] = `
                                   </div>
                                 </div>
                                 <input
-                                  class="Checkbox-sc-1aq7nos-0 dZJFYi"
+                                  class="Checkbox-sc-1aq7nos-0 gdmzcT"
                                   color="success"
                                   type="checkbox"
                                 />
@@ -2275,7 +2275,7 @@ exports[`UnlockTokensModal should render 1`] = `
                 class="flex justify-end space-x-3"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                   type="button"
                 >
                   <div
@@ -2285,7 +2285,7 @@ exports[`UnlockTokensModal should render 1`] = `
                   </div>
                 </button>
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
                   type="button"
                 >
                   <div

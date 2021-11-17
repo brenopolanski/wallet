@@ -59,7 +59,7 @@ exports[`ErrorStep should display error details 1`] = `
           class="relative"
         >
           <button
-            class="ClipboardButton__StyledButton-sc-cammp1-0 jdMWag"
+            class="ClipboardButton__StyledButton-sc-cammp1-0 bAhMDA"
             data-testid="clipboard-button__wrapper"
             type="button"
           >
@@ -132,7 +132,7 @@ exports[`ErrorStep should emit onBack 1`] = `
         class="flex space-x-3"
       >
         <button
-          class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+          class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
           data-testid="ErrorStep__wallet-button"
           type="button"
         >
@@ -190,7 +190,7 @@ exports[`ErrorStep should emit onRepeat 1`] = `
         class="flex space-x-3"
       >
         <button
-          class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+          class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
           data-testid="ErrorStep__repeat-button"
           type="button"
         >

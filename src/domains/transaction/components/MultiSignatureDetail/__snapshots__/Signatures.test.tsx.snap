@@ -41,7 +41,7 @@ exports[`Signatures should handle exception when checking if participant is awai
               </div>
             </div>
             <span
-              class="Badge__Wrapper-sc-w9wbbm-0 bifkuZ flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600"
+              class="Badge__Wrapper-sc-w9wbbm-0 fvTsro flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600"
               data-testid="Signatures__signed-badge"
             >
               <div
@@ -88,7 +88,7 @@ exports[`Signatures should handle exception when checking if participant is awai
               </div>
             </div>
             <span
-              class="Badge__Wrapper-sc-w9wbbm-0 bifkuZ flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600"
+              class="Badge__Wrapper-sc-w9wbbm-0 fvTsro flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600"
               data-testid="Signatures__signed-badge"
             >
               <div
@@ -151,7 +151,7 @@ exports[`Signatures should render 1`] = `
               </div>
             </div>
             <span
-              class="Badge__Wrapper-sc-w9wbbm-0 bifkuZ flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400"
+              class="Badge__Wrapper-sc-w9wbbm-0 fvTsro flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400"
               data-testid="Signatures__waiting-badge"
             >
               <div
@@ -198,7 +198,7 @@ exports[`Signatures should render 1`] = `
               </div>
             </div>
             <span
-              class="Badge__Wrapper-sc-w9wbbm-0 bifkuZ flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600"
+              class="Badge__Wrapper-sc-w9wbbm-0 fvTsro flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600"
               data-testid="Signatures__signed-badge"
             >
               <div
@@ -261,7 +261,7 @@ exports[`Signatures should render with waiting badge 1`] = `
               </div>
             </div>
             <span
-              class="Badge__Wrapper-sc-w9wbbm-0 bifkuZ flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600"
+              class="Badge__Wrapper-sc-w9wbbm-0 fvTsro flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600"
               data-testid="Signatures__signed-badge"
             >
               <div
@@ -308,7 +308,7 @@ exports[`Signatures should render with waiting badge 1`] = `
               </div>
             </div>
             <span
-              class="Badge__Wrapper-sc-w9wbbm-0 bifkuZ flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600"
+              class="Badge__Wrapper-sc-w9wbbm-0 fvTsro flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600"
               data-testid="Signatures__signed-badge"
             >
               <div
@@ -371,7 +371,7 @@ exports[`Signatures should show all participants as signed when all signatures a
               </div>
             </div>
             <span
-              class="Badge__Wrapper-sc-w9wbbm-0 bifkuZ flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600"
+              class="Badge__Wrapper-sc-w9wbbm-0 fvTsro flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600"
               data-testid="Signatures__signed-badge"
             >
               <div
@@ -418,7 +418,7 @@ exports[`Signatures should show all participants as signed when all signatures a
               </div>
             </div>
             <span
-              class="Badge__Wrapper-sc-w9wbbm-0 bifkuZ flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600"
+              class="Badge__Wrapper-sc-w9wbbm-0 fvTsro flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600"
               data-testid="Signatures__signed-badge"
             >
               <div
