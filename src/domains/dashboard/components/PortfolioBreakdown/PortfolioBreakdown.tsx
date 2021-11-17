@@ -5,6 +5,7 @@ import { EmptyBlock } from "app/components/EmptyBlock";
 import { GRAPH_COLOR_EMPTY, GRAPH_COLOR_EMPTY_DARK } from "app/components/Graphs/Graphs.shared";
 import { LineGraph } from "app/components/Graphs/LineGraph";
 import { LineGraphDataPoint } from "app/components/Graphs/LineGraph/LineGraph.contracts";
+import { useTheme } from "app/hooks";
 import { PortfolioBreakdownDetails } from "domains/dashboard/components/PortfolioBreakdownDetails";
 import { usePortfolioBreakdown } from "domains/dashboard/hooks/use-portfolio-breakdown";
 import React, { useMemo, useState } from "react";
@@ -12,7 +13,6 @@ import { Trans, useTranslation } from "react-i18next";
 
 import { LabelledText, Legend, PortfolioBreakdownSkeleton, Tooltip } from "./PortfolioBreakdown.blocks";
 import { formatPercentage, getColor } from "./PortfolioBreakdown.helpers";
-import { useTheme } from "app/hooks";
 
 interface PortfolioBreakdownProperties {
 	profile: Contracts.IProfile;
