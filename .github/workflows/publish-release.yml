@@ -40,16 +40,9 @@ jobs:
         steps:
             - name: Checkout code
               uses: actions/checkout@v2
-            - name: Get yarn cache directory path
-              id: yarn-cache-dir-path
-              run: echo "::set-output name=dir::$(yarn cache dir)"
-            - name: Cache node modules
-              uses: actions/cache@v2
-              id: yarn-cache
+            - uses: pnpm/action-setup@v2.0.1
               with:
-                  path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-                  key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-                  restore-keys: ${{ runner.os }}-yarn-
+                  version: 6.20.3
             - name: Use Node.js ${{ matrix.node-version }}
               uses: actions/setup-node@v1
               with:
@@ -61,11 +54,9 @@ jobs:
             - name: Ledger
               run: sudo apt-get install libudev-dev libusb-1.0-0-dev
             - name: Install
-              run: yarn global add node-gyp && yarn install --frozen-lockfile
-            - name: Re-build bcrypto
-              run: cd node_modules/bcrypto && npm install && cd ../../
+              run: pnpm install
             - name: Build & Publish
-              run: yarn build:linux:publish
+              run: pnpm run build:linux:publish
               env:
                   GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             - name: Calculate Checksums for AppImage
@@ -95,28 +86,21 @@ jobs:
         steps:
             - name: Checkout code
               uses: actions/checkout@v2
-            - name: Get yarn cache directory path
-              id: yarn-cache-dir-path
-              run: echo "::set-output name=dir::$(yarn cache dir)"
-            - name: Cache node modules
-              uses: actions/cache@v2
-              id: yarn-cache
+            - uses: pnpm/action-setup@v2.0.1
               with:
-                  path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-                  key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-                  restore-keys: ${{ runner.os }}-yarn-
+                  version: 6.20.3
             - name: Use Node.js ${{ matrix.node-version }}
               uses: actions/setup-node@v1
               with:
                   node-version: ${{ matrix.node-version }}
             - name: Install
-              run: yarn global add node-gyp && yarn install --frozen-lockfile
+              run: pnpm install
             - name: Prepare for app notarization
               run: |
                   mkdir -p ~/private_keys/
                   echo '${{ secrets.APPLE_API_KEY }}' > ~/private_keys/AuthKey_${{ secrets.APPLE_API_KEY_ID }}.p8
             - name: Build & Publish
-              run: yarn build:mac:publish
+              run: pnpm run build:mac:publish
               env:
                   GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                   APPLE_API_KEY_ID: ${{ secrets.APPLE_API_KEY_ID }}
@@ -144,25 +128,18 @@ jobs:
         steps:
             - name: Checkout code
               uses: actions/checkout@v2
-            - name: Get yarn cache directory path
-              id: yarn-cache-dir-path
-              run: echo "::set-output name=dir::$(yarn cache dir)"
-            - name: Cache node modules
-              uses: actions/cache@v2
-              id: yarn-cache
+            - uses: pnpm/action-setup@v2.0.1
               with:
-                  path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-                  key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-                  restore-keys: ${{ runner.os }}-yarn-
+                  version: 6.20.3
             - name: Use Node.js ${{ matrix.node-version }}
               uses: actions/setup-node@v1
               with:
                   node-version: ${{ matrix.node-version }}
             - name: Install
-              run: yarn global add node-gyp && yarn install --frozen-lockfile
+              run: pnpm install
               shell: cmd
             - name: Build & Publish
-              run: yarn build:win:publish
+              run: pnpm run build:win:publish
               shell: cmd
               env:
                   GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

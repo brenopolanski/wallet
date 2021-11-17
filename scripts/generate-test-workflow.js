@@ -242,7 +242,7 @@ for (const [directory, { coverageThreshold, maxWorkers }] of Object.entries(dire
 			},
 			{
 				name: "Install (Yarn)",
-				run: "yarn install --frozen-lockfile",
+				run: "pnpm install",
 			},
 			{
 				name: "Rebuild",
