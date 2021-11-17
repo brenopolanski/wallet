@@ -19,9 +19,11 @@ const transport = getDefaultLedgerTransport();
 describe("Use Ledger Scanner", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
-	let legacyPublicKeyPaths = new Map();
+	let legacyPublicKeyPaths: Map<string, string>;
 
 	beforeAll(() => {
+		legacyPublicKeyPaths = new Map<string, string>();
+
 		nock("https://ark-test.payvo.com/api")
 			.get("/wallets")
 			.query((parameters) => !!parameters.address)

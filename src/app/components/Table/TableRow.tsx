@@ -1,22 +1,17 @@
 import cn from "classnames";
-import React from "react";
+import React, { FC } from "react";
 import { styled } from "twin.macro";
 
-import { getStyles } from "./TableRow.styles";
-
-export type TableRowFunction = (event: React.MouseEvent<HTMLTableRowElement, MouseEvent>) => void;
+import { getStyles, TableRowStyleProperties } from "./TableRow.styles";
 
 type TableRowProperties = {
-	border?: boolean;
-	dotted?: boolean;
 	children: React.ReactNode;
-	onClick?: TableRowFunction;
-	isSelected?: boolean;
-} & React.HTMLProps<any>;
+} & TableRowStyleProperties &
+	React.HTMLProps<any>;
 
 const TableRowStyled = styled.tr<TableRowProperties>(getStyles);
 
-export const TableRow = ({ border = true, dotted, children, isSelected, onClick }: TableRowProperties) => (
+export const TableRow: FC<TableRowProperties> = ({ border = true, dotted, children, isSelected, onClick }) => (
 	<TableRowStyled
 		data-testid="TableRow"
 		className={cn({ group: !!onClick })}

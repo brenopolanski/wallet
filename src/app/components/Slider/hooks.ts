@@ -2,6 +2,7 @@ import "swiper/swiper-bundle.css";
 
 import { useCallback, useEffect, useMemo, useRef } from "react";
 import Swiper, { Pagination } from "swiper";
+
 Swiper.use([Pagination]);
 
 interface Properties {

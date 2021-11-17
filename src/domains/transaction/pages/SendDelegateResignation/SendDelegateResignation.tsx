@@ -16,7 +16,9 @@ import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useHistory } from "react-router-dom";
 
-import { FormStep, ReviewStep, SummaryStep } from ".";
+import { FormStep } from "./FormStep";
+import { ReviewStep } from "./ReviewStep";
+import { SummaryStep } from "./SummaryStep";
 
 enum Step {
 	FormStep = 1,

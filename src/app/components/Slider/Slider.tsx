@@ -1,6 +1,6 @@
 import React from "react";
 
-import { useSlider } from ".";
+import { useSlider } from "./hooks";
 
 interface SliderProperties {
 	children?: any;

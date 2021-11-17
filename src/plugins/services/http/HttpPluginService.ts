@@ -1,17 +1,17 @@
 import { httpClient } from "app/services";
 import { HttpClient } from "app/services/HttpClient";
-import { PluginController } from "plugins/core";
-import { PluginService, PluginServiceIdentifier } from "plugins/types";
+import { IPluginController, PluginService } from "plugins/core";
+import { PluginServiceConfig, PluginServiceIdentifier } from "plugins/types";
 
 export class HttpPluginService implements PluginService {
-	config() {
+	config(): PluginServiceConfig {
 		return {
 			accessor: "http",
 			id: PluginServiceIdentifier.HTTP,
 		};
 	}
 
-	api(plugin: PluginController) {
+	api(plugin: IPluginController): Record<string, Function> {
 		return {
 			create: () => new HttpClient(500),
 			decorate: plugin.hooks().addFilter.bind(plugin.hooks(), "service.http"),
@@ -20,7 +20,7 @@ export class HttpPluginService implements PluginService {
 		};
 	}
 
-	private send(type: "get" | "post", plugin: PluginController, url: string, ...arguments_: any) {
+	private send(type: "get" | "post", plugin: IPluginController, url: string, ...arguments_: any) {
 		const isValid = plugin
 			.config()
 			.urls()

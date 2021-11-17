@@ -17,7 +17,7 @@ import {
 	waitFor,
 } from "utils/testing-library";
 
-import { Welcome } from ".";
+import { Welcome } from "./Welcome";
 
 const fixtureProfileId = getDefaultProfileId();
 const profileDashboardUrl = `/profiles/${fixtureProfileId}/dashboard`;

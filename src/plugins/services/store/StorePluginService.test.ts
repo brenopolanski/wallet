@@ -1,5 +1,5 @@
 import { Contracts } from "@payvo/profiles";
-import { PluginController, PluginManager } from "plugins/core";
+import { IPluginController, PluginController, PluginManager } from "plugins/core";
 import { PluginAPI } from "plugins/types";
 import { env } from "utils/testing-library";
 
@@ -10,7 +10,7 @@ const config = { "desktop-wallet": { permissions: ["STORE"] }, name: "test", ver
 describe("StorePluginService", () => {
 	let profile: Contracts.IProfile;
 	let manager: PluginManager;
-	let ctrl: PluginController;
+	let ctrl: IPluginController;
 
 	beforeEach(() => {
 		profile = env.profiles().first();
@@ -33,7 +33,7 @@ describe("StorePluginService", () => {
 		manager.plugins().push(ctrl);
 		manager.plugins().runAllEnabled(profile);
 
-		expect(profile.data().get(`plugins.${ctrl.config().id()}.store`)).toEqual({ theme: "dark" });
+		expect(profile.data().get(`plugins.${ctrl.config().id()}.store`)).toStrictEqual({ theme: "dark" });
 	});
 
 	it("should restore values", () => {

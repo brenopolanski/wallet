@@ -1,26 +1,30 @@
 import "@testing-library/jest-dom/extend-expect";
 import "mutationobserver-shim";
 
-Object.defineProperty(window, "matchMedia", {
-	value: jest.fn().mockImplementation((query) => ({
-		// deprecated
-		addEventListener: jest.fn(),
+describe("setup", () => {
+	beforeAll(() => {
+		Object.defineProperty(window, "matchMedia", {
+			value: jest.fn().mockImplementation((query) => ({
+				// deprecated
+				addEventListener: jest.fn(),
 
-		addListener: jest.fn(),
+				addListener: jest.fn(),
 
-		dispatchEvent: jest.fn(),
+				dispatchEvent: jest.fn(),
 
-		matches: false,
+				matches: false,
 
-		media: query,
+				media: query,
 
-		onchange: null,
+				onchange: null,
 
-		removeEventListener: jest.fn(),
-		// deprecated
-		removeListener: jest.fn(),
-	})),
-	writable: true,
+				removeEventListener: jest.fn(),
+				// deprecated
+				removeListener: jest.fn(),
+			})),
+			writable: true,
+		});
+	});
 });
 
 global.fetch = require("jest-fetch-mock");

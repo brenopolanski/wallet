@@ -1,14 +1,15 @@
-import { PluginService, PluginServiceIdentifier } from "plugins/types";
+import { PluginService } from "plugins/core";
+import { PluginServiceConfig, PluginServiceIdentifier } from "plugins/types";
 
 export class TimersPluginService implements PluginService {
-	config() {
+	config(): PluginServiceConfig {
 		return {
 			accessor: "timers",
 			id: PluginServiceIdentifier.Timers,
 		};
 	}
 
-	api() {
+	api(): Record<string, Function> {
 		return {
 			clearInterval: this.clearInterval.bind(this),
 			clearTimeout: this.clearTimeout.bind(this),

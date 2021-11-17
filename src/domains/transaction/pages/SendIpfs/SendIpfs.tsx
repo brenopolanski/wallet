@@ -19,8 +19,10 @@ import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 import { assertWallet } from "utils/assertions";
 
-import { FormStep, ReviewStep, SummaryStep } from ".";
+import { FormStep } from "./FormStep";
 import { IpfsLedgerReview } from "./LedgerReview";
+import { ReviewStep } from "./ReviewStep";
+import { SummaryStep } from "./SummaryStep";
 
 enum Step {
 	FormStep = 1,

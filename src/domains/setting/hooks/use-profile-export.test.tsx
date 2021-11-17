@@ -24,7 +24,7 @@ describe("useProfileExport", () => {
 
 		const importedProfile = await env.profiles().import(exportedData);
 
-		expect(importedProfile.settings().all()).toEqual(profile.settings().all());
+		expect(importedProfile.settings().all()).toStrictEqual(profile.settings().all());
 	});
 
 	it("should export with all settings disabled", async () => {
@@ -37,7 +37,7 @@ describe("useProfileExport", () => {
 
 		const importedProfile = await env.profiles().import(exportedData);
 
-		expect(importedProfile.settings().all()).toEqual(profile.settings().all());
+		expect(importedProfile.settings().all()).toStrictEqual(profile.settings().all());
 	});
 
 	it("should export password protected profile", async () => {
@@ -55,6 +55,6 @@ describe("useProfileExport", () => {
 
 		const importedProfile = await env.profiles().import(exportedData, getDefaultPassword());
 
-		expect(importedProfile.settings().all()).toEqual(passwordProtectedProfile.settings().all());
+		expect(importedProfile.settings().all()).toStrictEqual(passwordProtectedProfile.settings().all());
 	});
 });

@@ -55,12 +55,12 @@ const getSize = (size?: Size) => {
 	}
 };
 
-export interface StylesType {
+export interface BadgeStyleProperties {
 	position?: Position;
 	size?: Size;
 	noShadow?: boolean;
 }
-export const getStyles = ({ position, size, noShadow }: StylesType) => [
+export const getStyles = ({ position, size, noShadow }: BadgeStyleProperties) => [
 	...baseStyle(size, noShadow),
 	getPosition(position),
 	getSize(size),

@@ -33,7 +33,7 @@ import {
 	waitFor,
 } from "utils/testing-library";
 
-import { SendVote } from ".";
+import { SendVote } from "./SendVote";
 
 const fixtureProfileId = getDefaultProfileId();
 

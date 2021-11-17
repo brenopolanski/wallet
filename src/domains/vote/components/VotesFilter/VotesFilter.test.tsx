@@ -1,7 +1,7 @@
 import React from "react";
 import { fireEvent, render, waitFor } from "utils/testing-library";
 
-import { VotesFilter } from ".";
+import { VotesFilter } from "./VotesFilter";
 
 describe("VotesFilter", () => {
 	it("should render", () => {

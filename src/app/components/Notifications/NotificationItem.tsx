@@ -1,7 +1,8 @@
 import React from "react";
 import VisibilitySensor from "react-visibility-sensor";
 
-import { NotificationItemProperties, useActionNameMap } from ".";
+import { NotificationItemProperties } from "./contracts";
+import { useActionNameMap } from "./hooks/use-action-name-map";
 
 export const NotificationItem = ({
 	id,

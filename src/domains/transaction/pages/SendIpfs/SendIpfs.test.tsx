@@ -24,7 +24,10 @@ import {
 	within,
 } from "utils/testing-library";
 
-import { FormStep, ReviewStep, SendIpfs, SummaryStep } from ".";
+import { FormStep } from "./FormStep";
+import { ReviewStep } from "./ReviewStep";
+import { SendIpfs } from "./SendIpfs";
+import { SummaryStep } from "./SummaryStep";
 
 const passphrase = getDefaultWalletMnemonic();
 const fixtureProfileId = getDefaultProfileId();

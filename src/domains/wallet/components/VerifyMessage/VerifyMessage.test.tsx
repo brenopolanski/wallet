@@ -31,7 +31,7 @@ describe("VerifyMessage", () => {
 		profileId = profile.id(),
 		...properties
 	}: any) => {
-		const result = render(
+		const utils = render(
 			<VerifyMessage isOpen={isOpen} walletId={walletId} profileId={profileId} {...properties} />,
 		);
 
@@ -41,7 +41,7 @@ describe("VerifyMessage", () => {
 			expect(submitButton).toBeDisabled();
 		});
 
-		return result;
+		return utils;
 	};
 
 	it("should render", async () => {

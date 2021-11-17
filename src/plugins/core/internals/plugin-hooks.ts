@@ -1,19 +1,19 @@
 import { Contracts } from "@payvo/profiles";
 import { EventEmitter } from "events";
 
-type HandlerFunction = (...arguments_: any[]) => any;
+import { HandlerFunction, IPluginHooks } from "./plugin-hooks.contracts";
 
 const formatKey = (...arguments_: string[]) => arguments_.join(".");
 
-export class PluginHooks extends EventEmitter {
+export class PluginHooks extends EventEmitter implements IPluginHooks {
 	#filters = new Map<string, HandlerFunction[]>();
 	#commands = new Map<string, HandlerFunction>();
 
-	hasCommand(commandName: string) {
+	hasCommand(commandName: string): boolean {
 		return this.#commands.has(commandName);
 	}
 
-	registerCommand(commandName: string, handler: HandlerFunction) {
+	registerCommand(commandName: string, handler: HandlerFunction): void {
 		if (this.#commands.has(commandName)) {
 			throw new Error(`Command ${commandName} already registered.`);
 		}
@@ -25,7 +25,7 @@ export class PluginHooks extends EventEmitter {
 		this.#commands.set(commandName, handler);
 	}
 
-	executeCommand(commandName: string, ...arguments_: any[]) {
+	executeCommand(commandName: string, ...arguments_: any[]): any {
 		if (!this.#commands.has(commandName)) {
 			throw new Error(`Command ${commandName} not found.`);
 		}
@@ -33,11 +33,11 @@ export class PluginHooks extends EventEmitter {
 		return this.#commands.get(commandName)?.(...arguments_);
 	}
 
-	hasFilter(namespace: string, hookName: string) {
+	hasFilter(namespace: string, hookName: string): boolean {
 		return this.#filters.has(formatKey(namespace, hookName));
 	}
 
-	addFilter(namespace: string, hookName: string, handler: HandlerFunction) {
+	addFilter(namespace: string, hookName: string, handler: HandlerFunction): void {
 		const key = formatKey(namespace, hookName);
 		const current = this.#filters.get(key) || [];
 
@@ -65,7 +65,7 @@ export class PluginHooks extends EventEmitter {
 		return this.#filters.get(key)!.reduce((accumulator, handler) => handler(accumulator, properties), content);
 	}
 
-	clearAll() {
+	clearAll(): void {
 		this.#filters.clear();
 		this.#commands.clear();
 	}

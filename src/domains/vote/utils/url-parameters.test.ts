@@ -42,7 +42,7 @@ describe("#urlParameters", () => {
 
 			appendParameters(parameters, parameterName as ParameterNameProperties, votes);
 
-			expect(getParameters(parameters, parameterName as ParameterNameProperties)).toEqual(votes);
+			expect(getParameters(parameters, parameterName as ParameterNameProperties)).toMatchObject(votes);
 		});
 	});
 });

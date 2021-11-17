@@ -4,7 +4,7 @@ import React, { forwardRef } from "react";
 import { styled } from "twin.macro";
 import { Position, Size } from "types";
 
-import { defaultClasses, getStyles, StylesType } from "./Badge.styles";
+import { BadgeStyleProperties, defaultClasses, getStyles } from "./Badge.styles";
 
 interface BadgeProperties {
 	className?: string;
@@ -17,9 +17,9 @@ interface BadgeProperties {
 	noShadow?: boolean;
 }
 
-export const Wrapper = styled.span.attrs<StylesType>(({ position }) => ({
+export const Wrapper = styled.span.attrs<BadgeStyleProperties>(({ position }) => ({
 	position: position ?? "bottom-right",
-}))<StylesType>(getStyles);
+}))<BadgeStyleProperties>(getStyles);
 
 export const Badge = forwardRef<HTMLSpanElement, BadgeProperties>(
 	({ className, children, icon, iconClass, iconSize = "sm", ...properties }: BadgeProperties, reference) => (
