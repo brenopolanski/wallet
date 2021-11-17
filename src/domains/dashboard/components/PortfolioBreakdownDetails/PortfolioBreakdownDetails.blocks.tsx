@@ -126,4 +126,4 @@ const Balance: React.VFC<BalanceProperties> = ({ ticker, value }) => {
 	);
 };
 
-export { AssetList, Tooltip, Balance };
+export { AssetList, Balance, Tooltip };
