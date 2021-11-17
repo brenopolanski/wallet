@@ -52,7 +52,7 @@ const LabelledText: React.FC<LabelledTextProperties> = ({ label, children }) => 
 );
 
 const TooltipWrapper = styled.div`
-	${tw`flex items-center bg-theme-secondary-900 rounded px-3 py-2`}
+	${tw`flex items-center bg-theme-secondary-900 dark:bg-theme-secondary-800 rounded px-3 py-2`}
 
 	&:after {
 		content: " ";
@@ -64,7 +64,6 @@ const TooltipWrapper = styled.div`
 	}
 `;
 
-// @TODO improve dark mode styles
 const Tooltip: React.VFC<TooltipProperties> = ({ dataPoint: { color, data } }) => (
 	<TooltipWrapper>
 		<div className="flex space-x-3 divide-x divide-theme-secondary-700 text-sm font-semibold">
@@ -86,7 +85,7 @@ const PortfolioBreakdownSkeleton: React.VFC = () => {
 	const lineGraphSkeletonReference = useRef<HTMLDivElement | null>(null);
 
 	return (
-		<div className="py-4 px-6 bg-theme-secondary-100 rounded-xl flex">
+		<div className="py-4 px-6 bg-theme-secondary-100 dark:bg-black rounded-xl flex">
 			<div className="flex space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800">
 				<LabelledText label={t("COMMON.YOUR_BALANCE")}>
 					{() => (

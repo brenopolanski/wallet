@@ -1,19 +1,17 @@
 import { Amount } from "app/components/Amount";
 import { Table, TableCell, TableRow } from "app/components/Table";
+import { useTheme } from "app/hooks";
 import { AssetItem } from "domains/dashboard/components/PortfolioBreakdown/PortfolioBreakdown.contracts";
 import { formatPercentage, getColor } from "domains/dashboard/components/PortfolioBreakdown/PortfolioBreakdown.helpers";
 import React, { useCallback, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Column, TableState } from "react-table";
 
-interface AssetListItemProperties {
-	asset: AssetItem;
-	index: number;
-	exchangeCurrency: string;
-}
+import { AssetListItemProperties, AssetListProperties, TooltipProperties } from "./PortfolioBreakdownDetails.contracts";
 
 const AssetListItem: React.VFC<AssetListItemProperties> = ({ asset, index, exchangeCurrency }) => {
-	const color = getColor(index);
+	const { isDarkMode } = useTheme();
+	const color = getColor(index, isDarkMode);
 
 	return (
 		<TableRow>
@@ -40,11 +38,6 @@ const AssetListItem: React.VFC<AssetListItemProperties> = ({ asset, index, excha
 		</TableRow>
 	);
 };
-
-interface AssetListProperties {
-	assets: AssetItem[];
-	exchangeCurrency: string;
-}
 
 const AssetList: React.VFC<AssetListProperties> = ({ assets, exchangeCurrency }) => {
 	const { t } = useTranslation();
@@ -99,4 +92,15 @@ const AssetList: React.VFC<AssetListProperties> = ({ assets, exchangeCurrency })
 	);
 };
 
-export { AssetList };
+const Tooltip: React.VFC<TooltipProperties> = ({ dataPoint: { color, data } }) => (
+	<div className="flex items-center bg-theme-secondary-900 dark:bg-theme-secondary-800 rounded px-3 py-2 space-x-3 divide-x divide-theme-secondary-700 text-sm font-semibold">
+		<div className="flex items-center space-x-2">
+			<div className={`h-3 w-1 rounded bg-theme-${color}`} />
+			<span className="text-white">{data.label}</span>
+		</div>
+
+		<span className="pl-3 text-theme-secondary-500">{data.percentFormatted}</span>
+	</div>
+);
+
+export { AssetList, Tooltip };

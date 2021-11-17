@@ -2,7 +2,7 @@ import React, { useMemo } from "react";
 
 import { LineGraphConfig, LineGraphDataPoint } from "./LineGraph.contracts";
 
-export const useLineGraph = (data: LineGraphDataPoint[], config: LineGraphConfig): React.SVGProps<SVGRectElement>[] => {
+const useLineGraph = (data: LineGraphDataPoint[], config: LineGraphConfig): React.SVGProps<SVGRectElement>[] => {
 	const { graphWidth, segmentSpacing, segmentHeight } = config;
 
 	return useMemo<React.SVGProps<SVGRectElement>[]>(() => {
@@ -35,3 +35,5 @@ export const useLineGraph = (data: LineGraphDataPoint[], config: LineGraphConfig
 		return rectangles;
 	}, [data, graphWidth]); // eslint-disable-line react-hooks/exhaustive-deps
 };
+
+export { useLineGraph };

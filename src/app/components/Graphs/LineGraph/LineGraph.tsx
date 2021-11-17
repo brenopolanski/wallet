@@ -1,26 +1,29 @@
 import { GraphHoverAnimation } from "app/components/Graphs/GraphHoverAnimation";
 import { useGraphTooltip, useGraphWidth } from "app/components/Graphs/Graphs.shared";
-import React from "react";
+import React, { useCallback, useMemo } from "react";
 
 import { LineGraphEmpty } from "./LineGraph.blocks";
-import { LineGraphConfig, LineGraphDataPoint, LineGraphProperties } from "./LineGraph.contracts";
+import { LineGraphConfig, LineGraphProperties } from "./LineGraph.contracts";
 import { useLineGraph } from "./LineGraph.helpers";
 
 export const LineGraph: React.VFC<LineGraphProperties> = ({ data, renderLegend, renderTooltip, renderAsEmpty }) => {
 	const [reference, graphWidth] = useGraphWidth<SVGSVGElement>();
 
-	const { Tooltip, getMouseEventProperties } = useGraphTooltip<LineGraphDataPoint, SVGRectElement>(renderTooltip);
+	const { Tooltip, getMouseEventProperties } = useGraphTooltip(renderTooltip, "line");
 
-	const config: LineGraphConfig = {
-		graphWidth,
-		segmentHeight: 8,
-		segmentHeightHover: 16,
-		segmentSpacing: 8,
-	};
+	const config = useMemo<LineGraphConfig>(
+		() => ({
+			graphWidth,
+			segmentHeight: 8,
+			segmentHeightHover: 16,
+			segmentSpacing: 8,
+		}),
+		[graphWidth],
+	);
 
 	const rectangles = useLineGraph(data, config);
 
-	const renderSegments = () => {
+	const renderSegments = useCallback(() => {
 		if (renderAsEmpty) {
 			return <LineGraphEmpty config={config} />;
 		}
@@ -36,7 +39,7 @@ export const LineGraph: React.VFC<LineGraphProperties> = ({ data, renderLegend, 
 				/>
 			</rect>
 		));
-	};
+	}, [config, data, getMouseEventProperties, rectangles, renderAsEmpty]);
 
 	return (
 		<div>

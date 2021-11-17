@@ -2,7 +2,7 @@ import { sortByDesc } from "@arkecosystem/utils";
 import { Contracts, Helpers } from "@payvo/profiles";
 import { Amount } from "app/components/Amount";
 import { EmptyBlock } from "app/components/EmptyBlock";
-import { GRAPH_COLOR_EMPTY } from "app/components/Graphs/Graphs.shared";
+import { GRAPH_COLOR_EMPTY, GRAPH_COLOR_EMPTY_DARK } from "app/components/Graphs/Graphs.shared";
 import { LineGraph } from "app/components/Graphs/LineGraph";
 import { LineGraphDataPoint } from "app/components/Graphs/LineGraph/LineGraph.contracts";
 import { PortfolioBreakdownDetails } from "domains/dashboard/components/PortfolioBreakdownDetails";
@@ -12,6 +12,7 @@ import { Trans, useTranslation } from "react-i18next";
 
 import { LabelledText, Legend, PortfolioBreakdownSkeleton, Tooltip } from "./PortfolioBreakdown.blocks";
 import { formatPercentage, getColor } from "./PortfolioBreakdown.helpers";
+import { useTheme } from "app/hooks";
 
 interface PortfolioBreakdownProperties {
 	profile: Contracts.IProfile;
@@ -23,6 +24,7 @@ export const PortfolioBreakdown: React.VFC<PortfolioBreakdownProperties> = ({
 	profileIsSyncingExchangeRates,
 }) => {
 	const { t } = useTranslation();
+	const { isDarkMode } = useTheme();
 
 	const [isDetailsOpen, setIsDetailsOpen] = useState(false);
 
@@ -36,7 +38,7 @@ export const PortfolioBreakdown: React.VFC<PortfolioBreakdownProperties> = ({
 	const lineGraphData = useMemo<LineGraphDataPoint[]>(() => {
 		if (hasZeroBalance) {
 			return assets.map((asset) => ({
-				color: GRAPH_COLOR_EMPTY,
+				color: isDarkMode ? GRAPH_COLOR_EMPTY_DARK : GRAPH_COLOR_EMPTY,
 				data: {
 					amountFormatted: Helpers.Currency.format(0, ticker),
 					label: asset.label,
@@ -47,7 +49,7 @@ export const PortfolioBreakdown: React.VFC<PortfolioBreakdownProperties> = ({
 		}
 
 		return sortByDesc(assets, "percent").map((asset, index) => ({
-			color: getColor(index),
+			color: getColor(index, isDarkMode),
 			data: {
 				amountFormatted: Helpers.Currency.format(asset.convertedAmount, ticker),
 				label: asset.label,
@@ -55,7 +57,7 @@ export const PortfolioBreakdown: React.VFC<PortfolioBreakdownProperties> = ({
 			},
 			value: asset.percent,
 		}));
-	}, [assets, hasZeroBalance, ticker]);
+	}, [assets, hasZeroBalance, isDarkMode, ticker]);
 
 	if (loading && assets.length === 0) {
 		return <PortfolioBreakdownSkeleton />;
@@ -71,7 +73,7 @@ export const PortfolioBreakdown: React.VFC<PortfolioBreakdownProperties> = ({
 
 	return (
 		<>
-			<div className="py-4 px-6 bg-theme-secondary-100 rounded-xl flex">
+			<div className="py-4 px-6 bg-theme-secondary-100 dark:bg-black rounded-xl flex">
 				<div className="flex space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800">
 					<LabelledText label={t("COMMON.YOUR_BALANCE")}>
 						{(textClassName) => <Amount className={textClassName} ticker={ticker} value={balance} />}

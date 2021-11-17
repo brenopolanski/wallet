@@ -8,6 +8,7 @@ interface DonutGraphProperties {
 	data: DonutGraphDataPoint[];
 	size: number;
 	renderTooltip?: (dataPoint: DonutGraphDataPoint) => JSX.Element;
+	renderContentInsideCircle?: () => JSX.Element;
 }
 
 export type { DonutGraphDataPoint, DonutGraphProperties };

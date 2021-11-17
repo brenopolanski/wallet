@@ -1,11 +1,13 @@
-import { GRAPH_COLORS } from "app/components/Graphs/Graphs.shared";
+import { GRAPH_COLORS, GRAPH_COLORS_DARK } from "app/components/Graphs/Graphs.shared";
 
-const getColor = (index: number): string => {
-	if (GRAPH_COLORS[index]) {
-		return GRAPH_COLORS[index];
+const getColor = (index: number, isDarkMode: boolean): string => {
+	const colors = isDarkMode ? GRAPH_COLORS_DARK : GRAPH_COLORS;
+
+	if (colors[index]) {
+		return colors[index];
 	}
 
-	return GRAPH_COLORS[GRAPH_COLORS.length - 1];
+	return colors[colors.length - 1];
 };
 
 const formatPercentage = (value: number): string => `${Math.round(((value || 0) + Number.EPSILON) * 100) / 100}%`;

@@ -1,5 +1,5 @@
 import { GraphAnimation } from "app/components/Graphs/GraphHoverAnimation/GraphHoverAnimation.contract";
-import React, { useMemo } from "react";
+import React, { useEffect, useMemo, useRef } from "react";
 
 import { DonutGraphDataPoint } from "./DonutGraph.contracts";
 
@@ -26,7 +26,7 @@ interface UseDonutGraphResult {
 	circles: DonutGraphCircle[];
 }
 
-export const useDonutGraph = (data: DonutGraphDataPoint[], size: number): UseDonutGraphResult => {
+const useDonutGraph = (data: DonutGraphDataPoint[], size: number): UseDonutGraphResult => {
 	const {
 		circleCommonProperties,
 		circumference,
@@ -59,7 +59,7 @@ export const useDonutGraph = (data: DonutGraphDataPoint[], size: number): UseDon
 	const backgroundCircle = useMemo<React.SVGProps<SVGCircleElement>>(
 		() => ({
 			...circleCommonProperties,
-			className: "fill-current text-theme-secondary-200",
+			className: "fill-current text-theme-secondary-200 dark:text-black",
 			fill: "inherit",
 			r: radius - BACKGROUND_CIRCLE_SPACING,
 			strokeWidth: 0,
@@ -94,21 +94,9 @@ export const useDonutGraph = (data: DonutGraphDataPoint[], size: number): UseDon
 
 			items.push({
 				animations: [
-					{
-						attribute: "r",
-						from: radius,
-						to: radiusHover,
-					},
-					{
-						attribute: "stroke-dasharray",
-						from: strokeDasharray,
-						to: strokeDasharrayHover,
-					},
-					{
-						attribute: "stroke-dashoffset",
-						from: strokeDashoffset,
-						to: strokeDashoffsetHover,
-					},
+					{ attribute: "r", from: radius, to: radiusHover },
+					{ attribute: "stroke-dasharray", from: strokeDasharray, to: strokeDasharrayHover },
+					{ attribute: "stroke-dashoffset", from: strokeDashoffset, to: strokeDashoffsetHover },
 				],
 				circleProperties: {
 					...circleCommonProperties,
@@ -127,3 +115,40 @@ export const useDonutGraph = (data: DonutGraphDataPoint[], size: number): UseDon
 		circles,
 	};
 };
+
+interface UseContentInsideCircleResult {
+	ContentInsideCircle: React.VFC;
+}
+
+const useContentInsideCircle = (
+	renderFunction: (() => JSX.Element) | undefined,
+	size: number,
+): UseContentInsideCircleResult => {
+	console.log("re render");
+	const reference = useRef<HTMLDivElement | null>(null);
+
+	useEffect(() => {
+		const container = reference.current;
+
+		if (!container) {
+			return;
+		}
+
+		container.style.top = `${size}px`;
+		container.style.left = `${size}px`;
+	}, [size]);
+
+	if (!renderFunction) {
+		return { ContentInsideCircle: () => <></> };
+	}
+
+	const ContentInsideCircle: React.VFC = () => (
+		<div ref={reference} className="absolute">
+			{renderFunction()}
+		</div>
+	);
+
+	return { ContentInsideCircle };
+};
+
+export { useContentInsideCircle, useDonutGraph };
