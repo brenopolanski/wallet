@@ -239,7 +239,7 @@ exports[`Dashboard should display empty block when there are no transactions 1`]
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -300,7 +300,7 @@ exports[`Dashboard should display empty block when there are no transactions 1`]
                         class="group"
                       >
                         <button
-                          class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus"
+                          class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus"
                           data-testid="LayoutControls__list--icon"
                         >
                           <div
@@ -322,7 +322,7 @@ exports[`Dashboard should display empty block when there are no transactions 1`]
                         class="group"
                       >
                         <button
-                          class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus active"
+                          class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus active"
                           data-testid="LayoutControls__grid--icon"
                         >
                           <div
@@ -353,7 +353,7 @@ exports[`Dashboard should display empty block when there are no transactions 1`]
                           class="group"
                         >
                           <button
-                            class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus"
+                            class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus"
                           >
                             <div
                               class="flex justify-center items-center w-5 h-5"
@@ -516,7 +516,7 @@ exports[`Dashboard should display empty block when there are no transactions 1`]
                                   </div>
                                 </div>
                                 <div
-                                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                   data-testid="Avatar"
                                 >
                                   <div
@@ -633,7 +633,7 @@ exports[`Dashboard should display empty block when there are no transactions 1`]
                                   </div>
                                 </div>
                                 <div
-                                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                   data-testid="Avatar"
                                 >
                                   <div
@@ -764,7 +764,7 @@ exports[`Dashboard should display empty block when there are no transactions 1`]
                                   </div>
                                 </div>
                                 <div
-                                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                   data-testid="Avatar"
                                 >
                                   <div
@@ -1134,7 +1134,7 @@ exports[`Dashboard should render 1`] = `
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -1195,7 +1195,7 @@ exports[`Dashboard should render 1`] = `
                         class="group"
                       >
                         <button
-                          class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus"
+                          class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus"
                           data-testid="LayoutControls__list--icon"
                         >
                           <div
@@ -1217,7 +1217,7 @@ exports[`Dashboard should render 1`] = `
                         class="group"
                       >
                         <button
-                          class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus active"
+                          class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus active"
                           data-testid="LayoutControls__grid--icon"
                         >
                           <div
@@ -1248,7 +1248,7 @@ exports[`Dashboard should render 1`] = `
                           class="group"
                         >
                           <button
-                            class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus"
+                            class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus"
                           >
                             <div
                               class="flex justify-center items-center w-5 h-5"
@@ -1411,7 +1411,7 @@ exports[`Dashboard should render 1`] = `
                                   </div>
                                 </div>
                                 <div
-                                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                   data-testid="Avatar"
                                 >
                                   <div
@@ -1528,7 +1528,7 @@ exports[`Dashboard should render 1`] = `
                                   </div>
                                 </div>
                                 <div
-                                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                   data-testid="Avatar"
                                 >
                                   <div
@@ -1659,7 +1659,7 @@ exports[`Dashboard should render 1`] = `
                                   </div>
                                 </div>
                                 <div
-                                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                   data-testid="Avatar"
                                 >
                                   <div
@@ -1906,7 +1906,7 @@ exports[`Dashboard should render 1`] = `
                           to="https://dexplorer.ark.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
                         >
                           <span
-                            class="Link__Content-sc-ec014t-1 jGLnf"
+                            class="Link__Content-sc-ec014t-1 fPOlTq"
                           >
                             <div
                               class="sc-bdvvtL fCrhkg"
@@ -2077,7 +2077,7 @@ exports[`Dashboard should render 1`] = `
                           to="https://dexplorer.ark.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
                         >
                           <span
-                            class="Link__Content-sc-ec014t-1 jGLnf"
+                            class="Link__Content-sc-ec014t-1 fPOlTq"
                           >
                             <div
                               class="sc-bdvvtL fCrhkg"
@@ -2248,7 +2248,7 @@ exports[`Dashboard should render 1`] = `
                           to="https://dexplorer.ark.io/transaction/0d8d12d7980bf0183ef015e5938e56c44c3db4d3695cefd16ccec4a7bfd8a2cf"
                         >
                           <span
-                            class="Link__Content-sc-ec014t-1 jGLnf"
+                            class="Link__Content-sc-ec014t-1 fPOlTq"
                           >
                             <div
                               class="sc-bdvvtL fCrhkg"
@@ -2419,7 +2419,7 @@ exports[`Dashboard should render 1`] = `
                           to="https://dexplorer.ark.io/transaction/0d8d12d7980bf0183ef015e5938e56c44c3db4d3695cefd16ccec4a7bfd8a2cf"
                         >
                           <span
-                            class="Link__Content-sc-ec014t-1 jGLnf"
+                            class="Link__Content-sc-ec014t-1 fPOlTq"
                           >
                             <div
                               class="sc-bdvvtL fCrhkg"
@@ -2823,7 +2823,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -2884,7 +2884,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                         class="group"
                       >
                         <button
-                          class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus"
+                          class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus"
                           data-testid="LayoutControls__list--icon"
                         >
                           <div
@@ -2906,7 +2906,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                         class="group"
                       >
                         <button
-                          class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus active"
+                          class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus active"
                           data-testid="LayoutControls__grid--icon"
                         >
                           <div
@@ -2937,7 +2937,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                           class="group"
                         >
                           <button
-                            class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus"
+                            class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus"
                           >
                             <div
                               class="flex justify-center items-center w-5 h-5"
@@ -3100,7 +3100,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                                   </div>
                                 </div>
                                 <div
-                                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                   data-testid="Avatar"
                                 >
                                   <div
@@ -3217,7 +3217,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                                   </div>
                                 </div>
                                 <div
-                                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                   data-testid="Avatar"
                                 >
                                   <div
@@ -3348,7 +3348,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                                   </div>
                                 </div>
                                 <div
-                                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                   data-testid="Avatar"
                                 >
                                   <div

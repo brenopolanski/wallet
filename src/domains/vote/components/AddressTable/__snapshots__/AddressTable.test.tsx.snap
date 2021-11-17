@@ -612,7 +612,7 @@ exports[`AddressTable should render when the maximum votes is greater than 1 1`]
                     class="flex"
                   >
                     <div
-                      class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                      class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                       data-testid="Avatar"
                     >
                       <div

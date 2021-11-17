@@ -18,7 +18,7 @@ exports[`ProfileCard should hide the settings icon 1`] = `
           class="relative"
         >
           <div
-            class="Avatar__AvatarWrapper-sc-18vw8a4-0 iKZVGA flex-shrink-0"
+            class="Avatar__AvatarWrapper-sc-18vw8a4-0 khZUYQ flex-shrink-0"
             data-testid="Avatar"
           >
             <div
@@ -66,7 +66,7 @@ exports[`ProfileCard should render 1`] = `
           class="relative"
         >
           <div
-            class="Avatar__AvatarWrapper-sc-18vw8a4-0 iKZVGA flex-shrink-0"
+            class="Avatar__AvatarWrapper-sc-18vw8a4-0 khZUYQ flex-shrink-0"
             data-testid="Avatar"
           >
             <div
@@ -118,7 +118,7 @@ exports[`ProfileCard should render the profile with avatar image 1`] = `
           class="relative"
         >
           <div
-            class="Avatar__AvatarWrapper-sc-18vw8a4-0 iKZVGA flex-shrink-0"
+            class="Avatar__AvatarWrapper-sc-18vw8a4-0 khZUYQ flex-shrink-0"
             data-testid="Avatar"
           >
             <div
@@ -166,7 +166,7 @@ exports[`ProfileCard should render the settings icon 1`] = `
           class="relative"
         >
           <div
-            class="Avatar__AvatarWrapper-sc-18vw8a4-0 iKZVGA flex-shrink-0"
+            class="Avatar__AvatarWrapper-sc-18vw8a4-0 khZUYQ flex-shrink-0"
             data-testid="Avatar"
           >
             <div

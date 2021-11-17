@@ -139,7 +139,7 @@ exports[`Import Profile - Processing import should enter password again 1`] = `
                       Password
                     </label>
                     <div
-                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                     >
                       <div
                         class="relative flex flex-1 h-full"
@@ -420,7 +420,7 @@ exports[`Import Profile - Processing import should handle invalid password 1`] =
                       Password
                     </label>
                     <div
-                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                     >
                       <div
                         class="relative flex flex-1 h-full"
@@ -665,7 +665,7 @@ exports[`Import Profile - Processing import should require password for password
                       Password
                     </label>
                     <div
-                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                     >
                       <div
                         class="relative flex flex-1 h-full"

@@ -98,7 +98,7 @@ exports[`MultiSignatureDetail should fail to broadcast transaction and show erro
                         class="flex items-center -space-x-1"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -144,7 +144,7 @@ exports[`MultiSignatureDetail should fail to broadcast transaction and show erro
                         class="flex items-center -space-x-1"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -366,7 +366,7 @@ exports[`MultiSignatureDetail should fail to broadcast transaction and show erro
                               >
                                 <div>
                                   <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                     data-testid="Avatar"
                                   >
                                     <div
@@ -413,7 +413,7 @@ exports[`MultiSignatureDetail should fail to broadcast transaction and show erro
                               >
                                 <div>
                                   <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                     data-testid="Avatar"
                                   >
                                     <div
@@ -584,7 +584,7 @@ exports[`MultiSignatureDetail should not broadcast if wallet is not ready to do 
                         class="flex items-center -space-x-1"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -630,7 +630,7 @@ exports[`MultiSignatureDetail should not broadcast if wallet is not ready to do 
                         class="flex items-center -space-x-1"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -852,7 +852,7 @@ exports[`MultiSignatureDetail should not broadcast if wallet is not ready to do 
                               >
                                 <div>
                                   <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                     data-testid="Avatar"
                                   >
                                     <div
@@ -899,7 +899,7 @@ exports[`MultiSignatureDetail should not broadcast if wallet is not ready to do 
                               >
                                 <div>
                                   <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                     data-testid="Avatar"
                                   >
                                     <div
@@ -1070,7 +1070,7 @@ exports[`MultiSignatureDetail should not show send button when waiting for confi
                         class="flex items-center -space-x-1"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -1116,7 +1116,7 @@ exports[`MultiSignatureDetail should not show send button when waiting for confi
                         class="flex items-center -space-x-1"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -1338,7 +1338,7 @@ exports[`MultiSignatureDetail should not show send button when waiting for confi
                               >
                                 <div>
                                   <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                     data-testid="Avatar"
                                   >
                                     <div
@@ -1385,7 +1385,7 @@ exports[`MultiSignatureDetail should not show send button when waiting for confi
                               >
                                 <div>
                                   <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                     data-testid="Avatar"
                                   >
                                     <div
@@ -1530,7 +1530,7 @@ exports[`MultiSignatureDetail should render summary step and handle exception 1`
                         class="flex items-center -space-x-1"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -1576,7 +1576,7 @@ exports[`MultiSignatureDetail should render summary step and handle exception 1`
                         class="flex items-center -space-x-1"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -1798,7 +1798,7 @@ exports[`MultiSignatureDetail should render summary step and handle exception 1`
                               >
                                 <div>
                                   <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                     data-testid="Avatar"
                                   >
                                     <div
@@ -1845,7 +1845,7 @@ exports[`MultiSignatureDetail should render summary step and handle exception 1`
                               >
                                 <div>
                                   <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                     data-testid="Avatar"
                                   >
                                     <div
@@ -1990,7 +1990,7 @@ exports[`MultiSignatureDetail should render summary step for ipfs 1`] = `
                         class="flex items-center -space-x-1"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -2196,7 +2196,7 @@ exports[`MultiSignatureDetail should render summary step for ipfs 1`] = `
                               >
                                 <div>
                                   <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                     data-testid="Avatar"
                                   >
                                     <div
@@ -2243,7 +2243,7 @@ exports[`MultiSignatureDetail should render summary step for ipfs 1`] = `
                               >
                                 <div>
                                   <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                     data-testid="Avatar"
                                   >
                                     <div
@@ -2388,7 +2388,7 @@ exports[`MultiSignatureDetail should render summary step for multi payment 1`] =
                         class="flex items-center -space-x-1"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -2487,7 +2487,7 @@ exports[`MultiSignatureDetail should render summary step for multi payment 1`] =
                                   >
                                     <td>
                                       <div
-                                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 SfPfF flex-shrink-0"
+                                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 krsvod flex-shrink-0"
                                         data-testid="Avatar"
                                       >
                                         <div
@@ -2532,7 +2532,7 @@ exports[`MultiSignatureDetail should render summary step for multi payment 1`] =
                                   >
                                     <td>
                                       <div
-                                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 SfPfF flex-shrink-0"
+                                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 krsvod flex-shrink-0"
                                         data-testid="Avatar"
                                       >
                                         <div
@@ -2785,7 +2785,7 @@ exports[`MultiSignatureDetail should render summary step for multi payment 1`] =
                               >
                                 <div>
                                   <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                     data-testid="Avatar"
                                   >
                                     <div
@@ -2832,7 +2832,7 @@ exports[`MultiSignatureDetail should render summary step for multi payment 1`] =
                               >
                                 <div>
                                   <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                     data-testid="Avatar"
                                   >
                                     <div
@@ -2988,7 +2988,7 @@ exports[`MultiSignatureDetail should render summary step for multi signature 1`]
                         class="flex items-center -space-x-1"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -3164,7 +3164,7 @@ exports[`MultiSignatureDetail should render summary step for multi signature 1`]
                               >
                                 <div>
                                   <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                     data-testid="Avatar"
                                   >
                                     <div
@@ -3211,7 +3211,7 @@ exports[`MultiSignatureDetail should render summary step for multi signature 1`]
                               >
                                 <div>
                                   <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                     data-testid="Avatar"
                                   >
                                     <div
@@ -3356,7 +3356,7 @@ exports[`MultiSignatureDetail should render summary step for transfer 1`] = `
                         class="flex items-center -space-x-1"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -3402,7 +3402,7 @@ exports[`MultiSignatureDetail should render summary step for transfer 1`] = `
                         class="flex items-center -space-x-1"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -3624,7 +3624,7 @@ exports[`MultiSignatureDetail should render summary step for transfer 1`] = `
                               >
                                 <div>
                                   <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                     data-testid="Avatar"
                                   >
                                     <div
@@ -3671,7 +3671,7 @@ exports[`MultiSignatureDetail should render summary step for transfer 1`] = `
                               >
                                 <div>
                                   <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                     data-testid="Avatar"
                                   >
                                     <div
@@ -3816,7 +3816,7 @@ exports[`MultiSignatureDetail should render summary step for unvote 1`] = `
                         class="flex items-center -space-x-1"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -3853,7 +3853,7 @@ exports[`MultiSignatureDetail should render summary step for unvote 1`] = `
                               class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
                             >
                               <div
-                                class="Avatar__AvatarWrapper-sc-18vw8a4-0 SfPfF flex-shrink-0"
+                                class="Avatar__AvatarWrapper-sc-18vw8a4-0 krsvod flex-shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
@@ -4057,7 +4057,7 @@ exports[`MultiSignatureDetail should render summary step for unvote 1`] = `
                               >
                                 <div>
                                   <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                     data-testid="Avatar"
                                   >
                                     <div
@@ -4104,7 +4104,7 @@ exports[`MultiSignatureDetail should render summary step for unvote 1`] = `
                               >
                                 <div>
                                   <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                     data-testid="Avatar"
                                   >
                                     <div
@@ -4249,7 +4249,7 @@ exports[`MultiSignatureDetail should render summary step for vote 1`] = `
                         class="flex items-center -space-x-1"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -4286,7 +4286,7 @@ exports[`MultiSignatureDetail should render summary step for vote 1`] = `
                               class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
                             >
                               <div
-                                class="Avatar__AvatarWrapper-sc-18vw8a4-0 SfPfF flex-shrink-0"
+                                class="Avatar__AvatarWrapper-sc-18vw8a4-0 krsvod flex-shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
@@ -4490,7 +4490,7 @@ exports[`MultiSignatureDetail should render summary step for vote 1`] = `
                               >
                                 <div>
                                   <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                     data-testid="Avatar"
                                   >
                                     <div
@@ -4537,7 +4537,7 @@ exports[`MultiSignatureDetail should render summary step for vote 1`] = `
                               >
                                 <div>
                                   <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                     data-testid="Avatar"
                                   >
                                     <div
@@ -4688,7 +4688,7 @@ exports[`MultiSignatureDetail should show error screen for Nano S and continue w
                               >
                                 <div>
                                   <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                     data-testid="Avatar"
                                   >
                                     <div
@@ -4735,7 +4735,7 @@ exports[`MultiSignatureDetail should show error screen for Nano S and continue w
                               >
                                 <div>
                                   <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                     data-testid="Avatar"
                                   >
                                     <div
@@ -4880,7 +4880,7 @@ exports[`MultiSignatureDetail should show send button when able to add final sig
                         class="flex items-center -space-x-1"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -4926,7 +4926,7 @@ exports[`MultiSignatureDetail should show send button when able to add final sig
                         class="flex items-center -space-x-1"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -5148,7 +5148,7 @@ exports[`MultiSignatureDetail should show send button when able to add final sig
                               >
                                 <div>
                                   <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                     data-testid="Avatar"
                                   >
                                     <div
@@ -5195,7 +5195,7 @@ exports[`MultiSignatureDetail should show send button when able to add final sig
                               >
                                 <div>
                                   <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                     data-testid="Avatar"
                                   >
                                     <div
@@ -5366,7 +5366,7 @@ exports[`MultiSignatureDetail should show sign button when able to sign 1`] = `
                         class="flex items-center -space-x-1"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -5412,7 +5412,7 @@ exports[`MultiSignatureDetail should show sign button when able to sign 1`] = `
                         class="flex items-center -space-x-1"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -5634,7 +5634,7 @@ exports[`MultiSignatureDetail should show sign button when able to sign 1`] = `
                               >
                                 <div>
                                   <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                     data-testid="Avatar"
                                   >
                                     <div
@@ -5681,7 +5681,7 @@ exports[`MultiSignatureDetail should show sign button when able to sign 1`] = `
                               >
                                 <div>
                                   <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                     data-testid="Avatar"
                                   >
                                     <div
@@ -5858,7 +5858,7 @@ exports[`MultiSignatureDetail should sign transaction after authentication page 
                               >
                                 <div>
                                   <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                     data-testid="Avatar"
                                   >
                                     <div
@@ -5905,7 +5905,7 @@ exports[`MultiSignatureDetail should sign transaction after authentication page 
                               >
                                 <div>
                                   <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                     data-testid="Avatar"
                                   >
                                     <div
@@ -6056,7 +6056,7 @@ exports[`MultiSignatureDetail should sign transaction with a ledger wallet 1`] =
                               >
                                 <div>
                                   <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                     data-testid="Avatar"
                                   >
                                     <div
@@ -6103,7 +6103,7 @@ exports[`MultiSignatureDetail should sign transaction with a ledger wallet 1`] =
                               >
                                 <div>
                                   <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                     data-testid="Avatar"
                                   >
                                     <div

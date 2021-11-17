@@ -41,7 +41,7 @@ exports[`NavigationBar should render full variant when profile restored is false
       class="flex relative h-21"
     >
       <button
-        class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+        class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
       >
         <div
           class="sc-bdvvtL Cfvxc mx-auto"
@@ -249,7 +249,7 @@ exports[`NavigationBar should render full variant when profile restored is false
                 data-testid="navbar__useractions"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -284,7 +284,7 @@ exports[`NavigationBar should render full variant when profile restored is true 
       class="flex relative h-21"
     >
       <button
-        class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+        class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
       >
         <div
           class="sc-bdvvtL Cfvxc mx-auto"
@@ -484,7 +484,7 @@ exports[`NavigationBar should render full variant when profile restored is true 
                 data-testid="navbar__useractions"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -521,7 +521,7 @@ exports[`NavigationBar should render with custom menu 1`] = `
       class="flex relative h-21"
     >
       <button
-        class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+        class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
       >
         <div
           class="sc-bdvvtL Cfvxc mx-auto"
@@ -721,7 +721,7 @@ exports[`NavigationBar should render with custom menu 1`] = `
                 data-testid="navbar__useractions"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -758,7 +758,7 @@ exports[`NavigationBar should render with shadow if there is a scroll 1`] = `
       class="flex relative h-21"
     >
       <button
-        class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+        class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
       >
         <div
           class="sc-bdvvtL Cfvxc mx-auto"
@@ -958,7 +958,7 @@ exports[`NavigationBar should render with shadow if there is a scroll 1`] = `
                 data-testid="navbar__useractions"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -995,7 +995,7 @@ exports[`NavigationBar should render with title 1`] = `
       class="flex relative h-21"
     >
       <button
-        class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+        class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
       >
         <div
           class="sc-bdvvtL Cfvxc mx-auto"
@@ -1200,7 +1200,7 @@ exports[`NavigationBar should render with title 1`] = `
                 data-testid="navbar__useractions"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div

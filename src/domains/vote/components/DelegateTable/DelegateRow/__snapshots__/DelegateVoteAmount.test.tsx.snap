@@ -76,7 +76,7 @@ exports[`DelegateVoteAmount should render when isCompact = false 1`] = `
                 class="relative"
               >
                 <div
-                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 dpFHlv"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 fJIMQr"
                 >
                   <div
                     class="relative flex flex-1 h-full"
@@ -131,7 +131,7 @@ exports[`DelegateVoteAmount should render when isCompact = true 1`] = `
                 class="relative"
               >
                 <div
-                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 gOWoJG"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 hmGbsm"
                 >
                   <div
                     class="relative flex flex-1 h-full"

@@ -13,7 +13,7 @@ exports[`ExchangeView should render 1`] = `
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -238,7 +238,7 @@ exports[`ExchangeView should render 1`] = `
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -341,7 +341,7 @@ exports[`ExchangeView should render 1`] = `
                             class="relative w-full"
                           >
                             <div
-                              class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF sr-only"
+                              class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR sr-only"
                             >
                               <div
                                 class="relative flex flex-1 h-full"
@@ -370,7 +370,7 @@ exports[`ExchangeView should render 1`] = `
                                   id="fromCurrency-label"
                                 />
                                 <div
-                                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                                 >
                                   <div
                                     class="Circle__CircleWrapper-sc-d5u41q-0 bcplCx bg-theme-secondary-200 border-theme-secondary-200 dark:bg-theme-secondary-700 dark:border-theme-secondary-700 ring-theme-background ring-theme-background"
@@ -416,7 +416,7 @@ exports[`ExchangeView should render 1`] = `
                                 </div>
                                 <ul
                                   aria-labelledby="fromCurrency-label"
-                                  class="styles__SelectOptionsList-sc-120rtxy-0 HcHWp"
+                                  class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc"
                                   id="fromCurrency-menu"
                                   role="listbox"
                                 />
@@ -442,7 +442,7 @@ exports[`ExchangeView should render 1`] = `
                             class="relative"
                           >
                             <div
-                              class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                              class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                             >
                               <div
                                 class="relative flex flex-1 h-full"
@@ -532,7 +532,7 @@ exports[`ExchangeView should render 1`] = `
                               class="relative w-full"
                             >
                               <div
-                                class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF sr-only"
+                                class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR sr-only"
                               >
                                 <div
                                   class="relative flex flex-1 h-full"
@@ -561,7 +561,7 @@ exports[`ExchangeView should render 1`] = `
                                     id="toCurrency-label"
                                   />
                                   <div
-                                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                                   >
                                     <div
                                       class="Circle__CircleWrapper-sc-d5u41q-0 bcplCx bg-theme-secondary-200 border-theme-secondary-200 dark:bg-theme-secondary-700 dark:border-theme-secondary-700 ring-theme-background ring-theme-background"
@@ -607,7 +607,7 @@ exports[`ExchangeView should render 1`] = `
                                   </div>
                                   <ul
                                     aria-labelledby="toCurrency-label"
-                                    class="styles__SelectOptionsList-sc-120rtxy-0 HcHWp"
+                                    class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc"
                                     id="toCurrency-menu"
                                     role="listbox"
                                   />
@@ -633,7 +633,7 @@ exports[`ExchangeView should render 1`] = `
                               class="relative"
                             >
                               <div
-                                class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                                class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                               >
                                 <div
                                   class="relative flex flex-1 h-full"
@@ -674,7 +674,7 @@ exports[`ExchangeView should render 1`] = `
                                 class="relative w-full"
                               >
                                 <div
-                                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF sr-only"
+                                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR sr-only"
                                 >
                                   <div
                                     class="relative flex flex-1 h-full"
@@ -735,7 +735,7 @@ exports[`ExchangeView should render 1`] = `
                                     </div>
                                     <ul
                                       aria-labelledby="SelectRecipient__dropdown-label"
-                                      class="styles__SelectOptionsList-sc-120rtxy-0 HcHWp"
+                                      class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc"
                                       id="SelectRecipient__dropdown-menu"
                                       role="listbox"
                                     />
@@ -810,7 +810,7 @@ exports[`ExchangeView should render warning without exchange 1`] = `
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -1035,7 +1035,7 @@ exports[`ExchangeView should render warning without exchange 1`] = `
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div

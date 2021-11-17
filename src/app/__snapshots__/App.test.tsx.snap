@@ -93,7 +93,7 @@ exports[`App should close splash screen if not e2e 1`] = `
                             class="relative"
                           >
                             <div
-                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 iKZVGA flex-shrink-0"
+                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 khZUYQ flex-shrink-0"
                               data-testid="Avatar"
                             >
                               <div
@@ -161,7 +161,7 @@ exports[`App should close splash screen if not e2e 1`] = `
                             class="relative"
                           >
                             <div
-                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 iKZVGA flex-shrink-0"
+                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 khZUYQ flex-shrink-0"
                               data-testid="Avatar"
                             >
                               <div
@@ -281,7 +281,7 @@ exports[`App should close splash screen if not e2e 1`] = `
                     title="Import Profile"
                   >
                     <span
-                      class="Link__Content-sc-ec014t-1 jGLnf"
+                      class="Link__Content-sc-ec014t-1 fPOlTq"
                     >
                       Import it here.
                     </span>
@@ -390,7 +390,7 @@ exports[`App should not migrate profiles 1`] = `
                             class="relative"
                           >
                             <div
-                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 iKZVGA flex-shrink-0"
+                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 khZUYQ flex-shrink-0"
                               data-testid="Avatar"
                             >
                               <div
@@ -458,7 +458,7 @@ exports[`App should not migrate profiles 1`] = `
                             class="relative"
                           >
                             <div
-                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 iKZVGA flex-shrink-0"
+                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 khZUYQ flex-shrink-0"
                               data-testid="Avatar"
                             >
                               <div
@@ -578,7 +578,7 @@ exports[`App should not migrate profiles 1`] = `
                     title="Import Profile"
                   >
                     <span
-                      class="Link__Content-sc-ec014t-1 jGLnf"
+                      class="Link__Content-sc-ec014t-1 fPOlTq"
                     >
                       Import it here.
                     </span>
@@ -772,7 +772,7 @@ exports[`App should render mock 1`] = `
                             class="relative"
                           >
                             <div
-                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 iKZVGA flex-shrink-0"
+                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 khZUYQ flex-shrink-0"
                               data-testid="Avatar"
                             >
                               <div
@@ -840,7 +840,7 @@ exports[`App should render mock 1`] = `
                             class="relative"
                           >
                             <div
-                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 iKZVGA flex-shrink-0"
+                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 khZUYQ flex-shrink-0"
                               data-testid="Avatar"
                             >
                               <div
@@ -960,7 +960,7 @@ exports[`App should render mock 1`] = `
                     title="Import Profile"
                   >
                     <span
-                      class="Link__Content-sc-ec014t-1 jGLnf"
+                      class="Link__Content-sc-ec014t-1 fPOlTq"
                     >
                       Import it here.
                     </span>
@@ -1069,7 +1069,7 @@ exports[`App should render splash screen 1`] = `
                             class="relative"
                           >
                             <div
-                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 iKZVGA flex-shrink-0"
+                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 khZUYQ flex-shrink-0"
                               data-testid="Avatar"
                             >
                               <div
@@ -1137,7 +1137,7 @@ exports[`App should render splash screen 1`] = `
                             class="relative"
                           >
                             <div
-                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 iKZVGA flex-shrink-0"
+                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 khZUYQ flex-shrink-0"
                               data-testid="Avatar"
                             >
                               <div
@@ -1257,7 +1257,7 @@ exports[`App should render splash screen 1`] = `
                     title="Import Profile"
                   >
                     <span
-                      class="Link__Content-sc-ec014t-1 jGLnf"
+                      class="Link__Content-sc-ec014t-1 fPOlTq"
                     >
                       Import it here.
                     </span>
@@ -1444,7 +1444,7 @@ exports[`App should render welcome screen after splash screen 1`] = `
                             class="relative"
                           >
                             <div
-                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 iKZVGA flex-shrink-0"
+                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 khZUYQ flex-shrink-0"
                               data-testid="Avatar"
                             >
                               <div
@@ -1512,7 +1512,7 @@ exports[`App should render welcome screen after splash screen 1`] = `
                             class="relative"
                           >
                             <div
-                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 iKZVGA flex-shrink-0"
+                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 khZUYQ flex-shrink-0"
                               data-testid="Avatar"
                             >
                               <div
@@ -1632,7 +1632,7 @@ exports[`App should render welcome screen after splash screen 1`] = `
                     title="Import Profile"
                   >
                     <span
-                      class="Link__Content-sc-ec014t-1 jGLnf"
+                      class="Link__Content-sc-ec014t-1 fPOlTq"
                     >
                       Import it here.
                     </span>

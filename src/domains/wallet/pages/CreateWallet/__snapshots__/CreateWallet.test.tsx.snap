@@ -13,7 +13,7 @@ exports[`CreateWallet should create a wallet 1`] = `
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -239,7 +239,7 @@ exports[`CreateWallet should create a wallet 1`] = `
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -345,7 +345,7 @@ exports[`CreateWallet should create a wallet 1`] = `
                             id="NetworkStep__network-label"
                           />
                           <div
-                            class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                            class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                           >
                             <div
                               class="Circle__CircleWrapper-sc-d5u41q-0 bcplCx border-theme-secondary-200 dark:border-theme-secondary-700 text-theme-secondary-500 ring-theme-background"
@@ -502,7 +502,7 @@ exports[`CreateWallet should create a wallet 1`] = `
                                     class="Toggle__Handle-sc-6s3wfu-2 cobHFC"
                                   >
                                     <span
-                                      class="Toggle__HandleInner-sc-6s3wfu-3 klclKD"
+                                      class="Toggle__HandleInner-sc-6s3wfu-3 ddepvC"
                                     />
                                   </div>
                                 </label>
@@ -634,7 +634,7 @@ exports[`CreateWallet should create a wallet 2`] = `
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -860,7 +860,7 @@ exports[`CreateWallet should create a wallet 2`] = `
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -1006,7 +1006,7 @@ exports[`CreateWallet should create a wallet 2`] = `
                         </div>
                       </div>
                       <div
-                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                         data-testid="Avatar"
                       >
                         <div
@@ -1098,7 +1098,7 @@ exports[`CreateWallet should create a wallet with encryption 1`] = `
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -1324,7 +1324,7 @@ exports[`CreateWallet should create a wallet with encryption 1`] = `
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -1430,7 +1430,7 @@ exports[`CreateWallet should create a wallet with encryption 1`] = `
                             id="NetworkStep__network-label"
                           />
                           <div
-                            class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                            class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                           >
                             <div
                               class="Circle__CircleWrapper-sc-d5u41q-0 bcplCx border-theme-secondary-200 dark:border-theme-secondary-700 text-theme-secondary-500 ring-theme-background"
@@ -1587,7 +1587,7 @@ exports[`CreateWallet should create a wallet with encryption 1`] = `
                                     class="Toggle__Handle-sc-6s3wfu-2 cobHFC"
                                   >
                                     <span
-                                      class="Toggle__HandleInner-sc-6s3wfu-3 klclKD"
+                                      class="Toggle__HandleInner-sc-6s3wfu-3 ddepvC"
                                     />
                                   </div>
                                 </label>
@@ -1719,7 +1719,7 @@ exports[`CreateWallet should create a wallet with encryption 2`] = `
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -1945,7 +1945,7 @@ exports[`CreateWallet should create a wallet with encryption 2`] = `
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -2094,7 +2094,7 @@ exports[`CreateWallet should create a wallet with encryption 2`] = `
                         </div>
                       </div>
                       <div
-                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                         data-testid="Avatar"
                       >
                         <div
@@ -2188,7 +2188,7 @@ exports[`CreateWallet should remove pending wallet if not submitted 1`] = `
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -2414,7 +2414,7 @@ exports[`CreateWallet should remove pending wallet if not submitted 1`] = `
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -2520,7 +2520,7 @@ exports[`CreateWallet should remove pending wallet if not submitted 1`] = `
                             id="NetworkStep__network-label"
                           />
                           <div
-                            class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                            class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                           >
                             <div
                               class="Circle__CircleWrapper-sc-d5u41q-0 bcplCx border-theme-secondary-200 dark:border-theme-secondary-700 text-theme-secondary-500 ring-theme-background"
@@ -2677,7 +2677,7 @@ exports[`CreateWallet should remove pending wallet if not submitted 1`] = `
                                     class="Toggle__Handle-sc-6s3wfu-2 cobHFC"
                                   >
                                     <span
-                                      class="Toggle__HandleInner-sc-6s3wfu-3 klclKD"
+                                      class="Toggle__HandleInner-sc-6s3wfu-3 ddepvC"
                                     />
                                   </div>
                                 </label>
@@ -2811,7 +2811,7 @@ exports[`CreateWallet should show an error message for duplicate name 1`] = `
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -3035,7 +3035,7 @@ exports[`CreateWallet should show an error message for duplicate name 1`] = `
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -3141,7 +3141,7 @@ exports[`CreateWallet should show an error message for duplicate name 1`] = `
                             id="NetworkStep__network-label"
                           />
                           <div
-                            class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                            class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                           >
                             <div
                               class="Circle__CircleWrapper-sc-d5u41q-0 bcplCx border-theme-secondary-200 dark:border-theme-secondary-700 text-theme-secondary-500 ring-theme-background"
@@ -3298,7 +3298,7 @@ exports[`CreateWallet should show an error message for duplicate name 1`] = `
                                     class="Toggle__Handle-sc-6s3wfu-2 cobHFC"
                                   >
                                     <span
-                                      class="Toggle__HandleInner-sc-6s3wfu-3 klclKD"
+                                      class="Toggle__HandleInner-sc-6s3wfu-3 ddepvC"
                                     />
                                   </div>
                                 </label>
@@ -3430,7 +3430,7 @@ exports[`CreateWallet should show an error message if wallet generation failed 1
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -3656,7 +3656,7 @@ exports[`CreateWallet should show an error message if wallet generation failed 1
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -3792,7 +3792,7 @@ exports[`CreateWallet should show an error message if wallet generation failed 1
                             id="NetworkStep__network-label"
                           />
                           <div
-                            class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                            class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                           >
                             <div
                               aria-label="ARK Devnet"
@@ -3961,7 +3961,7 @@ exports[`CreateWallet should show an error message if wallet generation failed 1
                                     class="Toggle__Handle-sc-6s3wfu-2 cobHFC"
                                   >
                                     <span
-                                      class="Toggle__HandleInner-sc-6s3wfu-3 klclKD"
+                                      class="Toggle__HandleInner-sc-6s3wfu-3 ddepvC"
                                     />
                                   </div>
                                 </label>

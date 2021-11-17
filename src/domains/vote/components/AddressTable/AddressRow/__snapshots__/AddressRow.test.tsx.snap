@@ -1546,7 +1546,7 @@ exports[`AddressRow should render with isCompact = false when the maximum votes 
                 class="flex"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -1564,7 +1564,7 @@ exports[`AddressRow should render with isCompact = false when the maximum votes 
                 class="flex"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -1582,7 +1582,7 @@ exports[`AddressRow should render with isCompact = false when the maximum votes 
                 class="flex"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -1600,7 +1600,7 @@ exports[`AddressRow should render with isCompact = false when the maximum votes 
                 class="flex"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -1768,7 +1768,7 @@ exports[`AddressRow should render with isCompact = false when the wallet has man
                 class="flex"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -1786,7 +1786,7 @@ exports[`AddressRow should render with isCompact = false when the wallet has man
                 class="flex"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -1804,7 +1804,7 @@ exports[`AddressRow should render with isCompact = false when the wallet has man
                 class="flex"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div

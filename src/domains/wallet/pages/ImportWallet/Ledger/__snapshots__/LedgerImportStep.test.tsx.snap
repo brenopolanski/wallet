@@ -78,7 +78,7 @@ exports[`LedgerImportStep should render with multiple import 1`] = `
                   class="flex items-center space-x-3"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -163,7 +163,7 @@ exports[`LedgerImportStep should render with multiple import 1`] = `
                   class="flex items-center space-x-3"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -328,7 +328,7 @@ exports[`LedgerImportStep should render with single import 1`] = `
         </div>
       </div>
       <div
-        class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+        class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
         data-testid="Avatar"
       >
         <div

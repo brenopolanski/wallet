@@ -15,7 +15,7 @@ exports[`VotesFilter should render 1`] = `
           class="group"
         >
           <button
-            class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus"
+            class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus"
           >
             <div
               class="flex justify-center items-center w-5 h-5"
@@ -53,7 +53,7 @@ exports[`VotesFilter should render default 1`] = `
           class="group"
         >
           <button
-            class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus"
+            class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus"
           >
             <div
               class="flex justify-center items-center w-5 h-5"
@@ -136,7 +136,7 @@ exports[`VotesFilter should render with current option selected 1`] = `
           class="group"
         >
           <button
-            class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus"
+            class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus"
           >
             <div
               class="flex absolute top-0.5 right-1 justify-center items-center w-3 h-3 rounded-full transition-all duration-100 ease-linear bg-theme-background"
@@ -226,7 +226,7 @@ exports[`VotesFilter should render with disabled current option 1`] = `
           class="group"
         >
           <button
-            class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus"
+            class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus"
           >
             <div
               class="flex justify-center items-center w-5 h-5"

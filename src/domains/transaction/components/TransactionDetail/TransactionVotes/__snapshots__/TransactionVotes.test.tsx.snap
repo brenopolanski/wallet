@@ -62,7 +62,7 @@ exports[`TransactionVotes should render with unvotes 1`] = `
             class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-18vw8a4-0 SfPfF flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 krsvod flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -132,7 +132,7 @@ exports[`TransactionVotes should render with votes 1`] = `
             class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-18vw8a4-0 SfPfF flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 krsvod flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -202,7 +202,7 @@ exports[`TransactionVotes should render with votes and unvotes 1`] = `
             class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-18vw8a4-0 SfPfF flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 krsvod flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -267,7 +267,7 @@ exports[`TransactionVotes should render with votes and unvotes 1`] = `
             class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-18vw8a4-0 SfPfF flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 krsvod flex-shrink-0"
               data-testid="Avatar"
             >
               <div

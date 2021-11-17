@@ -26,7 +26,7 @@ exports[`Signatures should handle exception when checking if participant is awai
           >
             <div>
               <div
-                class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -73,7 +73,7 @@ exports[`Signatures should handle exception when checking if participant is awai
           >
             <div>
               <div
-                class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -136,7 +136,7 @@ exports[`Signatures should render 1`] = `
           >
             <div>
               <div
-                class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -183,7 +183,7 @@ exports[`Signatures should render 1`] = `
           >
             <div>
               <div
-                class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -246,7 +246,7 @@ exports[`Signatures should render with waiting badge 1`] = `
           >
             <div>
               <div
-                class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -293,7 +293,7 @@ exports[`Signatures should render with waiting badge 1`] = `
           >
             <div>
               <div
-                class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -356,7 +356,7 @@ exports[`Signatures should show all participants as signed when all signatures a
           >
             <div>
               <div
-                class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -403,7 +403,7 @@ exports[`Signatures should show all participants as signed when all signatures a
           >
             <div>
               <div
-                class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                 data-testid="Avatar"
               >
                 <div

@@ -167,7 +167,7 @@ exports[`ImportProfile should apply theme setting of imported profile regardless
                                     Profile Name
                                   </label>
                                   <div
-                                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 eyownm"
+                                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 lnWRPe"
                                   >
                                     <div
                                       class="relative flex flex-1 h-full"
@@ -211,7 +211,7 @@ exports[`ImportProfile should apply theme setting of imported profile regardless
                                     class="relative w-20 h-20"
                                   >
                                     <div
-                                      class="SelectProfileImage__ProfileImageStyled-sc-vg16mg-1 ekoikq"
+                                      class="SelectProfileImage__ProfileImageStyled-sc-vg16mg-1 bTAoWK"
                                     >
                                       <img
                                         alt="Avatar"
@@ -265,7 +265,7 @@ exports[`ImportProfile should apply theme setting of imported profile regardless
                                 </span>
                               </label>
                               <div
-                                class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                                class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                               >
                                 <div
                                   class="relative flex flex-1 h-full"
@@ -321,7 +321,7 @@ exports[`ImportProfile should apply theme setting of imported profile regardless
                                 </span>
                               </label>
                               <div
-                                class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                                class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                               >
                                 <div
                                   class="relative flex flex-1 h-full"
@@ -374,7 +374,7 @@ exports[`ImportProfile should apply theme setting of imported profile regardless
                                 class="relative w-full"
                               >
                                 <div
-                                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF sr-only"
+                                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR sr-only"
                                 >
                                   <div
                                     class="relative flex flex-1 h-full"
@@ -408,7 +408,7 @@ exports[`ImportProfile should apply theme setting of imported profile regardless
                                       AUD (A$)…
                                     </div>
                                     <div
-                                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                                     >
                                       <div
                                         class="relative flex flex-1 h-full"
@@ -461,7 +461,7 @@ exports[`ImportProfile should apply theme setting of imported profile regardless
                                     </div>
                                     <ul
                                       aria-labelledby="CreateProfile__currency-label"
-                                      class="styles__SelectOptionsList-sc-120rtxy-0 HcHWp"
+                                      class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc"
                                       id="CreateProfile__currency-menu"
                                       role="listbox"
                                     />
@@ -510,7 +510,7 @@ exports[`ImportProfile should apply theme setting of imported profile regardless
                                             class="Toggle__Handle-sc-6s3wfu-2 cobHFC"
                                           >
                                             <span
-                                              class="Toggle__HandleInner-sc-6s3wfu-3 klclKD"
+                                              class="Toggle__HandleInner-sc-6s3wfu-3 ddepvC"
                                             />
                                           </div>
                                         </label>
@@ -740,7 +740,7 @@ exports[`ImportProfile should apply theme setting of imported profile regardless
                                     Profile Name
                                   </label>
                                   <div
-                                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 eyownm"
+                                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 lnWRPe"
                                   >
                                     <div
                                       class="relative flex flex-1 h-full"
@@ -784,7 +784,7 @@ exports[`ImportProfile should apply theme setting of imported profile regardless
                                     class="relative w-20 h-20"
                                   >
                                     <div
-                                      class="SelectProfileImage__ProfileImageStyled-sc-vg16mg-1 ekoikq"
+                                      class="SelectProfileImage__ProfileImageStyled-sc-vg16mg-1 bTAoWK"
                                     >
                                       <img
                                         alt="Avatar"
@@ -838,7 +838,7 @@ exports[`ImportProfile should apply theme setting of imported profile regardless
                                 </span>
                               </label>
                               <div
-                                class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                                class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                               >
                                 <div
                                   class="relative flex flex-1 h-full"
@@ -894,7 +894,7 @@ exports[`ImportProfile should apply theme setting of imported profile regardless
                                 </span>
                               </label>
                               <div
-                                class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                                class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                               >
                                 <div
                                   class="relative flex flex-1 h-full"
@@ -947,7 +947,7 @@ exports[`ImportProfile should apply theme setting of imported profile regardless
                                 class="relative w-full"
                               >
                                 <div
-                                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF sr-only"
+                                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR sr-only"
                                 >
                                   <div
                                     class="relative flex flex-1 h-full"
@@ -981,7 +981,7 @@ exports[`ImportProfile should apply theme setting of imported profile regardless
                                       AUD (A$)…
                                     </div>
                                     <div
-                                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                                     >
                                       <div
                                         class="relative flex flex-1 h-full"
@@ -1034,7 +1034,7 @@ exports[`ImportProfile should apply theme setting of imported profile regardless
                                     </div>
                                     <ul
                                       aria-labelledby="CreateProfile__currency-label"
-                                      class="styles__SelectOptionsList-sc-120rtxy-0 HcHWp"
+                                      class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc"
                                       id="CreateProfile__currency-menu"
                                       role="listbox"
                                     />
@@ -1083,7 +1083,7 @@ exports[`ImportProfile should apply theme setting of imported profile regardless
                                             class="Toggle__Handle-sc-6s3wfu-2 cobHFC"
                                           >
                                             <span
-                                              class="Toggle__HandleInner-sc-6s3wfu-3 klclKD"
+                                              class="Toggle__HandleInner-sc-6s3wfu-3 ddepvC"
                                             />
                                           </div>
                                         </label>

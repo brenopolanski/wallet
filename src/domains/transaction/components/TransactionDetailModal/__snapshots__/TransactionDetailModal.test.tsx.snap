@@ -80,7 +80,7 @@ exports[`TransactionDetailModal should render a delegate registration modal 1`] 
                         to="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                       >
                         <span
-                          class="Link__Content-sc-ec014t-1 jGLnf"
+                          class="Link__Content-sc-ec014t-1 fPOlTq"
                         >
                           <span
                             class="inline-flex overflow-hidden"
@@ -166,7 +166,7 @@ exports[`TransactionDetailModal should render a delegate registration modal 1`] 
                 class="flex items-center -space-x-1"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -376,7 +376,7 @@ exports[`TransactionDetailModal should render a delegate resignation modal 1`] =
                         to="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                       >
                         <span
-                          class="Link__Content-sc-ec014t-1 jGLnf"
+                          class="Link__Content-sc-ec014t-1 fPOlTq"
                         >
                           <span
                             class="inline-flex overflow-hidden"
@@ -462,7 +462,7 @@ exports[`TransactionDetailModal should render a delegate resignation modal 1`] =
                 class="flex items-center -space-x-1"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -672,7 +672,7 @@ exports[`TransactionDetailModal should render a ipfs modal 1`] = `
                         to="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                       >
                         <span
-                          class="Link__Content-sc-ec014t-1 jGLnf"
+                          class="Link__Content-sc-ec014t-1 fPOlTq"
                         >
                           <span
                             class="inline-flex overflow-hidden"
@@ -758,7 +758,7 @@ exports[`TransactionDetailModal should render a ipfs modal 1`] = `
                 class="flex items-center -space-x-1"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -968,7 +968,7 @@ exports[`TransactionDetailModal should render a magistrate modal 1`] = `
                         to="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                       >
                         <span
-                          class="Link__Content-sc-ec014t-1 jGLnf"
+                          class="Link__Content-sc-ec014t-1 fPOlTq"
                         >
                           <span
                             class="inline-flex overflow-hidden"
@@ -1054,7 +1054,7 @@ exports[`TransactionDetailModal should render a magistrate modal 1`] = `
                 class="flex items-center -space-x-1"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -1232,7 +1232,7 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                         to="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                       >
                         <span
-                          class="Link__Content-sc-ec014t-1 jGLnf"
+                          class="Link__Content-sc-ec014t-1 fPOlTq"
                         >
                           <span
                             class="inline-flex overflow-hidden"
@@ -1318,7 +1318,7 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                 class="flex items-center -space-x-1"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -1362,7 +1362,7 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                       to="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                     >
                       <span
-                        class="Link__Content-sc-ec014t-1 jGLnf"
+                        class="Link__Content-sc-ec014t-1 fPOlTq"
                       >
                         View Full List
                       </span>
@@ -1398,7 +1398,7 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                 class="flex items-center -space-x-1"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -1658,7 +1658,7 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
                         to="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                       >
                         <span
-                          class="Link__Content-sc-ec014t-1 jGLnf"
+                          class="Link__Content-sc-ec014t-1 fPOlTq"
                         >
                           <span
                             class="inline-flex overflow-hidden"
@@ -1744,7 +1744,7 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
                 class="flex items-center -space-x-1"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -1906,7 +1906,7 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
                           >
                             <td>
                               <div
-                                class="Avatar__AvatarWrapper-sc-18vw8a4-0 SfPfF flex-shrink-0"
+                                class="Avatar__AvatarWrapper-sc-18vw8a4-0 krsvod flex-shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
@@ -1941,7 +1941,7 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
                           >
                             <td>
                               <div
-                                class="Avatar__AvatarWrapper-sc-18vw8a4-0 SfPfF flex-shrink-0"
+                                class="Avatar__AvatarWrapper-sc-18vw8a4-0 krsvod flex-shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
@@ -2066,7 +2066,7 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
                           >
                             <td>
                               <div
-                                class="Avatar__AvatarWrapper-sc-18vw8a4-0 SfPfF flex-shrink-0"
+                                class="Avatar__AvatarWrapper-sc-18vw8a4-0 krsvod flex-shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
@@ -2200,7 +2200,7 @@ exports[`TransactionDetailModal should render a second signature modal 1`] = `
                 class="flex items-center -space-x-1"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -2322,7 +2322,7 @@ exports[`TransactionDetailModal should render a second signature modal 1`] = `
                         to="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                       >
                         <span
-                          class="Link__Content-sc-ec014t-1 jGLnf"
+                          class="Link__Content-sc-ec014t-1 fPOlTq"
                         >
                           <span
                             class="inline-flex overflow-hidden"
@@ -2452,7 +2452,7 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
                         to="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                       >
                         <span
-                          class="Link__Content-sc-ec014t-1 jGLnf"
+                          class="Link__Content-sc-ec014t-1 fPOlTq"
                         >
                           <span
                             class="inline-flex overflow-hidden"
@@ -2538,7 +2538,7 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
                 class="flex items-center -space-x-1"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -2584,7 +2584,7 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
                 class="flex items-center -space-x-1"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -2844,7 +2844,7 @@ exports[`TransactionDetailModal should render a unvote modal 1`] = `
                         to="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                       >
                         <span
-                          class="Link__Content-sc-ec014t-1 jGLnf"
+                          class="Link__Content-sc-ec014t-1 fPOlTq"
                         >
                           <span
                             class="inline-flex overflow-hidden"
@@ -2930,7 +2930,7 @@ exports[`TransactionDetailModal should render a unvote modal 1`] = `
                 class="flex items-center -space-x-1"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -2967,7 +2967,7 @@ exports[`TransactionDetailModal should render a unvote modal 1`] = `
                       class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 SfPfF flex-shrink-0"
+                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 krsvod flex-shrink-0"
                         data-testid="Avatar"
                       >
                         <div
@@ -3032,7 +3032,7 @@ exports[`TransactionDetailModal should render a unvote modal 1`] = `
                       class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 SfPfF flex-shrink-0"
+                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 krsvod flex-shrink-0"
                         data-testid="Avatar"
                       >
                         <div
@@ -3238,7 +3238,7 @@ exports[`TransactionDetailModal should render a vote modal 1`] = `
                         to="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                       >
                         <span
-                          class="Link__Content-sc-ec014t-1 jGLnf"
+                          class="Link__Content-sc-ec014t-1 fPOlTq"
                         >
                           <span
                             class="inline-flex overflow-hidden"
@@ -3324,7 +3324,7 @@ exports[`TransactionDetailModal should render a vote modal 1`] = `
                 class="flex items-center -space-x-1"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -3361,7 +3361,7 @@ exports[`TransactionDetailModal should render a vote modal 1`] = `
                       class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 SfPfF flex-shrink-0"
+                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 krsvod flex-shrink-0"
                         data-testid="Avatar"
                       >
                         <div
@@ -3426,7 +3426,7 @@ exports[`TransactionDetailModal should render a vote modal 1`] = `
                       class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 SfPfF flex-shrink-0"
+                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 krsvod flex-shrink-0"
                         data-testid="Avatar"
                       >
                         <div
@@ -3632,7 +3632,7 @@ exports[`TransactionDetailModal should render a voteCombination modal 1`] = `
                         to="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                       >
                         <span
-                          class="Link__Content-sc-ec014t-1 jGLnf"
+                          class="Link__Content-sc-ec014t-1 fPOlTq"
                         >
                           <span
                             class="inline-flex overflow-hidden"
@@ -3718,7 +3718,7 @@ exports[`TransactionDetailModal should render a voteCombination modal 1`] = `
                 class="flex items-center -space-x-1"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -3755,7 +3755,7 @@ exports[`TransactionDetailModal should render a voteCombination modal 1`] = `
                       class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 SfPfF flex-shrink-0"
+                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 krsvod flex-shrink-0"
                         data-testid="Avatar"
                       >
                         <div
@@ -3820,7 +3820,7 @@ exports[`TransactionDetailModal should render a voteCombination modal 1`] = `
                       class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 SfPfF flex-shrink-0"
+                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 krsvod flex-shrink-0"
                         data-testid="Avatar"
                       >
                         <div
@@ -4026,7 +4026,7 @@ exports[`TransactionDetailModal should render an unlock tokens modal 1`] = `
                         to="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                       >
                         <span
-                          class="Link__Content-sc-ec014t-1 jGLnf"
+                          class="Link__Content-sc-ec014t-1 fPOlTq"
                         >
                           <span
                             class="inline-flex overflow-hidden"
@@ -4112,7 +4112,7 @@ exports[`TransactionDetailModal should render an unlock tokens modal 1`] = `
                 class="flex items-center -space-x-1"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div

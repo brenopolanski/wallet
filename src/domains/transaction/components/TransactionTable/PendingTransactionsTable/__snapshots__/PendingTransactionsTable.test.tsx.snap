@@ -201,7 +201,7 @@ exports[`Signed Transaction Table should render pending transfers when isCompact
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -1071,7 +1071,7 @@ exports[`Signed Transaction Table should show as awaiting confirmations 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div

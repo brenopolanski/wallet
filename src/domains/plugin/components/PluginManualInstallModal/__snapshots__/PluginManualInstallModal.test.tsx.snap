@@ -105,7 +105,7 @@ exports[`PluginManualInstallModal should render properly 1`] = `
                     GitHub Repository URL
                   </label>
                   <div
-                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                   >
                     <div
                       class="relative flex flex-1 h-full"

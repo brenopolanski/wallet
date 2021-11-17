@@ -13,7 +13,7 @@ exports[`Plugin View should render error boundary with error message 1`] = `
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -238,7 +238,7 @@ exports[`Plugin View should render error boundary with error message 1`] = `
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -348,7 +348,7 @@ exports[`Plugin View should render error boundary with error stack 1`] = `
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -573,7 +573,7 @@ exports[`Plugin View should render error boundary with error stack 1`] = `
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -683,7 +683,7 @@ exports[`Plugin View should render plugin content 1`] = `
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -908,7 +908,7 @@ exports[`Plugin View should render plugin content 1`] = `
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div

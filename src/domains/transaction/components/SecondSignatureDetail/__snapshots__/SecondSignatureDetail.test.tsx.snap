@@ -92,7 +92,7 @@ exports[`SecondSignatureDetail should render a modal 1`] = `
                 class="flex items-center -space-x-1"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -214,7 +214,7 @@ exports[`SecondSignatureDetail should render a modal 1`] = `
                         to="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                       >
                         <span
-                          class="Link__Content-sc-ec014t-1 jGLnf"
+                          class="Link__Content-sc-ec014t-1 fPOlTq"
                         >
                           <span
                             class="inline-flex overflow-hidden"
@@ -356,7 +356,7 @@ exports[`SecondSignatureDetail should render a modal without a wallet alias 1`] 
                 class="flex items-center -space-x-1"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -478,7 +478,7 @@ exports[`SecondSignatureDetail should render a modal without a wallet alias 1`] 
                         to="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                       >
                         <span
-                          class="Link__Content-sc-ec014t-1 jGLnf"
+                          class="Link__Content-sc-ec014t-1 fPOlTq"
                         >
                           <span
                             class="inline-flex overflow-hidden"

@@ -17,7 +17,7 @@ exports[`Registration should register second signature 1`] = `
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -241,7 +241,7 @@ exports[`Registration should register second signature 1`] = `
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -343,7 +343,7 @@ exports[`Registration should register second signature 1`] = `
                         Mnemonic
                       </label>
                       <div
-                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                       >
                         <div
                           class="relative flex flex-1 h-full"
@@ -444,7 +444,7 @@ exports[`Registration should show error step and go back 1`] = `
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -668,7 +668,7 @@ exports[`Registration should show error step and go back 1`] = `
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -861,7 +861,7 @@ exports[`Registration should show mnemonic error 1`] = `
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -1085,7 +1085,7 @@ exports[`Registration should show mnemonic error 1`] = `
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -1181,7 +1181,7 @@ exports[`Registration should show mnemonic error 1`] = `
                         Mnemonic
                       </label>
                       <div
-                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                       >
                         <div
                           class="relative flex flex-1 h-full"
@@ -1231,7 +1231,7 @@ exports[`Registration should show mnemonic error 1`] = `
                         2nd Mnemonic
                       </label>
                       <div
-                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 eyownm"
+                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 lnWRPe"
                       >
                         <div
                           class="relative flex flex-1 h-full"

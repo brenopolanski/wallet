@@ -22,7 +22,7 @@ exports[`Switch should render 1`] = `
         class="Toggle__Handle-sc-6s3wfu-2 cobHFC"
       >
         <span
-          class="Toggle__HandleInner-sc-6s3wfu-3 dJOehR"
+          class="Toggle__HandleInner-sc-6s3wfu-3 cIyTyk"
         />
       </div>
     </label>
@@ -61,7 +61,7 @@ exports[`Switch should render disabled 1`] = `
         class="Toggle__Handle-sc-6s3wfu-2 cobHFC"
       >
         <span
-          class="Toggle__HandleInner-sc-6s3wfu-3 eOWqHH"
+          class="Toggle__HandleInner-sc-6s3wfu-3 kaYzOJ"
           disabled=""
         />
       </div>
@@ -99,7 +99,7 @@ exports[`Switch should render large labels 1`] = `
         class="Toggle__Handle-sc-6s3wfu-2 cobHFC"
       >
         <span
-          class="Toggle__HandleInner-sc-6s3wfu-3 dJOehR"
+          class="Toggle__HandleInner-sc-6s3wfu-3 cIyTyk"
         />
       </div>
     </label>
@@ -135,7 +135,7 @@ exports[`Switch should render small labels 1`] = `
         class="Toggle__Handle-sc-6s3wfu-2 jRjdQR"
       >
         <span
-          class="Toggle__HandleInner-sc-6s3wfu-3 gNamtB"
+          class="Toggle__HandleInner-sc-6s3wfu-3 fiPeMI"
         />
       </div>
     </label>

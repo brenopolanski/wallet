@@ -58,7 +58,7 @@ exports[`UnlockTokensReview should render 1`] = `
       class="flex items-center -space-x-1"
     >
       <div
-        class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+        class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
         data-testid="Avatar"
       >
         <div

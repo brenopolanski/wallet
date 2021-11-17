@@ -164,7 +164,7 @@ exports[`WalletHeader should handle locked balance 1`] = `
       >
         <button
           aria-busy="false"
-          class="WalletHeader__WalletHeaderButton-sc-qc4s8o-0 dSFQzF"
+          class="WalletHeader__WalletHeaderButton-sc-qc4s8o-0 RSTdc"
           data-testid="WalletHeader__refresh"
           type="button"
         >
@@ -180,7 +180,7 @@ exports[`WalletHeader should handle locked balance 1`] = `
           </div>
         </button>
         <button
-          class="WalletHeader__WalletHeaderButton-sc-qc4s8o-0 dSFQzF"
+          class="WalletHeader__WalletHeaderButton-sc-qc4s8o-0 RSTdc"
           data-testid="WalletHeader__star-button"
           type="button"
         >
@@ -396,7 +396,7 @@ exports[`WalletHeader should render 1`] = `
       >
         <button
           aria-busy="false"
-          class="WalletHeader__WalletHeaderButton-sc-qc4s8o-0 dSFQzF"
+          class="WalletHeader__WalletHeaderButton-sc-qc4s8o-0 RSTdc"
           data-testid="WalletHeader__refresh"
           type="button"
         >
@@ -412,7 +412,7 @@ exports[`WalletHeader should render 1`] = `
           </div>
         </button>
         <button
-          class="WalletHeader__WalletHeaderButton-sc-qc4s8o-0 dSFQzF"
+          class="WalletHeader__WalletHeaderButton-sc-qc4s8o-0 RSTdc"
           data-testid="WalletHeader__star-button"
           type="button"
         >
@@ -615,7 +615,7 @@ exports[`WalletHeader should render amount for wallet in live network 1`] = `
       >
         <button
           aria-busy="false"
-          class="WalletHeader__WalletHeaderButton-sc-qc4s8o-0 dSFQzF"
+          class="WalletHeader__WalletHeaderButton-sc-qc4s8o-0 RSTdc"
           data-testid="WalletHeader__refresh"
           type="button"
         >
@@ -631,7 +631,7 @@ exports[`WalletHeader should render amount for wallet in live network 1`] = `
           </div>
         </button>
         <button
-          class="WalletHeader__WalletHeaderButton-sc-qc4s8o-0 dSFQzF"
+          class="WalletHeader__WalletHeaderButton-sc-qc4s8o-0 RSTdc"
           data-testid="WalletHeader__star-button"
           type="button"
         >
@@ -846,7 +846,7 @@ exports[`WalletHeader should show currency delta (-5%) 1`] = `
       >
         <button
           aria-busy="false"
-          class="WalletHeader__WalletHeaderButton-sc-qc4s8o-0 dSFQzF"
+          class="WalletHeader__WalletHeaderButton-sc-qc4s8o-0 RSTdc"
           data-testid="WalletHeader__refresh"
           type="button"
         >
@@ -862,7 +862,7 @@ exports[`WalletHeader should show currency delta (-5%) 1`] = `
           </div>
         </button>
         <button
-          class="WalletHeader__WalletHeaderButton-sc-qc4s8o-0 dSFQzF"
+          class="WalletHeader__WalletHeaderButton-sc-qc4s8o-0 RSTdc"
           data-testid="WalletHeader__star-button"
           type="button"
         >
@@ -1077,7 +1077,7 @@ exports[`WalletHeader should show currency delta (5%) 1`] = `
       >
         <button
           aria-busy="false"
-          class="WalletHeader__WalletHeaderButton-sc-qc4s8o-0 dSFQzF"
+          class="WalletHeader__WalletHeaderButton-sc-qc4s8o-0 RSTdc"
           data-testid="WalletHeader__refresh"
           type="button"
         >
@@ -1093,7 +1093,7 @@ exports[`WalletHeader should show currency delta (5%) 1`] = `
           </div>
         </button>
         <button
-          class="WalletHeader__WalletHeaderButton-sc-qc4s8o-0 dSFQzF"
+          class="WalletHeader__WalletHeaderButton-sc-qc4s8o-0 RSTdc"
           data-testid="WalletHeader__star-button"
           type="button"
         >
@@ -1319,7 +1319,7 @@ exports[`WalletHeader should show modifiers 1`] = `
       >
         <button
           aria-busy="false"
-          class="WalletHeader__WalletHeaderButton-sc-qc4s8o-0 dSFQzF"
+          class="WalletHeader__WalletHeaderButton-sc-qc4s8o-0 RSTdc"
           data-testid="WalletHeader__refresh"
           type="button"
         >
@@ -1335,7 +1335,7 @@ exports[`WalletHeader should show modifiers 1`] = `
           </div>
         </button>
         <button
-          class="WalletHeader__WalletHeaderButton-sc-qc4s8o-0 dSFQzF"
+          class="WalletHeader__WalletHeaderButton-sc-qc4s8o-0 RSTdc"
           data-testid="WalletHeader__star-button"
           type="button"
         >
@@ -1516,7 +1516,7 @@ exports[`WalletHeader should use empty string in clipboard copy if publickey is 
       >
         <button
           aria-busy="false"
-          class="WalletHeader__WalletHeaderButton-sc-qc4s8o-0 dSFQzF"
+          class="WalletHeader__WalletHeaderButton-sc-qc4s8o-0 RSTdc"
           data-testid="WalletHeader__refresh"
           type="button"
         >
@@ -1532,7 +1532,7 @@ exports[`WalletHeader should use empty string in clipboard copy if publickey is 
           </div>
         </button>
         <button
-          class="WalletHeader__WalletHeaderButton-sc-qc4s8o-0 dSFQzF"
+          class="WalletHeader__WalletHeaderButton-sc-qc4s8o-0 RSTdc"
           data-testid="WalletHeader__star-button"
           type="button"
         >

@@ -147,7 +147,7 @@ exports[`SearchWallet uses fiat value = false should render 1`] = `
                                 class="group"
                               >
                                 <button
-                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 pcqVB ring-focus"
+                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 enxoho ring-focus"
                                   type="button"
                                 >
                                   <div
@@ -207,7 +207,7 @@ exports[`SearchWallet uses fiat value = false should render 1`] = `
                               </div>
                             </div>
                             <div
-                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                               data-testid="Avatar"
                             >
                               <div
@@ -311,7 +311,7 @@ exports[`SearchWallet uses fiat value = false should render 1`] = `
                               </div>
                             </div>
                             <div
-                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                               data-testid="Avatar"
                             >
                               <div
@@ -544,7 +544,7 @@ exports[`SearchWallet uses fiat value = false should render with selected addres
                                 class="group"
                               >
                                 <button
-                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 pcqVB ring-focus"
+                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 enxoho ring-focus"
                                   type="button"
                                 >
                                   <div
@@ -604,7 +604,7 @@ exports[`SearchWallet uses fiat value = false should render with selected addres
                               </div>
                             </div>
                             <div
-                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                               data-testid="Avatar"
                             >
                               <div
@@ -708,7 +708,7 @@ exports[`SearchWallet uses fiat value = false should render with selected addres
                               </div>
                             </div>
                             <div
-                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                               data-testid="Avatar"
                             >
                               <div
@@ -941,7 +941,7 @@ exports[`SearchWallet uses fiat value = false should render with the default exc
                                 class="group"
                               >
                                 <button
-                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 pcqVB ring-focus"
+                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 enxoho ring-focus"
                                   type="button"
                                 >
                                   <div
@@ -1001,7 +1001,7 @@ exports[`SearchWallet uses fiat value = false should render with the default exc
                               </div>
                             </div>
                             <div
-                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                               data-testid="Avatar"
                             >
                               <div
@@ -1105,7 +1105,7 @@ exports[`SearchWallet uses fiat value = false should render with the default exc
                               </div>
                             </div>
                             <div
-                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                               data-testid="Avatar"
                             >
                               <div
@@ -1368,7 +1368,7 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
                                 class="group"
                               >
                                 <button
-                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 pcqVB ring-focus"
+                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 enxoho ring-focus"
                                   type="button"
                                 >
                                   <div
@@ -1428,7 +1428,7 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
                               </div>
                             </div>
                             <div
-                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                               data-testid="Avatar"
                             >
                               <div
@@ -1544,7 +1544,7 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
                               </div>
                             </div>
                             <div
-                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                               data-testid="Avatar"
                             >
                               <div
@@ -1819,7 +1819,7 @@ exports[`SearchWallet uses fiat value = true should render with selected address
                                 class="group"
                               >
                                 <button
-                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 pcqVB ring-focus"
+                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 enxoho ring-focus"
                                   type="button"
                                 >
                                   <div
@@ -1879,7 +1879,7 @@ exports[`SearchWallet uses fiat value = true should render with selected address
                               </div>
                             </div>
                             <div
-                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                               data-testid="Avatar"
                             >
                               <div
@@ -1995,7 +1995,7 @@ exports[`SearchWallet uses fiat value = true should render with selected address
                               </div>
                             </div>
                             <div
-                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                               data-testid="Avatar"
                             >
                               <div
@@ -2270,7 +2270,7 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
                                 class="group"
                               >
                                 <button
-                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 pcqVB ring-focus"
+                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 enxoho ring-focus"
                                   type="button"
                                 >
                                   <div
@@ -2330,7 +2330,7 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
                               </div>
                             </div>
                             <div
-                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                               data-testid="Avatar"
                             >
                               <div
@@ -2446,7 +2446,7 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
                               </div>
                             </div>
                             <div
-                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                               data-testid="Avatar"
                             >
                               <div

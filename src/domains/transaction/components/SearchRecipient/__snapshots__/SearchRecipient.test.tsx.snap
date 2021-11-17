@@ -149,7 +149,7 @@ exports[`SearchRecipient should render a modal 1`] = `
                                 class="group"
                               >
                                 <button
-                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 pcqVB ring-focus"
+                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 enxoho ring-focus"
                                   type="button"
                                 >
                                   <div
@@ -188,7 +188,7 @@ exports[`SearchRecipient should render a modal 1`] = `
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY space-x-4"
                         >
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -262,7 +262,7 @@ exports[`SearchRecipient should render a modal 1`] = `
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY space-x-4"
                         >
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -486,7 +486,7 @@ exports[`SearchRecipient should render a modal with custom title and description
                                 class="group"
                               >
                                 <button
-                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 pcqVB ring-focus"
+                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 enxoho ring-focus"
                                   type="button"
                                 >
                                   <div
@@ -525,7 +525,7 @@ exports[`SearchRecipient should render a modal with custom title and description
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY space-x-4"
                         >
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -599,7 +599,7 @@ exports[`SearchRecipient should render a modal with custom title and description
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY space-x-4"
                         >
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -823,7 +823,7 @@ exports[`SearchRecipient should render with selected address 1`] = `
                                 class="group"
                               >
                                 <button
-                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 pcqVB ring-focus"
+                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 enxoho ring-focus"
                                   type="button"
                                 >
                                   <div
@@ -862,7 +862,7 @@ exports[`SearchRecipient should render with selected address 1`] = `
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY space-x-4"
                         >
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -936,7 +936,7 @@ exports[`SearchRecipient should render with selected address 1`] = `
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY space-x-4"
                         >
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
