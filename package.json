@@ -170,7 +170,7 @@
 		"swiper": "^6.5.1",
 		"tailwindcss": "npm:@tailwindcss/postcss7-compat",
 		"trash": "^7.2.0",
-		"twin.macro": "^2.6.2",
+		"twin.macro": "2.6.2",
 		"type-fest": "^1.0.1",
 		"vm2": "^3.9.2",
 		"yup": "^0.32.9"
