@@ -27,8 +27,11 @@ jobs:
             - name: Install (Yarn)
               run: pnpm install
 
-            - name: Format
-              run: pnpm run format
+            - name: Lint
+              run: pnpm run lint
+
+            - name: Prettify
+              run: pnpm run prettier
 
             # - name: RustyWind
             #   run: |
