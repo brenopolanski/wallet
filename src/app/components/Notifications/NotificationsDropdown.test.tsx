@@ -5,7 +5,8 @@ import React from "react";
 import { Route } from "react-router-dom";
 import { env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
 
-import { NotificationsDropdown } from ".";
+import { NotificationsDropdown } from "./NotificationsDropdown";
+
 const NotificationTransactionsFixtures = require("tests/fixtures/coins/ark/devnet/notification-transactions.json");
 const TransactionsFixture = require("tests/fixtures/coins/ark/devnet/transactions.json");
 

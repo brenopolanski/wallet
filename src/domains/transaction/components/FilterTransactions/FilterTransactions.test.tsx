@@ -2,7 +2,7 @@ import { Contracts } from "@payvo/profiles";
 import React from "react";
 import { env, fireEvent, getDefaultProfileId, render } from "utils/testing-library";
 
-import { FilterTransactions } from ".";
+import { FilterTransactions } from "./FilterTransactions";
 
 let profile: Contracts.IProfile;
 

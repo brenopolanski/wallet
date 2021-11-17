@@ -6,7 +6,8 @@ import { act, env, fireEvent, render, screen, waitFor } from "utils/testing-libr
 import { useSynchronizer } from "./use-synchronizer";
 
 describe("Synchronizer Hook", () => {
-	let onCall = jest.fn();
+	let onCall: jest.Mock;
+
 	const job1 = jest.fn(() => Promise.resolve(onCall(1)));
 	const job2 = jest.fn(() => Promise.resolve(onCall(2)));
 	const jobs = [
@@ -116,7 +117,7 @@ describe("Synchronizer Hook", () => {
 		await waitForNextUpdate();
 
 		await waitFor(() =>
-			expect(result.current.error).toEqual({ error: "Some error", timestamp: expect.any(Number) }),
+			expect(result.current.error).toStrictEqual({ error: "Some error", timestamp: expect.any(Number) }),
 		);
 	});
 
@@ -144,7 +145,7 @@ describe("Synchronizer Hook", () => {
 
 		await waitForNextUpdate();
 
-		expect(result.current.error).toEqual({ error: "Some error", timestamp: expect.any(Number) });
+		expect(result.current.error).toStrictEqual({ error: "Some error", timestamp: expect.any(Number) });
 
 		hookAct(() => {
 			result.current.clearError();

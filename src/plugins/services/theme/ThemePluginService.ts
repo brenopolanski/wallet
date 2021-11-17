@@ -1,15 +1,15 @@
-import { PluginController } from "plugins/core";
-import { PluginService, PluginServiceIdentifier } from "plugins/types";
+import { IPluginController, PluginService } from "plugins/core";
+import { PluginServiceConfig, PluginServiceIdentifier } from "plugins/types";
 
 export class ThemePluginService implements PluginService {
-	config() {
+	config(): PluginServiceConfig {
 		return {
 			accessor: "theme",
 			id: PluginServiceIdentifier.Theme,
 		};
 	}
 
-	api(plugin: PluginController) {
+	api(plugin: IPluginController): Record<string, Function> {
 		return {
 			decorate: plugin.hooks().addFilter.bind(plugin.hooks(), "service.theme"),
 		};

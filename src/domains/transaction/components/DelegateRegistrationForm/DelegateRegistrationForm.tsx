@@ -5,7 +5,8 @@ import { SendRegistrationForm } from "domains/transaction/pages/SendRegistration
 import { handleBroadcastError } from "domains/transaction/utils";
 import React from "react";
 
-import { FormStep, ReviewStep } from ".";
+import { FormStep } from "./FormStep";
+import { ReviewStep } from "./ReviewStep";
 
 const component = ({
 	activeTab,

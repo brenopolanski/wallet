@@ -27,8 +27,12 @@ const transport = getDefaultLedgerTransport();
 describe("Use Ledger Connection", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
-	let publicKeyPaths = new Map();
+	let publicKeyPaths: Map<string, string>;
 	let getVersionSpy: jest.SpyInstance;
+
+	beforeAll(() => {
+		publicKeyPaths = new Map<string, string>();
+	});
 
 	beforeEach(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());

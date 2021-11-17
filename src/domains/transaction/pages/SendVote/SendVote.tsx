@@ -20,8 +20,10 @@ import { useForm } from "react-hook-form";
 import { useHistory } from "react-router-dom";
 import { assertProfile, assertWallet } from "utils/assertions";
 
-import { FormStep, ReviewStep, SummaryStep } from ".";
+import { FormStep } from "./FormStep";
 import { VoteLedgerReview } from "./LedgerReview";
+import { ReviewStep } from "./ReviewStep";
+import { SummaryStep } from "./SummaryStep";
 
 enum Step {
 	FormStep = 1,

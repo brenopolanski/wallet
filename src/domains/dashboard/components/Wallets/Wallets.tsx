@@ -14,8 +14,10 @@ import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 import { assertWallet } from "utils/assertions";
 
-import { useWalletDisplay, WalletsGrid, WalletsList } from ".";
+import { useWalletDisplay } from "./hooks";
 import { WalletsProperties } from "./Wallets.contracts";
+import { WalletsGrid } from "./WalletsGrid";
+import { WalletsList } from "./WalletsList";
 
 export const Wallets: FC<WalletsProperties> = ({
 	title,

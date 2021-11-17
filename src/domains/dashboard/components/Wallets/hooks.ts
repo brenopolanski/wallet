@@ -2,7 +2,7 @@ import { chunk } from "@arkecosystem/utils";
 import { Contracts } from "@payvo/profiles";
 import { useMemo } from "react";
 
-import { GridWallet, UseWalletDisplayProperties } from ".";
+import { GridWallet, UseWalletDisplayProperties } from "./Wallets.contracts";
 
 export const useWalletDisplay = ({
 	wallets = [],

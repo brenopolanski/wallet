@@ -1,4 +1,3 @@
-/* eslint-disable sort-keys-fix/sort-keys-fix */
 import { Selector } from "testcafe";
 
 import { cucumber, mockRequest, visitWelcomeScreen } from "../../../utils/e2e-utils";

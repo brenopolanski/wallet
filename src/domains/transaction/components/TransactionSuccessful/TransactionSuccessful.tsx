@@ -10,7 +10,7 @@ import {
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import { MultiSignatureSuccessful } from ".";
+import { MultiSignatureSuccessful } from "./MultiSignatureSuccessful";
 
 interface TransactionSuccessfulProperties {
 	transaction: DTO.ExtendedSignedTransactionData;

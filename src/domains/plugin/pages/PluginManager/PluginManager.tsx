@@ -22,8 +22,8 @@ import { PluginUpdatesConfirmation } from "domains/plugin/components/PluginUpdat
 import { usePluginUpdateQueue } from "domains/plugin/hooks/use-plugin-update-queue";
 import { PLUGIN_CATEGORIES } from "domains/plugin/plugin.constants";
 import { PluginCategories } from "domains/plugin/plugin.contracts";
-import { PluginController } from "plugins";
 import { usePluginManagerContext } from "plugins/context/PluginManagerProvider";
+import { IPluginController } from "plugins/core";
 import { SerializedPluginConfigurationData } from "plugins/types";
 import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -221,8 +221,8 @@ export const PluginManager = () => {
 
 	const [updatesConfirmationPlugins, setUpdatesConfirmationPlugins] = useState<any[]>([]);
 	const [isManualInstallModalOpen, setIsManualInstallModalOpen] = useState(false);
-	const [uninstallSelectedPlugin, setUninstallSelectedPlugin] = useState<PluginController | undefined>(undefined);
-	const [installSelectedPlugin, setInstallSelectedPlugin] = useState<PluginController | undefined>(undefined);
+	const [uninstallSelectedPlugin, setUninstallSelectedPlugin] = useState<IPluginController | undefined>(undefined);
+	const [installSelectedPlugin, setInstallSelectedPlugin] = useState<IPluginController | undefined>(undefined);
 
 	const plugins = allPlugins.map(mapConfigToPluginData.bind(null, activeProfile));
 	const searchResultsData = searchResults.map(mapConfigToPluginData.bind(null, activeProfile));
@@ -329,7 +329,7 @@ export const PluginManager = () => {
 		updatePlugin(pluginData, activeProfile.id());
 	};
 
-	const openInstallPluginModal = (pluginData: PluginController) => {
+	const openInstallPluginModal = (pluginData: IPluginController) => {
 		setInstallSelectedPlugin(pluginData);
 	};
 

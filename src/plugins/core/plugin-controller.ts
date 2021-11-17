@@ -1,16 +1,17 @@
 import { Contracts } from "@payvo/profiles";
 import { PluginAPI } from "plugins/types";
 
-import { PluginConfigurationData } from "./configuration";
-import { applyPluginMiddlewares, isPluginEnabled, PluginHooks } from "./internals";
+import { IPluginConfigurationData, PluginConfigurationData } from "./configuration";
+import { applyPluginMiddlewares, IPluginHooks, isPluginEnabled, PluginHooks } from "./internals";
+import { IPluginController } from "./plugin.contracts";
 import { container } from "./plugin-container";
 
 type Callback = (api: PluginAPI) => void;
 
-export class PluginController {
-	#hooks: PluginHooks;
+export class PluginController implements IPluginController {
+	#hooks: IPluginHooks;
 
-	#config: PluginConfigurationData;
+	#config: IPluginConfigurationData;
 	#callback: Callback;
 	#dir: string | undefined;
 
@@ -21,24 +22,24 @@ export class PluginController {
 		this.#callback = callback;
 	}
 
-	hooks() {
+	hooks(): IPluginHooks {
 		return this.#hooks;
 	}
 
-	dir() {
+	dir(): string | undefined {
 		return this.#dir;
 	}
 
-	config() {
+	config(): IPluginConfigurationData {
 		return this.#config;
 	}
 
-	isEnabled(profile: Contracts.IProfile) {
+	isEnabled(profile: Contracts.IProfile): boolean {
 		return !!this.pluginData(profile);
 	}
 
 	// TODO: Better integration with SDK
-	enable(profile: Contracts.IProfile, options?: { autoRun?: true }) {
+	enable(profile: Contracts.IProfile, options?: { autoRun?: true }): string {
 		/* istanbul ignore next */
 		if (options?.autoRun) {
 			this.run(profile);
@@ -56,14 +57,14 @@ export class PluginController {
 		return id;
 	}
 
-	disable(profile: Contracts.IProfile) {
+	disable(profile: Contracts.IProfile): void {
 		if (this.isEnabled(profile)) {
 			profile.plugins().forget(this.pluginData(profile)!.id);
 			this.dispose();
 		}
 	}
 
-	run(profile: Contracts.IProfile) {
+	run(profile: Contracts.IProfile): void {
 		const pluginAPI = container.services().api(this, profile);
 		const guard = applyPluginMiddlewares({ plugin: this, profile }, [isPluginEnabled]);
 
@@ -73,7 +74,7 @@ export class PluginController {
 		this.#hooks.emit("activated");
 	}
 
-	dispose() {
+	dispose(): void {
 		this.#hooks.clearAll();
 		this.#hooks.emit("deactivated");
 	}

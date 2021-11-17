@@ -22,6 +22,7 @@ import {
 	MNEMONICS,
 	render,
 	RenderResult,
+	screen,
 	syncDelegates,
 	waitFor,
 	within,
@@ -49,7 +50,7 @@ const renderPage = async ({
 	waitForTransactions = true,
 	withProfileSynchronizer = false,
 } = {}) => {
-	const rendered: RenderResult = render(
+	const utils: RenderResult = render(
 		<Route path="/profiles/:profileId/wallets/:walletId">
 			<LedgerProvider transport={getDefaultLedgerTransport()}>
 				<WalletDetails />
@@ -63,23 +64,23 @@ const renderPage = async ({
 		},
 	);
 
-	const { getByTestId, findByTestId } = rendered;
-
 	if (waitForTopSection) {
-		await findByTestId("WalletVote");
+		await screen.findByTestId("WalletVote");
 	}
 
 	if (waitForTransactions) {
 		await (withProfileSynchronizer
 			? waitFor(() =>
-					expect(within(getByTestId("TransactionTable")).queryAllByTestId("TableRow")).toHaveLength(1),
+					expect(within(screen.getByTestId("TransactionTable")).queryAllByTestId("TableRow")).toHaveLength(1),
 			  )
 			: waitFor(() =>
-					expect(within(getByTestId("TransactionTable")).queryAllByTestId("TableRow")).not.toHaveLength(0),
+					expect(
+						within(screen.getByTestId("TransactionTable")).queryAllByTestId("TableRow"),
+					).not.toHaveLength(0),
 			  ));
 	}
 
-	return rendered;
+	return utils;
 };
 
 describe("WalletDetails", () => {

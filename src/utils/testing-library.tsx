@@ -74,9 +74,9 @@ export function renderWithForm(
 		return <FormProvider {...form}>{component}</FormProvider>;
 	};
 
-	const renderResult: RenderResult = renderFunction(<Component />);
+	const utils: RenderResult = renderFunction(<Component />);
 
-	return { ...renderResult, form: () => form };
+	return { ...utils, form: () => form };
 }
 
 const renderWithRouter = (

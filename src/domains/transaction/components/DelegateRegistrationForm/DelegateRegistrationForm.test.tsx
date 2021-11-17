@@ -51,7 +51,7 @@ const renderComponent = (properties?: any) => {
 		);
 	};
 
-	const renderResult: RenderResult = render(
+	const utils: RenderResult = render(
 		<Route path="/profiles/:profileId">
 			<Component />
 		</Route>,
@@ -60,7 +60,7 @@ const renderComponent = (properties?: any) => {
 		},
 	);
 
-	return { ...renderResult, form };
+	return { ...utils, form };
 };
 
 const createTransactionMock = (wallet: ProfilesContracts.IReadWriteWallet) =>

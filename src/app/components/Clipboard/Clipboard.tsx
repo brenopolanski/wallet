@@ -1,15 +1,8 @@
 import React from "react";
 
-import { ClipboardButton, ClipboardButtonProperties } from "./ClipboardButton";
-import { ClipboardIcon, ClipboardIconProperties } from "./ClipboardIcon";
-
-export interface ClipboardCommonProperties {
-	data: string | object;
-	options?: Record<string, any>;
-	children: React.ReactNode;
-}
-
-type ClipboardProperties = ClipboardIconProperties | ClipboardButtonProperties;
+import { ClipboardProperties } from "./Clipboard.contracts";
+import { ClipboardButton } from "./ClipboardButton";
+import { ClipboardIcon } from "./ClipboardIcon";
 
 const defaultProps = {
 	options: {},

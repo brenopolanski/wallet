@@ -3,12 +3,11 @@ import { Contracts } from "@payvo/profiles";
 import { useEnvironmentContext } from "app/contexts";
 import { httpClient, toasts } from "app/services";
 import { ipcRenderer } from "electron";
-import { PluginController, PluginManager } from "plugins/core";
-import { PluginConfigurationData } from "plugins/core/configuration";
+import { IPluginController, PluginManager, PluginService } from "plugins/core";
+import { IPluginConfigurationData, PluginConfigurationData } from "plugins/core/configuration";
 import { PluginLoaderFileSystem } from "plugins/loader/fs";
 import {
 	ExtendedSerializedPluginConfigurationData,
-	PluginService,
 	PluginUpdateStatus,
 	SerializedPluginConfigurationData,
 } from "plugins/types";
@@ -23,8 +22,8 @@ const useManager = (services: PluginService[], manager: PluginManager) => {
 	const { env } = useEnvironmentContext();
 
 	const [state, setState] = useState<{
-		packages: PluginConfigurationData[];
-		configurations: PluginConfigurationData[];
+		packages: IPluginConfigurationData[];
+		configurations: IPluginConfigurationData[];
 		registryPlugins: Contracts.IRegistryPlugin[];
 	}>({
 		configurations: [],
@@ -89,7 +88,7 @@ const useManager = (services: PluginService[], manager: PluginManager) => {
 
 	const trigger = useCallback(() => setState((previous: any) => ({ ...previous })), []);
 
-	const reportPlugin = useCallback((pluginConfig: PluginConfigurationData) => {
+	const reportPlugin = useCallback((pluginConfig: IPluginConfigurationData) => {
 		const name = pluginConfig.name();
 		const version = pluginConfig.version();
 
@@ -122,7 +121,7 @@ const useManager = (services: PluginService[], manager: PluginManager) => {
 	}, [pluginManager, trigger]);
 
 	const deletePlugin = useCallback(
-		async (plugin: PluginController, profile: Contracts.IProfile) => {
+		async (plugin: IPluginController, profile: Contracts.IProfile) => {
 			try {
 				await PluginLoaderFileSystem.ipc().remove(plugin.dir()!);
 				pluginManager.plugins().removeById(plugin.config().id(), profile);
@@ -176,7 +175,7 @@ const useManager = (services: PluginService[], manager: PluginManager) => {
 	}, [env]);
 
 	const filterPackages = useCallback(
-		(allPackages: PluginConfigurationData[]) =>
+		(allPackages: IPluginConfigurationData[]) =>
 			allPackages.filter((pluginPackage) => {
 				let matchesQuery = true;
 
@@ -190,12 +189,12 @@ const useManager = (services: PluginService[], manager: PluginManager) => {
 	);
 
 	// Plugin configurations loaded from PSDK Plugin's Registry
-	const pluginPackages: PluginConfigurationData[] = useMemo(() => state.packages, [state]);
+	const pluginPackages: IPluginConfigurationData[] = useMemo(() => state.packages, [state]);
 
 	// Plugin configurations loaded manually from URL
-	const pluginConfigurations: PluginConfigurationData[] = useMemo(() => state.configurations, [state]);
+	const pluginConfigurations: IPluginConfigurationData[] = useMemo(() => state.configurations, [state]);
 
-	const localConfigurations: PluginConfigurationData[] = useMemo(
+	const localConfigurations: IPluginConfigurationData[] = useMemo(
 		() =>
 			pluginManager
 				.plugins()
@@ -204,7 +203,7 @@ const useManager = (services: PluginService[], manager: PluginManager) => {
 		[pluginManager, state], // eslint-disable-line react-hooks/exhaustive-deps
 	);
 
-	const allPlugins: PluginConfigurationData[] = useMemo(
+	const allPlugins: IPluginConfigurationData[] = useMemo(
 		() =>
 			sortBy(
 				uniqBy([...localConfigurations, ...pluginPackages], (item) => item.id()),
@@ -355,7 +354,7 @@ const useManager = (services: PluginService[], manager: PluginManager) => {
 	);
 
 	const mapConfigToPluginData = useCallback(
-		(profile: Contracts.IProfile, config: PluginConfigurationData): ExtendedSerializedPluginConfigurationData => {
+		(profile: Contracts.IProfile, config: IPluginConfigurationData): ExtendedSerializedPluginConfigurationData => {
 			const localPlugin = pluginManager.plugins().findById(config.id());
 
 			return {

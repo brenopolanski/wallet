@@ -1,22 +1,23 @@
 import { Contracts } from "@payvo/profiles";
-import { PluginHooks } from "plugins/core/internals/plugin-hooks";
-import { PluginService, PluginServiceIdentifier } from "plugins/types";
+import { PluginService } from "plugins/core";
+import { PluginHooks } from "plugins/core/internals";
+import { PluginServiceConfig, PluginServiceIdentifier } from "plugins/types";
 
 export class ProfilePluginService implements PluginService {
 	#profile: Contracts.IProfile | undefined;
 
-	config() {
+	config(): PluginServiceConfig {
 		return {
 			accessor: "profile",
 			id: PluginServiceIdentifier.Profile,
 		};
 	}
 
-	boot(context: { hooks: PluginHooks }) {
+	boot(context: { hooks: PluginHooks }): void {
 		context.hooks.onProfileChange((profile) => (this.#profile = profile));
 	}
 
-	api() {
+	api(): Record<string, Function> {
 		return {
 			id: () => this.#profile?.id(),
 			// TODO: return ReadOnlyWallet[]

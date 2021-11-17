@@ -8,7 +8,7 @@ describe("StubStorage", () => {
 	});
 
 	it("should return current storage", async () => {
-		await expect(stubStorage.all()).resolves.toEqual({});
+		await expect(stubStorage.all()).resolves.toStrictEqual({});
 	});
 
 	it("should return set and get an entry into storage", async () => {
@@ -34,7 +34,7 @@ describe("StubStorage", () => {
 		await stubStorage.set("item", "bleh");
 		await stubStorage.flush();
 
-		await expect(stubStorage.all()).resolves.toEqual({});
+		await expect(stubStorage.all()).resolves.toStrictEqual({});
 	});
 
 	it("should return count", async () => {
@@ -42,8 +42,9 @@ describe("StubStorage", () => {
 	});
 
 	it("should restore", async () => {
-		await expect(stubStorage.restore()).resolves.toBeUndefined();
+		await expect(stubStorage.restore()).toBeUndefined();
 	});
+
 	it("should snapshot", async () => {
 		await expect(stubStorage.snapshot()).resolves.toBeUndefined();
 	});
