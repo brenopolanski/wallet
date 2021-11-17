@@ -477,7 +477,7 @@ exports[`WalletOverviewStep Render step should render 1`] = `
                 class="Toggle__Handle-sc-6s3wfu-2 cobHFC"
               >
                 <span
-                  class="Toggle__HandleInner-sc-6s3wfu-3 ddepvC"
+                  class="Toggle__HandleInner-sc-6s3wfu-3 klclKD"
                 />
               </div>
             </label>

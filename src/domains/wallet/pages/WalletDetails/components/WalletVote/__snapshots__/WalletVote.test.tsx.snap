@@ -869,7 +869,7 @@ exports[`WalletVote should handle delegate sync error 1`] = `
             to="https://ark.dev/docs/desktop-wallet/user-guides/how-to-vote-unvote"
           >
             <span
-              class="Link__Content-sc-ec014t-1 fPOlTq"
+              class="Link__Content-sc-ec014t-1 jGLnf"
             >
               <span
                 class="text-sm"
@@ -969,7 +969,7 @@ exports[`WalletVote should handle wallet votes error 1`] = `
             to="https://ark.dev/docs/desktop-wallet/user-guides/how-to-vote-unvote"
           >
             <span
-              class="Link__Content-sc-ec014t-1 fPOlTq"
+              class="Link__Content-sc-ec014t-1 jGLnf"
             >
               <span
                 class="text-sm"
@@ -1384,7 +1384,7 @@ exports[`WalletVote should render the maximum votes 1`] = `
             to="https://ark.dev/docs/desktop-wallet/user-guides/how-to-vote-unvote"
           >
             <span
-              class="Link__Content-sc-ec014t-1 fPOlTq"
+              class="Link__Content-sc-ec014t-1 jGLnf"
             >
               <span
                 class="text-sm"
@@ -1484,7 +1484,7 @@ exports[`WalletVote should render without votes 1`] = `
             to="https://ark.dev/docs/desktop-wallet/user-guides/how-to-vote-unvote"
           >
             <span
-              class="Link__Content-sc-ec014t-1 fPOlTq"
+              class="Link__Content-sc-ec014t-1 jGLnf"
             >
               <span
                 class="text-sm"

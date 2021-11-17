@@ -10,7 +10,7 @@ exports[`HeaderSearchBar should render 1`] = `
       class="group"
     >
       <button
-        class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus"
+        class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus"
         type="button"
       >
         <div

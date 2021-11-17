@@ -16,7 +16,7 @@ exports[`PluginDetails should render properly 1`] = `
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -575,7 +575,7 @@ exports[`PluginDetails should render properly for remote package 1`] = `
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -1111,7 +1111,7 @@ exports[`PluginDetails should report plugin 1`] = `
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -1670,7 +1670,7 @@ exports[`PluginDetails should show configuration for plugins from npm 1`] = `
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -2077,7 +2077,7 @@ exports[`PluginDetails should show configuration for plugins from npm 1`] = `
                             to="https://github.com/dated/delegate-calculator-wallet-plugin"
                           >
                             <span
-                              class="Link__Content-sc-ec014t-1 fPOlTq"
+                              class="Link__Content-sc-ec014t-1 jGLnf"
                             >
                               <span>
                                 View
@@ -2291,7 +2291,7 @@ exports[`PluginDetails should update package 1`] = `
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"

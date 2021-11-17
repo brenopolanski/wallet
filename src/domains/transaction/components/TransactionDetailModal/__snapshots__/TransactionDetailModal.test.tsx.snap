@@ -80,7 +80,7 @@ exports[`TransactionDetailModal should render a delegate registration modal 1`] 
                         to="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                       >
                         <span
-                          class="Link__Content-sc-ec014t-1 fPOlTq"
+                          class="Link__Content-sc-ec014t-1 jGLnf"
                         >
                           <span
                             class="inline-flex overflow-hidden"
@@ -376,7 +376,7 @@ exports[`TransactionDetailModal should render a delegate resignation modal 1`] =
                         to="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                       >
                         <span
-                          class="Link__Content-sc-ec014t-1 fPOlTq"
+                          class="Link__Content-sc-ec014t-1 jGLnf"
                         >
                           <span
                             class="inline-flex overflow-hidden"
@@ -672,7 +672,7 @@ exports[`TransactionDetailModal should render a ipfs modal 1`] = `
                         to="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                       >
                         <span
-                          class="Link__Content-sc-ec014t-1 fPOlTq"
+                          class="Link__Content-sc-ec014t-1 jGLnf"
                         >
                           <span
                             class="inline-flex overflow-hidden"
@@ -968,7 +968,7 @@ exports[`TransactionDetailModal should render a magistrate modal 1`] = `
                         to="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                       >
                         <span
-                          class="Link__Content-sc-ec014t-1 fPOlTq"
+                          class="Link__Content-sc-ec014t-1 jGLnf"
                         >
                           <span
                             class="inline-flex overflow-hidden"
@@ -1232,7 +1232,7 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                         to="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                       >
                         <span
-                          class="Link__Content-sc-ec014t-1 fPOlTq"
+                          class="Link__Content-sc-ec014t-1 jGLnf"
                         >
                           <span
                             class="inline-flex overflow-hidden"
@@ -1362,7 +1362,7 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                       to="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                     >
                       <span
-                        class="Link__Content-sc-ec014t-1 fPOlTq"
+                        class="Link__Content-sc-ec014t-1 jGLnf"
                       >
                         View Full List
                       </span>
@@ -1658,7 +1658,7 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
                         to="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                       >
                         <span
-                          class="Link__Content-sc-ec014t-1 fPOlTq"
+                          class="Link__Content-sc-ec014t-1 jGLnf"
                         >
                           <span
                             class="inline-flex overflow-hidden"
@@ -2322,7 +2322,7 @@ exports[`TransactionDetailModal should render a second signature modal 1`] = `
                         to="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                       >
                         <span
-                          class="Link__Content-sc-ec014t-1 fPOlTq"
+                          class="Link__Content-sc-ec014t-1 jGLnf"
                         >
                           <span
                             class="inline-flex overflow-hidden"
@@ -2452,7 +2452,7 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
                         to="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                       >
                         <span
-                          class="Link__Content-sc-ec014t-1 fPOlTq"
+                          class="Link__Content-sc-ec014t-1 jGLnf"
                         >
                           <span
                             class="inline-flex overflow-hidden"
@@ -2844,7 +2844,7 @@ exports[`TransactionDetailModal should render a unvote modal 1`] = `
                         to="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                       >
                         <span
-                          class="Link__Content-sc-ec014t-1 fPOlTq"
+                          class="Link__Content-sc-ec014t-1 jGLnf"
                         >
                           <span
                             class="inline-flex overflow-hidden"
@@ -3238,7 +3238,7 @@ exports[`TransactionDetailModal should render a vote modal 1`] = `
                         to="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                       >
                         <span
-                          class="Link__Content-sc-ec014t-1 fPOlTq"
+                          class="Link__Content-sc-ec014t-1 jGLnf"
                         >
                           <span
                             class="inline-flex overflow-hidden"
@@ -3632,7 +3632,7 @@ exports[`TransactionDetailModal should render a voteCombination modal 1`] = `
                         to="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                       >
                         <span
-                          class="Link__Content-sc-ec014t-1 fPOlTq"
+                          class="Link__Content-sc-ec014t-1 jGLnf"
                         >
                           <span
                             class="inline-flex overflow-hidden"
@@ -4026,7 +4026,7 @@ exports[`TransactionDetailModal should render an unlock tokens modal 1`] = `
                         to="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                       >
                         <span
-                          class="Link__Content-sc-ec014t-1 fPOlTq"
+                          class="Link__Content-sc-ec014t-1 jGLnf"
                         >
                           <span
                             class="inline-flex overflow-hidden"

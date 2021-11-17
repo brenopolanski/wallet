@@ -147,7 +147,7 @@ exports[`SearchWallet uses fiat value = false should render 1`] = `
                                 class="group"
                               >
                                 <button
-                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 enxoho ring-focus"
+                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 pcqVB ring-focus"
                                   type="button"
                                 >
                                   <div
@@ -544,7 +544,7 @@ exports[`SearchWallet uses fiat value = false should render with selected addres
                                 class="group"
                               >
                                 <button
-                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 enxoho ring-focus"
+                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 pcqVB ring-focus"
                                   type="button"
                                 >
                                   <div
@@ -941,7 +941,7 @@ exports[`SearchWallet uses fiat value = false should render with the default exc
                                 class="group"
                               >
                                 <button
-                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 enxoho ring-focus"
+                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 pcqVB ring-focus"
                                   type="button"
                                 >
                                   <div
@@ -1368,7 +1368,7 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
                                 class="group"
                               >
                                 <button
-                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 enxoho ring-focus"
+                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 pcqVB ring-focus"
                                   type="button"
                                 >
                                   <div
@@ -1819,7 +1819,7 @@ exports[`SearchWallet uses fiat value = true should render with selected address
                                 class="group"
                               >
                                 <button
-                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 enxoho ring-focus"
+                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 pcqVB ring-focus"
                                   type="button"
                                 >
                                   <div
@@ -2270,7 +2270,7 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
                                 class="group"
                               >
                                 <button
-                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 enxoho ring-focus"
+                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 pcqVB ring-focus"
                                   type="button"
                                 >
                                   <div

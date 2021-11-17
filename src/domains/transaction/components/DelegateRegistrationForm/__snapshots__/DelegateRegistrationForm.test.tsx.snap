@@ -161,7 +161,7 @@ exports[`DelegateRegistrationForm should error if username is too long 1`] = `
               Delegate Name
             </label>
             <div
-              class="Input__InputWrapperStyled-sc-1i8sd1r-0 lnWRPe"
+              class="Input__InputWrapperStyled-sc-1i8sd1r-0 eyownm"
             >
               <div
                 class="relative flex flex-1 h-full"
@@ -231,7 +231,7 @@ exports[`DelegateRegistrationForm should error if username is too long 1`] = `
                       class="Toggle__Handle-sc-6s3wfu-2 jRjdQR"
                     >
                       <span
-                        class="Toggle__HandleInner-sc-6s3wfu-3 fiPeMI"
+                        class="Toggle__HandleInner-sc-6s3wfu-3 gNamtB"
                       />
                     </div>
                   </label>
@@ -251,7 +251,7 @@ exports[`DelegateRegistrationForm should error if username is too long 1`] = `
                 <button
                   aria-checked="false"
                   aria-label="0"
-                  class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ZQFGq"
+                  class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
                   data-testid="ButtonGroupOption"
                   role="radio"
                   type="button"
@@ -273,7 +273,7 @@ exports[`DelegateRegistrationForm should error if username is too long 1`] = `
                 <button
                   aria-checked="true"
                   aria-label="1.354"
-                  class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ZQFGq"
+                  class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
                   data-testid="ButtonGroupOption"
                   role="radio"
                   type="button"
@@ -295,7 +295,7 @@ exports[`DelegateRegistrationForm should error if username is too long 1`] = `
                 <button
                   aria-checked="false"
                   aria-label="10"
-                  class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ZQFGq"
+                  class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
                   data-testid="ButtonGroupOption"
                   role="radio"
                   type="button"
@@ -485,7 +485,7 @@ exports[`DelegateRegistrationForm should render form step 1`] = `
               Delegate Name
             </label>
             <div
-              class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
+              class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
             >
               <div
                 class="relative flex flex-1 h-full"
@@ -969,7 +969,7 @@ exports[`DelegateRegistrationForm should set fee 1`] = `
               Delegate Name
             </label>
             <div
-              class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
+              class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
             >
               <div
                 class="relative flex flex-1 h-full"
@@ -1020,7 +1020,7 @@ exports[`DelegateRegistrationForm should set fee 1`] = `
                       class="Toggle__Handle-sc-6s3wfu-2 jRjdQR"
                     >
                       <span
-                        class="Toggle__HandleInner-sc-6s3wfu-3 fiPeMI"
+                        class="Toggle__HandleInner-sc-6s3wfu-3 gNamtB"
                       />
                     </div>
                   </label>
@@ -1036,7 +1036,7 @@ exports[`DelegateRegistrationForm should set fee 1`] = `
                 class="relative"
               >
                 <div
-                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
                 >
                   <div
                     class="relative flex flex-1 h-full"
@@ -1267,7 +1267,7 @@ exports[`DelegateRegistrationForm should show error if username already exists 1
               Delegate Name
             </label>
             <div
-              class="Input__InputWrapperStyled-sc-1i8sd1r-0 lnWRPe"
+              class="Input__InputWrapperStyled-sc-1i8sd1r-0 eyownm"
             >
               <div
                 class="relative flex flex-1 h-full"
@@ -1337,7 +1337,7 @@ exports[`DelegateRegistrationForm should show error if username already exists 1
                       class="Toggle__Handle-sc-6s3wfu-2 jRjdQR"
                     >
                       <span
-                        class="Toggle__HandleInner-sc-6s3wfu-3 fiPeMI"
+                        class="Toggle__HandleInner-sc-6s3wfu-3 gNamtB"
                       />
                     </div>
                   </label>
@@ -1357,7 +1357,7 @@ exports[`DelegateRegistrationForm should show error if username already exists 1
                 <button
                   aria-checked="false"
                   aria-label="0"
-                  class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ZQFGq"
+                  class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
                   data-testid="ButtonGroupOption"
                   role="radio"
                   type="button"
@@ -1379,7 +1379,7 @@ exports[`DelegateRegistrationForm should show error if username already exists 1
                 <button
                   aria-checked="true"
                   aria-label="1.354"
-                  class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ZQFGq"
+                  class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
                   data-testid="ButtonGroupOption"
                   role="radio"
                   type="button"
@@ -1401,7 +1401,7 @@ exports[`DelegateRegistrationForm should show error if username already exists 1
                 <button
                   aria-checked="false"
                   aria-label="10"
-                  class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ZQFGq"
+                  class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
                   data-testid="ButtonGroupOption"
                   role="radio"
                   type="button"
@@ -1591,7 +1591,7 @@ exports[`DelegateRegistrationForm should show error if username contains illegal
               Delegate Name
             </label>
             <div
-              class="Input__InputWrapperStyled-sc-1i8sd1r-0 lnWRPe"
+              class="Input__InputWrapperStyled-sc-1i8sd1r-0 eyownm"
             >
               <div
                 class="relative flex flex-1 h-full"
@@ -1661,7 +1661,7 @@ exports[`DelegateRegistrationForm should show error if username contains illegal
                       class="Toggle__Handle-sc-6s3wfu-2 jRjdQR"
                     >
                       <span
-                        class="Toggle__HandleInner-sc-6s3wfu-3 fiPeMI"
+                        class="Toggle__HandleInner-sc-6s3wfu-3 gNamtB"
                       />
                     </div>
                   </label>
@@ -1681,7 +1681,7 @@ exports[`DelegateRegistrationForm should show error if username contains illegal
                 <button
                   aria-checked="false"
                   aria-label="0"
-                  class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ZQFGq"
+                  class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
                   data-testid="ButtonGroupOption"
                   role="radio"
                   type="button"
@@ -1703,7 +1703,7 @@ exports[`DelegateRegistrationForm should show error if username contains illegal
                 <button
                   aria-checked="true"
                   aria-label="1.354"
-                  class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ZQFGq"
+                  class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
                   data-testid="ButtonGroupOption"
                   role="radio"
                   type="button"
@@ -1725,7 +1725,7 @@ exports[`DelegateRegistrationForm should show error if username contains illegal
                 <button
                   aria-checked="false"
                   aria-label="10"
-                  class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ZQFGq"
+                  class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
                   data-testid="ButtonGroupOption"
                   role="radio"
                   type="button"

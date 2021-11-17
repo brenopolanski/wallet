@@ -149,7 +149,7 @@ exports[`SearchRecipient should render a modal 1`] = `
                                 class="group"
                               >
                                 <button
-                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 enxoho ring-focus"
+                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 pcqVB ring-focus"
                                   type="button"
                                 >
                                   <div
@@ -486,7 +486,7 @@ exports[`SearchRecipient should render a modal with custom title and description
                                 class="group"
                               >
                                 <button
-                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 enxoho ring-focus"
+                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 pcqVB ring-focus"
                                   type="button"
                                 >
                                   <div
@@ -823,7 +823,7 @@ exports[`SearchRecipient should render with selected address 1`] = `
                                 class="group"
                               >
                                 <button
-                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 enxoho ring-focus"
+                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 pcqVB ring-focus"
                                   type="button"
                                 >
                                   <div

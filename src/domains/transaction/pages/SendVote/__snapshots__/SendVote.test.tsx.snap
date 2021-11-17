@@ -19,7 +19,7 @@ exports[`SendVote should send a unvote transaction 1`] = `
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -362,7 +362,7 @@ exports[`SendVote should send a unvote transaction 1`] = `
                                   to="https://dexplorer.ark.io/transaction/32e5278cb72f24f2c04c4797dbfbffa7072f6a30e016093fdd3f7660a2ee2faf"
                                 >
                                   <span
-                                    class="Link__Content-sc-ec014t-1 fPOlTq"
+                                    class="Link__Content-sc-ec014t-1 jGLnf"
                                   >
                                     <span
                                       class="inline-flex overflow-hidden"
@@ -670,7 +670,7 @@ exports[`SendVote should send a vote transaction with keyboard 1`] = `
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -1013,7 +1013,7 @@ exports[`SendVote should send a vote transaction with keyboard 1`] = `
                                   to="https://dexplorer.ark.io/transaction/d819c5199e323a62a4349948ff075edde91e509028329f66ec76b8518ad1e493"
                                 >
                                   <span
-                                    class="Link__Content-sc-ec014t-1 fPOlTq"
+                                    class="Link__Content-sc-ec014t-1 jGLnf"
                                   >
                                     <span
                                       class="inline-flex overflow-hidden"
@@ -1321,7 +1321,7 @@ exports[`SendVote should send a vote transaction without keyboard 1`] = `
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -1664,7 +1664,7 @@ exports[`SendVote should send a vote transaction without keyboard 1`] = `
                                   to="https://dexplorer.ark.io/transaction/d819c5199e323a62a4349948ff075edde91e509028329f66ec76b8518ad1e493"
                                 >
                                   <span
-                                    class="Link__Content-sc-ec014t-1 fPOlTq"
+                                    class="Link__Content-sc-ec014t-1 jGLnf"
                                   >
                                     <span
                                       class="inline-flex overflow-hidden"
@@ -1972,7 +1972,7 @@ exports[`SendVote should show error if wrong mnemonic 1`] = `
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -2291,7 +2291,7 @@ exports[`SendVote should show error if wrong mnemonic 1`] = `
                         Mnemonic
                       </label>
                       <div
-                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 lnWRPe"
+                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 eyownm"
                       >
                         <div
                           class="relative flex flex-1 h-full"
@@ -2408,7 +2408,7 @@ exports[`SendVote should show error step and go back 1`] = `
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"

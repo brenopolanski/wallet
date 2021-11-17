@@ -37,7 +37,7 @@ exports[`AddRecipient should render 1`] = `
                 class="Toggle__Handle-sc-6s3wfu-2 jRjdQR"
               >
                 <span
-                  class="Toggle__HandleInner-sc-6s3wfu-3 fiPeMI"
+                  class="Toggle__HandleInner-sc-6s3wfu-3 gNamtB"
                 />
               </div>
             </label>
@@ -82,7 +82,7 @@ exports[`AddRecipient should render 1`] = `
                 class="relative w-full"
               >
                 <div
-                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR sr-only"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF sr-only"
                 >
                   <div
                     class="relative flex flex-1 h-full"
@@ -112,7 +112,7 @@ exports[`AddRecipient should render 1`] = `
                       id="SelectRecipient__dropdown-label"
                     />
                     <div
-                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
+                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
                     >
                       <div
                         class="flex items-center"
@@ -163,7 +163,7 @@ exports[`AddRecipient should render 1`] = `
                     </div>
                     <ul
                       aria-labelledby="SelectRecipient__dropdown-label"
-                      class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc"
+                      class="styles__SelectOptionsList-sc-120rtxy-0 HcHWp"
                       id="SelectRecipient__dropdown-menu"
                       role="listbox"
                     />
@@ -209,7 +209,7 @@ exports[`AddRecipient should render 1`] = `
                 class="relative"
               >
                 <div
-                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
                 >
                   <div
                     class="relative flex flex-1 h-full"
@@ -282,7 +282,7 @@ exports[`AddRecipient should render with multiple recipients switch 1`] = `
                 class="Toggle__Handle-sc-6s3wfu-2 jRjdQR"
               >
                 <span
-                  class="Toggle__HandleInner-sc-6s3wfu-3 fiPeMI"
+                  class="Toggle__HandleInner-sc-6s3wfu-3 gNamtB"
                 />
               </div>
             </label>
@@ -327,7 +327,7 @@ exports[`AddRecipient should render with multiple recipients switch 1`] = `
                 class="relative w-full"
               >
                 <div
-                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR sr-only"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF sr-only"
                 >
                   <div
                     class="relative flex flex-1 h-full"
@@ -357,7 +357,7 @@ exports[`AddRecipient should render with multiple recipients switch 1`] = `
                       id="SelectRecipient__dropdown-label"
                     />
                     <div
-                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
+                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
                     >
                       <div
                         class="flex items-center"
@@ -408,7 +408,7 @@ exports[`AddRecipient should render with multiple recipients switch 1`] = `
                     </div>
                     <ul
                       aria-labelledby="SelectRecipient__dropdown-label"
-                      class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc"
+                      class="styles__SelectOptionsList-sc-120rtxy-0 HcHWp"
                       id="SelectRecipient__dropdown-menu"
                       role="listbox"
                     />
@@ -454,7 +454,7 @@ exports[`AddRecipient should render with multiple recipients switch 1`] = `
                 class="relative"
               >
                 <div
-                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
                 >
                   <div
                     class="relative flex flex-1 h-full"
@@ -527,7 +527,7 @@ exports[`AddRecipient should render with single recipient data 1`] = `
                 class="Toggle__Handle-sc-6s3wfu-2 jRjdQR"
               >
                 <span
-                  class="Toggle__HandleInner-sc-6s3wfu-3 fiPeMI"
+                  class="Toggle__HandleInner-sc-6s3wfu-3 gNamtB"
                 />
               </div>
             </label>
@@ -572,7 +572,7 @@ exports[`AddRecipient should render with single recipient data 1`] = `
                 class="relative w-full"
               >
                 <div
-                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR sr-only"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF sr-only"
                 >
                   <div
                     class="relative flex flex-1 h-full"
@@ -602,7 +602,7 @@ exports[`AddRecipient should render with single recipient data 1`] = `
                       id="SelectRecipient__dropdown-label"
                     />
                     <div
-                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
+                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
                     >
                       <div
                         class="flex items-center"
@@ -664,7 +664,7 @@ exports[`AddRecipient should render with single recipient data 1`] = `
                     </div>
                     <ul
                       aria-labelledby="SelectRecipient__dropdown-label"
-                      class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc"
+                      class="styles__SelectOptionsList-sc-120rtxy-0 HcHWp"
                       id="SelectRecipient__dropdown-menu"
                       role="listbox"
                     />
@@ -710,7 +710,7 @@ exports[`AddRecipient should render with single recipient data 1`] = `
                 class="relative"
               >
                 <div
-                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
                 >
                   <div
                     class="relative flex flex-1 h-full"
@@ -778,7 +778,7 @@ exports[`AddRecipient should render without the single & multiple switch 1`] = `
                 class="relative w-full"
               >
                 <div
-                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR sr-only"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF sr-only"
                 >
                   <div
                     class="relative flex flex-1 h-full"
@@ -808,7 +808,7 @@ exports[`AddRecipient should render without the single & multiple switch 1`] = `
                       id="SelectRecipient__dropdown-label"
                     />
                     <div
-                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
+                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
                     >
                       <div
                         class="flex items-center"
@@ -859,7 +859,7 @@ exports[`AddRecipient should render without the single & multiple switch 1`] = `
                     </div>
                     <ul
                       aria-labelledby="SelectRecipient__dropdown-label"
-                      class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc"
+                      class="styles__SelectOptionsList-sc-120rtxy-0 HcHWp"
                       id="SelectRecipient__dropdown-menu"
                       role="listbox"
                     />
@@ -905,7 +905,7 @@ exports[`AddRecipient should render without the single & multiple switch 1`] = `
                 class="relative"
               >
                 <div
-                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
                 >
                   <div
                     class="relative flex flex-1 h-full"
@@ -978,7 +978,7 @@ exports[`AddRecipient should set available amount 1`] = `
                 class="Toggle__Handle-sc-6s3wfu-2 jRjdQR"
               >
                 <span
-                  class="Toggle__HandleInner-sc-6s3wfu-3 fiPeMI"
+                  class="Toggle__HandleInner-sc-6s3wfu-3 gNamtB"
                 />
               </div>
             </label>
@@ -1023,7 +1023,7 @@ exports[`AddRecipient should set available amount 1`] = `
                 class="relative w-full"
               >
                 <div
-                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR sr-only"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF sr-only"
                 >
                   <div
                     class="relative flex flex-1 h-full"
@@ -1053,7 +1053,7 @@ exports[`AddRecipient should set available amount 1`] = `
                       id="SelectRecipient__dropdown-label"
                     />
                     <div
-                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
+                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
                     >
                       <div
                         class="flex items-center"
@@ -1104,7 +1104,7 @@ exports[`AddRecipient should set available amount 1`] = `
                     </div>
                     <ul
                       aria-labelledby="SelectRecipient__dropdown-label"
-                      class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc"
+                      class="styles__SelectOptionsList-sc-120rtxy-0 HcHWp"
                       id="SelectRecipient__dropdown-menu"
                       role="listbox"
                     />
@@ -1150,7 +1150,7 @@ exports[`AddRecipient should set available amount 1`] = `
                 class="relative"
               >
                 <div
-                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
                 >
                   <div
                     class="relative flex flex-1 h-full"
@@ -1223,7 +1223,7 @@ exports[`AddRecipient should show zero amount if wallet has zero or insufficient
                 class="Toggle__Handle-sc-6s3wfu-2 jRjdQR"
               >
                 <span
-                  class="Toggle__HandleInner-sc-6s3wfu-3 fiPeMI"
+                  class="Toggle__HandleInner-sc-6s3wfu-3 gNamtB"
                 />
               </div>
             </label>
@@ -1268,7 +1268,7 @@ exports[`AddRecipient should show zero amount if wallet has zero or insufficient
                 class="relative w-full"
               >
                 <div
-                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR sr-only"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF sr-only"
                 >
                   <div
                     class="relative flex flex-1 h-full"
@@ -1298,7 +1298,7 @@ exports[`AddRecipient should show zero amount if wallet has zero or insufficient
                       id="SelectRecipient__dropdown-label"
                     />
                     <div
-                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
+                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
                     >
                       <div
                         class="flex items-center"
@@ -1349,7 +1349,7 @@ exports[`AddRecipient should show zero amount if wallet has zero or insufficient
                     </div>
                     <ul
                       aria-labelledby="SelectRecipient__dropdown-label"
-                      class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc"
+                      class="styles__SelectOptionsList-sc-120rtxy-0 HcHWp"
                       id="SelectRecipient__dropdown-menu"
                       role="listbox"
                     />
@@ -1381,7 +1381,7 @@ exports[`AddRecipient should show zero amount if wallet has zero or insufficient
                 class="relative"
               >
                 <div
-                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
                 >
                   <div
                     class="relative flex flex-1 h-full"

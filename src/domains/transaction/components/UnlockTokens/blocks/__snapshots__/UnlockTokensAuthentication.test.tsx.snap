@@ -37,7 +37,7 @@ exports[`UnlockTokensAuthentication should render 1`] = `
         Mnemonic
       </label>
       <div
-        class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
+        class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
       >
         <div
           class="relative flex flex-1 h-full"

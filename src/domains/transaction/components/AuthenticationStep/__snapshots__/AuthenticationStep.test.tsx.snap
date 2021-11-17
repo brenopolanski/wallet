@@ -37,7 +37,7 @@ exports[`AuthenticationStep should request WIF if wallet was imported using WIF 
         WIF
       </label>
       <div
-        class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
+        class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
       >
         <div
           class="relative flex flex-1 h-full"
@@ -117,7 +117,7 @@ exports[`AuthenticationStep should request mnemonic and second mnemonic 1`] = `
         Mnemonic
       </label>
       <div
-        class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
+        class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
       >
         <div
           class="relative flex flex-1 h-full"
@@ -249,7 +249,7 @@ exports[`AuthenticationStep should request mnemonic if wallet was imported using
         Mnemonic
       </label>
       <div
-        class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
+        class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
       >
         <div
           class="relative flex flex-1 h-full"
@@ -329,7 +329,7 @@ exports[`AuthenticationStep should request mnemonic if wallet was imported using
         Mnemonic
       </label>
       <div
-        class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
+        class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
       >
         <div
           class="relative flex flex-1 h-full"
@@ -409,7 +409,7 @@ exports[`AuthenticationStep should request private key if wallet was imported us
         Private Key
       </label>
       <div
-        class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
+        class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
       >
         <div
           class="relative flex flex-1 h-full"
@@ -489,7 +489,7 @@ exports[`AuthenticationStep should request secret and second secret 1`] = `
         Secret
       </label>
       <div
-        class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
+        class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
       >
         <div
           class="relative flex flex-1 h-full"
@@ -621,7 +621,7 @@ exports[`AuthenticationStep should request secret if wallet was imported using s
         Secret
       </label>
       <div
-        class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
+        class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
       >
         <div
           class="relative flex flex-1 h-full"

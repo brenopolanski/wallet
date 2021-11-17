@@ -636,7 +636,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with error 3`]
                     Mnemonic
                   </label>
                   <div
-                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
                   >
                     <div
                       class="relative flex flex-1 h-full"
@@ -1511,7 +1511,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with success 3
                     Mnemonic
                   </label>
                   <div
-                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
                   >
                     <div
                       class="relative flex flex-1 h-full"
@@ -1703,7 +1703,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with success 4
                               to="https://testnet.lisk.observer/transaction/adaf8f61b332611c6d4bd6ac3e75bafc7c82eeee8a4bee14ded471f1373cd23a"
                             >
                               <span
-                                class="Link__Content-sc-ec014t-1 fPOlTq"
+                                class="Link__Content-sc-ec014t-1 jGLnf"
                               >
                                 <span
                                   class="inline-flex overflow-hidden"

@@ -73,7 +73,7 @@ exports[`UpdateContact should render 1`] = `
                     Name
                   </label>
                   <div
-                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
                   >
                     <div
                       class="relative flex flex-1 h-full"
@@ -104,7 +104,7 @@ exports[`UpdateContact should render 1`] = `
                       class="relative w-full"
                     >
                       <div
-                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR sr-only"
+                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF sr-only"
                       >
                         <div
                           class="relative flex flex-1 h-full"
@@ -133,7 +133,7 @@ exports[`UpdateContact should render 1`] = `
                             id="downshift-0-label"
                           />
                           <div
-                            class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
+                            class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
                           >
                             <div
                               class="relative flex flex-1 h-full"
@@ -176,7 +176,7 @@ exports[`UpdateContact should render 1`] = `
                           </div>
                           <ul
                             aria-labelledby="downshift-0-label"
-                            class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc"
+                            class="styles__SelectOptionsList-sc-120rtxy-0 HcHWp"
                             id="downshift-0-menu"
                             role="listbox"
                           />
@@ -196,7 +196,7 @@ exports[`UpdateContact should render 1`] = `
                       Address
                     </label>
                     <div
-                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
+                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
                     >
                       <div
                         class="relative flex flex-1 h-full"

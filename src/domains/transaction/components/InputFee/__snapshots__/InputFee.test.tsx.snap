@@ -30,7 +30,7 @@ exports[`should allow to input a value 1`] = `
             class="Toggle__Handle-sc-6s3wfu-2 jRjdQR"
           >
             <span
-              class="Toggle__HandleInner-sc-6s3wfu-3 fiPeMI"
+              class="Toggle__HandleInner-sc-6s3wfu-3 gNamtB"
             />
           </div>
         </label>
@@ -46,7 +46,7 @@ exports[`should allow to input a value 1`] = `
       class="relative"
     >
       <div
-        class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
+        class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
       >
         <div
           class="relative flex flex-1 h-full"
@@ -140,7 +140,7 @@ exports[`should display converted value when on live net 1`] = `
             class="Toggle__Handle-sc-6s3wfu-2 jRjdQR"
           >
             <span
-              class="Toggle__HandleInner-sc-6s3wfu-3 fiPeMI"
+              class="Toggle__HandleInner-sc-6s3wfu-3 gNamtB"
             />
           </div>
         </label>
@@ -156,7 +156,7 @@ exports[`should display converted value when on live net 1`] = `
       class="relative"
     >
       <div
-        class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
+        class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
       >
         <div
           class="relative flex flex-1 h-full"
@@ -259,7 +259,7 @@ exports[`should display converted values when on live net 1`] = `
             class="Toggle__Handle-sc-6s3wfu-2 jRjdQR"
           >
             <span
-              class="Toggle__HandleInner-sc-6s3wfu-3 fiPeMI"
+              class="Toggle__HandleInner-sc-6s3wfu-3 gNamtB"
             />
           </div>
         </label>
@@ -279,7 +279,7 @@ exports[`should display converted values when on live net 1`] = `
       <button
         aria-checked="false"
         aria-label="0.006"
-        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ZQFGq"
+        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -307,7 +307,7 @@ exports[`should display converted values when on live net 1`] = `
       <button
         aria-checked="true"
         aria-label="0.456"
-        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ZQFGq"
+        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -335,7 +335,7 @@ exports[`should display converted values when on live net 1`] = `
       <button
         aria-checked="false"
         aria-label="0.5"
-        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ZQFGq"
+        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -394,7 +394,7 @@ exports[`should keep different values for simple and advanced view types 1`] = `
             class="Toggle__Handle-sc-6s3wfu-2 jRjdQR"
           >
             <span
-              class="Toggle__HandleInner-sc-6s3wfu-3 fiPeMI"
+              class="Toggle__HandleInner-sc-6s3wfu-3 gNamtB"
             />
           </div>
         </label>
@@ -410,7 +410,7 @@ exports[`should keep different values for simple and advanced view types 1`] = `
       class="relative"
     >
       <div
-        class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
+        class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
       >
         <div
           class="relative flex flex-1 h-full"
@@ -503,7 +503,7 @@ exports[`should keep different values for simple and advanced view types 2`] = `
             class="Toggle__Handle-sc-6s3wfu-2 jRjdQR"
           >
             <span
-              class="Toggle__HandleInner-sc-6s3wfu-3 fiPeMI"
+              class="Toggle__HandleInner-sc-6s3wfu-3 gNamtB"
             />
           </div>
         </label>
@@ -523,7 +523,7 @@ exports[`should keep different values for simple and advanced view types 2`] = `
       <button
         aria-checked="false"
         aria-label="0.006"
-        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ZQFGq"
+        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -545,7 +545,7 @@ exports[`should keep different values for simple and advanced view types 2`] = `
       <button
         aria-checked="true"
         aria-label="0.456"
-        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ZQFGq"
+        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -567,7 +567,7 @@ exports[`should keep different values for simple and advanced view types 2`] = `
       <button
         aria-checked="false"
         aria-label="0.5"
-        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ZQFGq"
+        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -620,7 +620,7 @@ exports[`should render 1`] = `
             class="Toggle__Handle-sc-6s3wfu-2 jRjdQR"
           >
             <span
-              class="Toggle__HandleInner-sc-6s3wfu-3 fiPeMI"
+              class="Toggle__HandleInner-sc-6s3wfu-3 gNamtB"
             />
           </div>
         </label>
@@ -640,7 +640,7 @@ exports[`should render 1`] = `
       <button
         aria-checked="false"
         aria-label="0.006"
-        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ZQFGq"
+        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -662,7 +662,7 @@ exports[`should render 1`] = `
       <button
         aria-checked="true"
         aria-label="0.456"
-        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ZQFGq"
+        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -684,7 +684,7 @@ exports[`should render 1`] = `
       <button
         aria-checked="false"
         aria-label="0.5"
-        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ZQFGq"
+        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -810,7 +810,7 @@ exports[`should update value when clicking button Average 1`] = `
             class="Toggle__Handle-sc-6s3wfu-2 jRjdQR"
           >
             <span
-              class="Toggle__HandleInner-sc-6s3wfu-3 fiPeMI"
+              class="Toggle__HandleInner-sc-6s3wfu-3 gNamtB"
             />
           </div>
         </label>
@@ -830,7 +830,7 @@ exports[`should update value when clicking button Average 1`] = `
       <button
         aria-checked="false"
         aria-label="0.006"
-        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ZQFGq"
+        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -852,7 +852,7 @@ exports[`should update value when clicking button Average 1`] = `
       <button
         aria-checked="true"
         aria-label="0.456"
-        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ZQFGq"
+        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -874,7 +874,7 @@ exports[`should update value when clicking button Average 1`] = `
       <button
         aria-checked="false"
         aria-label="0.5"
-        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ZQFGq"
+        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -927,7 +927,7 @@ exports[`should update value when clicking button Fast 1`] = `
             class="Toggle__Handle-sc-6s3wfu-2 jRjdQR"
           >
             <span
-              class="Toggle__HandleInner-sc-6s3wfu-3 fiPeMI"
+              class="Toggle__HandleInner-sc-6s3wfu-3 gNamtB"
             />
           </div>
         </label>
@@ -947,7 +947,7 @@ exports[`should update value when clicking button Fast 1`] = `
       <button
         aria-checked="false"
         aria-label="0.006"
-        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ZQFGq"
+        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -969,7 +969,7 @@ exports[`should update value when clicking button Fast 1`] = `
       <button
         aria-checked="false"
         aria-label="0.456"
-        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ZQFGq"
+        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -991,7 +991,7 @@ exports[`should update value when clicking button Fast 1`] = `
       <button
         aria-checked="true"
         aria-label="0.5"
-        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ZQFGq"
+        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -1044,7 +1044,7 @@ exports[`should update value when clicking button Slow 1`] = `
             class="Toggle__Handle-sc-6s3wfu-2 jRjdQR"
           >
             <span
-              class="Toggle__HandleInner-sc-6s3wfu-3 fiPeMI"
+              class="Toggle__HandleInner-sc-6s3wfu-3 gNamtB"
             />
           </div>
         </label>
@@ -1064,7 +1064,7 @@ exports[`should update value when clicking button Slow 1`] = `
       <button
         aria-checked="true"
         aria-label="0.006"
-        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ZQFGq"
+        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -1086,7 +1086,7 @@ exports[`should update value when clicking button Slow 1`] = `
       <button
         aria-checked="false"
         aria-label="0.456"
-        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ZQFGq"
+        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -1108,7 +1108,7 @@ exports[`should update value when clicking button Slow 1`] = `
       <button
         aria-checked="false"
         aria-label="0.5"
-        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ZQFGq"
+        class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"

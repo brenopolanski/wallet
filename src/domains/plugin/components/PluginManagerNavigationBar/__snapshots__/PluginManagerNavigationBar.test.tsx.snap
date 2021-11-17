@@ -103,7 +103,7 @@ exports[`PluginManagerNavigationBar should render 1`] = `
               class="group"
             >
               <button
-                class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus"
+                class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus"
                 data-testid="LayoutControls__list--icon"
               >
                 <div
@@ -125,7 +125,7 @@ exports[`PluginManagerNavigationBar should render 1`] = `
               class="group"
             >
               <button
-                class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus active"
+                class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus active"
                 data-testid="LayoutControls__grid--icon"
               >
                 <div
@@ -255,7 +255,7 @@ exports[`PluginManagerNavigationBar should update selected 1`] = `
               class="group"
             >
               <button
-                class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus"
+                class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus"
                 data-testid="LayoutControls__list--icon"
               >
                 <div
@@ -277,7 +277,7 @@ exports[`PluginManagerNavigationBar should update selected 1`] = `
               class="group"
             >
               <button
-                class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus active"
+                class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus active"
                 data-testid="LayoutControls__grid--icon"
               >
                 <div

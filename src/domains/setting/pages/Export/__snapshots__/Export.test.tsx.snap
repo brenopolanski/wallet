@@ -13,7 +13,7 @@ exports[`Export Settings should render export settings 1`] = `
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -468,7 +468,7 @@ exports[`Export Settings should render export settings 1`] = `
                                   class="Toggle__Handle-sc-6s3wfu-2 cobHFC"
                                 >
                                   <span
-                                    class="Toggle__HandleInner-sc-6s3wfu-3 ddepvC"
+                                    class="Toggle__HandleInner-sc-6s3wfu-3 klclKD"
                                   />
                                 </div>
                               </label>
@@ -517,7 +517,7 @@ exports[`Export Settings should render export settings 1`] = `
                                   class="Toggle__Handle-sc-6s3wfu-2 cobHFC"
                                 >
                                   <span
-                                    class="Toggle__HandleInner-sc-6s3wfu-3 ddepvC"
+                                    class="Toggle__HandleInner-sc-6s3wfu-3 klclKD"
                                   />
                                 </div>
                               </label>

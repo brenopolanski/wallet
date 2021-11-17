@@ -16,7 +16,7 @@ exports[`SelectNetwork should render 1`] = `
       />
       
       <div
-        class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
+        class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
       >
         <div
           class="Circle__CircleWrapper-sc-d5u41q-0 bcplCx border-theme-secondary-200 dark:border-theme-secondary-700 text-theme-secondary-500 ring-theme-background"
@@ -85,7 +85,7 @@ exports[`SelectNetwork should render with hidden options 1`] = `
       />
       
       <div
-        class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
+        class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
       >
         <div
           class="Circle__CircleWrapper-sc-d5u41q-0 bcplCx border-theme-secondary-200 dark:border-theme-secondary-700 text-theme-secondary-500 ring-theme-background"
@@ -222,7 +222,7 @@ exports[`SelectNetwork should render with hidden options 1`] = `
                 class="Toggle__Handle-sc-6s3wfu-2 cobHFC"
               >
                 <span
-                  class="Toggle__HandleInner-sc-6s3wfu-3 ddepvC"
+                  class="Toggle__HandleInner-sc-6s3wfu-3 klclKD"
                 />
               </div>
             </label>
@@ -341,7 +341,7 @@ exports[`SelectNetwork should render with networks 1`] = `
       />
       
       <div
-        class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
+        class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
       >
         <div
           class="Circle__CircleWrapper-sc-d5u41q-0 bcplCx border-theme-secondary-200 dark:border-theme-secondary-700 text-theme-secondary-500 ring-theme-background"
@@ -478,7 +478,7 @@ exports[`SelectNetwork should render with networks 1`] = `
                 class="Toggle__Handle-sc-6s3wfu-2 cobHFC"
               >
                 <span
-                  class="Toggle__HandleInner-sc-6s3wfu-3 ddepvC"
+                  class="Toggle__HandleInner-sc-6s3wfu-3 klclKD"
                 />
               </div>
             </label>

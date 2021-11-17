@@ -25,7 +25,7 @@ exports[`Add Participant should fail if cannot find the address remotely 1`] = `
               class="relative w-full"
             >
               <div
-                class="Input__InputWrapperStyled-sc-1i8sd1r-0 lnWRPe sr-only"
+                class="Input__InputWrapperStyled-sc-1i8sd1r-0 eyownm sr-only"
               >
                 <div
                   class="relative flex flex-1 h-full"
@@ -73,7 +73,7 @@ exports[`Add Participant should fail if cannot find the address remotely 1`] = `
                     id="SelectRecipient__dropdown-label"
                   />
                   <div
-                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 lnWRPe"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 eyownm"
                   >
                     <div
                       class="flex items-center"
@@ -149,7 +149,7 @@ exports[`Add Participant should fail if cannot find the address remotely 1`] = `
                   </div>
                   <ul
                     aria-labelledby="SelectRecipient__dropdown-label"
-                    class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc"
+                    class="styles__SelectOptionsList-sc-120rtxy-0 HcHWp"
                     id="SelectRecipient__dropdown-menu"
                     role="listbox"
                   />
@@ -357,7 +357,7 @@ exports[`Add Participant should fail to find 1`] = `
               class="relative w-full"
             >
               <div
-                class="Input__InputWrapperStyled-sc-1i8sd1r-0 lnWRPe sr-only"
+                class="Input__InputWrapperStyled-sc-1i8sd1r-0 eyownm sr-only"
               >
                 <div
                   class="relative flex flex-1 h-full"
@@ -405,7 +405,7 @@ exports[`Add Participant should fail to find 1`] = `
                     id="SelectRecipient__dropdown-label"
                   />
                   <div
-                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 lnWRPe"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 eyownm"
                   >
                     <div
                       class="flex items-center"
@@ -481,7 +481,7 @@ exports[`Add Participant should fail to find 1`] = `
                   </div>
                   <ul
                     aria-labelledby="SelectRecipient__dropdown-label"
-                    class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc"
+                    class="styles__SelectOptionsList-sc-120rtxy-0 HcHWp"
                     id="SelectRecipient__dropdown-menu"
                     role="listbox"
                   />
@@ -689,7 +689,7 @@ exports[`Add Participant should fail with a duplicate address 1`] = `
               class="relative w-full"
             >
               <div
-                class="Input__InputWrapperStyled-sc-1i8sd1r-0 lnWRPe sr-only"
+                class="Input__InputWrapperStyled-sc-1i8sd1r-0 eyownm sr-only"
               >
                 <div
                   class="relative flex flex-1 h-full"
@@ -742,7 +742,7 @@ exports[`Add Participant should fail with a duplicate address 1`] = `
                     D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD…
                   </div>
                   <div
-                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 lnWRPe"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 eyownm"
                   >
                     <div
                       class="flex items-center"
@@ -834,7 +834,7 @@ exports[`Add Participant should fail with a duplicate address 1`] = `
                   </div>
                   <ul
                     aria-labelledby="SelectRecipient__dropdown-label"
-                    class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc is-open"
+                    class="styles__SelectOptionsList-sc-120rtxy-0 HcHWp is-open"
                     id="SelectRecipient__dropdown-menu"
                     role="listbox"
                   >
@@ -1083,7 +1083,7 @@ exports[`Add Participant should fail with cold wallet 1`] = `
               class="relative w-full"
             >
               <div
-                class="Input__InputWrapperStyled-sc-1i8sd1r-0 lnWRPe sr-only"
+                class="Input__InputWrapperStyled-sc-1i8sd1r-0 eyownm sr-only"
               >
                 <div
                   class="relative flex flex-1 h-full"
@@ -1131,7 +1131,7 @@ exports[`Add Participant should fail with cold wallet 1`] = `
                     id="SelectRecipient__dropdown-label"
                   />
                   <div
-                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 lnWRPe"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 eyownm"
                   >
                     <div
                       class="flex items-center"
@@ -1207,7 +1207,7 @@ exports[`Add Participant should fail with cold wallet 1`] = `
                   </div>
                   <ul
                     aria-labelledby="SelectRecipient__dropdown-label"
-                    class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc"
+                    class="styles__SelectOptionsList-sc-120rtxy-0 HcHWp"
                     id="SelectRecipient__dropdown-menu"
                     role="listbox"
                   />
@@ -1415,7 +1415,7 @@ exports[`Add Participant should render custom participants 1`] = `
               class="relative w-full"
             >
               <div
-                class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR sr-only"
+                class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF sr-only"
               >
                 <div
                   class="relative flex flex-1 h-full"
@@ -1445,7 +1445,7 @@ exports[`Add Participant should render custom participants 1`] = `
                     id="SelectRecipient__dropdown-label"
                   />
                   <div
-                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
                   >
                     <div
                       class="flex items-center"
@@ -1496,7 +1496,7 @@ exports[`Add Participant should render custom participants 1`] = `
                   </div>
                   <ul
                     aria-labelledby="SelectRecipient__dropdown-label"
-                    class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc"
+                    class="styles__SelectOptionsList-sc-120rtxy-0 HcHWp"
                     id="SelectRecipient__dropdown-menu"
                     role="listbox"
                   />
@@ -1693,7 +1693,7 @@ exports[`Add Participant should work with an imported wallet 1`] = `
               class="relative w-full"
             >
               <div
-                class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR sr-only"
+                class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF sr-only"
               >
                 <div
                   class="relative flex flex-1 h-full"
@@ -1723,7 +1723,7 @@ exports[`Add Participant should work with an imported wallet 1`] = `
                     id="SelectRecipient__dropdown-label"
                   />
                   <div
-                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
                   >
                     <div
                       class="flex items-center"
@@ -1774,7 +1774,7 @@ exports[`Add Participant should work with an imported wallet 1`] = `
                   </div>
                   <ul
                     aria-labelledby="SelectRecipient__dropdown-label"
-                    class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc is-open"
+                    class="styles__SelectOptionsList-sc-120rtxy-0 HcHWp is-open"
                     id="SelectRecipient__dropdown-menu"
                     role="listbox"
                   >

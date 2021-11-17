@@ -28,7 +28,7 @@ exports[`ReceiveFundsForm should emit amount onChange event 1`] = `
           class="relative"
         >
           <div
-            class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR pr-20"
+            class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF pr-20"
           >
             <div
               class="relative flex flex-1 h-full"
@@ -62,7 +62,7 @@ exports[`ReceiveFundsForm should emit amount onChange event 1`] = `
           </span>
         </label>
         <div
-          class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
+          class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
         >
           <div
             class="relative flex flex-1 h-full"
@@ -123,7 +123,7 @@ exports[`ReceiveFundsForm should emit memo onChange event 1`] = `
           class="relative"
         >
           <div
-            class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR pr-20"
+            class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF pr-20"
           >
             <div
               class="relative flex flex-1 h-full"
@@ -157,7 +157,7 @@ exports[`ReceiveFundsForm should emit memo onChange event 1`] = `
           </span>
         </label>
         <div
-          class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
+          class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
         >
           <div
             class="relative flex flex-1 h-full"
@@ -218,7 +218,7 @@ exports[`ReceiveFundsForm should not show memo if is not supported by network 1`
           class="relative"
         >
           <div
-            class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR pr-20"
+            class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF pr-20"
           >
             <div
               class="relative flex flex-1 h-full"
@@ -268,7 +268,7 @@ exports[`ReceiveFundsForm should render 1`] = `
           class="relative"
         >
           <div
-            class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR pr-20"
+            class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF pr-20"
           >
             <div
               class="relative flex flex-1 h-full"
@@ -302,7 +302,7 @@ exports[`ReceiveFundsForm should render 1`] = `
           </span>
         </label>
         <div
-          class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
+          class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
         >
           <div
             class="relative flex flex-1 h-full"
