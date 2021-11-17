@@ -18,7 +18,7 @@ exports[`MultiSignatureDetail should fail to broadcast transaction and show erro
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -98,7 +98,7 @@ exports[`MultiSignatureDetail should fail to broadcast transaction and show erro
                         class="flex items-center -space-x-1"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -144,7 +144,7 @@ exports[`MultiSignatureDetail should fail to broadcast transaction and show erro
                         class="flex items-center -space-x-1"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -366,7 +366,7 @@ exports[`MultiSignatureDetail should fail to broadcast transaction and show erro
                               >
                                 <div>
                                   <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                     data-testid="Avatar"
                                   >
                                     <div
@@ -381,7 +381,7 @@ exports[`MultiSignatureDetail should fail to broadcast transaction and show erro
                                   </div>
                                 </div>
                                 <span
-                                  class="Badge__Wrapper-sc-w9wbbm-0 bifkuZ flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400"
+                                  class="Badge__Wrapper-sc-w9wbbm-0 fvTsro flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400"
                                   data-testid="Signatures__waiting-badge"
                                 >
                                   <div
@@ -413,7 +413,7 @@ exports[`MultiSignatureDetail should fail to broadcast transaction and show erro
                               >
                                 <div>
                                   <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                     data-testid="Avatar"
                                   >
                                     <div
@@ -428,7 +428,7 @@ exports[`MultiSignatureDetail should fail to broadcast transaction and show erro
                                   </div>
                                 </div>
                                 <span
-                                  class="Badge__Wrapper-sc-w9wbbm-0 bifkuZ flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400"
+                                  class="Badge__Wrapper-sc-w9wbbm-0 fvTsro flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400"
                                   data-testid="Signatures__waiting-badge"
                                 >
                                   <div
@@ -454,7 +454,7 @@ exports[`MultiSignatureDetail should fail to broadcast transaction and show erro
                   class="flex justify-end mt-8 space-x-3"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="Paginator__cancel"
                     type="button"
                   >
@@ -465,7 +465,7 @@ exports[`MultiSignatureDetail should fail to broadcast transaction and show erro
                     </div>
                   </button>
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
                     data-testid="MultiSignatureDetail__broadcast"
                     type="button"
                   >
@@ -504,7 +504,7 @@ exports[`MultiSignatureDetail should not broadcast if wallet is not ready to do 
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -584,7 +584,7 @@ exports[`MultiSignatureDetail should not broadcast if wallet is not ready to do 
                         class="flex items-center -space-x-1"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -630,7 +630,7 @@ exports[`MultiSignatureDetail should not broadcast if wallet is not ready to do 
                         class="flex items-center -space-x-1"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -852,7 +852,7 @@ exports[`MultiSignatureDetail should not broadcast if wallet is not ready to do 
                               >
                                 <div>
                                   <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                     data-testid="Avatar"
                                   >
                                     <div
@@ -867,7 +867,7 @@ exports[`MultiSignatureDetail should not broadcast if wallet is not ready to do 
                                   </div>
                                 </div>
                                 <span
-                                  class="Badge__Wrapper-sc-w9wbbm-0 bifkuZ flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400"
+                                  class="Badge__Wrapper-sc-w9wbbm-0 fvTsro flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400"
                                   data-testid="Signatures__waiting-badge"
                                 >
                                   <div
@@ -899,7 +899,7 @@ exports[`MultiSignatureDetail should not broadcast if wallet is not ready to do 
                               >
                                 <div>
                                   <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                     data-testid="Avatar"
                                   >
                                     <div
@@ -914,7 +914,7 @@ exports[`MultiSignatureDetail should not broadcast if wallet is not ready to do 
                                   </div>
                                 </div>
                                 <span
-                                  class="Badge__Wrapper-sc-w9wbbm-0 bifkuZ flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400"
+                                  class="Badge__Wrapper-sc-w9wbbm-0 fvTsro flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400"
                                   data-testid="Signatures__waiting-badge"
                                 >
                                   <div
@@ -940,7 +940,7 @@ exports[`MultiSignatureDetail should not broadcast if wallet is not ready to do 
                   class="flex justify-end mt-8 space-x-3"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="Paginator__cancel"
                     type="button"
                   >
@@ -951,7 +951,7 @@ exports[`MultiSignatureDetail should not broadcast if wallet is not ready to do 
                     </div>
                   </button>
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
                     data-testid="MultiSignatureDetail__broadcast"
                     type="button"
                   >
@@ -990,7 +990,7 @@ exports[`MultiSignatureDetail should not show send button when waiting for confi
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -1070,7 +1070,7 @@ exports[`MultiSignatureDetail should not show send button when waiting for confi
                         class="flex items-center -space-x-1"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -1116,7 +1116,7 @@ exports[`MultiSignatureDetail should not show send button when waiting for confi
                         class="flex items-center -space-x-1"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -1338,7 +1338,7 @@ exports[`MultiSignatureDetail should not show send button when waiting for confi
                               >
                                 <div>
                                   <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                     data-testid="Avatar"
                                   >
                                     <div
@@ -1353,7 +1353,7 @@ exports[`MultiSignatureDetail should not show send button when waiting for confi
                                   </div>
                                 </div>
                                 <span
-                                  class="Badge__Wrapper-sc-w9wbbm-0 bifkuZ flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400"
+                                  class="Badge__Wrapper-sc-w9wbbm-0 fvTsro flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400"
                                   data-testid="Signatures__waiting-badge"
                                 >
                                   <div
@@ -1385,7 +1385,7 @@ exports[`MultiSignatureDetail should not show send button when waiting for confi
                               >
                                 <div>
                                   <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                     data-testid="Avatar"
                                   >
                                     <div
@@ -1400,7 +1400,7 @@ exports[`MultiSignatureDetail should not show send button when waiting for confi
                                   </div>
                                 </div>
                                 <span
-                                  class="Badge__Wrapper-sc-w9wbbm-0 bifkuZ flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400"
+                                  class="Badge__Wrapper-sc-w9wbbm-0 fvTsro flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400"
                                   data-testid="Signatures__waiting-badge"
                                 >
                                   <div
@@ -1450,7 +1450,7 @@ exports[`MultiSignatureDetail should render summary step and handle exception 1`
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -1530,7 +1530,7 @@ exports[`MultiSignatureDetail should render summary step and handle exception 1`
                         class="flex items-center -space-x-1"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -1576,7 +1576,7 @@ exports[`MultiSignatureDetail should render summary step and handle exception 1`
                         class="flex items-center -space-x-1"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -1798,7 +1798,7 @@ exports[`MultiSignatureDetail should render summary step and handle exception 1`
                               >
                                 <div>
                                   <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                     data-testid="Avatar"
                                   >
                                     <div
@@ -1813,7 +1813,7 @@ exports[`MultiSignatureDetail should render summary step and handle exception 1`
                                   </div>
                                 </div>
                                 <span
-                                  class="Badge__Wrapper-sc-w9wbbm-0 bifkuZ flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600"
+                                  class="Badge__Wrapper-sc-w9wbbm-0 fvTsro flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600"
                                   data-testid="Signatures__signed-badge"
                                 >
                                   <div
@@ -1845,7 +1845,7 @@ exports[`MultiSignatureDetail should render summary step and handle exception 1`
                               >
                                 <div>
                                   <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                     data-testid="Avatar"
                                   >
                                     <div
@@ -1860,7 +1860,7 @@ exports[`MultiSignatureDetail should render summary step and handle exception 1`
                                   </div>
                                 </div>
                                 <span
-                                  class="Badge__Wrapper-sc-w9wbbm-0 bifkuZ flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600"
+                                  class="Badge__Wrapper-sc-w9wbbm-0 fvTsro flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600"
                                   data-testid="Signatures__signed-badge"
                                 >
                                   <div
@@ -1910,7 +1910,7 @@ exports[`MultiSignatureDetail should render summary step for ipfs 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -1990,7 +1990,7 @@ exports[`MultiSignatureDetail should render summary step for ipfs 1`] = `
                         class="flex items-center -space-x-1"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -2196,7 +2196,7 @@ exports[`MultiSignatureDetail should render summary step for ipfs 1`] = `
                               >
                                 <div>
                                   <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                     data-testid="Avatar"
                                   >
                                     <div
@@ -2211,7 +2211,7 @@ exports[`MultiSignatureDetail should render summary step for ipfs 1`] = `
                                   </div>
                                 </div>
                                 <span
-                                  class="Badge__Wrapper-sc-w9wbbm-0 bifkuZ flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600"
+                                  class="Badge__Wrapper-sc-w9wbbm-0 fvTsro flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600"
                                   data-testid="Signatures__signed-badge"
                                 >
                                   <div
@@ -2243,7 +2243,7 @@ exports[`MultiSignatureDetail should render summary step for ipfs 1`] = `
                               >
                                 <div>
                                   <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                     data-testid="Avatar"
                                   >
                                     <div
@@ -2258,7 +2258,7 @@ exports[`MultiSignatureDetail should render summary step for ipfs 1`] = `
                                   </div>
                                 </div>
                                 <span
-                                  class="Badge__Wrapper-sc-w9wbbm-0 bifkuZ flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600"
+                                  class="Badge__Wrapper-sc-w9wbbm-0 fvTsro flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600"
                                   data-testid="Signatures__signed-badge"
                                 >
                                   <div
@@ -2308,7 +2308,7 @@ exports[`MultiSignatureDetail should render summary step for multi payment 1`] =
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -2388,7 +2388,7 @@ exports[`MultiSignatureDetail should render summary step for multi payment 1`] =
                         class="flex items-center -space-x-1"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -2487,7 +2487,7 @@ exports[`MultiSignatureDetail should render summary step for multi payment 1`] =
                                   >
                                     <td>
                                       <div
-                                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 SfPfF flex-shrink-0"
+                                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 krsvod flex-shrink-0"
                                         data-testid="Avatar"
                                       >
                                         <div
@@ -2532,7 +2532,7 @@ exports[`MultiSignatureDetail should render summary step for multi payment 1`] =
                                   >
                                     <td>
                                       <div
-                                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 SfPfF flex-shrink-0"
+                                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 krsvod flex-shrink-0"
                                         data-testid="Avatar"
                                       >
                                         <div
@@ -2785,7 +2785,7 @@ exports[`MultiSignatureDetail should render summary step for multi payment 1`] =
                               >
                                 <div>
                                   <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                     data-testid="Avatar"
                                   >
                                     <div
@@ -2800,7 +2800,7 @@ exports[`MultiSignatureDetail should render summary step for multi payment 1`] =
                                   </div>
                                 </div>
                                 <span
-                                  class="Badge__Wrapper-sc-w9wbbm-0 bifkuZ flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600"
+                                  class="Badge__Wrapper-sc-w9wbbm-0 fvTsro flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600"
                                   data-testid="Signatures__signed-badge"
                                 >
                                   <div
@@ -2832,7 +2832,7 @@ exports[`MultiSignatureDetail should render summary step for multi payment 1`] =
                               >
                                 <div>
                                   <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                     data-testid="Avatar"
                                   >
                                     <div
@@ -2847,7 +2847,7 @@ exports[`MultiSignatureDetail should render summary step for multi payment 1`] =
                                   </div>
                                 </div>
                                 <span
-                                  class="Badge__Wrapper-sc-w9wbbm-0 bifkuZ flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600"
+                                  class="Badge__Wrapper-sc-w9wbbm-0 fvTsro flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600"
                                   data-testid="Signatures__signed-badge"
                                 >
                                   <div
@@ -2897,7 +2897,7 @@ exports[`MultiSignatureDetail should render summary step for multi signature 1`]
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -2988,7 +2988,7 @@ exports[`MultiSignatureDetail should render summary step for multi signature 1`]
                         class="flex items-center -space-x-1"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -3164,7 +3164,7 @@ exports[`MultiSignatureDetail should render summary step for multi signature 1`]
                               >
                                 <div>
                                   <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                     data-testid="Avatar"
                                   >
                                     <div
@@ -3179,7 +3179,7 @@ exports[`MultiSignatureDetail should render summary step for multi signature 1`]
                                   </div>
                                 </div>
                                 <span
-                                  class="Badge__Wrapper-sc-w9wbbm-0 bifkuZ flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600"
+                                  class="Badge__Wrapper-sc-w9wbbm-0 fvTsro flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600"
                                   data-testid="Signatures__signed-badge"
                                 >
                                   <div
@@ -3211,7 +3211,7 @@ exports[`MultiSignatureDetail should render summary step for multi signature 1`]
                               >
                                 <div>
                                   <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                     data-testid="Avatar"
                                   >
                                     <div
@@ -3226,7 +3226,7 @@ exports[`MultiSignatureDetail should render summary step for multi signature 1`]
                                   </div>
                                 </div>
                                 <span
-                                  class="Badge__Wrapper-sc-w9wbbm-0 bifkuZ flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600"
+                                  class="Badge__Wrapper-sc-w9wbbm-0 fvTsro flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600"
                                   data-testid="Signatures__signed-badge"
                                 >
                                   <div
@@ -3276,7 +3276,7 @@ exports[`MultiSignatureDetail should render summary step for transfer 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -3356,7 +3356,7 @@ exports[`MultiSignatureDetail should render summary step for transfer 1`] = `
                         class="flex items-center -space-x-1"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -3402,7 +3402,7 @@ exports[`MultiSignatureDetail should render summary step for transfer 1`] = `
                         class="flex items-center -space-x-1"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -3624,7 +3624,7 @@ exports[`MultiSignatureDetail should render summary step for transfer 1`] = `
                               >
                                 <div>
                                   <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                     data-testid="Avatar"
                                   >
                                     <div
@@ -3639,7 +3639,7 @@ exports[`MultiSignatureDetail should render summary step for transfer 1`] = `
                                   </div>
                                 </div>
                                 <span
-                                  class="Badge__Wrapper-sc-w9wbbm-0 bifkuZ flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600"
+                                  class="Badge__Wrapper-sc-w9wbbm-0 fvTsro flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600"
                                   data-testid="Signatures__signed-badge"
                                 >
                                   <div
@@ -3671,7 +3671,7 @@ exports[`MultiSignatureDetail should render summary step for transfer 1`] = `
                               >
                                 <div>
                                   <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                     data-testid="Avatar"
                                   >
                                     <div
@@ -3686,7 +3686,7 @@ exports[`MultiSignatureDetail should render summary step for transfer 1`] = `
                                   </div>
                                 </div>
                                 <span
-                                  class="Badge__Wrapper-sc-w9wbbm-0 bifkuZ flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600"
+                                  class="Badge__Wrapper-sc-w9wbbm-0 fvTsro flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600"
                                   data-testid="Signatures__signed-badge"
                                 >
                                   <div
@@ -3736,7 +3736,7 @@ exports[`MultiSignatureDetail should render summary step for unvote 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -3816,7 +3816,7 @@ exports[`MultiSignatureDetail should render summary step for unvote 1`] = `
                         class="flex items-center -space-x-1"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -3853,7 +3853,7 @@ exports[`MultiSignatureDetail should render summary step for unvote 1`] = `
                               class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
                             >
                               <div
-                                class="Avatar__AvatarWrapper-sc-18vw8a4-0 SfPfF flex-shrink-0"
+                                class="Avatar__AvatarWrapper-sc-18vw8a4-0 krsvod flex-shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
@@ -4057,7 +4057,7 @@ exports[`MultiSignatureDetail should render summary step for unvote 1`] = `
                               >
                                 <div>
                                   <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                     data-testid="Avatar"
                                   >
                                     <div
@@ -4072,7 +4072,7 @@ exports[`MultiSignatureDetail should render summary step for unvote 1`] = `
                                   </div>
                                 </div>
                                 <span
-                                  class="Badge__Wrapper-sc-w9wbbm-0 bifkuZ flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600"
+                                  class="Badge__Wrapper-sc-w9wbbm-0 fvTsro flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600"
                                   data-testid="Signatures__signed-badge"
                                 >
                                   <div
@@ -4104,7 +4104,7 @@ exports[`MultiSignatureDetail should render summary step for unvote 1`] = `
                               >
                                 <div>
                                   <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                     data-testid="Avatar"
                                   >
                                     <div
@@ -4119,7 +4119,7 @@ exports[`MultiSignatureDetail should render summary step for unvote 1`] = `
                                   </div>
                                 </div>
                                 <span
-                                  class="Badge__Wrapper-sc-w9wbbm-0 bifkuZ flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600"
+                                  class="Badge__Wrapper-sc-w9wbbm-0 fvTsro flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600"
                                   data-testid="Signatures__signed-badge"
                                 >
                                   <div
@@ -4169,7 +4169,7 @@ exports[`MultiSignatureDetail should render summary step for vote 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -4249,7 +4249,7 @@ exports[`MultiSignatureDetail should render summary step for vote 1`] = `
                         class="flex items-center -space-x-1"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -4286,7 +4286,7 @@ exports[`MultiSignatureDetail should render summary step for vote 1`] = `
                               class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
                             >
                               <div
-                                class="Avatar__AvatarWrapper-sc-18vw8a4-0 SfPfF flex-shrink-0"
+                                class="Avatar__AvatarWrapper-sc-18vw8a4-0 krsvod flex-shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
@@ -4490,7 +4490,7 @@ exports[`MultiSignatureDetail should render summary step for vote 1`] = `
                               >
                                 <div>
                                   <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                     data-testid="Avatar"
                                   >
                                     <div
@@ -4505,7 +4505,7 @@ exports[`MultiSignatureDetail should render summary step for vote 1`] = `
                                   </div>
                                 </div>
                                 <span
-                                  class="Badge__Wrapper-sc-w9wbbm-0 bifkuZ flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600"
+                                  class="Badge__Wrapper-sc-w9wbbm-0 fvTsro flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600"
                                   data-testid="Signatures__signed-badge"
                                 >
                                   <div
@@ -4537,7 +4537,7 @@ exports[`MultiSignatureDetail should render summary step for vote 1`] = `
                               >
                                 <div>
                                   <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                     data-testid="Avatar"
                                   >
                                     <div
@@ -4552,7 +4552,7 @@ exports[`MultiSignatureDetail should render summary step for vote 1`] = `
                                   </div>
                                 </div>
                                 <span
-                                  class="Badge__Wrapper-sc-w9wbbm-0 bifkuZ flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600"
+                                  class="Badge__Wrapper-sc-w9wbbm-0 fvTsro flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600"
                                   data-testid="Signatures__signed-badge"
                                 >
                                   <div
@@ -4602,7 +4602,7 @@ exports[`MultiSignatureDetail should show error screen for Nano S and continue w
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -4688,7 +4688,7 @@ exports[`MultiSignatureDetail should show error screen for Nano S and continue w
                               >
                                 <div>
                                   <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                     data-testid="Avatar"
                                   >
                                     <div
@@ -4703,7 +4703,7 @@ exports[`MultiSignatureDetail should show error screen for Nano S and continue w
                                   </div>
                                 </div>
                                 <span
-                                  class="Badge__Wrapper-sc-w9wbbm-0 bifkuZ flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400"
+                                  class="Badge__Wrapper-sc-w9wbbm-0 fvTsro flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400"
                                   data-testid="Signatures__waiting-badge"
                                 >
                                   <div
@@ -4735,7 +4735,7 @@ exports[`MultiSignatureDetail should show error screen for Nano S and continue w
                               >
                                 <div>
                                   <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                     data-testid="Avatar"
                                   >
                                     <div
@@ -4750,7 +4750,7 @@ exports[`MultiSignatureDetail should show error screen for Nano S and continue w
                                   </div>
                                 </div>
                                 <span
-                                  class="Badge__Wrapper-sc-w9wbbm-0 bifkuZ flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400"
+                                  class="Badge__Wrapper-sc-w9wbbm-0 fvTsro flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400"
                                   data-testid="Signatures__waiting-badge"
                                 >
                                   <div
@@ -4800,7 +4800,7 @@ exports[`MultiSignatureDetail should show send button when able to add final sig
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -4880,7 +4880,7 @@ exports[`MultiSignatureDetail should show send button when able to add final sig
                         class="flex items-center -space-x-1"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -4926,7 +4926,7 @@ exports[`MultiSignatureDetail should show send button when able to add final sig
                         class="flex items-center -space-x-1"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -5148,7 +5148,7 @@ exports[`MultiSignatureDetail should show send button when able to add final sig
                               >
                                 <div>
                                   <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                     data-testid="Avatar"
                                   >
                                     <div
@@ -5163,7 +5163,7 @@ exports[`MultiSignatureDetail should show send button when able to add final sig
                                   </div>
                                 </div>
                                 <span
-                                  class="Badge__Wrapper-sc-w9wbbm-0 bifkuZ flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400"
+                                  class="Badge__Wrapper-sc-w9wbbm-0 fvTsro flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400"
                                   data-testid="Signatures__waiting-badge"
                                 >
                                   <div
@@ -5195,7 +5195,7 @@ exports[`MultiSignatureDetail should show send button when able to add final sig
                               >
                                 <div>
                                   <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                     data-testid="Avatar"
                                   >
                                     <div
@@ -5210,7 +5210,7 @@ exports[`MultiSignatureDetail should show send button when able to add final sig
                                   </div>
                                 </div>
                                 <span
-                                  class="Badge__Wrapper-sc-w9wbbm-0 bifkuZ flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400"
+                                  class="Badge__Wrapper-sc-w9wbbm-0 fvTsro flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400"
                                   data-testid="Signatures__waiting-badge"
                                 >
                                   <div
@@ -5236,7 +5236,7 @@ exports[`MultiSignatureDetail should show send button when able to add final sig
                   class="flex justify-end mt-8 space-x-3"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="Paginator__cancel"
                     type="button"
                   >
@@ -5247,7 +5247,7 @@ exports[`MultiSignatureDetail should show send button when able to add final sig
                     </div>
                   </button>
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
                     data-testid="MultiSignatureDetail__broadcast"
                     type="button"
                   >
@@ -5286,7 +5286,7 @@ exports[`MultiSignatureDetail should show sign button when able to sign 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -5366,7 +5366,7 @@ exports[`MultiSignatureDetail should show sign button when able to sign 1`] = `
                         class="flex items-center -space-x-1"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -5412,7 +5412,7 @@ exports[`MultiSignatureDetail should show sign button when able to sign 1`] = `
                         class="flex items-center -space-x-1"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -5634,7 +5634,7 @@ exports[`MultiSignatureDetail should show sign button when able to sign 1`] = `
                               >
                                 <div>
                                   <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                     data-testid="Avatar"
                                   >
                                     <div
@@ -5649,7 +5649,7 @@ exports[`MultiSignatureDetail should show sign button when able to sign 1`] = `
                                   </div>
                                 </div>
                                 <span
-                                  class="Badge__Wrapper-sc-w9wbbm-0 bifkuZ flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400"
+                                  class="Badge__Wrapper-sc-w9wbbm-0 fvTsro flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400"
                                   data-testid="Signatures__waiting-badge"
                                 >
                                   <div
@@ -5681,7 +5681,7 @@ exports[`MultiSignatureDetail should show sign button when able to sign 1`] = `
                               >
                                 <div>
                                   <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                     data-testid="Avatar"
                                   >
                                     <div
@@ -5696,7 +5696,7 @@ exports[`MultiSignatureDetail should show sign button when able to sign 1`] = `
                                   </div>
                                 </div>
                                 <span
-                                  class="Badge__Wrapper-sc-w9wbbm-0 bifkuZ flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400"
+                                  class="Badge__Wrapper-sc-w9wbbm-0 fvTsro flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400"
                                   data-testid="Signatures__waiting-badge"
                                 >
                                   <div
@@ -5722,7 +5722,7 @@ exports[`MultiSignatureDetail should show sign button when able to sign 1`] = `
                   class="flex justify-end mt-8 space-x-3"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="Paginator__cancel"
                     type="button"
                   >
@@ -5733,7 +5733,7 @@ exports[`MultiSignatureDetail should show sign button when able to sign 1`] = `
                     </div>
                   </button>
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
                     data-testid="Paginator__sign"
                     type="button"
                   >
@@ -5772,7 +5772,7 @@ exports[`MultiSignatureDetail should sign transaction after authentication page 
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -5858,7 +5858,7 @@ exports[`MultiSignatureDetail should sign transaction after authentication page 
                               >
                                 <div>
                                   <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                     data-testid="Avatar"
                                   >
                                     <div
@@ -5873,7 +5873,7 @@ exports[`MultiSignatureDetail should sign transaction after authentication page 
                                   </div>
                                 </div>
                                 <span
-                                  class="Badge__Wrapper-sc-w9wbbm-0 bifkuZ flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400"
+                                  class="Badge__Wrapper-sc-w9wbbm-0 fvTsro flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400"
                                   data-testid="Signatures__waiting-badge"
                                 >
                                   <div
@@ -5905,7 +5905,7 @@ exports[`MultiSignatureDetail should sign transaction after authentication page 
                               >
                                 <div>
                                   <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                     data-testid="Avatar"
                                   >
                                     <div
@@ -5920,7 +5920,7 @@ exports[`MultiSignatureDetail should sign transaction after authentication page 
                                   </div>
                                 </div>
                                 <span
-                                  class="Badge__Wrapper-sc-w9wbbm-0 bifkuZ flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400"
+                                  class="Badge__Wrapper-sc-w9wbbm-0 fvTsro flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400"
                                   data-testid="Signatures__waiting-badge"
                                 >
                                   <div
@@ -5970,7 +5970,7 @@ exports[`MultiSignatureDetail should sign transaction with a ledger wallet 1`] =
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -6056,7 +6056,7 @@ exports[`MultiSignatureDetail should sign transaction with a ledger wallet 1`] =
                               >
                                 <div>
                                   <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                     data-testid="Avatar"
                                   >
                                     <div
@@ -6071,7 +6071,7 @@ exports[`MultiSignatureDetail should sign transaction with a ledger wallet 1`] =
                                   </div>
                                 </div>
                                 <span
-                                  class="Badge__Wrapper-sc-w9wbbm-0 bifkuZ flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400"
+                                  class="Badge__Wrapper-sc-w9wbbm-0 fvTsro flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400"
                                   data-testid="Signatures__waiting-badge"
                                 >
                                   <div
@@ -6103,7 +6103,7 @@ exports[`MultiSignatureDetail should sign transaction with a ledger wallet 1`] =
                               >
                                 <div>
                                   <div
-                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                                     data-testid="Avatar"
                                   >
                                     <div
@@ -6118,7 +6118,7 @@ exports[`MultiSignatureDetail should sign transaction with a ledger wallet 1`] =
                                   </div>
                                 </div>
                                 <span
-                                  class="Badge__Wrapper-sc-w9wbbm-0 bifkuZ flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400"
+                                  class="Badge__Wrapper-sc-w9wbbm-0 fvTsro flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent dark:text-white bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400"
                                   data-testid="Signatures__waiting-badge"
                                 >
                                   <div

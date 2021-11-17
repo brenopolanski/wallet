@@ -55,7 +55,7 @@ exports[`MultiSignature Registration Form should render form step 1`] = `
                       class="relative w-full"
                     >
                       <div
-                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF sr-only"
+                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR sr-only"
                       >
                         <div
                           class="relative flex flex-1 h-full"
@@ -85,7 +85,7 @@ exports[`MultiSignature Registration Form should render form step 1`] = `
                             id="SelectRecipient__dropdown-label"
                           />
                           <div
-                            class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                            class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                           >
                             <div
                               class="flex items-center"
@@ -136,7 +136,7 @@ exports[`MultiSignature Registration Form should render form step 1`] = `
                           </div>
                           <ul
                             aria-labelledby="SelectRecipient__dropdown-label"
-                            class="styles__SelectOptionsList-sc-120rtxy-0 HcHWp"
+                            class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc"
                             id="SelectRecipient__dropdown-menu"
                             role="listbox"
                           />
@@ -147,7 +147,7 @@ exports[`MultiSignature Registration Form should render form step 1`] = `
                 </div>
               </fieldset>
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 dQCpEO my-4 w-full"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 kkDhXe my-4 w-full"
                 disabled=""
                 type="button"
               >
@@ -232,7 +232,7 @@ exports[`MultiSignature Registration Form should render form step 1`] = `
                           class="flex-none py-6"
                         >
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -285,7 +285,7 @@ exports[`MultiSignature Registration Form should render form step 1`] = `
                             class="inline-block"
                           >
                             <button
-                              class="OriginalButton__StyledButton-sc-o0fs2j-0 dQCpEO"
+                              class="OriginalButton__StyledButton-sc-o0fs2j-0 kkDhXe"
                               data-testid="recipient-list__remove-recipient"
                               disabled=""
                               type="button"
@@ -328,7 +328,7 @@ exports[`MultiSignature Registration Form should render form step 1`] = `
               Minimum Required Signatures
             </label>
             <div
-              class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+              class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
             >
               <div
                 class="relative flex flex-1 h-full"
@@ -551,7 +551,7 @@ exports[`MultiSignature Registration Form should render review step 1`] = `
             class="flex items-center -space-x-1"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -636,7 +636,7 @@ exports[`MultiSignature Registration Form should render review step 1`] = `
                       >
                         <td>
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 SfPfF flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 krsvod flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -671,7 +671,7 @@ exports[`MultiSignature Registration Form should render review step 1`] = `
                       >
                         <td>
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 SfPfF flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 krsvod flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div

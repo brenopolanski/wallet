@@ -130,7 +130,7 @@ exports[`ExchangeTransactionsRow should render (Expired) 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end text-theme-secondary-text"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 dhaLpP"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 fxPCrX"
               data-testid="TableRemoveButton"
               type="button"
             >
@@ -286,7 +286,7 @@ exports[`ExchangeTransactionsRow should render (Failed) 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end text-theme-secondary-text"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 dhaLpP"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 fxPCrX"
               data-testid="TableRemoveButton"
               type="button"
             >
@@ -442,7 +442,7 @@ exports[`ExchangeTransactionsRow should render (Finished) 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end text-theme-secondary-text"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 dhaLpP"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 fxPCrX"
               data-testid="TableRemoveButton"
               type="button"
             >
@@ -612,7 +612,7 @@ exports[`ExchangeTransactionsRow should render (New) 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end text-theme-secondary-text"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 dhaLpP"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 fxPCrX"
               data-testid="TableRemoveButton"
               type="button"
             >
@@ -768,7 +768,7 @@ exports[`ExchangeTransactionsRow should render (Refunded) 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end text-theme-secondary-text"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 dhaLpP"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 fxPCrX"
               data-testid="TableRemoveButton"
               type="button"
             >
@@ -924,7 +924,7 @@ exports[`ExchangeTransactionsRow should render (Verifying) 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end text-theme-secondary-text"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 dhaLpP"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 fxPCrX"
               data-testid="TableRemoveButton"
               type="button"
             >
@@ -1080,7 +1080,7 @@ exports[`ExchangeTransactionsRow should render compact 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end text-theme-secondary-text"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB text-theme-danger-400 hover:text-theme-danger-500"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF text-theme-danger-400 hover:text-theme-danger-500"
               data-testid="TableRemoveButton"
               type="button"
             >

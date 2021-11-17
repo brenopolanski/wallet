@@ -46,7 +46,7 @@ exports[`DelegateRow should emit action on select button 1`] = `
               to=""
             >
               <span
-                class="Link__Content-sc-ec014t-1 jGLnf"
+                class="Link__Content-sc-ec014t-1 fPOlTq"
               >
                 <div
                   class="sc-bdvvtL fCrhkg"
@@ -71,7 +71,7 @@ exports[`DelegateRow should emit action on select button 1`] = `
               class="-mr-0.5"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                 data-testid="DelegateRow__toggle-0"
                 type="button"
               >
@@ -136,7 +136,7 @@ exports[`DelegateRow should render 1`] = `
               to=""
             >
               <span
-                class="Link__Content-sc-ec014t-1 jGLnf"
+                class="Link__Content-sc-ec014t-1 fPOlTq"
               >
                 <div
                   class="sc-bdvvtL fCrhkg"
@@ -161,7 +161,7 @@ exports[`DelegateRow should render 1`] = `
               class="-mr-0.5"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                 data-testid="DelegateRow__toggle-0"
                 type="button"
               >
@@ -226,7 +226,7 @@ exports[`DelegateRow should render changed style when network requires vote amou
               to=""
             >
               <span
-                class="Link__Content-sc-ec014t-1 jGLnf"
+                class="Link__Content-sc-ec014t-1 fPOlTq"
               >
                 <div
                   class="sc-bdvvtL fCrhkg"
@@ -255,7 +255,7 @@ exports[`DelegateRow should render changed style when network requires vote amou
                 class="relative"
               >
                 <div
-                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 dpFHlv"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 fJIMQr"
                 >
                   <div
                     class="relative flex flex-1 h-full"
@@ -295,7 +295,7 @@ exports[`DelegateRow should render changed style when network requires vote amou
               class="-mr-0.5"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 fWTkCA"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 iccqMs"
                 data-testid="DelegateRow__toggle-0"
                 type="button"
               >
@@ -360,7 +360,7 @@ exports[`DelegateRow should render the selected delegate 1`] = `
               to=""
             >
               <span
-                class="Link__Content-sc-ec014t-1 jGLnf"
+                class="Link__Content-sc-ec014t-1 fPOlTq"
               >
                 <div
                   class="sc-bdvvtL fCrhkg"
@@ -385,7 +385,7 @@ exports[`DelegateRow should render the selected delegate 1`] = `
               class="-mr-0.5"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 cGXmVu"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 IWDiW"
                 data-testid="DelegateRow__toggle-0"
                 type="button"
               >
@@ -450,7 +450,7 @@ exports[`DelegateRow should render the selected vote 1`] = `
               to=""
             >
               <span
-                class="Link__Content-sc-ec014t-1 jGLnf"
+                class="Link__Content-sc-ec014t-1 fPOlTq"
               >
                 <div
                   class="sc-bdvvtL fCrhkg"
@@ -475,7 +475,7 @@ exports[`DelegateRow should render the selected vote 1`] = `
               class="-mr-0.5"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
                 data-testid="DelegateRow__toggle-0"
                 type="button"
               >
@@ -531,7 +531,7 @@ exports[`DelegateRow should render the selected vote 1`] = `
               to=""
             >
               <span
-                class="Link__Content-sc-ec014t-1 jGLnf"
+                class="Link__Content-sc-ec014t-1 fPOlTq"
               >
                 <div
                   class="sc-bdvvtL fCrhkg"
@@ -556,7 +556,7 @@ exports[`DelegateRow should render the selected vote 1`] = `
               class="-mr-0.5"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
                 data-testid="DelegateRow__toggle-1"
                 type="button"
               >
@@ -612,7 +612,7 @@ exports[`DelegateRow should render the selected vote 1`] = `
               to=""
             >
               <span
-                class="Link__Content-sc-ec014t-1 jGLnf"
+                class="Link__Content-sc-ec014t-1 fPOlTq"
               >
                 <div
                   class="sc-bdvvtL fCrhkg"
@@ -638,7 +638,7 @@ exports[`DelegateRow should render the selected vote 1`] = `
             >
               <span>
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nnGbn -mr-3 text-black"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 lcpndT -mr-3 text-black"
                   data-testid="DelegateRow__toggle-2"
                   disabled=""
                   type="button"
@@ -705,7 +705,7 @@ exports[`DelegateRow should render the selected vote 2`] = `
               to=""
             >
               <span
-                class="Link__Content-sc-ec014t-1 jGLnf"
+                class="Link__Content-sc-ec014t-1 fPOlTq"
               >
                 <div
                   class="sc-bdvvtL fCrhkg"
@@ -730,7 +730,7 @@ exports[`DelegateRow should render the selected vote 2`] = `
               class="-mr-0.5"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
                 data-testid="DelegateRow__toggle-0"
                 type="button"
               >
@@ -786,7 +786,7 @@ exports[`DelegateRow should render the selected vote 2`] = `
               to=""
             >
               <span
-                class="Link__Content-sc-ec014t-1 jGLnf"
+                class="Link__Content-sc-ec014t-1 fPOlTq"
               >
                 <div
                   class="sc-bdvvtL fCrhkg"
@@ -811,7 +811,7 @@ exports[`DelegateRow should render the selected vote 2`] = `
               class="-mr-0.5"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                 data-testid="DelegateRow__toggle-1"
                 type="button"
               >
@@ -867,7 +867,7 @@ exports[`DelegateRow should render the selected vote 2`] = `
               to=""
             >
               <span
-                class="Link__Content-sc-ec014t-1 jGLnf"
+                class="Link__Content-sc-ec014t-1 fPOlTq"
               >
                 <div
                   class="sc-bdvvtL fCrhkg"
@@ -893,7 +893,7 @@ exports[`DelegateRow should render the selected vote 2`] = `
             >
               <span>
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 dQCpEO"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 kkDhXe"
                   data-testid="DelegateRow__toggle-2"
                   disabled=""
                   type="button"
@@ -960,7 +960,7 @@ exports[`DelegateRow should render the unselected vote 1`] = `
               to=""
             >
               <span
-                class="Link__Content-sc-ec014t-1 jGLnf"
+                class="Link__Content-sc-ec014t-1 fPOlTq"
               >
                 <div
                   class="sc-bdvvtL fCrhkg"
@@ -985,7 +985,7 @@ exports[`DelegateRow should render the unselected vote 1`] = `
               class="-mr-0.5"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 dhaLpP"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 fxPCrX"
                 data-testid="DelegateRow__toggle-0"
                 type="button"
               >
@@ -1050,7 +1050,7 @@ exports[`DelegateRow should render when network requires vote amount 1`] = `
               to=""
             >
               <span
-                class="Link__Content-sc-ec014t-1 jGLnf"
+                class="Link__Content-sc-ec014t-1 fPOlTq"
               >
                 <div
                   class="sc-bdvvtL fCrhkg"
@@ -1121,7 +1121,7 @@ exports[`DelegateRow should render when network requires vote amount 1`] = `
               class="-mr-0.5"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                 data-testid="DelegateRow__toggle-0"
                 type="button"
               >

@@ -86,7 +86,7 @@ exports[`TransactionRecipients should render a recipients array 1`] = `
                 >
                   <td>
                     <div
-                      class="Avatar__AvatarWrapper-sc-18vw8a4-0 SfPfF flex-shrink-0"
+                      class="Avatar__AvatarWrapper-sc-18vw8a4-0 krsvod flex-shrink-0"
                       data-testid="Avatar"
                     >
                       <div
@@ -131,7 +131,7 @@ exports[`TransactionRecipients should render a recipients array 1`] = `
                 >
                   <td>
                     <div
-                      class="Avatar__AvatarWrapper-sc-18vw8a4-0 SfPfF flex-shrink-0"
+                      class="Avatar__AvatarWrapper-sc-18vw8a4-0 krsvod flex-shrink-0"
                       data-testid="Avatar"
                     >
                       <div
@@ -213,7 +213,7 @@ exports[`TransactionRecipients should render a single recipient 1`] = `
       class="flex items-center -space-x-1"
     >
       <div
-        class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+        class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
         data-testid="Avatar"
       >
         <div
@@ -275,7 +275,7 @@ exports[`TransactionRecipients should render a single recipient with alias 1`] =
       class="flex items-center -space-x-1"
     >
       <div
-        class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+        class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
         data-testid="Avatar"
       >
         <div
@@ -339,7 +339,7 @@ exports[`TransactionRecipients should render the delegate icon if isDelegate 1`]
         </div>
       </div>
       <div
-        class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+        class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
         data-testid="Avatar"
       >
         <div

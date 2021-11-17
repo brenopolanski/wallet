@@ -13,7 +13,7 @@ exports[`Page should render with sidebar = false 1`] = `
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -115,7 +115,7 @@ exports[`Page should render with sidebar = false 1`] = `
                     class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -154,7 +154,7 @@ exports[`Page should render with sidebar = false 1`] = `
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -184,7 +184,7 @@ exports[`Page should render with sidebar = false 1`] = `
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -243,7 +243,7 @@ exports[`Page should render with sidebar = false 1`] = `
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -287,7 +287,7 @@ exports[`Page should render with sidebar = true 1`] = `
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -389,7 +389,7 @@ exports[`Page should render with sidebar = true 1`] = `
                     class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -428,7 +428,7 @@ exports[`Page should render with sidebar = true 1`] = `
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -458,7 +458,7 @@ exports[`Page should render with sidebar = true 1`] = `
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -517,7 +517,7 @@ exports[`Page should render with sidebar = true 1`] = `
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div

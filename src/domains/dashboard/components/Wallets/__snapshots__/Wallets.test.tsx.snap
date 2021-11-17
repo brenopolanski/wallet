@@ -34,7 +34,7 @@ exports[`Wallets should load more wallets 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus active"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus active"
                       data-testid="LayoutControls__list--icon"
                     >
                       <div
@@ -56,7 +56,7 @@ exports[`Wallets should load more wallets 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus"
                       data-testid="LayoutControls__grid--icon"
                     >
                       <div
@@ -87,7 +87,7 @@ exports[`Wallets should load more wallets 1`] = `
                       class="group"
                     >
                       <button
-                        class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus"
+                        class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus"
                       >
                         <div
                           class="flex justify-center items-center w-5 h-5"
@@ -112,7 +112,7 @@ exports[`Wallets should load more wallets 1`] = `
               class="flex space-x-3"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                 data-testid="WalletControls__import-ledger"
                 type="button"
               >
@@ -138,7 +138,7 @@ exports[`Wallets should load more wallets 1`] = `
                 </div>
               </button>
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                 data-testid="WalletControls__import-wallet"
                 type="button"
               >
@@ -164,7 +164,7 @@ exports[`Wallets should load more wallets 1`] = `
                 </div>
               </button>
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
                 data-testid="WalletControls__create-wallet"
                 type="button"
               >
@@ -723,7 +723,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus active"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus active"
                       data-testid="LayoutControls__list--icon"
                     >
                       <div
@@ -745,7 +745,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus"
                       data-testid="LayoutControls__grid--icon"
                     >
                       <div
@@ -776,7 +776,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                       class="group"
                     >
                       <button
-                        class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus"
+                        class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus"
                       >
                         <div
                           class="flex justify-center items-center w-5 h-5"
@@ -801,7 +801,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
               class="flex space-x-3"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                 data-testid="WalletControls__import-ledger"
                 type="button"
               >
@@ -827,7 +827,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                 </div>
               </button>
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                 data-testid="WalletControls__import-wallet"
                 type="button"
               >
@@ -853,7 +853,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                 </div>
               </button>
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
                 data-testid="WalletControls__create-wallet"
                 type="button"
               >
@@ -1389,7 +1389,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
               class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB w-11 h-11"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 h-11"
                 data-testid="modal__close-btn"
                 type="button"
               >
@@ -1501,7 +1501,7 @@ exports[`Wallets should render empty profile wallets 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus active"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus active"
                       data-testid="LayoutControls__list--icon"
                     >
                       <div
@@ -1523,7 +1523,7 @@ exports[`Wallets should render empty profile wallets 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus"
                       data-testid="LayoutControls__grid--icon"
                     >
                       <div
@@ -1554,7 +1554,7 @@ exports[`Wallets should render empty profile wallets 1`] = `
                       class="group"
                     >
                       <button
-                        class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 egViOA ring-focus"
+                        class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 dVIwyh ring-focus"
                         disabled=""
                       >
                         <div
@@ -1580,7 +1580,7 @@ exports[`Wallets should render empty profile wallets 1`] = `
               class="flex space-x-3"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                 data-testid="WalletControls__import-ledger"
                 type="button"
               >
@@ -1606,7 +1606,7 @@ exports[`Wallets should render empty profile wallets 1`] = `
                 </div>
               </button>
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                 data-testid="WalletControls__import-wallet"
                 type="button"
               >
@@ -1632,7 +1632,7 @@ exports[`Wallets should render empty profile wallets 1`] = `
                 </div>
               </button>
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
                 data-testid="WalletControls__create-wallet"
                 type="button"
               >
@@ -1712,7 +1712,7 @@ exports[`Wallets should render grid 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus"
                       data-testid="LayoutControls__list--icon"
                     >
                       <div
@@ -1734,7 +1734,7 @@ exports[`Wallets should render grid 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus active"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus active"
                       data-testid="LayoutControls__grid--icon"
                     >
                       <div
@@ -1765,7 +1765,7 @@ exports[`Wallets should render grid 1`] = `
                       class="group"
                     >
                       <button
-                        class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus"
+                        class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus"
                       >
                         <div
                           class="flex justify-center items-center w-5 h-5"
@@ -1790,7 +1790,7 @@ exports[`Wallets should render grid 1`] = `
               class="flex space-x-3"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                 data-testid="WalletControls__import-ledger"
                 type="button"
               >
@@ -1816,7 +1816,7 @@ exports[`Wallets should render grid 1`] = `
                 </div>
               </button>
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                 data-testid="WalletControls__import-wallet"
                 type="button"
               >
@@ -1842,7 +1842,7 @@ exports[`Wallets should render grid 1`] = `
                 </div>
               </button>
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
                 data-testid="WalletControls__create-wallet"
                 type="button"
               >
@@ -1928,7 +1928,7 @@ exports[`Wallets should render grid 1`] = `
                               </div>
                             </div>
                             <div
-                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                               data-testid="Avatar"
                             >
                               <div
@@ -2045,7 +2045,7 @@ exports[`Wallets should render grid 1`] = `
                               </div>
                             </div>
                             <div
-                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                               data-testid="Avatar"
                             >
                               <div
@@ -2176,7 +2176,7 @@ exports[`Wallets should render grid 1`] = `
                               </div>
                             </div>
                             <div
-                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                               data-testid="Avatar"
                             >
                               <div
@@ -2294,7 +2294,7 @@ exports[`Wallets should render grid in loading state 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus"
                       data-testid="LayoutControls__list--icon"
                     >
                       <div
@@ -2316,7 +2316,7 @@ exports[`Wallets should render grid in loading state 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus active"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus active"
                       data-testid="LayoutControls__grid--icon"
                     >
                       <div
@@ -2347,7 +2347,7 @@ exports[`Wallets should render grid in loading state 1`] = `
                       class="group"
                     >
                       <button
-                        class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus"
+                        class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus"
                       >
                         <div
                           class="flex justify-center items-center w-5 h-5"
@@ -2372,7 +2372,7 @@ exports[`Wallets should render grid in loading state 1`] = `
               class="flex space-x-3"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                 data-testid="WalletControls__import-ledger"
                 type="button"
               >
@@ -2398,7 +2398,7 @@ exports[`Wallets should render grid in loading state 1`] = `
                 </div>
               </button>
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                 data-testid="WalletControls__import-wallet"
                 type="button"
               >
@@ -2424,7 +2424,7 @@ exports[`Wallets should render grid in loading state 1`] = `
                 </div>
               </button>
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
                 data-testid="WalletControls__create-wallet"
                 type="button"
               >
@@ -2510,7 +2510,7 @@ exports[`Wallets should render grid in loading state 1`] = `
                               </div>
                             </div>
                             <div
-                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                               data-testid="Avatar"
                             >
                               <div
@@ -2627,7 +2627,7 @@ exports[`Wallets should render grid in loading state 1`] = `
                               </div>
                             </div>
                             <div
-                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                               data-testid="Avatar"
                             >
                               <div
@@ -2758,7 +2758,7 @@ exports[`Wallets should render grid in loading state 1`] = `
                               </div>
                             </div>
                             <div
-                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                               data-testid="Avatar"
                             >
                               <div
@@ -2876,7 +2876,7 @@ exports[`Wallets should render list 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus active"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus active"
                       data-testid="LayoutControls__list--icon"
                     >
                       <div
@@ -2898,7 +2898,7 @@ exports[`Wallets should render list 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus"
                       data-testid="LayoutControls__grid--icon"
                     >
                       <div
@@ -2929,7 +2929,7 @@ exports[`Wallets should render list 1`] = `
                       class="group"
                     >
                       <button
-                        class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus"
+                        class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus"
                       >
                         <div
                           class="flex justify-center items-center w-5 h-5"
@@ -2954,7 +2954,7 @@ exports[`Wallets should render list 1`] = `
               class="flex space-x-3"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                 data-testid="WalletControls__import-ledger"
                 type="button"
               >
@@ -2980,7 +2980,7 @@ exports[`Wallets should render list 1`] = `
                 </div>
               </button>
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                 data-testid="WalletControls__import-wallet"
                 type="button"
               >
@@ -3006,7 +3006,7 @@ exports[`Wallets should render list 1`] = `
                 </div>
               </button>
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
                 data-testid="WalletControls__create-wallet"
                 type="button"
               >
@@ -3565,7 +3565,7 @@ exports[`Wallets should render without testnet wallets 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus"
                       data-testid="LayoutControls__list--icon"
                     >
                       <div
@@ -3587,7 +3587,7 @@ exports[`Wallets should render without testnet wallets 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus active"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus active"
                       data-testid="LayoutControls__grid--icon"
                     >
                       <div
@@ -3618,7 +3618,7 @@ exports[`Wallets should render without testnet wallets 1`] = `
                       class="group"
                     >
                       <button
-                        class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus"
+                        class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus"
                       >
                         <div
                           class="flex justify-center items-center w-5 h-5"
@@ -3643,7 +3643,7 @@ exports[`Wallets should render without testnet wallets 1`] = `
               class="flex space-x-3"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                 data-testid="WalletControls__import-ledger"
                 type="button"
               >
@@ -3669,7 +3669,7 @@ exports[`Wallets should render without testnet wallets 1`] = `
                 </div>
               </button>
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                 data-testid="WalletControls__import-wallet"
                 type="button"
               >
@@ -3695,7 +3695,7 @@ exports[`Wallets should render without testnet wallets 1`] = `
                 </div>
               </button>
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
                 data-testid="WalletControls__create-wallet"
                 type="button"
               >
@@ -3781,7 +3781,7 @@ exports[`Wallets should render without testnet wallets 1`] = `
                               </div>
                             </div>
                             <div
-                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                               data-testid="Avatar"
                             >
                               <div
@@ -3995,7 +3995,7 @@ exports[`Wallets should toggle between grid and list view 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus"
                       data-testid="LayoutControls__list--icon"
                     >
                       <div
@@ -4017,7 +4017,7 @@ exports[`Wallets should toggle between grid and list view 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus active"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus active"
                       data-testid="LayoutControls__grid--icon"
                     >
                       <div
@@ -4048,7 +4048,7 @@ exports[`Wallets should toggle between grid and list view 1`] = `
                       class="group"
                     >
                       <button
-                        class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus"
+                        class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus"
                       >
                         <div
                           class="flex justify-center items-center w-5 h-5"
@@ -4073,7 +4073,7 @@ exports[`Wallets should toggle between grid and list view 1`] = `
               class="flex space-x-3"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                 data-testid="WalletControls__import-ledger"
                 type="button"
               >
@@ -4099,7 +4099,7 @@ exports[`Wallets should toggle between grid and list view 1`] = `
                 </div>
               </button>
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                 data-testid="WalletControls__import-wallet"
                 type="button"
               >
@@ -4125,7 +4125,7 @@ exports[`Wallets should toggle between grid and list view 1`] = `
                 </div>
               </button>
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
                 data-testid="WalletControls__create-wallet"
                 type="button"
               >
@@ -4211,7 +4211,7 @@ exports[`Wallets should toggle between grid and list view 1`] = `
                               </div>
                             </div>
                             <div
-                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                               data-testid="Avatar"
                             >
                               <div
@@ -4328,7 +4328,7 @@ exports[`Wallets should toggle between grid and list view 1`] = `
                               </div>
                             </div>
                             <div
-                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                               data-testid="Avatar"
                             >
                               <div
@@ -4459,7 +4459,7 @@ exports[`Wallets should toggle between grid and list view 1`] = `
                               </div>
                             </div>
                             <div
-                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                               data-testid="Avatar"
                             >
                               <div

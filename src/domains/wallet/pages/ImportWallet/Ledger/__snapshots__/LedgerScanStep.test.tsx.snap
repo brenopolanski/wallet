@@ -199,7 +199,7 @@ exports[`LedgerScanStep should render 1`] = `
               >
                 <div>
                   <input
-                    class="Checkbox-sc-1aq7nos-0 dZJFYi"
+                    class="Checkbox-sc-1aq7nos-0 gdmzcT"
                     color="success"
                     data-testid="LedgerScanStep__select-all"
                     type="checkbox"
@@ -277,7 +277,7 @@ exports[`LedgerScanStep should render 1`] = `
               >
                 <input
                   checked=""
-                  class="Checkbox-sc-1aq7nos-0 dZJFYi"
+                  class="Checkbox-sc-1aq7nos-0 gdmzcT"
                   color="success"
                   type="checkbox"
                 />

@@ -3,7 +3,7 @@
 exports[`Checkbox should render 1`] = `
 <div>
   <input
-    class="Checkbox-sc-1aq7nos-0 dZJFYi"
+    class="Checkbox-sc-1aq7nos-0 gdmzcT"
     color="success"
     type="checkbox"
   />
@@ -13,7 +13,7 @@ exports[`Checkbox should render 1`] = `
 exports[`Checkbox should render a danger color 1`] = `
 <div>
   <input
-    class="Checkbox-sc-1aq7nos-0 eqXRWC"
+    class="Checkbox-sc-1aq7nos-0 cylBQr"
     color="danger"
     type="checkbox"
   />
@@ -23,7 +23,7 @@ exports[`Checkbox should render a danger color 1`] = `
 exports[`Checkbox should render a hint color 1`] = `
 <div>
   <input
-    class="Checkbox-sc-1aq7nos-0 efbiRq"
+    class="Checkbox-sc-1aq7nos-0 kFDUdn"
     color="hint"
     type="checkbox"
   />
@@ -33,7 +33,7 @@ exports[`Checkbox should render a hint color 1`] = `
 exports[`Checkbox should render a info color 1`] = `
 <div>
   <input
-    class="Checkbox-sc-1aq7nos-0 bRodpq"
+    class="Checkbox-sc-1aq7nos-0 dLNkkH"
     color="info"
     type="checkbox"
   />
@@ -43,7 +43,7 @@ exports[`Checkbox should render a info color 1`] = `
 exports[`Checkbox should render a success color 1`] = `
 <div>
   <input
-    class="Checkbox-sc-1aq7nos-0 dZJFYi"
+    class="Checkbox-sc-1aq7nos-0 gdmzcT"
     color="success"
     type="checkbox"
   />
@@ -53,7 +53,7 @@ exports[`Checkbox should render a success color 1`] = `
 exports[`Checkbox should render a warning color 1`] = `
 <div>
   <input
-    class="Checkbox-sc-1aq7nos-0 cDvqnO"
+    class="Checkbox-sc-1aq7nos-0 jinoTf"
     color="warning"
     type="checkbox"
   />

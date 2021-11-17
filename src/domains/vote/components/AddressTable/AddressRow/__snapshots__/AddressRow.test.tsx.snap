@@ -156,7 +156,7 @@ exports[`AddressRow should emit action on select button 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
               data-testid="AddressRow__select-0"
               type="button"
             >
@@ -344,7 +344,7 @@ exports[`AddressRow should render for a multisignature wallet 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
               data-testid="AddressRow__select-0"
               type="button"
             >
@@ -518,7 +518,7 @@ exports[`AddressRow should render when isCompact = false 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
               data-testid="AddressRow__select-0"
               type="button"
             >
@@ -692,7 +692,7 @@ exports[`AddressRow should render when isCompact = true 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB text-theme-primary-600 hover:text-theme-primary-700 -mr-3"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF text-theme-primary-600 hover:text-theme-primary-700 -mr-3"
               data-testid="AddressRow__select-0"
               type="button"
             >
@@ -866,7 +866,7 @@ exports[`AddressRow should render when wallet hasn't voted 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
               data-testid="AddressRow__select-0"
               type="button"
             >
@@ -974,7 +974,7 @@ exports[`AddressRow should render when wallet hasn't voted 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
               data-testid="AddressRow__select-1"
               type="button"
             >
@@ -1148,7 +1148,7 @@ exports[`AddressRow should render when wallet not found for votes 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
               data-testid="AddressRow__select-0"
               type="button"
             >
@@ -1245,7 +1245,7 @@ exports[`AddressRow should render when wallet not found for votes 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 dQCpEO"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 kkDhXe"
               data-testid="AddressRow__select-1"
               disabled=""
               type="button"
@@ -1418,7 +1418,7 @@ exports[`AddressRow should render with active delegate 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
               data-testid="AddressRow__select-0"
               type="button"
             >
@@ -1546,7 +1546,7 @@ exports[`AddressRow should render with isCompact = false when the maximum votes 
                 class="flex"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -1564,7 +1564,7 @@ exports[`AddressRow should render with isCompact = false when the maximum votes 
                 class="flex"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -1582,7 +1582,7 @@ exports[`AddressRow should render with isCompact = false when the maximum votes 
                 class="flex"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -1600,7 +1600,7 @@ exports[`AddressRow should render with isCompact = false when the maximum votes 
                 class="flex"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -1640,7 +1640,7 @@ exports[`AddressRow should render with isCompact = false when the maximum votes 
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
               data-testid="AddressRow__select-0"
               type="button"
             >
@@ -1768,7 +1768,7 @@ exports[`AddressRow should render with isCompact = false when the wallet has man
                 class="flex"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -1786,7 +1786,7 @@ exports[`AddressRow should render with isCompact = false when the wallet has man
                 class="flex"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -1804,7 +1804,7 @@ exports[`AddressRow should render with isCompact = false when the wallet has man
                 class="flex"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -1853,7 +1853,7 @@ exports[`AddressRow should render with isCompact = false when the wallet has man
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
               data-testid="AddressRow__select-0"
               type="button"
             >
@@ -2075,7 +2075,7 @@ exports[`AddressRow should render with isCompact = true when the maximum votes i
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB text-theme-primary-600 hover:text-theme-primary-700 -mr-3"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF text-theme-primary-600 hover:text-theme-primary-700 -mr-3"
               data-testid="AddressRow__select-0"
               type="button"
             >
@@ -2288,7 +2288,7 @@ exports[`AddressRow should render with isCompact = true when the wallet has many
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB text-theme-primary-600 hover:text-theme-primary-700 -mr-3"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF text-theme-primary-600 hover:text-theme-primary-700 -mr-3"
               data-testid="AddressRow__select-0"
               type="button"
             >
@@ -2462,7 +2462,7 @@ exports[`AddressRow should render with resigned delegate 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
               data-testid="AddressRow__select-0"
               type="button"
             >
@@ -2634,7 +2634,7 @@ exports[`AddressRow should render with standby delegate 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
               data-testid="AddressRow__select-0"
               type="button"
             >

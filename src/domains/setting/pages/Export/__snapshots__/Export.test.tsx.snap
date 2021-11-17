@@ -13,7 +13,7 @@ exports[`Export Settings should render export settings 1`] = `
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -109,7 +109,7 @@ exports[`Export Settings should render export settings 1`] = `
                     class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -148,7 +148,7 @@ exports[`Export Settings should render export settings 1`] = `
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -178,7 +178,7 @@ exports[`Export Settings should render export settings 1`] = `
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -237,7 +237,7 @@ exports[`Export Settings should render export settings 1`] = `
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -468,7 +468,7 @@ exports[`Export Settings should render export settings 1`] = `
                                   class="Toggle__Handle-sc-6s3wfu-2 cobHFC"
                                 >
                                   <span
-                                    class="Toggle__HandleInner-sc-6s3wfu-3 klclKD"
+                                    class="Toggle__HandleInner-sc-6s3wfu-3 ddepvC"
                                   />
                                 </div>
                               </label>
@@ -517,7 +517,7 @@ exports[`Export Settings should render export settings 1`] = `
                                   class="Toggle__Handle-sc-6s3wfu-2 cobHFC"
                                 >
                                   <span
-                                    class="Toggle__HandleInner-sc-6s3wfu-3 klclKD"
+                                    class="Toggle__HandleInner-sc-6s3wfu-3 ddepvC"
                                   />
                                 </div>
                               </label>
@@ -537,7 +537,7 @@ exports[`Export Settings should render export settings 1`] = `
                     class="flex justify-end mt-8 space-x-3 w-full"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
                       data-testid="Export-settings__submit-button"
                       type="submit"
                     >

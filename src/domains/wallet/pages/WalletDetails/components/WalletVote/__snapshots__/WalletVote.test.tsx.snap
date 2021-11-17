@@ -91,7 +91,7 @@ exports[`WalletVote multi vote networks should render a vote for multiple active
       </div>
     </div>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc space-x-2"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk space-x-2"
       data-testid="WalletVote__button"
       type="button"
     >
@@ -207,7 +207,7 @@ exports[`WalletVote multi vote networks should render a vote for multiple active
       </div>
     </div>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc space-x-2"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk space-x-2"
       data-testid="WalletVote__button"
       type="button"
     >
@@ -305,7 +305,7 @@ exports[`WalletVote multi vote networks should render a vote for multiple active
       </div>
     </div>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc space-x-2"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk space-x-2"
       data-testid="WalletVote__button"
       type="button"
     >
@@ -426,7 +426,7 @@ exports[`WalletVote multi vote networks should render a vote for multiple active
       </div>
     </div>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc space-x-2"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk space-x-2"
       data-testid="WalletVote__button"
       type="button"
     >
@@ -546,7 +546,7 @@ exports[`WalletVote multi vote networks should render a vote for multiple standb
       </div>
     </div>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc space-x-2"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk space-x-2"
       data-testid="WalletVote__button"
       type="button"
     >
@@ -657,7 +657,7 @@ exports[`WalletVote multi vote networks should render a vote for multiple standb
       </div>
     </div>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc space-x-2"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk space-x-2"
       data-testid="WalletVote__button"
       type="button"
     >
@@ -791,7 +791,7 @@ exports[`WalletVote should disable vote button when balance is less than votesAm
       </div>
     </div>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 dQCpEO space-x-2"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 kkDhXe space-x-2"
       data-testid="WalletVote__button"
       disabled=""
       type="button"
@@ -869,7 +869,7 @@ exports[`WalletVote should handle delegate sync error 1`] = `
             to="https://ark.dev/docs/desktop-wallet/user-guides/how-to-vote-unvote"
           >
             <span
-              class="Link__Content-sc-ec014t-1 jGLnf"
+              class="Link__Content-sc-ec014t-1 fPOlTq"
             >
               <span
                 class="text-sm"
@@ -892,7 +892,7 @@ exports[`WalletVote should handle delegate sync error 1`] = `
       </div>
     </div>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc space-x-2"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk space-x-2"
       data-testid="WalletVote__button"
       type="button"
     >
@@ -969,7 +969,7 @@ exports[`WalletVote should handle wallet votes error 1`] = `
             to="https://ark.dev/docs/desktop-wallet/user-guides/how-to-vote-unvote"
           >
             <span
-              class="Link__Content-sc-ec014t-1 jGLnf"
+              class="Link__Content-sc-ec014t-1 fPOlTq"
             >
               <span
                 class="text-sm"
@@ -992,7 +992,7 @@ exports[`WalletVote should handle wallet votes error 1`] = `
       </div>
     </div>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc space-x-2"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk space-x-2"
       data-testid="WalletVote__button"
       type="button"
     >
@@ -1096,7 +1096,7 @@ exports[`WalletVote should render 1`] = `
       </div>
     </div>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc space-x-2"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk space-x-2"
       data-testid="WalletVote__button"
       type="button"
     >
@@ -1202,7 +1202,7 @@ exports[`WalletVote should render as all resigned 1`] = `
       </div>
     </div>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc space-x-2"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk space-x-2"
       data-testid="WalletVote__button"
       type="button"
     >
@@ -1306,7 +1306,7 @@ exports[`WalletVote should render disabled vote button 1`] = `
       </div>
     </div>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 dQCpEO space-x-2"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 kkDhXe space-x-2"
       data-testid="WalletVote__button"
       disabled=""
       type="button"
@@ -1384,7 +1384,7 @@ exports[`WalletVote should render the maximum votes 1`] = `
             to="https://ark.dev/docs/desktop-wallet/user-guides/how-to-vote-unvote"
           >
             <span
-              class="Link__Content-sc-ec014t-1 jGLnf"
+              class="Link__Content-sc-ec014t-1 fPOlTq"
             >
               <span
                 class="text-sm"
@@ -1407,7 +1407,7 @@ exports[`WalletVote should render the maximum votes 1`] = `
       </div>
     </div>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc space-x-2"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk space-x-2"
       data-testid="WalletVote__button"
       type="button"
     >
@@ -1484,7 +1484,7 @@ exports[`WalletVote should render without votes 1`] = `
             to="https://ark.dev/docs/desktop-wallet/user-guides/how-to-vote-unvote"
           >
             <span
-              class="Link__Content-sc-ec014t-1 jGLnf"
+              class="Link__Content-sc-ec014t-1 fPOlTq"
             >
               <span
                 class="text-sm"
@@ -1507,7 +1507,7 @@ exports[`WalletVote should render without votes 1`] = `
       </div>
     </div>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc space-x-2"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk space-x-2"
       data-testid="WalletVote__button"
       type="button"
     >
@@ -1611,7 +1611,7 @@ exports[`WalletVote single vote networks should render a vote for a delegate wit
       </div>
     </div>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc space-x-2"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk space-x-2"
       data-testid="WalletVote__button"
       type="button"
     >
@@ -1715,7 +1715,7 @@ exports[`WalletVote single vote networks should render a vote for a standby dele
       </div>
     </div>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc space-x-2"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk space-x-2"
       data-testid="WalletVote__button"
       type="button"
     >
@@ -1806,7 +1806,7 @@ exports[`WalletVote single vote networks should render a vote for an active dele
       </div>
     </div>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc space-x-2"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk space-x-2"
       data-testid="WalletVote__button"
       type="button"
     >

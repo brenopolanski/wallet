@@ -6,7 +6,7 @@ exports[`MnemonicVerificationProgress should render tabs 1`] = `
     class="flex space-x-3"
   >
     <button
-      class="MnemonicVerificationOptions__OptionButton-sc-qja4fq-0 MnemonicVerificationProgress__TabStyled-sc-m908j-0 dVcaWp sualu"
+      class="MnemonicVerificationOptions__OptionButton-sc-qja4fq-0 MnemonicVerificationProgress__TabStyled-sc-m908j-0 dVcaWp KGOtr"
       data-testid="MnemonicVerificationProgress__Tab"
       disabled=""
     >

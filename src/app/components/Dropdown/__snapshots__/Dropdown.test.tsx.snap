@@ -49,7 +49,7 @@ exports[`Dropdown should render a bottom position 1`] = `
         data-testid="dropdown__options"
       >
         <li
-          class="sc-gsDKAQ exUpPy group"
+          class="sc-gsDKAQ bwZfGu group"
           data-testid="dropdown__option--0"
           tabindex="0"
         >
@@ -58,7 +58,7 @@ exports[`Dropdown should render a bottom position 1`] = `
           </span>
         </li>
         <li
-          class="sc-gsDKAQ exUpPy group"
+          class="sc-gsDKAQ bwZfGu group"
           data-testid="dropdown__option--1"
           tabindex="0"
         >
@@ -99,7 +99,7 @@ exports[`Dropdown should render a bottom-left position 1`] = `
         data-testid="dropdown__options"
       >
         <li
-          class="sc-gsDKAQ exUpPy group"
+          class="sc-gsDKAQ bwZfGu group"
           data-testid="dropdown__option--0"
           tabindex="0"
         >
@@ -108,7 +108,7 @@ exports[`Dropdown should render a bottom-left position 1`] = `
           </span>
         </li>
         <li
-          class="sc-gsDKAQ exUpPy group"
+          class="sc-gsDKAQ bwZfGu group"
           data-testid="dropdown__option--1"
           tabindex="0"
         >
@@ -171,7 +171,7 @@ exports[`Dropdown should render a left position 1`] = `
         data-testid="dropdown__options"
       >
         <li
-          class="sc-gsDKAQ exUpPy group"
+          class="sc-gsDKAQ bwZfGu group"
           data-testid="dropdown__option--0"
           tabindex="0"
         >
@@ -180,7 +180,7 @@ exports[`Dropdown should render a left position 1`] = `
           </span>
         </li>
         <li
-          class="sc-gsDKAQ exUpPy group"
+          class="sc-gsDKAQ bwZfGu group"
           data-testid="dropdown__option--1"
           tabindex="0"
         >
@@ -243,7 +243,7 @@ exports[`Dropdown should render a top 1`] = `
         data-testid="dropdown__options"
       >
         <li
-          class="sc-gsDKAQ exUpPy group"
+          class="sc-gsDKAQ bwZfGu group"
           data-testid="dropdown__option--0"
           tabindex="0"
         >
@@ -252,7 +252,7 @@ exports[`Dropdown should render a top 1`] = `
           </span>
         </li>
         <li
-          class="sc-gsDKAQ exUpPy group"
+          class="sc-gsDKAQ bwZfGu group"
           data-testid="dropdown__option--1"
           tabindex="0"
         >
@@ -293,7 +293,7 @@ exports[`Dropdown should render a top-left position 1`] = `
         data-testid="dropdown__options"
       >
         <li
-          class="sc-gsDKAQ exUpPy group"
+          class="sc-gsDKAQ bwZfGu group"
           data-testid="dropdown__option--0"
           tabindex="0"
         >
@@ -302,7 +302,7 @@ exports[`Dropdown should render a top-left position 1`] = `
           </span>
         </li>
         <li
-          class="sc-gsDKAQ exUpPy group"
+          class="sc-gsDKAQ bwZfGu group"
           data-testid="dropdown__option--1"
           tabindex="0"
         >
@@ -343,7 +343,7 @@ exports[`Dropdown should render a top-right 1`] = `
         data-testid="dropdown__options"
       >
         <li
-          class="sc-gsDKAQ exUpPy group"
+          class="sc-gsDKAQ bwZfGu group"
           data-testid="dropdown__option--0"
           tabindex="0"
         >
@@ -352,7 +352,7 @@ exports[`Dropdown should render a top-right 1`] = `
           </span>
         </li>
         <li
-          class="sc-gsDKAQ exUpPy group"
+          class="sc-gsDKAQ bwZfGu group"
           data-testid="dropdown__option--1"
           tabindex="0"
         >
@@ -405,7 +405,7 @@ exports[`Dropdown should render dropdown group options with divider, icon and se
               data-testid="dropdown__options"
             >
               <li
-                class="sc-gsDKAQ exUpPy group"
+                class="sc-gsDKAQ bwZfGu group"
                 data-testid="dropdown__option--primary-0"
                 tabindex="0"
               >
@@ -414,7 +414,7 @@ exports[`Dropdown should render dropdown group options with divider, icon and se
                 </span>
               </li>
               <li
-                class="sc-gsDKAQ exUpPy group"
+                class="sc-gsDKAQ bwZfGu group"
                 data-testid="dropdown__option--primary-1"
                 tabindex="0"
               >
@@ -446,7 +446,7 @@ exports[`Dropdown should render dropdown group options with divider, icon and se
               data-testid="dropdown__options"
             >
               <li
-                class="sc-gsDKAQ exUpPy group"
+                class="sc-gsDKAQ bwZfGu group"
                 data-testid="dropdown__option--secondary-0"
                 tabindex="0"
               >
@@ -460,7 +460,7 @@ exports[`Dropdown should render dropdown group options with divider, icon and se
                 />
               </li>
               <li
-                class="sc-gsDKAQ exUpPy group"
+                class="sc-gsDKAQ bwZfGu group"
                 data-testid="dropdown__option--secondary-1"
                 tabindex="0"
               >

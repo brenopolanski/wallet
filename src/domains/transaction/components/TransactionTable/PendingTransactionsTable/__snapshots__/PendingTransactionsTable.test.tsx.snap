@@ -201,7 +201,7 @@ exports[`Signed Transaction Table should render pending transfers when isCompact
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -842,7 +842,7 @@ exports[`Signed Transaction Table should render signed transactions and handle e
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end space-x-2"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 dhaLpP"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 fxPCrX"
                   data-testid="TableRemoveButton"
                   type="button"
                 >
@@ -1071,7 +1071,7 @@ exports[`Signed Transaction Table should show as awaiting confirmations 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -1426,7 +1426,7 @@ exports[`Signed Transaction Table should show as awaiting other wallets signatur
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end space-x-2"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 dhaLpP"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 fxPCrX"
                   data-testid="TableRemoveButton"
                   type="button"
                 >
@@ -1724,7 +1724,7 @@ exports[`Signed Transaction Table should show as awaiting the wallet signature 1
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end space-x-2"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                   data-testid="TransactionRow__sign"
                   type="button"
                 >
@@ -1746,7 +1746,7 @@ exports[`Signed Transaction Table should show as awaiting the wallet signature 1
                   </div>
                 </button>
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 dhaLpP"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 fxPCrX"
                   data-testid="TableRemoveButton"
                   type="button"
                 >
@@ -2044,7 +2044,7 @@ exports[`Signed Transaction Table should show as final signature 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end space-x-2"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
                   data-testid="TransactionRow__sign"
                   type="button"
                 >
@@ -2066,7 +2066,7 @@ exports[`Signed Transaction Table should show as final signature 1`] = `
                   </div>
                 </button>
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 dhaLpP"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 fxPCrX"
                   data-testid="TableRemoveButton"
                   type="button"
                 >
@@ -2364,7 +2364,7 @@ exports[`Signed Transaction Table should show as multiSignature ready 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end space-x-2"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
                   data-testid="TransactionRow__sign"
                   type="button"
                 >
@@ -2386,7 +2386,7 @@ exports[`Signed Transaction Table should show as multiSignature ready 1`] = `
                   </div>
                 </button>
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 dhaLpP"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 fxPCrX"
                   data-testid="TableRemoveButton"
                   type="button"
                 >
@@ -3248,7 +3248,7 @@ exports[`Signed Transaction Table should show the sign button with isCompact = f
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end space-x-2"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                   data-testid="TransactionRow__sign"
                   type="button"
                 >
@@ -3270,7 +3270,7 @@ exports[`Signed Transaction Table should show the sign button with isCompact = f
                   </div>
                 </button>
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 dhaLpP"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 fxPCrX"
                   data-testid="TableRemoveButton"
                   type="button"
                 >
@@ -3568,7 +3568,7 @@ exports[`Signed Transaction Table should show the sign button with isCompact = t
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end space-x-2"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hMRHmh text-theme-primary-600 hover:text-theme-primary-700"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 faHCgN text-theme-primary-600 hover:text-theme-primary-700"
                   data-testid="TransactionRow__sign"
                   type="button"
                 >
@@ -3590,7 +3590,7 @@ exports[`Signed Transaction Table should show the sign button with isCompact = t
                   </div>
                 </button>
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB text-theme-danger-400 hover:text-theme-danger-500"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF text-theme-danger-400 hover:text-theme-danger-500"
                   data-testid="TableRemoveButton"
                   type="button"
                 >
@@ -3888,7 +3888,7 @@ exports[`Signed Transaction Table should show unconfirmed multiSignature transac
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end space-x-2"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                   data-testid="TransactionRow__sign"
                   type="button"
                 >
@@ -3910,7 +3910,7 @@ exports[`Signed Transaction Table should show unconfirmed multiSignature transac
                   </div>
                 </button>
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 dhaLpP"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 fxPCrX"
                   data-testid="TableRemoveButton"
                   type="button"
                 >

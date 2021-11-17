@@ -13,7 +13,7 @@ exports[`SendDelegateResignation Delegate Resignation should change fee 1`] = `
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -109,7 +109,7 @@ exports[`SendDelegateResignation Delegate Resignation should change fee 1`] = `
                     class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -148,7 +148,7 @@ exports[`SendDelegateResignation Delegate Resignation should change fee 1`] = `
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -178,7 +178,7 @@ exports[`SendDelegateResignation Delegate Resignation should change fee 1`] = `
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -237,7 +237,7 @@ exports[`SendDelegateResignation Delegate Resignation should change fee 1`] = `
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -423,7 +423,7 @@ exports[`SendDelegateResignation Delegate Resignation should change fee 1`] = `
                         class="flex items-center -space-x-1"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -497,7 +497,7 @@ exports[`SendDelegateResignation Delegate Resignation should change fee 1`] = `
                                   class="Toggle__Handle-sc-6s3wfu-2 jRjdQR"
                                 >
                                   <span
-                                    class="Toggle__HandleInner-sc-6s3wfu-3 gNamtB"
+                                    class="Toggle__HandleInner-sc-6s3wfu-3 fiPeMI"
                                   />
                                 </div>
                               </label>
@@ -513,7 +513,7 @@ exports[`SendDelegateResignation Delegate Resignation should change fee 1`] = `
                             class="relative"
                           >
                             <div
-                              class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                              class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                             >
                               <div
                                 class="relative flex flex-1 h-full"
@@ -583,7 +583,7 @@ exports[`SendDelegateResignation Delegate Resignation should change fee 1`] = `
                   class="StepNavigation__StepNavigationWrapper-sc-1sww2ka-0 eCydZT"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="StepNavigation__back-button"
                     type="button"
                   >
@@ -594,7 +594,7 @@ exports[`SendDelegateResignation Delegate Resignation should change fee 1`] = `
                     </div>
                   </button>
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
                     data-testid="StepNavigation__continue-button"
                     type="button"
                   >
@@ -628,7 +628,7 @@ exports[`SendDelegateResignation Delegate Resignation should render 1st step 1`]
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -724,7 +724,7 @@ exports[`SendDelegateResignation Delegate Resignation should render 1st step 1`]
                     class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -763,7 +763,7 @@ exports[`SendDelegateResignation Delegate Resignation should render 1st step 1`]
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -793,7 +793,7 @@ exports[`SendDelegateResignation Delegate Resignation should render 1st step 1`]
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -852,7 +852,7 @@ exports[`SendDelegateResignation Delegate Resignation should render 1st step 1`]
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -1038,7 +1038,7 @@ exports[`SendDelegateResignation Delegate Resignation should render 1st step 1`]
                         class="flex items-center -space-x-1"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -1112,7 +1112,7 @@ exports[`SendDelegateResignation Delegate Resignation should render 1st step 1`]
                                   class="Toggle__Handle-sc-6s3wfu-2 jRjdQR"
                                 >
                                   <span
-                                    class="Toggle__HandleInner-sc-6s3wfu-3 gNamtB"
+                                    class="Toggle__HandleInner-sc-6s3wfu-3 fiPeMI"
                                   />
                                 </div>
                               </label>
@@ -1132,7 +1132,7 @@ exports[`SendDelegateResignation Delegate Resignation should render 1st step 1`]
                             <button
                               aria-checked="false"
                               aria-label="25"
-                              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
+                              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ZQFGq"
                               data-testid="ButtonGroupOption"
                               role="radio"
                               type="button"
@@ -1154,7 +1154,7 @@ exports[`SendDelegateResignation Delegate Resignation should render 1st step 1`]
                             <button
                               aria-checked="true"
                               aria-label="25"
-                              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
+                              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ZQFGq"
                               data-testid="ButtonGroupOption"
                               role="radio"
                               type="button"
@@ -1176,7 +1176,7 @@ exports[`SendDelegateResignation Delegate Resignation should render 1st step 1`]
                             <button
                               aria-checked="false"
                               aria-label="25"
-                              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
+                              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ZQFGq"
                               data-testid="ButtonGroupOption"
                               role="radio"
                               type="button"
@@ -1205,7 +1205,7 @@ exports[`SendDelegateResignation Delegate Resignation should render 1st step 1`]
                   class="StepNavigation__StepNavigationWrapper-sc-1sww2ka-0 eCydZT"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="StepNavigation__back-button"
                     type="button"
                   >
@@ -1216,7 +1216,7 @@ exports[`SendDelegateResignation Delegate Resignation should render 1st step 1`]
                     </div>
                   </button>
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
                     data-testid="StepNavigation__continue-button"
                     type="button"
                   >
@@ -1250,7 +1250,7 @@ exports[`SendDelegateResignation Delegate Resignation should render 2nd step 1`]
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -1346,7 +1346,7 @@ exports[`SendDelegateResignation Delegate Resignation should render 2nd step 1`]
                     class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -1385,7 +1385,7 @@ exports[`SendDelegateResignation Delegate Resignation should render 2nd step 1`]
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -1415,7 +1415,7 @@ exports[`SendDelegateResignation Delegate Resignation should render 2nd step 1`]
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -1474,7 +1474,7 @@ exports[`SendDelegateResignation Delegate Resignation should render 2nd step 1`]
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -1634,7 +1634,7 @@ exports[`SendDelegateResignation Delegate Resignation should render 2nd step 1`]
                         class="flex items-center -space-x-1"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -1752,7 +1752,7 @@ exports[`SendDelegateResignation Delegate Resignation should render 2nd step 1`]
                   class="StepNavigation__StepNavigationWrapper-sc-1sww2ka-0 eCydZT"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="StepNavigation__back-button"
                     type="button"
                   >
@@ -1763,7 +1763,7 @@ exports[`SendDelegateResignation Delegate Resignation should render 2nd step 1`]
                     </div>
                   </button>
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
                     data-testid="StepNavigation__continue-button"
                     type="button"
                   >
@@ -1797,7 +1797,7 @@ exports[`SendDelegateResignation Delegate Resignation should render 3rd step 1`]
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -1893,7 +1893,7 @@ exports[`SendDelegateResignation Delegate Resignation should render 3rd step 1`]
                     class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -1932,7 +1932,7 @@ exports[`SendDelegateResignation Delegate Resignation should render 3rd step 1`]
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -1962,7 +1962,7 @@ exports[`SendDelegateResignation Delegate Resignation should render 3rd step 1`]
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -2021,7 +2021,7 @@ exports[`SendDelegateResignation Delegate Resignation should render 3rd step 1`]
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -2116,7 +2116,7 @@ exports[`SendDelegateResignation Delegate Resignation should render 3rd step 1`]
                         Mnemonic
                       </label>
                       <div
-                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                       >
                         <div
                           class="relative flex flex-1 h-full"
@@ -2213,7 +2213,7 @@ exports[`SendDelegateResignation Delegate Resignation should render 3rd step 1`]
                   class="StepNavigation__StepNavigationWrapper-sc-1sww2ka-0 eCydZT"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="StepNavigation__back-button"
                     type="button"
                   >
@@ -2224,7 +2224,7 @@ exports[`SendDelegateResignation Delegate Resignation should render 3rd step 1`]
                     </div>
                   </button>
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 dQCpEO"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 kkDhXe"
                     data-testid="StepNavigation__send-button"
                     disabled=""
                     type="submit"
@@ -2270,7 +2270,7 @@ exports[`SendDelegateResignation Delegate Resignation should show error step and
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -2366,7 +2366,7 @@ exports[`SendDelegateResignation Delegate Resignation should show error step and
                     class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -2405,7 +2405,7 @@ exports[`SendDelegateResignation Delegate Resignation should show error step and
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -2435,7 +2435,7 @@ exports[`SendDelegateResignation Delegate Resignation should show error step and
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -2494,7 +2494,7 @@ exports[`SendDelegateResignation Delegate Resignation should show error step and
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -2611,7 +2611,7 @@ exports[`SendDelegateResignation Delegate Resignation should show error step and
                           class="relative"
                         >
                           <button
-                            class="ClipboardButton__StyledButton-sc-cammp1-0 jdMWag"
+                            class="ClipboardButton__StyledButton-sc-cammp1-0 bAhMDA"
                             data-testid="clipboard-button__wrapper"
                             type="button"
                           >
@@ -2638,7 +2638,7 @@ exports[`SendDelegateResignation Delegate Resignation should show error step and
                         class="flex space-x-3"
                       >
                         <button
-                          class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                          class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                           data-testid="ErrorStep__wallet-button"
                           type="button"
                         >
@@ -2649,7 +2649,7 @@ exports[`SendDelegateResignation Delegate Resignation should show error step and
                           </div>
                         </button>
                         <button
-                          class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+                          class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
                           data-testid="ErrorStep__repeat-button"
                           type="button"
                         >
@@ -2686,7 +2686,7 @@ exports[`SendDelegateResignation Delegate Resignation should show mnemonic authe
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -2782,7 +2782,7 @@ exports[`SendDelegateResignation Delegate Resignation should show mnemonic authe
                     class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -2821,7 +2821,7 @@ exports[`SendDelegateResignation Delegate Resignation should show mnemonic authe
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -2851,7 +2851,7 @@ exports[`SendDelegateResignation Delegate Resignation should show mnemonic authe
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -2910,7 +2910,7 @@ exports[`SendDelegateResignation Delegate Resignation should show mnemonic authe
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -3005,7 +3005,7 @@ exports[`SendDelegateResignation Delegate Resignation should show mnemonic authe
                         Mnemonic
                       </label>
                       <div
-                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                       >
                         <div
                           class="relative flex flex-1 h-full"
@@ -3055,7 +3055,7 @@ exports[`SendDelegateResignation Delegate Resignation should show mnemonic authe
                         2nd Mnemonic
                       </label>
                       <div
-                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 eyownm"
+                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 lnWRPe"
                       >
                         <div
                           class="relative flex flex-1 h-full"
@@ -3115,7 +3115,7 @@ exports[`SendDelegateResignation Delegate Resignation should show mnemonic authe
                   class="StepNavigation__StepNavigationWrapper-sc-1sww2ka-0 eCydZT"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="StepNavigation__back-button"
                     type="button"
                   >
@@ -3126,7 +3126,7 @@ exports[`SendDelegateResignation Delegate Resignation should show mnemonic authe
                     </div>
                   </button>
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 dQCpEO"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 kkDhXe"
                     data-testid="StepNavigation__send-button"
                     disabled=""
                     type="submit"
@@ -3172,7 +3172,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -3268,7 +3268,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                     class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -3307,7 +3307,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -3337,7 +3337,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -3396,7 +3396,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -3515,7 +3515,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                                   to="https://dexplorer.ark.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
                                 >
                                   <span
-                                    class="Link__Content-sc-ec014t-1 jGLnf"
+                                    class="Link__Content-sc-ec014t-1 fPOlTq"
                                   >
                                     <span
                                       class="inline-flex overflow-hidden"
@@ -3668,7 +3668,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                           class="flex items-center -space-x-1"
                         >
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -3733,7 +3733,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                   class="StepNavigation__StepNavigationWrapper-sc-1sww2ka-0 eCydZT"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="StepNavigation__back-to-wallet-button"
                     type="button"
                   >
@@ -3767,7 +3767,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -3863,7 +3863,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                     class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -3902,7 +3902,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -3932,7 +3932,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -3991,7 +3991,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -4110,7 +4110,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                                   to="https://dexplorer.ark.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
                                 >
                                   <span
-                                    class="Link__Content-sc-ec014t-1 jGLnf"
+                                    class="Link__Content-sc-ec014t-1 fPOlTq"
                                   >
                                     <span
                                       class="inline-flex overflow-hidden"
@@ -4263,7 +4263,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                           class="flex items-center -space-x-1"
                         >
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -4328,7 +4328,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                   class="StepNavigation__StepNavigationWrapper-sc-1sww2ka-0 eCydZT"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="StepNavigation__back-to-wallet-button"
                     type="button"
                   >
@@ -4362,7 +4362,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -4458,7 +4458,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                     class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -4497,7 +4497,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -4527,7 +4527,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -4586,7 +4586,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -4705,7 +4705,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                                   to="https://dexplorer.ark.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
                                 >
                                   <span
-                                    class="Link__Content-sc-ec014t-1 jGLnf"
+                                    class="Link__Content-sc-ec014t-1 fPOlTq"
                                   >
                                     <span
                                       class="inline-flex overflow-hidden"
@@ -4858,7 +4858,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                           class="flex items-center -space-x-1"
                         >
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -4923,7 +4923,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                   class="StepNavigation__StepNavigationWrapper-sc-1sww2ka-0 eCydZT"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="StepNavigation__back-to-wallet-button"
                     type="button"
                   >

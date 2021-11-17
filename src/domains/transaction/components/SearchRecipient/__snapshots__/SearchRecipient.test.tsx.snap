@@ -20,7 +20,7 @@ exports[`SearchRecipient should render a modal 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -149,7 +149,7 @@ exports[`SearchRecipient should render a modal 1`] = `
                                 class="group"
                               >
                                 <button
-                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 pcqVB ring-focus"
+                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 enxoho ring-focus"
                                   type="button"
                                 >
                                   <div
@@ -188,7 +188,7 @@ exports[`SearchRecipient should render a modal 1`] = `
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY space-x-4"
                         >
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -240,7 +240,7 @@ exports[`SearchRecipient should render a modal 1`] = `
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                             data-testid="RecipientListItem__select-button-0"
                             type="button"
                           >
@@ -262,7 +262,7 @@ exports[`SearchRecipient should render a modal 1`] = `
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY space-x-4"
                         >
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -314,7 +314,7 @@ exports[`SearchRecipient should render a modal 1`] = `
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                             data-testid="RecipientListItem__select-button-1"
                             type="button"
                           >
@@ -357,7 +357,7 @@ exports[`SearchRecipient should render a modal with custom title and description
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -486,7 +486,7 @@ exports[`SearchRecipient should render a modal with custom title and description
                                 class="group"
                               >
                                 <button
-                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 pcqVB ring-focus"
+                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 enxoho ring-focus"
                                   type="button"
                                 >
                                   <div
@@ -525,7 +525,7 @@ exports[`SearchRecipient should render a modal with custom title and description
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY space-x-4"
                         >
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -577,7 +577,7 @@ exports[`SearchRecipient should render a modal with custom title and description
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                             data-testid="RecipientListItem__select-button-0"
                             type="button"
                           >
@@ -599,7 +599,7 @@ exports[`SearchRecipient should render a modal with custom title and description
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY space-x-4"
                         >
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -651,7 +651,7 @@ exports[`SearchRecipient should render a modal with custom title and description
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                             data-testid="RecipientListItem__select-button-1"
                             type="button"
                           >
@@ -694,7 +694,7 @@ exports[`SearchRecipient should render with selected address 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -823,7 +823,7 @@ exports[`SearchRecipient should render with selected address 1`] = `
                                 class="group"
                               >
                                 <button
-                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 pcqVB ring-focus"
+                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 enxoho ring-focus"
                                   type="button"
                                 >
                                   <div
@@ -862,7 +862,7 @@ exports[`SearchRecipient should render with selected address 1`] = `
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY space-x-4"
                         >
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -914,7 +914,7 @@ exports[`SearchRecipient should render with selected address 1`] = `
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cGXmVu"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 IWDiW"
                             data-testid="RecipientListItem__selected-button-0"
                             type="button"
                           >
@@ -936,7 +936,7 @@ exports[`SearchRecipient should render with selected address 1`] = `
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY space-x-4"
                         >
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -988,7 +988,7 @@ exports[`SearchRecipient should render with selected address 1`] = `
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                             data-testid="RecipientListItem__select-button-1"
                             type="button"
                           >

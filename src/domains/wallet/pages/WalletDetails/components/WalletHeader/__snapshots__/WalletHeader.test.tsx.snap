@@ -164,7 +164,7 @@ exports[`WalletHeader should handle locked balance 1`] = `
       >
         <button
           aria-busy="false"
-          class="WalletHeader__WalletHeaderButton-sc-qc4s8o-0 dSFQzF"
+          class="WalletHeader__WalletHeaderButton-sc-qc4s8o-0 RSTdc"
           data-testid="WalletHeader__refresh"
           type="button"
         >
@@ -180,7 +180,7 @@ exports[`WalletHeader should handle locked balance 1`] = `
           </div>
         </button>
         <button
-          class="WalletHeader__WalletHeaderButton-sc-qc4s8o-0 dSFQzF"
+          class="WalletHeader__WalletHeaderButton-sc-qc4s8o-0 RSTdc"
           data-testid="WalletHeader__star-button"
           type="button"
         >
@@ -196,7 +196,7 @@ exports[`WalletHeader should handle locked balance 1`] = `
         </button>
       </div>
       <button
-        class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ my-auto ml-3"
+        class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB my-auto ml-3"
         data-testid="WalletHeader__send-button"
         type="button"
       >
@@ -207,7 +207,7 @@ exports[`WalletHeader should handle locked balance 1`] = `
         </div>
       </button>
       <button
-        class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB text-white bg-theme-secondary-800 hover:bg-theme-primary-700 my-auto ml-3"
+        class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF text-white bg-theme-secondary-800 hover:bg-theme-primary-700 my-auto ml-3"
         data-testid="WalletHeader__locked-balance-button"
         type="button"
       >
@@ -236,7 +236,7 @@ exports[`WalletHeader should handle locked balance 1`] = `
             data-testid="dropdown__toggle"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB text-white bg-theme-secondary-800 hover:bg-theme-primary-700"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF text-white bg-theme-secondary-800 hover:bg-theme-primary-700"
               type="button"
             >
               <div
@@ -396,7 +396,7 @@ exports[`WalletHeader should render 1`] = `
       >
         <button
           aria-busy="false"
-          class="WalletHeader__WalletHeaderButton-sc-qc4s8o-0 dSFQzF"
+          class="WalletHeader__WalletHeaderButton-sc-qc4s8o-0 RSTdc"
           data-testid="WalletHeader__refresh"
           type="button"
         >
@@ -412,7 +412,7 @@ exports[`WalletHeader should render 1`] = `
           </div>
         </button>
         <button
-          class="WalletHeader__WalletHeaderButton-sc-qc4s8o-0 dSFQzF"
+          class="WalletHeader__WalletHeaderButton-sc-qc4s8o-0 RSTdc"
           data-testid="WalletHeader__star-button"
           type="button"
         >
@@ -428,7 +428,7 @@ exports[`WalletHeader should render 1`] = `
         </button>
       </div>
       <button
-        class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ my-auto ml-3"
+        class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB my-auto ml-3"
         data-testid="WalletHeader__send-button"
         type="button"
       >
@@ -449,7 +449,7 @@ exports[`WalletHeader should render 1`] = `
             data-testid="dropdown__toggle"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB text-white bg-theme-secondary-800 hover:bg-theme-primary-700"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF text-white bg-theme-secondary-800 hover:bg-theme-primary-700"
               type="button"
             >
               <div
@@ -615,7 +615,7 @@ exports[`WalletHeader should render amount for wallet in live network 1`] = `
       >
         <button
           aria-busy="false"
-          class="WalletHeader__WalletHeaderButton-sc-qc4s8o-0 dSFQzF"
+          class="WalletHeader__WalletHeaderButton-sc-qc4s8o-0 RSTdc"
           data-testid="WalletHeader__refresh"
           type="button"
         >
@@ -631,7 +631,7 @@ exports[`WalletHeader should render amount for wallet in live network 1`] = `
           </div>
         </button>
         <button
-          class="WalletHeader__WalletHeaderButton-sc-qc4s8o-0 dSFQzF"
+          class="WalletHeader__WalletHeaderButton-sc-qc4s8o-0 RSTdc"
           data-testid="WalletHeader__star-button"
           type="button"
         >
@@ -647,7 +647,7 @@ exports[`WalletHeader should render amount for wallet in live network 1`] = `
         </button>
       </div>
       <button
-        class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ my-auto ml-3"
+        class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB my-auto ml-3"
         data-testid="WalletHeader__send-button"
         type="button"
       >
@@ -668,7 +668,7 @@ exports[`WalletHeader should render amount for wallet in live network 1`] = `
             data-testid="dropdown__toggle"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB text-white bg-theme-secondary-800 hover:bg-theme-primary-700"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF text-white bg-theme-secondary-800 hover:bg-theme-primary-700"
               type="button"
             >
               <div
@@ -846,7 +846,7 @@ exports[`WalletHeader should show currency delta (-5%) 1`] = `
       >
         <button
           aria-busy="false"
-          class="WalletHeader__WalletHeaderButton-sc-qc4s8o-0 dSFQzF"
+          class="WalletHeader__WalletHeaderButton-sc-qc4s8o-0 RSTdc"
           data-testid="WalletHeader__refresh"
           type="button"
         >
@@ -862,7 +862,7 @@ exports[`WalletHeader should show currency delta (-5%) 1`] = `
           </div>
         </button>
         <button
-          class="WalletHeader__WalletHeaderButton-sc-qc4s8o-0 dSFQzF"
+          class="WalletHeader__WalletHeaderButton-sc-qc4s8o-0 RSTdc"
           data-testid="WalletHeader__star-button"
           type="button"
         >
@@ -878,7 +878,7 @@ exports[`WalletHeader should show currency delta (-5%) 1`] = `
         </button>
       </div>
       <button
-        class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ my-auto ml-3"
+        class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB my-auto ml-3"
         data-testid="WalletHeader__send-button"
         type="button"
       >
@@ -899,7 +899,7 @@ exports[`WalletHeader should show currency delta (-5%) 1`] = `
             data-testid="dropdown__toggle"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB text-white bg-theme-secondary-800 hover:bg-theme-primary-700"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF text-white bg-theme-secondary-800 hover:bg-theme-primary-700"
               type="button"
             >
               <div
@@ -1077,7 +1077,7 @@ exports[`WalletHeader should show currency delta (5%) 1`] = `
       >
         <button
           aria-busy="false"
-          class="WalletHeader__WalletHeaderButton-sc-qc4s8o-0 dSFQzF"
+          class="WalletHeader__WalletHeaderButton-sc-qc4s8o-0 RSTdc"
           data-testid="WalletHeader__refresh"
           type="button"
         >
@@ -1093,7 +1093,7 @@ exports[`WalletHeader should show currency delta (5%) 1`] = `
           </div>
         </button>
         <button
-          class="WalletHeader__WalletHeaderButton-sc-qc4s8o-0 dSFQzF"
+          class="WalletHeader__WalletHeaderButton-sc-qc4s8o-0 RSTdc"
           data-testid="WalletHeader__star-button"
           type="button"
         >
@@ -1109,7 +1109,7 @@ exports[`WalletHeader should show currency delta (5%) 1`] = `
         </button>
       </div>
       <button
-        class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ my-auto ml-3"
+        class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB my-auto ml-3"
         data-testid="WalletHeader__send-button"
         type="button"
       >
@@ -1130,7 +1130,7 @@ exports[`WalletHeader should show currency delta (5%) 1`] = `
             data-testid="dropdown__toggle"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB text-white bg-theme-secondary-800 hover:bg-theme-primary-700"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF text-white bg-theme-secondary-800 hover:bg-theme-primary-700"
               type="button"
             >
               <div
@@ -1319,7 +1319,7 @@ exports[`WalletHeader should show modifiers 1`] = `
       >
         <button
           aria-busy="false"
-          class="WalletHeader__WalletHeaderButton-sc-qc4s8o-0 dSFQzF"
+          class="WalletHeader__WalletHeaderButton-sc-qc4s8o-0 RSTdc"
           data-testid="WalletHeader__refresh"
           type="button"
         >
@@ -1335,7 +1335,7 @@ exports[`WalletHeader should show modifiers 1`] = `
           </div>
         </button>
         <button
-          class="WalletHeader__WalletHeaderButton-sc-qc4s8o-0 dSFQzF"
+          class="WalletHeader__WalletHeaderButton-sc-qc4s8o-0 RSTdc"
           data-testid="WalletHeader__star-button"
           type="button"
         >
@@ -1351,7 +1351,7 @@ exports[`WalletHeader should show modifiers 1`] = `
         </button>
       </div>
       <button
-        class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ my-auto ml-3"
+        class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB my-auto ml-3"
         data-testid="WalletHeader__send-button"
         type="button"
       >
@@ -1372,7 +1372,7 @@ exports[`WalletHeader should show modifiers 1`] = `
             data-testid="dropdown__toggle"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB text-white bg-theme-secondary-800 hover:bg-theme-primary-700"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF text-white bg-theme-secondary-800 hover:bg-theme-primary-700"
               type="button"
             >
               <div
@@ -1516,7 +1516,7 @@ exports[`WalletHeader should use empty string in clipboard copy if publickey is 
       >
         <button
           aria-busy="false"
-          class="WalletHeader__WalletHeaderButton-sc-qc4s8o-0 dSFQzF"
+          class="WalletHeader__WalletHeaderButton-sc-qc4s8o-0 RSTdc"
           data-testid="WalletHeader__refresh"
           type="button"
         >
@@ -1532,7 +1532,7 @@ exports[`WalletHeader should use empty string in clipboard copy if publickey is 
           </div>
         </button>
         <button
-          class="WalletHeader__WalletHeaderButton-sc-qc4s8o-0 dSFQzF"
+          class="WalletHeader__WalletHeaderButton-sc-qc4s8o-0 RSTdc"
           data-testid="WalletHeader__star-button"
           type="button"
         >
@@ -1548,7 +1548,7 @@ exports[`WalletHeader should use empty string in clipboard copy if publickey is 
         </button>
       </div>
       <button
-        class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ my-auto ml-3"
+        class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB my-auto ml-3"
         data-testid="WalletHeader__send-button"
         type="button"
       >
@@ -1569,7 +1569,7 @@ exports[`WalletHeader should use empty string in clipboard copy if publickey is 
             data-testid="dropdown__toggle"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB text-white bg-theme-secondary-800 hover:bg-theme-primary-700"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF text-white bg-theme-secondary-800 hover:bg-theme-primary-700"
               type="button"
             >
               <div

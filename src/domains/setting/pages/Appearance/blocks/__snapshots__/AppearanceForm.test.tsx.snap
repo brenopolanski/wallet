@@ -52,7 +52,7 @@ exports[`AppearanceForm should render 1`] = `
                 <button
                   aria-checked="false"
                   aria-label="Blue"
-                  class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 itDOEz"
+                  class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 lfZjmj"
                   data-testid="ButtonGroupOption"
                   role="radio"
                   type="button"
@@ -64,7 +64,7 @@ exports[`AppearanceForm should render 1`] = `
                 <button
                   aria-checked="true"
                   aria-label="Green"
-                  class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 itDOEz"
+                  class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 lfZjmj"
                   data-testid="ButtonGroupOption"
                   role="radio"
                   type="button"
@@ -120,7 +120,7 @@ exports[`AppearanceForm should render 1`] = `
                 <button
                   aria-checked="true"
                   aria-label="light"
-                  class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 itDOEz"
+                  class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 lfZjmj"
                   data-testid="ButtonGroupOption"
                   role="radio"
                   type="button"
@@ -145,7 +145,7 @@ exports[`AppearanceForm should render 1`] = `
                 <button
                   aria-checked="false"
                   aria-label="dark"
-                  class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 itDOEz"
+                  class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 lfZjmj"
                   data-testid="ButtonGroupOption"
                   role="radio"
                   type="button"
@@ -207,7 +207,7 @@ exports[`AppearanceForm should render 1`] = `
                     class="Toggle__Handle-sc-6s3wfu-2 cobHFC"
                   >
                     <span
-                      class="Toggle__HandleInner-sc-6s3wfu-3 klclKD"
+                      class="Toggle__HandleInner-sc-6s3wfu-3 ddepvC"
                     />
                   </div>
                 </label>
@@ -256,7 +256,7 @@ exports[`AppearanceForm should render 1`] = `
                     class="Toggle__Handle-sc-6s3wfu-2 cobHFC"
                   >
                     <span
-                      class="Toggle__HandleInner-sc-6s3wfu-3 klclKD"
+                      class="Toggle__HandleInner-sc-6s3wfu-3 ddepvC"
                     />
                   </div>
                 </label>
@@ -305,7 +305,7 @@ exports[`AppearanceForm should render 1`] = `
                     class="Toggle__Handle-sc-6s3wfu-2 cobHFC"
                   >
                     <span
-                      class="Toggle__HandleInner-sc-6s3wfu-3 klclKD"
+                      class="Toggle__HandleInner-sc-6s3wfu-3 ddepvC"
                     />
                   </div>
                 </label>
@@ -325,7 +325,7 @@ exports[`AppearanceForm should render 1`] = `
       class="flex justify-end mt-8 space-x-3 w-full"
     >
       <button
-        class="OriginalButton__StyledButton-sc-o0fs2j-0 dQCpEO"
+        class="OriginalButton__StyledButton-sc-o0fs2j-0 kkDhXe"
         data-testid="AppearanceFooterButtons__save"
         disabled=""
         type="submit"

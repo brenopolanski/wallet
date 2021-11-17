@@ -111,7 +111,7 @@ exports[`News should filter results based on category query and asset 1`] = `
                     class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -150,7 +150,7 @@ exports[`News should filter results based on category query and asset 1`] = `
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -180,7 +180,7 @@ exports[`News should filter results based on category query and asset 1`] = `
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -239,7 +239,7 @@ exports[`News should filter results based on category query and asset 1`] = `
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -315,7 +315,7 @@ exports[`News should filter results based on category query and asset 1`] = `
                   class="group"
                 >
                   <button
-                    class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus"
+                    class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus"
                     type="button"
                   >
                     <div
@@ -359,7 +359,7 @@ exports[`News should filter results based on category query and asset 1`] = `
                     class="flex-1"
                   >
                     <div
-                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 eyRrGo -ml-4"
+                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 bjEupA -ml-4"
                     >
                       <div
                         class="relative flex flex-1 h-full"
@@ -508,7 +508,7 @@ exports[`News should filter results based on category query and asset 1`] = `
                             to="https://blog.ark.io/ark-platform-sdk-modernization-of-blockchain-network-interactions-b5a7d70c2461"
                           >
                             <span
-                              class="Link__Content-sc-ec014t-1 jGLnf"
+                              class="Link__Content-sc-ec014t-1 fPOlTq"
                             >
                               https://blog.ark.io/ark-platform-sdk-modernization-of-blockchain-network-interactions-b5a7d70c2461
                             </span>
@@ -563,7 +563,7 @@ exports[`News should filter results based on category query and asset 1`] = `
                         to="https://ftx.com/"
                       >
                         <span
-                          class="Link__Content-sc-ec014t-1 jGLnf"
+                          class="Link__Content-sc-ec014t-1 fPOlTq"
                         >
                           <svg
                             class="-mx-8 text-white"
@@ -592,7 +592,7 @@ exports[`News should filter results based on category query and asset 1`] = `
                         to="https://itunes.apple.com/us/app/blockfolio-bitcoin-altcoin/id1095564685?mt=8"
                       >
                         <span
-                          class="Link__Content-sc-ec014t-1 jGLnf"
+                          class="Link__Content-sc-ec014t-1 fPOlTq"
                         >
                           <svg
                             class="w-32 h-10 b-0"
@@ -610,7 +610,7 @@ exports[`News should filter results based on category query and asset 1`] = `
                         to="https://play.google.com/store/apps/details?id=com.blockfolio.blockfolio&hl=en_US"
                       >
                         <span
-                          class="Link__Content-sc-ec014t-1 jGLnf"
+                          class="Link__Content-sc-ec014t-1 fPOlTq"
                         >
                           <svg
                             class="w-32 h-10"
@@ -636,55 +636,55 @@ exports[`News should filter results based on category query and asset 1`] = `
                     <button
                       aria-current="true"
                       aria-label="Page 1"
-                      class="Pagination__PaginationButtonStyled-sc-1rc32i9-1 cgxTRd current-page"
+                      class="Pagination__PaginationButtonStyled-sc-1rc32i9-1 iwHecl current-page"
                       type="button"
                     >
                       1
                     </button>
                     <button
                       aria-label="Page 2"
-                      class="Pagination__PaginationButtonStyled-sc-1rc32i9-1 cgxTRd"
+                      class="Pagination__PaginationButtonStyled-sc-1rc32i9-1 iwHecl"
                       type="button"
                     >
                       2
                     </button>
                     <button
                       aria-label="Page 3"
-                      class="Pagination__PaginationButtonStyled-sc-1rc32i9-1 cgxTRd"
+                      class="Pagination__PaginationButtonStyled-sc-1rc32i9-1 iwHecl"
                       type="button"
                     >
                       3
                     </button>
                     <button
                       aria-label="Page 4"
-                      class="Pagination__PaginationButtonStyled-sc-1rc32i9-1 cgxTRd"
+                      class="Pagination__PaginationButtonStyled-sc-1rc32i9-1 iwHecl"
                       type="button"
                     >
                       4
                     </button>
                     <button
                       aria-label="Page 5"
-                      class="Pagination__PaginationButtonStyled-sc-1rc32i9-1 cgxTRd"
+                      class="Pagination__PaginationButtonStyled-sc-1rc32i9-1 iwHecl"
                       type="button"
                     >
                       5
                     </button>
                     <button
                       aria-label="Page 6"
-                      class="Pagination__PaginationButtonStyled-sc-1rc32i9-1 cgxTRd"
+                      class="Pagination__PaginationButtonStyled-sc-1rc32i9-1 iwHecl"
                       type="button"
                     >
                       6
                     </button>
                     <button
                       aria-label="Page 7"
-                      class="Pagination__PaginationButtonStyled-sc-1rc32i9-1 cgxTRd"
+                      class="Pagination__PaginationButtonStyled-sc-1rc32i9-1 iwHecl"
                       type="button"
                     >
                       7
                     </button>
                     <button
-                      class="PaginationSearch__PaginationSearchButtonStyled-sc-1kkee2s-1 kFVDQS group"
+                      class="PaginationSearch__PaginationSearchButtonStyled-sc-1kkee2s-1 euoPeB group"
                       data-testid="PaginationSearchButton"
                       type="button"
                     >
@@ -712,7 +712,7 @@ exports[`News should filter results based on category query and asset 1`] = `
                     </button>
                   </div>
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="Pagination__next"
                     type="button"
                   >
@@ -732,7 +732,7 @@ exports[`News should filter results based on category query and asset 1`] = `
                     </div>
                   </button>
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="Pagination__last"
                     type="button"
                   >
@@ -894,7 +894,7 @@ exports[`News should filter results based on category query and asset 1`] = `
                                 </svg>
                               </div>
                               <span
-                                class="Badge__Wrapper-sc-w9wbbm-0 bifkuZ flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent bg-theme-success-500 text-theme-success-100"
+                                class="Badge__Wrapper-sc-w9wbbm-0 fvTsro flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent bg-theme-success-500 text-theme-success-100"
                               >
                                 <div
                                   class="sc-bdvvtL Cfvxc"
@@ -1035,7 +1035,7 @@ exports[`News should render 1`] = `
                     class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -1074,7 +1074,7 @@ exports[`News should render 1`] = `
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -1104,7 +1104,7 @@ exports[`News should render 1`] = `
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -1163,7 +1163,7 @@ exports[`News should render 1`] = `
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -1239,7 +1239,7 @@ exports[`News should render 1`] = `
                   class="group"
                 >
                   <button
-                    class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus"
+                    class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus"
                     type="button"
                   >
                     <div
@@ -1384,7 +1384,7 @@ exports[`News should render 1`] = `
                             to="https://blog.ark.io/ark-platform-sdk-modernization-of-blockchain-network-interactions-b5a7d70c2461"
                           >
                             <span
-                              class="Link__Content-sc-ec014t-1 jGLnf"
+                              class="Link__Content-sc-ec014t-1 fPOlTq"
                             >
                               https://blog.ark.io/ark-platform-sdk-modernization-of-blockchain-network-interactions-b5a7d70c2461
                             </span>
@@ -1439,7 +1439,7 @@ exports[`News should render 1`] = `
                         to="https://ftx.com/"
                       >
                         <span
-                          class="Link__Content-sc-ec014t-1 jGLnf"
+                          class="Link__Content-sc-ec014t-1 fPOlTq"
                         >
                           <svg
                             class="-mx-8 text-white"
@@ -1468,7 +1468,7 @@ exports[`News should render 1`] = `
                         to="https://itunes.apple.com/us/app/blockfolio-bitcoin-altcoin/id1095564685?mt=8"
                       >
                         <span
-                          class="Link__Content-sc-ec014t-1 jGLnf"
+                          class="Link__Content-sc-ec014t-1 fPOlTq"
                         >
                           <svg
                             class="w-32 h-10 b-0"
@@ -1486,7 +1486,7 @@ exports[`News should render 1`] = `
                         to="https://play.google.com/store/apps/details?id=com.blockfolio.blockfolio&hl=en_US"
                       >
                         <span
-                          class="Link__Content-sc-ec014t-1 jGLnf"
+                          class="Link__Content-sc-ec014t-1 fPOlTq"
                         >
                           <svg
                             class="w-32 h-10"
@@ -1512,55 +1512,55 @@ exports[`News should render 1`] = `
                     <button
                       aria-current="true"
                       aria-label="Page 1"
-                      class="Pagination__PaginationButtonStyled-sc-1rc32i9-1 cgxTRd current-page"
+                      class="Pagination__PaginationButtonStyled-sc-1rc32i9-1 iwHecl current-page"
                       type="button"
                     >
                       1
                     </button>
                     <button
                       aria-label="Page 2"
-                      class="Pagination__PaginationButtonStyled-sc-1rc32i9-1 cgxTRd"
+                      class="Pagination__PaginationButtonStyled-sc-1rc32i9-1 iwHecl"
                       type="button"
                     >
                       2
                     </button>
                     <button
                       aria-label="Page 3"
-                      class="Pagination__PaginationButtonStyled-sc-1rc32i9-1 cgxTRd"
+                      class="Pagination__PaginationButtonStyled-sc-1rc32i9-1 iwHecl"
                       type="button"
                     >
                       3
                     </button>
                     <button
                       aria-label="Page 4"
-                      class="Pagination__PaginationButtonStyled-sc-1rc32i9-1 cgxTRd"
+                      class="Pagination__PaginationButtonStyled-sc-1rc32i9-1 iwHecl"
                       type="button"
                     >
                       4
                     </button>
                     <button
                       aria-label="Page 5"
-                      class="Pagination__PaginationButtonStyled-sc-1rc32i9-1 cgxTRd"
+                      class="Pagination__PaginationButtonStyled-sc-1rc32i9-1 iwHecl"
                       type="button"
                     >
                       5
                     </button>
                     <button
                       aria-label="Page 6"
-                      class="Pagination__PaginationButtonStyled-sc-1rc32i9-1 cgxTRd"
+                      class="Pagination__PaginationButtonStyled-sc-1rc32i9-1 iwHecl"
                       type="button"
                     >
                       6
                     </button>
                     <button
                       aria-label="Page 7"
-                      class="Pagination__PaginationButtonStyled-sc-1rc32i9-1 cgxTRd"
+                      class="Pagination__PaginationButtonStyled-sc-1rc32i9-1 iwHecl"
                       type="button"
                     >
                       7
                     </button>
                     <button
-                      class="PaginationSearch__PaginationSearchButtonStyled-sc-1kkee2s-1 kFVDQS group"
+                      class="PaginationSearch__PaginationSearchButtonStyled-sc-1kkee2s-1 euoPeB group"
                       data-testid="PaginationSearchButton"
                       type="button"
                     >
@@ -1588,7 +1588,7 @@ exports[`News should render 1`] = `
                     </button>
                   </div>
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="Pagination__next"
                     type="button"
                   >
@@ -1608,7 +1608,7 @@ exports[`News should render 1`] = `
                     </div>
                   </button>
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="Pagination__last"
                     type="button"
                   >
@@ -1770,7 +1770,7 @@ exports[`News should render 1`] = `
                                 </svg>
                               </div>
                               <span
-                                class="Badge__Wrapper-sc-w9wbbm-0 bifkuZ flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent bg-theme-success-500 text-theme-success-100"
+                                class="Badge__Wrapper-sc-w9wbbm-0 fvTsro flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent bg-theme-success-500 text-theme-success-100"
                               >
                                 <div
                                   class="sc-bdvvtL Cfvxc"
@@ -1911,7 +1911,7 @@ exports[`News should show error toast if news cannot be fetched 1`] = `
                     class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -1950,7 +1950,7 @@ exports[`News should show error toast if news cannot be fetched 1`] = `
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -1980,7 +1980,7 @@ exports[`News should show error toast if news cannot be fetched 1`] = `
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -2039,7 +2039,7 @@ exports[`News should show error toast if news cannot be fetched 1`] = `
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -2115,7 +2115,7 @@ exports[`News should show error toast if news cannot be fetched 1`] = `
                   class="group"
                 >
                   <button
-                    class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus"
+                    class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus"
                     type="button"
                   >
                     <div
@@ -2315,7 +2315,7 @@ exports[`News should show error toast if news cannot be fetched 1`] = `
                                 </svg>
                               </div>
                               <span
-                                class="Badge__Wrapper-sc-w9wbbm-0 bifkuZ flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent bg-theme-success-500 text-theme-success-100"
+                                class="Badge__Wrapper-sc-w9wbbm-0 fvTsro flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent bg-theme-success-500 text-theme-success-100"
                               >
                                 <div
                                   class="sc-bdvvtL Cfvxc"

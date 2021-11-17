@@ -13,7 +13,7 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -109,7 +109,7 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                     class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -148,7 +148,7 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -178,7 +178,7 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -237,7 +237,7 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -356,7 +356,7 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                                   to="https://dexplorer.ark.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
                                 >
                                   <span
-                                    class="Link__Content-sc-ec014t-1 jGLnf"
+                                    class="Link__Content-sc-ec014t-1 fPOlTq"
                                   >
                                     <span
                                       class="inline-flex overflow-hidden"
@@ -509,7 +509,7 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                           class="flex items-center -space-x-1"
                         >
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -555,7 +555,7 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                           class="flex items-center -space-x-1"
                         >
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -647,7 +647,7 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                   class="StepNavigation__StepNavigationWrapper-sc-1sww2ka-0 eCydZT"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="StepNavigation__back-to-wallet-button"
                     type="button"
                   >
@@ -676,7 +676,7 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                     class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB w-11 h-11"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 h-11"
                       data-testid="modal__close-btn"
                       type="button"
                     >
@@ -897,7 +897,7 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                         class="flex justify-end mt-8 space-x-3"
                       >
                         <button
-                          class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                          class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                           data-testid="ConfirmSendTransaction__cancel"
                           type="button"
                         >
@@ -908,7 +908,7 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                           </div>
                         </button>
                         <button
-                          class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+                          class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
                           data-testid="ConfirmSendTransaction__confirm"
                           type="submit"
                         >
@@ -945,7 +945,7 @@ exports[`SendTransfer should error if wrong mnemonic 1`] = `
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -1041,7 +1041,7 @@ exports[`SendTransfer should error if wrong mnemonic 1`] = `
                     class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -1080,7 +1080,7 @@ exports[`SendTransfer should error if wrong mnemonic 1`] = `
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -1110,7 +1110,7 @@ exports[`SendTransfer should error if wrong mnemonic 1`] = `
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -1169,7 +1169,7 @@ exports[`SendTransfer should error if wrong mnemonic 1`] = `
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -1264,7 +1264,7 @@ exports[`SendTransfer should error if wrong mnemonic 1`] = `
                         Mnemonic
                       </label>
                       <div
-                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 eyownm"
+                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 lnWRPe"
                       >
                         <div
                           class="relative flex flex-1 h-full"
@@ -1324,7 +1324,7 @@ exports[`SendTransfer should error if wrong mnemonic 1`] = `
                   class="StepNavigation__StepNavigationWrapper-sc-1sww2ka-0 eCydZT"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="StepNavigation__back-button"
                     type="button"
                   >
@@ -1335,7 +1335,7 @@ exports[`SendTransfer should error if wrong mnemonic 1`] = `
                     </div>
                   </button>
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 dQCpEO"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 kkDhXe"
                     data-testid="StepNavigation__send-button"
                     disabled=""
                     type="submit"
@@ -1527,7 +1527,7 @@ exports[`SendTransfer should render 1st step with custom deeplink values and use
               </div>
             </span>
             <div
-              class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+              class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
             >
               <div
                 class="Avatar__AvatarWrapper-sc-18vw8a4-0 jiaHcL flex-shrink-0"
@@ -1617,7 +1617,7 @@ exports[`SendTransfer should render 1st step with custom deeplink values and use
                       class="Toggle__Handle-sc-6s3wfu-2 jRjdQR"
                     >
                       <span
-                        class="Toggle__HandleInner-sc-6s3wfu-3 gNamtB"
+                        class="Toggle__HandleInner-sc-6s3wfu-3 fiPeMI"
                       />
                     </div>
                   </label>
@@ -1662,7 +1662,7 @@ exports[`SendTransfer should render 1st step with custom deeplink values and use
                       class="relative w-full"
                     >
                       <div
-                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF sr-only"
+                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR sr-only"
                       >
                         <div
                           class="relative flex flex-1 h-full"
@@ -1692,7 +1692,7 @@ exports[`SendTransfer should render 1st step with custom deeplink values and use
                             id="SelectRecipient__dropdown-label"
                           />
                           <div
-                            class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                            class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                           >
                             <div
                               class="flex items-center"
@@ -1754,7 +1754,7 @@ exports[`SendTransfer should render 1st step with custom deeplink values and use
                           </div>
                           <ul
                             aria-labelledby="SelectRecipient__dropdown-label"
-                            class="styles__SelectOptionsList-sc-120rtxy-0 HcHWp"
+                            class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc"
                             id="SelectRecipient__dropdown-menu"
                             role="listbox"
                           />
@@ -1798,7 +1798,7 @@ exports[`SendTransfer should render 1st step with custom deeplink values and use
                       class="relative"
                     >
                       <div
-                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                       >
                         <div
                           class="relative flex flex-1 h-full"
@@ -1819,7 +1819,7 @@ exports[`SendTransfer should render 1st step with custom deeplink values and use
                     class="inline-flex"
                   >
                     <button
-                      class="AddRecipient__InputButtonStyled-sc-1tdk8mn-0 kA-DCn"
+                      class="AddRecipient__InputButtonStyled-sc-1tdk8mn-0 dgkajH"
                       data-testid="AddRecipient__send-all"
                       type="button"
                     >
@@ -1849,7 +1849,7 @@ exports[`SendTransfer should render 1st step with custom deeplink values and use
           </span>
         </label>
         <div
-          class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+          class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
         >
           <div
             class="relative flex flex-1 h-full"
@@ -1916,7 +1916,7 @@ exports[`SendTransfer should render 1st step with custom deeplink values and use
                   class="Toggle__Handle-sc-6s3wfu-2 jRjdQR"
                 >
                   <span
-                    class="Toggle__HandleInner-sc-6s3wfu-3 gNamtB"
+                    class="Toggle__HandleInner-sc-6s3wfu-3 fiPeMI"
                   />
                 </div>
               </label>
@@ -1936,7 +1936,7 @@ exports[`SendTransfer should render 1st step with custom deeplink values and use
             <button
               aria-checked="false"
               aria-label="0.00357"
-              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
+              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ZQFGq"
               data-testid="ButtonGroupOption"
               role="radio"
               type="button"
@@ -1958,7 +1958,7 @@ exports[`SendTransfer should render 1st step with custom deeplink values and use
             <button
               aria-checked="true"
               aria-label="0.07320598"
-              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
+              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ZQFGq"
               data-testid="ButtonGroupOption"
               role="radio"
               type="button"
@@ -1980,7 +1980,7 @@ exports[`SendTransfer should render 1st step with custom deeplink values and use
             <button
               aria-checked="false"
               aria-label="0.1"
-              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
+              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ZQFGq"
               data-testid="ButtonGroupOption"
               role="radio"
               type="button"
@@ -2020,7 +2020,7 @@ exports[`SendTransfer should render form and use location state 1`] = `
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -2116,7 +2116,7 @@ exports[`SendTransfer should render form and use location state 1`] = `
                     class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -2155,7 +2155,7 @@ exports[`SendTransfer should render form and use location state 1`] = `
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -2185,7 +2185,7 @@ exports[`SendTransfer should render form and use location state 1`] = `
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -2244,7 +2244,7 @@ exports[`SendTransfer should render form and use location state 1`] = `
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -2488,7 +2488,7 @@ exports[`SendTransfer should render form and use location state 1`] = `
                               </div>
                             </span>
                             <div
-                              class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                              class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                             >
                               <div
                                 class="Avatar__AvatarWrapper-sc-18vw8a4-0 jiaHcL flex-shrink-0"
@@ -2578,7 +2578,7 @@ exports[`SendTransfer should render form and use location state 1`] = `
                                       class="Toggle__Handle-sc-6s3wfu-2 jRjdQR"
                                     >
                                       <span
-                                        class="Toggle__HandleInner-sc-6s3wfu-3 gNamtB"
+                                        class="Toggle__HandleInner-sc-6s3wfu-3 fiPeMI"
                                       />
                                     </div>
                                   </label>
@@ -2623,7 +2623,7 @@ exports[`SendTransfer should render form and use location state 1`] = `
                                       class="relative w-full"
                                     >
                                       <div
-                                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF sr-only"
+                                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR sr-only"
                                       >
                                         <div
                                           class="relative flex flex-1 h-full"
@@ -2653,7 +2653,7 @@ exports[`SendTransfer should render form and use location state 1`] = `
                                             id="SelectRecipient__dropdown-label"
                                           />
                                           <div
-                                            class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                                            class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                                           >
                                             <div
                                               class="flex items-center"
@@ -2715,7 +2715,7 @@ exports[`SendTransfer should render form and use location state 1`] = `
                                           </div>
                                           <ul
                                             aria-labelledby="SelectRecipient__dropdown-label"
-                                            class="styles__SelectOptionsList-sc-120rtxy-0 HcHWp"
+                                            class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc"
                                             id="SelectRecipient__dropdown-menu"
                                             role="listbox"
                                           />
@@ -2759,7 +2759,7 @@ exports[`SendTransfer should render form and use location state 1`] = `
                                       class="relative"
                                     >
                                       <div
-                                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                                       >
                                         <div
                                           class="relative flex flex-1 h-full"
@@ -2780,7 +2780,7 @@ exports[`SendTransfer should render form and use location state 1`] = `
                                     class="inline-flex"
                                   >
                                     <button
-                                      class="AddRecipient__InputButtonStyled-sc-1tdk8mn-0 kA-DCn"
+                                      class="AddRecipient__InputButtonStyled-sc-1tdk8mn-0 dgkajH"
                                       data-testid="AddRecipient__send-all"
                                       type="button"
                                     >
@@ -2810,7 +2810,7 @@ exports[`SendTransfer should render form and use location state 1`] = `
                           </span>
                         </label>
                         <div
-                          class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                          class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                         >
                           <div
                             class="relative flex flex-1 h-full"
@@ -2877,7 +2877,7 @@ exports[`SendTransfer should render form and use location state 1`] = `
                                   class="Toggle__Handle-sc-6s3wfu-2 jRjdQR"
                                 >
                                   <span
-                                    class="Toggle__HandleInner-sc-6s3wfu-3 gNamtB"
+                                    class="Toggle__HandleInner-sc-6s3wfu-3 fiPeMI"
                                   />
                                 </div>
                               </label>
@@ -2897,7 +2897,7 @@ exports[`SendTransfer should render form and use location state 1`] = `
                             <button
                               aria-checked="false"
                               aria-label="0.00357"
-                              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
+                              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ZQFGq"
                               data-testid="ButtonGroupOption"
                               role="radio"
                               type="button"
@@ -2919,7 +2919,7 @@ exports[`SendTransfer should render form and use location state 1`] = `
                             <button
                               aria-checked="true"
                               aria-label="0.07320598"
-                              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
+                              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ZQFGq"
                               data-testid="ButtonGroupOption"
                               role="radio"
                               type="button"
@@ -2941,7 +2941,7 @@ exports[`SendTransfer should render form and use location state 1`] = `
                             <button
                               aria-checked="false"
                               aria-label="0.1"
-                              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
+                              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ZQFGq"
                               data-testid="ButtonGroupOption"
                               role="radio"
                               type="button"
@@ -2970,7 +2970,7 @@ exports[`SendTransfer should render form and use location state 1`] = `
                   class="StepNavigation__StepNavigationWrapper-sc-1sww2ka-0 eCydZT"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="StepNavigation__back-button"
                     type="button"
                   >
@@ -2981,7 +2981,7 @@ exports[`SendTransfer should render form and use location state 1`] = `
                     </div>
                   </button>
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 dQCpEO"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 kkDhXe"
                     data-testid="StepNavigation__continue-button"
                     disabled=""
                     type="button"
@@ -3016,7 +3016,7 @@ exports[`SendTransfer should render form and use location state without memo 1`]
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -3112,7 +3112,7 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                     class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -3151,7 +3151,7 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -3181,7 +3181,7 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -3240,7 +3240,7 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -3484,7 +3484,7 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                               </div>
                             </span>
                             <div
-                              class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                              class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                             >
                               <div
                                 class="Avatar__AvatarWrapper-sc-18vw8a4-0 jiaHcL flex-shrink-0"
@@ -3574,7 +3574,7 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                                       class="Toggle__Handle-sc-6s3wfu-2 jRjdQR"
                                     >
                                       <span
-                                        class="Toggle__HandleInner-sc-6s3wfu-3 gNamtB"
+                                        class="Toggle__HandleInner-sc-6s3wfu-3 fiPeMI"
                                       />
                                     </div>
                                   </label>
@@ -3619,7 +3619,7 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                                       class="relative w-full"
                                     >
                                       <div
-                                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF sr-only"
+                                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR sr-only"
                                       >
                                         <div
                                           class="relative flex flex-1 h-full"
@@ -3649,7 +3649,7 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                                             id="SelectRecipient__dropdown-label"
                                           />
                                           <div
-                                            class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                                            class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                                           >
                                             <div
                                               class="flex items-center"
@@ -3700,7 +3700,7 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                                           </div>
                                           <ul
                                             aria-labelledby="SelectRecipient__dropdown-label"
-                                            class="styles__SelectOptionsList-sc-120rtxy-0 HcHWp"
+                                            class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc"
                                             id="SelectRecipient__dropdown-menu"
                                             role="listbox"
                                           />
@@ -3744,7 +3744,7 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                                       class="relative"
                                     >
                                       <div
-                                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                                       >
                                         <div
                                           class="relative flex flex-1 h-full"
@@ -3765,7 +3765,7 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                                     class="inline-flex"
                                   >
                                     <button
-                                      class="AddRecipient__InputButtonStyled-sc-1tdk8mn-0 kA-DCn"
+                                      class="AddRecipient__InputButtonStyled-sc-1tdk8mn-0 dgkajH"
                                       data-testid="AddRecipient__send-all"
                                       type="button"
                                     >
@@ -3795,7 +3795,7 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                           </span>
                         </label>
                         <div
-                          class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                          class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                         >
                           <div
                             class="relative flex flex-1 h-full"
@@ -3862,7 +3862,7 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                                   class="Toggle__Handle-sc-6s3wfu-2 jRjdQR"
                                 >
                                   <span
-                                    class="Toggle__HandleInner-sc-6s3wfu-3 gNamtB"
+                                    class="Toggle__HandleInner-sc-6s3wfu-3 fiPeMI"
                                   />
                                 </div>
                               </label>
@@ -3882,7 +3882,7 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                             <button
                               aria-checked="false"
                               aria-label="0.00357"
-                              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
+                              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ZQFGq"
                               data-testid="ButtonGroupOption"
                               role="radio"
                               type="button"
@@ -3904,7 +3904,7 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                             <button
                               aria-checked="true"
                               aria-label="0.07320598"
-                              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
+                              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ZQFGq"
                               data-testid="ButtonGroupOption"
                               role="radio"
                               type="button"
@@ -3926,7 +3926,7 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                             <button
                               aria-checked="false"
                               aria-label="0.1"
-                              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
+                              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ZQFGq"
                               data-testid="ButtonGroupOption"
                               role="radio"
                               type="button"
@@ -3955,7 +3955,7 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                   class="StepNavigation__StepNavigationWrapper-sc-1sww2ka-0 eCydZT"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="StepNavigation__back-button"
                     type="button"
                   >
@@ -3966,7 +3966,7 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                     </div>
                   </button>
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 dQCpEO"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 kkDhXe"
                     data-testid="StepNavigation__continue-button"
                     disabled=""
                     type="button"
@@ -4129,7 +4129,7 @@ exports[`SendTransfer should render form step 1`] = `
               />
             </span>
             <div
-              class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+              class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
             >
               <div
                 class="Circle__CircleWrapper-sc-d5u41q-0 bcplCx bg-theme-secondary-200 border-theme-secondary-200 dark:bg-theme-secondary-700 dark:border-theme-secondary-700 ring-theme-background"
@@ -4208,7 +4208,7 @@ exports[`SendTransfer should render form step 1`] = `
                       class="Toggle__Handle-sc-6s3wfu-2 jRjdQR"
                     >
                       <span
-                        class="Toggle__HandleInner-sc-6s3wfu-3 gNamtB"
+                        class="Toggle__HandleInner-sc-6s3wfu-3 fiPeMI"
                       />
                     </div>
                   </label>
@@ -4253,7 +4253,7 @@ exports[`SendTransfer should render form step 1`] = `
                       class="relative w-full"
                     >
                       <div
-                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF sr-only"
+                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR sr-only"
                       >
                         <div
                           class="relative flex flex-1 h-full"
@@ -4336,7 +4336,7 @@ exports[`SendTransfer should render form step 1`] = `
                           </div>
                           <ul
                             aria-labelledby="SelectRecipient__dropdown-label"
-                            class="styles__SelectOptionsList-sc-120rtxy-0 HcHWp"
+                            class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc"
                             id="SelectRecipient__dropdown-menu"
                             role="listbox"
                           />
@@ -4391,7 +4391,7 @@ exports[`SendTransfer should render form step 1`] = `
                     class="inline-flex"
                   >
                     <button
-                      class="AddRecipient__InputButtonStyled-sc-1tdk8mn-0 kA-DCn"
+                      class="AddRecipient__InputButtonStyled-sc-1tdk8mn-0 dgkajH"
                       data-testid="AddRecipient__send-all"
                       disabled=""
                       type="button"
@@ -4422,7 +4422,7 @@ exports[`SendTransfer should render form step 1`] = `
           </span>
         </label>
         <div
-          class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+          class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
         >
           <div
             class="relative flex flex-1 h-full"
@@ -4489,7 +4489,7 @@ exports[`SendTransfer should render form step 1`] = `
                   class="Toggle__Handle-sc-6s3wfu-2 jRjdQR"
                 >
                   <span
-                    class="Toggle__HandleInner-sc-6s3wfu-3 gNamtB"
+                    class="Toggle__HandleInner-sc-6s3wfu-3 fiPeMI"
                   />
                 </div>
               </label>
@@ -4509,7 +4509,7 @@ exports[`SendTransfer should render form step 1`] = `
             <button
               aria-checked="false"
               aria-label="0.00357"
-              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
+              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ZQFGq"
               data-testid="ButtonGroupOption"
               role="radio"
               type="button"
@@ -4531,7 +4531,7 @@ exports[`SendTransfer should render form step 1`] = `
             <button
               aria-checked="true"
               aria-label="0.07320598"
-              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
+              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ZQFGq"
               data-testid="ButtonGroupOption"
               role="radio"
               type="button"
@@ -4553,7 +4553,7 @@ exports[`SendTransfer should render form step 1`] = `
             <button
               aria-checked="false"
               aria-label="0.1"
-              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
+              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ZQFGq"
               data-testid="ButtonGroupOption"
               role="radio"
               type="button"
@@ -4739,7 +4739,7 @@ exports[`SendTransfer should render form step with deeplink values and use them 
               </div>
             </span>
             <div
-              class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+              class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
             >
               <div
                 class="Avatar__AvatarWrapper-sc-18vw8a4-0 jiaHcL flex-shrink-0"
@@ -4829,7 +4829,7 @@ exports[`SendTransfer should render form step with deeplink values and use them 
                       class="Toggle__Handle-sc-6s3wfu-2 jRjdQR"
                     >
                       <span
-                        class="Toggle__HandleInner-sc-6s3wfu-3 gNamtB"
+                        class="Toggle__HandleInner-sc-6s3wfu-3 fiPeMI"
                       />
                     </div>
                   </label>
@@ -4874,7 +4874,7 @@ exports[`SendTransfer should render form step with deeplink values and use them 
                       class="relative w-full"
                     >
                       <div
-                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF sr-only"
+                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR sr-only"
                       >
                         <div
                           class="relative flex flex-1 h-full"
@@ -4904,7 +4904,7 @@ exports[`SendTransfer should render form step with deeplink values and use them 
                             id="SelectRecipient__dropdown-label"
                           />
                           <div
-                            class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                            class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                           >
                             <div
                               class="flex items-center"
@@ -4966,7 +4966,7 @@ exports[`SendTransfer should render form step with deeplink values and use them 
                           </div>
                           <ul
                             aria-labelledby="SelectRecipient__dropdown-label"
-                            class="styles__SelectOptionsList-sc-120rtxy-0 HcHWp"
+                            class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc"
                             id="SelectRecipient__dropdown-menu"
                             role="listbox"
                           />
@@ -5010,7 +5010,7 @@ exports[`SendTransfer should render form step with deeplink values and use them 
                       class="relative"
                     >
                       <div
-                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                       >
                         <div
                           class="relative flex flex-1 h-full"
@@ -5031,7 +5031,7 @@ exports[`SendTransfer should render form step with deeplink values and use them 
                     class="inline-flex"
                   >
                     <button
-                      class="AddRecipient__InputButtonStyled-sc-1tdk8mn-0 kA-DCn"
+                      class="AddRecipient__InputButtonStyled-sc-1tdk8mn-0 dgkajH"
                       data-testid="AddRecipient__send-all"
                       type="button"
                     >
@@ -5061,7 +5061,7 @@ exports[`SendTransfer should render form step with deeplink values and use them 
           </span>
         </label>
         <div
-          class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+          class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
         >
           <div
             class="relative flex flex-1 h-full"
@@ -5128,7 +5128,7 @@ exports[`SendTransfer should render form step with deeplink values and use them 
                   class="Toggle__Handle-sc-6s3wfu-2 jRjdQR"
                 >
                   <span
-                    class="Toggle__HandleInner-sc-6s3wfu-3 gNamtB"
+                    class="Toggle__HandleInner-sc-6s3wfu-3 fiPeMI"
                   />
                 </div>
               </label>
@@ -5148,7 +5148,7 @@ exports[`SendTransfer should render form step with deeplink values and use them 
             <button
               aria-checked="false"
               aria-label="0.00357"
-              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
+              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ZQFGq"
               data-testid="ButtonGroupOption"
               role="radio"
               type="button"
@@ -5170,7 +5170,7 @@ exports[`SendTransfer should render form step with deeplink values and use them 
             <button
               aria-checked="true"
               aria-label="0.07320598"
-              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
+              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ZQFGq"
               data-testid="ButtonGroupOption"
               role="radio"
               type="button"
@@ -5192,7 +5192,7 @@ exports[`SendTransfer should render form step with deeplink values and use them 
             <button
               aria-checked="false"
               aria-label="0.1"
-              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
+              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ZQFGq"
               data-testid="ButtonGroupOption"
               role="radio"
               type="button"
@@ -5462,7 +5462,7 @@ exports[`SendTransfer should render form step without test networks 1`] = `
                       class="Toggle__Handle-sc-6s3wfu-2 cobHFC"
                     >
                       <span
-                        class="Toggle__HandleInner-sc-6s3wfu-3 klclKD"
+                        class="Toggle__HandleInner-sc-6s3wfu-3 ddepvC"
                       />
                     </div>
                   </label>
@@ -5589,7 +5589,7 @@ exports[`SendTransfer should render form step without test networks 1`] = `
               />
             </span>
             <div
-              class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+              class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
             >
               <div
                 class="Circle__CircleWrapper-sc-d5u41q-0 bcplCx bg-theme-secondary-200 border-theme-secondary-200 dark:bg-theme-secondary-700 dark:border-theme-secondary-700 ring-theme-background"
@@ -5668,7 +5668,7 @@ exports[`SendTransfer should render form step without test networks 1`] = `
                       class="Toggle__Handle-sc-6s3wfu-2 jRjdQR"
                     >
                       <span
-                        class="Toggle__HandleInner-sc-6s3wfu-3 gNamtB"
+                        class="Toggle__HandleInner-sc-6s3wfu-3 fiPeMI"
                       />
                     </div>
                   </label>
@@ -5713,7 +5713,7 @@ exports[`SendTransfer should render form step without test networks 1`] = `
                       class="relative w-full"
                     >
                       <div
-                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF sr-only"
+                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR sr-only"
                       >
                         <div
                           class="relative flex flex-1 h-full"
@@ -5796,7 +5796,7 @@ exports[`SendTransfer should render form step without test networks 1`] = `
                           </div>
                           <ul
                             aria-labelledby="SelectRecipient__dropdown-label"
-                            class="styles__SelectOptionsList-sc-120rtxy-0 HcHWp"
+                            class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc"
                             id="SelectRecipient__dropdown-menu"
                             role="listbox"
                           />
@@ -5851,7 +5851,7 @@ exports[`SendTransfer should render form step without test networks 1`] = `
                     class="inline-flex"
                   >
                     <button
-                      class="AddRecipient__InputButtonStyled-sc-1tdk8mn-0 kA-DCn"
+                      class="AddRecipient__InputButtonStyled-sc-1tdk8mn-0 dgkajH"
                       data-testid="AddRecipient__send-all"
                       disabled=""
                       type="button"
@@ -5882,7 +5882,7 @@ exports[`SendTransfer should render form step without test networks 1`] = `
           </span>
         </label>
         <div
-          class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+          class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
         >
           <div
             class="relative flex flex-1 h-full"
@@ -5949,7 +5949,7 @@ exports[`SendTransfer should render form step without test networks 1`] = `
                   class="Toggle__Handle-sc-6s3wfu-2 jRjdQR"
                 >
                   <span
-                    class="Toggle__HandleInner-sc-6s3wfu-3 gNamtB"
+                    class="Toggle__HandleInner-sc-6s3wfu-3 fiPeMI"
                   />
                 </div>
               </label>
@@ -5969,7 +5969,7 @@ exports[`SendTransfer should render form step without test networks 1`] = `
             <button
               aria-checked="false"
               aria-label="0.00357"
-              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
+              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ZQFGq"
               data-testid="ButtonGroupOption"
               role="radio"
               type="button"
@@ -5991,7 +5991,7 @@ exports[`SendTransfer should render form step without test networks 1`] = `
             <button
               aria-checked="true"
               aria-label="0.07320598"
-              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
+              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ZQFGq"
               data-testid="ButtonGroupOption"
               role="radio"
               type="button"
@@ -6013,7 +6013,7 @@ exports[`SendTransfer should render form step without test networks 1`] = `
             <button
               aria-checked="false"
               aria-label="0.1"
-              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
+              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ZQFGq"
               data-testid="ButtonGroupOption"
               role="radio"
               type="button"
@@ -6053,7 +6053,7 @@ exports[`SendTransfer should render network selection without selected wallet 1`
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -6149,7 +6149,7 @@ exports[`SendTransfer should render network selection without selected wallet 1`
                     class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -6188,7 +6188,7 @@ exports[`SendTransfer should render network selection without selected wallet 1`
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -6218,7 +6218,7 @@ exports[`SendTransfer should render network selection without selected wallet 1`
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -6277,7 +6277,7 @@ exports[`SendTransfer should render network selection without selected wallet 1`
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -6387,7 +6387,7 @@ exports[`SendTransfer should render network selection without selected wallet 1`
                             id="SendTransfer__network-step__select-label"
                           />
                           <div
-                            class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                            class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                           >
                             <div
                               class="Circle__CircleWrapper-sc-d5u41q-0 bcplCx border-theme-secondary-200 dark:border-theme-secondary-700 text-theme-secondary-500 ring-theme-background"
@@ -6470,7 +6470,7 @@ exports[`SendTransfer should render network selection without selected wallet 1`
                   class="StepNavigation__StepNavigationWrapper-sc-1sww2ka-0 eCydZT"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="StepNavigation__back-button"
                     type="button"
                   >
@@ -6481,7 +6481,7 @@ exports[`SendTransfer should render network selection without selected wallet 1`
                     </div>
                   </button>
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 dQCpEO"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 kkDhXe"
                     data-testid="StepNavigation__continue-button"
                     disabled=""
                     type="button"
@@ -6552,7 +6552,7 @@ exports[`SendTransfer should render network step without test networks 1`] = `
             id="SendTransfer__network-step__select-label"
           />
           <div
-            class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+            class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
           >
             <div
               aria-label="ARK Devnet"
@@ -6733,7 +6733,7 @@ exports[`SendTransfer should render network step without test networks 1`] = `
                     class="Toggle__Handle-sc-6s3wfu-2 cobHFC"
                   >
                     <span
-                      class="Toggle__HandleInner-sc-6s3wfu-3 klclKD"
+                      class="Toggle__HandleInner-sc-6s3wfu-3 ddepvC"
                     />
                   </div>
                 </label>
@@ -6855,7 +6855,7 @@ exports[`SendTransfer should render review step 1`] = `
         class="flex items-center -space-x-1"
       >
         <div
-          class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+          class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
           data-testid="Avatar"
         >
           <div
@@ -6912,7 +6912,7 @@ exports[`SendTransfer should render review step 1`] = `
         class="flex items-center -space-x-1"
       >
         <div
-          class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+          class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
           data-testid="Avatar"
         >
           <div
@@ -7147,7 +7147,7 @@ exports[`SendTransfer should render review step with multiple recipients (with m
         class="flex items-center -space-x-1"
       >
         <div
-          class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+          class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
           data-testid="Avatar"
         >
           <div
@@ -7246,7 +7246,7 @@ exports[`SendTransfer should render review step with multiple recipients (with m
                   >
                     <td>
                       <div
-                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 SfPfF flex-shrink-0"
+                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 krsvod flex-shrink-0"
                         data-testid="Avatar"
                       >
                         <div
@@ -7291,7 +7291,7 @@ exports[`SendTransfer should render review step with multiple recipients (with m
                   >
                     <td>
                       <div
-                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 SfPfF flex-shrink-0"
+                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 krsvod flex-shrink-0"
                         data-testid="Avatar"
                       >
                         <div
@@ -7557,7 +7557,7 @@ exports[`SendTransfer should render review step with multiple recipients (withou
         class="flex items-center -space-x-1"
       >
         <div
-          class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+          class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
           data-testid="Avatar"
         >
           <div
@@ -7656,7 +7656,7 @@ exports[`SendTransfer should render review step with multiple recipients (withou
                   >
                     <td>
                       <div
-                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 SfPfF flex-shrink-0"
+                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 krsvod flex-shrink-0"
                         data-testid="Avatar"
                       >
                         <div
@@ -7701,7 +7701,7 @@ exports[`SendTransfer should render review step with multiple recipients (withou
                   >
                     <td>
                       <div
-                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 SfPfF flex-shrink-0"
+                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 krsvod flex-shrink-0"
                         data-testid="Avatar"
                       >
                         <div
@@ -7980,7 +7980,7 @@ exports[`SendTransfer should render summary step 1`] = `
           class="flex items-center"
         >
           <div
-            class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
             data-testid="Avatar"
           >
             <div
@@ -8072,7 +8072,7 @@ exports[`SendTransfer should render summary step 1`] = `
           class="flex items-center -space-x-1"
         >
           <div
-            class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
             data-testid="Avatar"
           >
             <div
@@ -8157,7 +8157,7 @@ exports[`SendTransfer should render summary step 1`] = `
                     >
                       <td>
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 SfPfF flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 krsvod flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -8192,7 +8192,7 @@ exports[`SendTransfer should render summary step 1`] = `
                     >
                       <td>
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 SfPfF flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 krsvod flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -8331,7 +8331,7 @@ exports[`SendTransfer should render summary step 1`] = `
           class="flex items-center -space-x-1"
         >
           <div
-            class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
             data-testid="Avatar"
           >
             <div
@@ -8434,7 +8434,7 @@ exports[`SendTransfer should select a cryptoasset and select sender without wall
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -8530,7 +8530,7 @@ exports[`SendTransfer should select a cryptoasset and select sender without wall
                     class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -8569,7 +8569,7 @@ exports[`SendTransfer should select a cryptoasset and select sender without wall
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -8599,7 +8599,7 @@ exports[`SendTransfer should select a cryptoasset and select sender without wall
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -8658,7 +8658,7 @@ exports[`SendTransfer should select a cryptoasset and select sender without wall
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -8907,7 +8907,7 @@ exports[`SendTransfer should select a cryptoasset and select sender without wall
                               </div>
                             </span>
                             <div
-                              class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                              class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                             >
                               <div
                                 class="Avatar__AvatarWrapper-sc-18vw8a4-0 jiaHcL flex-shrink-0"
@@ -8997,7 +8997,7 @@ exports[`SendTransfer should select a cryptoasset and select sender without wall
                                       class="Toggle__Handle-sc-6s3wfu-2 jRjdQR"
                                     >
                                       <span
-                                        class="Toggle__HandleInner-sc-6s3wfu-3 gNamtB"
+                                        class="Toggle__HandleInner-sc-6s3wfu-3 fiPeMI"
                                       />
                                     </div>
                                   </label>
@@ -9042,7 +9042,7 @@ exports[`SendTransfer should select a cryptoasset and select sender without wall
                                       class="relative w-full"
                                     >
                                       <div
-                                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF sr-only"
+                                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR sr-only"
                                       >
                                         <div
                                           class="relative flex flex-1 h-full"
@@ -9072,7 +9072,7 @@ exports[`SendTransfer should select a cryptoasset and select sender without wall
                                             id="SelectRecipient__dropdown-label"
                                           />
                                           <div
-                                            class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                                            class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                                           >
                                             <div
                                               class="flex items-center"
@@ -9123,7 +9123,7 @@ exports[`SendTransfer should select a cryptoasset and select sender without wall
                                           </div>
                                           <ul
                                             aria-labelledby="SelectRecipient__dropdown-label"
-                                            class="styles__SelectOptionsList-sc-120rtxy-0 HcHWp"
+                                            class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc"
                                             id="SelectRecipient__dropdown-menu"
                                             role="listbox"
                                           />
@@ -9169,7 +9169,7 @@ exports[`SendTransfer should select a cryptoasset and select sender without wall
                                       class="relative"
                                     >
                                       <div
-                                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                                       >
                                         <div
                                           class="relative flex flex-1 h-full"
@@ -9190,7 +9190,7 @@ exports[`SendTransfer should select a cryptoasset and select sender without wall
                                     class="inline-flex"
                                   >
                                     <button
-                                      class="AddRecipient__InputButtonStyled-sc-1tdk8mn-0 kA-DCn"
+                                      class="AddRecipient__InputButtonStyled-sc-1tdk8mn-0 dgkajH"
                                       data-testid="AddRecipient__send-all"
                                       type="button"
                                     >
@@ -9220,7 +9220,7 @@ exports[`SendTransfer should select a cryptoasset and select sender without wall
                           </span>
                         </label>
                         <div
-                          class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                          class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                         >
                           <div
                             class="relative flex flex-1 h-full"
@@ -9289,7 +9289,7 @@ exports[`SendTransfer should select a cryptoasset and select sender without wall
                                   class="Toggle__Handle-sc-6s3wfu-2 jRjdQR"
                                 >
                                   <span
-                                    class="Toggle__HandleInner-sc-6s3wfu-3 gNamtB"
+                                    class="Toggle__HandleInner-sc-6s3wfu-3 fiPeMI"
                                   />
                                 </div>
                               </label>
@@ -9309,7 +9309,7 @@ exports[`SendTransfer should select a cryptoasset and select sender without wall
                             <button
                               aria-checked="false"
                               aria-label="0.00357"
-                              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
+                              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ZQFGq"
                               data-testid="ButtonGroupOption"
                               role="radio"
                               type="button"
@@ -9331,7 +9331,7 @@ exports[`SendTransfer should select a cryptoasset and select sender without wall
                             <button
                               aria-checked="true"
                               aria-label="0.07320598"
-                              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
+                              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ZQFGq"
                               data-testid="ButtonGroupOption"
                               role="radio"
                               type="button"
@@ -9353,7 +9353,7 @@ exports[`SendTransfer should select a cryptoasset and select sender without wall
                             <button
                               aria-checked="false"
                               aria-label="0.1"
-                              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
+                              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ZQFGq"
                               data-testid="ButtonGroupOption"
                               role="radio"
                               type="button"
@@ -9382,7 +9382,7 @@ exports[`SendTransfer should select a cryptoasset and select sender without wall
                   class="StepNavigation__StepNavigationWrapper-sc-1sww2ka-0 eCydZT"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="StepNavigation__back-button"
                     type="button"
                   >
@@ -9393,7 +9393,7 @@ exports[`SendTransfer should select a cryptoasset and select sender without wall
                     </div>
                   </button>
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 dQCpEO"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 kkDhXe"
                     data-testid="StepNavigation__continue-button"
                     disabled=""
                     type="button"
@@ -9428,7 +9428,7 @@ exports[`SendTransfer should select cryptoasset 1`] = `
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -9524,7 +9524,7 @@ exports[`SendTransfer should select cryptoasset 1`] = `
                     class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -9563,7 +9563,7 @@ exports[`SendTransfer should select cryptoasset 1`] = `
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -9593,7 +9593,7 @@ exports[`SendTransfer should select cryptoasset 1`] = `
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -9652,7 +9652,7 @@ exports[`SendTransfer should select cryptoasset 1`] = `
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -9762,7 +9762,7 @@ exports[`SendTransfer should select cryptoasset 1`] = `
                             id="SendTransfer__network-step__select-label"
                           />
                           <div
-                            class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                            class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                           >
                             <div
                               aria-label="ARK Devnet"
@@ -9857,7 +9857,7 @@ exports[`SendTransfer should select cryptoasset 1`] = `
                   class="StepNavigation__StepNavigationWrapper-sc-1sww2ka-0 eCydZT"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="StepNavigation__back-button"
                     type="button"
                   >
@@ -9868,7 +9868,7 @@ exports[`SendTransfer should select cryptoasset 1`] = `
                     </div>
                   </button>
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
                     data-testid="StepNavigation__continue-button"
                     type="button"
                   >
@@ -9902,7 +9902,7 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -9998,7 +9998,7 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
                     class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -10037,7 +10037,7 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -10067,7 +10067,7 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -10126,7 +10126,7 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -10245,7 +10245,7 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
                                   to="https://dexplorer.ark.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
                                 >
                                   <span
-                                    class="Link__Content-sc-ec014t-1 jGLnf"
+                                    class="Link__Content-sc-ec014t-1 fPOlTq"
                                   >
                                     <span
                                       class="inline-flex overflow-hidden"
@@ -10398,7 +10398,7 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
                           class="flex items-center -space-x-1"
                         >
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -10444,7 +10444,7 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
                           class="flex items-center -space-x-1"
                         >
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -10536,7 +10536,7 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
                   class="StepNavigation__StepNavigationWrapper-sc-1sww2ka-0 eCydZT"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="StepNavigation__back-to-wallet-button"
                     type="button"
                   >
@@ -10570,7 +10570,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -10666,7 +10666,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                     class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -10705,7 +10705,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -10735,7 +10735,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -10794,7 +10794,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -10913,7 +10913,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                                   to="https://dexplorer.ark.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
                                 >
                                   <span
-                                    class="Link__Content-sc-ec014t-1 jGLnf"
+                                    class="Link__Content-sc-ec014t-1 fPOlTq"
                                   >
                                     <span
                                       class="inline-flex overflow-hidden"
@@ -11066,7 +11066,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                           class="flex items-center -space-x-1"
                         >
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -11112,7 +11112,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                           class="flex items-center -space-x-1"
                         >
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -11204,7 +11204,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                   class="StepNavigation__StepNavigationWrapper-sc-1sww2ka-0 eCydZT"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="StepNavigation__back-to-wallet-button"
                     type="button"
                   >
@@ -11233,7 +11233,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                     class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB w-11 h-11"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 h-11"
                       data-testid="modal__close-btn"
                       type="button"
                     >
@@ -11528,7 +11528,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                         class="flex justify-end mt-8 space-x-3"
                       >
                         <button
-                          class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                          class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                           data-testid="ConfirmSendTransaction__cancel"
                           type="button"
                         >
@@ -11539,7 +11539,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                           </div>
                         </button>
                         <button
-                          class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+                          class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
                           data-testid="ConfirmSendTransaction__confirm"
                           type="submit"
                         >
@@ -11576,7 +11576,7 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -11672,7 +11672,7 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
                     class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -11711,7 +11711,7 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -11741,7 +11741,7 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -11800,7 +11800,7 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -11919,7 +11919,7 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
                                   to="https://dexplorer.ark.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
                                 >
                                   <span
-                                    class="Link__Content-sc-ec014t-1 jGLnf"
+                                    class="Link__Content-sc-ec014t-1 fPOlTq"
                                   >
                                     <span
                                       class="inline-flex overflow-hidden"
@@ -12072,7 +12072,7 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
                           class="flex items-center -space-x-1"
                         >
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -12118,7 +12118,7 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
                           class="flex items-center -space-x-1"
                         >
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -12210,7 +12210,7 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
                   class="StepNavigation__StepNavigationWrapper-sc-1sww2ka-0 eCydZT"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="StepNavigation__back-to-wallet-button"
                     type="button"
                   >
@@ -12244,7 +12244,7 @@ exports[`SendTransfer should send a single transfer with a high fee by confirmin
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -12340,7 +12340,7 @@ exports[`SendTransfer should send a single transfer with a high fee by confirmin
                     class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -12379,7 +12379,7 @@ exports[`SendTransfer should send a single transfer with a high fee by confirmin
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -12409,7 +12409,7 @@ exports[`SendTransfer should send a single transfer with a high fee by confirmin
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -12468,7 +12468,7 @@ exports[`SendTransfer should send a single transfer with a high fee by confirmin
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -12587,7 +12587,7 @@ exports[`SendTransfer should send a single transfer with a high fee by confirmin
                                   to="https://dexplorer.ark.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
                                 >
                                   <span
-                                    class="Link__Content-sc-ec014t-1 jGLnf"
+                                    class="Link__Content-sc-ec014t-1 fPOlTq"
                                   >
                                     <span
                                       class="inline-flex overflow-hidden"
@@ -12740,7 +12740,7 @@ exports[`SendTransfer should send a single transfer with a high fee by confirmin
                           class="flex items-center -space-x-1"
                         >
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -12786,7 +12786,7 @@ exports[`SendTransfer should send a single transfer with a high fee by confirmin
                           class="flex items-center -space-x-1"
                         >
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -12878,7 +12878,7 @@ exports[`SendTransfer should send a single transfer with a high fee by confirmin
                   class="StepNavigation__StepNavigationWrapper-sc-1sww2ka-0 eCydZT"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="StepNavigation__back-to-wallet-button"
                     type="button"
                   >
@@ -12912,7 +12912,7 @@ exports[`SendTransfer should send a single transfer with a low fee by confirming
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -13008,7 +13008,7 @@ exports[`SendTransfer should send a single transfer with a low fee by confirming
                     class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -13047,7 +13047,7 @@ exports[`SendTransfer should send a single transfer with a low fee by confirming
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -13077,7 +13077,7 @@ exports[`SendTransfer should send a single transfer with a low fee by confirming
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -13136,7 +13136,7 @@ exports[`SendTransfer should send a single transfer with a low fee by confirming
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -13255,7 +13255,7 @@ exports[`SendTransfer should send a single transfer with a low fee by confirming
                                   to="https://dexplorer.ark.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
                                 >
                                   <span
-                                    class="Link__Content-sc-ec014t-1 jGLnf"
+                                    class="Link__Content-sc-ec014t-1 fPOlTq"
                                   >
                                     <span
                                       class="inline-flex overflow-hidden"
@@ -13408,7 +13408,7 @@ exports[`SendTransfer should send a single transfer with a low fee by confirming
                           class="flex items-center -space-x-1"
                         >
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -13454,7 +13454,7 @@ exports[`SendTransfer should send a single transfer with a low fee by confirming
                           class="flex items-center -space-x-1"
                         >
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -13546,7 +13546,7 @@ exports[`SendTransfer should send a single transfer with a low fee by confirming
                   class="StepNavigation__StepNavigationWrapper-sc-1sww2ka-0 eCydZT"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="StepNavigation__back-to-wallet-button"
                     type="button"
                   >
@@ -13580,7 +13580,7 @@ exports[`SendTransfer should send a single transfer with keyboard 1`] = `
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -13676,7 +13676,7 @@ exports[`SendTransfer should send a single transfer with keyboard 1`] = `
                     class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -13715,7 +13715,7 @@ exports[`SendTransfer should send a single transfer with keyboard 1`] = `
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -13745,7 +13745,7 @@ exports[`SendTransfer should send a single transfer with keyboard 1`] = `
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -13804,7 +13804,7 @@ exports[`SendTransfer should send a single transfer with keyboard 1`] = `
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -13923,7 +13923,7 @@ exports[`SendTransfer should send a single transfer with keyboard 1`] = `
                                   to="https://dexplorer.ark.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
                                 >
                                   <span
-                                    class="Link__Content-sc-ec014t-1 jGLnf"
+                                    class="Link__Content-sc-ec014t-1 fPOlTq"
                                   >
                                     <span
                                       class="inline-flex overflow-hidden"
@@ -14076,7 +14076,7 @@ exports[`SendTransfer should send a single transfer with keyboard 1`] = `
                           class="flex items-center -space-x-1"
                         >
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -14122,7 +14122,7 @@ exports[`SendTransfer should send a single transfer with keyboard 1`] = `
                           class="flex items-center -space-x-1"
                         >
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -14214,7 +14214,7 @@ exports[`SendTransfer should send a single transfer with keyboard 1`] = `
                   class="StepNavigation__StepNavigationWrapper-sc-1sww2ka-0 eCydZT"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="StepNavigation__back-to-wallet-button"
                     type="button"
                   >
@@ -14248,7 +14248,7 @@ exports[`SendTransfer should send a single transfer without keyboard 1`] = `
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -14344,7 +14344,7 @@ exports[`SendTransfer should send a single transfer without keyboard 1`] = `
                     class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -14383,7 +14383,7 @@ exports[`SendTransfer should send a single transfer without keyboard 1`] = `
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -14413,7 +14413,7 @@ exports[`SendTransfer should send a single transfer without keyboard 1`] = `
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -14472,7 +14472,7 @@ exports[`SendTransfer should send a single transfer without keyboard 1`] = `
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -14591,7 +14591,7 @@ exports[`SendTransfer should send a single transfer without keyboard 1`] = `
                                   to="https://dexplorer.ark.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
                                 >
                                   <span
-                                    class="Link__Content-sc-ec014t-1 jGLnf"
+                                    class="Link__Content-sc-ec014t-1 fPOlTq"
                                   >
                                     <span
                                       class="inline-flex overflow-hidden"
@@ -14744,7 +14744,7 @@ exports[`SendTransfer should send a single transfer without keyboard 1`] = `
                           class="flex items-center -space-x-1"
                         >
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -14790,7 +14790,7 @@ exports[`SendTransfer should send a single transfer without keyboard 1`] = `
                           class="flex items-center -space-x-1"
                         >
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -14882,7 +14882,7 @@ exports[`SendTransfer should send a single transfer without keyboard 1`] = `
                   class="StepNavigation__StepNavigationWrapper-sc-1sww2ka-0 eCydZT"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="StepNavigation__back-to-wallet-button"
                     type="button"
                   >
@@ -14916,7 +14916,7 @@ exports[`SendTransfer should show error step and go back 1`] = `
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -15012,7 +15012,7 @@ exports[`SendTransfer should show error step and go back 1`] = `
                     class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -15051,7 +15051,7 @@ exports[`SendTransfer should show error step and go back 1`] = `
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -15081,7 +15081,7 @@ exports[`SendTransfer should show error step and go back 1`] = `
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -15140,7 +15140,7 @@ exports[`SendTransfer should show error step and go back 1`] = `
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -15257,7 +15257,7 @@ exports[`SendTransfer should show error step and go back 1`] = `
                           class="relative"
                         >
                           <button
-                            class="ClipboardButton__StyledButton-sc-cammp1-0 jdMWag"
+                            class="ClipboardButton__StyledButton-sc-cammp1-0 bAhMDA"
                             data-testid="clipboard-button__wrapper"
                             type="button"
                           >
@@ -15284,7 +15284,7 @@ exports[`SendTransfer should show error step and go back 1`] = `
                         class="flex space-x-3"
                       >
                         <button
-                          class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                          class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                           data-testid="ErrorStep__wallet-button"
                           type="button"
                         >
@@ -15295,7 +15295,7 @@ exports[`SendTransfer should show error step and go back 1`] = `
                           </div>
                         </button>
                         <button
-                          class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+                          class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
                           data-testid="ErrorStep__repeat-button"
                           type="button"
                         >

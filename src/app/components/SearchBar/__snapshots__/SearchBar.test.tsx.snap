@@ -22,7 +22,7 @@ exports[`SearchBar should render 1`] = `
         class="flex-1 pl-4 mr-4 border-l border-theme-secondary-300 dark:border-theme-secondary-800"
       >
         <div
-          class="Input__InputWrapperStyled-sc-1i8sd1r-0 eyRrGo"
+          class="Input__InputWrapperStyled-sc-1i8sd1r-0 bjEupA"
         >
           <div
             class="relative flex flex-1 h-full"
@@ -37,7 +37,7 @@ exports[`SearchBar should render 1`] = `
         </div>
       </div>
       <button
-        class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ my-1"
+        class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB my-1"
         data-testid="SearchBar__button"
         type="button"
       >

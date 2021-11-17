@@ -13,7 +13,7 @@ exports[`Notifications should open and cancel wallet update notification modal 1
           class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
             data-testid="navbar__buttons--notifications"
             type="button"
           >
@@ -429,7 +429,7 @@ exports[`Notifications should open and cancel wallet update notification modal 1
             class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB w-11 h-11"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 h-11"
               data-testid="modal__close-btn"
               type="button"
             >
@@ -481,7 +481,7 @@ exports[`Notifications should open and cancel wallet update notification modal 1
                   class="flex flex-col justify-center space-x-0 sm:flex-row sm:space-x-3"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc mt-2 sm:mt-0"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk mt-2 sm:mt-0"
                     data-testid="WalletUpdate__cancel-button"
                     type="button"
                   >
@@ -492,7 +492,7 @@ exports[`Notifications should open and cancel wallet update notification modal 1
                     </div>
                   </button>
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
                     data-testid="WalletUpdate__update-button"
                     type="button"
                   >
@@ -526,7 +526,7 @@ exports[`Notifications should open and cancel wallet update notification modal 2
           class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
             data-testid="navbar__buttons--notifications"
             type="button"
           >
@@ -943,7 +943,7 @@ exports[`Notifications should open and close transaction details modal 1`] = `
           class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
             data-testid="navbar__buttons--notifications"
             type="button"
           >
@@ -1359,7 +1359,7 @@ exports[`Notifications should open and close transaction details modal 1`] = `
             class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB w-11 h-11"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 h-11"
               data-testid="modal__close-btn"
               type="button"
             >
@@ -1419,7 +1419,7 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                           to="https://dexplorer.ark.io/transaction/127d323ff3c3a40cb7abec8aa3b045e8c45c72c8feb7dc667d2f85978f8b10cd"
                         >
                           <span
-                            class="Link__Content-sc-ec014t-1 jGLnf"
+                            class="Link__Content-sc-ec014t-1 fPOlTq"
                           >
                             <span
                               class="inline-flex overflow-hidden"
@@ -1505,7 +1505,7 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                   class="flex items-center -space-x-1"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -1562,7 +1562,7 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                   class="flex items-center -space-x-1"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -1758,7 +1758,7 @@ exports[`Notifications should open and close wallet update notification modal 1`
           class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
             data-testid="navbar__buttons--notifications"
             type="button"
           >
@@ -2174,7 +2174,7 @@ exports[`Notifications should open and close wallet update notification modal 1`
             class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB w-11 h-11"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 h-11"
               data-testid="modal__close-btn"
               type="button"
             >
@@ -2226,7 +2226,7 @@ exports[`Notifications should open and close wallet update notification modal 1`
                   class="flex flex-col justify-center space-x-0 sm:flex-row sm:space-x-3"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc mt-2 sm:mt-0"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk mt-2 sm:mt-0"
                     data-testid="WalletUpdate__cancel-button"
                     type="button"
                   >
@@ -2237,7 +2237,7 @@ exports[`Notifications should open and close wallet update notification modal 1`
                     </div>
                   </button>
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
                     data-testid="WalletUpdate__update-button"
                     type="button"
                   >
@@ -2271,7 +2271,7 @@ exports[`Notifications should open and close wallet update notification modal 2`
           class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
             data-testid="navbar__buttons--notifications"
             type="button"
           >
@@ -2688,7 +2688,7 @@ exports[`Notifications should render with transactions and plugins 1`] = `
           class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
             data-testid="navbar__buttons--notifications"
             type="button"
           >

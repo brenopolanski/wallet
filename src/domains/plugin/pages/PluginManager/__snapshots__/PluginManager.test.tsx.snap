@@ -111,7 +111,7 @@ exports[`PluginManager should cancel install plugin 1`] = `
                     class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -150,7 +150,7 @@ exports[`PluginManager should cancel install plugin 1`] = `
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -180,7 +180,7 @@ exports[`PluginManager should cancel install plugin 1`] = `
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -239,7 +239,7 @@ exports[`PluginManager should cancel install plugin 1`] = `
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -303,7 +303,7 @@ exports[`PluginManager should cancel install plugin 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus"
                       type="button"
                     >
                       <div
@@ -329,7 +329,7 @@ exports[`PluginManager should cancel install plugin 1`] = `
                   class="pl-8 my-auto ml-5 h-10 border-l border-theme-secondary-300 dark:border-theme-secondary-800"
                 />
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
                   data-testid="PluginManager_header--install"
                   type="button"
                 >
@@ -370,7 +370,7 @@ exports[`PluginManager should cancel install plugin 1`] = `
             class="-mx-6 w-full"
           >
             <div
-              class="Tabs__TabList-sc-1t8sbwb-1 hePfVa w-full h-18"
+              class="Tabs__TabList-sc-1t8sbwb-1 kukgZl w-full h-18"
             >
               <button
                 aria-selected="true"
@@ -491,7 +491,7 @@ exports[`PluginManager should cancel install plugin 1`] = `
                   class="group"
                 >
                   <button
-                    class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus active"
+                    class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus active"
                     data-testid="LayoutControls__list--icon"
                   >
                     <div
@@ -513,7 +513,7 @@ exports[`PluginManager should cancel install plugin 1`] = `
                   class="group"
                 >
                   <button
-                    class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus"
+                    class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus"
                     data-testid="LayoutControls__grid--icon"
                   >
                     <div
@@ -836,7 +836,7 @@ exports[`PluginManager should cancel install plugin 1`] = `
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB text-theme-primary-600 hover:text-theme-primary-700 -mr-3"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF text-theme-primary-600 hover:text-theme-primary-700 -mr-3"
                             data-testid="PluginListItem__install"
                             type="button"
                           >
@@ -946,7 +946,7 @@ exports[`PluginManager should cancel install plugin 1`] = `
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB text-theme-primary-600 hover:text-theme-primary-700 -mr-3"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF text-theme-primary-600 hover:text-theme-primary-700 -mr-3"
                             data-testid="PluginListItem__install"
                             type="button"
                           >
@@ -1118,7 +1118,7 @@ exports[`PluginManager should disable plugin on my-plugins 1`] = `
                     class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -1157,7 +1157,7 @@ exports[`PluginManager should disable plugin on my-plugins 1`] = `
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -1187,7 +1187,7 @@ exports[`PluginManager should disable plugin on my-plugins 1`] = `
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -1246,7 +1246,7 @@ exports[`PluginManager should disable plugin on my-plugins 1`] = `
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -1310,7 +1310,7 @@ exports[`PluginManager should disable plugin on my-plugins 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus"
                       type="button"
                     >
                       <div
@@ -1336,7 +1336,7 @@ exports[`PluginManager should disable plugin on my-plugins 1`] = `
                   class="pl-8 my-auto ml-5 h-10 border-l border-theme-secondary-300 dark:border-theme-secondary-800"
                 />
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
                   data-testid="PluginManager_header--install"
                   type="button"
                 >
@@ -1377,7 +1377,7 @@ exports[`PluginManager should disable plugin on my-plugins 1`] = `
             class="-mx-6 w-full"
           >
             <div
-              class="Tabs__TabList-sc-1t8sbwb-1 hePfVa w-full h-18"
+              class="Tabs__TabList-sc-1t8sbwb-1 kukgZl w-full h-18"
             >
               <button
                 aria-selected="false"
@@ -1504,7 +1504,7 @@ exports[`PluginManager should disable plugin on my-plugins 1`] = `
                   class="group"
                 >
                   <button
-                    class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus active"
+                    class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus active"
                     data-testid="LayoutControls__list--icon"
                   >
                     <div
@@ -1526,7 +1526,7 @@ exports[`PluginManager should disable plugin on my-plugins 1`] = `
                   class="group"
                 >
                   <button
-                    class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus"
+                    class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus"
                     data-testid="LayoutControls__grid--icon"
                   >
                     <div
@@ -1861,7 +1861,7 @@ exports[`PluginManager should disable plugin on my-plugins 1`] = `
                               class="flex"
                             >
                               <button
-                                class="OriginalButton__StyledButton-sc-o0fs2j-0 nnGbn text-theme-primary-600 hover:text-theme-primary-700 -my-1"
+                                class="OriginalButton__StyledButton-sc-o0fs2j-0 lcpndT text-theme-primary-600 hover:text-theme-primary-700 -my-1"
                                 data-testid="PluginListItem__launch"
                                 disabled=""
                                 type="button"
@@ -1885,7 +1885,7 @@ exports[`PluginManager should disable plugin on my-plugins 1`] = `
                                   class="relative"
                                 >
                                   <button
-                                    class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB text-left text-theme-primary-600 hover:text-theme-primary-700 -mx-3"
+                                    class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF text-left text-theme-primary-600 hover:text-theme-primary-700 -mx-3"
                                     type="button"
                                   >
                                     <div
@@ -2035,7 +2035,7 @@ exports[`PluginManager should enable plugin on my-plugins 1`] = `
                     class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -2074,7 +2074,7 @@ exports[`PluginManager should enable plugin on my-plugins 1`] = `
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -2104,7 +2104,7 @@ exports[`PluginManager should enable plugin on my-plugins 1`] = `
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -2163,7 +2163,7 @@ exports[`PluginManager should enable plugin on my-plugins 1`] = `
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -2227,7 +2227,7 @@ exports[`PluginManager should enable plugin on my-plugins 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus"
                       type="button"
                     >
                       <div
@@ -2253,7 +2253,7 @@ exports[`PluginManager should enable plugin on my-plugins 1`] = `
                   class="pl-8 my-auto ml-5 h-10 border-l border-theme-secondary-300 dark:border-theme-secondary-800"
                 />
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
                   data-testid="PluginManager_header--install"
                   type="button"
                 >
@@ -2294,7 +2294,7 @@ exports[`PluginManager should enable plugin on my-plugins 1`] = `
             class="-mx-6 w-full"
           >
             <div
-              class="Tabs__TabList-sc-1t8sbwb-1 hePfVa w-full h-18"
+              class="Tabs__TabList-sc-1t8sbwb-1 kukgZl w-full h-18"
             >
               <button
                 aria-selected="false"
@@ -2421,7 +2421,7 @@ exports[`PluginManager should enable plugin on my-plugins 1`] = `
                   class="group"
                 >
                   <button
-                    class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus active"
+                    class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus active"
                     data-testid="LayoutControls__list--icon"
                   >
                     <div
@@ -2443,7 +2443,7 @@ exports[`PluginManager should enable plugin on my-plugins 1`] = `
                   class="group"
                 >
                   <button
-                    class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus"
+                    class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus"
                     data-testid="LayoutControls__grid--icon"
                   >
                     <div
@@ -2778,7 +2778,7 @@ exports[`PluginManager should enable plugin on my-plugins 1`] = `
                               class="flex"
                             >
                               <button
-                                class="OriginalButton__StyledButton-sc-o0fs2j-0 nnGbn text-theme-primary-600 hover:text-theme-primary-700 -my-1"
+                                class="OriginalButton__StyledButton-sc-o0fs2j-0 lcpndT text-theme-primary-600 hover:text-theme-primary-700 -my-1"
                                 data-testid="PluginListItem__launch"
                                 disabled=""
                                 type="button"
@@ -2802,7 +2802,7 @@ exports[`PluginManager should enable plugin on my-plugins 1`] = `
                                   class="relative"
                                 >
                                   <button
-                                    class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB text-left text-theme-primary-600 hover:text-theme-primary-700 -mx-3"
+                                    class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF text-left text-theme-primary-600 hover:text-theme-primary-700 -mx-3"
                                     type="button"
                                   >
                                     <div
@@ -2952,7 +2952,7 @@ exports[`PluginManager should render when useExpandedTables = false 1`] = `
                     class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -2991,7 +2991,7 @@ exports[`PluginManager should render when useExpandedTables = false 1`] = `
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -3021,7 +3021,7 @@ exports[`PluginManager should render when useExpandedTables = false 1`] = `
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -3080,7 +3080,7 @@ exports[`PluginManager should render when useExpandedTables = false 1`] = `
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -3144,7 +3144,7 @@ exports[`PluginManager should render when useExpandedTables = false 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus"
                       type="button"
                     >
                       <div
@@ -3170,7 +3170,7 @@ exports[`PluginManager should render when useExpandedTables = false 1`] = `
                   class="pl-8 my-auto ml-5 h-10 border-l border-theme-secondary-300 dark:border-theme-secondary-800"
                 />
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
                   data-testid="PluginManager_header--install"
                   type="button"
                 >
@@ -3211,7 +3211,7 @@ exports[`PluginManager should render when useExpandedTables = false 1`] = `
             class="-mx-6 w-full"
           >
             <div
-              class="Tabs__TabList-sc-1t8sbwb-1 hePfVa w-full h-18"
+              class="Tabs__TabList-sc-1t8sbwb-1 kukgZl w-full h-18"
             >
               <button
                 aria-selected="true"
@@ -3332,7 +3332,7 @@ exports[`PluginManager should render when useExpandedTables = false 1`] = `
                   class="group"
                 >
                   <button
-                    class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus"
+                    class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus"
                     data-testid="LayoutControls__list--icon"
                   >
                     <div
@@ -3354,7 +3354,7 @@ exports[`PluginManager should render when useExpandedTables = false 1`] = `
                   class="group"
                 >
                   <button
-                    class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus active"
+                    class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus active"
                     data-testid="LayoutControls__grid--icon"
                   >
                     <div
@@ -4137,7 +4137,7 @@ exports[`PluginManager should render when useExpandedTables = true 1`] = `
                     class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -4176,7 +4176,7 @@ exports[`PluginManager should render when useExpandedTables = true 1`] = `
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -4206,7 +4206,7 @@ exports[`PluginManager should render when useExpandedTables = true 1`] = `
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -4265,7 +4265,7 @@ exports[`PluginManager should render when useExpandedTables = true 1`] = `
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -4329,7 +4329,7 @@ exports[`PluginManager should render when useExpandedTables = true 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus"
                       type="button"
                     >
                       <div
@@ -4355,7 +4355,7 @@ exports[`PluginManager should render when useExpandedTables = true 1`] = `
                   class="pl-8 my-auto ml-5 h-10 border-l border-theme-secondary-300 dark:border-theme-secondary-800"
                 />
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
                   data-testid="PluginManager_header--install"
                   type="button"
                 >
@@ -4396,7 +4396,7 @@ exports[`PluginManager should render when useExpandedTables = true 1`] = `
             class="-mx-6 w-full"
           >
             <div
-              class="Tabs__TabList-sc-1t8sbwb-1 hePfVa w-full h-18"
+              class="Tabs__TabList-sc-1t8sbwb-1 kukgZl w-full h-18"
             >
               <button
                 aria-selected="true"
@@ -4517,7 +4517,7 @@ exports[`PluginManager should render when useExpandedTables = true 1`] = `
                   class="group"
                 >
                   <button
-                    class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus"
+                    class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus"
                     data-testid="LayoutControls__list--icon"
                   >
                     <div
@@ -4539,7 +4539,7 @@ exports[`PluginManager should render when useExpandedTables = true 1`] = `
                   class="group"
                 >
                   <button
-                    class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus active"
+                    class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus active"
                     data-testid="LayoutControls__grid--icon"
                   >
                     <div
@@ -5322,7 +5322,7 @@ exports[`PluginManager should search for plugin 1`] = `
                     class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -5361,7 +5361,7 @@ exports[`PluginManager should search for plugin 1`] = `
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -5391,7 +5391,7 @@ exports[`PluginManager should search for plugin 1`] = `
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -5450,7 +5450,7 @@ exports[`PluginManager should search for plugin 1`] = `
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -5514,7 +5514,7 @@ exports[`PluginManager should search for plugin 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus"
                       type="button"
                     >
                       <div
@@ -5565,7 +5565,7 @@ exports[`PluginManager should search for plugin 1`] = `
                       class="flex-1"
                     >
                       <div
-                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 eyRrGo -ml-4"
+                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 bjEupA -ml-4"
                       >
                         <div
                           class="relative flex flex-1 h-full"
@@ -5594,7 +5594,7 @@ exports[`PluginManager should search for plugin 1`] = `
                   class="pl-8 my-auto ml-5 h-10 border-l border-theme-secondary-300 dark:border-theme-secondary-800"
                 />
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
                   data-testid="PluginManager_header--install"
                   type="button"
                 >
@@ -5635,7 +5635,7 @@ exports[`PluginManager should search for plugin 1`] = `
             class="-mx-6 w-full"
           >
             <div
-              class="Tabs__TabList-sc-1t8sbwb-1 hePfVa w-full h-18"
+              class="Tabs__TabList-sc-1t8sbwb-1 kukgZl w-full h-18"
             >
               <button
                 aria-selected="false"
@@ -5756,7 +5756,7 @@ exports[`PluginManager should search for plugin 1`] = `
                   class="group"
                 >
                   <button
-                    class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus active"
+                    class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus active"
                     data-testid="LayoutControls__list--icon"
                   >
                     <div
@@ -5778,7 +5778,7 @@ exports[`PluginManager should search for plugin 1`] = `
                   class="group"
                 >
                   <button
-                    class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus"
+                    class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus"
                     data-testid="LayoutControls__grid--icon"
                   >
                     <div
@@ -5942,7 +5942,7 @@ exports[`PluginManager should switch to category by clicking on view all link 1`
                     class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -5981,7 +5981,7 @@ exports[`PluginManager should switch to category by clicking on view all link 1`
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -6011,7 +6011,7 @@ exports[`PluginManager should switch to category by clicking on view all link 1`
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -6070,7 +6070,7 @@ exports[`PluginManager should switch to category by clicking on view all link 1`
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -6134,7 +6134,7 @@ exports[`PluginManager should switch to category by clicking on view all link 1`
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus"
                       type="button"
                     >
                       <div
@@ -6160,7 +6160,7 @@ exports[`PluginManager should switch to category by clicking on view all link 1`
                   class="pl-8 my-auto ml-5 h-10 border-l border-theme-secondary-300 dark:border-theme-secondary-800"
                 />
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
                   data-testid="PluginManager_header--install"
                   type="button"
                 >
@@ -6201,7 +6201,7 @@ exports[`PluginManager should switch to category by clicking on view all link 1`
             class="-mx-6 w-full"
           >
             <div
-              class="Tabs__TabList-sc-1t8sbwb-1 hePfVa w-full h-18"
+              class="Tabs__TabList-sc-1t8sbwb-1 kukgZl w-full h-18"
             >
               <button
                 aria-selected="false"
@@ -6328,7 +6328,7 @@ exports[`PluginManager should switch to category by clicking on view all link 1`
                   class="group"
                 >
                   <button
-                    class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus"
+                    class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus"
                     data-testid="LayoutControls__list--icon"
                   >
                     <div
@@ -6350,7 +6350,7 @@ exports[`PluginManager should switch to category by clicking on view all link 1`
                   class="group"
                 >
                   <button
-                    class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus active"
+                    class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus active"
                     data-testid="LayoutControls__grid--icon"
                   >
                     <div
@@ -6973,7 +6973,7 @@ exports[`PluginManager should toggle between list and grid on a category tab 1`]
                     class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -7012,7 +7012,7 @@ exports[`PluginManager should toggle between list and grid on a category tab 1`]
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -7042,7 +7042,7 @@ exports[`PluginManager should toggle between list and grid on a category tab 1`]
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -7101,7 +7101,7 @@ exports[`PluginManager should toggle between list and grid on a category tab 1`]
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -7165,7 +7165,7 @@ exports[`PluginManager should toggle between list and grid on a category tab 1`]
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus"
                       type="button"
                     >
                       <div
@@ -7191,7 +7191,7 @@ exports[`PluginManager should toggle between list and grid on a category tab 1`]
                   class="pl-8 my-auto ml-5 h-10 border-l border-theme-secondary-300 dark:border-theme-secondary-800"
                 />
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
                   data-testid="PluginManager_header--install"
                   type="button"
                 >
@@ -7232,7 +7232,7 @@ exports[`PluginManager should toggle between list and grid on a category tab 1`]
             class="-mx-6 w-full"
           >
             <div
-              class="Tabs__TabList-sc-1t8sbwb-1 hePfVa w-full h-18"
+              class="Tabs__TabList-sc-1t8sbwb-1 kukgZl w-full h-18"
             >
               <button
                 aria-selected="false"
@@ -7353,7 +7353,7 @@ exports[`PluginManager should toggle between list and grid on a category tab 1`]
                   class="group"
                 >
                   <button
-                    class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus"
+                    class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus"
                     data-testid="LayoutControls__list--icon"
                   >
                     <div
@@ -7375,7 +7375,7 @@ exports[`PluginManager should toggle between list and grid on a category tab 1`]
                   class="group"
                 >
                   <button
-                    class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus active"
+                    class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus active"
                     data-testid="LayoutControls__grid--icon"
                   >
                     <div
@@ -7735,7 +7735,7 @@ exports[`PluginManager should toggle between list and grid on all 1`] = `
                     class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -7774,7 +7774,7 @@ exports[`PluginManager should toggle between list and grid on all 1`] = `
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -7804,7 +7804,7 @@ exports[`PluginManager should toggle between list and grid on all 1`] = `
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -7863,7 +7863,7 @@ exports[`PluginManager should toggle between list and grid on all 1`] = `
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -7927,7 +7927,7 @@ exports[`PluginManager should toggle between list and grid on all 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus"
                       type="button"
                     >
                       <div
@@ -7953,7 +7953,7 @@ exports[`PluginManager should toggle between list and grid on all 1`] = `
                   class="pl-8 my-auto ml-5 h-10 border-l border-theme-secondary-300 dark:border-theme-secondary-800"
                 />
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
                   data-testid="PluginManager_header--install"
                   type="button"
                 >
@@ -7994,7 +7994,7 @@ exports[`PluginManager should toggle between list and grid on all 1`] = `
             class="-mx-6 w-full"
           >
             <div
-              class="Tabs__TabList-sc-1t8sbwb-1 hePfVa w-full h-18"
+              class="Tabs__TabList-sc-1t8sbwb-1 kukgZl w-full h-18"
             >
               <button
                 aria-selected="false"
@@ -8115,7 +8115,7 @@ exports[`PluginManager should toggle between list and grid on all 1`] = `
                   class="group"
                 >
                   <button
-                    class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus"
+                    class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus"
                     data-testid="LayoutControls__list--icon"
                   >
                     <div
@@ -8137,7 +8137,7 @@ exports[`PluginManager should toggle between list and grid on all 1`] = `
                   class="group"
                 >
                   <button
-                    class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus active"
+                    class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus active"
                     data-testid="LayoutControls__grid--icon"
                   >
                     <div
@@ -8497,7 +8497,7 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
                     class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -8536,7 +8536,7 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -8566,7 +8566,7 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -8625,7 +8625,7 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -8689,7 +8689,7 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus"
                       type="button"
                     >
                       <div
@@ -8715,7 +8715,7 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
                   class="pl-8 my-auto ml-5 h-10 border-l border-theme-secondary-300 dark:border-theme-secondary-800"
                 />
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
                   data-testid="PluginManager_header--install"
                   type="button"
                 >
@@ -8756,7 +8756,7 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
             class="-mx-6 w-full"
           >
             <div
-              class="Tabs__TabList-sc-1t8sbwb-1 hePfVa w-full h-18"
+              class="Tabs__TabList-sc-1t8sbwb-1 kukgZl w-full h-18"
             >
               <button
                 aria-selected="true"
@@ -8877,7 +8877,7 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
                   class="group"
                 >
                   <button
-                    class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus"
+                    class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus"
                     data-testid="LayoutControls__list--icon"
                   >
                     <div
@@ -8899,7 +8899,7 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
                   class="group"
                 >
                   <button
-                    class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus active"
+                    class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus active"
                     data-testid="LayoutControls__grid--icon"
                   >
                     <div
@@ -9682,7 +9682,7 @@ exports[`PluginManager should update plugin on my-plugins 1`] = `
                     class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -9721,7 +9721,7 @@ exports[`PluginManager should update plugin on my-plugins 1`] = `
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -9751,7 +9751,7 @@ exports[`PluginManager should update plugin on my-plugins 1`] = `
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -9810,7 +9810,7 @@ exports[`PluginManager should update plugin on my-plugins 1`] = `
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kyhFER flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -9874,7 +9874,7 @@ exports[`PluginManager should update plugin on my-plugins 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus"
                       type="button"
                     >
                       <div
@@ -9900,7 +9900,7 @@ exports[`PluginManager should update plugin on my-plugins 1`] = `
                   class="pl-8 my-auto ml-5 h-10 border-l border-theme-secondary-300 dark:border-theme-secondary-800"
                 />
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
                   data-testid="PluginManager_header--install"
                   type="button"
                 >
@@ -9941,7 +9941,7 @@ exports[`PluginManager should update plugin on my-plugins 1`] = `
             class="-mx-6 w-full"
           >
             <div
-              class="Tabs__TabList-sc-1t8sbwb-1 hePfVa w-full h-18"
+              class="Tabs__TabList-sc-1t8sbwb-1 kukgZl w-full h-18"
             >
               <button
                 aria-selected="false"
@@ -10043,7 +10043,7 @@ exports[`PluginManager should update plugin on my-plugins 1`] = `
                     My Plugins
                   </span>
                   <span
-                    class="Badge__Wrapper-sc-w9wbbm-0 TUTOd flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent -mt-6.5 bg-theme-danger-400"
+                    class="Badge__Wrapper-sc-w9wbbm-0 dQYhvE flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent -mt-6.5 bg-theme-danger-400"
                     data-testid="PluginManagerNavigationBar_update-badge"
                   >
                     <span />
@@ -10074,7 +10074,7 @@ exports[`PluginManager should update plugin on my-plugins 1`] = `
                   class="group"
                 >
                   <button
-                    class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus active"
+                    class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus active"
                     data-testid="LayoutControls__list--icon"
                   >
                     <div
@@ -10096,7 +10096,7 @@ exports[`PluginManager should update plugin on my-plugins 1`] = `
                   class="group"
                 >
                   <button
-                    class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus"
+                    class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus"
                     data-testid="LayoutControls__grid--icon"
                   >
                     <div
@@ -10138,7 +10138,7 @@ exports[`PluginManager should update plugin on my-plugins 1`] = `
                   There is 1 update available for your plugins. Would you like to update it?
                 </span>
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ -mr-1"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB -mr-1"
                   data-testid="PluginManager__update-all"
                   type="button"
                 >
@@ -10456,7 +10456,7 @@ exports[`PluginManager should update plugin on my-plugins 1`] = `
                               class="flex"
                             >
                               <button
-                                class="OriginalButton__StyledButton-sc-o0fs2j-0 nnGbn text-theme-primary-600 hover:text-theme-primary-700 -my-1"
+                                class="OriginalButton__StyledButton-sc-o0fs2j-0 lcpndT text-theme-primary-600 hover:text-theme-primary-700 -my-1"
                                 data-testid="PluginListItem__launch"
                                 disabled=""
                                 type="button"
@@ -10480,7 +10480,7 @@ exports[`PluginManager should update plugin on my-plugins 1`] = `
                                   class="relative"
                                 >
                                   <button
-                                    class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB text-left text-theme-primary-600 hover:text-theme-primary-700 -mx-3"
+                                    class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF text-left text-theme-primary-600 hover:text-theme-primary-700 -mx-3"
                                     type="button"
                                   >
                                     <div
@@ -10498,7 +10498,7 @@ exports[`PluginManager should update plugin on my-plugins 1`] = `
                                     </div>
                                   </button>
                                   <span
-                                    class="Badge__Wrapper-sc-w9wbbm-0 hjzOvO flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent cursor-pointer bg-theme-danger-400 mt-2 mr-1"
+                                    class="Badge__Wrapper-sc-w9wbbm-0 hSxNrj flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent cursor-pointer bg-theme-danger-400 mt-2 mr-1"
                                     data-testid="PluginDropdown__update-badge"
                                   >
                                     <span />
