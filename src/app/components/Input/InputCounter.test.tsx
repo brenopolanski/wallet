@@ -1,6 +1,7 @@
+import userEvent from "@testing-library/user-event";
 import { FormFieldProvider } from "app/components/Form/useFormField";
 import React from "react";
-import { fireEvent, render } from "utils/testing-library";
+import { render } from "utils/testing-library";
 
 import { InputCounter } from "./InputCounter";
 
@@ -21,7 +22,8 @@ describe("InputCounter", () => {
 
 	it("should update the length when changing the value", () => {
 		const { getByTestId } = render(<InputCounter maxLength={10} maxLengthLabel="10" />);
-		fireEvent.input(getByTestId("InputCounter__input"), { target: { value: "Test" } });
+
+		userEvent.type(getByTestId("InputCounter__input"), "Test");
 
 		expect(getByTestId("InputCounter__counter")).toHaveTextContent("4/10");
 	});

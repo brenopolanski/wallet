@@ -1,6 +1,6 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
-import { act, fireEvent, render, screen, waitFor } from "utils/testing-library";
+import { act, render, screen, waitFor } from "utils/testing-library";
 
 import { HeaderSearchBar } from "./HeaderSearchBar";
 
@@ -25,18 +25,17 @@ describe("HeaderSearchBar", () => {
 
 		userEvent.click(screen.getByRole("button"));
 
-		const input = screen.getByTestId("Input");
+		const input: HTMLInputElement = screen.getByTestId("Input");
 
 		expect(input.maxLength).toBe(32);
 
-		const text = "loong text";
-		const longText = text.repeat(100);
+		const text = "looong text";
+		const longText = text.repeat(10);
 
-		fireEvent.change(input, { target: { value: longText } });
-		fireEvent.change(input, text + "!");
+		userEvent.paste(input, longText);
 
-		expect(input.value).toBe(text.repeat(100));
-		expect(input.value).toHaveLength(1000);
+		expect(input.value).toBe(longText.substring(0, input.maxLength));
+		expect(input.value).toHaveLength(input.maxLength);
 	});
 
 	it("should reset fields by prop", async () => {
@@ -45,13 +44,9 @@ describe("HeaderSearchBar", () => {
 
 		userEvent.click(screen.getByRole("button"));
 
-		const input = screen.getByTestId("Input");
+		const input: HTMLInputElement = screen.getByTestId("Input");
 
-		fireEvent.change(input, {
-			target: {
-				value: "test",
-			},
-		});
+		userEvent.paste(input, "test");
 
 		expect(input.value).toBe("test");
 
@@ -91,7 +86,7 @@ describe("HeaderSearchBar", () => {
 
 		expect(screen.getByTestId("Input")).toBeInTheDocument();
 
-		fireEvent.mouseDown(outsideElement);
+		userEvent.click(outsideElement);
 
 		expect(() => screen.getByTestId("Input")).toThrow(/Unable to find an element by/);
 	});
@@ -102,13 +97,9 @@ describe("HeaderSearchBar", () => {
 
 		userEvent.click(screen.getByRole("button"));
 
-		const input = screen.getByTestId("Input");
+		const input: HTMLInputElement = screen.getByTestId("Input");
 
-		fireEvent.change(input, {
-			target: {
-				value: "test",
-			},
-		});
+		userEvent.paste(input, "test");
 
 		expect(input.value).toBe("test");
 
@@ -127,11 +118,7 @@ describe("HeaderSearchBar", () => {
 
 		userEvent.click(screen.getByRole("button"));
 
-		fireEvent.change(screen.getByTestId("Input"), {
-			target: {
-				value: "test",
-			},
-		});
+		userEvent.paste(screen.getByTestId("Input"), "test");
 
 		act(() => {
 			jest.runAllTimers();
@@ -149,11 +136,7 @@ describe("HeaderSearchBar", () => {
 
 		userEvent.click(screen.getByRole("button"));
 
-		fireEvent.change(screen.getByTestId("Input"), {
-			target: {
-				value: "test",
-			},
-		});
+		userEvent.paste(screen.getByTestId("Input"), "test");
 
 		act(() => {
 			jest.runAllTimers();

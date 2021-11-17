@@ -220,6 +220,9 @@ describe("Registration", () => {
 
 		await waitFor(() => expect(getByTestId("InputCurrency")).not.toHaveValue("0"));
 
+		// remove focus from fee button
+		userEvent.click(document.body);
+
 		await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toHaveAttribute("disabled"));
 
 		if (inputMethod === "with keyboard") {

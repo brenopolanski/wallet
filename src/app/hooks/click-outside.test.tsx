@@ -1,14 +1,14 @@
+import userEvent from "@testing-library/user-event";
 import { clickOutsideHandler } from "app/hooks/click-outside";
-import { fireEvent } from "utils/testing-library";
 
 describe("ClickOutside Hook", () => {
 	it("should not call callback if clicked on target element", () => {
-		const element = document;
+		const element = document.body;
 		const reference = { current: element };
 		const callback = jest.fn();
 		clickOutsideHandler(reference, callback);
 
-		fireEvent.mouseDown(element);
+		userEvent.click(element);
 
 		expect(callback).not.toHaveBeenCalled();
 	});
@@ -20,7 +20,7 @@ describe("ClickOutside Hook", () => {
 		const callback = jest.fn();
 		clickOutsideHandler(reference, callback);
 
-		fireEvent.mouseDown(document);
+		userEvent.click(document.body);
 
 		expect(callback).toHaveBeenCalledWith();
 	});
@@ -31,7 +31,7 @@ describe("ClickOutside Hook", () => {
 
 		clickOutsideHandler(reference, null);
 
-		fireEvent.mouseDown(document);
+		userEvent.click(document.body);
 	});
 
 	it("should cover the removeEvent", () => {

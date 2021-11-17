@@ -1,5 +1,6 @@
+import userEvent from "@testing-library/user-event";
 import React, { useRef } from "react";
-import { fireEvent, render, screen } from "utils/testing-library";
+import { render, screen } from "utils/testing-library";
 
 import { TruncateMiddleDynamic } from "./TruncateMiddleDynamic";
 
@@ -39,7 +40,7 @@ describe("TruncateMiddleDynamic", () => {
 
 		rerender(<Component value="Lorem ipsum dolor sit ame" />);
 
-		fireEvent.mouseEnter(screen.getByText("Lorem ipsu…or sit ame"));
+		userEvent.hover(screen.getByText("Lorem ipsu…or sit ame"));
 
 		expect(screen.getByRole("tooltip")).toHaveAttribute("data-theme", "dark");
 

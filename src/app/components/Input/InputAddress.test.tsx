@@ -1,11 +1,12 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@payvo/profiles";
 import { renderHook } from "@testing-library/react-hooks";
+import userEvent from "@testing-library/user-event";
 import { EnvironmentProvider } from "app/contexts";
 import { translations as commonTranslations } from "app/i18n/common/i18n";
 import React from "react";
 import { useForm } from "react-hook-form";
-import { env, fireEvent, getDefaultProfileId, render } from "utils/testing-library";
+import { env, getDefaultProfileId, render } from "utils/testing-library";
 
 import { InputAddress, InputAddressProperties } from "./InputAddress";
 
@@ -39,7 +40,7 @@ describe("InputAddress", () => {
 			<TestInputAddress coin="ARK" network="ark.devnet" registerRef={register} profile={profile} />,
 		);
 
-		fireEvent.input(getByTestId("InputAddress__input"), { target: { value: "Abc" } });
+		userEvent.type(getByTestId("InputAddress__input"), "Abc");
 
 		await waitForNextUpdate();
 
@@ -62,9 +63,7 @@ describe("InputAddress", () => {
 			/>,
 		);
 
-		fireEvent.input(getByTestId("InputAddress__input"), {
-			target: { value: validAddress },
-		});
+		userEvent.type(getByTestId("InputAddress__input"), validAddress);
 
 		await waitForNextUpdate();
 
@@ -86,7 +85,7 @@ describe("InputAddress", () => {
 			/>,
 		);
 
-		fireEvent.input(getByTestId("InputAddress__input"), { target: { value: "Abc" } });
+		userEvent.type(getByTestId("InputAddress__input"), "Abc");
 
 		await waitForNextUpdate();
 

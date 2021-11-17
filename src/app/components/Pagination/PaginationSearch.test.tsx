@@ -1,6 +1,6 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
-import { fireEvent, render, waitFor } from "utils/testing-library";
+import { render, waitFor } from "utils/testing-library";
 
 import { PaginationSearch } from "./PaginationSearch";
 
@@ -70,11 +70,7 @@ describe("PaginationSearch", () => {
 
 		await findByTestId("PaginationSearchForm");
 
-		fireEvent.input(getByTestId("PaginationSearch__input"), {
-			target: {
-				value: "1",
-			},
-		});
+		userEvent.type(getByTestId("PaginationSearch__input"), "1");
 
 		userEvent.click(getByTestId("PaginationSearch__submit"));
 
@@ -102,11 +98,7 @@ describe("PaginationSearch", () => {
 
 		await findByTestId("PaginationSearchForm");
 
-		fireEvent.input(getByTestId("PaginationSearch__input"), {
-			target: {
-				value: "6",
-			},
-		});
+		userEvent.type(getByTestId("PaginationSearch__input"), "6");
 
 		userEvent.click(getByTestId("PaginationSearch__submit"));
 
@@ -156,11 +148,7 @@ describe("PaginationSearch", () => {
 
 		await findByTestId("PaginationSearchForm");
 
-		fireEvent.input(getByTestId("PaginationSearch__input"), {
-			target: {
-				value: "0",
-			},
-		});
+		userEvent.type(getByTestId("PaginationSearch__input"), "0");
 
 		userEvent.click(getByTestId("PaginationSearch__submit"));
 
@@ -188,11 +176,7 @@ describe("PaginationSearch", () => {
 
 		await findByTestId("PaginationSearchForm");
 
-		fireEvent.input(getByTestId("PaginationSearch__input"), {
-			target: {
-				value: "100000000",
-			},
-		});
+		userEvent.paste(getByTestId("PaginationSearch__input"), "100000000");
 
 		userEvent.click(getByTestId("PaginationSearch__submit"));
 
@@ -226,7 +210,7 @@ describe("PaginationSearch", () => {
 
 		await findByTestId("PaginationSearchForm");
 
-		fireEvent.mouseDown(getByTestId("somewhere-outside"));
+		userEvent.click(getByTestId("somewhere-outside"));
 
 		await waitFor(() => expect(() => getByTestId("PaginationSearchForm")).toThrow(/Unable to find an element by/));
 	});

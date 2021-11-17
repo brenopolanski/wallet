@@ -3,7 +3,7 @@ import { buildTranslations } from "app/i18n/helpers";
 import { toasts } from "app/services";
 import electron from "electron";
 import React from "react";
-import { fireEvent, render } from "utils/testing-library";
+import { render } from "utils/testing-library";
 
 import { Link } from "./Link";
 
@@ -69,7 +69,7 @@ describe("Link", () => {
 		);
 		const link = getByTestId("Link");
 
-		fireEvent.mouseEnter(link);
+		userEvent.hover(link);
 
 		expect(baseElement).toHaveTextContent("Custom Tooltip");
 

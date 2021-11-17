@@ -1,5 +1,6 @@
+import userEvent from "@testing-library/user-event";
 import React from "react";
-import { fireEvent, render } from "utils/testing-library";
+import { render } from "utils/testing-library";
 
 import { Toggle } from "./Toggle";
 
@@ -41,7 +42,7 @@ describe("Toggle", () => {
 		const { asFragment, getByRole } = render(<Toggle />);
 		const toggle = getByRole("checkbox");
 
-		fireEvent.change(toggle, { target: { checked: true } });
+		userEvent.click(toggle);
 
 		expect(toggle.checked).toBe(true);
 		expect(asFragment()).toMatchSnapshot();

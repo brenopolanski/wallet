@@ -3,7 +3,7 @@ import { waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { translations } from "app/i18n/common/i18n";
 import React from "react";
-import { fireEvent, render } from "utils/testing-library";
+import { render } from "utils/testing-library";
 
 import { SearchBar } from "./SearchBar";
 
@@ -26,11 +26,7 @@ describe("SearchBar", () => {
 
 		const { getByTestId } = render(<SearchBar onSearch={onSearch} />);
 
-		fireEvent.change(getByTestId("Input"), {
-			target: {
-				value: "test query",
-			},
-		});
+		userEvent.type(getByTestId("Input"), "test query");
 
 		userEvent.click(getByTestId("SearchBar__button"));
 

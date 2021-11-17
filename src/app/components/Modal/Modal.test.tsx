@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/require-await */
 import userEvent from "@testing-library/user-event";
 import React from "react";
-import { fireEvent, render, screen } from "utils/testing-library";
+import { render, screen } from "utils/testing-library";
 
 import { Modal } from "./Modal";
 
@@ -62,8 +62,11 @@ describe("Modal", () => {
 
 		expect(getByTestId("modal__overlay")).toBeInTheDocument();
 
-		fireEvent.keyUp(getByTestId("modal__inner"), { code: 13, key: "Enter" });
-		fireEvent.keyUp(getByTestId("modal__inner"), { code: 27, key: "Escape" });
+		userEvent.keyboard("{enter}");
+
+		expect(onClose).not.toHaveBeenCalled();
+
+		userEvent.keyboard("{esc}");
 
 		expect(onClose).toHaveBeenCalledTimes(1);
 		expect(asFragment()).toMatchSnapshot();

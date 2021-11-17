@@ -1,6 +1,6 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
-import { fireEvent, render, waitFor } from "utils/testing-library";
+import { render, waitFor } from "utils/testing-library";
 
 import { Pagination } from "./Pagination";
 
@@ -166,11 +166,7 @@ describe("Pagination", () => {
 
 		userEvent.click(getByTestId("PaginationSearchButton"));
 
-		fireEvent.input(getByTestId("PaginationSearch__input"), {
-			target: {
-				value: "5",
-			},
-		});
+		userEvent.type(getByTestId("PaginationSearch__input"), "5");
 
 		await waitFor(() => expect(getByTestId("PaginationSearch__input")).toHaveValue(5));
 

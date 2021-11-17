@@ -11,7 +11,6 @@ import * as utils from "utils/electron-utils";
 import {
 	act,
 	env,
-	fireEvent,
 	getDefaultPassword,
 	getDefaultProfileId,
 	getPasswordProtectedProfileId,
@@ -236,7 +235,7 @@ describe("App", () => {
 			expect(getByTestId("SignIn__input--password")).toBeInTheDocument();
 		});
 
-		fireEvent.input(getByTestId("SignIn__input--password"), { target: { value: "password" } });
+		userEvent.type(getByTestId("SignIn__input--password"), "password");
 
 		await waitFor(() => {
 			expect(getByTestId("SignIn__input--password")).toHaveValue("password");
@@ -350,7 +349,7 @@ describe("App", () => {
 			expect(getByTestId("SignIn__input--password")).toBeInTheDocument();
 		});
 
-		fireEvent.input(getByTestId("SignIn__input--password"), { target: { value: "password" } });
+		userEvent.type(getByTestId("SignIn__input--password"), "password");
 
 		await waitFor(() => {
 			expect(getByTestId("SignIn__input--password")).toHaveValue("password");

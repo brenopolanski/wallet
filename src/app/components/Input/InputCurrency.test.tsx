@@ -1,5 +1,6 @@
+import userEvent from "@testing-library/user-event";
 import React, { useState } from "react";
-import { fireEvent, render, waitFor } from "utils/testing-library";
+import { render, waitFor } from "utils/testing-library";
 
 import { InputCurrency } from "./InputCurrency";
 
@@ -16,11 +17,7 @@ describe("InputCurrency", () => {
 		const { getByTestId } = render(<InputCurrency onChange={onChange} />);
 		const input = getByTestId("InputCurrency");
 
-		fireEvent.input(input, {
-			target: {
-				value: "123",
-			},
-		});
+		userEvent.paste(input, "123");
 
 		expect(onChange).toHaveBeenCalledWith("123");
 	});
@@ -30,11 +27,7 @@ describe("InputCurrency", () => {
 		const { getByTestId } = render(<InputCurrency onChange={onChange} />);
 		const input = getByTestId("InputCurrency");
 
-		fireEvent.input(input, {
-			target: {
-				value: "abc123",
-			},
-		});
+		userEvent.paste(input, "abc123");
 
 		expect(onChange).toHaveBeenCalledWith("123");
 	});
@@ -67,11 +60,7 @@ describe("InputCurrency", () => {
 
 		expect(input).toHaveValue("0.04");
 
-		fireEvent.input(input, {
-			target: {
-				value: "1.23",
-			},
-		});
+		userEvent.paste(input, "1.23");
 
 		waitFor(() => expect(input).toHaveValue("1.23"));
 	});

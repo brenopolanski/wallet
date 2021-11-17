@@ -2,7 +2,7 @@ import userEvent from "@testing-library/user-event";
 import { Dropdown, DropdownOptionGroup } from "app/components/Dropdown";
 import { clickOutsideHandler } from "app/hooks/click-outside";
 import React from "react";
-import { fireEvent, render, screen } from "utils/testing-library";
+import { render, screen } from "utils/testing-library";
 
 const options = [
 	{ label: "Option 1", value: "1" },
@@ -86,11 +86,8 @@ describe("Dropdown", () => {
 
 		expect(getByTestId("dropdown__content")).toBeInTheDocument();
 
-		const firstOption = getByTestId("dropdown__option--0");
-
-		expect(firstOption).toBeInTheDocument();
-
-		fireEvent.keyDown(firstOption, { code: 13, key: "Enter" });
+		userEvent.tab();
+		userEvent.keyboard("{enter}");
 
 		expect(onSelect).toHaveBeenCalledWith({ label: "Option 1", value: "1" });
 	});
@@ -104,11 +101,8 @@ describe("Dropdown", () => {
 
 		expect(getByTestId("dropdown__content")).toBeInTheDocument();
 
-		const firstOption = getByTestId("dropdown__option--0");
-
-		expect(firstOption).toBeInTheDocument();
-
-		fireEvent.keyDown(firstOption, { key: " ", keyCode: 32 });
+		userEvent.tab();
+		userEvent.keyboard("{space}");
 
 		expect(onSelect).toHaveBeenCalledWith({ label: "Option 1", value: "1" });
 	});
@@ -156,7 +150,7 @@ describe("Dropdown", () => {
 
 		expect(outsideElement).toBeInTheDocument();
 
-		fireEvent.mouseDown(outsideElement);
+		userEvent.click(outsideElement);
 
 		expect(screen.queryAllByRole("listbox")).toHaveLength(0);
 	});
@@ -169,7 +163,7 @@ describe("Dropdown", () => {
 
 		expect(getByTestId("dropdown__content")).toBeInTheDocument();
 
-		fireEvent.keyDown(toggle, { key: "Escape", keyCode: 27 });
+		userEvent.keyboard("{esc}");
 
 		expect(screen.queryAllByRole("listbox")).toHaveLength(0);
 	});
@@ -336,7 +330,7 @@ describe("Dropdown ClickOutside Hook", () => {
 		const callback = jest.fn();
 		clickOutsideHandler(reference, callback);
 
-		fireEvent.mouseDown(element);
+		userEvent.click(element.body);
 
 		expect(callback).not.toHaveBeenCalled();
 	});
@@ -348,7 +342,7 @@ describe("Dropdown ClickOutside Hook", () => {
 		const callback = jest.fn();
 		clickOutsideHandler(reference, callback);
 
-		fireEvent.mouseDown(document);
+		userEvent.click(document.body);
 
 		expect(callback).toHaveBeenCalledWith();
 	});
@@ -359,7 +353,7 @@ describe("Dropdown ClickOutside Hook", () => {
 
 		clickOutsideHandler(reference, null);
 
-		fireEvent.mouseDown(document);
+		userEvent.click(document.body);
 	});
 });
 
