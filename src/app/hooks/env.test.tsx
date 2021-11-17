@@ -186,13 +186,15 @@ describe("useNetworks", () => {
 		);
 	};
 
-	it.each([getDefaultProfileId(), getPasswordProtectedProfileId()])("should return networks", (profileId) => {
-		profile = env.profiles().findById(profileId);
-		wallets = profile.wallets().values();
-		networks = wallets
-			.map((wallet) => wallet.network())
-			.sort((a, b) => a.displayName().localeCompare(b.displayName()));
-		networks = [...new Set(networks)];
+	it.each(["b999d134-7a24-481e-a95d-bc47c543bfc9", "cba050f1-880f-45f0-9af9-cfe48f406052"])(
+		"should return networks",
+		(profileId) => {
+			profile = env.profiles().findById(profileId);
+			wallets = profile.wallets().values();
+			networks = wallets
+				.map((wallet) => wallet.network())
+				.sort((a, b) => a.displayName().localeCompare(b.displayName()));
+			networks = [...new Set(networks)];
 
 		const { getByText } = render(
 			<Route path="/profiles/:profileId">
