@@ -196,19 +196,20 @@ describe("useNetworks", () => {
 				.sort((a, b) => a.displayName().localeCompare(b.displayName()));
 			networks = [...new Set(networks)];
 
-		const { getByText } = render(
-			<Route path="/profiles/:profileId">
-				<TestNetworks />
-			</Route>,
-			{
-				routes: [`/profiles/${profile.id()}`],
-			},
-		);
+			const { getByText } = render(
+				<Route path="/profiles/:profileId">
+					<TestNetworks />
+				</Route>,
+				{
+					routes: [`/profiles/${profile.id()}`],
+				},
+			);
 
-		networks.map((network, index) => {
-			expect(getByText(`${index}:${network.displayName()}`)).toBeInTheDocument();
-		});
-	});
+			networks.map((network, index) => {
+				expect(getByText(`${index}:${network.displayName()}`)).toBeInTheDocument();
+			});
+		},
+	);
 
 	it("should throw error with no profile", () => {
 		const consoleErrorSpy = jest.spyOn(console, "error").mockImplementation();
