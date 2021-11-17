@@ -35,19 +35,20 @@ export const FormStep = ({
 	const { getValues, setValue, watch } = useFormContext();
 	const { recipients, memo = "" } = getValues();
 	const { network, senderAddress } = watch();
-	const [senderWallet, setSenderWallet] = useState<Contracts.IReadWriteWallet | undefined>(() => {
+
+	const walletBySenderAddress = useMemo(() => {
 		if (network) {
 			assertNetwork(network);
 			return profile.wallets().findByAddressWithNetwork(senderAddress, network.id());
 		}
-	});
+		return undefined;
+	}, [network, profile, senderAddress]);
+
+	const [senderWallet, setSenderWallet] = useState<Contracts.IReadWriteWallet | undefined>(walletBySenderAddress);
 
 	useEffect(() => {
-		if (network) {
-			assertNetwork(network);
-			setSenderWallet(profile.wallets().findByAddressWithNetwork(senderAddress, network.id()));
-		}
-	}, [network, profile, senderAddress]);
+		setSenderWallet(walletBySenderAddress);
+	}, [walletBySenderAddress]);
 
 	const [feeTransactionData, setFeeTransactionData] = useState<Record<string, any> | undefined>();
 

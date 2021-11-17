@@ -17,12 +17,9 @@ export const useTransactionQueryParams = () => {
 	}, [originalQueryParameters]);
 	const hasAnyParameters = useMemo(() => Object.keys(queryParameters).length > 0, [queryParameters]);
 
-	return useMemo(
-		() => ({
-			hasAnyParameters,
-			hasReset: originalQueryParameters.get("reset") === "1",
-			queryParameters,
-		}),
-		[hasAnyParameters, originalQueryParameters, queryParameters],
-	);
+	return {
+		hasAnyParameters,
+		hasReset: originalQueryParameters.get("reset") === "1",
+		queryParameters,
+	};
 };
