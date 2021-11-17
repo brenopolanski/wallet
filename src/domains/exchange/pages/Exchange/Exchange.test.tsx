@@ -3,6 +3,7 @@ import "jest-extended";
 import { Contracts } from "@payvo/sdk-profiles";
 import { httpClient, toasts } from "app/services";
 import { ExchangeProvider, useExchangeContext } from "domains/exchange/contexts/Exchange";
+import { translations } from "domains/exchange/i18n";
 import { createMemoryHistory, MemoryHistory } from "history";
 import nock from "nock";
 import React, { useEffect } from "react";
@@ -10,7 +11,6 @@ import { Trans } from "react-i18next";
 import { Route } from "react-router-dom";
 import { env, fireEvent, getDefaultProfileId, render, screen, waitFor, within } from "utils/testing-library";
 
-import { translations } from "../../i18n";
 import { Exchange } from "./Exchange";
 
 let history: MemoryHistory;

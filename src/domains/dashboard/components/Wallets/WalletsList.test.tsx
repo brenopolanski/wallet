@@ -1,12 +1,13 @@
 import { Contracts } from "@payvo/sdk-profiles";
 import { screen } from "@testing-library/react";
+import { translations } from "domains/dashboard/i18n";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 import { env, getDefaultProfileId, render } from "utils/testing-library";
 
-import { translations } from "../../i18n";
-import { GridWallet, WalletsList } from ".";
+import { GridWallet } from "./Wallets.contracts";
+import { WalletsList } from "./WalletsList";
 
 const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
 const history = createMemoryHistory();

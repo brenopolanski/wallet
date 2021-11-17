@@ -43,12 +43,17 @@ describe("Signed Transaction Table", () => {
 		jest.spyOn(wallet.transaction(), "transaction").mockImplementation(fixtures.transfer);
 	};
 
-	let pendingTransactions: PendingTransaction[] = [];
-	let pendingMultisignatureTransactions: PendingTransaction[] = [];
-	let pendingVoteTransactions: PendingTransaction[] = [];
-	let pendingUnvoteTransactions: PendingTransaction[] = [];
+	let pendingTransactions: PendingTransaction[];
+	let pendingMultisignatureTransactions: PendingTransaction[];
+	let pendingVoteTransactions: PendingTransaction[];
+	let pendingUnvoteTransactions: PendingTransaction[];
 
 	beforeAll(() => {
+		pendingTransactions = [];
+		pendingMultisignatureTransactions = [];
+		pendingVoteTransactions = [];
+		pendingUnvoteTransactions = [];
+
 		nock.disableNetConnect();
 		nock("https://ark-test.payvo.com")
 			.get("/api/transactions")

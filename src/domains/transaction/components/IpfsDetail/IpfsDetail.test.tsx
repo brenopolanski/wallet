@@ -1,9 +1,9 @@
+import { translations } from "domains/transaction/i18n";
 import React from "react";
 import { Route } from "react-router-dom";
 import { TransactionFixture } from "tests/fixtures/transactions";
 import { getDefaultProfileId, render } from "utils/testing-library";
 
-import { translations } from "../../i18n";
 import { IpfsDetail } from "./IpfsDetail";
 
 const fixtureProfileId = getDefaultProfileId();

@@ -22,7 +22,7 @@ describe("HttpClient", () => {
 
 		const response = await subject.get("http://httpbin.org/get", { key: "value" });
 
-		expect(response.json()).toEqual(responseBody);
+		expect(response.json()).toStrictEqual(responseBody);
 	});
 
 	it("should get without params", async () => {
@@ -36,7 +36,7 @@ describe("HttpClient", () => {
 
 		const response = await subject.get("http://httpbin.org/get");
 
-		expect(response.json()).toEqual(responseBody);
+		expect(response.json()).toStrictEqual(responseBody);
 	});
 
 	it("should handle 404 status codes", async () => {
@@ -62,7 +62,7 @@ describe("HttpClient", () => {
 
 		const response = await subject.post("http://httpbin.org/post", { key: "value" });
 
-		expect(response.json()).toEqual(responseBody);
+		expect(response.json()).toStrictEqual(responseBody);
 	});
 
 	it("should post with headers", async () => {
@@ -85,7 +85,7 @@ describe("HttpClient", () => {
 			.withHeaders({ Authorization: "Bearer TOKEN" })
 			.post("http://httpbin.org/post", { key: "value" });
 
-		expect(response.json()).toEqual(responseBody);
+		expect(response.json()).toStrictEqual(responseBody);
 	});
 
 	it("should throw if an unsupported method is used", async () => {

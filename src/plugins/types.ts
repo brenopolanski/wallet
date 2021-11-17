@@ -3,8 +3,6 @@ import { Repositories } from "@payvo/sdk-profiles";
 import { HttpClient } from "app/services/HttpClient";
 
 import { PluginManager } from "./core";
-import { PluginHooks } from "./core/internals/plugin-hooks";
-import { PluginController } from "./core/plugin-controller";
 
 export type WithPluginManager<T> = T & { manager: PluginManager };
 
@@ -75,12 +73,6 @@ export enum PluginServiceIdentifier {
 export interface PluginServiceConfig {
 	id: string;
 	accessor: string;
-}
-
-export interface PluginService {
-	config: () => PluginServiceConfig;
-	api: (plugin: PluginController) => Record<string, Function>;
-	boot?: (context: { hooks: PluginHooks }) => void;
 }
 
 export interface PluginUpdateStatus {

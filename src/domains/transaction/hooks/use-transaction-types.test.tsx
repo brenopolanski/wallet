@@ -19,14 +19,14 @@ describe("useTransactionTypes", () => {
 	it("should have core types", () => {
 		const { result } = renderHook(() => useTransactionTypes());
 
-		expect(Object.keys(result.current.types)).toEqual(["core", "magistrate"]);
+		expect(Object.keys(result.current.types)).toStrictEqual(["core", "magistrate"]);
 	});
 
 	it("should filter only supported transaction types from wallets without magistrate", () => {
 		const profile = env.profiles().first();
 		const { result } = renderHook(() => useTransactionTypes({ wallets: [profile.wallets().first()] }));
 
-		expect(result.current.types.core).toEqual([
+		expect(result.current.types.core).toStrictEqual([
 			"delegateRegistration",
 			"delegateResignation",
 			"htlcClaim",

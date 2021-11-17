@@ -8,7 +8,7 @@ interface Properties {
 const usePluginStatus = () => {
 	const { t } = useTranslation();
 
-	const renderPluginStatus = ({ isEnabled, isInstalled }: Properties) => {
+	const getPluginStatus = ({ isEnabled, isInstalled }: Properties) => {
 		if (!isInstalled) {
 			return t("PLUGINS.STATUS.NOT_INSTALLED");
 		}
@@ -20,7 +20,7 @@ const usePluginStatus = () => {
 		return t("PLUGINS.STATUS.DISABLED");
 	};
 
-	return { renderPluginStatus };
+	return { getPluginStatus };
 };
 
 export { usePluginStatus };

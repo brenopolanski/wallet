@@ -4,7 +4,8 @@ import nock from "nock";
 import React from "react";
 import { env, fireEvent, getDefaultProfileId, render, screen } from "utils/testing-library";
 
-import { Notifications } from ".";
+import { Notifications } from "./Notifications";
+
 const NotificationTransactionsFixtures = require("tests/fixtures/coins/ark/devnet/notification-transactions.json");
 const TransactionsFixture = require("tests/fixtures/coins/ark/devnet/transactions.json");
 

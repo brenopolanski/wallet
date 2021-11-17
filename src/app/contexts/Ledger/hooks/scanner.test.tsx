@@ -1,4 +1,5 @@
 import { Contracts } from "@payvo/sdk-profiles";
+import { LedgerProvider, useLedgerContext } from "app/contexts/Ledger";
 import nock from "nock";
 import React from "react";
 import {
@@ -11,7 +12,6 @@ import {
 	waitFor,
 } from "utils/testing-library";
 
-import { LedgerProvider, useLedgerContext } from "../Ledger";
 import { useLedgerScanner } from "./scanner";
 
 const transport = getDefaultLedgerTransport();
@@ -19,9 +19,11 @@ const transport = getDefaultLedgerTransport();
 describe("Use Ledger Scanner", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
-	let legacyPublicKeyPaths = new Map();
+	let legacyPublicKeyPaths: Map<string, string>;
 
 	beforeAll(() => {
+		legacyPublicKeyPaths = new Map<string, string>();
+
 		nock("https://ark-test.payvo.com/api")
 			.get("/wallets")
 			.query((parameters) => !!parameters.address)

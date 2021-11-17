@@ -17,24 +17,25 @@ import { Box } from "plugins/components/shared/Box";
 import { runUnknownCode } from "plugins/loader/vm";
 import { PluginRawInstance } from "plugins/types";
 
+import { IPluginController } from "./plugin.contracts";
 import { container } from "./plugin-container";
 import { PluginController } from "./plugin-controller";
 
 export class PluginControllerRepository {
-	#plugins: PluginController[] = [];
+	#plugins: IPluginController[] = [];
 	#currentProfile: Contracts.IProfile | undefined;
 
-	all(): PluginController[] {
+	all(): IPluginController[] {
 		return this.#plugins;
 	}
 
-	enabled(profile: Contracts.IProfile): PluginController[] {
+	enabled(profile: Contracts.IProfile): IPluginController[] {
 		return profile
 			.plugins()
 			.values()
 			.filter((item) => item.isEnabled)
 			.map((item) => this.findById(item.name))
-			.filter(Boolean) as PluginController[];
+			.filter(Boolean) as IPluginController[];
 	}
 
 	removeById(id: string, profile: Contracts.IProfile): void {
@@ -46,11 +47,11 @@ export class PluginControllerRepository {
 		}
 	}
 
-	findById(id: string): PluginController | undefined {
+	findById(id: string): IPluginController | undefined {
 		return this.#plugins.find((item) => item.config().id() === id);
 	}
 
-	filterByCategory(category: string): PluginController[] {
+	filterByCategory(category: string): IPluginController[] {
 		return this.#plugins.filter((item) => item.config().categories().includes(category));
 	}
 
@@ -94,12 +95,12 @@ export class PluginControllerRepository {
 		this.#currentProfile = undefined;
 	}
 
-	push(instance: PluginController): void {
+	push(instance: IPluginController): void {
 		this.#plugins.push(instance);
 	}
 
 	fill(instances: PluginRawInstance[]): void {
-		const plugins: Record<string, PluginController> = {};
+		const plugins: Record<string, IPluginController> = {};
 
 		for (const entry of instances) {
 			try {

@@ -26,7 +26,7 @@ describe("Scanner State", () => {
 			});
 		});
 
-		await waitFor(() => expect(result.current[0].selected).toEqual([]));
+		await waitFor(() => expect(result.current[0].selected).toStrictEqual([]));
 	});
 
 	it("should dispatch toggleSelect without selected", async () => {
@@ -50,7 +50,7 @@ describe("Scanner State", () => {
 			});
 		});
 
-		await waitFor(() => expect(result.current[0].selected).toEqual([`44'/1'/1'/0/0`]));
+		await waitFor(() => expect(result.current[0].selected).toStrictEqual([`44'/1'/1'/0/0`]));
 	});
 
 	it("should dispatch toggleSelectAll with selected length and wallets length", async () => {
@@ -77,7 +77,7 @@ describe("Scanner State", () => {
 			});
 		});
 
-		await waitFor(() => expect(result.current[0].selected).toEqual([`44'/1'/0'/0/0`, `44'/1'/2'/0/0`]));
+		await waitFor(() => expect(result.current[0].selected).toStrictEqual([`44'/1'/0'/0/0`, `44'/1'/2'/0/0`]));
 	});
 
 	it("should dispatch toggleSelectAll without selected", async () => {
@@ -100,7 +100,7 @@ describe("Scanner State", () => {
 			});
 		});
 
-		await waitFor(() => expect(result.current[0].selected).toEqual([`44'/1'/0'/0/0`]));
+		await waitFor(() => expect(result.current[0].selected).toStrictEqual([`44'/1'/0'/0/0`]));
 	});
 
 	it("should dispatch failed", async () => {

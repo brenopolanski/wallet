@@ -20,7 +20,7 @@ describe("Use Message Signer Hook", () => {
 
 		const signedMessage = await result.current.sign(wallet, "message", getDefaultWalletMnemonic());
 
-		expect(signedMessage).toEqual({
+		expect(signedMessage).toStrictEqual({
 			message: "message",
 			signatory: "03df6cd794a7d404db4f1b25816d8976d0e72c5177d17ac9b19a92703b62cdbbbc",
 			signature:
@@ -41,7 +41,7 @@ describe("Use Message Signer Hook", () => {
 			wallet.signingKey().get("password"),
 		);
 
-		expect(signedMessage).toEqual({
+		expect(signedMessage).toStrictEqual({
 			message: "message",
 			signatory: "03df6cd794a7d404db4f1b25816d8976d0e72c5177d17ac9b19a92703b62cdbbbc",
 			signature:
@@ -60,7 +60,7 @@ describe("Use Message Signer Hook", () => {
 
 		const signedMessage = await result.current.sign(wallet, "message");
 
-		expect(signedMessage).toEqual({
+		expect(signedMessage).toStrictEqual({
 			message: "message",
 			signatory: "03df6cd794a7d404db4f1b25816d8976d0e72c5177d17ac9b19a92703b62cdbbbc",
 			signature: "signature",
@@ -81,7 +81,7 @@ describe("Use Message Signer Hook", () => {
 
 		const signedMessage = await result.current.sign(wallet, "message");
 
-		expect(signedMessage).toEqual({
+		expect(signedMessage).toStrictEqual({
 			message: "message",
 			signatory: "0335a27397927bfa1704116814474d39c2b933aabb990e7226389f022886e48deb",
 			signature: "signature",

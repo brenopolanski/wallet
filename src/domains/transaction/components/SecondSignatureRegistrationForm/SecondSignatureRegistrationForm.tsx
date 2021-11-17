@@ -5,7 +5,10 @@ import { SendRegistrationForm } from "domains/transaction/pages/SendRegistration
 import { handleBroadcastError } from "domains/transaction/utils";
 import React from "react";
 
-import { BackupStep, GenerationStep, ReviewStep, VerificationStep } from ".";
+import { BackupStep } from "./BackupStep";
+import { GenerationStep } from "./GenerationStep";
+import { ReviewStep } from "./ReviewStep";
+import { VerificationStep } from "./VerificationStep";
 
 const component = ({
 	activeTab,

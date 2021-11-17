@@ -48,9 +48,11 @@ const baseSettings = {
 };
 
 const renderComponent = async () => {
-	const result = render(<CreateProfile />);
-	await waitFor(() => expect(result.getByTestId("CreateProfile__submit-button")).toBeDisabled());
-	return result;
+	const utils = render(<CreateProfile />);
+
+	await waitFor(() => expect(utils.getByTestId("CreateProfile__submit-button")).toBeDisabled());
+
+	return utils;
 };
 
 jest.mock("fs", () => ({
@@ -125,7 +127,7 @@ describe("CreateProfile", () => {
 		const profile = env.profiles().first();
 
 		expect(profile.name()).toBe("test profile 1");
-		expect(profile.settings().all()).toEqual({
+		expect(profile.settings().all()).toStrictEqual({
 			...baseSettings,
 			AVATAR: expect.stringMatching(BASE64_REGEX),
 			NAME: "test profile 1",

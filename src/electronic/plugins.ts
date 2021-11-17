@@ -4,9 +4,8 @@ import { download } from "electron-dl";
 import { ensureDirSync } from "fs-extra";
 import os from "os";
 import path from "path";
+import { injectHandler } from "plugins/loader/fs/loader-fs-handler";
 import trash from "trash";
-
-import { injectHandler } from "../plugins/loader/fs/loader-fs-handler";
 
 export const setupPlugins = () => {
 	const installPath = path.resolve(os.homedir(), ".payvo-wallet", "plugins");

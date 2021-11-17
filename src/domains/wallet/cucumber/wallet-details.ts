@@ -1,4 +1,3 @@
-/* eslint-disable sort-keys-fix/sort-keys-fix */
 import { Selector } from "testcafe";
 
 import { CustomSelector, CustomSnapshot } from "../../../utils/e2e-interfaces";

@@ -1,5 +1,5 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { PluginController, PluginManager } from "plugins/core";
+import { IPluginController, PluginController, PluginManager } from "plugins/core";
 import { PluginAPI } from "plugins/types";
 import { act } from "react-dom/test-utils";
 import { env, waitFor } from "utils/testing-library";
@@ -11,7 +11,7 @@ const config = { "desktop-wallet": { permissions: ["TIMERS"] }, name: "test", ve
 describe("TimersPluginService", () => {
 	let profile: Contracts.IProfile;
 	let manager: PluginManager;
-	let ctrl: PluginController;
+	let ctrl: IPluginController;
 
 	beforeEach(() => {
 		profile = env.profiles().first();

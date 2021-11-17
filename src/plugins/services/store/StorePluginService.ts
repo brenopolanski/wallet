@@ -1,24 +1,24 @@
 import { Contracts, Repositories } from "@payvo/sdk-profiles";
-import { PluginController } from "plugins/core";
-import { PluginHooks } from "plugins/core/internals/plugin-hooks";
-import { PluginService, PluginServiceIdentifier } from "plugins/types";
+import { IPluginController, PluginService } from "plugins/core";
+import { PluginHooks } from "plugins/core/internals";
+import { PluginServiceConfig, PluginServiceIdentifier } from "plugins/types";
 
 export class StorePluginService implements PluginService {
 	#profile: Contracts.IProfile | undefined;
 	#stores = new Map<string, Contracts.IDataRepository>();
 
-	config() {
+	config(): PluginServiceConfig {
 		return {
 			accessor: "store",
 			id: PluginServiceIdentifier.Store,
 		};
 	}
 
-	boot(context: { hooks: PluginHooks }) {
+	boot(context: { hooks: PluginHooks }): void {
 		context.hooks.onProfileChange((profile) => (this.#profile = profile));
 	}
 
-	api(plugin: PluginController) {
+	api(plugin: IPluginController): Record<string, Function> {
 		const id = plugin.config().id();
 		if (!this.#stores.has(id)) {
 			this.create(id);

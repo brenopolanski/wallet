@@ -1,14 +1,16 @@
-import tw, { css } from "twin.macro";
+import React from "react";
+import { FlattenSimpleInterpolation } from "styled-components";
+import tw, { css, TwStyle } from "twin.macro";
 
-import { TableRowFunction } from "./TableRow";
+type TableRowFunction = (event: React.MouseEvent<HTMLTableRowElement, MouseEvent>) => void;
 
 const baseStyle = tw`transition-colors duration-100`;
 
-const getCursorStyles = (onClick?: TableRowFunction): any => (onClick ? tw`cursor-pointer` : "");
+const getCursorStyles = (onClick?: TableRowFunction) => onClick && tw`cursor-pointer`;
 
-const getBorderStyles = (border?: boolean, dotted?: boolean): any => {
+const getBorderStyles = (border?: boolean, dotted?: boolean) => {
 	if (!border) {
-		return "";
+		return;
 	}
 
 	return [
@@ -17,7 +19,7 @@ const getBorderStyles = (border?: boolean, dotted?: boolean): any => {
 	];
 };
 
-const getHoverStyles = (isSelected?: boolean): any =>
+const getHoverStyles = (isSelected?: boolean): FlattenSimpleInterpolation =>
 	css`
 		&:hover td > div {
 			${isSelected
@@ -26,8 +28,19 @@ const getHoverStyles = (isSelected?: boolean): any =>
 		}
 	`;
 
-export const getStyles = ({ onClick, border, dotted, isSelected }: any) => {
-	const styles = [baseStyle, getBorderStyles(border, dotted), getCursorStyles(onClick)];
+export interface TableRowStyleProperties {
+	border?: boolean;
+	dotted?: boolean;
+	onClick?: TableRowFunction;
+	isSelected?: boolean;
+}
+
+export const getStyles = ({ onClick, border, dotted, isSelected }: TableRowStyleProperties) => {
+	const styles: Array<FlattenSimpleInterpolation | TwStyle | TwStyle[] | undefined> = [
+		baseStyle,
+		getBorderStyles(border, dotted),
+		getCursorStyles(onClick),
+	];
 
 	if (onClick) {
 		styles.push(getHoverStyles(isSelected));

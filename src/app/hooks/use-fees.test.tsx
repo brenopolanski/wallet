@@ -24,7 +24,7 @@ describe("useFees", () => {
 
 		await env.fees().sync(profile, "ARK", "ark.devnet");
 
-		await expect(current.calculate({ coin: "ARK", network: "ark.devnet", type: "ipfs" })).resolves.toEqual({
+		await expect(current.calculate({ coin: "ARK", network: "ark.devnet", type: "ipfs" })).resolves.toStrictEqual({
 			avg: 5,
 			isDynamic: true,
 			max: 5,
@@ -56,7 +56,7 @@ describe("useFees", () => {
 
 		await env.fees().sync(profile, "ARK", "ark.devnet");
 
-		await expect(current.calculate({ coin: "ARK", network: "ark.devnet", type: "ipfs" })).resolves.toEqual({
+		await expect(current.calculate({ coin: "ARK", network: "ark.devnet", type: "ipfs" })).resolves.toStrictEqual({
 			avg: 5,
 			isDynamic: true,
 			max: 5,
@@ -92,7 +92,7 @@ describe("useFees", () => {
 
 		await env.fees().sync(profile, "ARK", "ark.devnet");
 
-		await expect(current.calculate({ coin: "ARK", network: "ark.devnet", type: "ipfs" })).resolves.toEqual({
+		await expect(current.calculate({ coin: "ARK", network: "ark.devnet", type: "ipfs" })).resolves.toStrictEqual({
 			avg: 5,
 			isDynamic: true,
 			max: 5,
@@ -133,7 +133,7 @@ describe("useFees", () => {
 				network: "ark.devnet",
 				type: "multiSignature",
 			}),
-		).resolves.toEqual({
+		).resolves.toStrictEqual({
 			avg: 10,
 			isDynamic: false,
 			max: 10,
@@ -186,7 +186,7 @@ describe("useFees", () => {
 				network: wallet.network().id(),
 				type: "multiSignature",
 			}),
-		).resolves.toEqual({
+		).resolves.toStrictEqual({
 			avg: 15,
 			isDynamic: false,
 			max: 15,
@@ -235,7 +235,13 @@ describe("useFees", () => {
 				network: wallet.network().id(),
 				type: "transfer",
 			}),
-		).resolves.toEqual({ avg: 1, max: 1, min: 1, static: 1 });
+		).resolves.toStrictEqual({
+			avg: 1,
+			isDynamic: undefined,
+			max: 1,
+			min: 1,
+			static: 1,
+		});
 
 		mockFind.mockRestore();
 		transferMock.mockRestore();
@@ -281,8 +287,9 @@ describe("useFees", () => {
 				network: wallet.network().id(),
 				type: "transfer",
 			}),
-		).resolves.toEqual({
+		).resolves.toStrictEqual({
 			avg: 0,
+			isDynamic: undefined,
 			max: 0,
 			min: 0,
 			static: 0,

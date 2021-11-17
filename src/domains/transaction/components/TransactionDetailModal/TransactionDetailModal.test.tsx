@@ -1,6 +1,7 @@
 import { Contracts } from "@payvo/sdk-profiles";
 // @README: This import is fine in tests but should be avoided in production code.
 import { ReadOnlyWallet } from "@payvo/sdk-profiles/distribution/read-only-wallet";
+import { translations } from "domains/transaction/i18n";
 import { createMemoryHistory } from "history";
 import nock from "nock";
 import React from "react";
@@ -8,7 +9,6 @@ import { Route } from "react-router-dom";
 import { TransactionFixture } from "tests/fixtures/transactions";
 import { env, getDefaultProfileId, render, syncDelegates, waitFor } from "utils/testing-library";
 
-import { translations } from "../../i18n";
 import { TransactionDetailModal } from "./TransactionDetailModal";
 
 const history = createMemoryHistory();

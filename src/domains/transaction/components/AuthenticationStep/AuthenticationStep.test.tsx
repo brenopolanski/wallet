@@ -160,7 +160,7 @@ describe("AuthenticationStep", () => {
 			},
 		});
 
-		await waitFor(() => expect(form()?.getValues()).toEqual({ mnemonic: MNEMONICS[0] }));
+		await waitFor(() => expect(form()?.getValues()).toStrictEqual({ mnemonic: MNEMONICS[0] }));
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -190,7 +190,7 @@ describe("AuthenticationStep", () => {
 			},
 		});
 
-		await waitFor(() => expect(form()?.getValues()).toEqual({ secret: "secret" }));
+		await waitFor(() => expect(form()?.getValues()).toStrictEqual({ secret: "secret" }));
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -220,7 +220,7 @@ describe("AuthenticationStep", () => {
 			},
 		});
 
-		await waitFor(() => expect(form()?.getValues()).toEqual({ mnemonic: MNEMONICS[0] }));
+		await waitFor(() => expect(form()?.getValues()).toStrictEqual({ mnemonic: MNEMONICS[0] }));
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -290,7 +290,7 @@ describe("AuthenticationStep", () => {
 		});
 
 		await waitFor(() =>
-			expect(form()?.getValues()).toEqual({
+			expect(form()?.getValues()).toStrictEqual({
 				mnemonic: MNEMONICS[0],
 				secondMnemonic: MNEMONICS[1],
 			}),
@@ -327,7 +327,7 @@ describe("AuthenticationStep", () => {
 		});
 
 		await waitFor(() =>
-			expect(form()?.getValues()).toEqual({
+			expect(form()?.getValues()).toStrictEqual({
 				secondSecret: "abc",
 				secret: "abc",
 			}),
