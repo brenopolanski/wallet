@@ -193,7 +193,7 @@ exports[`SelectNetwork should render with hidden options 1`] = `
         </ul>
       </div>
       <div
-        class="Divider-sc-17ehhxk-0 hZpmpp border-theme-secondary-300 dark:border-theme-secondary-800"
+        class="Divider-sc-17ehhxk-0 ijSFXJ border-theme-secondary-300 dark:border-theme-secondary-800"
         type="horizontal"
       />
       <div
@@ -449,7 +449,7 @@ exports[`SelectNetwork should render with networks 1`] = `
         </ul>
       </div>
       <div
-        class="Divider-sc-17ehhxk-0 hZpmpp border-theme-secondary-300 dark:border-theme-secondary-800"
+        class="Divider-sc-17ehhxk-0 ijSFXJ border-theme-secondary-300 dark:border-theme-secondary-800"
         type="horizontal"
       />
       <div

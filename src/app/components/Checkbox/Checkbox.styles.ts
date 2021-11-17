@@ -51,7 +51,7 @@ const getColor = (color: Color) => {
 				border-color: var(--theme-color-${baseColors[color].color});
 			}
 		`,
-		baseColors[color]?.onHover &&
+		baseColors[color].onHover &&
 			css`
 				&:checked:hover {
 					color: var(--theme-color-${baseColors[color].onHover});
@@ -60,15 +60,4 @@ const getColor = (color: Color) => {
 	];
 };
 
-const getVariant = (variant?: any) => {
-	switch (variant) {
-		default:
-			return [];
-	}
-};
-
-export const getStyles = ({ color, variant }: { color?: Color; variant?: string }) => [
-	...baseStyle,
-	...getColor(color!),
-	...getVariant(variant!),
-];
+export const getStyles = ({ color }: { color?: Color }) => [...baseStyle, ...getColor(color!)];

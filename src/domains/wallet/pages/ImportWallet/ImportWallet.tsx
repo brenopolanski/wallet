@@ -92,9 +92,9 @@ export const ImportWallet = () => {
 		}
 	});
 
-	const handleNext = async () => {
-		switch (activeTab) {
-			case Step.MethodStep: {
+	const handleNext = () =>
+		({
+			[Step.MethodStep]: async () => {
 				setIsImporting(true);
 
 				try {
@@ -111,20 +111,16 @@ export const ImportWallet = () => {
 				} finally {
 					setIsImporting(false);
 				}
-
-				break;
-			}
-			case Step.EncryptPasswordStep: {
+			},
+			[Step.EncryptPasswordStep]: async () => {
 				setIsEncrypting(true);
 
 				await encryptInputs();
 				setActiveTab(Step.SummaryStep);
 
 				setIsEncrypting(false);
-
-				break;
-			}
-			case Step.NetworkStep: {
+			},
+			[Step.NetworkStep]: async () => {
 				// Construct coin before moving to MethodStep.
 				// Will be used in import input validations
 				const network = getValues("network");
@@ -154,11 +150,8 @@ export const ImportWallet = () => {
 				}
 
 				setActiveTab(activeTab + 1);
-
-				break;
-			}
-		}
-	};
+			},
+		}[activeTab as Exclude<Step, Step.SummaryStep>]());
 
 	const handleBack = () => {
 		if (activeTab === Step.NetworkStep) {
@@ -213,13 +206,13 @@ export const ImportWallet = () => {
 
 		if (importedWallet.actsWithMnemonic()) {
 			importedWallet
-				?.data()
+				.data()
 				.set(Contracts.WalletData.ImportMethod, Contracts.WalletImportMethod.BIP39.MNEMONIC_WITH_ENCRYPTION);
 		}
 
 		if (importedWallet.actsWithSecret()) {
 			importedWallet
-				?.data()
+				.data()
 				.set(Contracts.WalletData.ImportMethod, Contracts.WalletImportMethod.SECRET_WITH_ENCRYPTION);
 		}
 

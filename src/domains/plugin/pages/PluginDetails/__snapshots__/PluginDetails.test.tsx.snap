@@ -370,7 +370,7 @@ exports[`PluginDetails should render properly 1`] = `
                   </div>
                 </div>
                 <div
-                  class="Divider-sc-17ehhxk-0 hZpmpp border-theme-secondary-300 dark:border-theme-secondary-800"
+                  class="Divider-sc-17ehhxk-0 ijSFXJ border-theme-secondary-300 dark:border-theme-secondary-800"
                   type="horizontal"
                 />
                 <div
@@ -906,7 +906,7 @@ exports[`PluginDetails should render properly for remote package 1`] = `
                   </div>
                 </div>
                 <div
-                  class="Divider-sc-17ehhxk-0 hZpmpp border-theme-secondary-300 dark:border-theme-secondary-800"
+                  class="Divider-sc-17ehhxk-0 ijSFXJ border-theme-secondary-300 dark:border-theme-secondary-800"
                   type="horizontal"
                 />
                 <div
@@ -1465,7 +1465,7 @@ exports[`PluginDetails should report plugin 1`] = `
                   </div>
                 </div>
                 <div
-                  class="Divider-sc-17ehhxk-0 hZpmpp border-theme-secondary-300 dark:border-theme-secondary-800"
+                  class="Divider-sc-17ehhxk-0 ijSFXJ border-theme-secondary-300 dark:border-theme-secondary-800"
                   type="horizontal"
                 />
                 <div
@@ -2005,7 +2005,7 @@ exports[`PluginDetails should show configuration for plugins from npm 1`] = `
                   </div>
                 </div>
                 <div
-                  class="Divider-sc-17ehhxk-0 hZpmpp border-theme-secondary-300 dark:border-theme-secondary-800"
+                  class="Divider-sc-17ehhxk-0 ijSFXJ border-theme-secondary-300 dark:border-theme-secondary-800"
                   type="horizontal"
                 />
                 <div
@@ -2651,7 +2651,7 @@ exports[`PluginDetails should update package 1`] = `
                   </div>
                 </div>
                 <div
-                  class="Divider-sc-17ehhxk-0 hZpmpp border-theme-secondary-300 dark:border-theme-secondary-800"
+                  class="Divider-sc-17ehhxk-0 ijSFXJ border-theme-secondary-300 dark:border-theme-secondary-800"
                   type="horizontal"
                 />
                 <div

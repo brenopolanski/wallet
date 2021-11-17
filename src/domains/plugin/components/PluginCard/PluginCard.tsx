@@ -6,15 +6,15 @@ import cn from "classnames";
 import { OfficialPluginIcon } from "domains/plugin/components/OfficialPluginIcon";
 import { PluginImage } from "domains/plugin/components/PluginImage";
 import { PluginCategories } from "domains/plugin/plugin.contracts";
+import { ExtendedSerializedPluginConfigurationData } from "plugins";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
 interface PluginCardProperties {
 	actions?: DropdownOption[];
-	category?: PluginCategories;
-	plugin: any;
+	plugin: ExtendedSerializedPluginConfigurationData;
 	onClick?: () => void;
-	onSelect?: (action: any) => void;
+	onSelect?: (option: DropdownOption) => void;
 	isUpdating?: boolean;
 	updatingProgress?: any;
 	showCategory?: boolean;
@@ -53,7 +53,6 @@ export const BlankPluginCard = ({ name, category }: { name?: string; category?: 
 
 export const PluginCard = ({
 	actions,
-	category,
 	plugin,
 	onClick,
 	onSelect,
@@ -63,14 +62,10 @@ export const PluginCard = ({
 }: PluginCardProperties) => {
 	const { t } = useTranslation();
 
-	if (plugin === undefined) {
-		return <BlankPluginCard category={category} />;
-	}
-
 	const handleUpdate = () => {
 		/* istanbul ignore else */
 		if (!isUpdating) {
-			onSelect?.({ value: "update" });
+			onSelect?.({ label: "Update", value: "update" });
 		}
 	};
 

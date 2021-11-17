@@ -1,6 +1,7 @@
 import { Contracts } from "@payvo/profiles";
 import { Card } from "app/components/Card";
 import { Circle } from "app/components/Circle";
+import { DropdownOption } from "app/components/Dropdown";
 import { Icon } from "app/components/Icon";
 import { Image } from "app/components/Image";
 import { Page, Section } from "app/components/Layout";
@@ -25,7 +26,7 @@ export const Welcome = () => {
 
 	const [deletingProfileId, setDeletingProfileId] = useState<string | undefined>();
 	const [selectedProfile, setSelectedProfile] = useState<Contracts.IProfile | undefined>();
-	const [requestedAction, setRequestedAction] = useState<any>();
+	const [requestedAction, setRequestedAction] = useState<DropdownOption>();
 
 	const profileCardActions = [
 		{ label: t("COMMON.SETTINGS"), value: "setting" },
@@ -58,7 +59,7 @@ export const Welcome = () => {
 		}
 	};
 
-	const handleProfileAction = (profile: Contracts.IProfile, action: any) => {
+	const handleProfileAction = (profile: Contracts.IProfile, action: DropdownOption) => {
 		if (profile.usesPassword()) {
 			setRequestedAction(action);
 			setSelectedProfile(profile);
@@ -67,24 +68,20 @@ export const Welcome = () => {
 		}
 	};
 
-	const handleRequestedAction = (profile: Contracts.IProfile, action: any, password?: string) => {
+	const handleRequestedAction = (profile: Contracts.IProfile, action: DropdownOption, password?: string) => {
 		closeSignInModal();
 
 		if (password) {
 			profile.password().set(password);
 		}
 
-		switch (action?.value) {
-			case "home":
-				navigateToProfile(profile);
-				break;
-			case "setting":
-				navigateToProfile(profile, "settings");
-				break;
-			case "delete":
-				setDeletingProfileId(profile.id());
-				break;
-		}
+		const actions = {
+			delete: () => setDeletingProfileId(profile.id()),
+			home: () => navigateToProfile(profile),
+			setting: () => navigateToProfile(profile, "settings"),
+		};
+
+		return actions[action.value as keyof typeof actions]();
 	};
 
 	const hasProfiles = profiles.length > 0;
@@ -119,7 +116,7 @@ export const Welcome = () => {
 										className="mr-4.5 mb-4.5"
 										profile={profile}
 										onClick={() => handleClick(profile)}
-										onSelect={(action: any) => handleProfileAction(profile, action)}
+										onSelect={(action) => handleProfileAction(profile, action)}
 									/>
 								))}
 
@@ -164,11 +161,11 @@ export const Welcome = () => {
 			/>
 
 			<SignIn
-				isOpen={!!selectedProfile && requestedAction}
+				isOpen={!!selectedProfile && !!requestedAction}
 				profile={selectedProfile!}
 				onCancel={closeSignInModal}
 				onClose={closeSignInModal}
-				onSuccess={(password) => handleRequestedAction(selectedProfile!, requestedAction, password)}
+				onSuccess={(password) => handleRequestedAction(selectedProfile!, requestedAction!, password)}
 			/>
 		</>
 	);

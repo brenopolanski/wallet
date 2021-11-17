@@ -4,6 +4,7 @@ import { Modal } from "app/components/Modal";
 import { TabPanel, Tabs } from "app/components/Tabs";
 import { toasts } from "app/services";
 import { ipcRenderer } from "electron";
+import { ExtendedSerializedPluginConfigurationData, SerializedPluginConfigurationData } from "plugins";
 import { usePluginManagerContext } from "plugins/context/PluginManagerProvider";
 import React, { useCallback, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -18,7 +19,7 @@ interface InstallPluginProperties {
 	isOpen: boolean;
 	onClose?: () => void;
 	onCancel?: () => void;
-	plugin?: any;
+	plugin: SerializedPluginConfigurationData | ExtendedSerializedPluginConfigurationData;
 	repositoryURL?: string;
 	profile: Contracts.IProfile;
 }
@@ -118,16 +119,12 @@ export const InstallPlugin = ({
 		};
 	}, []);
 
-	const renderModalTitle = () => {
-		switch (activeStep) {
-			case Step.PermissionsStep:
-				return t("COMMON.PERMISSIONS");
-			case Step.DownloadStep:
-				return t("COMMON.DOWNLOADING");
-			case Step.EnableStep:
-				return t("PLUGINS.SUCCESSFULLY_INSTALLED");
-		}
-	};
+	const renderModalTitle = () =>
+		({
+			[Step.PermissionsStep]: () => t("COMMON.PERMISSIONS"),
+			[Step.DownloadStep]: () => t("COMMON.DOWNLOADING"),
+			[Step.EnableStep]: () => t("PLUGINS.SUCCESSFULLY_INSTALLED"),
+		}[activeStep]());
 
 	return (
 		<Modal title={renderModalTitle()} size="lg" isOpen={isOpen} onClose={onModalClose}>

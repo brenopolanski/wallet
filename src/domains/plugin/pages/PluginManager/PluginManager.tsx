@@ -22,29 +22,33 @@ import { PluginUpdatesConfirmation } from "domains/plugin/components/PluginUpdat
 import { usePluginUpdateQueue } from "domains/plugin/hooks/use-plugin-update-queue";
 import { PLUGIN_CATEGORIES } from "domains/plugin/plugin.constants";
 import { PluginCategories } from "domains/plugin/plugin.contracts";
+import { ExtendedSerializedPluginConfigurationData } from "plugins";
 import { usePluginManagerContext } from "plugins/context/PluginManagerProvider";
 import { IPluginController } from "plugins/core";
-import { SerializedPluginConfigurationData } from "plugins/types";
 import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 import { assertPluginController } from "utils/assertions";
 
-interface LatestPluginsProperties {
+type PluginActionType = (plugin: ExtendedSerializedPluginConfigurationData) => void;
+export interface PluginActionsProperties {
+	onDelete: PluginActionType;
+	onDisable: PluginActionType;
+	onEnable: PluginActionType;
+	onInstall: PluginActionType;
+	onLaunch: PluginActionType;
+	onSelect: PluginActionType;
+	onUpdate: PluginActionType;
+}
+
+type LatestPluginsProperties = {
 	isLoading?: boolean;
 	onCurrentViewChange: (view: string) => void;
-	onDelete: any;
-	onDisable: (plugin: any) => void;
-	onEnable: (plugin: any) => void;
-	onInstall: any;
-	onLaunch: (plugin: any) => void;
-	onSelect: (pluginId: string) => void;
-	onUpdate: (plugin: any) => void;
-	pluginsByCategory: Record<string, any[]>;
-	updatingStats?: any;
+	pluginsByCategory: Record<string, ExtendedSerializedPluginConfigurationData[]>;
+	updatingStats?: Record<string, ExtendedSerializedPluginConfigurationData>;
 	viewType: string;
 	isCompact?: boolean;
-}
+} & PluginActionsProperties;
 
 const LatestPlugins = ({
 	isLoading,
@@ -63,7 +67,7 @@ const LatestPlugins = ({
 }: LatestPluginsProperties) => {
 	const { t } = useTranslation();
 
-	const renderPlugins = (plugins: any[], category: PluginCategories) => {
+	const renderPlugins = (plugins: ExtendedSerializedPluginConfigurationData[], category: PluginCategories) => {
 		if (viewType === "grid") {
 			return (
 				<PluginGrid
@@ -103,7 +107,7 @@ const LatestPlugins = ({
 	return (
 		<>
 			{PLUGIN_CATEGORIES.map((category) => {
-				let plugins: any[] = pluginsByCategory[category] ?? [];
+				let plugins = pluginsByCategory[category] ?? [];
 				const categoryCount = plugins.length;
 
 				plugins = plugins.slice(0, 3);
@@ -222,7 +226,9 @@ export const PluginManager = () => {
 	const [updatesConfirmationPlugins, setUpdatesConfirmationPlugins] = useState<any[]>([]);
 	const [isManualInstallModalOpen, setIsManualInstallModalOpen] = useState(false);
 	const [uninstallSelectedPlugin, setUninstallSelectedPlugin] = useState<IPluginController | undefined>(undefined);
-	const [installSelectedPlugin, setInstallSelectedPlugin] = useState<IPluginController | undefined>(undefined);
+	const [installSelectedPlugin, setInstallSelectedPlugin] = useState<
+		ExtendedSerializedPluginConfigurationData | undefined
+	>(undefined);
 
 	const plugins = allPlugins.map(mapConfigToPluginData.bind(null, activeProfile));
 	const searchResultsData = searchResults.map(mapConfigToPluginData.bind(null, activeProfile));
@@ -248,7 +254,7 @@ export const PluginManager = () => {
 	);
 
 	const pluginsByCategory = useMemo(() => {
-		const result: Record<string, any[]> = {};
+		const result: Record<string, ExtendedSerializedPluginConfigurationData[]> = {};
 
 		for (const plugin of plugins) {
 			/* istanbul ignore else */
@@ -287,22 +293,22 @@ export const PluginManager = () => {
 	const handleSelectPlugin = (pluginData: any) =>
 		history.push(`/profiles/${activeProfile.id()}/plugins/details?pluginId=${pluginData.id}`);
 
-	const handleEnablePlugin = async (pluginData: any) => {
-		const pluginController = pluginManager.plugins().findById(pluginData.id);
+	const handleEnablePlugin = async (plugin: ExtendedSerializedPluginConfigurationData) => {
+		const pluginController = pluginManager.plugins().findById(plugin.id);
 
 		assertPluginController(pluginController);
 
 		try {
 			pluginController.enable(activeProfile, { autoRun: true });
 			await persist();
-			toasts.success(t("PLUGINS.ENABLE_SUCCESS", { name: pluginData.title }));
+			toasts.success(t("PLUGINS.ENABLE_SUCCESS", { name: plugin.title }));
 		} catch (error) {
-			toasts.error(t("PLUGINS.ENABLE_FAILURE", { msg: error.message, name: pluginData.title }));
+			toasts.error(t("PLUGINS.ENABLE_FAILURE", { msg: error.message, name: plugin.title }));
 		}
 	};
 
-	const handleDisablePlugin = async (pluginData: SerializedPluginConfigurationData) => {
-		const pluginController = pluginManager.plugins().findById(pluginData.id);
+	const handleDisablePlugin = async (plugin: ExtendedSerializedPluginConfigurationData) => {
+		const pluginController = pluginManager.plugins().findById(plugin.id);
 
 		assertPluginController(pluginController);
 
@@ -310,12 +316,12 @@ export const PluginManager = () => {
 		await persist();
 	};
 
-	const handleDeletePlugin = (pluginData: SerializedPluginConfigurationData) => {
-		setUninstallSelectedPlugin(pluginManager.plugins().findById(pluginData.id));
+	const handleDeletePlugin = (plugin: ExtendedSerializedPluginConfigurationData) => {
+		setUninstallSelectedPlugin(pluginManager.plugins().findById(plugin.id));
 	};
 
-	const handleLaunchPlugin = (pluginData: SerializedPluginConfigurationData) => {
-		history.push(`/profiles/${activeProfile.id()}/plugins/view?pluginId=${pluginData.id}`);
+	const handleLaunchPlugin = (plugin: ExtendedSerializedPluginConfigurationData) => {
+		history.push(`/profiles/${activeProfile.id()}/plugins/view?pluginId=${plugin.id}`);
 	};
 
 	const handleManualInstall = ({ pluginId, repositoryURL }: { pluginId: string; repositoryURL: string }) => {
@@ -325,11 +331,11 @@ export const PluginManager = () => {
 		);
 	};
 
-	const handleUpdate = (pluginData: SerializedPluginConfigurationData) => {
-		updatePlugin(pluginData, activeProfile.id());
+	const handleUpdate = (plugin: ExtendedSerializedPluginConfigurationData) => {
+		updatePlugin(plugin, activeProfile.id());
 	};
 
-	const openInstallPluginModal = (pluginData: IPluginController) => {
+	const openInstallPluginModal = (pluginData: ExtendedSerializedPluginConfigurationData) => {
 		setInstallSelectedPlugin(pluginData);
 	};
 
@@ -361,16 +367,15 @@ export const PluginManager = () => {
 	};
 
 	const viewPlugins = useMemo(() => {
-		switch (currentView) {
-			case "my-plugins":
-				return installedPlugins;
-			case "all":
-				return plugins;
-			case "search":
-				return searchResultsData;
-			default:
-				return filteredPackages;
-		}
+		const views = {
+			all: () => plugins,
+			default: () => filteredPackages,
+			"my-plugins": () => installedPlugins,
+			search: () => searchResultsData,
+		};
+
+		// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+		return (views[currentView as keyof typeof views] || views.default)();
 	}, [currentView, installedPlugins, plugins, filteredPackages, searchResultsData]);
 
 	const handleUpdateAll = () => {

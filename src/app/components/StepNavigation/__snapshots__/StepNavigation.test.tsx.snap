@@ -49,7 +49,7 @@ exports[`StepNavigation should disable buttons if loading 1`] = `
             class="absolute top-0 left-0 flex items-center justify-center w-full h-full"
           >
             <div
-              class="ButtonSpinner-sc-1jf6tdt-0 jgnpkQ"
+              class="ButtonSpinner-sc-1jf6tdt-0 cQXTyY"
             />
           </div>
         </div>
