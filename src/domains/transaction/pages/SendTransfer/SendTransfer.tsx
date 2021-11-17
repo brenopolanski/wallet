@@ -67,11 +67,9 @@ export const SendTransfer: VFC = () => {
 	} = useSendTransferForm(wallet);
 
 	useKeydown("Enter", () => {
-		if (document.activeElement instanceof HTMLInputElement && document.activeElement.type === "button") {
-			return;
-		}
+		const isButton = (document.activeElement as any)?.type === "button";
 
-		if (isNextDisabled || activeTab >= SendTransferStep.AuthenticationStep) {
+		if (isButton || isNextDisabled || activeTab >= SendTransferStep.AuthenticationStep) {
 			return;
 		}
 
