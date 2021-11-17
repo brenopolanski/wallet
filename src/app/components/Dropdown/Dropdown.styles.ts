@@ -14,23 +14,18 @@ const getVariant = (variant: DropdownVariantType) => {
 };
 
 const getPosition = (position?: Position) => {
-	switch (position) {
-		case "bottom":
-			return tw`bottom-0`;
-		case "bottom-left":
-			return tw`bottom-0 left-0`;
-		case "left":
-			return tw`left-0`;
-		case "top-left":
-			return tw`top-0 left-0`;
-		case "top":
-			return tw`top-0`;
-		case "top-right":
-			return tw`top-0 right-0`;
-		case "right":
-		default:
-			return tw`right-0`;
-	}
+	const positions = {
+		bottom: () => tw`bottom-0`,
+		"bottom-left": () => tw`bottom-0 left-0`,
+		default: () => tw`right-0`,
+		left: () => tw`left-0`,
+		top: () => tw`top-0`,
+		"top-left": () => tw`top-0 left-0`,
+		"top-right": () => tw`top-0 right-0`,
+	};
+
+	// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+	return (positions[position as keyof typeof positions] || positions.default)();
 };
 
 export const getStyles = ({ position, variant }: { position?: Position; variant: DropdownVariantType }) => [

@@ -33,24 +33,19 @@ interface ModalContentProperties {
 const ModalContainer = styled.div<{ size?: Size }>`
 	${tw`flex-1 m-auto`}
 	${({ size }) => {
-		switch (size) {
-			case "sm":
-				return tw`max-w-sm`;
-			case "md":
-				return tw`max-w-md`;
-			case "lg":
-				return tw`max-w-lg`;
-			case "xl":
-				return tw`max-w-xl`;
-			case "3xl":
-				return tw`max-w-3xl`;
-			case "4xl":
-				return tw`max-w-4xl`;
-			case "5xl":
-				return tw`max-w-5xl`;
-			default:
-				return tw`max-w-2xl`;
-		}
+		const sizes = {
+			"3xl": () => tw`max-w-3xl`,
+			"4xl": () => tw`max-w-4xl`,
+			"5xl": () => tw`max-w-5xl`,
+			default: () => tw`max-w-2xl`,
+			lg: () => tw`max-w-lg`,
+			md: () => tw`max-w-md`,
+			sm: () => tw`max-w-sm`,
+			xl: () => tw`max-w-xl`,
+		};
+
+		// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+		return (sizes[size as keyof typeof sizes] || sizes.default)();
 	}}
 `;
 

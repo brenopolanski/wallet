@@ -1,7 +1,7 @@
 import tw from "twin.macro";
 import { Size } from "types";
 
-const baseStyle = [tw`font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700`];
+const baseStyle = tw`font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700`;
 
 const getSelected = (selected: boolean) => {
 	if (selected) {
@@ -16,14 +16,14 @@ const getVariant = (disabled: boolean) => {
 };
 
 const getSize = (size?: Size) => {
-	switch (size) {
-		case "sm":
-			return tw`text-sm first:mr-2 last:ml-2`;
-		case "lg":
-			return tw`text-lg first:mr-4 last:ml-4`;
-		default:
-			return tw`text-base first:mr-3 last:ml-3`;
-	}
+	const sizes = {
+		default: () => tw`text-base first:mr-3 last:ml-3`,
+		lg: () => tw`text-lg first:mr-4 last:ml-4`,
+		sm: () => tw`text-sm first:mr-2 last:ml-2`,
+	};
+
+	// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+	return (sizes[size as keyof typeof sizes] || sizes.default)();
 };
 
 export interface SwitchTextType {
@@ -32,7 +32,7 @@ export interface SwitchTextType {
 	disabled?: boolean;
 }
 export const getSwitchTextStyles = ({ size, selected, disabled }: SwitchTextType) => [
-	...baseStyle,
+	baseStyle,
 	getSize(size),
 	getSelected(selected!),
 	getVariant(disabled!),

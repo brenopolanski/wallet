@@ -17,9 +17,7 @@ interface BadgeProperties {
 	noShadow?: boolean;
 }
 
-export const Wrapper = styled.span.attrs<BadgeStyleProperties>(({ position }) => ({
-	position: position ?? "bottom-right",
-}))<BadgeStyleProperties>(getStyles);
+export const Wrapper = styled.span<BadgeStyleProperties>(getStyles);
 
 export const Badge = forwardRef<HTMLSpanElement, BadgeProperties>(
 	({ className, children, icon, iconClass, iconSize = "sm", ...properties }: BadgeProperties, reference) => (

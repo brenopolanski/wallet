@@ -3,7 +3,7 @@ import tw, { css, TwStyle } from "twin.macro";
 import { ButtonVariant } from "types";
 import { shouldUseDarkColors } from "utils/electron-utils";
 
-const baseStyle = [tw`w-6 h-6 border border-4 rounded-full animate-spin`];
+const baseStyle = tw`w-6 h-6 border border-4 rounded-full animate-spin`;
 
 const variantColors: {
 	[key in ButtonVariant]?: string;
@@ -16,44 +16,20 @@ const variantColors: {
 const getColor = (variant: ButtonVariant): Array<FlattenSimpleInterpolation | TwStyle> => {
 	const color = variantColors[variant] || "primary-500";
 
-	const styles: Array<FlattenSimpleInterpolation | TwStyle> = [];
+	const borderColor = variant === "danger" && shouldUseDarkColors() ? "white" : color;
+	const borderStyle = css`
+		border-left-color: var(--theme-color-${borderColor}) !important;
+	`;
 
-	switch (variant) {
-		case "danger": {
-			styles.push(tw`border-theme-danger-200 dark:border-theme-danger-500`);
+	const variants = {
+		danger: () => tw`border-theme-danger-200 dark:border-theme-danger-500`,
+		default: () => tw`border-theme-secondary-200`,
+		primary: () => tw`border-theme-primary-700`,
+		secondary: () => tw`border-white dark:border-theme-secondary-900`,
+	};
 
-			break;
-		}
-		case "primary": {
-			styles.push(tw`border-theme-primary-700`);
-
-			break;
-		}
-		case "secondary": {
-			styles.push(tw`border-white dark:border-theme-secondary-900`);
-
-			break;
-		}
-		default: {
-			styles.push(tw`border-theme-secondary-200`);
-		}
-	}
-
-	if (variant === "danger" && shouldUseDarkColors()) {
-		styles.push(
-			css`
-				border-left-color: var(--theme-color-white) !important;
-			`,
-		);
-	} else {
-		styles.push(
-			css`
-				border-left-color: var(--theme-color-${color}) !important;
-			`,
-		);
-	}
-
-	return styles;
+	// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+	return [borderStyle, (variants[variant as keyof typeof variants] || variants.default)()];
 };
 
-export const getStyles = ({ variant }: { variant?: ButtonVariant }) => [...baseStyle, ...getColor(variant!)];
+export const getStyles = ({ variant }: { variant?: ButtonVariant }) => [baseStyle, ...getColor(variant!)];

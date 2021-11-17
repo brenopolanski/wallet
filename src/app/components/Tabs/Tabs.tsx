@@ -39,6 +39,38 @@ interface TabProperties {
 
 const TabButton = styled.button``;
 
+type EventType = React.KeyboardEvent<HTMLButtonElement> & { target: Element };
+
+const onKeyDown = {
+	ArrowLeft: (event: EventType) => {
+		let previousTab = event.target.previousElementSibling;
+
+		while (previousTab && previousTab.getAttribute("role") !== "tab") {
+			previousTab = previousTab.previousElementSibling;
+		}
+
+		if (!previousTab) {
+			const tabs = event.target.parentElement!.querySelectorAll("[role=tab]");
+			previousTab = tabs[tabs.length - 1];
+		}
+
+		(previousTab as HTMLElement).focus();
+	},
+	ArrowRight: (event: EventType) => {
+		let nextTab = event.target.nextElementSibling;
+
+		while (nextTab && nextTab.getAttribute("role") !== "tab") {
+			nextTab = nextTab.nextElementSibling;
+		}
+
+		if (!nextTab) {
+			nextTab = event.target.parentElement!.querySelector("[role=tab]");
+		}
+
+		(nextTab as HTMLElement).focus();
+	},
+};
+
 export const Tab = React.forwardRef<HTMLButtonElement, TabProperties>((properties: TabProperties, reference) => {
 	const context = React.useContext(TabContext);
 	const isActive = context?.isIdActive(properties.tabId);
@@ -53,46 +85,14 @@ export const Tab = React.forwardRef<HTMLButtonElement, TabProperties>((propertie
 			aria-selected={isActive}
 			tabIndex={isActive ? 0 : -1}
 			data-ring-focus-margin="-mx-3"
-			onKeyDown={(event: any) => {
-				switch (event.key) {
-					case "ArrowLeft": {
-						let previousTab = event.target.previousElementSibling;
+			onKeyDown={(event: EventType) => {
+				// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+				if (onKeyDown[event.key as keyof typeof onKeyDown]) {
+					return onKeyDown[event.key as keyof typeof onKeyDown](event);
+				}
 
-						while (previousTab && previousTab.getAttribute("role") !== "tab") {
-							previousTab = previousTab.previousElementSibling;
-						}
-
-						if (!previousTab) {
-							const tabs = event.target.parentElement.querySelectorAll("[role=tab]");
-							previousTab = tabs[tabs.length - 1];
-						}
-
-						previousTab.focus();
-
-						break;
-					}
-					case "ArrowRight": {
-						let nextTab = event.target.nextElementSibling;
-
-						while (nextTab && nextTab.getAttribute("role") !== "tab") {
-							nextTab = nextTab.nextElementSibling;
-						}
-
-						if (!nextTab) {
-							nextTab = event.target.parentElement.querySelector("[role=tab]");
-						}
-
-						nextTab.focus();
-
-						break;
-					}
-					case "Enter":
-					case " ": {
-						context?.setCurrentId(properties.tabId);
-
-						break;
-					}
-					// No default
+				if (["Enter", " "].includes(event.key)) {
+					return context?.setCurrentId(properties.tabId);
 				}
 			}}
 			onClick={() => context?.setCurrentId(properties.tabId)}
