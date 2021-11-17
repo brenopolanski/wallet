@@ -15,10 +15,11 @@ export const ContentInsideCircle: React.VFC<ContentInsideCircleProperties> = ({ 
 			return;
 		}
 
-		const containerRect = container.getBoundingClientRect();
+		const { width, height } = container.getBoundingClientRect();
 
-		container.style.left = `${Math.floor(size / 2 - containerRect.width / 2)}px`;
-		container.style.top = `${Math.floor(size / 2 - containerRect.height / 2)}px`;
+		// Center content vertically and horizontally.
+		container.style.left = `${Math.floor(size / 2 - width / 2)}px`;
+		container.style.top = `${Math.floor(size / 2 - height / 2)}px`;
 	}, [size]);
 
 	if (!renderFunction) {
