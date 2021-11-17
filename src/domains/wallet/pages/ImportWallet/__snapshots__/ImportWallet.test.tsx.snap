@@ -611,7 +611,7 @@ exports[`ImportWallet should render as ledger import 1`] = `
                     class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -650,7 +650,7 @@ exports[`ImportWallet should render as ledger import 1`] = `
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -680,7 +680,7 @@ exports[`ImportWallet should render as ledger import 1`] = `
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -991,7 +991,7 @@ exports[`ImportWallet should render as ledger import 1`] = `
                   class="flex space-x-3"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                     data-testid="Paginator__back-button"
                     type="button"
                   >
@@ -1002,7 +1002,7 @@ exports[`ImportWallet should render as ledger import 1`] = `
                     </div>
                   </button>
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
                     data-testid="Paginator__continue-button"
                     type="button"
                   >
@@ -1911,7 +1911,7 @@ exports[`ImportWallet should render success step 1`] = `
         </div>
       </div>
       <button
-        class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+        class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
         data-testid="ImportWallet__edit-alias"
         type="button"
       >

@@ -123,7 +123,7 @@ exports[`CreateProfile should render 1`] = `
                             class="SelectProfileImage__UploadButtonWrapper-sc-vg16mg-0 hUQFjg"
                           >
                             <button
-                              class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                              class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                               data-testid="SelectProfileImage__upload-button"
                               type="button"
                             >
@@ -434,7 +434,7 @@ exports[`CreateProfile should render 1`] = `
                 class="flex justify-end pt-4 space-x-3"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                   type="button"
                 >
                   <div
@@ -444,7 +444,7 @@ exports[`CreateProfile should render 1`] = `
                   </div>
                 </button>
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 dQCpEO"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 kkDhXe"
                   data-testid="CreateProfile__submit-button"
                   disabled=""
                   type="submit"
@@ -906,7 +906,7 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                 class="flex justify-end pt-4 space-x-3"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                   type="button"
                 >
                   <div
@@ -916,7 +916,7 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                   </div>
                 </button>
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
                   data-testid="CreateProfile__submit-button"
                   type="submit"
                 >
@@ -1078,7 +1078,7 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                             class="SelectProfileImage__UploadButtonWrapper-sc-vg16mg-0 hUQFjg"
                           >
                             <button
-                              class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                              class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                               data-testid="SelectProfileImage__upload-button"
                               type="button"
                             >
@@ -1389,7 +1389,7 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                 class="flex justify-end pt-4 space-x-3"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                   type="button"
                 >
                   <div
@@ -1399,7 +1399,7 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                   </div>
                 </button>
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 dQCpEO"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 kkDhXe"
                   data-testid="CreateProfile__submit-button"
                   disabled=""
                   type="submit"

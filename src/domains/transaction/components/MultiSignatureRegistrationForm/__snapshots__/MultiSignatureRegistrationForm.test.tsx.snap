@@ -147,7 +147,7 @@ exports[`MultiSignature Registration Form should render form step 1`] = `
                 </div>
               </fieldset>
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 dQCpEO my-4 w-full"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 kkDhXe my-4 w-full"
                 disabled=""
                 type="button"
               >
@@ -285,7 +285,7 @@ exports[`MultiSignature Registration Form should render form step 1`] = `
                             class="inline-block"
                           >
                             <button
-                              class="OriginalButton__StyledButton-sc-o0fs2j-0 dQCpEO"
+                              class="OriginalButton__StyledButton-sc-o0fs2j-0 kkDhXe"
                               data-testid="recipient-list__remove-recipient"
                               disabled=""
                               type="button"

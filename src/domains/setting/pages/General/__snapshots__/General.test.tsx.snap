@@ -109,7 +109,7 @@ exports[`General Settings should disable submit button when profile is not resto
                     class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -148,7 +148,7 @@ exports[`General Settings should disable submit button when profile is not resto
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nnGbn"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 lcpndT"
                   data-testid="navbar__buttons--send"
                   disabled=""
                   type="button"
@@ -179,7 +179,7 @@ exports[`General Settings should disable submit button when profile is not resto
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nnGbn"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 lcpndT"
                   data-testid="navbar__buttons--receive"
                   disabled=""
                   type="button"
@@ -1388,7 +1388,7 @@ exports[`General Settings should disable submit button when profile is not resto
                     class="flex justify-between w-full"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 dhaLpP"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 fxPCrX"
                       type="button"
                     >
                       <div
@@ -1409,7 +1409,7 @@ exports[`General Settings should disable submit button when profile is not resto
                       </div>
                     </button>
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 dQCpEO"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 kkDhXe"
                       data-testid="General-settings__submit-button"
                       disabled=""
                       type="submit"
@@ -1541,7 +1541,7 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                     class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -1580,7 +1580,7 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -1610,7 +1610,7 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -1911,7 +1911,7 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                             class="absolute z-20 -top-3 -right-3 "
                           >
                             <button
-                              class="OriginalButton__StyledButton-sc-o0fs2j-0 jCXOtI flex justify-center items-center p-1 w-6 h-6"
+                              class="OriginalButton__StyledButton-sc-o0fs2j-0 cHoyFs flex justify-center items-center p-1 w-6 h-6"
                               data-testid="SelectProfileImage__remove-button"
                               type="button"
                             >
@@ -2832,7 +2832,7 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                     class="flex justify-between w-full"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 dhaLpP"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 fxPCrX"
                       type="button"
                     >
                       <div
@@ -2853,7 +2853,7 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                       </div>
                     </button>
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
                       data-testid="General-settings__submit-button"
                       type="submit"
                     >
@@ -2984,7 +2984,7 @@ exports[`General Settings should render 1`] = `
                     class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -3023,7 +3023,7 @@ exports[`General Settings should render 1`] = `
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -3053,7 +3053,7 @@ exports[`General Settings should render 1`] = `
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -4257,7 +4257,7 @@ exports[`General Settings should render 1`] = `
                     class="flex justify-between w-full"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 dhaLpP"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 fxPCrX"
                       type="button"
                     >
                       <div
@@ -4278,7 +4278,7 @@ exports[`General Settings should render 1`] = `
                       </div>
                     </button>
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
                       data-testid="General-settings__submit-button"
                       type="submit"
                     >
@@ -4409,7 +4409,7 @@ exports[`General Settings should show identicon when removing image if name is s
                     class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -4448,7 +4448,7 @@ exports[`General Settings should show identicon when removing image if name is s
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -4478,7 +4478,7 @@ exports[`General Settings should show identicon when removing image if name is s
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -5682,7 +5682,7 @@ exports[`General Settings should show identicon when removing image if name is s
                     class="flex justify-between w-full"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 dhaLpP"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 fxPCrX"
                       type="button"
                     >
                       <div
@@ -5703,7 +5703,7 @@ exports[`General Settings should show identicon when removing image if name is s
                       </div>
                     </button>
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
                       data-testid="General-settings__submit-button"
                       type="submit"
                     >
@@ -5834,7 +5834,7 @@ exports[`General Settings should update profile 1`] = `
                     class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -5873,7 +5873,7 @@ exports[`General Settings should update profile 1`] = `
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -5903,7 +5903,7 @@ exports[`General Settings should update profile 1`] = `
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -7108,7 +7108,7 @@ exports[`General Settings should update profile 1`] = `
                     class="flex justify-between w-full"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 dhaLpP"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 fxPCrX"
                       type="button"
                     >
                       <div
@@ -7129,7 +7129,7 @@ exports[`General Settings should update profile 1`] = `
                       </div>
                     </button>
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
                       data-testid="General-settings__submit-button"
                       type="submit"
                     >
@@ -7260,7 +7260,7 @@ exports[`General Settings should update the avatar when removing focus from name
                     class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -7299,7 +7299,7 @@ exports[`General Settings should update the avatar when removing focus from name
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -7329,7 +7329,7 @@ exports[`General Settings should update the avatar when removing focus from name
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -8533,7 +8533,7 @@ exports[`General Settings should update the avatar when removing focus from name
                     class="flex justify-between w-full"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 dhaLpP"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 fxPCrX"
                       type="button"
                     >
                       <div
@@ -8554,7 +8554,7 @@ exports[`General Settings should update the avatar when removing focus from name
                       </div>
                     </button>
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hJePHJ"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
                       data-testid="General-settings__submit-button"
                       type="submit"
                     >
@@ -8685,7 +8685,7 @@ exports[`General Settings should update the avatar when removing focus from name
                     class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -8724,7 +8724,7 @@ exports[`General Settings should update the avatar when removing focus from name
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -8754,7 +8754,7 @@ exports[`General Settings should update the avatar when removing focus from name
                 class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jQRVKB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -9029,7 +9029,7 @@ exports[`General Settings should update the avatar when removing focus from name
                               class="SelectProfileImage__UploadButtonWrapper-sc-vg16mg-0 hUQFjg"
                             >
                               <button
-                                class="OriginalButton__StyledButton-sc-o0fs2j-0 htoGqc"
+                                class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                                 data-testid="SelectProfileImage__upload-button"
                                 type="button"
                               >
@@ -9970,7 +9970,7 @@ exports[`General Settings should update the avatar when removing focus from name
                     class="flex justify-between w-full"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 dhaLpP"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 fxPCrX"
                       type="button"
                     >
                       <div
@@ -9991,7 +9991,7 @@ exports[`General Settings should update the avatar when removing focus from name
                       </div>
                     </button>
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 dQCpEO"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 kkDhXe"
                       data-testid="General-settings__submit-button"
                       disabled=""
                       type="submit"
