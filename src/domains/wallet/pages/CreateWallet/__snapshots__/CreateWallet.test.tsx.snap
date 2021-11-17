@@ -473,7 +473,7 @@ exports[`CreateWallet should create a wallet 1`] = `
                             </ul>
                           </div>
                           <div
-                            class="Divider-sc-17ehhxk-0 ijjdey border-theme-secondary-300 dark:border-theme-secondary-800"
+                            class="Divider-sc-17ehhxk-0 FRyyK border-theme-secondary-300 dark:border-theme-secondary-800"
                             type="horizontal"
                           />
                           <div
@@ -1558,7 +1558,7 @@ exports[`CreateWallet should create a wallet with encryption 1`] = `
                             </ul>
                           </div>
                           <div
-                            class="Divider-sc-17ehhxk-0 ijjdey border-theme-secondary-300 dark:border-theme-secondary-800"
+                            class="Divider-sc-17ehhxk-0 FRyyK border-theme-secondary-300 dark:border-theme-secondary-800"
                             type="horizontal"
                           />
                           <div
@@ -2648,7 +2648,7 @@ exports[`CreateWallet should remove pending wallet if not submitted 1`] = `
                             </ul>
                           </div>
                           <div
-                            class="Divider-sc-17ehhxk-0 ijjdey border-theme-secondary-300 dark:border-theme-secondary-800"
+                            class="Divider-sc-17ehhxk-0 FRyyK border-theme-secondary-300 dark:border-theme-secondary-800"
                             type="horizontal"
                           />
                           <div
@@ -3269,7 +3269,7 @@ exports[`CreateWallet should show an error message for duplicate name 1`] = `
                             </ul>
                           </div>
                           <div
-                            class="Divider-sc-17ehhxk-0 ijjdey border-theme-secondary-300 dark:border-theme-secondary-800"
+                            class="Divider-sc-17ehhxk-0 FRyyK border-theme-secondary-300 dark:border-theme-secondary-800"
                             type="horizontal"
                           />
                           <div
@@ -3932,7 +3932,7 @@ exports[`CreateWallet should show an error message if wallet generation failed 1
                             </ul>
                           </div>
                           <div
-                            class="Divider-sc-17ehhxk-0 ijjdey border-theme-secondary-300 dark:border-theme-secondary-800"
+                            class="Divider-sc-17ehhxk-0 FRyyK border-theme-secondary-300 dark:border-theme-secondary-800"
                             type="horizontal"
                           />
                           <div

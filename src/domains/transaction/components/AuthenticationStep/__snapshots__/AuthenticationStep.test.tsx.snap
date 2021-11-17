@@ -702,7 +702,7 @@ exports[`AuthenticationStep should show ledger waiting app screen 1`] = `
         class="inline-flex justify-center items-center space-x-3 w-full"
       >
         <div
-          class="Spinner-sc-1rpx65r-0 bzGMae"
+          class="Spinner-sc-1rpx65r-0 lfdpzU"
           color="info"
         />
         <span
@@ -755,7 +755,7 @@ exports[`AuthenticationStep should show ledger waiting device screen 1`] = `
         class="inline-flex justify-center items-center space-x-3 w-full"
       >
         <div
-          class="Spinner-sc-1rpx65r-0 bzGMae"
+          class="Spinner-sc-1rpx65r-0 lfdpzU"
           color="info"
         />
         <span
@@ -805,7 +805,7 @@ exports[`AuthenticationStep should show ledger waiting device screen for Nano S 
       class="inline-flex justify-center items-center mt-8 space-x-3 w-full"
     >
       <div
-        class="Spinner-sc-1rpx65r-0 bzGMae"
+        class="Spinner-sc-1rpx65r-0 lfdpzU"
         color="info"
       />
       <span
@@ -854,7 +854,7 @@ exports[`AuthenticationStep should show ledger waiting device screen for Nano X 
       class="inline-flex justify-center items-center mt-8 space-x-3 w-full"
     >
       <div
-        class="Spinner-sc-1rpx65r-0 bzGMae"
+        class="Spinner-sc-1rpx65r-0 lfdpzU"
         color="info"
       />
       <span
@@ -903,7 +903,7 @@ exports[`AuthenticationStep should show only ledger confirmation 1`] = `
       class="inline-flex justify-center items-center mt-8 space-x-3 w-full"
     >
       <div
-        class="Spinner-sc-1rpx65r-0 bzGMae"
+        class="Spinner-sc-1rpx65r-0 lfdpzU"
         color="info"
       />
       <span
@@ -990,7 +990,7 @@ exports[`AuthenticationStep should specify ledger supported model 1`] = `
         class="inline-flex justify-center items-center space-x-3 w-full"
       >
         <div
-          class="Spinner-sc-1rpx65r-0 bzGMae"
+          class="Spinner-sc-1rpx65r-0 lfdpzU"
           color="info"
         />
         <span

@@ -75,7 +75,7 @@ exports[`PluginHeader should render properly 1`] = `
           </div>
         </div>
         <div
-          class="Divider-sc-17ehhxk-0 ijjdey border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="Divider-sc-17ehhxk-0 FRyyK border-theme-secondary-300 dark:border-theme-secondary-800"
           type="horizontal"
         />
         <div
@@ -365,7 +365,7 @@ exports[`PluginHeader should render updating plugin 1`] = `
           </div>
         </div>
         <div
-          class="Divider-sc-17ehhxk-0 ijjdey border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="Divider-sc-17ehhxk-0 FRyyK border-theme-secondary-300 dark:border-theme-secondary-800"
           type="horizontal"
         />
         <div

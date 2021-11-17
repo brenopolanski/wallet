@@ -853,7 +853,7 @@ exports[`News should filter results based on category query and asset 1`] = `
                       </div>
                     </div>
                     <div
-                      class="Divider-sc-17ehhxk-0 ijjdey border-theme-secondary-300 dark:border-theme-secondary-800"
+                      class="Divider-sc-17ehhxk-0 FRyyK border-theme-secondary-300 dark:border-theme-secondary-800"
                       type="horizontal"
                     />
                     <div
@@ -1729,7 +1729,7 @@ exports[`News should render 1`] = `
                       </div>
                     </div>
                     <div
-                      class="Divider-sc-17ehhxk-0 ijjdey border-theme-secondary-300 dark:border-theme-secondary-800"
+                      class="Divider-sc-17ehhxk-0 FRyyK border-theme-secondary-300 dark:border-theme-secondary-800"
                       type="horizontal"
                     />
                     <div
@@ -2274,7 +2274,7 @@ exports[`News should show error toast if news cannot be fetched 1`] = `
                       </div>
                     </div>
                     <div
-                      class="Divider-sc-17ehhxk-0 ijjdey border-theme-secondary-300 dark:border-theme-secondary-800"
+                      class="Divider-sc-17ehhxk-0 FRyyK border-theme-secondary-300 dark:border-theme-secondary-800"
                       type="horizontal"
                     />
                     <div
