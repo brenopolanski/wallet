@@ -18,7 +18,7 @@ import { useTransactionQueryParams } from "domains/transaction/hooks/use-transac
 import { SendTransferStep } from "domains/transaction/pages/SendTransfer/SendTransfer.contracts";
 import React, { useCallback, useEffect, useMemo, useRef, useState, VFC } from "react";
 import { useHistory } from "react-router-dom";
-import { assertWallet } from "utils/assertions";
+import { assertNetwork, assertWallet } from "utils/assertions";
 
 import { FormStep } from "./FormStep";
 import { TransferLedgerReview } from "./LedgerReview";
