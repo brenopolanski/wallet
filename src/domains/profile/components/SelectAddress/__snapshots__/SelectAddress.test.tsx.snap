@@ -16,7 +16,7 @@ exports[`SelectAddress should render disabled 1`] = `
       />
     </span>
     <div
-      class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+      class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
     >
       <div
         class="Circle__CircleWrapper-sc-d5u41q-0 bcplCx bg-theme-secondary-200 border-theme-secondary-200 dark:bg-theme-secondary-700 dark:border-theme-secondary-700 ring-theme-background"
@@ -72,7 +72,7 @@ exports[`SelectAddress should render empty 1`] = `
       />
     </span>
     <div
-      class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+      class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
     >
       <div
         class="Circle__CircleWrapper-sc-d5u41q-0 bcplCx bg-theme-secondary-200 border-theme-secondary-200 dark:bg-theme-secondary-700 dark:border-theme-secondary-700 ring-theme-background"
@@ -128,7 +128,7 @@ exports[`SelectAddress should render invalid 1`] = `
       />
     </span>
     <div
-      class="Input__InputWrapperStyled-sc-1i8sd1r-0 eyownm"
+      class="Input__InputWrapperStyled-sc-1i8sd1r-0 lnWRPe"
     >
       <div
         class="Circle__CircleWrapper-sc-d5u41q-0 bcplCx bg-theme-secondary-200 border-theme-secondary-200 dark:bg-theme-secondary-700 dark:border-theme-secondary-700 ring-theme-background"
@@ -216,7 +216,7 @@ exports[`SelectAddress should render with preselected address 1`] = `
       </div>
     </span>
     <div
-      class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+      class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
     >
       <div
         class="Avatar__AvatarWrapper-sc-18vw8a4-0 jiaHcL flex-shrink-0"

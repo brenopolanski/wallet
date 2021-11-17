@@ -41,7 +41,7 @@ exports[`NavigationBar should render full variant when profile restored is false
       class="flex relative h-21"
     >
       <button
-        class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+        class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
       >
         <div
           class="sc-bdvvtL Cfvxc mx-auto"
@@ -284,7 +284,7 @@ exports[`NavigationBar should render full variant when profile restored is true 
       class="flex relative h-21"
     >
       <button
-        class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+        class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
       >
         <div
           class="sc-bdvvtL Cfvxc mx-auto"
@@ -521,7 +521,7 @@ exports[`NavigationBar should render with custom menu 1`] = `
       class="flex relative h-21"
     >
       <button
-        class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+        class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
       >
         <div
           class="sc-bdvvtL Cfvxc mx-auto"
@@ -758,7 +758,7 @@ exports[`NavigationBar should render with shadow if there is a scroll 1`] = `
       class="flex relative h-21"
     >
       <button
-        class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+        class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
       >
         <div
           class="sc-bdvvtL Cfvxc mx-auto"
@@ -995,7 +995,7 @@ exports[`NavigationBar should render with title 1`] = `
       class="flex relative h-21"
     >
       <button
-        class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+        class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
       >
         <div
           class="sc-bdvvtL Cfvxc mx-auto"

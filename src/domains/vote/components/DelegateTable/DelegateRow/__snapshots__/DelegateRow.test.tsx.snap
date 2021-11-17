@@ -46,7 +46,7 @@ exports[`DelegateRow should emit action on select button 1`] = `
               to=""
             >
               <span
-                class="Link__Content-sc-ec014t-1 jGLnf"
+                class="Link__Content-sc-ec014t-1 fPOlTq"
               >
                 <div
                   class="sc-bdvvtL fCrhkg"
@@ -136,7 +136,7 @@ exports[`DelegateRow should render 1`] = `
               to=""
             >
               <span
-                class="Link__Content-sc-ec014t-1 jGLnf"
+                class="Link__Content-sc-ec014t-1 fPOlTq"
               >
                 <div
                   class="sc-bdvvtL fCrhkg"
@@ -226,7 +226,7 @@ exports[`DelegateRow should render changed style when network requires vote amou
               to=""
             >
               <span
-                class="Link__Content-sc-ec014t-1 jGLnf"
+                class="Link__Content-sc-ec014t-1 fPOlTq"
               >
                 <div
                   class="sc-bdvvtL fCrhkg"
@@ -255,7 +255,7 @@ exports[`DelegateRow should render changed style when network requires vote amou
                 class="relative"
               >
                 <div
-                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 dpFHlv"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 fJIMQr"
                 >
                   <div
                     class="relative flex flex-1 h-full"
@@ -360,7 +360,7 @@ exports[`DelegateRow should render the selected delegate 1`] = `
               to=""
             >
               <span
-                class="Link__Content-sc-ec014t-1 jGLnf"
+                class="Link__Content-sc-ec014t-1 fPOlTq"
               >
                 <div
                   class="sc-bdvvtL fCrhkg"
@@ -450,7 +450,7 @@ exports[`DelegateRow should render the selected vote 1`] = `
               to=""
             >
               <span
-                class="Link__Content-sc-ec014t-1 jGLnf"
+                class="Link__Content-sc-ec014t-1 fPOlTq"
               >
                 <div
                   class="sc-bdvvtL fCrhkg"
@@ -531,7 +531,7 @@ exports[`DelegateRow should render the selected vote 1`] = `
               to=""
             >
               <span
-                class="Link__Content-sc-ec014t-1 jGLnf"
+                class="Link__Content-sc-ec014t-1 fPOlTq"
               >
                 <div
                   class="sc-bdvvtL fCrhkg"
@@ -612,7 +612,7 @@ exports[`DelegateRow should render the selected vote 1`] = `
               to=""
             >
               <span
-                class="Link__Content-sc-ec014t-1 jGLnf"
+                class="Link__Content-sc-ec014t-1 fPOlTq"
               >
                 <div
                   class="sc-bdvvtL fCrhkg"
@@ -705,7 +705,7 @@ exports[`DelegateRow should render the selected vote 2`] = `
               to=""
             >
               <span
-                class="Link__Content-sc-ec014t-1 jGLnf"
+                class="Link__Content-sc-ec014t-1 fPOlTq"
               >
                 <div
                   class="sc-bdvvtL fCrhkg"
@@ -786,7 +786,7 @@ exports[`DelegateRow should render the selected vote 2`] = `
               to=""
             >
               <span
-                class="Link__Content-sc-ec014t-1 jGLnf"
+                class="Link__Content-sc-ec014t-1 fPOlTq"
               >
                 <div
                   class="sc-bdvvtL fCrhkg"
@@ -867,7 +867,7 @@ exports[`DelegateRow should render the selected vote 2`] = `
               to=""
             >
               <span
-                class="Link__Content-sc-ec014t-1 jGLnf"
+                class="Link__Content-sc-ec014t-1 fPOlTq"
               >
                 <div
                   class="sc-bdvvtL fCrhkg"
@@ -960,7 +960,7 @@ exports[`DelegateRow should render the unselected vote 1`] = `
               to=""
             >
               <span
-                class="Link__Content-sc-ec014t-1 jGLnf"
+                class="Link__Content-sc-ec014t-1 fPOlTq"
               >
                 <div
                   class="sc-bdvvtL fCrhkg"
@@ -1050,7 +1050,7 @@ exports[`DelegateRow should render when network requires vote amount 1`] = `
               to=""
             >
               <span
-                class="Link__Content-sc-ec014t-1 jGLnf"
+                class="Link__Content-sc-ec014t-1 fPOlTq"
               >
                 <div
                   class="sc-bdvvtL fCrhkg"

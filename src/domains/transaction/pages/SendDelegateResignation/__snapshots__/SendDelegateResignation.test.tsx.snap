@@ -13,7 +13,7 @@ exports[`SendDelegateResignation Delegate Resignation should change fee 1`] = `
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -497,7 +497,7 @@ exports[`SendDelegateResignation Delegate Resignation should change fee 1`] = `
                                   class="Toggle__Handle-sc-6s3wfu-2 jRjdQR"
                                 >
                                   <span
-                                    class="Toggle__HandleInner-sc-6s3wfu-3 gNamtB"
+                                    class="Toggle__HandleInner-sc-6s3wfu-3 fiPeMI"
                                   />
                                 </div>
                               </label>
@@ -513,7 +513,7 @@ exports[`SendDelegateResignation Delegate Resignation should change fee 1`] = `
                             class="relative"
                           >
                             <div
-                              class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                              class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                             >
                               <div
                                 class="relative flex flex-1 h-full"
@@ -628,7 +628,7 @@ exports[`SendDelegateResignation Delegate Resignation should render 1st step 1`]
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -1112,7 +1112,7 @@ exports[`SendDelegateResignation Delegate Resignation should render 1st step 1`]
                                   class="Toggle__Handle-sc-6s3wfu-2 jRjdQR"
                                 >
                                   <span
-                                    class="Toggle__HandleInner-sc-6s3wfu-3 gNamtB"
+                                    class="Toggle__HandleInner-sc-6s3wfu-3 fiPeMI"
                                   />
                                 </div>
                               </label>
@@ -1132,7 +1132,7 @@ exports[`SendDelegateResignation Delegate Resignation should render 1st step 1`]
                             <button
                               aria-checked="false"
                               aria-label="25"
-                              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
+                              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ZQFGq"
                               data-testid="ButtonGroupOption"
                               role="radio"
                               type="button"
@@ -1154,7 +1154,7 @@ exports[`SendDelegateResignation Delegate Resignation should render 1st step 1`]
                             <button
                               aria-checked="true"
                               aria-label="25"
-                              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
+                              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ZQFGq"
                               data-testid="ButtonGroupOption"
                               role="radio"
                               type="button"
@@ -1176,7 +1176,7 @@ exports[`SendDelegateResignation Delegate Resignation should render 1st step 1`]
                             <button
                               aria-checked="false"
                               aria-label="25"
-                              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 erjeMG"
+                              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ZQFGq"
                               data-testid="ButtonGroupOption"
                               role="radio"
                               type="button"
@@ -1250,7 +1250,7 @@ exports[`SendDelegateResignation Delegate Resignation should render 2nd step 1`]
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -1797,7 +1797,7 @@ exports[`SendDelegateResignation Delegate Resignation should render 3rd step 1`]
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -2116,7 +2116,7 @@ exports[`SendDelegateResignation Delegate Resignation should render 3rd step 1`]
                         Mnemonic
                       </label>
                       <div
-                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                       >
                         <div
                           class="relative flex flex-1 h-full"
@@ -2270,7 +2270,7 @@ exports[`SendDelegateResignation Delegate Resignation should show error step and
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -2686,7 +2686,7 @@ exports[`SendDelegateResignation Delegate Resignation should show mnemonic authe
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -3005,7 +3005,7 @@ exports[`SendDelegateResignation Delegate Resignation should show mnemonic authe
                         Mnemonic
                       </label>
                       <div
-                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                       >
                         <div
                           class="relative flex flex-1 h-full"
@@ -3055,7 +3055,7 @@ exports[`SendDelegateResignation Delegate Resignation should show mnemonic authe
                         2nd Mnemonic
                       </label>
                       <div
-                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 eyownm"
+                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 lnWRPe"
                       >
                         <div
                           class="relative flex flex-1 h-full"
@@ -3172,7 +3172,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -3515,7 +3515,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                                   to="https://dexplorer.ark.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
                                 >
                                   <span
-                                    class="Link__Content-sc-ec014t-1 jGLnf"
+                                    class="Link__Content-sc-ec014t-1 fPOlTq"
                                   >
                                     <span
                                       class="inline-flex overflow-hidden"
@@ -3767,7 +3767,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -4110,7 +4110,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                                   to="https://dexplorer.ark.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
                                 >
                                   <span
-                                    class="Link__Content-sc-ec014t-1 jGLnf"
+                                    class="Link__Content-sc-ec014t-1 fPOlTq"
                                   >
                                     <span
                                       class="inline-flex overflow-hidden"
@@ -4362,7 +4362,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -4705,7 +4705,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                                   to="https://dexplorer.ark.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
                                 >
                                   <span
-                                    class="Link__Content-sc-ec014t-1 jGLnf"
+                                    class="Link__Content-sc-ec014t-1 fPOlTq"
                                   >
                                     <span
                                       class="inline-flex overflow-hidden"

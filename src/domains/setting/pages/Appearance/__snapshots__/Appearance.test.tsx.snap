@@ -13,7 +13,7 @@ exports[`Appearance Settings should render appearance settings 1`] = `
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 dOgWxE flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
         >
           <div
             class="sc-bdvvtL Cfvxc mx-auto"
@@ -470,7 +470,7 @@ exports[`Appearance Settings should render appearance settings 1`] = `
                               <button
                                 aria-checked="false"
                                 aria-label="Blue"
-                                class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 itDOEz"
+                                class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 lfZjmj"
                                 data-testid="ButtonGroupOption"
                                 role="radio"
                                 type="button"
@@ -482,7 +482,7 @@ exports[`Appearance Settings should render appearance settings 1`] = `
                               <button
                                 aria-checked="true"
                                 aria-label="Green"
-                                class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 itDOEz"
+                                class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 lfZjmj"
                                 data-testid="ButtonGroupOption"
                                 role="radio"
                                 type="button"
@@ -538,7 +538,7 @@ exports[`Appearance Settings should render appearance settings 1`] = `
                               <button
                                 aria-checked="true"
                                 aria-label="light"
-                                class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 itDOEz"
+                                class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 lfZjmj"
                                 data-testid="ButtonGroupOption"
                                 role="radio"
                                 type="button"
@@ -563,7 +563,7 @@ exports[`Appearance Settings should render appearance settings 1`] = `
                               <button
                                 aria-checked="false"
                                 aria-label="dark"
-                                class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 itDOEz"
+                                class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 lfZjmj"
                                 data-testid="ButtonGroupOption"
                                 role="radio"
                                 type="button"
@@ -625,7 +625,7 @@ exports[`Appearance Settings should render appearance settings 1`] = `
                                   class="Toggle__Handle-sc-6s3wfu-2 cobHFC"
                                 >
                                   <span
-                                    class="Toggle__HandleInner-sc-6s3wfu-3 klclKD"
+                                    class="Toggle__HandleInner-sc-6s3wfu-3 ddepvC"
                                   />
                                 </div>
                               </label>
@@ -674,7 +674,7 @@ exports[`Appearance Settings should render appearance settings 1`] = `
                                   class="Toggle__Handle-sc-6s3wfu-2 cobHFC"
                                 >
                                   <span
-                                    class="Toggle__HandleInner-sc-6s3wfu-3 klclKD"
+                                    class="Toggle__HandleInner-sc-6s3wfu-3 ddepvC"
                                   />
                                 </div>
                               </label>
@@ -723,7 +723,7 @@ exports[`Appearance Settings should render appearance settings 1`] = `
                                   class="Toggle__Handle-sc-6s3wfu-2 cobHFC"
                                 >
                                   <span
-                                    class="Toggle__HandleInner-sc-6s3wfu-3 klclKD"
+                                    class="Toggle__HandleInner-sc-6s3wfu-3 ddepvC"
                                   />
                                 </div>
                               </label>

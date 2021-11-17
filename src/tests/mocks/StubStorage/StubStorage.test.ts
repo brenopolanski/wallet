@@ -42,7 +42,7 @@ describe("StubStorage", () => {
 	});
 
 	it("should restore", async () => {
-		await expect(stubStorage.restore()).toBeUndefined();
+		await expect(stubStorage.restore()).resolves.toBeUndefined();
 	});
 
 	it("should snapshot", async () => {

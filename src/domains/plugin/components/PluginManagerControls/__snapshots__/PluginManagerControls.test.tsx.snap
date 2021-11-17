@@ -16,7 +16,7 @@ exports[`PluginManagerControls should render 1`] = `
           class="group"
         >
           <button
-            class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus"
+            class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus"
             data-testid="LayoutControls__list--icon"
           >
             <div
@@ -38,7 +38,7 @@ exports[`PluginManagerControls should render 1`] = `
           class="group"
         >
           <button
-            class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus active"
+            class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus active"
             data-testid="LayoutControls__grid--icon"
           >
             <div
@@ -80,7 +80,7 @@ exports[`PluginManagerControls should toggle between list and grid 1`] = `
             class="group"
           >
             <button
-              class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus"
+              class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus"
               data-testid="LayoutControls__list--icon"
             >
               <div
@@ -102,7 +102,7 @@ exports[`PluginManagerControls should toggle between list and grid 1`] = `
             class="group"
           >
             <button
-              class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 jZiZGR ring-focus active"
+              class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus active"
               data-testid="LayoutControls__grid--icon"
             >
               <div

@@ -80,7 +80,7 @@ exports[`VoteDetail should render a modal with unvotes 1`] = `
                         to="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                       >
                         <span
-                          class="Link__Content-sc-ec014t-1 jGLnf"
+                          class="Link__Content-sc-ec014t-1 fPOlTq"
                         >
                           <span
                             class="inline-flex overflow-hidden"
@@ -409,7 +409,7 @@ exports[`VoteDetail should render a modal with votes 1`] = `
                         to="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                       >
                         <span
-                          class="Link__Content-sc-ec014t-1 jGLnf"
+                          class="Link__Content-sc-ec014t-1 fPOlTq"
                         >
                           <span
                             class="inline-flex overflow-hidden"
@@ -738,7 +738,7 @@ exports[`VoteDetail should render a modal with votes and unvotes 1`] = `
                         to="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                       >
                         <span
-                          class="Link__Content-sc-ec014t-1 jGLnf"
+                          class="Link__Content-sc-ec014t-1 fPOlTq"
                         >
                           <span
                             class="inline-flex overflow-hidden"

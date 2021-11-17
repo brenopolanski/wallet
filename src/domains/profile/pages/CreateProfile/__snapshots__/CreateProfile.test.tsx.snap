@@ -92,7 +92,7 @@ exports[`CreateProfile should render 1`] = `
                         Profile Name
                       </label>
                       <div
-                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                       >
                         <div
                           class="relative flex flex-1 h-full"
@@ -164,7 +164,7 @@ exports[`CreateProfile should render 1`] = `
                     </span>
                   </label>
                   <div
-                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                   >
                     <div
                       class="relative flex flex-1 h-full"
@@ -220,7 +220,7 @@ exports[`CreateProfile should render 1`] = `
                     </span>
                   </label>
                   <div
-                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                   >
                     <div
                       class="relative flex flex-1 h-full"
@@ -273,7 +273,7 @@ exports[`CreateProfile should render 1`] = `
                     class="relative w-full"
                   >
                     <div
-                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF sr-only"
+                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR sr-only"
                     >
                       <div
                         class="relative flex flex-1 h-full"
@@ -307,7 +307,7 @@ exports[`CreateProfile should render 1`] = `
                           USD ($)…
                         </div>
                         <div
-                          class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                          class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                         >
                           <div
                             class="relative flex flex-1 h-full"
@@ -360,7 +360,7 @@ exports[`CreateProfile should render 1`] = `
                         </div>
                         <ul
                           aria-labelledby="select-currency-label"
-                          class="styles__SelectOptionsList-sc-120rtxy-0 HcHWp"
+                          class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc"
                           id="select-currency-menu"
                           role="listbox"
                         />
@@ -409,7 +409,7 @@ exports[`CreateProfile should render 1`] = `
                                 class="Toggle__Handle-sc-6s3wfu-2 cobHFC"
                               >
                                 <span
-                                  class="Toggle__HandleInner-sc-6s3wfu-3 klclKD"
+                                  class="Toggle__HandleInner-sc-6s3wfu-3 ddepvC"
                                 />
                               </div>
                             </label>
@@ -557,7 +557,7 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                         Profile Name
                       </label>
                       <div
-                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                       >
                         <div
                           class="relative flex flex-1 h-full"
@@ -636,7 +636,7 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                     </span>
                   </label>
                   <div
-                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                   >
                     <div
                       class="relative flex flex-1 h-full"
@@ -692,7 +692,7 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                     </span>
                   </label>
                   <div
-                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                   >
                     <div
                       class="relative flex flex-1 h-full"
@@ -745,7 +745,7 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                     class="relative w-full"
                   >
                     <div
-                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF sr-only"
+                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR sr-only"
                     >
                       <div
                         class="relative flex flex-1 h-full"
@@ -779,7 +779,7 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                           USD ($)…
                         </div>
                         <div
-                          class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                          class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                         >
                           <div
                             class="relative flex flex-1 h-full"
@@ -832,7 +832,7 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                         </div>
                         <ul
                           aria-labelledby="select-currency-label"
-                          class="styles__SelectOptionsList-sc-120rtxy-0 HcHWp"
+                          class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc"
                           id="select-currency-menu"
                           role="listbox"
                         />
@@ -881,7 +881,7 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                                 class="Toggle__Handle-sc-6s3wfu-2 cobHFC"
                               >
                                 <span
-                                  class="Toggle__HandleInner-sc-6s3wfu-3 klclKD"
+                                  class="Toggle__HandleInner-sc-6s3wfu-3 ddepvC"
                                 />
                               </div>
                             </label>
@@ -1028,7 +1028,7 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                         Profile Name
                       </label>
                       <div
-                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 eyownm"
+                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 lnWRPe"
                       >
                         <div
                           class="relative flex flex-1 h-full"
@@ -1119,7 +1119,7 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                     </span>
                   </label>
                   <div
-                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                   >
                     <div
                       class="relative flex flex-1 h-full"
@@ -1175,7 +1175,7 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                     </span>
                   </label>
                   <div
-                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                   >
                     <div
                       class="relative flex flex-1 h-full"
@@ -1228,7 +1228,7 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                     class="relative w-full"
                   >
                     <div
-                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF sr-only"
+                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR sr-only"
                     >
                       <div
                         class="relative flex flex-1 h-full"
@@ -1262,7 +1262,7 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                           USD ($)…
                         </div>
                         <div
-                          class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                          class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                         >
                           <div
                             class="relative flex flex-1 h-full"
@@ -1315,7 +1315,7 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                         </div>
                         <ul
                           aria-labelledby="select-currency-label"
-                          class="styles__SelectOptionsList-sc-120rtxy-0 HcHWp"
+                          class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc"
                           id="select-currency-menu"
                           role="listbox"
                         />
@@ -1364,7 +1364,7 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                                 class="Toggle__Handle-sc-6s3wfu-2 cobHFC"
                               >
                                 <span
-                                  class="Toggle__HandleInner-sc-6s3wfu-3 klclKD"
+                                  class="Toggle__HandleInner-sc-6s3wfu-3 ddepvC"
                                 />
                               </div>
                             </label>

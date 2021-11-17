@@ -55,7 +55,7 @@ exports[`MultiSignature Registration Form should render form step 1`] = `
                       class="relative w-full"
                     >
                       <div
-                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF sr-only"
+                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR sr-only"
                       >
                         <div
                           class="relative flex flex-1 h-full"
@@ -85,7 +85,7 @@ exports[`MultiSignature Registration Form should render form step 1`] = `
                             id="SelectRecipient__dropdown-label"
                           />
                           <div
-                            class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                            class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                           >
                             <div
                               class="flex items-center"
@@ -136,7 +136,7 @@ exports[`MultiSignature Registration Form should render form step 1`] = `
                           </div>
                           <ul
                             aria-labelledby="SelectRecipient__dropdown-label"
-                            class="styles__SelectOptionsList-sc-120rtxy-0 HcHWp"
+                            class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc"
                             id="SelectRecipient__dropdown-menu"
                             role="listbox"
                           />
@@ -328,7 +328,7 @@ exports[`MultiSignature Registration Form should render form step 1`] = `
               Minimum Required Signatures
             </label>
             <div
-              class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+              class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
             >
               <div
                 class="relative flex flex-1 h-full"

@@ -11,7 +11,7 @@ exports[`SelectRecipient should render disabled 1`] = `
         class="relative w-full"
       >
         <div
-          class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF sr-only"
+          class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR sr-only"
         >
           <div
             class="relative flex flex-1 h-full"
@@ -90,7 +90,7 @@ exports[`SelectRecipient should render disabled 1`] = `
             </div>
             <ul
               aria-labelledby="SelectRecipient__dropdown-label"
-              class="styles__SelectOptionsList-sc-120rtxy-0 HcHWp"
+              class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc"
               id="SelectRecipient__dropdown-menu"
               role="listbox"
             />
@@ -113,7 +113,7 @@ exports[`SelectRecipient should render empty 1`] = `
         class="relative w-full"
       >
         <div
-          class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF sr-only"
+          class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR sr-only"
         >
           <div
             class="relative flex flex-1 h-full"
@@ -141,7 +141,7 @@ exports[`SelectRecipient should render empty 1`] = `
               id="SelectRecipient__dropdown-label"
             />
             <div
-              class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+              class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
             >
               <div
                 class="flex items-center"
@@ -190,7 +190,7 @@ exports[`SelectRecipient should render empty 1`] = `
             </div>
             <ul
               aria-labelledby="SelectRecipient__dropdown-label"
-              class="styles__SelectOptionsList-sc-120rtxy-0 HcHWp"
+              class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc"
               id="SelectRecipient__dropdown-menu"
               role="listbox"
             />
@@ -213,7 +213,7 @@ exports[`SelectRecipient should render invalid 1`] = `
         class="relative w-full"
       >
         <div
-          class="Input__InputWrapperStyled-sc-1i8sd1r-0 eyownm sr-only"
+          class="Input__InputWrapperStyled-sc-1i8sd1r-0 lnWRPe sr-only"
         >
           <div
             class="relative flex flex-1 h-full"
@@ -259,7 +259,7 @@ exports[`SelectRecipient should render invalid 1`] = `
               id="SelectRecipient__dropdown-label"
             />
             <div
-              class="Input__InputWrapperStyled-sc-1i8sd1r-0 eyownm"
+              class="Input__InputWrapperStyled-sc-1i8sd1r-0 lnWRPe"
             >
               <div
                 class="flex items-center"
@@ -322,7 +322,7 @@ exports[`SelectRecipient should render invalid 1`] = `
             </div>
             <ul
               aria-labelledby="SelectRecipient__dropdown-label"
-              class="styles__SelectOptionsList-sc-120rtxy-0 HcHWp"
+              class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc"
               id="SelectRecipient__dropdown-menu"
               role="listbox"
             />
@@ -345,7 +345,7 @@ exports[`SelectRecipient should render with preselected address 1`] = `
         class="relative w-full"
       >
         <div
-          class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF sr-only"
+          class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR sr-only"
         >
           <div
             class="relative flex flex-1 h-full"
@@ -373,7 +373,7 @@ exports[`SelectRecipient should render with preselected address 1`] = `
               id="SelectRecipient__dropdown-label"
             />
             <div
-              class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+              class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
             >
               <div
                 class="flex items-center"
@@ -422,7 +422,7 @@ exports[`SelectRecipient should render with preselected address 1`] = `
             </div>
             <ul
               aria-labelledby="SelectRecipient__dropdown-label"
-              class="styles__SelectOptionsList-sc-120rtxy-0 HcHWp"
+              class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc"
               id="SelectRecipient__dropdown-menu"
               role="listbox"
             />
@@ -445,7 +445,7 @@ exports[`SelectRecipient should update internal state when prop changes 1`] = `
         class="relative w-full"
       >
         <div
-          class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF sr-only"
+          class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR sr-only"
         >
           <div
             class="relative flex flex-1 h-full"
@@ -473,7 +473,7 @@ exports[`SelectRecipient should update internal state when prop changes 1`] = `
               id="SelectRecipient__dropdown-label"
             />
             <div
-              class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+              class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
             >
               <div
                 class="flex items-center"
@@ -533,7 +533,7 @@ exports[`SelectRecipient should update internal state when prop changes 1`] = `
             </div>
             <ul
               aria-labelledby="SelectRecipient__dropdown-label"
-              class="styles__SelectOptionsList-sc-120rtxy-0 HcHWp"
+              class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc"
               id="SelectRecipient__dropdown-menu"
               role="listbox"
             />

@@ -61,7 +61,7 @@ exports[`Import Profile - Profile Form Step should fail password confirmation 1`
                       Profile Name
                     </label>
                     <div
-                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                     >
                       <div
                         class="relative flex flex-1 h-full"
@@ -134,7 +134,7 @@ exports[`Import Profile - Profile Form Step should fail password confirmation 1`
                   Password
                 </label>
                 <div
-                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                 >
                   <div
                     class="relative flex flex-1 h-full"
@@ -184,7 +184,7 @@ exports[`Import Profile - Profile Form Step should fail password confirmation 1`
                   Confirm Password
                 </label>
                 <div
-                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                 >
                   <div
                     class="relative flex flex-1 h-full"
@@ -237,7 +237,7 @@ exports[`Import Profile - Profile Form Step should fail password confirmation 1`
                   class="relative w-full"
                 >
                   <div
-                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF sr-only"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR sr-only"
                   >
                     <div
                       class="relative flex flex-1 h-full"
@@ -271,7 +271,7 @@ exports[`Import Profile - Profile Form Step should fail password confirmation 1`
                         AUD (A$)…
                       </div>
                       <div
-                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                       >
                         <div
                           class="relative flex flex-1 h-full"
@@ -324,7 +324,7 @@ exports[`Import Profile - Profile Form Step should fail password confirmation 1`
                       </div>
                       <ul
                         aria-labelledby="CreateProfile__currency-label"
-                        class="styles__SelectOptionsList-sc-120rtxy-0 HcHWp"
+                        class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc"
                         id="CreateProfile__currency-menu"
                         role="listbox"
                       />
@@ -373,7 +373,7 @@ exports[`Import Profile - Profile Form Step should fail password confirmation 1`
                               class="Toggle__Handle-sc-6s3wfu-2 cobHFC"
                             >
                               <span
-                                class="Toggle__HandleInner-sc-6s3wfu-3 klclKD"
+                                class="Toggle__HandleInner-sc-6s3wfu-3 ddepvC"
                               />
                             </div>
                           </label>
@@ -489,7 +489,7 @@ exports[`Import Profile - Profile Form Step should render profile form 1`] = `
                       Profile Name
                     </label>
                     <div
-                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                     >
                       <div
                         class="relative flex flex-1 h-full"
@@ -568,7 +568,7 @@ exports[`Import Profile - Profile Form Step should render profile form 1`] = `
                   </span>
                 </label>
                 <div
-                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                 >
                   <div
                     class="relative flex flex-1 h-full"
@@ -624,7 +624,7 @@ exports[`Import Profile - Profile Form Step should render profile form 1`] = `
                   </span>
                 </label>
                 <div
-                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                 >
                   <div
                     class="relative flex flex-1 h-full"
@@ -677,7 +677,7 @@ exports[`Import Profile - Profile Form Step should render profile form 1`] = `
                   class="relative w-full"
                 >
                   <div
-                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF sr-only"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR sr-only"
                   >
                     <div
                       class="relative flex flex-1 h-full"
@@ -712,7 +712,7 @@ exports[`Import Profile - Profile Form Step should render profile form 1`] = `
                         …
                       </div>
                       <div
-                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                       >
                         <div
                           class="relative flex flex-1 h-full"
@@ -765,7 +765,7 @@ exports[`Import Profile - Profile Form Step should render profile form 1`] = `
                       </div>
                       <ul
                         aria-labelledby="CreateProfile__currency-label"
-                        class="styles__SelectOptionsList-sc-120rtxy-0 HcHWp"
+                        class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc"
                         id="CreateProfile__currency-menu"
                         role="listbox"
                       />
@@ -814,7 +814,7 @@ exports[`Import Profile - Profile Form Step should render profile form 1`] = `
                               class="Toggle__Handle-sc-6s3wfu-2 cobHFC"
                             >
                               <span
-                                class="Toggle__HandleInner-sc-6s3wfu-3 klclKD"
+                                class="Toggle__HandleInner-sc-6s3wfu-3 ddepvC"
                               />
                             </div>
                           </label>
@@ -931,7 +931,7 @@ exports[`Import Profile - Profile Form Step should render profile form with empt
                       Profile Name
                     </label>
                     <div
-                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                     >
                       <div
                         class="relative flex flex-1 h-full"
@@ -1010,7 +1010,7 @@ exports[`Import Profile - Profile Form Step should render profile form with empt
                   </span>
                 </label>
                 <div
-                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                 >
                   <div
                     class="relative flex flex-1 h-full"
@@ -1066,7 +1066,7 @@ exports[`Import Profile - Profile Form Step should render profile form with empt
                   </span>
                 </label>
                 <div
-                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                 >
                   <div
                     class="relative flex flex-1 h-full"
@@ -1119,7 +1119,7 @@ exports[`Import Profile - Profile Form Step should render profile form with empt
                   class="relative w-full"
                 >
                   <div
-                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF sr-only"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR sr-only"
                   >
                     <div
                       class="relative flex flex-1 h-full"
@@ -1154,7 +1154,7 @@ exports[`Import Profile - Profile Form Step should render profile form with empt
                         …
                       </div>
                       <div
-                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                       >
                         <div
                           class="relative flex flex-1 h-full"
@@ -1207,7 +1207,7 @@ exports[`Import Profile - Profile Form Step should render profile form with empt
                       </div>
                       <ul
                         aria-labelledby="CreateProfile__currency-label"
-                        class="styles__SelectOptionsList-sc-120rtxy-0 HcHWp"
+                        class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc"
                         id="CreateProfile__currency-menu"
                         role="listbox"
                       />
@@ -1256,7 +1256,7 @@ exports[`Import Profile - Profile Form Step should render profile form with empt
                               class="Toggle__Handle-sc-6s3wfu-2 cobHFC"
                             >
                               <span
-                                class="Toggle__HandleInner-sc-6s3wfu-3 klclKD"
+                                class="Toggle__HandleInner-sc-6s3wfu-3 ddepvC"
                               />
                             </div>
                           </label>
@@ -1373,7 +1373,7 @@ exports[`Import Profile - Profile Form Step should render profile form with hidd
                       Profile Name
                     </label>
                     <div
-                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                     >
                       <div
                         class="relative flex flex-1 h-full"
@@ -1452,7 +1452,7 @@ exports[`Import Profile - Profile Form Step should render profile form with hidd
                   </span>
                 </label>
                 <div
-                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                 >
                   <div
                     class="relative flex flex-1 h-full"
@@ -1508,7 +1508,7 @@ exports[`Import Profile - Profile Form Step should render profile form with hidd
                   </span>
                 </label>
                 <div
-                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                 >
                   <div
                     class="relative flex flex-1 h-full"
@@ -1561,7 +1561,7 @@ exports[`Import Profile - Profile Form Step should render profile form with hidd
                   class="relative w-full"
                 >
                   <div
-                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF sr-only"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR sr-only"
                   >
                     <div
                       class="relative flex flex-1 h-full"
@@ -1596,7 +1596,7 @@ exports[`Import Profile - Profile Form Step should render profile form with hidd
                         …
                       </div>
                       <div
-                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                       >
                         <div
                           class="relative flex flex-1 h-full"
@@ -1649,7 +1649,7 @@ exports[`Import Profile - Profile Form Step should render profile form with hidd
                       </div>
                       <ul
                         aria-labelledby="CreateProfile__currency-label"
-                        class="styles__SelectOptionsList-sc-120rtxy-0 HcHWp"
+                        class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc"
                         id="CreateProfile__currency-menu"
                         role="listbox"
                       />
@@ -1698,7 +1698,7 @@ exports[`Import Profile - Profile Form Step should render profile form with hidd
                               class="Toggle__Handle-sc-6s3wfu-2 cobHFC"
                             >
                               <span
-                                class="Toggle__HandleInner-sc-6s3wfu-3 klclKD"
+                                class="Toggle__HandleInner-sc-6s3wfu-3 ddepvC"
                               />
                             </div>
                           </label>
@@ -1815,7 +1815,7 @@ exports[`Import Profile - Profile Form Step should store profile 1`] = `
                       Profile Name
                     </label>
                     <div
-                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                     >
                       <div
                         class="relative flex flex-1 h-full"
@@ -1894,7 +1894,7 @@ exports[`Import Profile - Profile Form Step should store profile 1`] = `
                   </span>
                 </label>
                 <div
-                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                 >
                   <div
                     class="relative flex flex-1 h-full"
@@ -1950,7 +1950,7 @@ exports[`Import Profile - Profile Form Step should store profile 1`] = `
                   </span>
                 </label>
                 <div
-                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                 >
                   <div
                     class="relative flex flex-1 h-full"
@@ -2003,7 +2003,7 @@ exports[`Import Profile - Profile Form Step should store profile 1`] = `
                   class="relative w-full"
                 >
                   <div
-                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF sr-only"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR sr-only"
                   >
                     <div
                       class="relative flex flex-1 h-full"
@@ -2037,7 +2037,7 @@ exports[`Import Profile - Profile Form Step should store profile 1`] = `
                         AUD (A$)…
                       </div>
                       <div
-                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                       >
                         <div
                           class="relative flex flex-1 h-full"
@@ -2090,7 +2090,7 @@ exports[`Import Profile - Profile Form Step should store profile 1`] = `
                       </div>
                       <ul
                         aria-labelledby="CreateProfile__currency-label"
-                        class="styles__SelectOptionsList-sc-120rtxy-0 HcHWp"
+                        class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc"
                         id="CreateProfile__currency-menu"
                         role="listbox"
                       />
@@ -2139,7 +2139,7 @@ exports[`Import Profile - Profile Form Step should store profile 1`] = `
                               class="Toggle__Handle-sc-6s3wfu-2 cobHFC"
                             >
                               <span
-                                class="Toggle__HandleInner-sc-6s3wfu-3 klclKD"
+                                class="Toggle__HandleInner-sc-6s3wfu-3 ddepvC"
                               />
                             </div>
                           </label>
@@ -2255,7 +2255,7 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
                       Profile Name
                     </label>
                     <div
-                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                     >
                       <div
                         class="relative flex flex-1 h-full"
@@ -2334,7 +2334,7 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
                   </span>
                 </label>
                 <div
-                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                 >
                   <div
                     class="relative flex flex-1 h-full"
@@ -2390,7 +2390,7 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
                   </span>
                 </label>
                 <div
-                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                 >
                   <div
                     class="relative flex flex-1 h-full"
@@ -2443,7 +2443,7 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
                   class="relative w-full"
                 >
                   <div
-                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF sr-only"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR sr-only"
                   >
                     <div
                       class="relative flex flex-1 h-full"
@@ -2477,7 +2477,7 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
                         BTC (Ƀ)…
                       </div>
                       <div
-                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                       >
                         <div
                           class="relative flex flex-1 h-full"
@@ -2530,7 +2530,7 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
                       </div>
                       <ul
                         aria-labelledby="CreateProfile__currency-label"
-                        class="styles__SelectOptionsList-sc-120rtxy-0 HcHWp"
+                        class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc"
                         id="CreateProfile__currency-menu"
                         role="listbox"
                       />
@@ -2579,7 +2579,7 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
                               class="Toggle__Handle-sc-6s3wfu-2 cobHFC"
                             >
                               <span
-                                class="Toggle__HandleInner-sc-6s3wfu-3 klclKD"
+                                class="Toggle__HandleInner-sc-6s3wfu-3 ddepvC"
                               />
                             </div>
                           </label>
@@ -2695,7 +2695,7 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
                       Profile Name
                     </label>
                     <div
-                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                     >
                       <div
                         class="relative flex flex-1 h-full"
@@ -2774,7 +2774,7 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
                   </span>
                 </label>
                 <div
-                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                 >
                   <div
                     class="relative flex flex-1 h-full"
@@ -2830,7 +2830,7 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
                   </span>
                 </label>
                 <div
-                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                 >
                   <div
                     class="relative flex flex-1 h-full"
@@ -2883,7 +2883,7 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
                   class="relative w-full"
                 >
                   <div
-                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF sr-only"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR sr-only"
                   >
                     <div
                       class="relative flex flex-1 h-full"
@@ -2917,7 +2917,7 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
                         BTC (Ƀ)…
                       </div>
                       <div
-                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 gXyrpF"
+                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
                       >
                         <div
                           class="relative flex flex-1 h-full"
@@ -2970,7 +2970,7 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
                       </div>
                       <ul
                         aria-labelledby="CreateProfile__currency-label"
-                        class="styles__SelectOptionsList-sc-120rtxy-0 HcHWp"
+                        class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc"
                         id="CreateProfile__currency-menu"
                         role="listbox"
                       />
@@ -3019,7 +3019,7 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
                               class="Toggle__Handle-sc-6s3wfu-2 cobHFC"
                             >
                               <span
-                                class="Toggle__HandleInner-sc-6s3wfu-3 klclKD"
+                                class="Toggle__HandleInner-sc-6s3wfu-3 ddepvC"
                               />
                             </div>
                           </label>
