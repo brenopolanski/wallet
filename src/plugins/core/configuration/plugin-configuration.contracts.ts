@@ -5,55 +5,55 @@ import { Asserts } from "yup";
 import { schema } from "./schema";
 
 export interface IPluginConfigurationData {
-    validate(): Asserts<typeof schema>;
+	validate(): Asserts<typeof schema>;
 
-    get<T = string>(key: string, defaultValue?: T): T | undefined;
+	get<T = string>(key: string, defaultValue?: T): T | undefined;
 
-    manifest(): Contracts.IDataRepository;
+	manifest(): Contracts.IDataRepository;
 
-    name(): string;
+	name(): string;
 
-    id(): string;
+	id(): string;
 
-    archiveUrl(): string | undefined;
+	archiveUrl(): string | undefined;
 
-    author(): string;
+	author(): string;
 
-    keywords(): string[];
+	keywords(): string[];
 
-    categories(): string[];
+	categories(): string[];
 
-    category(): string;
+	category(): string;
 
-    hasCategory(categoryName: string): boolean;
+	hasCategory(categoryName: string): boolean;
 
-    date(): string | undefined;
+	date(): string | undefined;
 
-    description(): string | undefined;
+	description(): string | undefined;
 
-    homepage(): string | undefined;
+	homepage(): string | undefined;
 
-    images(): string[];
+	images(): string[];
 
-    permissions(): string[];
+	permissions(): string[];
 
-    urls(): string[];
+	urls(): string[];
 
-    minimumVersion(): string | undefined;
+	minimumVersion(): string | undefined;
 
-    version(): string;
+	version(): string;
 
-    logo(): string | undefined;
+	logo(): string | undefined;
 
-    size(): string;
+	size(): string;
 
-    title(): string | undefined;
+	title(): string | undefined;
 
-    isOfficial(): boolean;
+	isOfficial(): boolean;
 
-    url(): string | undefined;
+	url(): string | undefined;
 
-    isCompatible(): boolean;
+	isCompatible(): boolean;
 
-    toObject(): SerializedPluginConfigurationData;
+	toObject(): SerializedPluginConfigurationData;
 }

@@ -5,57 +5,57 @@ import { IPluginConfigurationData } from "./configuration";
 import { IPluginHooks } from "./internals";
 
 export interface IPluginController {
-    hooks(): IPluginHooks;
+	hooks(): IPluginHooks;
 
-    dir(): string | undefined;
+	dir(): string | undefined;
 
-    config(): IPluginConfigurationData;
+	config(): IPluginConfigurationData;
 
-    isEnabled(profile: Contracts.IProfile): boolean;
+	isEnabled(profile: Contracts.IProfile): boolean;
 
-    enable(profile: Contracts.IProfile, options?: { autoRun?: true }): string;
+	enable(profile: Contracts.IProfile, options?: { autoRun?: true }): string;
 
-    disable(profile: Contracts.IProfile): void;
+	disable(profile: Contracts.IProfile): void;
 
-    run(profile: Contracts.IProfile): void;
+	run(profile: Contracts.IProfile): void;
 
-    dispose(): void;
+	dispose(): void;
 }
 
 export interface PluginService {
-    config(): PluginServiceConfig;
-    api(plugin: IPluginController): Record<string, Function>;
-    boot?(context: { hooks: IPluginHooks }): void;
+	config(): PluginServiceConfig;
+	api(plugin: IPluginController): Record<string, Function>;
+	boot?(context: { hooks: IPluginHooks }): void;
 }
 
 export interface IPluginServiceData {
-    instance<T extends PluginService>(): T;
+	instance<T extends PluginService>(): T;
 
-    api(plugin: IPluginController): Record<string, Function>;
+	api(plugin: IPluginController): Record<string, Function>;
 
-    config(): PluginServiceConfig;
+	config(): PluginServiceConfig;
 
-    id(): string;
+	id(): string;
 
-    accessor(): string;
+	accessor(): string;
 }
 
 export interface IPluginServiceRepository {
-    all(): Map<string, IPluginServiceData>;
+	all(): Map<string, IPluginServiceData>;
 
-    hooks(): IPluginHooks;
+	hooks(): IPluginHooks;
 
-    api(plugin: IPluginController, profile: Contracts.IProfile): PluginAPI;
+	api(plugin: IPluginController, profile: Contracts.IProfile): PluginAPI;
 
-    boot(): void;
+	boot(): void;
 
-    register(services: PluginService[]): void;
+	register(services: PluginService[]): void;
 
-    findById(id: PluginServiceIdentifier): IPluginServiceData | undefined;
+	findById(id: PluginServiceIdentifier): IPluginServiceData | undefined;
 }
 
 export interface IPluginContainer {
-    set<T>(key: "services" | "registry", service: T): void;
+	set<T>(key: "services" | "registry", service: T): void;
 
-    services(): IPluginServiceRepository;
+	services(): IPluginServiceRepository;
 }
