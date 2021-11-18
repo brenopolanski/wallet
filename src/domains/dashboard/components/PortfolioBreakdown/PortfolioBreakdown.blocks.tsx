@@ -3,6 +3,7 @@ import cn from "classnames";
 import React, { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import tw, { styled } from "twin.macro";
+import { shouldUseDarkColors } from "utils/electron-utils";
 
 import type { LabelledTextProperties, LegendProperties, TooltipProperties } from "./PortfolioBreakdown.contracts";
 
@@ -59,13 +60,20 @@ const TooltipWrapper = styled.div`
 		${tw`absolute block w-0 h-0 -bottom-2`}
 		border-left: 8px solid transparent;
 		border-right: 8px solid transparent;
-		border-top: 8px solid var(--theme-color-secondary-900);
 		left: calc(50% - 8px);
+	}
+
+	&[data-theme~="light"]:after {
+		border-top: 8px solid var(--theme-color-secondary-900);
+	}
+
+	&[data-theme~="dark"]:after {
+		border-top: 8px solid var(--theme-color-secondary-800);
 	}
 `;
 
 const Tooltip: React.VFC<TooltipProperties> = ({ dataPoint: { color, data } }) => (
-	<TooltipWrapper data-testid="PortfolioBreakdown__tooltip">
+	<TooltipWrapper data-theme={shouldUseDarkColors() ? "dark" : "light"} data-testid="PortfolioBreakdown__tooltip">
 		<div className="flex space-x-3 divide-x divide-theme-secondary-700 text-sm font-semibold">
 			<div className="flex items-center space-x-2">
 				<div className={`h-3 w-1 rounded bg-theme-${color}`} />
