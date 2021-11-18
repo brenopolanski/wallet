@@ -33,7 +33,7 @@ exports[`SyncErrorMessage should handle retry 1`] = `
     href="/"
   >
     <span
-      class="Link__Content-sc-ec014t-1 jGLnf"
+      class="Link__Content-sc-ec014t-1 fPOlTq"
     >
       here
     </span>
@@ -75,7 +75,7 @@ exports[`SyncErrorMessage should render multiple failed networks 1`] = `
     href="/"
   >
     <span
-      class="Link__Content-sc-ec014t-1 jGLnf"
+      class="Link__Content-sc-ec014t-1 fPOlTq"
     >
       here
     </span>
@@ -100,7 +100,7 @@ exports[`SyncErrorMessage should render one failed network 1`] = `
     href="/"
   >
     <span
-      class="Link__Content-sc-ec014t-1 jGLnf"
+      class="Link__Content-sc-ec014t-1 fPOlTq"
     >
       here
     </span>
@@ -136,7 +136,7 @@ exports[`SyncErrorMessage should render two failed networks 1`] = `
     href="/"
   >
     <span
-      class="Link__Content-sc-ec014t-1 jGLnf"
+      class="Link__Content-sc-ec014t-1 fPOlTq"
     >
       here
     </span>
