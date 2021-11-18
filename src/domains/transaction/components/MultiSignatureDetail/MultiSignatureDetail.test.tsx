@@ -629,7 +629,7 @@ describe("MultiSignatureDetail", () => {
 			return { unsubscribe };
 		});
 
-		const { getByTestId } = render(
+		render(
 			<Route path="/profiles/:profileId">
 				<LedgerProvider transport={transport}>
 					<MultiSignatureDetail profile={profile} transaction={fixtures.transfer} wallet={wallet} isOpen />
@@ -667,7 +667,7 @@ describe("MultiSignatureDetail", () => {
 		);
 
 		await waitFor(() => expect(broadcastMock).toHaveBeenCalledWith(fixtures.transfer.id()));
-		await waitFor(() => expect(persistMock).toHaveBeenCalled());
+		await waitFor(() => expect(persistMock).toHaveBeenCalledTimes(1));
 
 		jest.restoreAllMocks();
 	});

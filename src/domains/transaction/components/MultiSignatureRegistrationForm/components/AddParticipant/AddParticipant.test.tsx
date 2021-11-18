@@ -477,6 +477,49 @@ describe("Add Participant", () => {
 		advancedMultiSignatureTypeMock.mockRestore();
 	});
 
+	it("should not emit mandatory key change event if public key is not provided", async () => {
+		const onChangeMandatoryKeys = jest.fn();
+		const advancedMultiSignatureTypeMock = jest
+			.spyOn(wallet.network(), "multiSignatureType")
+			.mockReturnValue("advanced");
+
+		render(
+			<Route path="/profiles/:profileId">
+				<AddParticipant
+					profile={profile}
+					wallet={wallet}
+					mandatoryKeys={[wallet2.publicKey()!]}
+					onChangeMandatoryKeys={onChangeMandatoryKeys}
+					minRequiredSignatures={2}
+					defaultParticipants={[
+						{
+							address: wallet.address(),
+							// @ts-ignore
+							publicKey: undefined,
+						},
+						{
+							address: wallet2.address(),
+							publicKey: wallet2.publicKey()!,
+						},
+					]}
+				/>
+			</Route>,
+			{
+				routes: [`/profiles/${profile.id()}`],
+			},
+		);
+
+		fireEvent.click(screen.getAllByTestId("RecipientListItem__mandatory-toggle")[1]);
+
+		expect(onChangeMandatoryKeys).toHaveBeenCalledTimes(2);
+
+		fireEvent.click(screen.getAllByTestId("RecipientListItem__mandatory-toggle")[0]);
+
+		expect(onChangeMandatoryKeys).toHaveBeenCalledTimes(2);
+
+		advancedMultiSignatureTypeMock.mockRestore();
+	});
+
 	it("should not add more mandatory keys than min signatures", async () => {
 		const onChangeMandatoryKeys = jest.fn();
 		const advancedMultiSignatureTypeMock = jest
@@ -515,6 +558,10 @@ describe("Add Participant", () => {
 		);
 
 		expect(onChangeMandatoryKeys).toHaveBeenCalledTimes(1);
+
+		fireEvent.click(screen.getAllByTestId("RecipientListItem__mandatory-toggle")[0]);
+
+		expect(onChangeMandatoryKeys).not.toHaveBeenCalledTimes(2);
 
 		fireEvent.click(screen.getAllByTestId("RecipientListItem__mandatory-toggle")[0]);
 
