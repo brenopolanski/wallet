@@ -1,6 +1,8 @@
 import { Networks } from "@payvo/sdk";
 import { Contracts } from "@payvo/sdk-profiles";
+import { renderHook } from "@testing-library/react-hooks";
 import { createMemoryHistory } from "history";
+import { beforeEach } from "jest-circus";
 import React from "react";
 import { Route } from "react-router-dom";
 import { env, getDefaultProfileId, render } from "utils/testing-library";
@@ -190,15 +192,23 @@ describe("useNetworks", () => {
 		);
 	};
 
+	const setGlobalVariables = (profileId: string) => {
+		profile = env.profiles().findById(profileId);
+		wallets = profile.wallets().values();
+		networks = wallets
+			.map((wallet) => wallet.network())
+			.sort((a, b) => a.displayName().localeCompare(b.displayName()));
+		networks = [...new Set(networks)];
+	};
+
+	beforeEach(() => {
+		setGlobalVariables(getDefaultProfileId());
+	});
+
 	it.each(["b999d134-7a24-481e-a95d-bc47c543bfc9", "cba050f1-880f-45f0-9af9-cfe48f406052"])(
 		"should return networks",
 		(profileId) => {
-			profile = env.profiles().findById(profileId);
-			wallets = profile.wallets().values();
-			networks = wallets
-				.map((wallet) => wallet.network())
-				.sort((a, b) => a.displayName().localeCompare(b.displayName()));
-			networks = [...new Set(networks)];
+			setGlobalVariables(profileId);
 
 			const { getByText } = render(
 				<Route path="/profiles/:profileId">
@@ -230,5 +240,41 @@ describe("useNetworks", () => {
 		).toThrow("Cannot read property 'wallets' of undefined");
 
 		consoleErrorSpy.mockRestore();
+	});
+
+	it("should return empty array on empty profile", () => {
+		jest.spyOn(profile.wallets(), "values").mockReturnValue([]);
+
+		const {
+			result: { current },
+		} = renderHook(() => useNetworks(profile));
+
+		expect(current).toHaveLength(0);
+	});
+
+	it("should return sorted array by display names", () => {
+		const fakeWallets = [
+			{
+				network: () => ({
+					displayName: () => "2 network",
+				}),
+				networkId: () => "1",
+			},
+			{
+				network: () => ({
+					displayName: () => "1 network",
+				}),
+				networkId: () => "2",
+			},
+		] as unknown as Contracts.IReadWriteWallet[];
+
+		jest.spyOn(profile.wallets(), "values").mockReturnValue(fakeWallets);
+
+		const {
+			result: { current },
+		} = renderHook(() => useNetworks(profile));
+
+		expect(current).toHaveLength(2);
+		expect(current[0].displayName()).toBe("1 network");
 	});
 });
