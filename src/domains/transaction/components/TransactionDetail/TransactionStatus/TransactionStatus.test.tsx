@@ -1,4 +1,4 @@
-import { BigNumber } from "@payvo/helpers";
+import { BigNumber } from "@payvo/sdk-helpers";
 import { translations } from "domains/transaction/i18n";
 import React from "react";
 import { render } from "utils/testing-library";

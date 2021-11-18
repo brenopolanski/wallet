@@ -1,5 +1,5 @@
-import { DTO } from "@payvo/profiles";
 import { Services } from "@payvo/sdk";
+import { DTO } from "@payvo/sdk-profiles";
 import { Form } from "app/components/Form";
 import { Modal } from "app/components/Modal";
 import { useEnvironmentContext, useLedgerContext } from "app/contexts";
@@ -24,7 +24,7 @@ export const UnlockTokensModal: React.VFC<UnlockTokensModalProperties> = ({ prof
 	const abortReference = useRef<AbortController | undefined>();
 	const transactionBuilder = useTransactionBuilder();
 
-	const { hasDeviceAvailable, isConnected, transport, connect } = useLedgerContext();
+	const { hasDeviceAvailable, isConnected, connect } = useLedgerContext();
 
 	const { items, loading, isFirstLoad } = useUnlockableBalances(wallet);
 
@@ -57,7 +57,7 @@ export const UnlockTokensModal: React.VFC<UnlockTokensModalProperties> = ({ prof
 			/* istanbul ignore next: Ledger signing of this TX type is not allowed yet for the coins we support */
 			if (wallet.isLedger()) {
 				await connect(profile, wallet.coinId(), wallet.networkId());
-				await wallet.ledger().connect(transport);
+				await wallet.ledger().connect();
 			}
 
 			abortReference.current = new AbortController();

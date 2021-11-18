@@ -77,6 +77,7 @@ ipcMain.on("open-external", function (_event, url) {
 function createWindow() {
 	const { width, height } = screen.getPrimaryDisplay().workAreaSize;
 
+	// @ts-ignore
 	windowState = winState({
 		defaultHeight: height,
 		defaultWidth: width,
@@ -86,6 +87,7 @@ function createWindow() {
 	mainWindow = new BrowserWindow({
 		backgroundColor: "#f7fafb",
 		center: true,
+		// @ts-ignore
 		height: windowState.height,
 		minHeight: 600,
 		minWidth: 1024,
@@ -103,11 +105,15 @@ function createWindow() {
 
 			webviewTag: true,
 		},
+		// @ts-ignore
 		width: windowState.width,
+		// @ts-ignore
 		x: windowState.x,
+		// @ts-ignore
 		y: windowState.y,
 	});
 
+	// @ts-ignore
 	windowState.manage(mainWindow);
 	mainWindow.loadURL(winURL);
 	mainWindow.setBackgroundColor("#f7fafb");

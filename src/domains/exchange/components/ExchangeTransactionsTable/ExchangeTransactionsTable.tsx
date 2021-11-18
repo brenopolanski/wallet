@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { EmptyBlock } from "app/components/EmptyBlock";
 import { Table } from "app/components/Table";
 import React, { FC, useCallback, useMemo } from "react";

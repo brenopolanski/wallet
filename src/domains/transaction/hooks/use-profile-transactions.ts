@@ -1,5 +1,5 @@
-import { sortByDesc } from "@arkecosystem/utils";
-import { Contracts, Contracts as ProfileContracts, DTO } from "@payvo/profiles";
+import { sortByDesc } from "@payvo/sdk-helpers";
+import { Contracts, Contracts as ProfileContracts, DTO } from "@payvo/sdk-profiles";
 import { useSynchronizer } from "app/hooks";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { isUnit } from "utils/test-helpers";

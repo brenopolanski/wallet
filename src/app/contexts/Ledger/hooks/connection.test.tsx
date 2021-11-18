@@ -1,7 +1,7 @@
 import { Observer } from "@ledgerhq/hw-transport";
-import { Contracts } from "@payvo/profiles";
-import { WalletData, WalletLedgerModel } from "@payvo/profiles/distribution/contracts";
 import { LSK } from "@payvo/sdk-lsk";
+import { Contracts } from "@payvo/sdk-profiles";
+import { WalletData, WalletLedgerModel } from "@payvo/sdk-profiles/distribution/contracts";
 import { renderHook } from "@testing-library/react-hooks";
 import { minVersionList } from "app/contexts/Ledger/contracts";
 import { toasts } from "app/services";
@@ -191,14 +191,8 @@ describe("Use Ledger Connection", () => {
 			userWallet?: Contracts.IReadWriteWallet;
 			retries?: number;
 		}) => {
-			const {
-				connect,
-				isConnected,
-				isAwaitingConnection,
-				error,
-				abortConnectionRetry,
-				disconnect,
-			} = useLedgerConnection(transport);
+			const { connect, isConnected, isAwaitingConnection, error, abortConnectionRetry, disconnect } =
+				useLedgerConnection(transport);
 			const handleConnect = async () => {
 				try {
 					await connect(userProfile, userWallet.coinId(), userWallet.networkId(), {
@@ -283,7 +277,6 @@ describe("Use Ledger Connection", () => {
 			getPublicKeySpy.mockReset();
 		});
 
-		//
 		it("should fail to connect with retries", async () => {
 			const getPublicKeySpy = jest
 				.spyOn(wallet.coin().ledger(), "getPublicKey")
@@ -374,14 +367,8 @@ describe("Use Ledger Connection", () => {
 
 	describe("Ledger Connection with options by default", () => {
 		const Component = () => {
-			const {
-				connect,
-				isConnected,
-				isAwaitingConnection,
-				error,
-				abortConnectionRetry,
-				disconnect,
-			} = useLedgerConnection(transport);
+			const { connect, isConnected, isAwaitingConnection, error, abortConnectionRetry, disconnect } =
+				useLedgerConnection(transport);
 			const handleConnect = async () => {
 				try {
 					await connect(profile, wallet.coinId(), wallet.networkId());

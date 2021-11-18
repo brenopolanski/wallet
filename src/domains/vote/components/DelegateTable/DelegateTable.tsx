@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { EmptyResults } from "app/components/EmptyResults";
 import { Pagination } from "app/components/Pagination";
 import { Table } from "app/components/Table";

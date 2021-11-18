@@ -1,4 +1,4 @@
-import { DateTime } from "@payvo/intl";
+import { DateTime } from "@payvo/sdk-intl";
 import { useEnvironmentContext } from "app/contexts";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
@@ -61,11 +61,8 @@ export const useSynchronizer = (jobs: Job[]) => {
 		};
 	}, [timers]);
 
-	return useMemo(() => ({ clearError: () => setError(undefined), error, runAll, start, stop }), [
-		error,
-		setError,
-		start,
-		stop,
-		runAll,
-	]);
+	return useMemo(
+		() => ({ clearError: () => setError(undefined), error, runAll, start, stop }),
+		[error, setError, start, stop, runAll],
+	);
 };

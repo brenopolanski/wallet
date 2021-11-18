@@ -3,7 +3,7 @@
 exports[`AmountLabel should render 1`] = `
 <DocumentFragment>
   <div
-    class="Label-sc-4akkzw-0 bdvTBm"
+    class="Label-sc-4akkzw-0 hhvRsd"
     color="success"
   >
     <div
@@ -23,7 +23,7 @@ exports[`AmountLabel should render 1`] = `
 exports[`AmountLabel should render compact 1`] = `
 <DocumentFragment>
   <div
-    class="Label-sc-4akkzw-0 OOaVy"
+    class="Label-sc-4akkzw-0 bxfWpB"
     color="success"
   >
     <div
@@ -43,7 +43,7 @@ exports[`AmountLabel should render compact 1`] = `
 exports[`AmountLabel should render compact with hint 1`] = `
 <DocumentFragment>
   <div
-    class="Label-sc-4akkzw-0 OOaVy"
+    class="Label-sc-4akkzw-0 bxfWpB"
     color="success"
   >
     <div
@@ -54,7 +54,7 @@ exports[`AmountLabel should render compact with hint 1`] = `
         data-testid="AmountLabel__hint"
       >
         <div
-          class="sc-bdnxRM AkeAK dark:text-white"
+          class="sc-bdvvtL Cfvxc dark:text-white"
           height="10"
           width="10"
         >
@@ -77,7 +77,7 @@ exports[`AmountLabel should render compact with hint 1`] = `
 exports[`AmountLabel should render negative 1`] = `
 <DocumentFragment>
   <div
-    class="Label-sc-4akkzw-0 dCEjSJ"
+    class="Label-sc-4akkzw-0 iXzgUi"
     color="danger"
   >
     <div
@@ -97,7 +97,7 @@ exports[`AmountLabel should render negative 1`] = `
 exports[`AmountLabel should render with hint 1`] = `
 <DocumentFragment>
   <div
-    class="Label-sc-4akkzw-0 bdvTBm"
+    class="Label-sc-4akkzw-0 hhvRsd"
     color="success"
   >
     <div
@@ -108,7 +108,7 @@ exports[`AmountLabel should render with hint 1`] = `
         data-testid="AmountLabel__hint"
       >
         <div
-          class="sc-bdnxRM AkeAK dark:text-white"
+          class="sc-bdvvtL Cfvxc dark:text-white"
           height="10"
           width="10"
         >
@@ -131,7 +131,7 @@ exports[`AmountLabel should render with hint 1`] = `
 exports[`AmountLabel should render zero 1`] = `
 <DocumentFragment>
   <div
-    class="Label-sc-4akkzw-0 koGEVV"
+    class="Label-sc-4akkzw-0 gHbVRS"
     color="neutral"
   >
     <div

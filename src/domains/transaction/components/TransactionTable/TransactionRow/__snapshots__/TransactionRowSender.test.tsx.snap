@@ -7,10 +7,10 @@ exports[`TransactionRowSender should render 1`] = `
     data-testid="TransactionRowMode"
   >
     <div
-      class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background"
+      class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background"
     >
       <div
-        class="sc-bdnxRM NjstW"
+        class="sc-bdvvtL qGXhc"
         height="20"
         width="20"
       >
@@ -20,7 +20,7 @@ exports[`TransactionRowSender should render 1`] = `
       </div>
     </div>
     <div
-      class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+      class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
       data-testid="Avatar"
     >
       <div
@@ -72,7 +72,7 @@ exports[`TransactionRowSender should render compact 1`] = `
       class="w-5 h-5 flex items-center border-0 border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400"
     >
       <div
-        class="sc-bdnxRM NjstW"
+        class="sc-bdvvtL qGXhc"
         height="20"
         width="20"
       >
@@ -82,7 +82,7 @@ exports[`TransactionRowSender should render compact 1`] = `
       </div>
     </span>
     <div
-      class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+      class="Avatar__AvatarWrapper-sc-18vw8a4-0 bzZufz ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
       data-testid="Avatar"
     >
       <div

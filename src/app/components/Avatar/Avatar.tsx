@@ -1,4 +1,4 @@
-import { Helpers } from "@payvo/profiles";
+import { Helpers } from "@payvo/sdk-profiles";
 import cn from "classnames";
 import React from "react";
 import tw, { styled } from "twin.macro";

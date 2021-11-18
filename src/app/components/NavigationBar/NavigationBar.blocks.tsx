@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { images } from "app/assets/images";
 import { Button } from "app/components/Button";
 import { DropdownOption } from "app/components/Dropdown";

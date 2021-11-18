@@ -1,6 +1,6 @@
 import "jest-extended";
 
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { httpClient, toasts } from "app/services";
 import { ExchangeProvider, useExchangeContext } from "domains/exchange/contexts/Exchange";
 import { translations } from "domains/exchange/i18n";

@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { RecipientProperties } from "domains/transaction/components/SearchRecipient/SearchRecipient.contracts";
 import { useCallback, useMemo, useState } from "react";
 
@@ -13,9 +13,10 @@ export const useSearchWallet = ({ profile, wallets }: SearchWalletProperties) =>
 	const [searchKeyword, setSearchKeyword] = useState("");
 	const { getWalletAlias } = useWalletAlias();
 
-	const matchKeyword = useCallback((value?: string) => value?.toLowerCase().includes(searchKeyword.toLowerCase()), [
-		searchKeyword,
-	]);
+	const matchKeyword = useCallback(
+		(value?: string) => value?.toLowerCase().includes(searchKeyword.toLowerCase()),
+		[searchKeyword],
+	);
 
 	const filteredList = useMemo(() => {
 		if (searchKeyword.length === 0) {
@@ -39,10 +40,10 @@ export const useSearchWallet = ({ profile, wallets }: SearchWalletProperties) =>
 		});
 	}, [getWalletAlias, wallets, matchKeyword, profile, searchKeyword.length]);
 
-	const isEmptyResults = useMemo(() => searchKeyword.length > 0 && filteredList.length === 0, [
-		filteredList.length,
-		searchKeyword.length,
-	]);
+	const isEmptyResults = useMemo(
+		() => searchKeyword.length > 0 && filteredList.length === 0,
+		[filteredList.length, searchKeyword.length],
+	);
 
 	return {
 		filteredList,

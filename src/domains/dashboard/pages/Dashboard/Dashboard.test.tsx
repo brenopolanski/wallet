@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Observer } from "@ledgerhq/hw-transport";
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { LedgerProvider } from "app/contexts/Ledger/Ledger";

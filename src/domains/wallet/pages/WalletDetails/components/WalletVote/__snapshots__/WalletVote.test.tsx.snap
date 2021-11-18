@@ -7,10 +7,10 @@ exports[`WalletVote multi vote networks should render a vote for multiple active
     data-testid="WalletVote"
   >
     <div
-      class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-secondary-900 text-theme-secondary-900 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background"
+      class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-theme-secondary-900 text-theme-secondary-900 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background"
     >
       <div
-        class="sc-bdnxRM NjstW"
+        class="sc-bdvvtL qGXhc"
         height="20"
         width="20"
       >
@@ -69,7 +69,7 @@ exports[`WalletVote multi vote networks should render a vote for multiple active
           class="flex items-center justify-center w-5 h-5 rounded-full bg-theme-primary-600 dark:bg-theme-secondary-800"
         >
           <div
-            class="sc-bdnxRM AkeAK text-theme-primary-200 dark:text-theme-secondary-200"
+            class="sc-bdvvtL Cfvxc text-theme-primary-200 dark:text-theme-secondary-200"
             height="10"
             width="10"
           >
@@ -91,7 +91,7 @@ exports[`WalletVote multi vote networks should render a vote for multiple active
       </div>
     </div>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL space-x-2"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk space-x-2"
       data-testid="WalletVote__button"
       type="button"
     >
@@ -99,7 +99,7 @@ exports[`WalletVote multi vote networks should render a vote for multiple active
         class="flex items-center space-x-2"
       >
         <div
-          class="sc-bdnxRM AFVmm"
+          class="sc-bdvvtL fCrhkg"
           height="16"
           width="16"
         >
@@ -123,10 +123,10 @@ exports[`WalletVote multi vote networks should render a vote for multiple active
     data-testid="WalletVote"
   >
     <div
-      class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-secondary-900 text-theme-secondary-900 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background"
+      class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-theme-secondary-900 text-theme-secondary-900 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background"
     >
       <div
-        class="sc-bdnxRM NjstW"
+        class="sc-bdvvtL qGXhc"
         height="20"
         width="20"
       >
@@ -185,7 +185,7 @@ exports[`WalletVote multi vote networks should render a vote for multiple active
           class="flex items-center justify-center w-5 h-5 rounded-full bg-theme-primary-600 dark:bg-theme-secondary-800"
         >
           <div
-            class="sc-bdnxRM AkeAK text-theme-primary-200 dark:text-theme-secondary-200"
+            class="sc-bdvvtL Cfvxc text-theme-primary-200 dark:text-theme-secondary-200"
             height="10"
             width="10"
           >
@@ -207,7 +207,7 @@ exports[`WalletVote multi vote networks should render a vote for multiple active
       </div>
     </div>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL space-x-2"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk space-x-2"
       data-testid="WalletVote__button"
       type="button"
     >
@@ -215,7 +215,7 @@ exports[`WalletVote multi vote networks should render a vote for multiple active
         class="flex items-center space-x-2"
       >
         <div
-          class="sc-bdnxRM AFVmm"
+          class="sc-bdvvtL fCrhkg"
           height="16"
           width="16"
         >
@@ -239,10 +239,10 @@ exports[`WalletVote multi vote networks should render a vote for multiple active
     data-testid="WalletVote"
   >
     <div
-      class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-secondary-900 text-theme-secondary-900 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background"
+      class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-theme-secondary-900 text-theme-secondary-900 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background"
     >
       <div
-        class="sc-bdnxRM NjstW"
+        class="sc-bdvvtL qGXhc"
         height="20"
         width="20"
       >
@@ -305,7 +305,7 @@ exports[`WalletVote multi vote networks should render a vote for multiple active
       </div>
     </div>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL space-x-2"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk space-x-2"
       data-testid="WalletVote__button"
       type="button"
     >
@@ -313,7 +313,7 @@ exports[`WalletVote multi vote networks should render a vote for multiple active
         class="flex items-center space-x-2"
       >
         <div
-          class="sc-bdnxRM AFVmm"
+          class="sc-bdvvtL fCrhkg"
           height="16"
           width="16"
         >
@@ -337,10 +337,10 @@ exports[`WalletVote multi vote networks should render a vote for multiple active
     data-testid="WalletVote"
   >
     <div
-      class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-secondary-900 text-theme-secondary-900 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background"
+      class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-theme-secondary-900 text-theme-secondary-900 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background"
     >
       <div
-        class="sc-bdnxRM NjstW"
+        class="sc-bdvvtL qGXhc"
         height="20"
         width="20"
       >
@@ -399,7 +399,7 @@ exports[`WalletVote multi vote networks should render a vote for multiple active
           class="flex items-center justify-center w-5 h-5 rounded-full bg-theme-primary-600 dark:bg-theme-secondary-800"
         >
           <div
-            class="sc-bdnxRM AkeAK text-theme-primary-200 dark:text-theme-secondary-200"
+            class="sc-bdvvtL Cfvxc text-theme-primary-200 dark:text-theme-secondary-200"
             height="10"
             width="10"
           >
@@ -426,7 +426,7 @@ exports[`WalletVote multi vote networks should render a vote for multiple active
       </div>
     </div>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL space-x-2"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk space-x-2"
       data-testid="WalletVote__button"
       type="button"
     >
@@ -434,7 +434,7 @@ exports[`WalletVote multi vote networks should render a vote for multiple active
         class="flex items-center space-x-2"
       >
         <div
-          class="sc-bdnxRM AFVmm"
+          class="sc-bdvvtL fCrhkg"
           height="16"
           width="16"
         >
@@ -458,10 +458,10 @@ exports[`WalletVote multi vote networks should render a vote for multiple standb
     data-testid="WalletVote"
   >
     <div
-      class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-secondary-900 text-theme-secondary-900 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background"
+      class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-theme-secondary-900 text-theme-secondary-900 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background"
     >
       <div
-        class="sc-bdnxRM NjstW"
+        class="sc-bdvvtL qGXhc"
         height="20"
         width="20"
       >
@@ -520,7 +520,7 @@ exports[`WalletVote multi vote networks should render a vote for multiple standb
           class="flex items-center justify-center w-5 h-5 rounded-full bg-theme-primary-600 dark:bg-theme-secondary-800"
         >
           <div
-            class="sc-bdnxRM AkeAK text-theme-primary-200 dark:text-theme-secondary-200"
+            class="sc-bdvvtL Cfvxc text-theme-primary-200 dark:text-theme-secondary-200"
             height="10"
             width="10"
           >
@@ -546,7 +546,7 @@ exports[`WalletVote multi vote networks should render a vote for multiple standb
       </div>
     </div>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL space-x-2"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk space-x-2"
       data-testid="WalletVote__button"
       type="button"
     >
@@ -554,7 +554,7 @@ exports[`WalletVote multi vote networks should render a vote for multiple standb
         class="flex items-center space-x-2"
       >
         <div
-          class="sc-bdnxRM AFVmm"
+          class="sc-bdvvtL fCrhkg"
           height="16"
           width="16"
         >
@@ -578,10 +578,10 @@ exports[`WalletVote multi vote networks should render a vote for multiple standb
     data-testid="WalletVote"
   >
     <div
-      class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-secondary-900 text-theme-secondary-900 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background"
+      class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-theme-secondary-900 text-theme-secondary-900 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background"
     >
       <div
-        class="sc-bdnxRM NjstW"
+        class="sc-bdvvtL qGXhc"
         height="20"
         width="20"
       >
@@ -640,7 +640,7 @@ exports[`WalletVote multi vote networks should render a vote for multiple standb
           class="flex items-center justify-center w-5 h-5 rounded-full bg-theme-primary-600 dark:bg-theme-secondary-800"
         >
           <div
-            class="sc-bdnxRM AkeAK text-theme-primary-200 dark:text-theme-secondary-200"
+            class="sc-bdvvtL Cfvxc text-theme-primary-200 dark:text-theme-secondary-200"
             height="10"
             width="10"
           >
@@ -657,7 +657,7 @@ exports[`WalletVote multi vote networks should render a vote for multiple standb
       </div>
     </div>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL space-x-2"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk space-x-2"
       data-testid="WalletVote__button"
       type="button"
     >
@@ -665,7 +665,7 @@ exports[`WalletVote multi vote networks should render a vote for multiple standb
         class="flex items-center space-x-2"
       >
         <div
-          class="sc-bdnxRM AFVmm"
+          class="sc-bdvvtL fCrhkg"
           height="16"
           width="16"
         >
@@ -689,10 +689,10 @@ exports[`WalletVote should disable vote button when balance is less than votesAm
     data-testid="WalletVote"
   >
     <div
-      class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-secondary-900 text-theme-secondary-900 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background"
+      class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-theme-secondary-900 text-theme-secondary-900 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background"
     >
       <div
-        class="sc-bdnxRM NjstW"
+        class="sc-bdvvtL qGXhc"
         height="20"
         width="20"
       >
@@ -774,7 +774,7 @@ exports[`WalletVote should disable vote button when balance is less than votesAm
           class="flex items-center justify-center w-5 h-5 rounded-full bg-theme-primary-600 dark:bg-theme-secondary-800"
         >
           <div
-            class="sc-bdnxRM AkeAK text-theme-primary-200 dark:text-theme-secondary-200"
+            class="sc-bdvvtL Cfvxc text-theme-primary-200 dark:text-theme-secondary-200"
             height="10"
             width="10"
           >
@@ -791,7 +791,7 @@ exports[`WalletVote should disable vote button when balance is less than votesAm
       </div>
     </div>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd space-x-2"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 kkDhXe space-x-2"
       data-testid="WalletVote__button"
       disabled=""
       type="button"
@@ -800,7 +800,7 @@ exports[`WalletVote should disable vote button when balance is less than votesAm
         class="flex items-center space-x-2"
       >
         <div
-          class="sc-bdnxRM AFVmm"
+          class="sc-bdvvtL fCrhkg"
           height="16"
           width="16"
         >
@@ -827,10 +827,10 @@ exports[`WalletVote should handle delegate sync error 1`] = `
       class="flex flex-1 items-center space-x-4"
     >
       <div
-        class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-secondary-500 text-theme-secondary-500 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background"
+        class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-theme-secondary-500 text-theme-secondary-500 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background"
       >
         <div
-          class="sc-bdnxRM NjstW"
+          class="sc-bdvvtL qGXhc"
           height="20"
           width="20"
         >
@@ -861,7 +861,7 @@ exports[`WalletVote should handle delegate sync error 1`] = `
             You have not voted for a Delegate yet.
           </span>
           <a
-            class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+            class="Link__AnchorStyled-sc-ec014t-0 eeKUfa group ring-focus"
             data-ring-focus-margin="-m-1"
             data-testid="Link"
             href="#"
@@ -869,7 +869,7 @@ exports[`WalletVote should handle delegate sync error 1`] = `
             to="https://ark.dev/docs/desktop-wallet/user-guides/how-to-vote-unvote"
           >
             <span
-              class="Link__Content-sc-ec014t-1 hUiuRR"
+              class="Link__Content-sc-ec014t-1 fPOlTq"
             >
               <span
                 class="text-sm"
@@ -878,7 +878,7 @@ exports[`WalletVote should handle delegate sync error 1`] = `
               </span>
             </span>
             <div
-              class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block text-sm"
+              class="sc-bdvvtL fCrhkg flex-shrink-0 duration-200 inline-block text-sm"
               data-testid="Link__external"
               height="16"
               width="16"
@@ -892,7 +892,7 @@ exports[`WalletVote should handle delegate sync error 1`] = `
       </div>
     </div>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL space-x-2"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk space-x-2"
       data-testid="WalletVote__button"
       type="button"
     >
@@ -900,7 +900,7 @@ exports[`WalletVote should handle delegate sync error 1`] = `
         class="flex items-center space-x-2"
       >
         <div
-          class="sc-bdnxRM AFVmm"
+          class="sc-bdvvtL fCrhkg"
           height="16"
           width="16"
         >
@@ -927,10 +927,10 @@ exports[`WalletVote should handle wallet votes error 1`] = `
       class="flex flex-1 items-center space-x-4"
     >
       <div
-        class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-secondary-500 text-theme-secondary-500 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background"
+        class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-theme-secondary-500 text-theme-secondary-500 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background"
       >
         <div
-          class="sc-bdnxRM NjstW"
+          class="sc-bdvvtL qGXhc"
           height="20"
           width="20"
         >
@@ -961,7 +961,7 @@ exports[`WalletVote should handle wallet votes error 1`] = `
             You have not voted for a Delegate yet.
           </span>
           <a
-            class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+            class="Link__AnchorStyled-sc-ec014t-0 eeKUfa group ring-focus"
             data-ring-focus-margin="-m-1"
             data-testid="Link"
             href="#"
@@ -969,7 +969,7 @@ exports[`WalletVote should handle wallet votes error 1`] = `
             to="https://ark.dev/docs/desktop-wallet/user-guides/how-to-vote-unvote"
           >
             <span
-              class="Link__Content-sc-ec014t-1 hUiuRR"
+              class="Link__Content-sc-ec014t-1 fPOlTq"
             >
               <span
                 class="text-sm"
@@ -978,7 +978,7 @@ exports[`WalletVote should handle wallet votes error 1`] = `
               </span>
             </span>
             <div
-              class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block text-sm"
+              class="sc-bdvvtL fCrhkg flex-shrink-0 duration-200 inline-block text-sm"
               data-testid="Link__external"
               height="16"
               width="16"
@@ -992,7 +992,7 @@ exports[`WalletVote should handle wallet votes error 1`] = `
       </div>
     </div>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL space-x-2"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk space-x-2"
       data-testid="WalletVote__button"
       type="button"
     >
@@ -1000,7 +1000,7 @@ exports[`WalletVote should handle wallet votes error 1`] = `
         class="flex items-center space-x-2"
       >
         <div
-          class="sc-bdnxRM AFVmm"
+          class="sc-bdvvtL fCrhkg"
           height="16"
           width="16"
         >
@@ -1024,10 +1024,10 @@ exports[`WalletVote should render 1`] = `
     data-testid="WalletVote"
   >
     <div
-      class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-secondary-900 text-theme-secondary-900 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background"
+      class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-theme-secondary-900 text-theme-secondary-900 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background"
     >
       <div
-        class="sc-bdnxRM NjstW"
+        class="sc-bdvvtL qGXhc"
         height="20"
         width="20"
       >
@@ -1079,7 +1079,7 @@ exports[`WalletVote should render 1`] = `
           class="flex items-center justify-center w-5 h-5 rounded-full bg-theme-primary-600 dark:bg-theme-secondary-800"
         >
           <div
-            class="sc-bdnxRM AkeAK text-theme-primary-200 dark:text-theme-secondary-200"
+            class="sc-bdvvtL Cfvxc text-theme-primary-200 dark:text-theme-secondary-200"
             height="10"
             width="10"
           >
@@ -1096,7 +1096,7 @@ exports[`WalletVote should render 1`] = `
       </div>
     </div>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL space-x-2"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk space-x-2"
       data-testid="WalletVote__button"
       type="button"
     >
@@ -1104,7 +1104,7 @@ exports[`WalletVote should render 1`] = `
         class="flex items-center space-x-2"
       >
         <div
-          class="sc-bdnxRM AFVmm"
+          class="sc-bdvvtL fCrhkg"
           height="16"
           width="16"
         >
@@ -1128,10 +1128,10 @@ exports[`WalletVote should render as all resigned 1`] = `
     data-testid="WalletVote"
   >
     <div
-      class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-secondary-900 text-theme-secondary-900 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background"
+      class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-theme-secondary-900 text-theme-secondary-900 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background"
     >
       <div
-        class="sc-bdnxRM NjstW"
+        class="sc-bdvvtL qGXhc"
         height="20"
         width="20"
       >
@@ -1185,7 +1185,7 @@ exports[`WalletVote should render as all resigned 1`] = `
           class="flex items-center justify-center w-5 h-5 rounded-full bg-theme-primary-600 dark:bg-theme-secondary-800"
         >
           <div
-            class="sc-bdnxRM AkeAK text-theme-primary-200 dark:text-theme-secondary-200"
+            class="sc-bdvvtL Cfvxc text-theme-primary-200 dark:text-theme-secondary-200"
             height="10"
             width="10"
           >
@@ -1202,7 +1202,7 @@ exports[`WalletVote should render as all resigned 1`] = `
       </div>
     </div>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL space-x-2"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk space-x-2"
       data-testid="WalletVote__button"
       type="button"
     >
@@ -1210,7 +1210,7 @@ exports[`WalletVote should render as all resigned 1`] = `
         class="flex items-center space-x-2"
       >
         <div
-          class="sc-bdnxRM AFVmm"
+          class="sc-bdvvtL fCrhkg"
           height="16"
           width="16"
         >
@@ -1234,10 +1234,10 @@ exports[`WalletVote should render disabled vote button 1`] = `
     data-testid="WalletVote"
   >
     <div
-      class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-secondary-900 text-theme-secondary-900 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background"
+      class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-theme-secondary-900 text-theme-secondary-900 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background"
     >
       <div
-        class="sc-bdnxRM NjstW"
+        class="sc-bdvvtL qGXhc"
         height="20"
         width="20"
       >
@@ -1289,7 +1289,7 @@ exports[`WalletVote should render disabled vote button 1`] = `
           class="flex items-center justify-center w-5 h-5 rounded-full bg-theme-primary-600 dark:bg-theme-secondary-800"
         >
           <div
-            class="sc-bdnxRM AkeAK text-theme-primary-200 dark:text-theme-secondary-200"
+            class="sc-bdvvtL Cfvxc text-theme-primary-200 dark:text-theme-secondary-200"
             height="10"
             width="10"
           >
@@ -1306,7 +1306,7 @@ exports[`WalletVote should render disabled vote button 1`] = `
       </div>
     </div>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd space-x-2"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 kkDhXe space-x-2"
       data-testid="WalletVote__button"
       disabled=""
       type="button"
@@ -1315,7 +1315,7 @@ exports[`WalletVote should render disabled vote button 1`] = `
         class="flex items-center space-x-2"
       >
         <div
-          class="sc-bdnxRM AFVmm"
+          class="sc-bdvvtL fCrhkg"
           height="16"
           width="16"
         >
@@ -1342,10 +1342,10 @@ exports[`WalletVote should render the maximum votes 1`] = `
       class="flex flex-1 items-center space-x-4"
     >
       <div
-        class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-secondary-500 text-theme-secondary-500 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background"
+        class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-theme-secondary-500 text-theme-secondary-500 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background"
       >
         <div
-          class="sc-bdnxRM NjstW"
+          class="sc-bdvvtL qGXhc"
           height="20"
           width="20"
         >
@@ -1376,7 +1376,7 @@ exports[`WalletVote should render the maximum votes 1`] = `
             You have not voted for a Delegate yet.
           </span>
           <a
-            class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+            class="Link__AnchorStyled-sc-ec014t-0 eeKUfa group ring-focus"
             data-ring-focus-margin="-m-1"
             data-testid="Link"
             href="#"
@@ -1384,7 +1384,7 @@ exports[`WalletVote should render the maximum votes 1`] = `
             to="https://ark.dev/docs/desktop-wallet/user-guides/how-to-vote-unvote"
           >
             <span
-              class="Link__Content-sc-ec014t-1 hUiuRR"
+              class="Link__Content-sc-ec014t-1 fPOlTq"
             >
               <span
                 class="text-sm"
@@ -1393,7 +1393,7 @@ exports[`WalletVote should render the maximum votes 1`] = `
               </span>
             </span>
             <div
-              class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block text-sm"
+              class="sc-bdvvtL fCrhkg flex-shrink-0 duration-200 inline-block text-sm"
               data-testid="Link__external"
               height="16"
               width="16"
@@ -1407,7 +1407,7 @@ exports[`WalletVote should render the maximum votes 1`] = `
       </div>
     </div>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL space-x-2"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk space-x-2"
       data-testid="WalletVote__button"
       type="button"
     >
@@ -1415,7 +1415,7 @@ exports[`WalletVote should render the maximum votes 1`] = `
         class="flex items-center space-x-2"
       >
         <div
-          class="sc-bdnxRM AFVmm"
+          class="sc-bdvvtL fCrhkg"
           height="16"
           width="16"
         >
@@ -1442,10 +1442,10 @@ exports[`WalletVote should render without votes 1`] = `
       class="flex flex-1 items-center space-x-4"
     >
       <div
-        class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-secondary-500 text-theme-secondary-500 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background"
+        class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-theme-secondary-500 text-theme-secondary-500 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background"
       >
         <div
-          class="sc-bdnxRM NjstW"
+          class="sc-bdvvtL qGXhc"
           height="20"
           width="20"
         >
@@ -1476,7 +1476,7 @@ exports[`WalletVote should render without votes 1`] = `
             You have not voted for a Delegate yet.
           </span>
           <a
-            class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+            class="Link__AnchorStyled-sc-ec014t-0 eeKUfa group ring-focus"
             data-ring-focus-margin="-m-1"
             data-testid="Link"
             href="#"
@@ -1484,7 +1484,7 @@ exports[`WalletVote should render without votes 1`] = `
             to="https://ark.dev/docs/desktop-wallet/user-guides/how-to-vote-unvote"
           >
             <span
-              class="Link__Content-sc-ec014t-1 hUiuRR"
+              class="Link__Content-sc-ec014t-1 fPOlTq"
             >
               <span
                 class="text-sm"
@@ -1493,7 +1493,7 @@ exports[`WalletVote should render without votes 1`] = `
               </span>
             </span>
             <div
-              class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block text-sm"
+              class="sc-bdvvtL fCrhkg flex-shrink-0 duration-200 inline-block text-sm"
               data-testid="Link__external"
               height="16"
               width="16"
@@ -1507,7 +1507,7 @@ exports[`WalletVote should render without votes 1`] = `
       </div>
     </div>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL space-x-2"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk space-x-2"
       data-testid="WalletVote__button"
       type="button"
     >
@@ -1515,7 +1515,7 @@ exports[`WalletVote should render without votes 1`] = `
         class="flex items-center space-x-2"
       >
         <div
-          class="sc-bdnxRM AFVmm"
+          class="sc-bdvvtL fCrhkg"
           height="16"
           width="16"
         >
@@ -1539,10 +1539,10 @@ exports[`WalletVote single vote networks should render a vote for a delegate wit
     data-testid="WalletVote"
   >
     <div
-      class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-secondary-900 text-theme-secondary-900 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background"
+      class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-theme-secondary-900 text-theme-secondary-900 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background"
     >
       <div
-        class="sc-bdnxRM NjstW"
+        class="sc-bdvvtL qGXhc"
         height="20"
         width="20"
       >
@@ -1594,7 +1594,7 @@ exports[`WalletVote single vote networks should render a vote for a delegate wit
           class="flex items-center justify-center w-5 h-5 rounded-full bg-theme-primary-600 dark:bg-theme-secondary-800"
         >
           <div
-            class="sc-bdnxRM AkeAK text-theme-primary-200 dark:text-theme-secondary-200"
+            class="sc-bdvvtL Cfvxc text-theme-primary-200 dark:text-theme-secondary-200"
             height="10"
             width="10"
           >
@@ -1611,7 +1611,7 @@ exports[`WalletVote single vote networks should render a vote for a delegate wit
       </div>
     </div>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL space-x-2"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk space-x-2"
       data-testid="WalletVote__button"
       type="button"
     >
@@ -1619,7 +1619,7 @@ exports[`WalletVote single vote networks should render a vote for a delegate wit
         class="flex items-center space-x-2"
       >
         <div
-          class="sc-bdnxRM AFVmm"
+          class="sc-bdvvtL fCrhkg"
           height="16"
           width="16"
         >
@@ -1643,10 +1643,10 @@ exports[`WalletVote single vote networks should render a vote for a standby dele
     data-testid="WalletVote"
   >
     <div
-      class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-secondary-900 text-theme-secondary-900 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background"
+      class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-theme-secondary-900 text-theme-secondary-900 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background"
     >
       <div
-        class="sc-bdnxRM NjstW"
+        class="sc-bdvvtL qGXhc"
         height="20"
         width="20"
       >
@@ -1698,7 +1698,7 @@ exports[`WalletVote single vote networks should render a vote for a standby dele
           class="flex items-center justify-center w-5 h-5 rounded-full bg-theme-primary-600 dark:bg-theme-secondary-800"
         >
           <div
-            class="sc-bdnxRM AkeAK text-theme-primary-200 dark:text-theme-secondary-200"
+            class="sc-bdvvtL Cfvxc text-theme-primary-200 dark:text-theme-secondary-200"
             height="10"
             width="10"
           >
@@ -1715,7 +1715,7 @@ exports[`WalletVote single vote networks should render a vote for a standby dele
       </div>
     </div>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL space-x-2"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk space-x-2"
       data-testid="WalletVote__button"
       type="button"
     >
@@ -1723,7 +1723,7 @@ exports[`WalletVote single vote networks should render a vote for a standby dele
         class="flex items-center space-x-2"
       >
         <div
-          class="sc-bdnxRM AFVmm"
+          class="sc-bdvvtL fCrhkg"
           height="16"
           width="16"
         >
@@ -1747,10 +1747,10 @@ exports[`WalletVote single vote networks should render a vote for an active dele
     data-testid="WalletVote"
   >
     <div
-      class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-secondary-900 text-theme-secondary-900 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background"
+      class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-theme-secondary-900 text-theme-secondary-900 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background"
     >
       <div
-        class="sc-bdnxRM NjstW"
+        class="sc-bdvvtL qGXhc"
         height="20"
         width="20"
       >
@@ -1806,7 +1806,7 @@ exports[`WalletVote single vote networks should render a vote for an active dele
       </div>
     </div>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL space-x-2"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk space-x-2"
       data-testid="WalletVote__button"
       type="button"
     >
@@ -1814,7 +1814,7 @@ exports[`WalletVote single vote networks should render a vote for an active dele
         class="flex items-center space-x-2"
       >
         <div
-          class="sc-bdnxRM AFVmm"
+          class="sc-bdvvtL fCrhkg"
           height="16"
           width="16"
         >

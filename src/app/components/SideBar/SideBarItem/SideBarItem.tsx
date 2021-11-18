@@ -21,7 +21,8 @@ export const SideBarItem = withRouter(
 		>
 			<li
 				className={cn("rounded py-5 pl-10 pr-8 h-15 flex items-center", {
-					"text-theme-primary-600 dark:text-theme-secondary-200 bg-theme-primary-100 dark:bg-theme-secondary-800": isActive,
+					"text-theme-primary-600 dark:text-theme-secondary-200 bg-theme-primary-100 dark:bg-theme-secondary-800":
+						isActive,
 				})}
 			>
 				{isActive && <div className="absolute top-0 bottom-0 left-0 w-2 rounded bg-theme-primary-600" />}

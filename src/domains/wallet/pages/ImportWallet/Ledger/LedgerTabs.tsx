@@ -1,5 +1,5 @@
-import { uniq } from "@arkecosystem/utils";
 import { Enums } from "@payvo/sdk";
+import { uniq } from "@payvo/sdk-helpers";
 import { Button } from "app/components/Button";
 import { Icon } from "app/components/Icon";
 import { StepIndicator } from "app/components/StepIndicator";

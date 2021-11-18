@@ -1,5 +1,5 @@
-import { BlockfolioSignal as FTXSignal } from "@payvo/news";
 import { Networks } from "@payvo/sdk";
+import { BlockfolioSignal as FTXSignal } from "@payvo/sdk-news";
 import { Card } from "app/components/Card";
 import { Divider } from "app/components/Divider";
 import { Label } from "app/components/Label";

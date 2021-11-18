@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { PluginService } from "plugins/core";
 import { PluginHooks } from "plugins/core/internals";
 import { PluginServiceConfig, PluginServiceIdentifier } from "plugins/types";

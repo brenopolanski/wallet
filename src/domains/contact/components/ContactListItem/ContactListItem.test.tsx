@@ -1,5 +1,5 @@
-import { Contracts } from "@payvo/profiles";
-import { ContactAddress } from "@payvo/profiles/distribution/contact-address";
+import { Contracts } from "@payvo/sdk-profiles";
+import { ContactAddress } from "@payvo/sdk-profiles/distribution/contact-address";
 import React from "react";
 import { env, fireEvent, getDefaultProfileId, render } from "utils/testing-library";
 

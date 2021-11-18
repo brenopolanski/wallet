@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import { useProfileExport } from "domains/setting/hooks/use-profile-export";
 import { env, getDefaultPassword, getDefaultProfileId, getPasswordProtectedProfileId } from "utils/testing-library";

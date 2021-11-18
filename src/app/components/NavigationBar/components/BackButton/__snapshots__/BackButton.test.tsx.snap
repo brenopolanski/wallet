@@ -3,11 +3,11 @@
 exports[`BackButton should not redirect to given url when disabled 1`] = `
 <div>
   <button
-    class="BackButton__StyledBackButton-sc-18ta3r7-0 iNqwXn"
+    class="BackButton__StyledBackButton-sc-18ta3r7-0 iaWPTU"
     disabled=""
   >
     <div
-      class="sc-bdnxRM AkeAK mx-auto"
+      class="sc-bdvvtL Cfvxc mx-auto"
       height="10"
       width="10"
     >
@@ -22,11 +22,11 @@ exports[`BackButton should not redirect to given url when disabled 1`] = `
 exports[`BackButton should not redirect to previous page when disabled 1`] = `
 <div>
   <button
-    class="BackButton__StyledBackButton-sc-18ta3r7-0 iNqwXn"
+    class="BackButton__StyledBackButton-sc-18ta3r7-0 iaWPTU"
     disabled=""
   >
     <div
-      class="sc-bdnxRM AkeAK mx-auto"
+      class="sc-bdvvtL Cfvxc mx-auto"
       height="10"
       width="10"
     >
@@ -41,10 +41,10 @@ exports[`BackButton should not redirect to previous page when disabled 1`] = `
 exports[`BackButton should redirect to given url 1`] = `
 <div>
   <button
-    class="BackButton__StyledBackButton-sc-18ta3r7-0 tELEj"
+    class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms"
   >
     <div
-      class="sc-bdnxRM AkeAK mx-auto"
+      class="sc-bdvvtL Cfvxc mx-auto"
       height="10"
       width="10"
     >
@@ -59,10 +59,10 @@ exports[`BackButton should redirect to given url 1`] = `
 exports[`BackButton should redirect to previous page 1`] = `
 <div>
   <button
-    class="BackButton__StyledBackButton-sc-18ta3r7-0 tELEj"
+    class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms"
   >
     <div
-      class="sc-bdnxRM AkeAK mx-auto"
+      class="sc-bdvvtL Cfvxc mx-auto"
       height="10"
       width="10"
     >
@@ -77,10 +77,10 @@ exports[`BackButton should redirect to previous page 1`] = `
 exports[`BackButton should render 1`] = `
 <div>
   <button
-    class="BackButton__StyledBackButton-sc-18ta3r7-0 tELEj"
+    class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms"
   >
     <div
-      class="sc-bdnxRM AkeAK mx-auto"
+      class="sc-bdvvtL Cfvxc mx-auto"
       height="10"
       width="10"
     >
@@ -95,11 +95,11 @@ exports[`BackButton should render 1`] = `
 exports[`BackButton should render when disabled 1`] = `
 <div>
   <button
-    class="BackButton__StyledBackButton-sc-18ta3r7-0 iNqwXn"
+    class="BackButton__StyledBackButton-sc-18ta3r7-0 iaWPTU"
     disabled=""
   >
     <div
-      class="sc-bdnxRM AkeAK mx-auto"
+      class="sc-bdvvtL Cfvxc mx-auto"
       height="10"
       width="10"
     >

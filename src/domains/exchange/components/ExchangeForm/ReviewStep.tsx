@@ -15,15 +15,8 @@ export const ReviewStep = () => {
 	const { provider: exchangeProvider } = useExchangeContext();
 
 	const { register, watch } = useFormContext();
-	const {
-		exchangeRate,
-		estimatedTime,
-		payinAmount,
-		payoutAmount,
-		fromCurrency,
-		toCurrency,
-		recipientWallet,
-	} = watch();
+	const { exchangeRate, estimatedTime, payinAmount, payoutAmount, fromCurrency, toCurrency, recipientWallet } =
+		watch();
 
 	return (
 		<div data-testid="ExchangeForm__review-step" className="space-y-6">

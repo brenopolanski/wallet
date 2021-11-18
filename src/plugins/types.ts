@@ -1,5 +1,5 @@
-import { Repositories } from "@payvo/profiles";
 import { Http, Services } from "@payvo/sdk";
+import { Repositories } from "@payvo/sdk-profiles";
 import { HttpClient } from "app/services/HttpClient";
 
 import { PluginManager } from "./core";

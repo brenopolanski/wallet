@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 
 export interface SendVoteStepProperties {
 	wallet: Contracts.IReadWriteWallet;

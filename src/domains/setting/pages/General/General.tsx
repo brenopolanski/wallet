@@ -1,4 +1,4 @@
-import { Contracts, Helpers } from "@payvo/profiles";
+import { Contracts, Helpers } from "@payvo/sdk-profiles";
 import { Button } from "app/components/Button";
 import { Form, FormField, FormLabel } from "app/components/Form";
 import { Header } from "app/components/Header";

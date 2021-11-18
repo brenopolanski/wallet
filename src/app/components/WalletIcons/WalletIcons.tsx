@@ -1,5 +1,5 @@
-import { constantCase } from "@arkecosystem/utils";
-import { Contracts } from "@payvo/profiles";
+import { constantCase } from "@payvo/sdk-helpers";
+import { Contracts } from "@payvo/sdk-profiles";
 import { Icon } from "app/components/Icon";
 import { Tooltip } from "app/components/Tooltip";
 import React from "react";
@@ -45,7 +45,7 @@ const WalletIcon = ({ type, label, iconColor, iconSize = "lg", tooltipDarkTheme 
 
 	return (
 		<Tooltip
-			content={label || t((`COMMON.${constantCase(type)}` as const) as any)}
+			content={label || t(`COMMON.${constantCase(type)}` as const as any)}
 			theme={tooltipDarkTheme ? "dark" : undefined}
 		>
 			<div data-testid={`WalletIcon__${type}`} className={`inline-block p-1 ${iconColor || getIconColor(type)}`}>

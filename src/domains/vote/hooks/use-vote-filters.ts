@@ -1,6 +1,6 @@
-import { isEmptyObject, sortBy, uniq } from "@arkecosystem/utils";
-import { Contracts } from "@payvo/profiles";
 import { Networks } from "@payvo/sdk";
+import { isEmptyObject, sortBy, uniq } from "@payvo/sdk-helpers";
+import { Contracts } from "@payvo/sdk-profiles";
 import { useWalletAlias } from "app/hooks";
 import { useWalletFilters } from "domains/dashboard/components/FilterWallets";
 import { FilterOption } from "domains/vote/components/VotesFilter";

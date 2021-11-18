@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { useTheme } from "app/hooks/use-theme";
 import electron from "electron";
 import { Theme } from "types";

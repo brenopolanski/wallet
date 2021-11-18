@@ -1,4 +1,4 @@
-import { Contracts, DTO } from "@payvo/profiles";
+import { Contracts, DTO } from "@payvo/sdk-profiles";
 import { useSynchronizer } from "app/hooks";
 import { useTransaction } from "domains/transaction/hooks";
 import { useCallback, useMemo, useState } from "react";
@@ -54,11 +54,17 @@ export const useWalletTransactions = (wallet: Contracts.IReadWriteWallet) => {
 				!existingTransaction.usesMultiSignature() && (hasBeenSigned || isAwaitingConfirmation);
 
 			pending.push({
+				// @ts-ignore
 				hasBeenSigned,
+				// @ts-ignore
 				isAwaitingConfirmation,
+				// @ts-ignore
 				isAwaitingOtherSignatures,
+				// @ts-ignore
 				isAwaitingOurSignature,
+				// @ts-ignore
 				isPendingTransfer,
+				// @ts-ignore
 				transaction,
 			});
 		}

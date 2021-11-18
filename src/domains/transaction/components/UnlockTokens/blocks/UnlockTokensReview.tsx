@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { Button } from "app/components/Button";
 import { Header } from "app/components/Header";
 import { useExchangeRate } from "app/hooks/use-exchange-rate";

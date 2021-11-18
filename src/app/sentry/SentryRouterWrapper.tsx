@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { useEnvironmentContext, useLedgerContext } from "app/contexts";
 import React, { useEffect, useMemo } from "react";
 import { useParams } from "react-router-dom";

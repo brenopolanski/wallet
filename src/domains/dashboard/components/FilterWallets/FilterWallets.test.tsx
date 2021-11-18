@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { FilterOption } from "app/components/FilterNetwork";
 import { DashboardConfiguration } from "domains/dashboard/pages/Dashboard";
 import React from "react";

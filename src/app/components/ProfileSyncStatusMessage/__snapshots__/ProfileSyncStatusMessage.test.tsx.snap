@@ -27,13 +27,13 @@ exports[`SyncErrorMessage should handle retry 1`] = `
   </span>
    while trying to retrieve your wallet information and as a result, your data could be out of sync or incorrect. Click 
   <a
-    class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+    class="Link__AnchorStyled-sc-ec014t-0 eeKUfa group ring-focus"
     data-ring-focus-margin="-m-1"
     data-testid="SyncErrorMessage__retry"
     href="/"
   >
     <span
-      class="Link__Content-sc-ec014t-1 hUiuRR"
+      class="Link__Content-sc-ec014t-1 fPOlTq"
     >
       here
     </span>
@@ -69,13 +69,13 @@ exports[`SyncErrorMessage should render multiple failed networks 1`] = `
   </span>
    while trying to retrieve your wallet information and as a result, your data could be out of sync or incorrect. Click 
   <a
-    class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+    class="Link__AnchorStyled-sc-ec014t-0 eeKUfa group ring-focus"
     data-ring-focus-margin="-m-1"
     data-testid="SyncErrorMessage__retry"
     href="/"
   >
     <span
-      class="Link__Content-sc-ec014t-1 hUiuRR"
+      class="Link__Content-sc-ec014t-1 fPOlTq"
     >
       here
     </span>
@@ -94,13 +94,13 @@ exports[`SyncErrorMessage should render one failed network 1`] = `
   </span>
    while trying to retrieve your wallet information and as a result, your data could be out of sync or incorrect. Click 
   <a
-    class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+    class="Link__AnchorStyled-sc-ec014t-0 eeKUfa group ring-focus"
     data-ring-focus-margin="-m-1"
     data-testid="SyncErrorMessage__retry"
     href="/"
   >
     <span
-      class="Link__Content-sc-ec014t-1 hUiuRR"
+      class="Link__Content-sc-ec014t-1 fPOlTq"
     >
       here
     </span>
@@ -130,13 +130,13 @@ exports[`SyncErrorMessage should render two failed networks 1`] = `
   </span>
    while trying to retrieve your wallet information and as a result, your data could be out of sync or incorrect. Click 
   <a
-    class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+    class="Link__AnchorStyled-sc-ec014t-0 eeKUfa group ring-focus"
     data-ring-focus-margin="-m-1"
     data-testid="SyncErrorMessage__retry"
     href="/"
   >
     <span
-      class="Link__Content-sc-ec014t-1 hUiuRR"
+      class="Link__Content-sc-ec014t-1 fPOlTq"
     >
       here
     </span>

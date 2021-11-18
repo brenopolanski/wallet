@@ -1,5 +1,5 @@
-import { Contracts } from "@payvo/profiles";
 import { Networks } from "@payvo/sdk";
+import { Contracts } from "@payvo/sdk-profiles";
 import { fireEvent, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { translations } from "domains/transaction/i18n";
@@ -115,7 +115,7 @@ describe("InputFee", () => {
 	});
 
 	it("should switch to simple and advanced type when value is number", () => {
-		defaultProps.value = (0.123 as unknown) as string;
+		defaultProps.value = 0.123 as unknown as string;
 
 		render(<Wrapper />);
 

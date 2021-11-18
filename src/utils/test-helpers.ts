@@ -1,5 +1,5 @@
-import { Base64, PBKDF2 } from "@payvo/cryptography";
-import { Environment, StorageData } from "@payvo/profiles";
+import { Base64, PBKDF2 } from "@payvo/sdk-cryptography";
+import { Environment, StorageData } from "@payvo/sdk-profiles";
 import fixtureData from "tests/fixtures/env/storage.json";
 import TestingPasswords from "tests/fixtures/env/testing-passwords.json";
 

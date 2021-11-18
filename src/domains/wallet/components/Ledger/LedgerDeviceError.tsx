@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { Alert } from "app/components/Alert";
 import { Header } from "app/components/Header";
 import { Image } from "app/components/Image";

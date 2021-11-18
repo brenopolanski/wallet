@@ -11,7 +11,7 @@ exports[`SelectFile should render with dwe file format 1`] = `
       data-testid="SelectFile__drop-zone"
     >
       <div
-        class="sc-bdnxRM cTrAIK"
+        class="sc-bdvvtL kCgesw"
         height="40"
         width="40"
       >
@@ -59,7 +59,7 @@ exports[`SelectFile should render with json file format 1`] = `
       data-testid="SelectFile__drop-zone"
     >
       <div
-        class="sc-bdnxRM cTrAIK"
+        class="sc-bdvvtL kCgesw"
         height="40"
         width="40"
       >

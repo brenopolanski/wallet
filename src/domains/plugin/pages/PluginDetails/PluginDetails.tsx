@@ -42,14 +42,14 @@ export const PluginDetails = () => {
 	const isInstalled = !!pluginCtrl;
 	const hasLaunch = !!pluginCtrl?.hooks().hasCommand("service:launch.render");
 
-	const latestConfiguration = useMemo(() => pluginConfigurations.find((item) => item.id() === pluginId), [
-		pluginConfigurations,
-		pluginId,
-	]);
-	const packageConfiguration = useMemo(() => allPlugins.find((item) => item.id() === pluginId), [
-		allPlugins,
-		pluginId,
-	]);
+	const latestConfiguration = useMemo(
+		() => pluginConfigurations.find((item) => item.id() === pluginId),
+		[pluginConfigurations, pluginId],
+	);
+	const packageConfiguration = useMemo(
+		() => allPlugins.find((item) => item.id() === pluginId),
+		[allPlugins, pluginId],
+	);
 
 	const plugin = useMemo(() => {
 		// Installed plugins should display the configuration
@@ -60,11 +60,10 @@ export const PluginDetails = () => {
 		return latestConfiguration || packageConfiguration;
 	}, [isInstalled, packageConfiguration, latestConfiguration]);
 
-	const pluginData = useMemo(() => (plugin && mapConfigToPluginData(activeProfile, plugin)) || ({} as any), [
-		activeProfile,
-		mapConfigToPluginData,
-		plugin,
-	]);
+	const pluginData = useMemo(
+		() => (plugin && mapConfigToPluginData(activeProfile, plugin)) || ({} as any),
+		[activeProfile, mapConfigToPluginData, plugin],
+	);
 
 	const handleReportPlugin = () => {
 		reportPlugin(plugin!);

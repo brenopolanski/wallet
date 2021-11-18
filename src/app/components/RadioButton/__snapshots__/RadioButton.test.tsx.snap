@@ -3,7 +3,7 @@
 exports[`RadioButton should render 1`] = `
 <div>
   <input
-    class="RadioButton-sc-jdab1i-0 grSZPI"
+    class="RadioButton-sc-jdab1i-0 iKItjH"
     color="success"
     type="radio"
   />
@@ -13,7 +13,7 @@ exports[`RadioButton should render 1`] = `
 exports[`RadioButton should render a danger color 1`] = `
 <div>
   <input
-    class="RadioButton-sc-jdab1i-0 hFglG"
+    class="RadioButton-sc-jdab1i-0 iojUrl"
     color="danger"
     type="radio"
   />
@@ -23,7 +23,7 @@ exports[`RadioButton should render a danger color 1`] = `
 exports[`RadioButton should render a hint color 1`] = `
 <div>
   <input
-    class="RadioButton-sc-jdab1i-0 gyBSjj"
+    class="RadioButton-sc-jdab1i-0 coOXxc"
     color="hint"
     type="radio"
   />
@@ -33,7 +33,7 @@ exports[`RadioButton should render a hint color 1`] = `
 exports[`RadioButton should render a info color 1`] = `
 <div>
   <input
-    class="RadioButton-sc-jdab1i-0 flmOZT"
+    class="RadioButton-sc-jdab1i-0 jKdioY"
     color="info"
     type="radio"
   />
@@ -43,7 +43,7 @@ exports[`RadioButton should render a info color 1`] = `
 exports[`RadioButton should render a success color 1`] = `
 <div>
   <input
-    class="RadioButton-sc-jdab1i-0 grSZPI"
+    class="RadioButton-sc-jdab1i-0 iKItjH"
     color="success"
     type="radio"
   />
@@ -53,7 +53,7 @@ exports[`RadioButton should render a success color 1`] = `
 exports[`RadioButton should render a warning color 1`] = `
 <div>
   <input
-    class="RadioButton-sc-jdab1i-0 bjYldd"
+    class="RadioButton-sc-jdab1i-0 fyLuLi"
     color="warning"
     type="radio"
   />

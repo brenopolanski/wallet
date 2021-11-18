@@ -1,5 +1,5 @@
-import { Contracts } from "@payvo/profiles";
 import { UnlockableBalance as SDKUnlockableBalance } from "@payvo/sdk/distribution/services"; // @TODO: refactor export path in sdk
+import { Contracts } from "@payvo/sdk-profiles";
 
 const POLLING_INTERVAL = 1000 * 60; // 1 min
 
@@ -29,9 +29,7 @@ interface UnlockTokensFormState {
 	secret: string | undefined;
 }
 
-type UseUnlockableBalancesHook = (
-	wallet: Contracts.IReadWriteWallet,
-) => {
+type UseUnlockableBalancesHook = (wallet: Contracts.IReadWriteWallet) => {
 	items: UnlockableBalance[];
 	loading: boolean;
 	isFirstLoad: boolean;

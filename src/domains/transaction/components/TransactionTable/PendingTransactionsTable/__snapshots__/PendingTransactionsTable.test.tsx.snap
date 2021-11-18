@@ -12,7 +12,7 @@ exports[`Signed Transaction Table should render pending transfers when isCompact
       Pending Transactions
     </h2>
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 fDAVsO -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jHfvAR -mt-3"
       role="table"
     >
       <table
@@ -56,7 +56,7 @@ exports[`Signed Transaction Table should render pending transfers when isCompact
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                 >
                   <div
-                    class="sc-bdnxRM AkeAK transition-transform"
+                    class="sc-bdvvtL Cfvxc transition-transform"
                     height="10"
                     role="img"
                     width="10"
@@ -114,7 +114,7 @@ exports[`Signed Transaction Table should render pending transfers when isCompact
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                 >
                   <div
-                    class="sc-bdnxRM AkeAK transition-transform transform rotate-180"
+                    class="sc-bdvvtL Cfvxc transition-transform transform rotate-180"
                     height="10"
                     role="img"
                     width="10"
@@ -146,18 +146,18 @@ exports[`Signed Transaction Table should render pending transfers when isCompact
           role="rowgroup"
         >
           <tr
-            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 ijbCHm group"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY"
               >
                 <span
                   class="text-theme-secondary-300 dark:text-theme-secondary-800"
                 >
                   <div
-                    class="sc-bdnxRM AFVmm"
+                    class="sc-bdvvtL fCrhkg"
                     height="16"
                     width="16"
                   >
@@ -170,7 +170,7 @@ exports[`Signed Transaction Table should render pending transfers when isCompact
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh text-theme-secondary-text"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq text-theme-secondary-text"
               >
                 <span
                   data-testid="TransactionRow__timestamp"
@@ -181,17 +181,17 @@ exports[`Signed Transaction Table should render pending transfers when isCompact
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq space-x-4"
               >
                 <div
                   class="flex items-center -space-x-1"
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
-                      class="sc-bdnxRM NjstW"
+                      class="sc-bdvvtL qGXhc"
                       height="20"
                       width="20"
                     >
@@ -201,7 +201,7 @@ exports[`Signed Transaction Table should render pending transfers when isCompact
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -231,13 +231,13 @@ exports[`Signed Transaction Table should render pending transfers when isCompact
               class="w-16"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center truncate"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq justify-center truncate"
               >
                 <span
                   class="p-1 text-theme-warning-300"
                 >
                   <div
-                    class="sc-bdnxRM NjstW"
+                    class="sc-bdvvtL qGXhc"
                     height="20"
                     width="20"
                   >
@@ -250,10 +250,10 @@ exports[`Signed Transaction Table should render pending transfers when isCompact
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 bdvTBm"
+                  class="Label-sc-4akkzw-0 hhvRsd"
                   color="success"
                 >
                   <div
@@ -273,7 +273,7 @@ exports[`Signed Transaction Table should render pending transfers when isCompact
               class="text-theme-secondary-500"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end"
               >
                 Waiting...
               </div>
@@ -298,7 +298,7 @@ exports[`Signed Transaction Table should render pending transfers when isCompact
       Pending Transactions
     </h2>
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 fDAVsO -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jHfvAR -mt-3"
       role="table"
     >
       <table
@@ -342,7 +342,7 @@ exports[`Signed Transaction Table should render pending transfers when isCompact
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                 >
                   <div
-                    class="sc-bdnxRM AkeAK transition-transform"
+                    class="sc-bdvvtL Cfvxc transition-transform"
                     height="10"
                     role="img"
                     width="10"
@@ -400,7 +400,7 @@ exports[`Signed Transaction Table should render pending transfers when isCompact
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                 >
                   <div
-                    class="sc-bdnxRM AkeAK transition-transform transform rotate-180"
+                    class="sc-bdvvtL Cfvxc transition-transform transform rotate-180"
                     height="10"
                     role="img"
                     width="10"
@@ -432,18 +432,18 @@ exports[`Signed Transaction Table should render pending transfers when isCompact
           role="rowgroup"
         >
           <tr
-            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 ijbCHm group"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx"
               >
                 <span
                   class="text-theme-secondary-300 dark:text-theme-secondary-800"
                 >
                   <div
-                    class="sc-bdnxRM AFVmm"
+                    class="sc-bdvvtL fCrhkg"
                     height="16"
                     width="16"
                   >
@@ -456,7 +456,7 @@ exports[`Signed Transaction Table should render pending transfers when isCompact
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI text-theme-secondary-text"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD text-theme-secondary-text"
               >
                 <span
                   data-testid="TransactionRow__timestamp"
@@ -467,7 +467,7 @@ exports[`Signed Transaction Table should render pending transfers when isCompact
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD space-x-4"
               >
                 <div
                   class="flex items-center space-x-2"
@@ -477,7 +477,7 @@ exports[`Signed Transaction Table should render pending transfers when isCompact
                     class="w-5 h-5 flex items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
                   >
                     <div
-                      class="sc-bdnxRM NjstW"
+                      class="sc-bdvvtL qGXhc"
                       height="20"
                       width="20"
                     >
@@ -487,7 +487,7 @@ exports[`Signed Transaction Table should render pending transfers when isCompact
                     </div>
                   </span>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 bzZufz ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -517,13 +517,13 @@ exports[`Signed Transaction Table should render pending transfers when isCompact
               class="w-16"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center truncate"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD justify-center truncate"
               >
                 <span
                   class="p-1 text-theme-warning-300"
                 >
                   <div
-                    class="sc-bdnxRM NjstW"
+                    class="sc-bdvvtL qGXhc"
                     height="20"
                     width="20"
                   >
@@ -536,10 +536,10 @@ exports[`Signed Transaction Table should render pending transfers when isCompact
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 OOaVy"
+                  class="Label-sc-4akkzw-0 bxfWpB"
                   color="success"
                 >
                   <div
@@ -559,7 +559,7 @@ exports[`Signed Transaction Table should render pending transfers when isCompact
               class="text-theme-secondary-500"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end"
               >
                 Waiting...
               </div>
@@ -584,7 +584,7 @@ exports[`Signed Transaction Table should render signed transactions and handle e
       Pending Transactions
     </h2>
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 fDAVsO -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jHfvAR -mt-3"
       role="table"
     >
       <table
@@ -628,7 +628,7 @@ exports[`Signed Transaction Table should render signed transactions and handle e
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                 >
                   <div
-                    class="sc-bdnxRM AkeAK transition-transform"
+                    class="sc-bdvvtL Cfvxc transition-transform"
                     height="10"
                     role="img"
                     width="10"
@@ -686,7 +686,7 @@ exports[`Signed Transaction Table should render signed transactions and handle e
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                 >
                   <div
-                    class="sc-bdnxRM AkeAK transition-transform transform rotate-180"
+                    class="sc-bdvvtL Cfvxc transition-transform transform rotate-180"
                     height="10"
                     role="img"
                     width="10"
@@ -718,18 +718,18 @@ exports[`Signed Transaction Table should render signed transactions and handle e
           role="rowgroup"
         >
           <tr
-            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 ijbCHm group"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY"
               >
                 <span
                   class="text-theme-secondary-300 dark:text-theme-secondary-800"
                 >
                   <div
-                    class="sc-bdnxRM AFVmm"
+                    class="sc-bdvvtL fCrhkg"
                     height="16"
                     width="16"
                   >
@@ -742,7 +742,7 @@ exports[`Signed Transaction Table should render signed transactions and handle e
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh text-theme-secondary-text"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq text-theme-secondary-text"
               >
                 <span
                   data-testid="TransactionRow__timestamp"
@@ -753,17 +753,17 @@ exports[`Signed Transaction Table should render signed transactions and handle e
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq space-x-4"
               >
                 <div
                   class="flex items-center -space-x-1"
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background"
+                    class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background"
                   >
                     <div
-                      class="sc-bdnxRM NjstW"
+                      class="sc-bdvvtL qGXhc"
                       height="20"
                       width="20"
                     >
@@ -773,11 +773,11 @@ exports[`Signed Transaction Table should render signed transactions and handle e
                     </div>
                   </div>
                   <div
-                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                    class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
                     data-testid="TransactionRowRecipientIcon"
                   >
                     <div
-                      class="sc-bdnxRM NjstW"
+                      class="sc-bdvvtL qGXhc"
                       height="20"
                       width="20"
                     >
@@ -799,13 +799,13 @@ exports[`Signed Transaction Table should render signed transactions and handle e
               class="w-16"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center truncate"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq justify-center truncate"
               >
                 <span
                   class="p-1 text-theme-secondary-700"
                 >
                   <div
-                    class="sc-bdnxRM NjstW"
+                    class="sc-bdvvtL qGXhc"
                     height="20"
                     width="20"
                   >
@@ -818,10 +818,10 @@ exports[`Signed Transaction Table should render signed transactions and handle e
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 dCEjSJ"
+                  class="Label-sc-4akkzw-0 iXzgUi"
                   color="danger"
                 >
                   <div
@@ -839,10 +839,10 @@ exports[`Signed Transaction Table should render signed transactions and handle e
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end space-x-2"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end space-x-2"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 bAsnxQ"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 fxPCrX"
                   data-testid="TableRemoveButton"
                   type="button"
                 >
@@ -850,7 +850,7 @@ exports[`Signed Transaction Table should render signed transactions and handle e
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="sc-bdnxRM NjstW"
+                      class="sc-bdvvtL qGXhc"
                       height="20"
                       width="20"
                     >
@@ -882,7 +882,7 @@ exports[`Signed Transaction Table should show as awaiting confirmations 1`] = `
       Pending Transactions
     </h2>
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 fDAVsO -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jHfvAR -mt-3"
       role="table"
     >
       <table
@@ -926,7 +926,7 @@ exports[`Signed Transaction Table should show as awaiting confirmations 1`] = `
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                 >
                   <div
-                    class="sc-bdnxRM AkeAK transition-transform"
+                    class="sc-bdvvtL Cfvxc transition-transform"
                     height="10"
                     role="img"
                     width="10"
@@ -984,7 +984,7 @@ exports[`Signed Transaction Table should show as awaiting confirmations 1`] = `
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                 >
                   <div
-                    class="sc-bdnxRM AkeAK transition-transform transform rotate-180"
+                    class="sc-bdvvtL Cfvxc transition-transform transform rotate-180"
                     height="10"
                     role="img"
                     width="10"
@@ -1016,18 +1016,18 @@ exports[`Signed Transaction Table should show as awaiting confirmations 1`] = `
           role="rowgroup"
         >
           <tr
-            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 ijbCHm group"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY"
               >
                 <span
                   class="text-theme-secondary-300 dark:text-theme-secondary-800"
                 >
                   <div
-                    class="sc-bdnxRM AFVmm"
+                    class="sc-bdvvtL fCrhkg"
                     height="16"
                     width="16"
                   >
@@ -1040,7 +1040,7 @@ exports[`Signed Transaction Table should show as awaiting confirmations 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh text-theme-secondary-text"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq text-theme-secondary-text"
               >
                 <span
                   data-testid="TransactionRow__timestamp"
@@ -1051,17 +1051,17 @@ exports[`Signed Transaction Table should show as awaiting confirmations 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq space-x-4"
               >
                 <div
                   class="flex items-center -space-x-1"
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
-                      class="sc-bdnxRM NjstW"
+                      class="sc-bdvvtL qGXhc"
                       height="20"
                       width="20"
                     >
@@ -1071,7 +1071,7 @@ exports[`Signed Transaction Table should show as awaiting confirmations 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -1101,13 +1101,13 @@ exports[`Signed Transaction Table should show as awaiting confirmations 1`] = `
               class="w-16"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center truncate"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq justify-center truncate"
               >
                 <span
                   class="p-1 text-theme-warning-300"
                 >
                   <div
-                    class="sc-bdnxRM NjstW"
+                    class="sc-bdvvtL qGXhc"
                     height="20"
                     width="20"
                   >
@@ -1120,10 +1120,10 @@ exports[`Signed Transaction Table should show as awaiting confirmations 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 bdvTBm"
+                  class="Label-sc-4akkzw-0 hhvRsd"
                   color="success"
                 >
                   <div
@@ -1143,7 +1143,7 @@ exports[`Signed Transaction Table should show as awaiting confirmations 1`] = `
               class="text-theme-secondary-500"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end"
               >
                 Waiting...
               </div>
@@ -1168,7 +1168,7 @@ exports[`Signed Transaction Table should show as awaiting other wallets signatur
       Pending Transactions
     </h2>
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 fDAVsO -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jHfvAR -mt-3"
       role="table"
     >
       <table
@@ -1212,7 +1212,7 @@ exports[`Signed Transaction Table should show as awaiting other wallets signatur
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                 >
                   <div
-                    class="sc-bdnxRM AkeAK transition-transform"
+                    class="sc-bdvvtL Cfvxc transition-transform"
                     height="10"
                     role="img"
                     width="10"
@@ -1270,7 +1270,7 @@ exports[`Signed Transaction Table should show as awaiting other wallets signatur
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                 >
                   <div
-                    class="sc-bdnxRM AkeAK transition-transform transform rotate-180"
+                    class="sc-bdvvtL Cfvxc transition-transform transform rotate-180"
                     height="10"
                     role="img"
                     width="10"
@@ -1302,18 +1302,18 @@ exports[`Signed Transaction Table should show as awaiting other wallets signatur
           role="rowgroup"
         >
           <tr
-            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 ijbCHm group"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY"
               >
                 <span
                   class="text-theme-secondary-300 dark:text-theme-secondary-800"
                 >
                   <div
-                    class="sc-bdnxRM AFVmm"
+                    class="sc-bdvvtL fCrhkg"
                     height="16"
                     width="16"
                   >
@@ -1326,7 +1326,7 @@ exports[`Signed Transaction Table should show as awaiting other wallets signatur
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh text-theme-secondary-text"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq text-theme-secondary-text"
               >
                 <span
                   data-testid="TransactionRow__timestamp"
@@ -1337,17 +1337,17 @@ exports[`Signed Transaction Table should show as awaiting other wallets signatur
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq space-x-4"
               >
                 <div
                   class="flex items-center -space-x-1"
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background"
+                    class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background"
                   >
                     <div
-                      class="sc-bdnxRM NjstW"
+                      class="sc-bdvvtL qGXhc"
                       height="20"
                       width="20"
                     >
@@ -1357,11 +1357,11 @@ exports[`Signed Transaction Table should show as awaiting other wallets signatur
                     </div>
                   </div>
                   <div
-                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                    class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
                     data-testid="TransactionRowRecipientIcon"
                   >
                     <div
-                      class="sc-bdnxRM NjstW"
+                      class="sc-bdvvtL qGXhc"
                       height="20"
                       width="20"
                     >
@@ -1383,13 +1383,13 @@ exports[`Signed Transaction Table should show as awaiting other wallets signatur
               class="w-16"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center truncate"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq justify-center truncate"
               >
                 <span
                   class="p-1 text-theme-warning-300"
                 >
                   <div
-                    class="sc-bdnxRM NjstW"
+                    class="sc-bdvvtL qGXhc"
                     height="20"
                     width="20"
                   >
@@ -1402,10 +1402,10 @@ exports[`Signed Transaction Table should show as awaiting other wallets signatur
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 dCEjSJ"
+                  class="Label-sc-4akkzw-0 iXzgUi"
                   color="danger"
                 >
                   <div
@@ -1423,10 +1423,10 @@ exports[`Signed Transaction Table should show as awaiting other wallets signatur
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end space-x-2"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end space-x-2"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 bAsnxQ"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 fxPCrX"
                   data-testid="TableRemoveButton"
                   type="button"
                 >
@@ -1434,7 +1434,7 @@ exports[`Signed Transaction Table should show as awaiting other wallets signatur
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="sc-bdnxRM NjstW"
+                      class="sc-bdvvtL qGXhc"
                       height="20"
                       width="20"
                     >
@@ -1466,7 +1466,7 @@ exports[`Signed Transaction Table should show as awaiting the wallet signature 1
       Pending Transactions
     </h2>
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 fDAVsO -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jHfvAR -mt-3"
       role="table"
     >
       <table
@@ -1510,7 +1510,7 @@ exports[`Signed Transaction Table should show as awaiting the wallet signature 1
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                 >
                   <div
-                    class="sc-bdnxRM AkeAK transition-transform"
+                    class="sc-bdvvtL Cfvxc transition-transform"
                     height="10"
                     role="img"
                     width="10"
@@ -1568,7 +1568,7 @@ exports[`Signed Transaction Table should show as awaiting the wallet signature 1
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                 >
                   <div
-                    class="sc-bdnxRM AkeAK transition-transform transform rotate-180"
+                    class="sc-bdvvtL Cfvxc transition-transform transform rotate-180"
                     height="10"
                     role="img"
                     width="10"
@@ -1600,18 +1600,18 @@ exports[`Signed Transaction Table should show as awaiting the wallet signature 1
           role="rowgroup"
         >
           <tr
-            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 ijbCHm group"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY"
               >
                 <span
                   class="text-theme-secondary-300 dark:text-theme-secondary-800"
                 >
                   <div
-                    class="sc-bdnxRM AFVmm"
+                    class="sc-bdvvtL fCrhkg"
                     height="16"
                     width="16"
                   >
@@ -1624,7 +1624,7 @@ exports[`Signed Transaction Table should show as awaiting the wallet signature 1
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh text-theme-secondary-text"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq text-theme-secondary-text"
               >
                 <span
                   data-testid="TransactionRow__timestamp"
@@ -1635,17 +1635,17 @@ exports[`Signed Transaction Table should show as awaiting the wallet signature 1
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq space-x-4"
               >
                 <div
                   class="flex items-center -space-x-1"
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background"
+                    class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background"
                   >
                     <div
-                      class="sc-bdnxRM NjstW"
+                      class="sc-bdvvtL qGXhc"
                       height="20"
                       width="20"
                     >
@@ -1655,11 +1655,11 @@ exports[`Signed Transaction Table should show as awaiting the wallet signature 1
                     </div>
                   </div>
                   <div
-                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                    class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
                     data-testid="TransactionRowRecipientIcon"
                   >
                     <div
-                      class="sc-bdnxRM NjstW"
+                      class="sc-bdvvtL qGXhc"
                       height="20"
                       width="20"
                     >
@@ -1681,13 +1681,13 @@ exports[`Signed Transaction Table should show as awaiting the wallet signature 1
               class="w-16"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center truncate"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq justify-center truncate"
               >
                 <span
                   class="p-1 text-theme-secondary-700"
                 >
                   <div
-                    class="sc-bdnxRM NjstW"
+                    class="sc-bdvvtL qGXhc"
                     height="20"
                     width="20"
                   >
@@ -1700,10 +1700,10 @@ exports[`Signed Transaction Table should show as awaiting the wallet signature 1
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 dCEjSJ"
+                  class="Label-sc-4akkzw-0 iXzgUi"
                   color="danger"
                 >
                   <div
@@ -1721,10 +1721,10 @@ exports[`Signed Transaction Table should show as awaiting the wallet signature 1
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end space-x-2"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end space-x-2"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                   data-testid="TransactionRow__sign"
                   type="button"
                 >
@@ -1732,7 +1732,7 @@ exports[`Signed Transaction Table should show as awaiting the wallet signature 1
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="sc-bdnxRM AFVmm"
+                      class="sc-bdvvtL fCrhkg"
                       height="16"
                       width="16"
                     >
@@ -1746,7 +1746,7 @@ exports[`Signed Transaction Table should show as awaiting the wallet signature 1
                   </div>
                 </button>
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 bAsnxQ"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 fxPCrX"
                   data-testid="TableRemoveButton"
                   type="button"
                 >
@@ -1754,7 +1754,7 @@ exports[`Signed Transaction Table should show as awaiting the wallet signature 1
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="sc-bdnxRM NjstW"
+                      class="sc-bdvvtL qGXhc"
                       height="20"
                       width="20"
                     >
@@ -1786,7 +1786,7 @@ exports[`Signed Transaction Table should show as final signature 1`] = `
       Pending Transactions
     </h2>
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 fDAVsO -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jHfvAR -mt-3"
       role="table"
     >
       <table
@@ -1830,7 +1830,7 @@ exports[`Signed Transaction Table should show as final signature 1`] = `
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                 >
                   <div
-                    class="sc-bdnxRM AkeAK transition-transform"
+                    class="sc-bdvvtL Cfvxc transition-transform"
                     height="10"
                     role="img"
                     width="10"
@@ -1888,7 +1888,7 @@ exports[`Signed Transaction Table should show as final signature 1`] = `
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                 >
                   <div
-                    class="sc-bdnxRM AkeAK transition-transform transform rotate-180"
+                    class="sc-bdvvtL Cfvxc transition-transform transform rotate-180"
                     height="10"
                     role="img"
                     width="10"
@@ -1920,18 +1920,18 @@ exports[`Signed Transaction Table should show as final signature 1`] = `
           role="rowgroup"
         >
           <tr
-            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 ijbCHm group"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY"
               >
                 <span
                   class="text-theme-secondary-300 dark:text-theme-secondary-800"
                 >
                   <div
-                    class="sc-bdnxRM AFVmm"
+                    class="sc-bdvvtL fCrhkg"
                     height="16"
                     width="16"
                   >
@@ -1944,7 +1944,7 @@ exports[`Signed Transaction Table should show as final signature 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh text-theme-secondary-text"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq text-theme-secondary-text"
               >
                 <span
                   data-testid="TransactionRow__timestamp"
@@ -1955,17 +1955,17 @@ exports[`Signed Transaction Table should show as final signature 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq space-x-4"
               >
                 <div
                   class="flex items-center -space-x-1"
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background"
+                    class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background"
                   >
                     <div
-                      class="sc-bdnxRM NjstW"
+                      class="sc-bdvvtL qGXhc"
                       height="20"
                       width="20"
                     >
@@ -1975,11 +1975,11 @@ exports[`Signed Transaction Table should show as final signature 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                    class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
                     data-testid="TransactionRowRecipientIcon"
                   >
                     <div
-                      class="sc-bdnxRM NjstW"
+                      class="sc-bdvvtL qGXhc"
                       height="20"
                       width="20"
                     >
@@ -2001,13 +2001,13 @@ exports[`Signed Transaction Table should show as final signature 1`] = `
               class="w-16"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center truncate"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq justify-center truncate"
               >
                 <span
                   class="p-1 text-theme-success-500"
                 >
                   <div
-                    class="sc-bdnxRM NjstW"
+                    class="sc-bdvvtL qGXhc"
                     height="20"
                     width="20"
                   >
@@ -2020,10 +2020,10 @@ exports[`Signed Transaction Table should show as final signature 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 dCEjSJ"
+                  class="Label-sc-4akkzw-0 iXzgUi"
                   color="danger"
                 >
                   <div
@@ -2041,10 +2041,10 @@ exports[`Signed Transaction Table should show as final signature 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end space-x-2"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end space-x-2"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
                   data-testid="TransactionRow__sign"
                   type="button"
                 >
@@ -2055,7 +2055,7 @@ exports[`Signed Transaction Table should show as final signature 1`] = `
                       Send
                     </span>
                     <div
-                      class="sc-bdnxRM AFVmm"
+                      class="sc-bdvvtL fCrhkg"
                       height="16"
                       width="16"
                     >
@@ -2066,7 +2066,7 @@ exports[`Signed Transaction Table should show as final signature 1`] = `
                   </div>
                 </button>
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 bAsnxQ"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 fxPCrX"
                   data-testid="TableRemoveButton"
                   type="button"
                 >
@@ -2074,7 +2074,7 @@ exports[`Signed Transaction Table should show as final signature 1`] = `
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="sc-bdnxRM NjstW"
+                      class="sc-bdvvtL qGXhc"
                       height="20"
                       width="20"
                     >
@@ -2106,7 +2106,7 @@ exports[`Signed Transaction Table should show as multiSignature ready 1`] = `
       Pending Transactions
     </h2>
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 fDAVsO -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jHfvAR -mt-3"
       role="table"
     >
       <table
@@ -2150,7 +2150,7 @@ exports[`Signed Transaction Table should show as multiSignature ready 1`] = `
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                 >
                   <div
-                    class="sc-bdnxRM AkeAK transition-transform"
+                    class="sc-bdvvtL Cfvxc transition-transform"
                     height="10"
                     role="img"
                     width="10"
@@ -2208,7 +2208,7 @@ exports[`Signed Transaction Table should show as multiSignature ready 1`] = `
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                 >
                   <div
-                    class="sc-bdnxRM AkeAK transition-transform transform rotate-180"
+                    class="sc-bdvvtL Cfvxc transition-transform transform rotate-180"
                     height="10"
                     role="img"
                     width="10"
@@ -2240,18 +2240,18 @@ exports[`Signed Transaction Table should show as multiSignature ready 1`] = `
           role="rowgroup"
         >
           <tr
-            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 ijbCHm group"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY"
               >
                 <span
                   class="text-theme-secondary-300 dark:text-theme-secondary-800"
                 >
                   <div
-                    class="sc-bdnxRM AFVmm"
+                    class="sc-bdvvtL fCrhkg"
                     height="16"
                     width="16"
                   >
@@ -2264,7 +2264,7 @@ exports[`Signed Transaction Table should show as multiSignature ready 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh text-theme-secondary-text"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq text-theme-secondary-text"
               >
                 <span
                   data-testid="TransactionRow__timestamp"
@@ -2275,17 +2275,17 @@ exports[`Signed Transaction Table should show as multiSignature ready 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq space-x-4"
               >
                 <div
                   class="flex items-center -space-x-1"
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background"
+                    class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background"
                   >
                     <div
-                      class="sc-bdnxRM NjstW"
+                      class="sc-bdvvtL qGXhc"
                       height="20"
                       width="20"
                     >
@@ -2295,11 +2295,11 @@ exports[`Signed Transaction Table should show as multiSignature ready 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                    class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
                     data-testid="TransactionRowRecipientIcon"
                   >
                     <div
-                      class="sc-bdnxRM NjstW"
+                      class="sc-bdvvtL qGXhc"
                       height="20"
                       width="20"
                     >
@@ -2321,13 +2321,13 @@ exports[`Signed Transaction Table should show as multiSignature ready 1`] = `
               class="w-16"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center truncate"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq justify-center truncate"
               >
                 <span
                   class="p-1 text-theme-success-500"
                 >
                   <div
-                    class="sc-bdnxRM NjstW"
+                    class="sc-bdvvtL qGXhc"
                     height="20"
                     width="20"
                   >
@@ -2340,10 +2340,10 @@ exports[`Signed Transaction Table should show as multiSignature ready 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 dCEjSJ"
+                  class="Label-sc-4akkzw-0 iXzgUi"
                   color="danger"
                 >
                   <div
@@ -2361,10 +2361,10 @@ exports[`Signed Transaction Table should show as multiSignature ready 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end space-x-2"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end space-x-2"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
                   data-testid="TransactionRow__sign"
                   type="button"
                 >
@@ -2375,7 +2375,7 @@ exports[`Signed Transaction Table should show as multiSignature ready 1`] = `
                       Send
                     </span>
                     <div
-                      class="sc-bdnxRM AFVmm"
+                      class="sc-bdvvtL fCrhkg"
                       height="16"
                       width="16"
                     >
@@ -2386,7 +2386,7 @@ exports[`Signed Transaction Table should show as multiSignature ready 1`] = `
                   </div>
                 </button>
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 bAsnxQ"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 fxPCrX"
                   data-testid="TableRemoveButton"
                   type="button"
                 >
@@ -2394,7 +2394,7 @@ exports[`Signed Transaction Table should show as multiSignature ready 1`] = `
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="sc-bdnxRM NjstW"
+                      class="sc-bdvvtL qGXhc"
                       height="20"
                       width="20"
                     >
@@ -2426,7 +2426,7 @@ exports[`Signed Transaction Table should show as unvote 1`] = `
       Pending Transactions
     </h2>
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 fDAVsO -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jHfvAR -mt-3"
       role="table"
     >
       <table
@@ -2470,7 +2470,7 @@ exports[`Signed Transaction Table should show as unvote 1`] = `
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                 >
                   <div
-                    class="sc-bdnxRM AkeAK transition-transform"
+                    class="sc-bdvvtL Cfvxc transition-transform"
                     height="10"
                     role="img"
                     width="10"
@@ -2528,7 +2528,7 @@ exports[`Signed Transaction Table should show as unvote 1`] = `
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                 >
                   <div
-                    class="sc-bdnxRM AkeAK transition-transform transform rotate-180"
+                    class="sc-bdvvtL Cfvxc transition-transform transform rotate-180"
                     height="10"
                     role="img"
                     width="10"
@@ -2560,18 +2560,18 @@ exports[`Signed Transaction Table should show as unvote 1`] = `
           role="rowgroup"
         >
           <tr
-            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 ijbCHm group"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY"
               >
                 <span
                   class="text-theme-secondary-300 dark:text-theme-secondary-800"
                 >
                   <div
-                    class="sc-bdnxRM AFVmm"
+                    class="sc-bdvvtL fCrhkg"
                     height="16"
                     width="16"
                   >
@@ -2584,7 +2584,7 @@ exports[`Signed Transaction Table should show as unvote 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh text-theme-secondary-text"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq text-theme-secondary-text"
               >
                 <span
                   data-testid="TransactionRow__timestamp"
@@ -2595,17 +2595,17 @@ exports[`Signed Transaction Table should show as unvote 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq space-x-4"
               >
                 <div
                   class="flex items-center -space-x-1"
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
-                      class="sc-bdnxRM NjstW"
+                      class="sc-bdvvtL qGXhc"
                       height="20"
                       width="20"
                     >
@@ -2615,11 +2615,11 @@ exports[`Signed Transaction Table should show as unvote 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                    class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
                     data-testid="TransactionRowRecipientIcon"
                   >
                     <div
-                      class="sc-bdnxRM NjstW"
+                      class="sc-bdvvtL qGXhc"
                       height="20"
                       width="20"
                     >
@@ -2641,13 +2641,13 @@ exports[`Signed Transaction Table should show as unvote 1`] = `
               class="w-16"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center truncate"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq justify-center truncate"
               >
                 <span
                   class="p-1 text-theme-warning-300"
                 >
                   <div
-                    class="sc-bdnxRM NjstW"
+                    class="sc-bdvvtL qGXhc"
                     height="20"
                     width="20"
                   >
@@ -2660,10 +2660,10 @@ exports[`Signed Transaction Table should show as unvote 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 bdvTBm"
+                  class="Label-sc-4akkzw-0 hhvRsd"
                   color="success"
                 >
                   <div
@@ -2683,7 +2683,7 @@ exports[`Signed Transaction Table should show as unvote 1`] = `
               class="text-theme-secondary-500"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end"
               >
                 Waiting...
               </div>
@@ -2708,7 +2708,7 @@ exports[`Signed Transaction Table should show as vote 1`] = `
       Pending Transactions
     </h2>
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 fDAVsO -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jHfvAR -mt-3"
       role="table"
     >
       <table
@@ -2752,7 +2752,7 @@ exports[`Signed Transaction Table should show as vote 1`] = `
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                 >
                   <div
-                    class="sc-bdnxRM AkeAK transition-transform"
+                    class="sc-bdvvtL Cfvxc transition-transform"
                     height="10"
                     role="img"
                     width="10"
@@ -2810,7 +2810,7 @@ exports[`Signed Transaction Table should show as vote 1`] = `
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                 >
                   <div
-                    class="sc-bdnxRM AkeAK transition-transform transform rotate-180"
+                    class="sc-bdvvtL Cfvxc transition-transform transform rotate-180"
                     height="10"
                     role="img"
                     width="10"
@@ -2842,18 +2842,18 @@ exports[`Signed Transaction Table should show as vote 1`] = `
           role="rowgroup"
         >
           <tr
-            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 ijbCHm group"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY"
               >
                 <span
                   class="text-theme-secondary-300 dark:text-theme-secondary-800"
                 >
                   <div
-                    class="sc-bdnxRM AFVmm"
+                    class="sc-bdvvtL fCrhkg"
                     height="16"
                     width="16"
                   >
@@ -2866,7 +2866,7 @@ exports[`Signed Transaction Table should show as vote 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh text-theme-secondary-text"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq text-theme-secondary-text"
               >
                 <span
                   data-testid="TransactionRow__timestamp"
@@ -2877,17 +2877,17 @@ exports[`Signed Transaction Table should show as vote 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq space-x-4"
               >
                 <div
                   class="flex items-center -space-x-1"
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
-                      class="sc-bdnxRM NjstW"
+                      class="sc-bdvvtL qGXhc"
                       height="20"
                       width="20"
                     >
@@ -2897,11 +2897,11 @@ exports[`Signed Transaction Table should show as vote 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                    class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
                     data-testid="TransactionRowRecipientIcon"
                   >
                     <div
-                      class="sc-bdnxRM NjstW"
+                      class="sc-bdvvtL qGXhc"
                       height="20"
                       width="20"
                     >
@@ -2923,13 +2923,13 @@ exports[`Signed Transaction Table should show as vote 1`] = `
               class="w-16"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center truncate"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq justify-center truncate"
               >
                 <span
                   class="p-1 text-theme-warning-300"
                 >
                   <div
-                    class="sc-bdnxRM NjstW"
+                    class="sc-bdvvtL qGXhc"
                     height="20"
                     width="20"
                   >
@@ -2942,10 +2942,10 @@ exports[`Signed Transaction Table should show as vote 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 bdvTBm"
+                  class="Label-sc-4akkzw-0 hhvRsd"
                   color="success"
                 >
                   <div
@@ -2965,7 +2965,7 @@ exports[`Signed Transaction Table should show as vote 1`] = `
               class="text-theme-secondary-500"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end"
               >
                 Waiting...
               </div>
@@ -2990,7 +2990,7 @@ exports[`Signed Transaction Table should show the sign button with isCompact = f
       Pending Transactions
     </h2>
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 fDAVsO -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jHfvAR -mt-3"
       role="table"
     >
       <table
@@ -3034,7 +3034,7 @@ exports[`Signed Transaction Table should show the sign button with isCompact = f
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                 >
                   <div
-                    class="sc-bdnxRM AkeAK transition-transform"
+                    class="sc-bdvvtL Cfvxc transition-transform"
                     height="10"
                     role="img"
                     width="10"
@@ -3092,7 +3092,7 @@ exports[`Signed Transaction Table should show the sign button with isCompact = f
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                 >
                   <div
-                    class="sc-bdnxRM AkeAK transition-transform transform rotate-180"
+                    class="sc-bdvvtL Cfvxc transition-transform transform rotate-180"
                     height="10"
                     role="img"
                     width="10"
@@ -3124,18 +3124,18 @@ exports[`Signed Transaction Table should show the sign button with isCompact = f
           role="rowgroup"
         >
           <tr
-            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 ijbCHm group"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY"
               >
                 <span
                   class="text-theme-secondary-300 dark:text-theme-secondary-800"
                 >
                   <div
-                    class="sc-bdnxRM AFVmm"
+                    class="sc-bdvvtL fCrhkg"
                     height="16"
                     width="16"
                   >
@@ -3148,7 +3148,7 @@ exports[`Signed Transaction Table should show the sign button with isCompact = f
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh text-theme-secondary-text"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq text-theme-secondary-text"
               >
                 <span
                   data-testid="TransactionRow__timestamp"
@@ -3159,17 +3159,17 @@ exports[`Signed Transaction Table should show the sign button with isCompact = f
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq space-x-4"
               >
                 <div
                   class="flex items-center -space-x-1"
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background"
+                    class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background"
                   >
                     <div
-                      class="sc-bdnxRM NjstW"
+                      class="sc-bdvvtL qGXhc"
                       height="20"
                       width="20"
                     >
@@ -3179,11 +3179,11 @@ exports[`Signed Transaction Table should show the sign button with isCompact = f
                     </div>
                   </div>
                   <div
-                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                    class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
                     data-testid="TransactionRowRecipientIcon"
                   >
                     <div
-                      class="sc-bdnxRM NjstW"
+                      class="sc-bdvvtL qGXhc"
                       height="20"
                       width="20"
                     >
@@ -3205,13 +3205,13 @@ exports[`Signed Transaction Table should show the sign button with isCompact = f
               class="w-16"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center truncate"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq justify-center truncate"
               >
                 <span
                   class="p-1 text-theme-secondary-700"
                 >
                   <div
-                    class="sc-bdnxRM NjstW"
+                    class="sc-bdvvtL qGXhc"
                     height="20"
                     width="20"
                   >
@@ -3224,10 +3224,10 @@ exports[`Signed Transaction Table should show the sign button with isCompact = f
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 dCEjSJ"
+                  class="Label-sc-4akkzw-0 iXzgUi"
                   color="danger"
                 >
                   <div
@@ -3245,10 +3245,10 @@ exports[`Signed Transaction Table should show the sign button with isCompact = f
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end space-x-2"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end space-x-2"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                   data-testid="TransactionRow__sign"
                   type="button"
                 >
@@ -3256,7 +3256,7 @@ exports[`Signed Transaction Table should show the sign button with isCompact = f
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="sc-bdnxRM AFVmm"
+                      class="sc-bdvvtL fCrhkg"
                       height="16"
                       width="16"
                     >
@@ -3270,7 +3270,7 @@ exports[`Signed Transaction Table should show the sign button with isCompact = f
                   </div>
                 </button>
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 bAsnxQ"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 fxPCrX"
                   data-testid="TableRemoveButton"
                   type="button"
                 >
@@ -3278,7 +3278,7 @@ exports[`Signed Transaction Table should show the sign button with isCompact = f
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="sc-bdnxRM NjstW"
+                      class="sc-bdvvtL qGXhc"
                       height="20"
                       width="20"
                     >
@@ -3310,7 +3310,7 @@ exports[`Signed Transaction Table should show the sign button with isCompact = t
       Pending Transactions
     </h2>
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 fDAVsO -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jHfvAR -mt-3"
       role="table"
     >
       <table
@@ -3354,7 +3354,7 @@ exports[`Signed Transaction Table should show the sign button with isCompact = t
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                 >
                   <div
-                    class="sc-bdnxRM AkeAK transition-transform"
+                    class="sc-bdvvtL Cfvxc transition-transform"
                     height="10"
                     role="img"
                     width="10"
@@ -3412,7 +3412,7 @@ exports[`Signed Transaction Table should show the sign button with isCompact = t
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                 >
                   <div
-                    class="sc-bdnxRM AkeAK transition-transform transform rotate-180"
+                    class="sc-bdvvtL Cfvxc transition-transform transform rotate-180"
                     height="10"
                     role="img"
                     width="10"
@@ -3444,18 +3444,18 @@ exports[`Signed Transaction Table should show the sign button with isCompact = t
           role="rowgroup"
         >
           <tr
-            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 ijbCHm group"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx"
               >
                 <span
                   class="text-theme-secondary-300 dark:text-theme-secondary-800"
                 >
                   <div
-                    class="sc-bdnxRM AFVmm"
+                    class="sc-bdvvtL fCrhkg"
                     height="16"
                     width="16"
                   >
@@ -3468,7 +3468,7 @@ exports[`Signed Transaction Table should show the sign button with isCompact = t
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI text-theme-secondary-text"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD text-theme-secondary-text"
               >
                 <span
                   data-testid="TransactionRow__timestamp"
@@ -3479,7 +3479,7 @@ exports[`Signed Transaction Table should show the sign button with isCompact = t
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD space-x-4"
               >
                 <div
                   class="flex items-center space-x-2"
@@ -3489,7 +3489,7 @@ exports[`Signed Transaction Table should show the sign button with isCompact = t
                     class="w-5 h-5 flex items-center border-0 border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400"
                   >
                     <div
-                      class="sc-bdnxRM NjstW"
+                      class="sc-bdvvtL qGXhc"
                       height="20"
                       width="20"
                     >
@@ -3503,7 +3503,7 @@ exports[`Signed Transaction Table should show the sign button with isCompact = t
                     data-testid="TransactionRowRecipientIcon"
                   >
                     <div
-                      class="sc-bdnxRM NjstW"
+                      class="sc-bdvvtL qGXhc"
                       height="20"
                       width="20"
                     >
@@ -3525,13 +3525,13 @@ exports[`Signed Transaction Table should show the sign button with isCompact = t
               class="w-16"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center truncate"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD justify-center truncate"
               >
                 <span
                   class="p-1 text-theme-secondary-700"
                 >
                   <div
-                    class="sc-bdnxRM NjstW"
+                    class="sc-bdvvtL qGXhc"
                     height="20"
                     width="20"
                   >
@@ -3544,10 +3544,10 @@ exports[`Signed Transaction Table should show the sign button with isCompact = t
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 iUZRnl"
+                  class="Label-sc-4akkzw-0 fhDzha"
                   color="danger"
                 >
                   <div
@@ -3565,10 +3565,10 @@ exports[`Signed Transaction Table should show the sign button with isCompact = t
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end space-x-2"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end space-x-2"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 kkzWwe text-theme-primary-600 hover:text-theme-primary-700"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 faHCgN text-theme-primary-600 hover:text-theme-primary-700"
                   data-testid="TransactionRow__sign"
                   type="button"
                 >
@@ -3576,7 +3576,7 @@ exports[`Signed Transaction Table should show the sign button with isCompact = t
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="sc-bdnxRM AFVmm"
+                      class="sc-bdvvtL fCrhkg"
                       height="16"
                       width="16"
                     >
@@ -3590,7 +3590,7 @@ exports[`Signed Transaction Table should show the sign button with isCompact = t
                   </div>
                 </button>
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm text-theme-danger-400 hover:text-theme-danger-500"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF text-theme-danger-400 hover:text-theme-danger-500"
                   data-testid="TableRemoveButton"
                   type="button"
                 >
@@ -3598,7 +3598,7 @@ exports[`Signed Transaction Table should show the sign button with isCompact = t
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="sc-bdnxRM AFVmm"
+                      class="sc-bdvvtL fCrhkg"
                       height="16"
                       width="16"
                     >
@@ -3630,7 +3630,7 @@ exports[`Signed Transaction Table should show unconfirmed multiSignature transac
       Pending Transactions
     </h2>
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 fDAVsO -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jHfvAR -mt-3"
       role="table"
     >
       <table
@@ -3674,7 +3674,7 @@ exports[`Signed Transaction Table should show unconfirmed multiSignature transac
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                 >
                   <div
-                    class="sc-bdnxRM AkeAK transition-transform"
+                    class="sc-bdvvtL Cfvxc transition-transform"
                     height="10"
                     role="img"
                     width="10"
@@ -3732,7 +3732,7 @@ exports[`Signed Transaction Table should show unconfirmed multiSignature transac
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                 >
                   <div
-                    class="sc-bdnxRM AkeAK transition-transform transform rotate-180"
+                    class="sc-bdvvtL Cfvxc transition-transform transform rotate-180"
                     height="10"
                     role="img"
                     width="10"
@@ -3764,18 +3764,18 @@ exports[`Signed Transaction Table should show unconfirmed multiSignature transac
           role="rowgroup"
         >
           <tr
-            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 ijbCHm group"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY"
               >
                 <span
                   class="text-theme-secondary-300 dark:text-theme-secondary-800"
                 >
                   <div
-                    class="sc-bdnxRM AFVmm"
+                    class="sc-bdvvtL fCrhkg"
                     height="16"
                     width="16"
                   >
@@ -3788,7 +3788,7 @@ exports[`Signed Transaction Table should show unconfirmed multiSignature transac
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh text-theme-secondary-text"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq text-theme-secondary-text"
               >
                 <span
                   data-testid="TransactionRow__timestamp"
@@ -3799,17 +3799,17 @@ exports[`Signed Transaction Table should show unconfirmed multiSignature transac
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq space-x-4"
               >
                 <div
                   class="flex items-center -space-x-1"
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background"
+                    class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background"
                   >
                     <div
-                      class="sc-bdnxRM NjstW"
+                      class="sc-bdvvtL qGXhc"
                       height="20"
                       width="20"
                     >
@@ -3819,11 +3819,11 @@ exports[`Signed Transaction Table should show unconfirmed multiSignature transac
                     </div>
                   </div>
                   <div
-                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                    class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
                     data-testid="TransactionRowRecipientIcon"
                   >
                     <div
-                      class="sc-bdnxRM NjstW"
+                      class="sc-bdvvtL qGXhc"
                       height="20"
                       width="20"
                     >
@@ -3845,13 +3845,13 @@ exports[`Signed Transaction Table should show unconfirmed multiSignature transac
               class="w-16"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center truncate"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq justify-center truncate"
               >
                 <span
                   class="p-1 text-theme-warning-300"
                 >
                   <div
-                    class="sc-bdnxRM NjstW"
+                    class="sc-bdvvtL qGXhc"
                     height="20"
                     width="20"
                   >
@@ -3864,10 +3864,10 @@ exports[`Signed Transaction Table should show unconfirmed multiSignature transac
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 dCEjSJ"
+                  class="Label-sc-4akkzw-0 iXzgUi"
                   color="danger"
                 >
                   <div
@@ -3885,10 +3885,10 @@ exports[`Signed Transaction Table should show unconfirmed multiSignature transac
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end space-x-2"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end space-x-2"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                   data-testid="TransactionRow__sign"
                   type="button"
                 >
@@ -3896,7 +3896,7 @@ exports[`Signed Transaction Table should show unconfirmed multiSignature transac
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="sc-bdnxRM AFVmm"
+                      class="sc-bdvvtL fCrhkg"
                       height="16"
                       width="16"
                     >
@@ -3910,7 +3910,7 @@ exports[`Signed Transaction Table should show unconfirmed multiSignature transac
                   </div>
                 </button>
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 bAsnxQ"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 fxPCrX"
                   data-testid="TableRemoveButton"
                   type="button"
                 >
@@ -3918,7 +3918,7 @@ exports[`Signed Transaction Table should show unconfirmed multiSignature transac
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="sc-bdnxRM NjstW"
+                      class="sc-bdvvtL qGXhc"
                       height="20"
                       width="20"
                     >

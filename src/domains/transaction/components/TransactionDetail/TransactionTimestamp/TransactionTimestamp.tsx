@@ -1,4 +1,4 @@
-import { DateTime } from "@payvo/intl";
+import { DateTime } from "@payvo/sdk-intl";
 import { useTimeFormat } from "app/hooks/use-time-format";
 import { TransactionDetail } from "domains/transaction/components/TransactionDetail/TransactionDetail";
 import React from "react";

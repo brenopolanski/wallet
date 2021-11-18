@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { toasts } from "app/services";
 import { translations as pluginTranslations } from "domains/plugin/i18n";
 import { ipcRenderer } from "electron";
