@@ -1,6 +1,6 @@
 import React from "react";
 import { Column } from "react-table";
-import { fireEvent, render, within } from "utils/testing-library";
+import { fireEvent, render, screen, within } from "utils/testing-library";
 
 import { Table } from "./Table";
 
@@ -54,9 +54,9 @@ describe("Table", () => {
 	});
 
 	it("should change sort order on th click", () => {
-		const { getAllByRole } = render(<Table columns={columns} data={data} />);
+		render(<Table columns={columns} data={data} />);
 
-		const th = getAllByRole("columnheader")[0];
+		const th = screen.getAllByRole("columnheader")[0];
 
 		fireEvent.click(th);
 
@@ -70,13 +70,13 @@ describe("Table", () => {
 	});
 
 	it("should hide header", () => {
-		const { queryAllByRole } = render(<Table hideHeader columns={columns} data={data} />);
+		render(<Table hideHeader columns={columns} data={data} />);
 
-		expect(queryAllByRole("columnheader")).toHaveLength(0);
+		expect(screen.queryAllByRole("columnheader")).toHaveLength(0);
 	});
 
 	it("should render with width class applied to column header", () => {
-		const { getByTestId } = render(
+		render(
 			<Table
 				columns={[
 					{
@@ -88,6 +88,6 @@ describe("Table", () => {
 			/>,
 		);
 
-		expect(getByTestId("table__th--0")).toHaveClass("width");
+		expect(screen.getByTestId("table__th--0")).toHaveClass("width");
 	});
 });

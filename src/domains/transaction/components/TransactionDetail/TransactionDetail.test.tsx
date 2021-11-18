@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "utils/testing-library";
+import { render, screen } from "utils/testing-library";
 
 import { TransactionDetail } from "./TransactionDetail";
 
@@ -41,13 +41,13 @@ describe("TransactionDetail", () => {
 	});
 
 	it("should render with extra children", () => {
-		const { container, getByTestId } = render(
+		const { container } = render(
 			<TransactionDetail label="Test" padding={false} extra={<div data-testid="TEST_CHILD" />}>
 				test
 			</TransactionDetail>,
 		);
 
-		expect(getByTestId("TEST_CHILD")).toBeInTheDocument();
+		expect(screen.getByTestId("TEST_CHILD")).toBeInTheDocument();
 		expect(container).toMatchSnapshot();
 	});
 });

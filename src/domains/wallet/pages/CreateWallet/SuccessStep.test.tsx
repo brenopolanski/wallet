@@ -4,7 +4,7 @@ import { renderHook } from "@testing-library/react-hooks";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
-import { env, getDefaultProfileId, render } from "utils/testing-library";
+import { env, getDefaultProfileId, render, screen } from "utils/testing-library";
 
 import { SuccessStep } from "./SuccessStep";
 
@@ -30,19 +30,19 @@ describe("SuccessStep", () => {
 
 		const onClickEditAlias = jest.fn();
 
-		const { asFragment, getByTestId, getByText } = render(
+		const { asFragment } = render(
 			<FormProvider {...form.current}>
 				<SuccessStep onClickEditAlias={onClickEditAlias} />
 			</FormProvider>,
 		);
 
-		expect(getByTestId("CreateWallet__SuccessStep")).toBeInTheDocument();
+		expect(screen.getByTestId("CreateWallet__SuccessStep")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 
-		expect(getByText("ARK Devnet")).toBeInTheDocument();
-		expect(getByText(wallet.address())).toBeInTheDocument();
+		expect(screen.getByText("ARK Devnet")).toBeInTheDocument();
+		expect(screen.getByText(wallet.address())).toBeInTheDocument();
 
-		userEvent.click(getByTestId("CreateWallet__edit-alias"));
+		userEvent.click(screen.getByTestId("CreateWallet__edit-alias"));
 
 		expect(onClickEditAlias).toHaveBeenCalledTimes(1);
 	});

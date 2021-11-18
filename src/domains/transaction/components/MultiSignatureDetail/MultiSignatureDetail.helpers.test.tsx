@@ -1,6 +1,6 @@
 import { Contracts, DTO } from "@payvo/sdk-profiles";
 import React from "react";
-import { env, getDefaultProfileId, getDefaultWalletMnemonic, render, syncDelegates } from "utils/testing-library";
+import { env, getDefaultProfileId, getDefaultWalletMnemonic, render, screen, syncDelegates } from "utils/testing-library";
 
 import { getMultiSignatureInfo, MultiSignatureDetailStep, Paginator } from "./MultiSignatureDetail.helpers";
 
@@ -63,7 +63,7 @@ describe("MultiSignatureDetail Helpers", () => {
 	});
 
 	it("should render Paginator with broadcast only button", () => {
-		const { getByTestId } = render(
+		render(
 			<Paginator
 				canBeBroadcasted
 				canBeSigned={false}
@@ -72,6 +72,6 @@ describe("MultiSignatureDetail Helpers", () => {
 			/>,
 		);
 
-		expect(getByTestId("MultiSignatureDetail__broadcast")).toBeInTheDocument();
+		expect(screen.getByTestId("MultiSignatureDetail__broadcast")).toBeInTheDocument();
 	});
 });

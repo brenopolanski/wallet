@@ -2,7 +2,7 @@ import { translations } from "domains/transaction/i18n";
 import React from "react";
 import { Route } from "react-router-dom";
 import { TransactionFixture } from "tests/fixtures/transactions";
-import { getDefaultProfileId, render } from "utils/testing-library";
+import { getDefaultProfileId, render, screen } from "utils/testing-library";
 
 import { IpfsDetail } from "./IpfsDetail";
 
@@ -10,14 +10,14 @@ const fixtureProfileId = getDefaultProfileId();
 
 describe("IpfsDetail", () => {
 	it("should not render if not open", () => {
-		const { asFragment, getByTestId } = render(<IpfsDetail isOpen={false} transaction={TransactionFixture} />);
+		const { asFragment } = render(<IpfsDetail isOpen={false} transaction={TransactionFixture} />);
 
-		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render a modal", () => {
-		const { asFragment, getByTestId } = render(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId">
 				<IpfsDetail isOpen={true} transaction={TransactionFixture} />
 			</Route>,
@@ -26,12 +26,12 @@ describe("IpfsDetail", () => {
 			},
 		);
 
-		expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_IPFS_DETAIL.TITLE);
+		expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_IPFS_DETAIL.TITLE);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render a modal without a wallet alias", () => {
-		const { asFragment, getByTestId } = render(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId">
 				<IpfsDetail
 					isOpen={true}
@@ -49,7 +49,7 @@ describe("IpfsDetail", () => {
 			},
 		);
 
-		expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_IPFS_DETAIL.TITLE);
+		expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_IPFS_DETAIL.TITLE);
 		expect(asFragment()).toMatchSnapshot();
 	});
 });

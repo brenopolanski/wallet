@@ -53,16 +53,16 @@ describe("Import Profile - Processing import", () => {
 
 	it("should require password for password-protected profile import", async () => {
 		const onPasswordChange = jest.fn();
-		const { container, getByTestId, findByTestId } = render(
+		const { container } = render(
 			<ProcessingImport env={env} file={passwordProtectedDwe} onPasswordChange={onPasswordChange} />,
 		);
-		await findByTestId("modal__inner");
+		await screen.findByTestId("modal__inner");
 
-		fireEvent.input(getByTestId("PasswordModal__input"), { target: { value: "S3cUrePa$sword" } });
+		fireEvent.input(screen.getByTestId("PasswordModal__input"), { target: { value: "S3cUrePa$sword" } });
 
-		await findByTestId("PasswordModal__submit-button");
+		await screen.findByTestId("PasswordModal__submit-button");
 
-		fireEvent.click(getByTestId("PasswordModal__submit-button"));
+		fireEvent.click(screen.getByTestId("PasswordModal__submit-button"));
 
 		await waitFor(() => expect(onPasswordChange).toHaveBeenCalledWith("S3cUrePa$sword"));
 
@@ -71,12 +71,12 @@ describe("Import Profile - Processing import", () => {
 
 	it("should call back when password modal is closed", async () => {
 		const onBack = jest.fn();
-		const { getByTestId, findByTestId } = render(
+		render(
 			<ProcessingImport env={env} file={passwordProtectedDwe} onBack={onBack} password="test" />,
 		);
-		await findByTestId("modal__inner");
+		await screen.findByTestId("modal__inner");
 
-		fireEvent.click(getByTestId("modal__close-btn"));
+		fireEvent.click(screen.getByTestId("modal__close-btn"));
 
 		await waitFor(() => expect(onBack).toHaveBeenCalledWith());
 	});
@@ -108,7 +108,7 @@ describe("Import Profile - Processing import", () => {
 
 	it("should enter password again", async () => {
 		const onPasswordChange = jest.fn();
-		const { container, getByTestId, findByTestId } = render(
+		const { container } = render(
 			<ProcessingImport
 				env={env}
 				file={passwordProtectedDwe}
@@ -117,15 +117,15 @@ describe("Import Profile - Processing import", () => {
 				shouldRequestPassword
 			/>,
 		);
-		await findByTestId("modal__inner");
+		await screen.findByTestId("modal__inner");
 
-		fireEvent.input(getByTestId("PasswordModal__input"), { target: { value: "invalid" } });
+		fireEvent.input(screen.getByTestId("PasswordModal__input"), { target: { value: "invalid" } });
 
-		await findByTestId("PasswordModal__submit-button");
+		await screen.findByTestId("PasswordModal__submit-button");
 
-		fireEvent.click(getByTestId("PasswordModal__submit-button"));
+		fireEvent.click(screen.getByTestId("PasswordModal__submit-button"));
 
-		await findByTestId("modal__inner");
+		await screen.findByTestId("modal__inner");
 		await waitFor(() => expect(onPasswordChange).not.toHaveBeenCalledWith("testtest2"));
 
 		expect(container).toMatchSnapshot();

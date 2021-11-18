@@ -1,6 +1,6 @@
 import * as useRandomNumberHook from "app/hooks/use-random-number";
 import React from "react";
-import { render } from "utils/testing-library";
+import { render, screen } from "utils/testing-library";
 
 import { PluginCardSkeleton } from "./PluginCardSkeleton";
 
@@ -14,9 +14,9 @@ describe("PluginCardSkeleton", () => {
 	});
 
 	it("should render", async () => {
-		const { asFragment, findByTestId } = render(<PluginCardSkeleton />);
+		const { asFragment } = render(<PluginCardSkeleton />);
 
-		await findByTestId("PluginCardSkeleton");
+		await screen.findByTestId("PluginCardSkeleton");
 
 		expect(asFragment()).toMatchSnapshot();
 	});

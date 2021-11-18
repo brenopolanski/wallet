@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "utils/testing-library";
+import { render, screen } from "utils/testing-library";
 
 import { Input } from "./Input";
 
@@ -11,8 +11,8 @@ describe("Input", () => {
 	});
 
 	it("should render as custom element", () => {
-		const { asFragment, getByTestId } = render(<Input as="select" />);
-		const input = getByTestId("Input");
+		const { asFragment } = render(<Input as="select" />);
+		const input = screen.getByTestId("Input");
 
 		expect(input.tagName).toBe("SELECT");
 
@@ -26,8 +26,8 @@ describe("Input", () => {
 	});
 
 	it("should render with invalid", () => {
-		const { asFragment, getByTestId } = render(<Input isInvalid={true} errorMessage="Field invalid" />);
-		const input = getByTestId("Input__error");
+		const { asFragment } = render(<Input isInvalid={true} errorMessage="Field invalid" />);
+		const input = screen.getByTestId("Input__error");
 
 		expect(input).toBeVisible();
 
@@ -35,7 +35,7 @@ describe("Input", () => {
 	});
 
 	it("should render with addons", () => {
-		const { asFragment, getByText } = render(
+		const { asFragment } = render(
 			<Input
 				addons={{
 					end: {
@@ -49,18 +49,18 @@ describe("Input", () => {
 			/>,
 		);
 
-		expect(getByText("end")).toBeInTheDocument();
-		expect(getByText("end")?.parentElement?.parentElement).toHaveClass("some-class-name");
+		expect(screen.getByText("end")).toBeInTheDocument();
+		expect(screen.getByText("end").parentElement?.parentElement).toHaveClass("some-class-name");
 
-		expect(getByText("start")).toBeInTheDocument();
+		expect(screen.getByText("start")).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render with suggestion", () => {
-		const { asFragment, getByTestId } = render(<Input suggestion="suggestion" />);
+		const { asFragment } = render(<Input suggestion="suggestion" />);
 
-		expect(getByTestId("Input__suggestion")).toBeInTheDocument();
+		expect(screen.getByTestId("Input__suggestion")).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});

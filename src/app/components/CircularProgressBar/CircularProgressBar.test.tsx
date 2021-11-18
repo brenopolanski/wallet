@@ -1,15 +1,15 @@
 import React from "react";
-import { render } from "utils/testing-library";
+import { render, screen } from "utils/testing-library";
 
 import { CircularProgressBar } from "./CircularProgressBar";
 
 describe("CircularProgressBar", () => {
 	it("should render", () => {
-		const { container, asFragment, getByTestId } = render(<CircularProgressBar value={50} />);
+		const { container, asFragment } = render(<CircularProgressBar value={50} />);
 
 		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
-		expect(getByTestId("CircularProgressBar__percentage")).toHaveTextContent("50%");
+		expect(screen.getByTestId("CircularProgressBar__percentage")).toHaveTextContent("50%");
 	});
 
 	it("should render without text content", () => {

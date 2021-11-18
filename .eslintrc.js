@@ -165,7 +165,7 @@ module.exports = {
 		"testing-library/prefer-explicit-assert": "warn", // @TODO: set to error and fix
 		"testing-library/prefer-find-by": "error",
 		"testing-library/prefer-presence-queries": "warn", // @TODO: set to error and fix
-		"testing-library/prefer-screen-queries": "warn", // @TODO: set to error and fix
+		"testing-library/prefer-screen-queries": "error",
 		"testing-library/prefer-user-event": "warn", // @TODO: set to error and fix
 		"testing-library/prefer-wait-for": "error",
 		"testing-library/render-result-naming-convention": "error",

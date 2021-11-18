@@ -1,17 +1,17 @@
 import React from "react";
-import { fireEvent, render, waitFor } from "utils/testing-library";
+import { fireEvent, render, screen, waitFor } from "utils/testing-library";
 
 import { ConfigurationProvider, useConfiguration } from "./Configuration";
 
 describe("Configuration Context", () => {
 	it("should render the wrapper properly", () => {
-		const { container, asFragment, getByTestId } = render(
+		const { container, asFragment } = render(
 			<ConfigurationProvider>
 				<span data-testid="ConfigurationProvider__content">Configuration Provider content</span>
 			</ConfigurationProvider>,
 		);
 
-		expect(getByTestId("ConfigurationProvider__content")).toBeInTheDocument();
+		expect(screen.getByTestId("ConfigurationProvider__content")).toBeInTheDocument();
 
 		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
@@ -27,8 +27,6 @@ describe("Configuration Context", () => {
 		expect(() => render(<Test />, { withProviders: false })).toThrow(
 			"[useConfiguration] Component not wrapped within a Provider",
 		);
-
-		console.error.mockRestore();
 	});
 
 	it("should render configuration consumer component", () => {
@@ -36,9 +34,9 @@ describe("Configuration Context", () => {
 			useConfiguration();
 			return <p data-testid="Configuration__consumer">Configuration content</p>;
 		};
-		const { getByTestId } = render(<Test />);
+		render(<Test />);
 
-		expect(getByTestId("Configuration__consumer")).toBeInTheDocument();
+		expect(screen.getByTestId("Configuration__consumer")).toBeInTheDocument();
 	});
 
 	it("should update configuration", async () => {
@@ -55,15 +53,15 @@ describe("Configuration Context", () => {
 			);
 		};
 
-		const { getByTestId, asFragment, findByTestId } = render(<Test />);
+		const { asFragment } = render(<Test />);
 
-		expect(getByTestId("Configuration__consumer")).toBeInTheDocument();
+		expect(screen.getByTestId("Configuration__consumer")).toBeInTheDocument();
 
-		await waitFor(() => expect(() => getByTestId("Configuration__list")).toThrow(/Unable to find/));
+		await waitFor(() => expect(() => screen.getByTestId("Configuration__list")).toThrow(/Unable to find/));
 
-		fireEvent.click(getByTestId("Configuration__consumer"));
+		fireEvent.click(screen.getByTestId("Configuration__consumer"));
 
-		await findByTestId("Configuration__list");
+		await screen.findByTestId("Configuration__list");
 
 		expect(asFragment()).toMatchSnapshot();
 	});

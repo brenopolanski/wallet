@@ -5,7 +5,7 @@ import electron from "electron";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
-import { env, fireEvent, getDefaultProfileId, render, waitFor } from "utils/testing-library";
+import { env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
 
 const history = createMemoryHistory();
 let profile: Contracts.IProfile;
@@ -48,7 +48,7 @@ describe("Export Settings", () => {
 			//@ts-ignore
 			.mockResolvedValue({ filePath: ["/test.dwe"] });
 
-		const { container, findByTestId } = render(
+		const { container } = render(
 			<Route path="/profiles/:profileId/settings/export">
 				<ExportSettings />
 			</Route>,
@@ -60,7 +60,7 @@ describe("Export Settings", () => {
 
 		expect(container).toBeInTheDocument();
 
-		fireEvent.click(await findByTestId("Export-settings__submit-button"));
+		fireEvent.click(await screen.findByTestId("Export-settings__submit-button"));
 
 		await waitFor(() =>
 			expect(dialogMock).toHaveBeenCalledWith({

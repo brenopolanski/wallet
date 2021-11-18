@@ -1,7 +1,7 @@
 import { renderHook } from "@testing-library/react-hooks";
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { render } from "utils/testing-library";
+import { render, screen } from "utils/testing-library";
 
 import { TimeAgo } from "./TimeAgo";
 
@@ -24,9 +24,9 @@ describe("TimeAgo", () => {
 		const { result } = renderHook(() => useTranslation());
 		const { t } = result.current;
 
-		const { getByTestId } = render(<TimeAgo date={date} />);
+		render(<TimeAgo date={date} />);
 
-		expect(getByTestId("TimeAgo")).toHaveTextContent(t(`COMMON.DATETIME.${key}`, { count: 1 }));
+		expect(screen.getByTestId("TimeAgo")).toHaveTextContent(t(`COMMON.DATETIME.${key}`, { count: 1 }));
 	});
 
 	it("should render the fallback if the difference is less than a minute", () => {
@@ -35,8 +35,8 @@ describe("TimeAgo", () => {
 
 		const date = "2020-06-30T23:59:59.000Z";
 
-		const { getByTestId } = render(<TimeAgo date={date} />);
+		render(<TimeAgo date={date} />);
 
-		expect(getByTestId("TimeAgo")).toHaveTextContent(t("COMMON.DATETIME.FEW_SECONDS_AGO"));
+		expect(screen.getByTestId("TimeAgo")).toHaveTextContent(t("COMMON.DATETIME.FEW_SECONDS_AGO"));
 	});
 });

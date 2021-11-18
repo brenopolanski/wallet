@@ -1,7 +1,7 @@
 import { fireEvent } from "@testing-library/react";
 import React from "react";
 import { Route } from "react-router-dom";
-import { render } from "utils/testing-library";
+import { render, screen } from "utils/testing-library";
 
 import { useQueryParams as useQueryParameters } from "./use-query-params";
 
@@ -20,16 +20,16 @@ describe("useQueryParams hook", () => {
 	};
 
 	it("should render useQueryParams", () => {
-		const { getByText, getByTestId } = render(
+		render(
 			<Route pathname="/">
 				<TestComponent />
 			</Route>,
 		);
 
-		expect(getByTestId("header_test")).toBeInTheDocument();
+		expect(screen.getByTestId("header_test")).toBeInTheDocument();
 
-		fireEvent.click(getByTestId("header_test"));
+		fireEvent.click(screen.getByTestId("header_test"));
 
-		expect(getByText("useQueryParams Test Component")).toBeInTheDocument();
+		expect(screen.getByText("useQueryParams Test Component")).toBeInTheDocument();
 	});
 });

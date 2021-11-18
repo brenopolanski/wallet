@@ -1,6 +1,6 @@
 import { Networks } from "@payvo/sdk";
 import React from "react";
-import { env, fireEvent, render, waitFor, within } from "utils/testing-library";
+import { env, fireEvent, render, screen, waitFor, within } from "utils/testing-library";
 
 import { FilterNetwork, FilterNetworks } from "./FilterNetwork";
 import { FilterOption } from "./models";
@@ -31,8 +31,8 @@ describe("NetworkOptions", () => {
 
 	it("should trigger onClick", () => {
 		const onClick = jest.fn();
-		const { getByTestId } = render(<NetworkOptions networks={networkOptions} onClick={onClick} />);
-		fireEvent.click(getByTestId(`NetworkOption__${networkOptions[0].network.id()}`));
+		render(<NetworkOptions networks={networkOptions} onClick={onClick} />);
+		fireEvent.click(screen.getByTestId(`NetworkOption__${networkOptions[0].network.id()}`));
 
 		expect(onClick).toHaveBeenCalledWith(
 			{
@@ -65,8 +65,8 @@ describe("ToggleAllOption", () => {
 
 	it("should handle onClick", () => {
 		const onClick = jest.fn();
-		const { getByTestId } = render(<ToggleAllOption isSelected onClick={onClick} />);
-		fireEvent.click(getByTestId("network__viewall"));
+		render(<ToggleAllOption isSelected onClick={onClick} />);
+		fireEvent.click(screen.getByTestId("network__viewall"));
 
 		expect(onClick).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
@@ -87,19 +87,19 @@ describe("FilterNetwork", () => {
 	});
 
 	it("should render public networks", () => {
-		const { container, getAllByTestId } = render(<FilterNetwork options={networkOptions} />);
+		const { container } = render(<FilterNetwork options={networkOptions} />);
 
-		expect(getAllByTestId("FilterNetwork")).toHaveLength(1);
+		expect(screen.getAllByTestId("FilterNetwork")).toHaveLength(1);
 		expect(container).toMatchSnapshot();
 	});
 
 	it("should toggle a network option", () => {
 		const onChange = jest.fn();
-		const { getAllByTestId, getByTestId } = render(<FilterNetwork options={networkOptions} onChange={onChange} />);
+		render(<FilterNetwork options={networkOptions} onChange={onChange} />);
 
-		expect(getAllByTestId("FilterNetwork")).toHaveLength(1);
+		expect(screen.getAllByTestId("FilterNetwork")).toHaveLength(1);
 
-		fireEvent.click(getByTestId(`NetworkOption__${networkOptions[0].network.id()}`));
+		fireEvent.click(screen.getByTestId(`NetworkOption__${networkOptions[0].network.id()}`));
 
 		expect(onChange).toHaveBeenCalledWith(
 			{
@@ -126,38 +126,38 @@ describe("FilterNetworks", () => {
 	});
 
 	it("should render public networks", () => {
-		const { container, getAllByTestId } = render(<FilterNetworks options={networkOptions} />);
+		const { container } = render(<FilterNetworks options={networkOptions} />);
 
-		expect(getAllByTestId("FilterNetwork")).toHaveLength(1);
+		expect(screen.getAllByTestId("FilterNetwork")).toHaveLength(1);
 		expect(container).toMatchSnapshot();
 	});
 
 	it("should render public and testnet networks", () => {
-		const { container, getAllByTestId } = render(
+		const { container } = render(
 			<FilterNetworks useTestNetworks={true} options={networkOptions} />,
 		);
 
-		expect(getAllByTestId("FilterNetwork")).toHaveLength(2);
+		expect(screen.getAllByTestId("FilterNetwork")).toHaveLength(2);
 		expect(container).toMatchSnapshot();
 	});
 
 	it("should toggle view all", async () => {
-		const { container, getAllByTestId, getByTestId, findByTestId } = render(
+		const { container } = render(
 			<FilterNetworks useTestNetworks={true} options={networkOptions} hideViewAll={false} />,
 		);
 
-		expect(getAllByTestId("FilterNetwork")).toHaveLength(2);
+		expect(screen.getAllByTestId("FilterNetwork")).toHaveLength(2);
 
-		fireEvent.click(within(getAllByTestId("FilterNetwork")[0]).getByTestId("network__viewall"));
+		fireEvent.click(within(screen.getAllByTestId("FilterNetwork")[0]).getByTestId("network__viewall"));
 
-		await findByTestId("FilterNetwork__select-all-checkbox");
+		await screen.findByTestId("FilterNetwork__select-all-checkbox");
 
 		expect(container).toMatchSnapshot();
 
-		fireEvent.click(within(getAllByTestId("FilterNetwork")[0]).getByTestId("network__viewall"));
+		fireEvent.click(within(screen.getAllByTestId("FilterNetwork")[0]).getByTestId("network__viewall"));
 
 		await waitFor(() =>
-			expect(() => getByTestId("FilterNetwork__select-all-checkbox")).toThrow(/Unable to find an element by/),
+			expect(() => screen.getByTestId("FilterNetwork__select-all-checkbox")).toThrow(/Unable to find an element by/),
 		);
 
 		expect(container).toMatchSnapshot();
@@ -165,17 +165,17 @@ describe("FilterNetworks", () => {
 
 	it("should select all public networks", async () => {
 		const onChange = jest.fn();
-		const { getAllByTestId, findAllByTestId } = render(
+		render(
 			<FilterNetworks useTestNetworks={true} options={networkOptions} onChange={onChange} hideViewAll={false} />,
 		);
 
-		expect(getAllByTestId("FilterNetwork")).toHaveLength(2);
+		expect(screen.getAllByTestId("FilterNetwork")).toHaveLength(2);
 
-		fireEvent.click(within(getAllByTestId("FilterNetwork")[0]).getByTestId("network__viewall"));
+		fireEvent.click(within(screen.getAllByTestId("FilterNetwork")[0]).getByTestId("network__viewall"));
 
-		await findAllByTestId("FilterNetwork__select-all-checkbox");
+		await screen.findAllByTestId("FilterNetwork__select-all-checkbox");
 
-		fireEvent.click(getAllByTestId("FilterNetwork__select-all-checkbox")[0]);
+		fireEvent.click(screen.getAllByTestId("FilterNetwork__select-all-checkbox")[0]);
 
 		expect(onChange).toHaveBeenCalledWith(expect.anything(), [
 			...networkOptions
@@ -189,11 +189,11 @@ describe("FilterNetworks", () => {
 
 	it("should toggle a public network option", () => {
 		const onChange = jest.fn();
-		const { getAllByTestId, getByTestId } = render(<FilterNetworks options={networkOptions} onChange={onChange} />);
+		render(<FilterNetworks options={networkOptions} onChange={onChange} />);
 
-		expect(getAllByTestId("FilterNetwork")).toHaveLength(1);
+		expect(screen.getAllByTestId("FilterNetwork")).toHaveLength(1);
 
-		fireEvent.click(getByTestId(`NetworkOption__${networkOptions[0].network.id()}`));
+		fireEvent.click(screen.getByTestId(`NetworkOption__${networkOptions[0].network.id()}`));
 
 		expect(onChange).toHaveBeenCalledWith(
 			{
@@ -206,14 +206,14 @@ describe("FilterNetworks", () => {
 
 	it("should toggle a testnet network option", () => {
 		const onChange = jest.fn();
-		const { container, getAllByTestId, getByTestId } = render(
+		const { container } = render(
 			<FilterNetworks options={networkOptions} onChange={onChange} useTestNetworks />,
 		);
 
 		expect(container).toMatchSnapshot();
-		expect(getAllByTestId("FilterNetwork")).toHaveLength(2);
+		expect(screen.getAllByTestId("FilterNetwork")).toHaveLength(2);
 
-		fireEvent.click(getByTestId(`NetworkOption__${networkOptions[1].network.id()}`));
+		fireEvent.click(screen.getByTestId(`NetworkOption__${networkOptions[1].network.id()}`));
 
 		expect(onChange).toHaveBeenCalledWith(
 			{

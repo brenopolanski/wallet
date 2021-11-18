@@ -1,6 +1,6 @@
 import React from "react";
 import { ButtonVariant } from "types";
-import { fireEvent, render } from "utils/testing-library";
+import { fireEvent, render, screen } from "utils/testing-library";
 
 import { Button } from "./Button";
 
@@ -39,21 +39,21 @@ describe("Button", () => {
 	});
 
 	it("should render if disabled", () => {
-		const { asFragment, getByTestId } = render(
+		const { asFragment } = render(
 			<Button disabled data-testid="Button">
 				Click
 			</Button>,
 		);
 
-		expect(getByTestId("Button")).toBeDisabled();
+		expect(screen.getByTestId("Button")).toBeDisabled();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should emit event on click", () => {
 		const onClick = jest.fn();
-		const { getByText } = render(<Button onClick={onClick}>Click Me</Button>);
+		render(<Button onClick={onClick}>Click Me</Button>);
 
-		fireEvent.click(getByText("Click Me"));
+		fireEvent.click(screen.getByText("Click Me"));
 
 		expect(onClick).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});

@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "utils/testing-library";
+import { render, screen } from "utils/testing-library";
 
 import { InputDefault } from "./InputDefault";
 
@@ -11,8 +11,8 @@ describe("InputDefault", () => {
 	});
 
 	it("should render with a custom element", () => {
-		const { getByTestId } = render(<InputDefault as="select" />);
-		const input = getByTestId("Input");
+		render(<InputDefault as="select" />);
+		const input = screen.getByTestId("Input");
 
 		expect(input.tagName).toBe("SELECT");
 	});

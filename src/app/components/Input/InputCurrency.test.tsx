@@ -1,20 +1,20 @@
 import React, { useState } from "react";
-import { fireEvent, render, waitFor } from "utils/testing-library";
+import { fireEvent, render, screen, waitFor } from "utils/testing-library";
 
 import { InputCurrency } from "./InputCurrency";
 
 describe("InputCurrency", () => {
 	it("should render", () => {
-		const { getByTestId, asFragment } = render(<InputCurrency />);
+		const { asFragment } = render(<InputCurrency />);
 
-		expect(getByTestId("InputCurrency")).toBeInTheDocument();
+		expect(screen.getByTestId("InputCurrency")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should emit formatted value", () => {
 		const onChange = jest.fn();
-		const { getByTestId } = render(<InputCurrency onChange={onChange} />);
-		const input = getByTestId("InputCurrency");
+		render(<InputCurrency onChange={onChange} />);
+		const input = screen.getByTestId("InputCurrency");
 
 		fireEvent.input(input, {
 			target: {
@@ -27,8 +27,8 @@ describe("InputCurrency", () => {
 
 	it("should not allow letters", () => {
 		const onChange = jest.fn();
-		const { getByTestId } = render(<InputCurrency onChange={onChange} />);
-		const input = getByTestId("InputCurrency");
+		render(<InputCurrency onChange={onChange} />);
+		const input = screen.getByTestId("InputCurrency");
 
 		fireEvent.input(input, {
 			target: {
@@ -40,15 +40,15 @@ describe("InputCurrency", () => {
 	});
 
 	it("should format with a default value", () => {
-		const { getByTestId } = render(<InputCurrency value=".01" />);
-		const input = getByTestId("InputCurrency");
+		render(<InputCurrency value=".01" />);
+		const input = screen.getByTestId("InputCurrency");
 
 		expect(input).toHaveValue("0.01");
 	});
 
 	it("should fallback on convert value", () => {
-		const { getByTestId, rerender } = render(<InputCurrency value=".01" />);
-		const input = getByTestId("InputCurrency");
+		const { rerender } = render(<InputCurrency value=".01" />);
+		const input = screen.getByTestId("InputCurrency");
 
 		expect(input).toHaveValue("0.01");
 
@@ -62,8 +62,8 @@ describe("InputCurrency", () => {
 			const [value, setValue] = useState("0.04");
 			return <InputCurrency value={value} onChange={setValue} />;
 		};
-		const { getByTestId } = render(<Component />);
-		const input = getByTestId("InputCurrency");
+		render(<Component />);
+		const input = screen.getByTestId("InputCurrency");
 
 		expect(input).toHaveValue("0.04");
 

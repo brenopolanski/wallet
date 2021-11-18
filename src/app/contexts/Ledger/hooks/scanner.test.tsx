@@ -158,18 +158,18 @@ describe("Use Ledger Scanner", () => {
 			);
 		};
 
-		const { container, getByTestId } = render(
+		const { container } = render(
 			<LedgerProvider transport={transport}>
 				<Component />
 			</LedgerProvider>,
 		);
 
-		fireEvent.click(getByTestId("scan"));
+		fireEvent.click(screen.getByTestId("scan"));
 
 		await waitFor(() => expect(screen.queryAllByRole("listitem")).toHaveLength(1));
 		await waitFor(() => expect(screen.queryAllByText("Balance: Loading")).toHaveLength(0));
 
-		fireEvent.click(getByTestId("input--0"));
+		fireEvent.click(screen.getByTestId("input--0"));
 
 		await waitFor(() => expect(screen.queryAllByText("Selected: false")).toHaveLength(1));
 

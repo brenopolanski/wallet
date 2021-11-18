@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "utils/testing-library";
+import { render, screen } from "utils/testing-library";
 
 import { EmptyBlock } from "./EmptyBlock";
 
@@ -12,9 +12,9 @@ describe("EmptyBlock", () => {
 	});
 
 	it("should render with children", () => {
-		const { getByText } = render(<EmptyBlock>I am a children</EmptyBlock>);
+		render(<EmptyBlock>I am a children</EmptyBlock>);
 
-		expect(getByText("I am a children")).toBeInTheDocument();
+		expect(screen.getByText("I am a children")).toBeInTheDocument();
 	});
 
 	it("should render with size", () => {

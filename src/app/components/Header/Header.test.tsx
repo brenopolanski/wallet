@@ -1,29 +1,29 @@
 import { Button } from "app/components/Button";
 import React from "react";
-import { render } from "utils/testing-library";
+import { render, screen } from "utils/testing-library";
 
 import { Header } from "./Header";
 
 describe("Header", () => {
 	it("should render an header", () => {
-		const { container, asFragment, getByTestId } = render(<Header title="Header test" />);
+		const { container, asFragment } = render(<Header title="Header test" />);
 
 		expect(container).toBeInTheDocument();
-		expect(getByTestId("header__title")).toHaveTextContent("Header test");
+		expect(screen.getByTestId("header__title")).toHaveTextContent("Header test");
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render an header with a subtitle", () => {
-		const { container, asFragment, getByTestId } = render(<Header title="Header test" subtitle="Subtitle test" />);
+		const { container, asFragment } = render(<Header title="Header test" subtitle="Subtitle test" />);
 
 		expect(container).toBeInTheDocument();
-		expect(getByTestId("header__title")).toHaveTextContent("Header test");
-		expect(getByTestId("header__subtitle")).toHaveTextContent("Subtitle test");
+		expect(screen.getByTestId("header__title")).toHaveTextContent("Header test");
+		expect(screen.getByTestId("header__subtitle")).toHaveTextContent("Subtitle test");
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render an header with extra", () => {
-		const { container, asFragment, getAllByTestId, getByTestId } = render(
+		const { container, asFragment } = render(
 			<Header
 				title="Header test"
 				subtitle="Subtitle test"
@@ -37,9 +37,9 @@ describe("Header", () => {
 		);
 
 		expect(container).toBeInTheDocument();
-		expect(getByTestId("header__title")).toHaveTextContent("Header test");
-		expect(getByTestId("header__subtitle")).toHaveTextContent("Subtitle test");
-		expect(getAllByTestId("header__extra")).toHaveLength(2);
+		expect(screen.getByTestId("header__title")).toHaveTextContent("Header test");
+		expect(screen.getByTestId("header__subtitle")).toHaveTextContent("Subtitle test");
+		expect(screen.getAllByTestId("header__extra")).toHaveLength(2);
 		expect(asFragment()).toMatchSnapshot();
 	});
 

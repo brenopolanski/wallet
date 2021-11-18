@@ -44,13 +44,13 @@ describe("Clipboard", () => {
 
 		const onError = jest.fn();
 
-		const { getByTestId } = render(
+		render(
 			<Clipboard variant="icon" data={data} options={{ onError, resetAfter: 1000 }}>
 				<span>Hello!</span>
 			</Clipboard>,
 		);
 
-		fireEvent.click(getByTestId("clipboard-icon__wrapper"));
+		fireEvent.click(screen.getByTestId("clipboard-icon__wrapper"));
 
 		act(() => {
 			jest.runOnlyPendingTimers();
@@ -65,13 +65,13 @@ describe("Clipboard", () => {
 			async (variant) => {
 				const onSuccess = jest.fn();
 
-				const { getByTestId } = render(
+				render(
 					<Clipboard variant={variant} data="" options={{ onSuccess }}>
 						<span>Hello!</span>
 					</Clipboard>,
 				);
 
-				fireEvent.click(getByTestId(`clipboard-${variant}__wrapper`));
+				fireEvent.click(screen.getByTestId(`clipboard-${variant}__wrapper`));
 
 				await waitFor(() => expect(onSuccess).toHaveBeenCalledWith(""));
 			},
@@ -82,13 +82,13 @@ describe("Clipboard", () => {
 			async (variant) => {
 				const onSuccess = jest.fn();
 
-				const { getByTestId } = render(
+				render(
 					<Clipboard variant={variant} data="">
 						<span>Hello!</span>
 					</Clipboard>,
 				);
 
-				fireEvent.click(getByTestId(`clipboard-${variant}__wrapper`));
+				fireEvent.click(screen.getByTestId(`clipboard-${variant}__wrapper`));
 
 				await waitFor(() => expect(onSuccess).not.toHaveBeenCalled());
 			},
@@ -107,13 +107,13 @@ describe("Clipboard", () => {
 			async (variant) => {
 				const onError = jest.fn();
 
-				const { getByTestId } = render(
+				render(
 					<Clipboard variant={variant} data="" options={{ onError }}>
 						<span>Hello!</span>
 					</Clipboard>,
 				);
 
-				fireEvent.click(getByTestId(`clipboard-${variant}__wrapper`));
+				fireEvent.click(screen.getByTestId(`clipboard-${variant}__wrapper`));
 
 				await waitFor(() => expect(onError).toHaveBeenCalledWith());
 			},
@@ -124,13 +124,13 @@ describe("Clipboard", () => {
 			async (variant) => {
 				const onError = jest.fn();
 
-				const { getByTestId } = render(
+				render(
 					<Clipboard variant={variant} data="">
 						<span>Hello!</span>
 					</Clipboard>,
 				);
 
-				fireEvent.click(getByTestId(`clipboard-${variant}__wrapper`));
+				fireEvent.click(screen.getByTestId(`clipboard-${variant}__wrapper`));
 
 				await waitFor(() => expect(onError).not.toHaveBeenCalledWith());
 			},

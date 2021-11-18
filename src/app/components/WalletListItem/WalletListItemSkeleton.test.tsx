@@ -1,11 +1,11 @@
 import React from "react";
-import { render } from "utils/testing-library";
+import { render, screen } from "utils/testing-library";
 
 import { WalletListItemSkeleton } from "./WalletListItemSkeleton";
 
 describe("WalletListItemSkeleton", () => {
 	it.each([true, false])("should render wallet list skeleton when isCompact = %s", (isCompact: boolean) => {
-		const { container, getByTestId } = render(
+		const { container } = render(
 			<table>
 				<tbody data-testid="WalletListSkeleton">
 					<WalletListItemSkeleton isCompact={isCompact} />
@@ -13,7 +13,7 @@ describe("WalletListItemSkeleton", () => {
 			</table>,
 		);
 
-		expect(getByTestId("WalletListSkeleton")).toBeInTheDocument();
+		expect(screen.getByTestId("WalletListSkeleton")).toBeInTheDocument();
 		expect(container).toMatchSnapshot();
 	});
 });

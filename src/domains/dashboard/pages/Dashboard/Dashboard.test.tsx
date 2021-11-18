@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Observer } from "@ledgerhq/hw-transport";
 import { Contracts } from "@payvo/sdk-profiles";
-import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { LedgerProvider } from "app/contexts/Ledger/Ledger";
 import * as useRandomNumberHook from "app/hooks/use-random-number";
@@ -19,6 +18,7 @@ import {
 	getDefaultLedgerTransport,
 	getDefaultProfileId,
 	render,
+	screen,
 	syncDelegates,
 	useDefaultNetMocks,
 	waitFor,
@@ -81,7 +81,7 @@ describe("Dashboard", () => {
 	});
 
 	it("should render", async () => {
-		const { asFragment, getByTestId } = render(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Dashboard />
 			</Route>,
@@ -93,12 +93,12 @@ describe("Dashboard", () => {
 		);
 
 		await waitFor(
-			() => expect(within(getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4),
+			() => expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4),
 			{ timeout: 4000 },
 		);
 
 		await waitFor(() => {
-			expect(getByTestId("Balance__value")).toBeInTheDocument();
+			expect(screen.getByTestId("Balance__value")).toBeInTheDocument();
 		});
 
 		expect(asFragment()).toMatchSnapshot();
@@ -106,7 +106,7 @@ describe("Dashboard", () => {
 
 	it("should show introductory tutorial", async () => {
 		const mockHasCompletedTutorial = jest.spyOn(profile, "hasCompletedIntroductoryTutorial").mockReturnValue(false);
-		const { getByText, getByTestId } = render(
+		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Dashboard />
 			</Route>,
@@ -118,11 +118,11 @@ describe("Dashboard", () => {
 		);
 
 		await waitFor(
-			() => expect(within(getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4),
+			() => expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4),
 			{ timeout: 4000 },
 		);
 
-		expect(getByText(profileTranslations.MODAL_WELCOME.STEP_1_TITLE)).toBeInTheDocument();
+		expect(screen.getByText(profileTranslations.MODAL_WELCOME.STEP_1_TITLE)).toBeInTheDocument();
 
 		mockHasCompletedTutorial.mockRestore();
 	});
@@ -136,7 +136,7 @@ describe("Dashboard", () => {
 		});
 		profile.markIntroductoryTutorialAsComplete();
 
-		const { asFragment, getByTestId, getByText, queryByText, getAllByRole, findByText } = render(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<LedgerProvider transport={transport}>
 					<Dashboard />
@@ -149,21 +149,21 @@ describe("Dashboard", () => {
 			},
 		);
 
-		await waitFor(() => expect(getAllByRole("row")).toHaveLength(5));
+		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(5));
 
-		fireEvent.click(getByText(dashboardTranslations.WALLET_CONTROLS.IMPORT_LEDGER));
+		fireEvent.click(screen.getByText(dashboardTranslations.WALLET_CONTROLS.IMPORT_LEDGER));
 
-		await findByText(walletTranslations.MODAL_LEDGER_WALLET.CONNECT_DEVICE);
+		await screen.findByText(walletTranslations.MODAL_LEDGER_WALLET.CONNECT_DEVICE);
 
-		fireEvent.click(getByTestId("modal__close-btn"));
+		fireEvent.click(screen.getByTestId("modal__close-btn"));
 
 		await waitFor(() =>
-			expect(queryByText(walletTranslations.MODAL_LEDGER_WALLET.CONNECT_DEVICE)).not.toBeInTheDocument(),
+			expect(screen.queryByText(walletTranslations.MODAL_LEDGER_WALLET.CONNECT_DEVICE)).not.toBeInTheDocument(),
 		);
 
-		fireEvent.click(getByText(dashboardTranslations.WALLET_CONTROLS.IMPORT_LEDGER));
+		fireEvent.click(screen.getByText(dashboardTranslations.WALLET_CONTROLS.IMPORT_LEDGER));
 
-		await findByText(walletTranslations.MODAL_LEDGER_WALLET.CONNECT_DEVICE);
+		await screen.findByText(walletTranslations.MODAL_LEDGER_WALLET.CONNECT_DEVICE);
 
 		act(() => {
 			observer!.next({ descriptor: "", type: "add" });
@@ -176,7 +176,7 @@ describe("Dashboard", () => {
 	});
 
 	it("should navigate to create wallet page", async () => {
-		const { asFragment, getByTestId, getByText } = render(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Dashboard />
 			</Route>,
@@ -188,18 +188,18 @@ describe("Dashboard", () => {
 		);
 
 		await waitFor(
-			() => expect(within(getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4),
+			() => expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4),
 			{ timeout: 5000 },
 		);
 
-		fireEvent.click(getByText("Create"));
+		fireEvent.click(screen.getByText("Create"));
 
 		expect(history.location.pathname).toBe(`/profiles/${fixtureProfileId}/wallets/create`);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should navigate to import wallet page", async () => {
-		const { asFragment, getByTestId, getByText } = render(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Dashboard />
 			</Route>,
@@ -211,18 +211,18 @@ describe("Dashboard", () => {
 		);
 
 		await waitFor(
-			() => expect(within(getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4),
+			() => expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4),
 			{ timeout: 5000 },
 		);
 
-		fireEvent.click(getByText("Import"));
+		fireEvent.click(screen.getByText("Import"));
 
 		expect(history.location.pathname).toBe(`/profiles/${fixtureProfileId}/wallets/import`);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render loading state when profile is syncing", async () => {
-		const { asFragment, getByTestId } = render(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Dashboard />
 			</Route>,
@@ -233,7 +233,7 @@ describe("Dashboard", () => {
 		);
 
 		await waitFor(
-			() => expect(within(getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8),
+			() => expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8),
 			{ timeout: 4000 },
 		);
 

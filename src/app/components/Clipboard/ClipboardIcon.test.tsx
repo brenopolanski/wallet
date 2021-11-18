@@ -29,18 +29,18 @@ describe("ClipboardIcon", () => {
 	});
 
 	it("should change the tooltip content when clicked", async () => {
-		const { baseElement, getByTestId } = render(
+		const { baseElement } = render(
 			<Clipboard variant="icon" data="">
 				<span>Hello!</span>
 			</Clipboard>,
 		);
 
-		fireEvent.mouseEnter(getByTestId("clipboard-icon__wrapper"));
+		fireEvent.mouseEnter(screen.getByTestId("clipboard-icon__wrapper"));
 
 		expect(baseElement).toHaveTextContent(translations.CLIPBOARD.TOOLTIP_TEXT);
 		expect(baseElement).not.toHaveTextContent(translations.CLIPBOARD.SUCCESS);
 
-		fireEvent.click(getByTestId("clipboard-icon__wrapper"));
+		fireEvent.click(screen.getByTestId("clipboard-icon__wrapper"));
 
 		await waitFor(() => expect(baseElement).not.toHaveTextContent(translations.CLIPBOARD.TOOLTIP_TEXT));
 

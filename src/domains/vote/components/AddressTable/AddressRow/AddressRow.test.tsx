@@ -7,7 +7,7 @@ import React from "react";
 import { Route } from "react-router-dom";
 import { data } from "tests/fixtures/coins/ark/devnet/delegates.json";
 import walletMock from "tests/fixtures/coins/ark/devnet/wallets/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD.json";
-import { env, fireEvent, getDefaultProfileId, MNEMONICS, render, syncDelegates } from "utils/testing-library";
+import { env, fireEvent, getDefaultProfileId, MNEMONICS, render, screen, syncDelegates } from "utils/testing-library";
 
 import { AddressRow } from "./AddressRow";
 
@@ -80,7 +80,7 @@ describe("AddressRow", () => {
 	});
 
 	it.each([true, false])("should render when isCompact = %s", async (isCompact: boolean) => {
-		const { asFragment, container, findByTestId } = render(
+		const { asFragment, container } = render(
 			<Route path="/profiles/:profileId/votes">
 				<table>
 					<tbody>
@@ -95,7 +95,7 @@ describe("AddressRow", () => {
 
 		expect(container).toBeInTheDocument();
 
-		await findByTestId("StatusIcon__icon");
+		await screen.findByTestId("StatusIcon__icon");
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -175,7 +175,7 @@ describe("AddressRow", () => {
 
 	it("should render for a multisignature wallet", async () => {
 		const isMultiSignatureSpy = jest.spyOn(wallet, "isMultiSignature").mockImplementation(() => true);
-		const { asFragment, container, findByTestId } = render(
+		const { asFragment, container } = render(
 			<Route path="/profiles/:profileId/votes">
 				<table>
 					<tbody>
@@ -190,7 +190,7 @@ describe("AddressRow", () => {
 
 		expect(container).toBeInTheDocument();
 
-		await findByTestId("StatusIcon__icon");
+		await screen.findByTestId("StatusIcon__icon");
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -198,7 +198,7 @@ describe("AddressRow", () => {
 	});
 
 	it("should render when wallet not found for votes", async () => {
-		const { asFragment, findByTestId } = render(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/votes">
 				<table>
 					<tbody>
@@ -212,15 +212,15 @@ describe("AddressRow", () => {
 			},
 		);
 
-		await findByTestId("StatusIcon__icon");
-		await findByTestId("AddressRow__select-0");
-		await findByTestId("AddressRow__select-1");
+		await screen.findByTestId("StatusIcon__icon");
+		await screen.findByTestId("AddressRow__select-0");
+		await screen.findByTestId("AddressRow__select-1");
 
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render when wallet hasn't voted", async () => {
-		const { asFragment, findAllByTestId, findByTestId } = render(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/votes">
 				<table>
 					<tbody>
@@ -234,9 +234,9 @@ describe("AddressRow", () => {
 			},
 		);
 
-		await findAllByTestId("StatusIcon__icon");
-		await findByTestId("AddressRow__select-0");
-		await findByTestId("AddressRow__select-1");
+		await screen.findAllByTestId("StatusIcon__icon");
+		await screen.findByTestId("AddressRow__select-0");
+		await screen.findByTestId("AddressRow__select-1");
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -258,7 +258,7 @@ describe("AddressRow", () => {
 			},
 		]);
 
-		const { container, asFragment, findAllByTestId } = render(
+		const { container, asFragment } = render(
 			<Route path="/profiles/:profileId/votes">
 				<table>
 					<tbody>
@@ -271,7 +271,7 @@ describe("AddressRow", () => {
 			},
 		);
 
-		await findAllByTestId("StatusIcon__icon");
+		await screen.findAllByTestId("StatusIcon__icon");
 
 		expect(container).toHaveTextContent("circle-check-mark.svg");
 
@@ -297,7 +297,7 @@ describe("AddressRow", () => {
 			},
 		]);
 
-		const { container, asFragment, findAllByTestId } = render(
+		const { container, asFragment } = render(
 			<Route path="/profiles/:profileId/votes">
 				<table>
 					<tbody>
@@ -310,7 +310,7 @@ describe("AddressRow", () => {
 			},
 		);
 
-		await findAllByTestId("StatusIcon__icon");
+		await screen.findAllByTestId("StatusIcon__icon");
 
 		expect(container).toHaveTextContent("clock.svg");
 
@@ -336,7 +336,7 @@ describe("AddressRow", () => {
 			},
 		]);
 
-		const { container, asFragment, findAllByTestId } = render(
+		const { container, asFragment } = render(
 			<Route path="/profiles/:profileId/votes">
 				<table>
 					<tbody>
@@ -349,7 +349,7 @@ describe("AddressRow", () => {
 			},
 		);
 
-		await findAllByTestId("StatusIcon__icon");
+		await screen.findAllByTestId("StatusIcon__icon");
 
 		expect(container).toHaveTextContent("circle-cross.svg");
 
@@ -364,7 +364,7 @@ describe("AddressRow", () => {
 		await wallet.synchroniser().coin();
 
 		const onSelect = jest.fn();
-		const { asFragment, container, getByTestId, findByTestId } = render(
+		const { asFragment, container } = render(
 			<Route path="/profiles/:profileId/votes">
 				<table>
 					<tbody>
@@ -376,9 +376,9 @@ describe("AddressRow", () => {
 				routes: [`/profiles/${profile.id()}/votes`],
 			},
 		);
-		const selectButton = getByTestId("AddressRow__select-0");
+		const selectButton = screen.getByTestId("AddressRow__select-0");
 
-		await findByTestId("StatusIcon__icon");
+		await screen.findByTestId("StatusIcon__icon");
 
 		fireEvent.click(selectButton);
 

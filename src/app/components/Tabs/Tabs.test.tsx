@@ -1,5 +1,5 @@
 import React from "react";
-import { fireEvent, render } from "utils/testing-library";
+import { fireEvent, render, screen } from "utils/testing-library";
 
 import { Tab, TabList, TabPanel, Tabs } from "./Tabs";
 
@@ -71,7 +71,7 @@ describe("Tabs", () => {
 	});
 
 	it("should react to use effect call", () => {
-		const { container, asFragment, getByTestId } = render(
+		const { container, asFragment } = render(
 			<Tabs activeId={2}>
 				<TabList>
 					<Tab tabId={1}>First</Tab>
@@ -82,15 +82,15 @@ describe("Tabs", () => {
 			</Tabs>,
 		);
 
-		fireEvent.click(getByTestId("tabs__tab-button-1"));
+		fireEvent.click(screen.getByTestId("tabs__tab-button-1"));
 
 		expect(container).toBeInTheDocument();
-		expect(getByTestId("tab-pabel__active-panel")).toHaveTextContent("1");
+		expect(screen.getByTestId("tab-pabel__active-panel")).toHaveTextContent("1");
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should handle switching tabs", () => {
-		const { getByTestId } = render(
+		render(
 			<Tabs activeId={1}>
 				<TabList>
 					<Tab tabId={1}>First</Tab>
@@ -102,8 +102,8 @@ describe("Tabs", () => {
 			</Tabs>,
 		);
 
-		const firstTab = getByTestId("tabs__tab-button-1");
-		const secondTab = getByTestId("tabs__tab-button-2");
+		const firstTab = screen.getByTestId("tabs__tab-button-1");
+		const secondTab = screen.getByTestId("tabs__tab-button-2");
 
 		expect(firstTab).toHaveAttribute("aria-selected", "true");
 		expect(secondTab).toHaveAttribute("aria-selected", "false");
@@ -120,7 +120,7 @@ describe("Tabs", () => {
 
 		fireEvent.keyDown(document.activeElement, { code: "Enter", key: "Enter" });
 
-		expect(getByTestId("tab-pabel__active-panel")).toHaveTextContent("2");
+		expect(screen.getByTestId("tab-pabel__active-panel")).toHaveTextContent("2");
 
 		expect(firstTab).toHaveAttribute("aria-selected", "false");
 		expect(secondTab).toHaveAttribute("aria-selected", "true");
@@ -133,7 +133,7 @@ describe("Tabs", () => {
 
 		fireEvent.keyDown(document.activeElement, { code: "Space", key: " " });
 
-		expect(getByTestId("tab-pabel__active-panel")).toHaveTextContent("1");
+		expect(screen.getByTestId("tab-pabel__active-panel")).toHaveTextContent("1");
 
 		// go left to second tab
 		fireEvent.keyDown(document.activeElement, { code: "ArrowLeft", key: "ArrowLeft" });
@@ -143,7 +143,7 @@ describe("Tabs", () => {
 
 		fireEvent.keyDown(document.activeElement, { code: "Enter", key: "Enter" });
 
-		expect(getByTestId("tab-pabel__active-panel")).toHaveTextContent("2");
+		expect(screen.getByTestId("tab-pabel__active-panel")).toHaveTextContent("2");
 
 		// go left to first tab
 		fireEvent.keyDown(document.activeElement, { code: "ArrowLeft", key: "ArrowLeft" });
@@ -153,7 +153,7 @@ describe("Tabs", () => {
 
 		fireEvent.keyDown(document.activeElement, { code: "Space", key: " " });
 
-		expect(getByTestId("tab-pabel__active-panel")).toHaveTextContent("1");
+		expect(screen.getByTestId("tab-pabel__active-panel")).toHaveTextContent("1");
 
 		// tab away
 		fireEvent.keyDown(document.activeElement, { code: "Tab", key: "Tab" });

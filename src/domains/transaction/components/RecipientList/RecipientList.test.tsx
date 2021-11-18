@@ -146,7 +146,7 @@ describe("RecipientList", () => {
 	it("should call onRemove callback to remove recipient", async () => {
 		const onRemove = jest.fn();
 
-		const { getAllByTestId } = render(
+		render(
 			<Route path="/profiles/:profileId">
 				<RecipientList
 					onRemove={onRemove}
@@ -162,7 +162,7 @@ describe("RecipientList", () => {
 			},
 		);
 
-		const removeButton = getAllByTestId("recipient-list__remove-recipient");
+		const removeButton = screen.getAllByTestId("recipient-list__remove-recipient");
 
 		expect(removeButton[0]).toBeInTheDocument();
 
@@ -174,7 +174,7 @@ describe("RecipientList", () => {
 	it("should not call onRemove callback if not provided", async () => {
 		const onRemove = jest.fn();
 
-		const { getAllByTestId } = render(
+		render(
 			<Route path="/profiles/:profileId">
 				<RecipientList
 					recipients={recipients}
@@ -189,7 +189,7 @@ describe("RecipientList", () => {
 			},
 		);
 
-		const removeButton = getAllByTestId("recipient-list__remove-recipient");
+		const removeButton = screen.getAllByTestId("recipient-list__remove-recipient");
 
 		expect(removeButton[0]).toBeInTheDocument();
 

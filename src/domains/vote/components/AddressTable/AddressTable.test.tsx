@@ -68,7 +68,7 @@ describe("AddressTable", () => {
 			throw new Error("error");
 		});
 
-		const { asFragment, container, getByTestId } = render(
+		const { asFragment, container } = render(
 			<Route path="/profiles/:profileId">
 				<AddressTable wallets={[wallet]} />
 			</Route>,
@@ -79,7 +79,7 @@ describe("AddressTable", () => {
 
 		expect(container).toBeInTheDocument();
 
-		await waitFor(() => expect(() => getByTestId("StatusIcon__icon")).toThrow(/Unable to find an element by/));
+		await waitFor(() => expect(() => screen.getByTestId("StatusIcon__icon")).toThrow(/Unable to find an element by/));
 
 		expect(asFragment()).toMatchSnapshot();
 

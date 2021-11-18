@@ -46,7 +46,7 @@ describe("MnemonicVerification", () => {
 	it("should verify mnemonic", () => {
 		const wordPositions = [1, 2, 3];
 
-		const { asFragment, getByText } = render(
+		const { asFragment } = render(
 			<MnemonicVerification
 				mnemonic={mnemonic}
 				optionsLimit={limit}
@@ -56,20 +56,20 @@ describe("MnemonicVerification", () => {
 		);
 
 		const firstTab = asFragment();
-		const wrongButton = getByText(mnemonicWords[4]);
+		const wrongButton = screen.getByText(mnemonicWords[4]);
 		fireEvent.click(wrongButton);
 
 		expect(firstTab).toStrictEqual(asFragment());
 
-		const firstButton = getByText(mnemonicWords[wordPositions[0] - 1]);
+		const firstButton = screen.getByText(mnemonicWords[wordPositions[0] - 1]);
 		fireEvent.click(firstButton);
 
 		expect(firstTab).not.toStrictEqual(asFragment());
 
-		const secondButton = getByText(mnemonicWords[wordPositions[1] - 1]);
+		const secondButton = screen.getByText(mnemonicWords[wordPositions[1] - 1]);
 		fireEvent.click(secondButton);
 
-		const thirdButton = getByText(mnemonicWords[wordPositions[2] - 1]);
+		const thirdButton = screen.getByText(mnemonicWords[wordPositions[2] - 1]);
 		fireEvent.click(thirdButton);
 
 		expect(handleComplete).toHaveBeenCalledWith();

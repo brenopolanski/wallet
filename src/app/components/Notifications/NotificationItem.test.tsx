@@ -1,7 +1,7 @@
 import { Contracts } from "@payvo/sdk-profiles";
 import nock from "nock";
 import React from "react";
-import { env, fireEvent, getDefaultProfileId, render, waitFor } from "utils/testing-library";
+import { env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
 
 import { NotificationItem } from "./NotificationItem";
 
@@ -35,7 +35,7 @@ describe("Notifications", () => {
 
 	it("should emit onAction event", async () => {
 		const onAction = jest.fn();
-		const { getByTestId } = render(
+		render(
 			<table>
 				<tbody>
 					<NotificationItem {...notification} onAction={onAction} />
@@ -43,7 +43,7 @@ describe("Notifications", () => {
 			</table>,
 		);
 
-		fireEvent.click(getByTestId("NotificationItem__action"));
+		fireEvent.click(screen.getByTestId("NotificationItem__action"));
 
 		await waitFor(() => expect(onAction).toHaveBeenCalledWith("29fdd62d-1c28-4d2c-b46f-667868c5afe1"));
 	});
@@ -73,7 +73,7 @@ describe("Notifications", () => {
 
 		const releaseNotification = profile.notifications().releases().recent()[0];
 
-		const { container, getByTestId } = render(
+		const { container } = render(
 			<table>
 				<tbody>
 					<NotificationItem {...releaseNotification} onVisibilityChange={onVisibilityChange} />
@@ -81,7 +81,7 @@ describe("Notifications", () => {
 			</table>,
 		);
 
-		expect(getByTestId("NotificationItem__action")).toHaveTextContent("Update");
+		expect(screen.getByTestId("NotificationItem__action")).toHaveTextContent("Update");
 		expect(container).toMatchSnapshot();
 	});
 });

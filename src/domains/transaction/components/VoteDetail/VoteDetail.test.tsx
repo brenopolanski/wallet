@@ -6,7 +6,7 @@ import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
 import { TransactionFixture } from "tests/fixtures/transactions";
-import { env, getDefaultProfileId, render, syncDelegates, waitFor } from "utils/testing-library";
+import { env, getDefaultProfileId, render, screen, syncDelegates, waitFor } from "utils/testing-library";
 
 import { VoteDetail } from "./VoteDetail";
 
@@ -50,7 +50,7 @@ describe("VoteDetail", () => {
 	});
 
 	it("should not render if not open", async () => {
-		const { asFragment, getByTestId } = render(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<VoteDetail isOpen={false} transaction={TransactionFixture} />
 			</Route>,
@@ -60,13 +60,13 @@ describe("VoteDetail", () => {
 			},
 		);
 
-		await waitFor(() => expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/));
+		await waitFor(() => expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/));
 
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render a modal with votes", async () => {
-		const { asFragment, getByTestId, findByText } = render(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<VoteDetail
 					isOpen={true}
@@ -84,17 +84,17 @@ describe("VoteDetail", () => {
 		);
 
 		await waitFor(() =>
-			expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_VOTE_DETAIL.TITLE),
+			expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_VOTE_DETAIL.TITLE),
 		);
 
-		await findByText("Votes (1)");
-		await findByText("delegate-0");
+		await screen.findByText("Votes (1)");
+		await screen.findByText("delegate-0");
 
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render a modal with unvotes", async () => {
-		const { asFragment, getByTestId, findByText } = render(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<VoteDetail
 					isOpen={true}
@@ -112,17 +112,17 @@ describe("VoteDetail", () => {
 		);
 
 		await waitFor(() =>
-			expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_VOTE_DETAIL.TITLE),
+			expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_VOTE_DETAIL.TITLE),
 		);
 
-		await findByText("Unvotes (1)");
-		await findByText("delegate-0");
+		await screen.findByText("Unvotes (1)");
+		await screen.findByText("delegate-0");
 
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render a modal with votes and unvotes", async () => {
-		const { asFragment, getByTestId, getAllByText, findByText } = render(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<VoteDetail
 					isOpen={true}
@@ -140,12 +140,12 @@ describe("VoteDetail", () => {
 		);
 
 		await waitFor(() =>
-			expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_VOTE_DETAIL.TITLE),
+			expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_VOTE_DETAIL.TITLE),
 		);
 
-		await findByText("Votes (1)");
-		await findByText("Unvotes (1)");
-		await waitFor(() => expect(getAllByText("delegate-0")).toHaveLength(2));
+		await screen.findByText("Votes (1)");
+		await screen.findByText("Unvotes (1)");
+		await waitFor(() => expect(screen.getAllByText("delegate-0")).toHaveLength(2));
 
 		expect(asFragment()).toMatchSnapshot();
 	});

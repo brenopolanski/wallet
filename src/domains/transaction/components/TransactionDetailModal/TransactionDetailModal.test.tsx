@@ -7,7 +7,7 @@ import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
 import { TransactionFixture } from "tests/fixtures/transactions";
-import { env, getDefaultProfileId, render, syncDelegates, waitFor } from "utils/testing-library";
+import { env, getDefaultProfileId, render, screen, syncDelegates, waitFor } from "utils/testing-library";
 
 import { TransactionDetailModal } from "./TransactionDetailModal";
 
@@ -43,7 +43,7 @@ describe("TransactionDetailModal", () => {
 	});
 
 	it("should not render if not open", () => {
-		const { asFragment, getByTestId } = render(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<TransactionDetailModal
 					isOpen={false}
@@ -60,12 +60,12 @@ describe("TransactionDetailModal", () => {
 			},
 		);
 
-		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render a transfer modal", () => {
-		const { asFragment, getByTestId } = render(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<TransactionDetailModal
 					isOpen={true}
@@ -82,14 +82,14 @@ describe("TransactionDetailModal", () => {
 			},
 		);
 
-		expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_TRANSFER_DETAIL.TITLE);
+		expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_TRANSFER_DETAIL.TITLE);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render a multi signature modal", async () => {
 		await profile.wallets().restore();
 
-		const { asFragment, getByTestId } = render(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<TransactionDetailModal
 					isOpen={true}
@@ -110,7 +110,7 @@ describe("TransactionDetailModal", () => {
 		);
 
 		await waitFor(() =>
-			expect(getByTestId("modal__inner")).toHaveTextContent(
+			expect(screen.getByTestId("modal__inner")).toHaveTextContent(
 				translations.MODAL_MULTISIGNATURE_DETAIL.STEP_1.TITLE,
 			),
 		);
@@ -119,7 +119,7 @@ describe("TransactionDetailModal", () => {
 	});
 
 	it("should render a multi payment modal", () => {
-		const { asFragment, getByTestId } = render(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<TransactionDetailModal
 					isOpen={true}
@@ -143,12 +143,12 @@ describe("TransactionDetailModal", () => {
 			},
 		);
 
-		expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_TRANSFER_DETAIL.TITLE);
+		expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_TRANSFER_DETAIL.TITLE);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render a ipfs modal", () => {
-		const { asFragment, getByTestId } = render(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<TransactionDetailModal
 					isOpen={true}
@@ -168,7 +168,7 @@ describe("TransactionDetailModal", () => {
 			},
 		);
 
-		expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_IPFS_DETAIL.TITLE);
+		expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_IPFS_DETAIL.TITLE);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -184,7 +184,7 @@ describe("TransactionDetailModal", () => {
 			),
 		);
 
-		const { asFragment, getByTestId } = render(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<TransactionDetailModal
 					isOpen={true}
@@ -201,12 +201,12 @@ describe("TransactionDetailModal", () => {
 			},
 		);
 
-		expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_VOTE_DETAIL.TITLE);
+		expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_VOTE_DETAIL.TITLE);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render a delegate registration modal", () => {
-		const { asFragment, getByTestId } = render(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<TransactionDetailModal
 					isOpen={true}
@@ -224,12 +224,12 @@ describe("TransactionDetailModal", () => {
 			},
 		);
 
-		expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_DELEGATE_REGISTRATION_DETAIL.TITLE);
+		expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_DELEGATE_REGISTRATION_DETAIL.TITLE);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render a delegate resignation modal", () => {
-		const { asFragment, getByTestId } = render(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<TransactionDetailModal
 					isOpen={true}
@@ -250,12 +250,12 @@ describe("TransactionDetailModal", () => {
 			},
 		);
 
-		expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_DELEGATE_RESIGNATION_DETAIL.TITLE);
+		expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_DELEGATE_RESIGNATION_DETAIL.TITLE);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render a second signature modal", () => {
-		const { asFragment, getByTestId } = render(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<TransactionDetailModal
 					isOpen={true}
@@ -272,7 +272,7 @@ describe("TransactionDetailModal", () => {
 			},
 		);
 
-		expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SECOND_SIGNATURE_DETAIL.TITLE);
+		expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SECOND_SIGNATURE_DETAIL.TITLE);
 		expect(asFragment()).toMatchSnapshot();
 	});
 

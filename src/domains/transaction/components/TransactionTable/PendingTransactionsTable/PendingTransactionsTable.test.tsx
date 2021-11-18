@@ -299,7 +299,7 @@ describe("Signed Transaction Table", () => {
 		const onClick = jest.fn();
 		mockPendingTransfers(wallet);
 
-		const { getAllByTestId } = render(
+		render(
 			<PendingTransactions
 				isCompact={false}
 				wallet={wallet}
@@ -308,7 +308,7 @@ describe("Signed Transaction Table", () => {
 			/>,
 		);
 
-		fireEvent.click(getAllByTestId("TableRow")[0]);
+		fireEvent.click(screen.getAllByTestId("TableRow")[0]);
 
 		await waitFor(() => expect(onClick).toHaveBeenCalledWith(expect.any(DTO.ExtendedSignedTransactionData)));
 
@@ -320,7 +320,7 @@ describe("Signed Transaction Table", () => {
 		const canBeBroadcastedMock = jest.spyOn(wallet.transaction(), "canBeBroadcasted").mockReturnValue(true);
 		const canBeSignedMock = jest.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(false);
 
-		const { getAllByTestId } = render(
+		render(
 			<PendingTransactions
 				isCompact={false}
 				wallet={wallet}
@@ -328,9 +328,9 @@ describe("Signed Transaction Table", () => {
 			/>,
 		);
 
-		await waitFor(() => expect(getAllByTestId("TransactionRowRecipientLabel")).toHaveLength(1));
+		await waitFor(() => expect(screen.getAllByTestId("TransactionRowRecipientLabel")).toHaveLength(1));
 
-		expect(getAllByTestId("TransactionRowRecipientLabel")[0]).toHaveTextContent(
+		expect(screen.getAllByTestId("TransactionRowRecipientLabel")[0]).toHaveTextContent(
 			translations.TRANSACTION.TRANSACTION_TYPES.MULTI_SIGNATURE,
 		);
 
@@ -397,7 +397,7 @@ describe("Signed Transaction Table", () => {
 		jest.spyOn(wallet.transaction(), "isAwaitingOurSignature").mockReturnValue(false);
 		jest.spyOn(wallet.transaction(), "isAwaitingOtherSignatures").mockReturnValue(false);
 
-		const { asFragment, getByTestId } = render(
+		const { asFragment } = render(
 			<PendingTransactions
 				isCompact={false}
 				wallet={wallet}
@@ -405,7 +405,7 @@ describe("Signed Transaction Table", () => {
 			/>,
 		);
 		await waitFor(() =>
-			expect(getByTestId("TransactionRowRecipientLabel")).toHaveTextContent(
+			expect(screen.getByTestId("TransactionRowRecipientLabel")).toHaveTextContent(
 				translations.TRANSACTION.TRANSACTION_TYPES.MULTI_SIGNATURE,
 			),
 		);
@@ -424,7 +424,7 @@ describe("Signed Transaction Table", () => {
 		jest.spyOn(wallet.transaction(), "isAwaitingOtherSignatures").mockReturnValue(false);
 		jest.spyOn(wallet.transaction(), "isAwaitingConfirmation").mockReturnValue(true);
 
-		const { asFragment, getByTestId } = render(
+		const { asFragment } = render(
 			<PendingTransactions
 				isCompact={false}
 				wallet={wallet}
@@ -432,7 +432,7 @@ describe("Signed Transaction Table", () => {
 			/>,
 		);
 		await waitFor(() =>
-			expect(getByTestId("TransactionRowRecipientLabel")).toHaveTextContent(
+			expect(screen.getByTestId("TransactionRowRecipientLabel")).toHaveTextContent(
 				translations.TRANSACTION.TRANSACTION_TYPES.MULTI_SIGNATURE,
 			),
 		);
@@ -574,7 +574,7 @@ describe("Signed Transaction Table", () => {
 			.mockReturnValue(true);
 		const canBeSignedMock = jest.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(false);
 
-		const { getAllByTestId, getByTestId } = render(
+		render(
 			<PendingTransactions
 				isCompact={false}
 				wallet={wallet}
@@ -583,19 +583,19 @@ describe("Signed Transaction Table", () => {
 			/>,
 		);
 
-		await waitFor(() => expect(getAllByTestId("TransactionRowRecipientLabel")).toHaveLength(1));
+		await waitFor(() => expect(screen.getAllByTestId("TransactionRowRecipientLabel")).toHaveLength(1));
 
-		expect(getAllByTestId("TransactionRowRecipientLabel")[0]).toHaveTextContent(
+		expect(screen.getAllByTestId("TransactionRowRecipientLabel")[0]).toHaveTextContent(
 			translations.TRANSACTION.TRANSACTION_TYPES.MULTI_SIGNATURE,
 		);
 
-		fireEvent.click(getAllByTestId("TableRemoveButton")[0]);
+		fireEvent.click(screen.getAllByTestId("TableRemoveButton")[0]);
 
-		expect(getByTestId("modal__inner")).toBeInTheDocument();
-		expect(getByTestId("ConfirmRemovePendingTransaction__remove")).toBeInTheDocument();
-		expect(getByTestId("ConfirmRemovePendingTransaction__cancel")).toBeInTheDocument();
+		expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
+		expect(screen.getByTestId("ConfirmRemovePendingTransaction__remove")).toBeInTheDocument();
+		expect(screen.getByTestId("ConfirmRemovePendingTransaction__cancel")).toBeInTheDocument();
 
-		fireEvent.click(getByTestId("ConfirmRemovePendingTransaction__remove"));
+		fireEvent.click(screen.getByTestId("ConfirmRemovePendingTransaction__remove"));
 
 		await waitFor(() => expect(onRemove).toHaveBeenCalledWith(expect.any(DTO.ExtendedSignedTransactionData)));
 
@@ -611,7 +611,7 @@ describe("Signed Transaction Table", () => {
 			.mockReturnValue(true);
 		const canBeSignedMock = jest.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(false);
 
-		const { getAllByTestId, getByTestId } = render(
+		render(
 			<PendingTransactions
 				isCompact={false}
 				wallet={wallet}
@@ -620,20 +620,20 @@ describe("Signed Transaction Table", () => {
 			/>,
 		);
 
-		await waitFor(() => expect(getAllByTestId("TransactionRowRecipientLabel")).toHaveLength(1));
+		await waitFor(() => expect(screen.getAllByTestId("TransactionRowRecipientLabel")).toHaveLength(1));
 
-		expect(getAllByTestId("TransactionRowRecipientLabel")[0]).toHaveTextContent(
+		expect(screen.getAllByTestId("TransactionRowRecipientLabel")[0]).toHaveTextContent(
 			translations.TRANSACTION.TRANSACTION_TYPES.MULTI_SIGNATURE,
 		);
 
-		fireEvent.click(getAllByTestId("TableRemoveButton")[0]);
+		fireEvent.click(screen.getAllByTestId("TableRemoveButton")[0]);
 
-		expect(getByTestId("modal__inner")).toBeInTheDocument();
-		expect(getByTestId("ConfirmRemovePendingTransaction__cancel")).toBeInTheDocument();
+		expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
+		expect(screen.getByTestId("ConfirmRemovePendingTransaction__cancel")).toBeInTheDocument();
 
-		fireEvent.click(getByTestId("ConfirmRemovePendingTransaction__cancel"));
+		fireEvent.click(screen.getByTestId("ConfirmRemovePendingTransaction__cancel"));
 
-		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
 		canBeSignedMock.mockReset();
 		isMultiSignatureReadyMock.mockRestore();

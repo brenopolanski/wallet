@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/require-await */
 import * as updaterHook from "app/hooks/use-updater";
 import React from "react";
-import { fireEvent, render, waitFor } from "utils/testing-library";
+import { fireEvent, render, screen, waitFor } from "utils/testing-library";
 
 import { FirstStep } from "./Step1";
 import { SecondStep } from "./Step2";
@@ -10,68 +10,68 @@ import { WalletUpdate } from "./WalletUpdate";
 
 describe("WalletUpdate", () => {
 	it("should not render if not open", () => {
-		const { asFragment, getByTestId } = render(<WalletUpdate isOpen={false} />);
+		const { asFragment } = render(<WalletUpdate isOpen={false} />);
 
-		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render 1st step", () => {
-		const { asFragment, getByTestId } = render(<FirstStep />);
+		const { asFragment } = render(<FirstStep />);
 
-		expect(getByTestId("WalletUpdate__first-step")).toBeInTheDocument();
+		expect(screen.getByTestId("WalletUpdate__first-step")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render 2nd step", () => {
-		const { asFragment, getByTestId } = render(<SecondStep />);
+		const { asFragment } = render(<SecondStep />);
 
-		expect(getByTestId("WalletUpdate__second-step")).toBeInTheDocument();
+		expect(screen.getByTestId("WalletUpdate__second-step")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render 2nd step with progress status", () => {
-		const { asFragment, getByTestId } = render(<SecondStep percent={20} />);
+		const { asFragment } = render(<SecondStep percent={20} />);
 
-		expect(getByTestId("WalletUpdate__second-step")).toBeInTheDocument();
+		expect(screen.getByTestId("WalletUpdate__second-step")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render 3rd step", () => {
-		const { asFragment, getByTestId } = render(<ThirdStep />);
+		const { asFragment } = render(<ThirdStep />);
 
-		expect(getByTestId("WalletUpdate__third-step")).toBeInTheDocument();
+		expect(screen.getByTestId("WalletUpdate__third-step")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render", async () => {
-		const { asFragment, findByTestId } = render(<WalletUpdate isOpen={true} />);
-		await findByTestId("WalletUpdate__first-step");
+		const { asFragment } = render(<WalletUpdate isOpen={true} />);
+		await screen.findByTestId("WalletUpdate__first-step");
 
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should handle close", async () => {
 		const onClose = jest.fn();
-		const { getByTestId, findByTestId } = render(<WalletUpdate isOpen={true} onClose={onClose} />);
-		await findByTestId("WalletUpdate__first-step");
-		fireEvent.click(getByTestId("modal__close-btn"));
+		render(<WalletUpdate isOpen={true} onClose={onClose} />);
+		await screen.findByTestId("WalletUpdate__first-step");
+		fireEvent.click(screen.getByTestId("modal__close-btn"));
 		await waitFor(() => expect(onClose).toHaveBeenCalledWith());
 	});
 
 	it("should handle cancel", async () => {
 		const onCancel = jest.fn();
-		const { getByTestId, findByTestId } = render(<WalletUpdate isOpen={true} onCancel={onCancel} />);
-		await findByTestId("WalletUpdate__first-step");
-		fireEvent.click(getByTestId("WalletUpdate__cancel-button"));
+		render(<WalletUpdate isOpen={true} onCancel={onCancel} />);
+		await screen.findByTestId("WalletUpdate__first-step");
+		fireEvent.click(screen.getByTestId("WalletUpdate__cancel-button"));
 		await waitFor(() => expect(onCancel).toHaveBeenCalledWith());
 	});
 
 	it("should handle update", async () => {
-		const { getByTestId, findByTestId } = render(<WalletUpdate isOpen={true} />);
-		await findByTestId("WalletUpdate__first-step");
-		fireEvent.click(getByTestId("WalletUpdate__update-button"));
-		await findByTestId("WalletUpdate__second-step");
+		render(<WalletUpdate isOpen={true} />);
+		await screen.findByTestId("WalletUpdate__first-step");
+		fireEvent.click(screen.getByTestId("WalletUpdate__update-button"));
+		await screen.findByTestId("WalletUpdate__second-step");
 	});
 
 	it("should handle install", async () => {
@@ -82,8 +82,8 @@ describe("WalletUpdate", () => {
 			quitInstall,
 		});
 
-		const { getByTestId } = render(<WalletUpdate isOpen={true} />);
-		fireEvent.click(getByTestId("WalletUpdate__install-button"));
+		render(<WalletUpdate isOpen={true} />);
+		fireEvent.click(screen.getByTestId("WalletUpdate__install-button"));
 		await waitFor(() => expect(quitInstall).toHaveBeenCalledWith(undefined));
 	});
 });

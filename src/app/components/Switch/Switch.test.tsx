@@ -1,4 +1,4 @@
-import { fireEvent, render } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import React, { useState } from "react";
 
 import { Switch, SwitchOption } from "./Switch";
@@ -25,11 +25,11 @@ describe("Switch", () => {
 	});
 
 	it("should render", () => {
-		const { asFragment, getByRole, getByText } = render(<Wrapper />);
+		const { asFragment } = render(<Wrapper />);
 
-		expect(getByRole("checkbox")).toBeInTheDocument();
-		expect(getByText("Option A")).toBeInTheDocument();
-		expect(getByText("Option B")).toBeInTheDocument();
+		expect(screen.getByRole("checkbox")).toBeInTheDocument();
+		expect(screen.getByText("Option A")).toBeInTheDocument();
+		expect(screen.getByText("Option B")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -50,53 +50,53 @@ describe("Switch", () => {
 	});
 
 	it("should render disabled", () => {
-		const { asFragment, getByRole } = render(
+		const { asFragment } = render(
 			<Switch disabled value="a" onChange={onChange} leftOption={leftOption} rightOption={rightOption} />,
 		);
 
-		expect(getByRole("checkbox")).toBeDisabled();
-		expect(getByRole("checkbox")).not.toHaveAttribute("checked", "");
+		expect(screen.getByRole("checkbox")).toBeDisabled();
+		expect(screen.getByRole("checkbox")).not.toHaveAttribute("checked", "");
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should allow changing the selected option by clicking the handle", () => {
-		const { getByRole } = render(<Wrapper />);
+		render(<Wrapper />);
 
-		fireEvent.click(getByRole("checkbox"));
+		fireEvent.click(screen.getByRole("checkbox"));
 
 		expect(onChange).toHaveBeenCalledWith("b");
-		expect(getByRole("checkbox")).toBeChecked();
+		expect(screen.getByRole("checkbox")).toBeChecked();
 
-		fireEvent.click(getByRole("checkbox"));
+		fireEvent.click(screen.getByRole("checkbox"));
 
 		expect(onChange).toHaveBeenCalledWith("a");
-		expect(getByRole("checkbox")).not.toBeChecked();
+		expect(screen.getByRole("checkbox")).not.toBeChecked();
 	});
 
 	it("should allow changing the selected option by clicking the option text", () => {
-		const { getByRole, getByText } = render(<Wrapper />);
+		render(<Wrapper />);
 
-		fireEvent.click(getByText("Option B"));
+		fireEvent.click(screen.getByText("Option B"));
 
 		expect(onChange).toHaveBeenCalledWith("b");
-		expect(getByRole("checkbox")).toBeChecked();
+		expect(screen.getByRole("checkbox")).toBeChecked();
 
-		fireEvent.click(getByText("Option A"));
+		fireEvent.click(screen.getByText("Option A"));
 
 		expect(onChange).toHaveBeenCalledWith("a");
-		expect(getByRole("checkbox")).not.toBeChecked();
+		expect(screen.getByRole("checkbox")).not.toBeChecked();
 	});
 
 	it("should not select option by clicking the option text when disabled", () => {
-		const { getByRole, getByText } = render(
+		render(
 			<Switch disabled value="a" onChange={onChange} leftOption={leftOption} rightOption={rightOption} />,
 		);
 
-		expect(getByRole("checkbox")).not.toBeChecked();
+		expect(screen.getByRole("checkbox")).not.toBeChecked();
 
-		fireEvent.click(getByText("Option B"));
+		fireEvent.click(screen.getByText("Option B"));
 
 		expect(onChange).not.toHaveBeenCalled();
-		expect(getByRole("checkbox")).not.toBeChecked();
+		expect(screen.getByRole("checkbox")).not.toBeChecked();
 	});
 });

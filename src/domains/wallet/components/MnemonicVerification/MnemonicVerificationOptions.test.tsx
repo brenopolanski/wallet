@@ -1,5 +1,5 @@
 import React from "react";
-import { fireEvent, render } from "utils/testing-library";
+import { fireEvent, render, screen } from "utils/testing-library";
 
 import { MnemonicVerificationOptions } from "./MnemonicVerificationOptions";
 
@@ -10,7 +10,7 @@ const limit = 2;
 describe("MnemonicVerificationOptions", () => {
 	it("should render options", () => {
 		const handleChange = jest.fn();
-		const { getAllByTestId } = render(
+		render(
 			<MnemonicVerificationOptions
 				handleChange={handleChange}
 				options={options}
@@ -19,14 +19,14 @@ describe("MnemonicVerificationOptions", () => {
 				position={1}
 			/>,
 		);
-		const buttons = getAllByTestId("MnemonicVerificationOptions__button");
+		const buttons = screen.getAllByTestId("MnemonicVerificationOptions__button");
 
 		expect(buttons).toHaveLength(limit);
 	});
 
 	it("should call handle on click", () => {
 		const handleChange = jest.fn();
-		const { getByText } = render(
+		render(
 			<MnemonicVerificationOptions
 				handleChange={handleChange}
 				options={options}
@@ -35,7 +35,7 @@ describe("MnemonicVerificationOptions", () => {
 				position={1}
 			/>,
 		);
-		fireEvent.click(getByText(answer));
+		fireEvent.click(screen.getByText(answer));
 
 		expect(handleChange).toHaveBeenCalledWith(answer);
 	});

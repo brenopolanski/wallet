@@ -5,7 +5,7 @@ import { EnvironmentProvider } from "app/contexts";
 import { translations as commonTranslations } from "app/i18n/common/i18n";
 import React from "react";
 import { useForm } from "react-hook-form";
-import { env, fireEvent, getDefaultProfileId, render } from "utils/testing-library";
+import { env, fireEvent, getDefaultProfileId, render, screen } from "utils/testing-library";
 
 import { InputAddress, InputAddressProperties } from "./InputAddress";
 
@@ -23,11 +23,11 @@ describe("InputAddress", () => {
 	);
 
 	it("should render", () => {
-		const { getByTestId, asFragment } = render(
+		const { asFragment } = render(
 			<TestInputAddress coin="ARK" network="ark.devnet" profile={profile} />,
 		);
 
-		expect(getByTestId("InputAddress__input")).toBeInTheDocument();
+		expect(screen.getByTestId("InputAddress__input")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -35,11 +35,11 @@ describe("InputAddress", () => {
 		const { result, waitForNextUpdate } = renderHook(() => useForm({ mode: "onChange" }));
 		const { register, errors } = result.current;
 
-		const { getByTestId } = render(
+		render(
 			<TestInputAddress coin="ARK" network="ark.devnet" registerRef={register} profile={profile} />,
 		);
 
-		fireEvent.input(getByTestId("InputAddress__input"), { target: { value: "Abc" } });
+		fireEvent.input(screen.getByTestId("InputAddress__input"), { target: { value: "Abc" } });
 
 		await waitForNextUpdate();
 
@@ -52,7 +52,7 @@ describe("InputAddress", () => {
 		const { register, errors } = result.current;
 		const validAddress = "DT11QcbKqTXJ59jrUTpcMyggTcwmyFYRTM";
 
-		const { getByTestId } = render(
+		render(
 			<TestInputAddress
 				coin="ARK"
 				network="ark.devnet"
@@ -62,7 +62,7 @@ describe("InputAddress", () => {
 			/>,
 		);
 
-		fireEvent.input(getByTestId("InputAddress__input"), {
+		fireEvent.input(screen.getByTestId("InputAddress__input"), {
 			target: { value: validAddress },
 		});
 
@@ -76,7 +76,7 @@ describe("InputAddress", () => {
 		const { result, waitForNextUpdate } = renderHook(() => useForm({ mode: "onChange" }));
 		const { register, errors } = result.current;
 
-		const { getByTestId } = render(
+		render(
 			<TestInputAddress
 				profile={profile}
 				coin="ARK"
@@ -86,7 +86,7 @@ describe("InputAddress", () => {
 			/>,
 		);
 
-		fireEvent.input(getByTestId("InputAddress__input"), { target: { value: "Abc" } });
+		fireEvent.input(screen.getByTestId("InputAddress__input"), { target: { value: "Abc" } });
 
 		await waitForNextUpdate();
 

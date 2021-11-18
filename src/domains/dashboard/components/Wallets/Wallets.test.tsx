@@ -66,7 +66,7 @@ describe("Wallets", () => {
 	});
 
 	it("should render grid", () => {
-		const { asFragment, getByTestId } = render(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Wallets />
 			</Route>,
@@ -76,12 +76,12 @@ describe("Wallets", () => {
 			},
 		);
 
-		expect(getByTestId("WalletsGrid")).toBeInTheDocument();
+		expect(screen.getByTestId("WalletsGrid")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render grid in loading state", () => {
-		const { asFragment, getByTestId } = render(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Wallets isLoading={true} />
 			</Route>,
@@ -91,12 +91,12 @@ describe("Wallets", () => {
 			},
 		);
 
-		expect(getByTestId("WalletsGrid")).toBeInTheDocument();
+		expect(screen.getByTestId("WalletsGrid")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render list", async () => {
-		const { asFragment, getByTestId, findByTestId } = render(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Wallets />
 			</Route>,
@@ -106,16 +106,16 @@ describe("Wallets", () => {
 			},
 		);
 
-		const toggle = getByTestId("LayoutControls__list--icon");
+		const toggle = screen.getByTestId("LayoutControls__list--icon");
 		fireEvent.click(toggle);
 
-		await findByTestId("WalletsList");
+		await screen.findByTestId("WalletsList");
 
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should toggle between grid and list view", async () => {
-		const { asFragment, getByTestId, findByTestId } = render(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Wallets />
 			</Route>,
@@ -125,15 +125,15 @@ describe("Wallets", () => {
 			},
 		);
 
-		fireEvent.click(getByTestId("LayoutControls__list--icon"));
+		fireEvent.click(screen.getByTestId("LayoutControls__list--icon"));
 
-		await findByTestId("WalletsList");
+		await screen.findByTestId("WalletsList");
 
-		fireEvent.click(getByTestId("LayoutControls__grid--icon"));
+		fireEvent.click(screen.getByTestId("LayoutControls__grid--icon"));
 
-		await findByTestId("WalletsGrid");
+		await screen.findByTestId("WalletsGrid");
 
-		expect(getByTestId("WalletsGrid")).toBeInTheDocument();
+		expect(screen.getByTestId("WalletsGrid")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -156,7 +156,7 @@ describe("Wallets", () => {
 	});
 
 	it("should load more wallets", async () => {
-		const { asFragment, getByTestId, getAllByTestId, findByTestId } = render(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Wallets listPagerLimit={1} />
 			</Route>,
@@ -166,22 +166,22 @@ describe("Wallets", () => {
 			},
 		);
 
-		const toggle = getByTestId("LayoutControls__list--icon");
+		const toggle = screen.getByTestId("LayoutControls__list--icon");
 		fireEvent.click(toggle);
 
-		await findByTestId("WalletsList");
-		await findByTestId("WalletsList__ViewMore");
+		await screen.findByTestId("WalletsList");
+		await screen.findByTestId("WalletsList__ViewMore");
 
-		fireEvent.click(getByTestId("WalletsList__ViewMore"));
+		fireEvent.click(screen.getByTestId("WalletsList__ViewMore"));
 
-		await waitFor(() => expect(getAllByTestId("TableRow")).toHaveLength(3));
+		await waitFor(() => expect(screen.getAllByTestId("TableRow")).toHaveLength(3));
 
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should handle wallet creation", () => {
 		const onCreateWallet = jest.fn();
-		const { getByTestId } = render(
+		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Wallets onCreateWallet={onCreateWallet} />
 			</Route>,
@@ -191,14 +191,14 @@ describe("Wallets", () => {
 			},
 		);
 
-		fireEvent.click(getByTestId("WalletControls__create-wallet"));
+		fireEvent.click(screen.getByTestId("WalletControls__create-wallet"));
 
 		expect(onCreateWallet).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
 
 	it("should handle wallet import", () => {
 		const onImportWallet = jest.fn();
-		const { getByTestId } = render(
+		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Wallets onImportWallet={onImportWallet} />
 			</Route>,
@@ -208,13 +208,13 @@ describe("Wallets", () => {
 			},
 		);
 
-		fireEvent.click(getByTestId("WalletControls__import-wallet"));
+		fireEvent.click(screen.getByTestId("WalletControls__import-wallet"));
 
 		expect(onImportWallet).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
 
 	it("should handle filter change", async () => {
-		const { getByTestId } = render(
+		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Wallets />
 			</Route>,
@@ -224,18 +224,18 @@ describe("Wallets", () => {
 			},
 		);
 
-		fireEvent.click(getByTestId("dropdown__toggle"));
-		fireEvent.click(getByTestId("filter-wallets__wallets"));
-		fireEvent.click(getByTestId("dropdown__option--1"));
+		fireEvent.click(screen.getByTestId("dropdown__toggle"));
+		fireEvent.click(screen.getByTestId("filter-wallets__wallets"));
+		fireEvent.click(screen.getByTestId("dropdown__option--1"));
 
 		await waitFor(() =>
-			expect(getByTestId("filter-wallets__wallets")).toHaveTextContent(commonTranslations.STARRED),
+			expect(screen.getByTestId("filter-wallets__wallets")).toHaveTextContent(commonTranslations.STARRED),
 		);
 
-		fireEvent.click(getByTestId("filter-wallets__wallets"));
-		fireEvent.click(getByTestId("dropdown__option--0"));
+		fireEvent.click(screen.getByTestId("filter-wallets__wallets"));
+		fireEvent.click(screen.getByTestId("dropdown__option--0"));
 
-		await waitFor(() => expect(getByTestId("filter-wallets__wallets")).toHaveTextContent(commonTranslations.ALL));
+		await waitFor(() => expect(screen.getByTestId("filter-wallets__wallets")).toHaveTextContent(commonTranslations.ALL));
 	});
 
 	it("should render network selection with sorted network filters", async () => {
@@ -283,7 +283,7 @@ describe("Wallets", () => {
 		const unsubscribe = jest.fn();
 		const listenSpy = jest.spyOn(transport, "listen").mockImplementationOnce(() => ({ unsubscribe }));
 
-		const { asFragment, getByTestId, getByText, queryByText, findByText } = render(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<LedgerProvider transport={transport}>
 					<Wallets />
@@ -295,19 +295,19 @@ describe("Wallets", () => {
 			},
 		);
 
-		fireEvent.click(getByText(dashboardTranslations.WALLET_CONTROLS.IMPORT_LEDGER));
+		fireEvent.click(screen.getByText(dashboardTranslations.WALLET_CONTROLS.IMPORT_LEDGER));
 
-		await findByText(walletTranslations.MODAL_LEDGER_WALLET.CONNECT_DEVICE);
+		await screen.findByText(walletTranslations.MODAL_LEDGER_WALLET.CONNECT_DEVICE);
 
-		fireEvent.click(getByTestId("modal__close-btn"));
+		fireEvent.click(screen.getByTestId("modal__close-btn"));
 
 		await waitFor(() =>
-			expect(queryByText(walletTranslations.MODAL_LEDGER_WALLET.CONNECT_DEVICE)).not.toBeInTheDocument(),
+			expect(screen.queryByText(walletTranslations.MODAL_LEDGER_WALLET.CONNECT_DEVICE)).not.toBeInTheDocument(),
 		);
 
-		fireEvent.click(getByText(dashboardTranslations.WALLET_CONTROLS.IMPORT_LEDGER));
+		fireEvent.click(screen.getByText(dashboardTranslations.WALLET_CONTROLS.IMPORT_LEDGER));
 
-		await findByText(walletTranslations.MODAL_LEDGER_WALLET.CONNECT_DEVICE);
+		await screen.findByText(walletTranslations.MODAL_LEDGER_WALLET.CONNECT_DEVICE);
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -315,7 +315,7 @@ describe("Wallets", () => {
 	});
 
 	it("should handle list wallet click", () => {
-		const { getByTestId, getByText } = render(
+		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Wallets />
 			</Route>,
@@ -325,10 +325,10 @@ describe("Wallets", () => {
 			},
 		);
 
-		const toggle = getByTestId("LayoutControls__list--icon");
+		const toggle = screen.getByTestId("LayoutControls__list--icon");
 
 		fireEvent.click(toggle);
-		fireEvent.click(getByText(wallets[0].alias()!));
+		fireEvent.click(screen.getByText(wallets[0].alias()!));
 
 		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/wallets/${wallets[0].id()}`);
 	});
@@ -416,7 +416,7 @@ describe("Wallets", () => {
 	it("should render empty profile wallets", async () => {
 		history.push(`/profiles/${emptyProfile.id()}/dashboard`);
 
-		const { asFragment, getByTestId, findByTestId } = render(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Wallets />
 			</Route>,
@@ -426,10 +426,10 @@ describe("Wallets", () => {
 			},
 		);
 
-		const toggle = getByTestId("LayoutControls__list--icon");
+		const toggle = screen.getByTestId("LayoutControls__list--icon");
 		fireEvent.click(toggle);
 
-		await findByTestId("WalletsList");
+		await screen.findByTestId("WalletsList");
 
 		expect(asFragment()).toMatchSnapshot();
 	});

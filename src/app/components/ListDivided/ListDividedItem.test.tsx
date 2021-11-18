@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "utils/testing-library";
+import { render, screen } from "utils/testing-library";
 
 import { ListDividedItem } from "./ListDividedItem";
 
@@ -12,46 +12,46 @@ describe("ListDividedItem", () => {
 	});
 
 	it("should render as floating label", () => {
-		const { getByTestId, asFragment } = render(<ListDividedItem isFloatingLabel />);
+		const { asFragment } = render(<ListDividedItem isFloatingLabel />);
 
-		expect(getByTestId("list-divided-item__inner-wrapper")).toHaveClass("flex-col items-start");
+		expect(screen.getByTestId("list-divided-item__inner-wrapper")).toHaveClass("flex-col items-start");
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render the label", () => {
-		const { getByTestId, asFragment } = render(<ListDividedItem label="Label" />);
+		const { asFragment } = render(<ListDividedItem label="Label" />);
 
-		expect(getByTestId("list-divided-item__label")).toHaveTextContent("Label");
+		expect(screen.getByTestId("list-divided-item__label")).toHaveTextContent("Label");
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render the labelDescription", () => {
-		const { getByTestId, asFragment } = render(<ListDividedItem labelDescription="Label Desc" />);
+		const { asFragment } = render(<ListDividedItem labelDescription="Label Desc" />);
 
-		expect(getByTestId("list-divided-item__label--description")).toHaveTextContent("Label Desc");
+		expect(screen.getByTestId("list-divided-item__label--description")).toHaveTextContent("Label Desc");
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render the value", () => {
-		const { getByTestId, asFragment } = render(<ListDividedItem value="Value" />);
+		const { asFragment } = render(<ListDividedItem value="Value" />);
 
-		expect(getByTestId("list-divided-item__value")).toHaveTextContent("Value");
+		expect(screen.getByTestId("list-divided-item__value")).toHaveTextContent("Value");
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render the content", () => {
-		const { getByTestId, asFragment } = render(<ListDividedItem content="Content" />);
+		const { asFragment } = render(<ListDividedItem content="Content" />);
 
-		expect(getByTestId("list-divided-item__content")).toHaveTextContent("Content");
+		expect(screen.getByTestId("list-divided-item__content")).toHaveTextContent("Content");
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render with labelAddon", () => {
-		const { getByTestId, asFragment } = render(
+		const { asFragment } = render(
 			<ListDividedItem labelAddon={<span>Test</span>} content="Content" />,
 		);
 
-		expect(getByTestId("list-divided-item__content")).toHaveTextContent("Content");
+		expect(screen.getByTestId("list-divided-item__content")).toHaveTextContent("Content");
 		expect(asFragment()).toMatchSnapshot();
 	});
 });

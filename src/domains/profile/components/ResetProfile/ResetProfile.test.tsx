@@ -1,6 +1,6 @@
 import { Contracts } from "@payvo/sdk-profiles";
 import React from "react";
-import { env, fireEvent, getDefaultProfileId, render, waitFor } from "utils/testing-library";
+import { env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
 
 import { ResetProfile } from "./ResetProfile";
 
@@ -14,24 +14,24 @@ describe("ResetProfile", () => {
 	});
 
 	it("should render", async () => {
-		const { getByTestId, asFragment, findByTestId } = render(<ResetProfile isOpen profile={profile} />);
+		const { asFragment } = render(<ResetProfile isOpen profile={profile} />);
 
-		await findByTestId("modal__inner");
+		await screen.findByTestId("modal__inner");
 
-		expect(getByTestId("ResetProfile__submit-button")).toBeInTheDocument();
+		expect(screen.getByTestId("ResetProfile__submit-button")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should reset profile", async () => {
 		const onReset = jest.fn();
 
-		const { getByTestId, findByTestId } = render(<ResetProfile isOpen profile={profile} onReset={onReset} />);
+		render(<ResetProfile isOpen profile={profile} onReset={onReset} />);
 
 		const theme = profile.settings().get(Contracts.ProfileSetting.Theme);
 
-		await findByTestId("modal__inner");
+		await screen.findByTestId("modal__inner");
 
-		fireEvent.click(getByTestId("ResetProfile__submit-button"));
+		fireEvent.click(screen.getByTestId("ResetProfile__submit-button"));
 
 		await waitFor(() => expect(profile.settings().get(Contracts.ProfileSetting.Theme)).not.toBe(theme));
 

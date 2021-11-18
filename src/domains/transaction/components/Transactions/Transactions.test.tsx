@@ -11,6 +11,7 @@ import {
 	getDefaultProfileId,
 	MNEMONICS,
 	render,
+	screen,
 	syncDelegates,
 	useDefaultNetMocks,
 	waitFor,
@@ -82,7 +83,7 @@ describe("Transactions", () => {
 	});
 
 	it("should render", async () => {
-		const { asFragment, getByTestId } = render(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Transactions profile={profile} wallets={profile.wallets().values()} />
 			</Route>,
@@ -93,7 +94,7 @@ describe("Transactions", () => {
 		);
 
 		await waitFor(
-			() => expect(within(getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4),
+			() => expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4),
 			{ timeout: 4000 },
 		);
 
@@ -101,7 +102,7 @@ describe("Transactions", () => {
 	});
 
 	it("should render with custom title", async () => {
-		const { asFragment, getByTestId } = render(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Transactions profile={profile} wallets={profile.wallets().values()} title={<span>Test</span>} />
 			</Route>,
@@ -112,7 +113,7 @@ describe("Transactions", () => {
 		);
 
 		await waitFor(
-			() => expect(within(getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4),
+			() => expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4),
 			{ timeout: 4000 },
 		);
 
@@ -121,7 +122,7 @@ describe("Transactions", () => {
 
 	it("should render hidden", async () => {
 		const { asFragment } = render(
-			<Route path="/profiles/:profileId/dashboard" isVisible={false}>
+			<Route path="/profiles/:profileId/dashboard">
 				<Transactions profile={profile} wallets={profile.wallets().values()} isVisible={false} />
 			</Route>,
 			{
@@ -134,7 +135,7 @@ describe("Transactions", () => {
 	});
 
 	it("should filter by type", async () => {
-		const { getByRole, getByTestId, findByTestId } = render(
+		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Transactions profile={profile} wallets={profile.wallets().values()} />
 			</Route>,
@@ -145,19 +146,19 @@ describe("Transactions", () => {
 		);
 
 		await waitFor(
-			() => expect(within(getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4),
+			() => expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4),
 			{ timeout: 4000 },
 		);
 
-		expect(getByRole("button", { name: /Type/ })).toBeInTheDocument();
+		expect(screen.getByRole("button", { name: /Type/ })).toBeInTheDocument();
 
-		fireEvent.click(getByRole("button", { name: /Type/ }));
+		fireEvent.click(screen.getByRole("button", { name: /Type/ }));
 
-		await findByTestId("dropdown__option--core-0");
+		await screen.findByTestId("dropdown__option--core-0");
 
-		fireEvent.click(getByTestId("dropdown__option--core-0"));
+		fireEvent.click(screen.getByTestId("dropdown__option--core-0"));
 
-		await waitFor(() => expect(within(getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4));
+		await waitFor(() => expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4));
 	});
 
 	it("should filter by type and see empty results text", async () => {
@@ -171,7 +172,7 @@ describe("Transactions", () => {
 			}),
 		);
 
-		const { getByRole, getByTestId, findByTestId } = render(
+		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Transactions profile={emptyProfile} wallets={emptyProfile.wallets().values()} />
 			</Route>,
@@ -181,15 +182,15 @@ describe("Transactions", () => {
 			},
 		);
 
-		expect(getByRole("button", { name: /Type/ })).toBeInTheDocument();
+		expect(screen.getByRole("button", { name: /Type/ })).toBeInTheDocument();
 
-		fireEvent.click(getByRole("button", { name: /Type/ }));
+		fireEvent.click(screen.getByRole("button", { name: /Type/ }));
 
-		await findByTestId("dropdown__option--core-9");
+		await screen.findByTestId("dropdown__option--core-9");
 
-		fireEvent.click(getByTestId("dropdown__option--core-9"));
+		fireEvent.click(screen.getByTestId("dropdown__option--core-9"));
 
-		await findByTestId("EmptyBlock");
+		await screen.findByTestId("EmptyBlock");
 	});
 
 	it("should filter by type and see empty screen", async () => {
@@ -207,7 +208,7 @@ describe("Transactions", () => {
 			}),
 		);
 
-		const { getByRole, getByTestId, findByTestId } = render(
+		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Transactions profile={emptyProfile} wallets={emptyProfile.wallets().values()} />
 			</Route>,
@@ -217,15 +218,15 @@ describe("Transactions", () => {
 			},
 		);
 
-		expect(getByRole("button", { name: /Type/ })).toBeInTheDocument();
+		expect(screen.getByRole("button", { name: /Type/ })).toBeInTheDocument();
 
-		fireEvent.click(getByRole("button", { name: /Type/ }));
+		fireEvent.click(screen.getByRole("button", { name: /Type/ }));
 
-		await findByTestId("dropdown__option--magistrate-0");
+		await screen.findByTestId("dropdown__option--magistrate-0");
 
-		fireEvent.click(getByTestId("dropdown__option--magistrate-0"));
+		fireEvent.click(screen.getByTestId("dropdown__option--magistrate-0"));
 
-		await findByTestId("EmptyBlock");
+		await screen.findByTestId("EmptyBlock");
 		transactionsAggregateMock.mockRestore();
 	});
 
@@ -233,7 +234,7 @@ describe("Transactions", () => {
 		await env.profiles().restore(profile);
 		await profile.sync();
 
-		const { asFragment, getByTestId } = render(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Transactions profile={profile} wallets={profile.wallets().values()} />
 			</Route>,
@@ -244,17 +245,17 @@ describe("Transactions", () => {
 		);
 
 		await waitFor(
-			() => expect(within(getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4),
+			() => expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4),
 			{ timeout: 4000 },
 		);
 
-		fireEvent.click(within(getByTestId("TransactionTable")).getAllByTestId("TableRow")[0]);
+		fireEvent.click(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")[0]);
 
 		await waitFor(() => {
-			expect(getByTestId("modal__inner")).toBeInTheDocument();
+			expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
 		});
 
-		fireEvent.click(getByTestId("modal__close-btn"));
+		fireEvent.click(screen.getByTestId("modal__close-btn"));
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -265,7 +266,7 @@ describe("Transactions", () => {
 		await env.profiles().restore(profile);
 		await profile.sync();
 
-		const { asFragment, getByTestId } = render(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Transactions profile={profile} isLoading={false} wallets={profile.wallets().values()} />
 			</Route>,
@@ -276,19 +277,19 @@ describe("Transactions", () => {
 		);
 
 		await waitFor(() => {
-			expect(getByTestId("transactions__fetch-more-button")).toHaveTextContent(commonTranslations.VIEW_MORE);
-			expect(within(getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4);
+			expect(screen.getByTestId("transactions__fetch-more-button")).toHaveTextContent(commonTranslations.VIEW_MORE);
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4);
 		});
 
-		fireEvent.click(getByTestId("transactions__fetch-more-button"));
+		fireEvent.click(screen.getByTestId("transactions__fetch-more-button"));
 
-		expect(getByTestId("transactions__fetch-more-button")).toHaveTextContent(commonTranslations.LOADING);
+		expect(screen.getByTestId("transactions__fetch-more-button")).toHaveTextContent(commonTranslations.LOADING);
 
 		await waitFor(() => {
-			expect(getByTestId("transactions__fetch-more-button")).toHaveTextContent(commonTranslations.VIEW_MORE);
+			expect(screen.getByTestId("transactions__fetch-more-button")).toHaveTextContent(commonTranslations.VIEW_MORE);
 		});
 
-		expect(within(getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8);
+		expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8);
 
 		process.env.REACT_APP_IS_UNIT = undefined;
 
@@ -299,7 +300,7 @@ describe("Transactions", () => {
 		await env.profiles().restore(profile);
 		await profile.sync();
 
-		const { asFragment, getByTestId, queryByTestId } = render(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Transactions profile={profile} isLoading={false} wallets={profile.wallets().values()} />
 			</Route>,
@@ -310,11 +311,11 @@ describe("Transactions", () => {
 		);
 
 		await waitFor(() => {
-			expect(queryByTestId("transactions__fetch-more-button")).not.toBeInTheDocument();
+			expect(screen.queryByTestId("transactions__fetch-more-button")).not.toBeInTheDocument();
 		});
 
 		await waitFor(() => {
-			expect(within(getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4);
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4);
 		});
 
 		expect(asFragment()).toMatchSnapshot();
@@ -324,7 +325,7 @@ describe("Transactions", () => {
 		await env.profiles().restore(profile);
 		await profile.sync();
 
-		const { getByTestId } = render(
+		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Transactions isLoading={true} profile={profile} wallets={profile.wallets().values()} />
 			</Route>,
@@ -335,7 +336,7 @@ describe("Transactions", () => {
 		);
 
 		await waitFor(() => {
-			expect(within(getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8);
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8);
 		});
 	});
 
@@ -364,7 +365,7 @@ describe("Transactions", () => {
 				meta,
 			}));
 
-		const { getAllByTestId, getByTestId } = render(
+		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Transactions profile={profile} isLoading={false} wallets={profile.wallets().values()} />
 			</Route>,
@@ -374,16 +375,16 @@ describe("Transactions", () => {
 			},
 		);
 
-		await waitFor(() => expect(getAllByTestId("TableRow")).toHaveLength(4), { timeout: 500 });
+		await waitFor(() => expect(screen.getAllByTestId("TableRow")).toHaveLength(4), { timeout: 500 });
 
-		fireEvent.click(getByTestId("tabs__tab-button-received"));
-		fireEvent.click(getByTestId("tabs__tab-button-sent"));
+		fireEvent.click(screen.getByTestId("tabs__tab-button-received"));
+		fireEvent.click(screen.getByTestId("tabs__tab-button-sent"));
 
-		await waitFor(() => expect(getAllByTestId("TableRow")).toHaveLength(1), { timeout: 1000 });
+		await waitFor(() => expect(screen.getAllByTestId("TableRow")).toHaveLength(1), { timeout: 1000 });
 	});
 
 	it("should filter by mode", async () => {
-		const { getByTestId } = render(
+		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Transactions profile={profile} wallets={profile.wallets().values()} />
 			</Route>,
@@ -393,15 +394,15 @@ describe("Transactions", () => {
 			},
 		);
 
-		await waitFor(() => expect(within(getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4));
+		await waitFor(() => expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4));
 
-		fireEvent.click(getByTestId("tabs__tab-button-sent"));
+		fireEvent.click(screen.getByTestId("tabs__tab-button-sent"));
 
-		await waitFor(() => expect(within(getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(1));
+		await waitFor(() => expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(1));
 	});
 
 	it("should ignore tab change on loading state", async () => {
-		const { getByTestId } = render(
+		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Transactions profile={profile} wallets={profile.wallets().values()} isLoading={true} />
 			</Route>,
@@ -411,11 +412,11 @@ describe("Transactions", () => {
 			},
 		);
 
-		await waitFor(() => expect(within(getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8));
+		await waitFor(() => expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8));
 
-		fireEvent.click(getByTestId("tabs__tab-button-sent"));
+		fireEvent.click(screen.getByTestId("tabs__tab-button-sent"));
 
-		await waitFor(() => expect(within(getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8));
+		await waitFor(() => expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8));
 	});
 
 	it("should show empty message", async () => {
@@ -423,7 +424,7 @@ describe("Transactions", () => {
 		const emptyProfileURL = `/profiles/${emptyProfile.id()}/dashboard`;
 
 		history.push(emptyProfileURL);
-		const { findByTestId } = render(
+		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Transactions profile={emptyProfile} wallets={[]} />
 			</Route>,
@@ -433,11 +434,11 @@ describe("Transactions", () => {
 			},
 		);
 
-		await findByTestId("EmptyBlock");
+		await screen.findByTestId("EmptyBlock");
 	});
 
 	it("should update wallet filters", async () => {
-		const { asFragment, findByTestId } = render(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Transactions isUpdatingWallet={true} profile={profile} wallets={[]} />
 			</Route>,
@@ -447,7 +448,7 @@ describe("Transactions", () => {
 			},
 		);
 
-		await findByTestId("EmptyBlock");
+		await screen.findByTestId("EmptyBlock");
 
 		expect(asFragment()).toMatchSnapshot();
 	});

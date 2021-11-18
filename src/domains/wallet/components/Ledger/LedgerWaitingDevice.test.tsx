@@ -1,7 +1,7 @@
 import { Observer } from "@ledgerhq/hw-transport";
 import { LedgerProvider } from "app/contexts/Ledger/Ledger";
 import React from "react";
-import { act, fireEvent, getDefaultLedgerTransport, render } from "utils/testing-library";
+import { act, fireEvent, getDefaultLedgerTransport, render, screen } from "utils/testing-library";
 
 import { LedgerWaitingDevice } from "./LedgerWaitingDevice";
 
@@ -11,13 +11,13 @@ describe("LedgerWaitingDevice", () => {
 	it("should call the onClose callback if given", () => {
 		const onClose = jest.fn();
 
-		const { getByTestId } = render(
+		render(
 			<LedgerProvider transport={transport}>
 				<LedgerWaitingDevice isOpen={true} onClose={onClose} />
 			</LedgerProvider>,
 		);
 
-		fireEvent.click(getByTestId("modal__close-btn"));
+		fireEvent.click(screen.getByTestId("modal__close-btn"));
 
 		expect(onClose).toHaveBeenCalledWith();
 	});
@@ -49,12 +49,12 @@ describe("LedgerWaitingDevice", () => {
 
 	it("should render with custom subtitle", () => {
 		const subtitle = "Connect your Ledger Nano S and confirm input";
-		const { getByText } = render(
+		render(
 			<LedgerProvider transport={transport}>
 				<LedgerWaitingDevice isOpen={true} subtitle={subtitle} />
 			</LedgerProvider>,
 		);
 
-		expect(getByText(subtitle)).toBeInTheDocument();
+		expect(screen.getByText(subtitle)).toBeInTheDocument();
 	});
 });

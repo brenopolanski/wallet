@@ -2,7 +2,7 @@ import { buildTranslations } from "app/i18n/helpers";
 import { toasts } from "app/services";
 import electron from "electron";
 import React from "react";
-import { fireEvent, render } from "utils/testing-library";
+import { fireEvent, render, screen } from "utils/testing-library";
 
 import { Link } from "./Link";
 
@@ -10,27 +10,27 @@ const translations = buildTranslations();
 
 describe("Link", () => {
 	it("should render", () => {
-		const { asFragment, getByTestId } = render(<Link to="/test">Test</Link>);
+		const { asFragment } = render(<Link to="/test">Test</Link>);
 
-		expect(getByTestId("Link")).toHaveTextContent("Test");
+		expect(screen.getByTestId("Link")).toHaveTextContent("Test");
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render external", () => {
-		const { getByTestId } = render(
+		render(
 			<Link to="https://payvo.com/" isExternal>
 				ARK.io
 			</Link>,
 		);
 
-		expect(getByTestId("Link")).toHaveAttribute("rel", "noopener noreferrer");
-		expect(getByTestId("Link__external")).toBeInTheDocument();
+		expect(screen.getByTestId("Link")).toHaveAttribute("rel", "noopener noreferrer");
+		expect(screen.getByTestId("Link__external")).toBeInTheDocument();
 	});
 
 	it("should render external without children", () => {
-		const { asFragment, getByTestId } = render(<Link to="https://payvo.com" isExternal />);
+		const { asFragment } = render(<Link to="https://payvo.com" isExternal />);
 
-		expect(getByTestId("Link__external")).toBeInTheDocument();
+		expect(screen.getByTestId("Link__external")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -39,9 +39,9 @@ describe("Link", () => {
 
 		const externalLink = "https://payvo.com/";
 
-		const { asFragment, getByTestId } = render(<Link to={externalLink} isExternal />);
+		const { asFragment } = render(<Link to={externalLink} isExternal />);
 
-		fireEvent.click(getByTestId("Link"));
+		fireEvent.click(screen.getByTestId("Link"));
 
 		expect(ipcRendererMock).toHaveBeenCalledWith("open-external", externalLink);
 		expect(asFragment()).toMatchSnapshot();
@@ -52,21 +52,21 @@ describe("Link", () => {
 
 		const toastSpy = jest.spyOn(toasts, "error");
 
-		const { asFragment, getByTestId } = render(<Link to={externalLink} isExternal />);
+		const { asFragment } = render(<Link to={externalLink} isExternal />);
 
-		fireEvent.click(getByTestId("Link"));
+		fireEvent.click(screen.getByTestId("Link"));
 
 		expect(toastSpy).toHaveBeenCalledWith(translations.COMMON.ERRORS.INVALID_URL.replace("{{url}}", "invalid-url"));
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render with tooltip", () => {
-		const { asFragment, baseElement, getByTestId } = render(
+		const { asFragment, baseElement } = render(
 			<Link to="/test" tooltip="Custom Tooltip">
 				Test
 			</Link>,
 		);
-		const link = getByTestId("Link");
+		const link = screen.getByTestId("Link");
 
 		fireEvent.mouseEnter(link);
 

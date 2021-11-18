@@ -2,7 +2,7 @@ import { Contracts } from "@payvo/sdk-profiles";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
-import { env, fireEvent, getDefaultProfileId, render } from "utils/testing-library";
+import { env, fireEvent, getDefaultProfileId, render, screen } from "utils/testing-library";
 
 import { WalletListItem } from "./WalletListItem";
 
@@ -29,7 +29,7 @@ describe("WalletListItem", () => {
 	});
 
 	it.each([true, false])("should render when isCompact = %s", (isCompact: boolean) => {
-		const { container, getByText } = render(
+		const { container } = render(
 			<table>
 				<tbody>
 					<Route path="/profiles/:profileId/dashboard">
@@ -43,7 +43,7 @@ describe("WalletListItem", () => {
 			},
 		);
 
-		expect(getByText(wallet.alias()!)).toBeInTheDocument();
+		expect(screen.getByText(wallet.alias()!)).toBeInTheDocument();
 		expect(container).toMatchSnapshot();
 	});
 
@@ -52,7 +52,7 @@ describe("WalletListItem", () => {
 
 		const walletId = "ac38fe6d-4b67-4ef1-85be-17c5f6841129";
 
-		const { asFragment, queryByText } = render(
+		const { asFragment } = render(
 			<table>
 				<tbody>
 					<Route path="/profiles/:profileId/dashboard">
@@ -67,7 +67,7 @@ describe("WalletListItem", () => {
 		);
 
 		expect(asFragment()).toMatchSnapshot();
-		expect(queryByText("N/A")).toBeNull();
+		expect(screen.queryByText("N/A")).toBeNull();
 	});
 
 	it("should render with a N/A for fiat", () => {
@@ -75,7 +75,7 @@ describe("WalletListItem", () => {
 
 		const walletId = "ac38fe6d-4b67-4ef1-85be-17c5f6841129";
 
-		const { asFragment, getByText } = render(
+		const { asFragment } = render(
 			<table>
 				<tbody>
 					<Route path="/profiles/:profileId/dashboard">
@@ -90,12 +90,12 @@ describe("WalletListItem", () => {
 		);
 
 		expect(asFragment()).toMatchSnapshot();
-		expect(getByText("N/A")).toBeInTheDocument();
+		expect(screen.getByText("N/A")).toBeInTheDocument();
 	});
 
 	it("should render with default BTC as default exchangeCurrency", () => {
 		const mockExchangeCurrency = jest.spyOn(wallet, "exchangeCurrency").mockReturnValue(undefined as any);
-		const { container, getByText } = render(
+		const { container } = render(
 			<table>
 				<tbody>
 					<Route path="/profiles/:profileId/dashboard">
@@ -109,7 +109,7 @@ describe("WalletListItem", () => {
 			},
 		);
 
-		expect(getByText(wallet.alias()!)).toBeInTheDocument();
+		expect(screen.getByText(wallet.alias()!)).toBeInTheDocument();
 
 		expect(container).toMatchSnapshot();
 
@@ -119,7 +119,7 @@ describe("WalletListItem", () => {
 	it("should call onClick when clicked and fully restored", () => {
 		const onClick = jest.fn();
 
-		const { getByText } = render(
+		render(
 			<table>
 				<tbody>
 					<Route path="/profiles/:profileId/dashboard">
@@ -133,7 +133,7 @@ describe("WalletListItem", () => {
 			},
 		);
 
-		fireEvent.click(getByText(wallet.alias()!));
+		fireEvent.click(screen.getByText(wallet.alias()!));
 
 		expect(onClick).toHaveBeenCalledWith(wallet.id());
 	});
@@ -143,7 +143,7 @@ describe("WalletListItem", () => {
 
 		const onClick = jest.fn();
 
-		const { getByText } = render(
+		render(
 			<table>
 				<tbody>
 					<Route path="/profiles/:profileId/dashboard">
@@ -157,7 +157,7 @@ describe("WalletListItem", () => {
 			},
 		);
 
-		fireEvent.click(getByText(wallet.alias()!));
+		fireEvent.click(screen.getByText(wallet.alias()!));
 
 		expect(onClick).not.toHaveBeenCalled();
 

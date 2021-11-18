@@ -4,7 +4,7 @@ import { httpClient } from "app/services";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { StubStorage } from "tests/mocks";
-import { env, fireEvent, render, waitFor } from "utils/testing-library";
+import { env, fireEvent, render, screen, waitFor } from "utils/testing-library";
 
 import { EnvironmentProvider, useEnvironmentContext } from "./Environment";
 
@@ -25,20 +25,18 @@ describe("Environment Context", () => {
 		expect(() => render(<Test />, { withProviders: false })).toThrow(
 			"[useEnvironment] Component not wrapped within a Provider",
 		);
-
-		console.error.mockRestore();
 	});
 
 	it("should render the wrapper properly", () => {
 		env.reset({ coins: { ARK }, httpClient, storage: new StubStorage() });
 
-		const { container, asFragment, getByText } = render(
+		const { container, asFragment } = render(
 			<EnvironmentProvider env={env}>
 				<span>Provider testing</span>
 			</EnvironmentProvider>,
 		);
 
-		expect(getByText("Provider testing")).toBeInTheDocument();
+		expect(screen.getByText("Provider testing")).toBeInTheDocument();
 
 		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
@@ -73,11 +71,11 @@ describe("Environment Context", () => {
 			);
 		};
 
-		const { getByRole } = render(<App />, { withProviders: false });
+		render(<App />, { withProviders: false });
 
-		fireEvent.click(getByRole("button"));
+		fireEvent.click(screen.getByRole("button"));
 
-		await waitFor(() => expect(getByRole("heading")).toHaveTextContent("Counter 1"));
+		await waitFor(() => expect(screen.getByRole("heading")).toHaveTextContent("Counter 1"));
 
 		const profiles = await database.get<any>("profiles");
 
@@ -106,9 +104,9 @@ describe("Environment Context", () => {
 			</EnvironmentProvider>
 		);
 
-		const { getByRole } = render(<App />, { history });
+		render(<App />, { history });
 
-		fireEvent.click(getByRole("button"));
+		fireEvent.click(screen.getByRole("button"));
 
 		await waitFor(() => expect(profile.settings().get(Contracts.ProfileSetting.Name)).toBe("bar"));
 	});
@@ -143,11 +141,11 @@ describe("Environment Context", () => {
 			);
 		};
 
-		const { getByRole } = render(<App />, { withProviders: false });
+		render(<App />, { withProviders: false });
 
-		fireEvent.click(getByRole("button"));
+		fireEvent.click(screen.getByRole("button"));
 
-		await waitFor(() => expect(getByRole("heading")).toHaveTextContent("Counter 1"));
+		await waitFor(() => expect(screen.getByRole("heading")).toHaveTextContent("Counter 1"));
 
 		const profiles = await database.get<any>("profiles");
 

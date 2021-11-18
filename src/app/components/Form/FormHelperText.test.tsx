@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "utils/testing-library";
+import { render, screen } from "utils/testing-library";
 
 import { FormHelperText } from "./FormHelperText";
 import { FormFieldProvider } from "./useFormField";
@@ -8,31 +8,31 @@ describe("FormHelperText", () => {
 	it("should render hint text", () => {
 		const hintMessage = "Test Message";
 		const errorMessage = "Error Message";
-		const { queryByText, asFragment } = render(
+		const { asFragment } = render(
 			<FormHelperText errorMessage={errorMessage}>{hintMessage}</FormHelperText>,
 		);
 
-		expect(queryByText(hintMessage)).toBeInTheDocument();
+		expect(screen.queryByText(hintMessage)).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should not show hint if is invalid", () => {
 		const hintMessage = "Test Message";
-		const { queryByText } = render(<FormHelperText isInvalid>{hintMessage}</FormHelperText>);
+		render(<FormHelperText isInvalid>{hintMessage}</FormHelperText>);
 
-		expect(queryByText(hintMessage)).toBeNull();
+		expect(screen.queryByText(hintMessage)).toBeNull();
 	});
 
 	it("should render error message", () => {
 		const hintMessage = "Test Message";
 		const errorMessage = "Error Message";
-		const { queryByText, asFragment } = render(
+		const { asFragment } = render(
 			<FormHelperText errorMessage={errorMessage} isInvalid>
 				{hintMessage}
 			</FormHelperText>,
 		);
 
-		expect(queryByText(errorMessage)).toBeInTheDocument();
+		expect(screen.queryByText(errorMessage)).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -53,8 +53,8 @@ describe("FormHelperText", () => {
 				<FormHelperText />
 			</FormFieldProvider>
 		);
-		const { queryByText } = render(tree);
+		render(tree);
 
-		expect(queryByText(context.errorMessage)).toBeInTheDocument();
+		expect(screen.queryByText(context.errorMessage)).toBeInTheDocument();
 	});
 });

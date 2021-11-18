@@ -50,7 +50,7 @@ const baseSettings = {
 const renderComponent = async () => {
 	const utils = render(<CreateProfile />);
 
-	await waitFor(() => expect(utils.getByTestId("CreateProfile__submit-button")).toBeDisabled());
+	await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).toBeDisabled());
 
 	return utils;
 };

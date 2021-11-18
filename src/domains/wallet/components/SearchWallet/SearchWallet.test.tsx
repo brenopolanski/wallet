@@ -28,7 +28,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 	});
 
 	it("should render", async () => {
-		const { asFragment, getByTestId } = render(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<SearchWallet
 					profile={profile}
@@ -47,10 +47,10 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 		);
 
 		await waitFor(() =>
-			expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SELECT_ACCOUNT.TITLE),
+			expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SELECT_ACCOUNT.TITLE),
 		);
 		await waitFor(() =>
-			expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SELECT_ACCOUNT.DESCRIPTION),
+			expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SELECT_ACCOUNT.DESCRIPTION),
 		);
 		await waitFor(() => expect(asFragment()).toMatchSnapshot());
 	});
@@ -59,7 +59,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 		const walletWithExchangeCurrencyMock = jest
 			.spyOn(wallets[0], "exchangeCurrency")
 			.mockReturnValue(undefined as any);
-		const { asFragment, getByTestId } = render(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<SearchWallet
 					profile={profile}
@@ -78,10 +78,10 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 		);
 
 		await waitFor(() =>
-			expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SELECT_ACCOUNT.TITLE),
+			expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SELECT_ACCOUNT.TITLE),
 		);
 		await waitFor(() =>
-			expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SELECT_ACCOUNT.DESCRIPTION),
+			expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SELECT_ACCOUNT.DESCRIPTION),
 		);
 		await waitFor(() => expect(asFragment()).toMatchSnapshot());
 
@@ -141,7 +141,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 	it("should handle close", () => {
 		const onClose = jest.fn();
 
-		const { getByTestId } = render(
+		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<SearchWallet
 					profile={profile}
@@ -159,7 +159,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 			},
 		);
 
-		fireEvent.click(getByTestId("modal__close-btn"));
+		fireEvent.click(screen.getByTestId("modal__close-btn"));
 
 		expect(onClose).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
@@ -167,7 +167,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 	it("should filter wallets by address", async () => {
 		jest.useFakeTimers();
 
-		const { getByTestId, queryAllByTestId, findByTestId } = render(
+		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<SearchWallet
 					profile={profile}
@@ -186,18 +186,18 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 		);
 
 		await waitFor(() =>
-			expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SELECT_ACCOUNT.TITLE),
+			expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SELECT_ACCOUNT.TITLE),
 		);
 		await waitFor(() =>
-			expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SELECT_ACCOUNT.DESCRIPTION),
+			expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SELECT_ACCOUNT.DESCRIPTION),
 		);
 
-		await waitFor(() => expect(queryAllByTestId("TableRow")).toHaveLength(2));
+		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(2));
 
-		fireEvent.click(within(getByTestId("HeaderSearchBar")).getByRole("button"));
+		fireEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
 
-		await findByTestId("HeaderSearchBar__input");
-		const searchInput = within(getByTestId("HeaderSearchBar__input")).getByTestId("Input");
+		await screen.findByTestId("HeaderSearchBar__input");
+		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
 		fireEvent.change(searchInput, { target: { value: "D8rr7B1d6TL6pf1" } });
@@ -206,14 +206,14 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 			jest.advanceTimersByTime(100);
 		});
 
-		await waitFor(() => expect(queryAllByTestId("TableRow")).toHaveLength(1));
+		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(1));
 		jest.useRealTimers();
 	});
 
 	it("should filter wallets by alias", async () => {
 		jest.useFakeTimers();
 
-		const { getByTestId, queryAllByTestId, findByTestId } = render(
+		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<SearchWallet
 					profile={profile}
@@ -232,18 +232,18 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 		);
 
 		await waitFor(() =>
-			expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SELECT_ACCOUNT.TITLE),
+			expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SELECT_ACCOUNT.TITLE),
 		);
 		await waitFor(() =>
-			expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SELECT_ACCOUNT.DESCRIPTION),
+			expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SELECT_ACCOUNT.DESCRIPTION),
 		);
 
-		await waitFor(() => expect(queryAllByTestId("TableRow")).toHaveLength(2));
+		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(2));
 
-		fireEvent.click(within(getByTestId("HeaderSearchBar")).getByRole("button"));
+		fireEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
 
-		await findByTestId("HeaderSearchBar__input");
-		const searchInput = within(getByTestId("HeaderSearchBar__input")).getByTestId("Input");
+		await screen.findByTestId("HeaderSearchBar__input");
+		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
 		fireEvent.change(searchInput, { target: { value: "Sample Wallet" } });
@@ -252,7 +252,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 			jest.advanceTimersByTime(100);
 		});
 
-		await waitFor(() => expect(queryAllByTestId("TableRow")).toHaveLength(1));
+		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(1));
 
 		jest.useRealTimers();
 	});
@@ -260,7 +260,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 	it("should reset wallet search", async () => {
 		jest.useFakeTimers();
 
-		const { getByTestId, queryAllByTestId, findByTestId } = render(
+		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<SearchWallet
 					profile={profile}
@@ -279,18 +279,18 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 		);
 
 		await waitFor(() =>
-			expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SELECT_ACCOUNT.TITLE),
+			expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SELECT_ACCOUNT.TITLE),
 		);
 		await waitFor(() =>
-			expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SELECT_ACCOUNT.DESCRIPTION),
+			expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SELECT_ACCOUNT.DESCRIPTION),
 		);
 
-		await waitFor(() => expect(queryAllByTestId("TableRow")).toHaveLength(2));
+		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(2));
 
-		fireEvent.click(within(getByTestId("HeaderSearchBar")).getByRole("button"));
+		fireEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
 
-		await findByTestId("HeaderSearchBar__input");
-		const searchInput = within(getByTestId("HeaderSearchBar__input")).getByTestId("Input");
+		await screen.findByTestId("HeaderSearchBar__input");
+		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
 		// Search by wallet alias
@@ -300,13 +300,13 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 			jest.advanceTimersByTime(100);
 		});
 
-		await waitFor(() => expect(queryAllByTestId("TableRow")).toHaveLength(1));
+		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(1));
 
 		// Reset search
-		fireEvent.click(getByTestId("header-search-bar__reset"));
+		fireEvent.click(screen.getByTestId("header-search-bar__reset"));
 
 		await waitFor(() => expect(searchInput).not.toHaveValue());
-		await waitFor(() => expect(queryAllByTestId("TableRow")).toHaveLength(2));
+		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(2));
 
 		jest.useRealTimers();
 	});
@@ -314,7 +314,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 	it("should not find search wallet and show empty results screen", async () => {
 		jest.useFakeTimers();
 
-		const { getByTestId, queryAllByTestId, findByTestId } = render(
+		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<SearchWallet
 					profile={profile}
@@ -333,21 +333,21 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 		);
 
 		await waitFor(() =>
-			expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SELECT_ACCOUNT.TITLE),
+			expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SELECT_ACCOUNT.TITLE),
 		);
 		await waitFor(() =>
-			expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SELECT_ACCOUNT.DESCRIPTION),
+			expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SELECT_ACCOUNT.DESCRIPTION),
 		);
 
-		await waitFor(() => expect(queryAllByTestId("TableRow")).toHaveLength(2));
+		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(2));
 
-		fireEvent.click(within(getByTestId("HeaderSearchBar")).getByRole("button"));
+		fireEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
 
-		await findByTestId("HeaderSearchBar__input");
-		const searchInput = within(getByTestId("HeaderSearchBar__input")).getByTestId("Input");
+		await screen.findByTestId("HeaderSearchBar__input");
+		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
-		fireEvent.change(getByTestId("Input"), {
+		fireEvent.change(screen.getByTestId("Input"), {
 			target: {
 				value: "non existent wallet name",
 			},
@@ -357,16 +357,16 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 			jest.advanceTimersByTime(100);
 		});
 
-		await waitFor(() => expect(getByTestId("Input")).toHaveValue("non existent wallet name"));
-		await waitFor(() => expect(queryAllByTestId("TableRow")).toHaveLength(0));
+		await waitFor(() => expect(screen.getByTestId("Input")).toHaveValue("non existent wallet name"));
+		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(0));
 
-		await findByTestId("EmptyResults");
+		await screen.findByTestId("EmptyResults");
 
 		jest.useRealTimers();
 	});
 
 	it("should disable the `Select` button if the wallet fulfills the condition", async () => {
-		const { getAllByTestId } = render(
+		render(
 			<SearchWallet
 				profile={profile}
 				isOpen={true}
@@ -379,12 +379,12 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 			/>,
 		);
 
-		await waitFor(() => expect(getAllByTestId("TableRow")).toHaveLength(2));
+		await waitFor(() => expect(screen.getAllByTestId("TableRow")).toHaveLength(2));
 
-		expect(getAllByTestId("TableRow")[0]).toHaveTextContent("Sample Wallet");
-		expect(within(getAllByTestId("TableRow")[0]).getByRole("button")).toBeDisabled();
+		expect(screen.getAllByTestId("TableRow")[0]).toHaveTextContent("Sample Wallet");
+		expect(within(screen.getAllByTestId("TableRow")[0]).getByRole("button")).toBeDisabled();
 
-		expect(getAllByTestId("TableRow")[1]).not.toHaveTextContent("Sample Wallet");
-		expect(within(getAllByTestId("TableRow")[1]).getByRole("button")).not.toBeDisabled();
+		expect(screen.getAllByTestId("TableRow")[1]).not.toHaveTextContent("Sample Wallet");
+		expect(within(screen.getAllByTestId("TableRow")[1]).getByRole("button")).not.toBeDisabled();
 	});
 });

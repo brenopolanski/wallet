@@ -1,21 +1,21 @@
 import { translations } from "domains/error/i18n";
 import React from "react";
-import { fireEvent, render } from "utils/testing-library";
+import { fireEvent, render, screen } from "utils/testing-library";
 
 import { ApplicationError } from "./ApplicationError";
 
 describe("ApplicationError", () => {
 	it("should render", () => {
 		const onResetErrorBoundary = jest.fn();
-		const { asFragment, container, getByTestId } = render(
+		const { asFragment, container } = render(
 			<ApplicationError resetErrorBoundary={onResetErrorBoundary} />,
 		);
 
 		expect(container).toBeInTheDocument();
-		expect(getByTestId("ApplicationError__text")).toHaveTextContent(translations.APPLICATION.TITLE);
-		expect(getByTestId("ApplicationError__text")).toHaveTextContent(translations.APPLICATION.DESCRIPTION);
+		expect(screen.getByTestId("ApplicationError__text")).toHaveTextContent(translations.APPLICATION.TITLE);
+		expect(screen.getByTestId("ApplicationError__text")).toHaveTextContent(translations.APPLICATION.DESCRIPTION);
 
-		fireEvent.click(getByTestId("ApplicationError__button--reload"));
+		fireEvent.click(screen.getByTestId("ApplicationError__button--reload"));
 
 		expect(onResetErrorBoundary).toHaveBeenCalledWith(
 			expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }),

@@ -1,7 +1,7 @@
 import "@testing-library/jest-dom/extend-expect";
 
 import React from "react";
-import { fireEvent, render } from "utils/testing-library";
+import { fireEvent, render, screen } from "utils/testing-library";
 
 import { FormLabel } from "./FormLabel";
 import { FormFieldProvider } from "./useFormField";
@@ -9,16 +9,16 @@ import { FormFieldProvider } from "./useFormField";
 describe("FormLabel", () => {
 	it("should render from children", () => {
 		const label = "Test Label";
-		const { queryByText } = render(<FormLabel>{label}</FormLabel>);
+		render(<FormLabel>{label}</FormLabel>);
 
-		expect(queryByText(label)).toBeInTheDocument();
+		expect(screen.queryByText(label)).toBeInTheDocument();
 	});
 
 	it("should render from prop", () => {
 		const label = "Test Label";
-		const { queryByText } = render(<FormLabel label={label} />);
+		render(<FormLabel label={label} />);
 
-		expect(queryByText(label)).toBeInTheDocument();
+		expect(screen.queryByText(label)).toBeInTheDocument();
 	});
 
 	it("should render with name from context", () => {
@@ -33,16 +33,16 @@ describe("FormLabel", () => {
 				<FormLabel label={label} />
 			</FormFieldProvider>
 		);
-		const { queryByTestId, asFragment } = render(tree);
+		const { asFragment } = render(tree);
 
-		expect(queryByTestId("FormLabel")).toHaveAttribute("for", context.name);
+		expect(screen.queryByTestId("FormLabel")).toHaveAttribute("for", context.name);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render & hover if optional", () => {
-		const { asFragment, baseElement, getByTestId } = render(<FormLabel label="Test" optional />);
+		const { asFragment, baseElement } = render(<FormLabel label="Test" optional />);
 
-		fireEvent.mouseEnter(getByTestId("FormLabel__optional"));
+		fireEvent.mouseEnter(screen.getByTestId("FormLabel__optional"));
 
 		expect(baseElement).toHaveTextContent("This field is optional");
 		expect(asFragment()).toMatchSnapshot();

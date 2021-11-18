@@ -3,27 +3,27 @@ import { ReadOnlyWallet } from "@payvo/sdk-profiles/distribution/read-only-walle
 import { translations } from "domains/transaction/i18n";
 import React from "react";
 import { TransactionFixture } from "tests/fixtures/transactions";
-import { env, render } from "utils/testing-library";
+import { env, render, screen } from "utils/testing-library";
 
 import { TransactionRowRecipientLabel } from "./TransactionRowRecipientLabel";
 
 describe("TransactionRowRecipientLabel", () => {
 	it("should show address", () => {
-		const { getByTestId } = render(<TransactionRowRecipientLabel transaction={TransactionFixture} />);
+		render(<TransactionRowRecipientLabel transaction={TransactionFixture} />);
 
-		expect(getByTestId("Address__address")).toHaveTextContent("D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD");
+		expect(screen.getByTestId("Address__address")).toHaveTextContent("D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD");
 	});
 
 	it("should show label", () => {
-		const { getByText } = render(
+		render(
 			<TransactionRowRecipientLabel transaction={{ ...TransactionFixture, type: () => "secondSignature" }} />,
 		);
 
-		expect(getByText(translations.TRANSACTION_TYPES.SECOND_SIGNATURE)).toBeInTheDocument();
+		expect(screen.getByText(translations.TRANSACTION_TYPES.SECOND_SIGNATURE)).toBeInTheDocument();
 	});
 
 	it("should show a multipayment label", () => {
-		const { getByText } = render(
+		render(
 			<TransactionRowRecipientLabel
 				transaction={{
 					...TransactionFixture,
@@ -34,11 +34,11 @@ describe("TransactionRowRecipientLabel", () => {
 			/>,
 		);
 
-		expect(getByText(translations.TRANSACTION_TYPES.MULTI_PAYMENT)).toBeInTheDocument();
+		expect(screen.getByText(translations.TRANSACTION_TYPES.MULTI_PAYMENT)).toBeInTheDocument();
 	});
 
 	it("should show a magistrate label", () => {
-		const { getByText } = render(
+		render(
 			<TransactionRowRecipientLabel
 				transaction={{
 					...TransactionFixture,
@@ -47,7 +47,7 @@ describe("TransactionRowRecipientLabel", () => {
 			/>,
 		);
 
-		expect(getByText(translations.TRANSACTION_TYPES.MAGISTRATE)).toBeInTheDocument();
+		expect(screen.getByText(translations.TRANSACTION_TYPES.MAGISTRATE)).toBeInTheDocument();
 	});
 
 	describe("Votes", () => {
@@ -63,7 +63,7 @@ describe("TransactionRowRecipientLabel", () => {
 		);
 
 		it("should show a vote label", () => {
-			const { getByTestId } = render(
+			render(
 				<TransactionRowRecipientLabel
 					transaction={{
 						...TransactionFixture,
@@ -75,12 +75,12 @@ describe("TransactionRowRecipientLabel", () => {
 				/>,
 			);
 
-			expect(getByTestId("TransactionRowVoteLabel")).toHaveTextContent(translations.TRANSACTION_TYPES.VOTE);
-			expect(getByTestId("TransactionRowVoteLabel")).toHaveTextContent("delegate-0");
+			expect(screen.getByTestId("TransactionRowVoteLabel")).toHaveTextContent(translations.TRANSACTION_TYPES.VOTE);
+			expect(screen.getByTestId("TransactionRowVoteLabel")).toHaveTextContent("delegate-0");
 		});
 
 		it("should show a vote label with counter", () => {
-			const { getByTestId } = render(
+			render(
 				<TransactionRowRecipientLabel
 					transaction={{
 						...TransactionFixture,
@@ -92,13 +92,13 @@ describe("TransactionRowRecipientLabel", () => {
 				/>,
 			);
 
-			expect(getByTestId("TransactionRowVoteLabel")).toHaveTextContent(translations.TRANSACTION_TYPES.VOTE);
-			expect(getByTestId("TransactionRowVoteLabel")).toHaveTextContent("delegate-0");
-			expect(getByTestId("TransactionRowVoteLabel")).toHaveTextContent("+1");
+			expect(screen.getByTestId("TransactionRowVoteLabel")).toHaveTextContent(translations.TRANSACTION_TYPES.VOTE);
+			expect(screen.getByTestId("TransactionRowVoteLabel")).toHaveTextContent("delegate-0");
+			expect(screen.getByTestId("TransactionRowVoteLabel")).toHaveTextContent("+1");
 		});
 
 		it("should show a unvote label", () => {
-			const { getByTestId } = render(
+			render(
 				<TransactionRowRecipientLabel
 					transaction={{
 						...TransactionFixture,
@@ -110,12 +110,12 @@ describe("TransactionRowRecipientLabel", () => {
 				/>,
 			);
 
-			expect(getByTestId("TransactionRowVoteLabel")).toHaveTextContent(translations.TRANSACTION_TYPES.UNVOTE);
-			expect(getByTestId("TransactionRowVoteLabel")).toHaveTextContent("delegate-0");
+			expect(screen.getByTestId("TransactionRowVoteLabel")).toHaveTextContent(translations.TRANSACTION_TYPES.UNVOTE);
+			expect(screen.getByTestId("TransactionRowVoteLabel")).toHaveTextContent("delegate-0");
 		});
 
 		it("should show a vote label with counter if there are multiple votes", () => {
-			const { getByTestId } = render(
+			render(
 				<TransactionRowRecipientLabel
 					transaction={{
 						...TransactionFixture,
@@ -127,13 +127,13 @@ describe("TransactionRowRecipientLabel", () => {
 				/>,
 			);
 
-			expect(getByTestId("TransactionRowVoteLabel")).toHaveTextContent(translations.TRANSACTION_TYPES.UNVOTE);
-			expect(getByTestId("TransactionRowVoteLabel")).toHaveTextContent("delegate-0");
-			expect(getByTestId("TransactionRowVoteLabel")).toHaveTextContent("+1");
+			expect(screen.getByTestId("TransactionRowVoteLabel")).toHaveTextContent(translations.TRANSACTION_TYPES.UNVOTE);
+			expect(screen.getByTestId("TransactionRowVoteLabel")).toHaveTextContent("delegate-0");
+			expect(screen.getByTestId("TransactionRowVoteLabel")).toHaveTextContent("+1");
 		});
 
 		it("should show a vote combination label", () => {
-			const { getByTestId } = render(
+			render(
 				<TransactionRowRecipientLabel
 					transaction={{
 						...TransactionFixture,
@@ -148,16 +148,16 @@ describe("TransactionRowRecipientLabel", () => {
 				/>,
 			);
 
-			expect(getByTestId("TransactionRowVoteCombinationLabel")).toHaveTextContent(
+			expect(screen.getByTestId("TransactionRowVoteCombinationLabel")).toHaveTextContent(
 				translations.TRANSACTION_TYPES.VOTE,
 			);
-			expect(getByTestId("TransactionRowVoteCombinationLabel")).toHaveTextContent(
+			expect(screen.getByTestId("TransactionRowVoteCombinationLabel")).toHaveTextContent(
 				translations.TRANSACTION_TYPES.UNVOTE,
 			);
 		});
 
 		it("should show a vote combination label with counter", () => {
-			const { getByTestId } = render(
+			render(
 				<TransactionRowRecipientLabel
 					transaction={{
 						...TransactionFixture,
@@ -172,10 +172,10 @@ describe("TransactionRowRecipientLabel", () => {
 				/>,
 			);
 
-			expect(getByTestId("TransactionRowVoteCombinationLabel")).toHaveTextContent(
+			expect(screen.getByTestId("TransactionRowVoteCombinationLabel")).toHaveTextContent(
 				`${translations.TRANSACTION_TYPES.VOTE}2`,
 			);
-			expect(getByTestId("TransactionRowVoteCombinationLabel")).toHaveTextContent(
+			expect(screen.getByTestId("TransactionRowVoteCombinationLabel")).toHaveTextContent(
 				`${translations.TRANSACTION_TYPES.UNVOTE}2`,
 			);
 		});

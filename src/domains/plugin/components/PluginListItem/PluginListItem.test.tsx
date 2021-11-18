@@ -1,6 +1,6 @@
 import { translations as commonTranslations } from "app/i18n/common/i18n";
 import React from "react";
-import { fireEvent, render } from "utils/testing-library";
+import { fireEvent, render, screen } from "utils/testing-library";
 
 import { PluginListItem } from "./PluginListItem";
 
@@ -19,7 +19,7 @@ describe("PluginListItem", () => {
 			version: "1.3.8",
 		};
 
-		const { asFragment, getByTestId } = render(
+		const { asFragment } = render(
 			<table>
 				<tbody>
 					<PluginListItem plugin={plugin} />
@@ -27,7 +27,7 @@ describe("PluginListItem", () => {
 			</table>,
 		);
 
-		expect(getByTestId("TableRow")).toHaveTextContent("ARK Explorer");
+		expect(screen.getByTestId("TableRow")).toHaveTextContent("ARK Explorer");
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -48,7 +48,7 @@ describe("PluginListItem", () => {
 
 		const onInstall = jest.fn();
 
-		const { asFragment, getByTestId } = render(
+		const { asFragment } = render(
 			<table>
 				<tbody>
 					<PluginListItem plugin={plugin} onInstall={onInstall} />
@@ -56,7 +56,7 @@ describe("PluginListItem", () => {
 			</table>,
 		);
 
-		fireEvent.click(getByTestId("PluginListItem__install"));
+		fireEvent.click(screen.getByTestId("PluginListItem__install"));
 
 		expect(onInstall).toHaveBeenCalledTimes(1);
 		expect(asFragment()).toMatchSnapshot();
@@ -79,7 +79,7 @@ describe("PluginListItem", () => {
 
 		const onUpdate = jest.fn();
 
-		const { getByTestId, getByText } = render(
+		render(
 			<table>
 				<tbody>
 					<PluginListItem plugin={plugin} onUpdate={onUpdate} />
@@ -87,10 +87,10 @@ describe("PluginListItem", () => {
 			</table>,
 		);
 
-		fireEvent.click(getByTestId("dropdown__toggle"));
-		fireEvent.click(getByText(commonTranslations.UPDATE));
+		fireEvent.click(screen.getByTestId("dropdown__toggle"));
+		fireEvent.click(screen.getByText(commonTranslations.UPDATE));
 
-		expect(getByTestId("PluginDropdown__update-badge")).toBeInTheDocument();
+		expect(screen.getByTestId("PluginDropdown__update-badge")).toBeInTheDocument();
 
 		expect(onUpdate).toHaveBeenCalledTimes(1);
 	});
@@ -111,7 +111,7 @@ describe("PluginListItem", () => {
 
 		const onDelete = jest.fn();
 
-		const { getByTestId, getByText } = render(
+		render(
 			<table>
 				<tbody>
 					<PluginListItem plugin={plugin} onDelete={onDelete} />
@@ -119,8 +119,8 @@ describe("PluginListItem", () => {
 			</table>,
 		);
 
-		fireEvent.click(getByTestId("dropdown__toggle"));
-		fireEvent.click(getByText(commonTranslations.DELETE));
+		fireEvent.click(screen.getByTestId("dropdown__toggle"));
+		fireEvent.click(screen.getByText(commonTranslations.DELETE));
 
 		expect(onDelete).toHaveBeenCalledTimes(1);
 	});
@@ -141,7 +141,7 @@ describe("PluginListItem", () => {
 
 		const onEnable = jest.fn();
 
-		const { getByTestId, getByText } = render(
+		render(
 			<table>
 				<tbody>
 					<PluginListItem plugin={plugin} onEnable={onEnable} />
@@ -149,8 +149,8 @@ describe("PluginListItem", () => {
 			</table>,
 		);
 
-		fireEvent.click(getByTestId("dropdown__toggle"));
-		fireEvent.click(getByText(commonTranslations.ENABLE));
+		fireEvent.click(screen.getByTestId("dropdown__toggle"));
+		fireEvent.click(screen.getByText(commonTranslations.ENABLE));
 
 		expect(onEnable).toHaveBeenCalledTimes(1);
 	});
@@ -170,7 +170,7 @@ describe("PluginListItem", () => {
 
 		const onClick = jest.fn();
 
-		const { getByTestId } = render(
+		render(
 			<table>
 				<tbody>
 					<PluginListItem plugin={plugin} onClick={onClick} />
@@ -178,7 +178,7 @@ describe("PluginListItem", () => {
 			</table>,
 		);
 
-		fireEvent.click(getByTestId("PluginListItem__link"));
+		fireEvent.click(screen.getByTestId("PluginListItem__link"));
 
 		expect(onClick).toHaveBeenCalledTimes(1);
 	});
@@ -200,7 +200,7 @@ describe("PluginListItem", () => {
 
 		const onDisable = jest.fn();
 
-		const { getByTestId, getByText } = render(
+		render(
 			<table>
 				<tbody>
 					<PluginListItem plugin={plugin} onDisable={onDisable} />
@@ -208,8 +208,8 @@ describe("PluginListItem", () => {
 			</table>,
 		);
 
-		fireEvent.click(getByTestId("dropdown__toggle"));
-		fireEvent.click(getByText(commonTranslations.DISABLE));
+		fireEvent.click(screen.getByTestId("dropdown__toggle"));
+		fireEvent.click(screen.getByText(commonTranslations.DISABLE));
 
 		expect(onDisable).toHaveBeenCalledTimes(1);
 	});
@@ -232,7 +232,7 @@ describe("PluginListItem", () => {
 
 		const onLaunch = jest.fn();
 
-		const { getByTestId } = render(
+		render(
 			<table>
 				<tbody>
 					<PluginListItem plugin={plugin} onLaunch={onLaunch} />
@@ -240,7 +240,7 @@ describe("PluginListItem", () => {
 			</table>,
 		);
 
-		fireEvent.click(getByTestId("PluginListItem__launch"));
+		fireEvent.click(screen.getByTestId("PluginListItem__launch"));
 
 		expect(onLaunch).toHaveBeenCalledTimes(1);
 	});
@@ -262,7 +262,7 @@ describe("PluginListItem", () => {
 			version: "1.3.8",
 		};
 
-		const { getByTestId } = render(
+		render(
 			<table>
 				<tbody>
 					<PluginListItem plugin={plugin} />
@@ -270,7 +270,7 @@ describe("PluginListItem", () => {
 			</table>,
 		);
 
-		expect(getByTestId("PluginListItem__minimum-version-warning")).toBeInTheDocument();
+		expect(screen.getByTestId("PluginListItem__minimum-version-warning")).toBeInTheDocument();
 	});
 
 	it("should render official icon", () => {
@@ -288,7 +288,7 @@ describe("PluginListItem", () => {
 			version: "1.3.8",
 		};
 
-		const { asFragment, getByText } = render(
+		const { asFragment } = render(
 			<table>
 				<tbody>
 					<PluginListItem plugin={plugin} />
@@ -296,7 +296,7 @@ describe("PluginListItem", () => {
 			</table>,
 		);
 
-		expect(getByText("shield-check-mark.svg")).toBeInTheDocument();
+		expect(screen.getByText("shield-check-mark.svg")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 });

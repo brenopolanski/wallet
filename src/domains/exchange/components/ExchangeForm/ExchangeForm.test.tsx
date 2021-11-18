@@ -1121,7 +1121,7 @@ describe("ExchangeForm", () => {
 
 		const onReady = jest.fn();
 
-		const { findByTestId } = renderComponent(<ExchangeForm onReady={onReady} />);
+		renderComponent(<ExchangeForm onReady={onReady} />);
 
 		await waitFor(() => {
 			expect(onReady).toHaveBeenCalledWith();
@@ -1225,7 +1225,7 @@ describe("ExchangeForm", () => {
 		});
 
 		const historySpy = jest.spyOn(history, "push").mockImplementation();
-		await findByTestId("ExchangeForm__finish-button", undefined, { timeout: 4000 });
+		await screen.findByTestId("ExchangeForm__finish-button", undefined, { timeout: 4000 });
 		fireEvent.click(screen.getByTestId("ExchangeForm__finish-button"));
 
 		await waitFor(() => {
@@ -1365,7 +1365,7 @@ describe("StatusStep", () => {
 		const { container } = render(
 			<ExchangeProvider>
 				<Wrapper>
-					<StatusStep profile={profile} exchangeTransaction={exchangeTransaction} onUpdate={jest.fn()} />
+					<StatusStep exchangeTransaction={exchangeTransaction} onUpdate={jest.fn()} />
 				</Wrapper>
 			</ExchangeProvider>,
 		);
@@ -1409,7 +1409,7 @@ describe("StatusStep", () => {
 		render(
 			<ExchangeProvider>
 				<Wrapper>
-					<StatusStep profile={profile} exchangeTransaction={exchangeTransaction} onUpdate={onUpdate} />
+					<StatusStep exchangeTransaction={exchangeTransaction} onUpdate={onUpdate} />
 				</Wrapper>
 			</ExchangeProvider>,
 		);

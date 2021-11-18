@@ -4,12 +4,20 @@ import { ReadOnlyWallet } from "@payvo/sdk-profiles/distribution/read-only-walle
 import { renderHook } from "@testing-library/react-hooks";
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { env, fireEvent, getDefaultProfileId, render, syncDelegates, waitFor } from "utils/testing-library";
+import { env, fireEvent, getDefaultProfileId, render, screen, syncDelegates, waitFor } from "utils/testing-library";
 
 import { WalletVote } from "./WalletVote";
 
 let wallet: Contracts.IReadWriteWallet;
 let profile: Contracts.IProfile;
+let defaultDelegate: {
+	address: string;
+	publicKey?: string;
+	explorerLink: string;
+	isDelegate: boolean;
+	isResignedDelegate: boolean;
+	governanceIdentifier: string;
+};
 
 let t: any;
 
@@ -23,16 +31,25 @@ describe("WalletVote", () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 		wallet = profile.wallets().findById("ac38fe6d-4b67-4ef1-85be-17c5f6841129");
 
+		defaultDelegate = {
+			address: wallet.address(),
+			explorerLink: "",
+			governanceIdentifier: "address",
+			isDelegate: false,
+			isResignedDelegate: false,
+			publicKey: wallet.publicKey(),
+		};
+
 		await syncDelegates(profile);
 		await wallet.synchroniser().votes();
 	});
 
 	it("should render", async () => {
-		const { asFragment, findByTestId } = render(
+		const { asFragment } = render(
 			<WalletVote profile={profile} wallet={wallet} onButtonClick={jest.fn()} env={env} />,
 		);
 
-		await findByTestId("WalletVote");
+		await screen.findByTestId("WalletVote");
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -40,13 +57,13 @@ describe("WalletVote", () => {
 	it("should render without votes", async () => {
 		const walletSpy = jest.spyOn(wallet.voting(), "current").mockReturnValue([]);
 
-		const { asFragment, getByText, findByTestId } = render(
+		const { asFragment } = render(
 			<WalletVote profile={profile} wallet={wallet} onButtonClick={jest.fn()} env={env} />,
 		);
 
-		await findByTestId("WalletVote");
+		await screen.findByTestId("WalletVote");
 
-		expect(getByText(t("COMMON.LEARN_MORE"))).toBeInTheDocument();
+		expect(screen.getByText(t("COMMON.LEARN_MORE"))).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 
 		walletSpy.mockRestore();
@@ -55,13 +72,13 @@ describe("WalletVote", () => {
 	it("should render disabled vote button", async () => {
 		const balanceSpy = jest.spyOn(wallet, "balance").mockReturnValue(0);
 
-		const { asFragment, getByRole, findByTestId } = render(
+		const { asFragment } = render(
 			<WalletVote profile={profile} wallet={wallet} onButtonClick={jest.fn()} env={env} />,
 		);
 
-		await findByTestId("WalletVote");
+		await screen.findByTestId("WalletVote");
 
-		expect(getByRole("button")).toBeDisabled();
+		expect(screen.getByRole("button")).toBeDisabled();
 		expect(asFragment()).toMatchSnapshot();
 
 		balanceSpy.mockRestore();
@@ -72,13 +89,13 @@ describe("WalletVote", () => {
 		const votesAmountStepSpy = jest.spyOn(wallet.network(), "votesAmountStep").mockReturnValue(10);
 		const balanceSpy = jest.spyOn(wallet, "balance").mockReturnValue(5);
 
-		const { asFragment, getByRole, findByTestId } = render(
+		const { asFragment } = render(
 			<WalletVote profile={profile} wallet={wallet} onButtonClick={jest.fn()} env={env} />,
 		);
 
-		await findByTestId("WalletVote");
+		await screen.findByTestId("WalletVote");
 
-		expect(getByRole("button")).toBeDisabled();
+		expect(screen.getByRole("button")).toBeDisabled();
 		expect(asFragment()).toMatchSnapshot();
 
 		usesLockedBalance.mockRestore();
@@ -91,13 +108,13 @@ describe("WalletVote", () => {
 			throw new Error("delegate error");
 		});
 
-		const { asFragment, getByText, findByTestId } = render(
+		const { asFragment } = render(
 			<WalletVote profile={profile} wallet={wallet} onButtonClick={jest.fn()} env={env} />,
 		);
 
-		await findByTestId("WalletVote");
+		await screen.findByTestId("WalletVote");
 
-		expect(getByText(t("COMMON.LEARN_MORE"))).toBeInTheDocument();
+		expect(screen.getByText(t("COMMON.LEARN_MORE"))).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 
 		walletSpy.mockRestore();
@@ -109,13 +126,13 @@ describe("WalletVote", () => {
 		});
 		const walletSpy = jest.spyOn(wallet.voting(), "current").mockReturnValue([]);
 
-		const { asFragment, getByText, findByTestId } = render(
+		const { asFragment } = render(
 			<WalletVote profile={profile} wallet={wallet} onButtonClick={jest.fn()} env={env} />,
 		);
 
-		await findByTestId("WalletVote");
+		await screen.findByTestId("WalletVote");
 
-		expect(getByText(t("COMMON.LEARN_MORE"))).toBeInTheDocument();
+		expect(screen.getByText(t("COMMON.LEARN_MORE"))).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 
 		delegateSyncSpy.mockRestore();
@@ -126,12 +143,12 @@ describe("WalletVote", () => {
 		const walletSpy = jest.spyOn(wallet.voting(), "current").mockReturnValue([]);
 		const maxVotesSpy = jest.spyOn(wallet.network(), "maximumVotesPerWallet").mockReturnValue(101);
 
-		const { asFragment, findByTestId, findByText } = render(
+		const { asFragment } = render(
 			<WalletVote profile={profile} wallet={wallet} onButtonClick={jest.fn()} env={env} />,
 		);
 
-		await findByTestId("WalletVote");
-		await findByText("0/101");
+		await screen.findByTestId("WalletVote");
+		await screen.findByText("0/101");
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -145,27 +162,25 @@ describe("WalletVote", () => {
 				{
 					amount: 0,
 					wallet: new ReadOnlyWallet({
-						address: wallet.address(),
-						explorerLink: "",
-						publicKey: wallet.publicKey(),
+						...defaultDelegate,
 						rank: 10,
 						username: "arkx",
 					}),
 				},
 			]);
 
-			const { asFragment, getByText, findByTestId } = render(
+			const { asFragment } = render(
 				<WalletVote profile={profile} wallet={wallet} onButtonClick={jest.fn()} env={env} />,
 			);
 
 			const delegate = wallet.voting().current()[0];
 
-			await findByTestId("WalletVote");
+			await screen.findByTestId("WalletVote");
 
-			expect(getByText(delegate.wallet!.username()!)).toBeInTheDocument();
-			expect(getByText(`#${delegate.wallet!.rank()}`)).toBeInTheDocument();
+			expect(screen.getByText(delegate.wallet!.username()!)).toBeInTheDocument();
+			expect(screen.getByText(`#${delegate.wallet!.rank()}`)).toBeInTheDocument();
 
-			expect(getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.ACTIVE", { count: 1 }))).toBeInTheDocument();
+			expect(screen.getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.ACTIVE", { count: 1 }))).toBeInTheDocument();
 
 			expect(asFragment()).toMatchSnapshot();
 
@@ -177,27 +192,25 @@ describe("WalletVote", () => {
 				{
 					amount: 0,
 					wallet: new ReadOnlyWallet({
-						address: wallet.address(),
-						explorerLink: "",
-						publicKey: wallet.publicKey(),
+						...defaultDelegate,
 						rank: 52,
 						username: "arkx",
 					}),
 				},
 			]);
 
-			const { asFragment, getByText, findByTestId } = render(
+			const { asFragment } = render(
 				<WalletVote profile={profile} wallet={wallet} onButtonClick={jest.fn()} env={env} />,
 			);
 
 			const delegate = wallet.voting().current()[0];
 
-			await findByTestId("WalletVote");
+			await screen.findByTestId("WalletVote");
 
-			expect(getByText(delegate.wallet!.username()!)).toBeInTheDocument();
-			expect(getByText(`#${delegate.wallet!.rank()}`)).toBeInTheDocument();
+			expect(screen.getByText(delegate.wallet!.username()!)).toBeInTheDocument();
+			expect(screen.getByText(`#${delegate.wallet!.rank()}`)).toBeInTheDocument();
 
-			expect(getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.STANDBY", { count: 1 }))).toBeInTheDocument();
+			expect(screen.getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.STANDBY", { count: 1 }))).toBeInTheDocument();
 
 			expect(asFragment()).toMatchSnapshot();
 
@@ -209,30 +222,28 @@ describe("WalletVote", () => {
 				{
 					amount: 0,
 					wallet: new ReadOnlyWallet({
-						address: wallet.address(),
-						explorerLink: "",
+						...defaultDelegate,
 						isDelegate: true,
 						isResignedDelegate: false,
-						publicKey: wallet.publicKey(),
 						username: "arkx",
 					}),
 				},
 			]);
 
-			const { asFragment, getByText, findByTestId } = render(
+			const { asFragment } = render(
 				<WalletVote profile={profile} wallet={wallet} onButtonClick={jest.fn()} env={env} />,
 			);
 
 			const delegate = wallet.voting().current()[0];
 
-			await findByTestId("WalletVote");
+			await screen.findByTestId("WalletVote");
 
-			expect(getByText(delegate.wallet!.username()!)).toBeInTheDocument();
-			expect(getByText(t("COMMON.NOT_AVAILABLE"))).toBeInTheDocument();
+			expect(screen.getByText(delegate.wallet!.username()!)).toBeInTheDocument();
+			expect(screen.getByText(t("COMMON.NOT_AVAILABLE"))).toBeInTheDocument();
 
-			expect(getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.STANDBY", { count: 1 }))).toBeInTheDocument();
+			expect(screen.getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.STANDBY", { count: 1 }))).toBeInTheDocument();
 
-			expect(getByText("hint-small.svg")).toBeInTheDocument();
+			expect(screen.getByText("hint-small.svg")).toBeInTheDocument();
 			expect(asFragment()).toMatchSnapshot();
 
 			walletSpy.mockRestore();
@@ -251,9 +262,7 @@ describe("WalletVote", () => {
 				{
 					amount: 0,
 					wallet: new ReadOnlyWallet({
-						address: wallet.address(),
-						explorerLink: "",
-						publicKey: wallet.publicKey(),
+						...defaultDelegate,
 						rank: 1,
 						username: "arkx",
 					}),
@@ -261,9 +270,7 @@ describe("WalletVote", () => {
 				{
 					amount: 0,
 					wallet: new ReadOnlyWallet({
-						address: wallet.address(),
-						explorerLink: "",
-						publicKey: wallet.publicKey(),
+						...defaultDelegate,
 						rank: 2,
 						username: "arky",
 					}),
@@ -272,15 +279,15 @@ describe("WalletVote", () => {
 
 			const walletSpy = jest.spyOn(wallet.voting(), "current").mockReturnValue(votes);
 
-			const { asFragment, getByText, findByTestId } = render(
+			const { asFragment } = render(
 				<WalletVote profile={profile} wallet={wallet} onButtonClick={jest.fn()} env={env} />,
 			);
 
-			await findByTestId("WalletVote");
+			await screen.findByTestId("WalletVote");
 
-			expect(getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE"))).toBeInTheDocument();
+			expect(screen.getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE"))).toBeInTheDocument();
 			expect(
-				getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.ACTIVE", { count: votes.length })),
+				screen.getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.ACTIVE", { count: votes.length })),
 			).toBeInTheDocument();
 
 			expect(asFragment()).toMatchSnapshot();
@@ -293,18 +300,14 @@ describe("WalletVote", () => {
 				{
 					amount: 0,
 					wallet: new ReadOnlyWallet({
-						address: wallet.address(),
-						explorerLink: "",
-						publicKey: wallet.publicKey(),
+						...defaultDelegate,
 						username: "arkx",
 					}),
 				},
 				{
 					amount: 0,
 					wallet: new ReadOnlyWallet({
-						address: wallet.address(),
-						explorerLink: "",
-						publicKey: wallet.publicKey(),
+						...defaultDelegate,
 						username: "arky",
 					}),
 				},
@@ -312,15 +315,15 @@ describe("WalletVote", () => {
 
 			const walletSpy = jest.spyOn(wallet.voting(), "current").mockReturnValue(votes);
 
-			const { asFragment, getByText, findByTestId } = render(
+			const { asFragment } = render(
 				<WalletVote profile={profile} wallet={wallet} onButtonClick={jest.fn()} env={env} />,
 			);
 
-			await findByTestId("WalletVote");
+			await screen.findByTestId("WalletVote");
 
-			expect(getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE"))).toBeInTheDocument();
+			expect(screen.getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE"))).toBeInTheDocument();
 			expect(
-				getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.STANDBY", { count: votes.length })),
+				screen.getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.STANDBY", { count: votes.length })),
 			).toBeInTheDocument();
 
 			expect(asFragment()).toMatchSnapshot();
@@ -333,9 +336,7 @@ describe("WalletVote", () => {
 				{
 					amount: 0,
 					wallet: new ReadOnlyWallet({
-						address: wallet.address(),
-						explorerLink: "",
-						publicKey: wallet.publicKey(),
+						...defaultDelegate,
 						rank: 1,
 						username: "arkx",
 					}),
@@ -343,27 +344,25 @@ describe("WalletVote", () => {
 				{
 					amount: 0,
 					wallet: new ReadOnlyWallet({
-						address: wallet.address(),
-						explorerLink: "",
-						publicKey: wallet.publicKey(),
+						...defaultDelegate,
 						username: "arky",
 					}),
 				},
 			]);
 
-			const { asFragment, getByText, findByTestId } = render(
+			const { asFragment } = render(
 				<WalletVote profile={profile} wallet={wallet} onButtonClick={jest.fn()} env={env} />,
 			);
 
-			await findByTestId("WalletVote");
+			await screen.findByTestId("WalletVote");
 
-			expect(getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE"))).toBeInTheDocument();
-			expect(getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.ACTIVE_COUNT", { count: 1 }))).toBeInTheDocument();
+			expect(screen.getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE"))).toBeInTheDocument();
+			expect(screen.getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.ACTIVE_COUNT", { count: 1 }))).toBeInTheDocument();
 			expect(
-				getByText(`/ ${t("WALLETS.PAGE_WALLET_DETAILS.VOTES.STANDBY_COUNT", { count: 1 })}`),
+				screen.getByText(`/ ${t("WALLETS.PAGE_WALLET_DETAILS.VOTES.STANDBY_COUNT", { count: 1 })}`),
 			).toBeInTheDocument();
 
-			expect(getByText("hint-small.svg")).toBeInTheDocument();
+			expect(screen.getByText("hint-small.svg")).toBeInTheDocument();
 			expect(asFragment()).toMatchSnapshot();
 
 			walletSpy.mockRestore();
@@ -374,10 +373,8 @@ describe("WalletVote", () => {
 				{
 					amount: 0,
 					wallet: new ReadOnlyWallet({
-						address: wallet.address(),
-						explorerLink: "",
+						...defaultDelegate,
 						isDelegate: true,
-						publicKey: wallet.publicKey(),
 						rank: 1,
 						username: "arkx",
 					}),
@@ -385,28 +382,26 @@ describe("WalletVote", () => {
 				{
 					amount: 0,
 					wallet: new ReadOnlyWallet({
-						address: wallet.address(),
-						explorerLink: "",
+						...defaultDelegate,
 						isDelegate: true,
 						isResignedDelegate: true,
-						publicKey: wallet.publicKey(),
 						username: "arky",
 					}),
 				},
 			]);
 
-			const { asFragment, getByText, getByTestId, findByTestId } = render(
+			const { asFragment } = render(
 				<WalletVote profile={profile} wallet={wallet} onButtonClick={jest.fn()} env={env} />,
 			);
 
-			await findByTestId("WalletVote");
+			await screen.findByTestId("WalletVote");
 
-			expect(getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE"))).toBeInTheDocument();
+			expect(screen.getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE"))).toBeInTheDocument();
 
-			expect(getByTestId("WalletVote")).toHaveTextContent("Active 1");
-			expect(getByTestId("WalletVote")).toHaveTextContent("Resigned 1");
+			expect(screen.getByTestId("WalletVote")).toHaveTextContent("Active 1");
+			expect(screen.getByTestId("WalletVote")).toHaveTextContent("Resigned 1");
 
-			expect(getByText("hint-small.svg")).toBeInTheDocument();
+			expect(screen.getByText("hint-small.svg")).toBeInTheDocument();
 			expect(asFragment()).toMatchSnapshot();
 
 			walletSpy.mockRestore();
@@ -417,38 +412,34 @@ describe("WalletVote", () => {
 				{
 					amount: 0,
 					wallet: new ReadOnlyWallet({
-						address: wallet.address(),
-						explorerLink: "",
+						...defaultDelegate,
 						isDelegate: true,
-						publicKey: wallet.publicKey(),
 						username: "arkx",
 					}),
 				},
 				{
 					amount: 0,
 					wallet: new ReadOnlyWallet({
-						address: wallet.address(),
-						explorerLink: "",
+						...defaultDelegate,
 						isDelegate: true,
 						isResignedDelegate: true,
-						publicKey: wallet.publicKey(),
 						username: "arky",
 					}),
 				},
 			]);
 
-			const { asFragment, getByText, getByTestId, findByTestId } = render(
+			const { asFragment } = render(
 				<WalletVote profile={profile} wallet={wallet} onButtonClick={jest.fn()} env={env} />,
 			);
 
-			await findByTestId("WalletVote");
+			await screen.findByTestId("WalletVote");
 
-			expect(getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE"))).toBeInTheDocument();
+			expect(screen.getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE"))).toBeInTheDocument();
 
-			expect(getByTestId("WalletVote")).toHaveTextContent("Standby 1");
-			expect(getByTestId("WalletVote")).toHaveTextContent("Resigned 1");
+			expect(screen.getByTestId("WalletVote")).toHaveTextContent("Standby 1");
+			expect(screen.getByTestId("WalletVote")).toHaveTextContent("Resigned 1");
 
-			expect(getByText("hint-small.svg")).toBeInTheDocument();
+			expect(screen.getByText("hint-small.svg")).toBeInTheDocument();
 			expect(asFragment()).toMatchSnapshot();
 
 			walletSpy.mockRestore();
@@ -459,10 +450,8 @@ describe("WalletVote", () => {
 				{
 					amount: 0,
 					wallet: new ReadOnlyWallet({
-						address: wallet.address(),
-						explorerLink: "",
+						...defaultDelegate,
 						isDelegate: true,
-						publicKey: wallet.publicKey(),
 						rank: 1,
 						username: "arkx",
 					}),
@@ -470,39 +459,35 @@ describe("WalletVote", () => {
 				{
 					amount: 0,
 					wallet: new ReadOnlyWallet({
-						address: wallet.address(),
-						explorerLink: "",
+						...defaultDelegate,
 						isDelegate: true,
-						publicKey: wallet.publicKey(),
 						username: "arky",
 					}),
 				},
 				{
 					amount: 0,
 					wallet: new ReadOnlyWallet({
-						address: wallet.address(),
-						explorerLink: "",
+						...defaultDelegate,
 						isDelegate: true,
 						isResignedDelegate: true,
-						publicKey: wallet.publicKey(),
 						username: "arkz",
 					}),
 				},
 			]);
 
-			const { asFragment, getByText, getByTestId, findByTestId } = render(
+			const { asFragment } = render(
 				<WalletVote profile={profile} wallet={wallet} onButtonClick={jest.fn()} env={env} />,
 			);
 
-			await findByTestId("WalletVote");
+			await screen.findByTestId("WalletVote");
 
-			expect(getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE"))).toBeInTheDocument();
+			expect(screen.getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE"))).toBeInTheDocument();
 
-			expect(getByTestId("WalletVote")).toHaveTextContent("Active 1");
-			expect(getByTestId("WalletVote")).toHaveTextContent("Standby 1");
-			expect(getByTestId("WalletVote")).toHaveTextContent("Resigned 1");
+			expect(screen.getByTestId("WalletVote")).toHaveTextContent("Active 1");
+			expect(screen.getByTestId("WalletVote")).toHaveTextContent("Standby 1");
+			expect(screen.getByTestId("WalletVote")).toHaveTextContent("Resigned 1");
 
-			expect(getByText("hint-small.svg")).toBeInTheDocument();
+			expect(screen.getByText("hint-small.svg")).toBeInTheDocument();
 			expect(asFragment()).toMatchSnapshot();
 
 			walletSpy.mockRestore();
@@ -514,9 +499,7 @@ describe("WalletVote", () => {
 			{
 				amount: 0,
 				wallet: new ReadOnlyWallet({
-					address: wallet.address(),
-					explorerLink: "",
-					publicKey: wallet.publicKey(),
+					...defaultDelegate,
 					rank: 1,
 					username: "arkx",
 				}),
@@ -524,9 +507,7 @@ describe("WalletVote", () => {
 			{
 				amount: 0,
 				wallet: new ReadOnlyWallet({
-					address: wallet.address(),
-					explorerLink: "",
-					publicKey: wallet.publicKey(),
+					...defaultDelegate,
 					rank: 2,
 					username: "arky",
 				}),
@@ -535,12 +516,12 @@ describe("WalletVote", () => {
 
 		const onButtonClick = jest.fn();
 
-		const { getByText, findByTestId } = render(
+		render(
 			<WalletVote profile={profile} wallet={wallet} onButtonClick={onButtonClick} env={env} />,
 		);
 
-		await findByTestId("WalletVote");
-		fireEvent.click(getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE")));
+		await screen.findByTestId("WalletVote");
+		fireEvent.click(screen.getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE")));
 
 		expect(onButtonClick).toHaveBeenCalledWith("current");
 
@@ -555,14 +536,14 @@ describe("WalletVote", () => {
 
 		const onButtonClick = jest.fn();
 
-		const { getByText, getByTestId, findByTestId } = render(
+		render(
 			<WalletVote profile={profile} wallet={wallet} onButtonClick={onButtonClick} env={env} />,
 		);
 
-		await findByTestId("WalletVote");
-		await waitFor(() => expect(getByTestId("WalletVote")).not.toBeDisabled());
+		await screen.findByTestId("WalletVote");
+		await waitFor(() => expect(screen.getByTestId("WalletVote")).not.toBeDisabled());
 
-		fireEvent.click(getByText(t("COMMON.VOTE")));
+		fireEvent.click(screen.getByText(t("COMMON.VOTE")));
 
 		expect(onButtonClick).toHaveBeenCalledWith();
 
@@ -574,31 +555,27 @@ describe("WalletVote", () => {
 			{
 				amount: 0,
 				wallet: new ReadOnlyWallet({
-					address: wallet.address(),
-					explorerLink: "",
+					...defaultDelegate,
 					isDelegate: true,
 					isResignedDelegate: true,
-					publicKey: wallet.publicKey(),
 					username: "arky",
 				}),
 			},
 			{
 				amount: 0,
 				wallet: new ReadOnlyWallet({
-					address: wallet.address(),
-					explorerLink: "",
+					...defaultDelegate,
 					isDelegate: true,
 					isResignedDelegate: true,
-					publicKey: wallet.publicKey(),
 					username: "arky",
 				}),
 			},
 		]);
-		const { asFragment, findByTestId } = render(
+		const { asFragment } = render(
 			<WalletVote profile={profile} wallet={wallet} onButtonClick={jest.fn()} env={env} />,
 		);
 
-		await findByTestId("WalletVote");
+		await screen.findByTestId("WalletVote");
 
 		expect(asFragment()).toMatchSnapshot();
 

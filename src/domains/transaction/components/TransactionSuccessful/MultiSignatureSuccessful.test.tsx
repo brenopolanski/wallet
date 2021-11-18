@@ -2,7 +2,7 @@ import { Contracts } from "@payvo/sdk-profiles";
 import React from "react";
 import { Route } from "react-router-dom";
 import { TransactionFixture } from "tests/fixtures/transactions";
-import { env, getDefaultProfileId, render, waitFor } from "utils/testing-library";
+import { env, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
 
 import { MultiSignatureSuccessful } from "./MultiSignatureSuccessful";
 
@@ -38,7 +38,7 @@ describe("MultiSignatureSuccessful", () => {
 
 		jest.spyOn(wallet, "isResignedDelegate").mockReturnValue(true);
 
-		const { asFragment, findByTestId } = render(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId">
 				<MultiSignatureSuccessful senderWallet={wallet} transaction={transaction}>
 					<div />
@@ -49,7 +49,7 @@ describe("MultiSignatureSuccessful", () => {
 			},
 		);
 
-		await findByTestId("MultiSignatureSuccessful__publicKeys");
+		await screen.findByTestId("MultiSignatureSuccessful__publicKeys");
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -79,7 +79,7 @@ describe("MultiSignatureSuccessful", () => {
 
 		jest.spyOn(wallet, "isResignedDelegate").mockReturnValue(true);
 
-		const { asFragment, findByTestId } = render(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId">
 				<MultiSignatureSuccessful senderWallet={wallet} transaction={transaction}>
 					<div />
@@ -90,7 +90,7 @@ describe("MultiSignatureSuccessful", () => {
 			},
 		);
 
-		await findByTestId("MultiSignatureSuccessful__publicKeys");
+		await screen.findByTestId("MultiSignatureSuccessful__publicKeys");
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -98,14 +98,14 @@ describe("MultiSignatureSuccessful", () => {
 	});
 
 	it("should handle empty wallet and transation props", async () => {
-		const { asFragment, getByTestId } = render(
+		const { asFragment } = render(
 			<MultiSignatureSuccessful senderWallet={undefined} transaction={undefined}>
 				<div />
 			</MultiSignatureSuccessful>,
 		);
 
 		await waitFor(() =>
-			expect(() => getByTestId("MultiSignatureSuccessful__publicKeys")).toThrow(/Unable to find an element by/),
+			expect(() => screen.getByTestId("MultiSignatureSuccessful__publicKeys")).toThrow(/Unable to find an element by/),
 		);
 
 		expect(asFragment()).toMatchSnapshot();
@@ -133,7 +133,7 @@ describe("MultiSignatureSuccessful", () => {
 			address: undefined,
 		});
 
-		const { asFragment, findByTestId } = render(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId">
 				<MultiSignatureSuccessful senderWallet={wallet} transaction={transaction}>
 					<div />
@@ -144,7 +144,7 @@ describe("MultiSignatureSuccessful", () => {
 			},
 		);
 
-		await findByTestId("MultiSignatureSuccessful__publicKeys");
+		await screen.findByTestId("MultiSignatureSuccessful__publicKeys");
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -189,7 +189,7 @@ describe("MultiSignatureSuccessful", () => {
 			address: undefined,
 		});
 
-		const { asFragment, findByTestId } = render(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId">
 				<MultiSignatureSuccessful senderWallet={wallet} transaction={transaction}>
 					<div />
@@ -200,7 +200,7 @@ describe("MultiSignatureSuccessful", () => {
 			},
 		);
 
-		await findByTestId("MultiSignatureSuccessful__publicKeys");
+		await screen.findByTestId("MultiSignatureSuccessful__publicKeys");
 
 		expect(asFragment()).toMatchSnapshot();
 

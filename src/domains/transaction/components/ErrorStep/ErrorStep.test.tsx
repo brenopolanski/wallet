@@ -1,5 +1,5 @@
 import React from "react";
-import { fireEvent, render, waitFor } from "utils/testing-library";
+import { fireEvent, render, screen, waitFor } from "utils/testing-library";
 
 import { ErrorStep } from "./ErrorStep";
 
@@ -24,11 +24,11 @@ describe("ErrorStep", () => {
 
 	it("should emit onBack", async () => {
 		const onBack = jest.fn();
-		const { asFragment, getByTestId } = render(<ErrorStep title="Custom error title" onBack={onBack} />);
+		const { asFragment } = render(<ErrorStep title="Custom error title" onBack={onBack} />);
 
 		expect(asFragment()).toMatchSnapshot();
 
-		fireEvent.click(getByTestId("ErrorStep__wallet-button"));
+		fireEvent.click(screen.getByTestId("ErrorStep__wallet-button"));
 
 		await waitFor(() =>
 			expect(onBack).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) })),
@@ -37,11 +37,11 @@ describe("ErrorStep", () => {
 
 	it("should emit onRepeat", async () => {
 		const onRepeat = jest.fn();
-		const { asFragment, getByTestId } = render(<ErrorStep title="Custom error title" onRepeat={onRepeat} />);
+		const { asFragment } = render(<ErrorStep title="Custom error title" onRepeat={onRepeat} />);
 
 		expect(asFragment()).toMatchSnapshot();
 
-		fireEvent.click(getByTestId("ErrorStep__repeat-button"));
+		fireEvent.click(screen.getByTestId("ErrorStep__repeat-button"));
 
 		await waitFor(() => expect(onRepeat).toHaveBeenCalledWith());
 	});

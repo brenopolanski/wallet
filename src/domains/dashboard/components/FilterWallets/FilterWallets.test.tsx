@@ -2,7 +2,7 @@ import { Contracts } from "@payvo/sdk-profiles";
 import { FilterOption } from "app/components/FilterNetwork";
 import { DashboardConfiguration } from "domains/dashboard/pages/Dashboard";
 import React from "react";
-import { env, fireEvent, getDefaultProfileId, render } from "utils/testing-library";
+import { env, fireEvent, getDefaultProfileId, render, screen } from "utils/testing-library";
 
 import { FilterWallets } from "./FilterWallets";
 
@@ -52,7 +52,7 @@ describe("FilterWallets", () => {
 	it("should emit onChange for network selection", () => {
 		const onChange = jest.fn();
 
-		const { getByTestId } = render(
+		render(
 			<FilterWallets
 				networks={networkOptions}
 				onChange={onChange}
@@ -61,7 +61,7 @@ describe("FilterWallets", () => {
 			/>,
 		);
 
-		fireEvent.click(getByTestId(`NetworkOption__${networkOptions[0].network.id()}`));
+		fireEvent.click(screen.getByTestId(`NetworkOption__${networkOptions[0].network.id()}`));
 
 		expect(onChange).toHaveBeenCalledWith("selectedNetworkIds", [networkOptions[0].network.id()]);
 	});
@@ -69,13 +69,13 @@ describe("FilterWallets", () => {
 	it("should emit onChange for wallets display type change", () => {
 		const onChange = jest.fn();
 
-		const { getByTestId } = render(
+		render(
 			<FilterWallets networks={networkOptions} onChange={onChange} defaultConfiguration={defaultConfiguration} />,
 		);
 
-		fireEvent.click(getByTestId("filter-wallets__wallets"));
+		fireEvent.click(screen.getByTestId("filter-wallets__wallets"));
 
-		fireEvent.click(getByTestId("dropdown__option--0"));
+		fireEvent.click(screen.getByTestId("dropdown__option--0"));
 
 		expect(onChange).toHaveBeenCalledWith("walletsDisplayType", "all");
 	});
@@ -83,13 +83,13 @@ describe("FilterWallets", () => {
 	it("should not emit onChange for wallet display type change", () => {
 		const onChange = jest.fn();
 
-		const { getByTestId } = render(
+		render(
 			<FilterWallets networks={networkOptions} defaultConfiguration={defaultConfiguration} />,
 		);
 
-		fireEvent.click(getByTestId("filter-wallets__wallets"));
+		fireEvent.click(screen.getByTestId("filter-wallets__wallets"));
 
-		fireEvent.click(getByTestId("dropdown__option--0"));
+		fireEvent.click(screen.getByTestId("dropdown__option--0"));
 
 		expect(onChange).not.toHaveBeenCalled();
 	});

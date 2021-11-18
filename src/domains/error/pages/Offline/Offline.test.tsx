@@ -1,16 +1,16 @@
 import { translations } from "domains/error/i18n";
 import React from "react";
-import { render } from "utils/testing-library";
+import { render, screen } from "utils/testing-library";
 
 import { Offline } from "./Offline";
 
 describe("Offline", () => {
 	it("should render", () => {
-		const { container, asFragment, getByTestId } = render(<Offline />);
+		const { container, asFragment } = render(<Offline />);
 
 		expect(container).toBeInTheDocument();
-		expect(getByTestId("Offline__text")).toHaveTextContent(translations.OFFLINE.TITLE);
-		expect(getByTestId("Offline__text")).toHaveTextContent(translations.OFFLINE.DESCRIPTION);
+		expect(screen.getByTestId("Offline__text")).toHaveTextContent(translations.OFFLINE.TITLE);
+		expect(screen.getByTestId("Offline__text")).toHaveTextContent(translations.OFFLINE.DESCRIPTION);
 		expect(asFragment()).toMatchSnapshot();
 	});
 });

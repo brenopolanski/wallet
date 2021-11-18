@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 
 import { Input } from "./Input";
 
-export type InputAddressProps = {
+export type InputAddressProperties = {
 	profile: Contracts.IProfile;
 	coin?: string;
 	network?: string;
@@ -29,7 +29,7 @@ export const InputAddress = ({
 	onValidAddress,
 	useDefaultRules = true,
 	...properties
-}: InputAddressProps) => {
+}: InputAddressProperties) => {
 	const { t } = useTranslation();
 
 	const validateAddress = async (address: string) => {

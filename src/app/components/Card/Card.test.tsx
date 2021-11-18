@@ -1,5 +1,5 @@
 import React from "react";
-import { fireEvent, render } from "utils/testing-library";
+import { fireEvent, render, screen } from "utils/testing-library";
 
 import { Card } from "./Card";
 
@@ -13,11 +13,11 @@ describe("Card", () => {
 
 	it("should handle click", () => {
 		const handleClick = jest.fn();
-		const { container, asFragment, getByText } = render(<Card onClick={() => handleClick()}>Test</Card>);
+		const { container, asFragment } = render(<Card onClick={() => handleClick()}>Test</Card>);
 
 		expect(container).toBeInTheDocument();
 
-		fireEvent.click(getByText("Test"));
+		fireEvent.click(screen.getByText("Test"));
 
 		expect(handleClick).toHaveBeenCalledWith();
 		expect(asFragment()).toMatchSnapshot();

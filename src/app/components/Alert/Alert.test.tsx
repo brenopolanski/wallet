@@ -1,7 +1,7 @@
 import React from "react";
-import { render } from "utils/testing-library";
+import { render, screen } from "utils/testing-library";
 
-import { Alert } from "./Alert";
+import { Alert, AlertVariant } from "./Alert";
 
 describe("Alert", () => {
 	it("should render", () => {
@@ -12,22 +12,22 @@ describe("Alert", () => {
 	});
 
 	it.each(["info", "success", "warning", "danger", "hint"])("should render as %s alert", (variant) => {
-		const { container, asFragment } = render(<Alert variant={variant} />);
+		const { container, asFragment } = render(<Alert variant={variant as AlertVariant} />);
 
 		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render with title", () => {
-		const { getByTestId } = render(<Alert title="Hello!" />);
+		render(<Alert title="Hello!" />);
 
-		expect(getByTestId("Alert__title")).toHaveTextContent("Hello!");
+		expect(screen.getByTestId("Alert__title")).toHaveTextContent("Hello!");
 	});
 
 	it("should render with children", () => {
-		const { getByTestId, getByText } = render(<Alert title="Hello!">I am a children</Alert>);
+		render(<Alert title="Hello!">I am a children</Alert>);
 
-		expect(getByTestId("Alert__title")).toHaveTextContent("Hello!");
-		expect(getByText("I am a children")).toBeInTheDocument();
+		expect(screen.getByTestId("Alert__title")).toHaveTextContent("Hello!");
+		expect(screen.getByText("I am a children")).toBeInTheDocument();
 	});
 });

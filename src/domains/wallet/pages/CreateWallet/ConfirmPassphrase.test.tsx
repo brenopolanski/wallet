@@ -3,7 +3,7 @@ import { Contracts } from "@payvo/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
-import { env, getDefaultProfileId, MNEMONICS, render } from "utils/testing-library";
+import { env, getDefaultProfileId, MNEMONICS, render, screen } from "utils/testing-library";
 
 import { ConfirmPassphraseStep } from "./ConfirmPassphraseStep";
 
@@ -26,14 +26,14 @@ describe("ConfirmPassphraseStep", () => {
 				},
 			}),
 		);
-		const { getByTestId, getAllByTestId } = render(
+		render(
 			<FormProvider {...form.current}>
 				<ConfirmPassphraseStep />
 			</FormProvider>,
 		);
 
-		expect(getByTestId("CreateWallet__ConfirmPassphraseStep")).toBeInTheDocument();
-		expect(getAllByTestId("MnemonicVerificationOptions__button")).toHaveLength(6);
+		expect(screen.getByTestId("CreateWallet__ConfirmPassphraseStep")).toBeInTheDocument();
+		expect(screen.getAllByTestId("MnemonicVerificationOptions__button")).toHaveLength(6);
 
 		expect(form.current.getValues()).toStrictEqual({ verification: undefined });
 	});

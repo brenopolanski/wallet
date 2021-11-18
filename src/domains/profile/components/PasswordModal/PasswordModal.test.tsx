@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
 import React from "react";
-import { fireEvent, render, waitFor } from "utils/testing-library";
+import { fireEvent, render, screen, waitFor } from "utils/testing-library";
 
 import { PasswordModal } from "./PasswordModal";
 
@@ -14,33 +14,33 @@ describe("PasswordModal", () => {
 	});
 
 	it("should not render if not open", () => {
-		const { asFragment, getByTestId } = render(<PasswordModal isOpen={false} />);
+		const { asFragment } = render(<PasswordModal isOpen={false} />);
 
-		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render with title and description", async () => {
-		const { asFragment, getByTestId } = render(
+		const { asFragment } = render(
 			<PasswordModal isOpen={true} title="Password title" description="Password description" />,
 		);
 
-		expect(getByTestId("modal__inner")).toHaveTextContent("Password title");
-		expect(getByTestId("modal__inner")).toHaveTextContent("Password description");
+		expect(screen.getByTestId("modal__inner")).toHaveTextContent("Password title");
+		expect(screen.getByTestId("modal__inner")).toHaveTextContent("Password description");
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should submit", async () => {
 		const onSuccess = jest.fn();
 
-		const { findByTestId, getByTestId } = render(<PasswordModal isOpen={true} onSubmit={onSuccess} />);
+		render(<PasswordModal isOpen={true} onSubmit={onSuccess} />);
 
-		fireEvent.input(getByTestId("PasswordModal__input"), { target: { value: "password" } });
+		fireEvent.input(screen.getByTestId("PasswordModal__input"), { target: { value: "password" } });
 
 		// wait for formState.isValid to be updated
-		await findByTestId("PasswordModal__submit-button");
+		await screen.findByTestId("PasswordModal__submit-button");
 
-		fireEvent.click(getByTestId("PasswordModal__submit-button"));
+		fireEvent.click(screen.getByTestId("PasswordModal__submit-button"));
 
 		await waitFor(() => {
 			expect(onSuccess).toHaveBeenCalledWith("password");

@@ -1,6 +1,6 @@
 import { translations as pluginTranslations } from "domains/plugin/i18n";
 import React from "react";
-import { fireEvent, render } from "utils/testing-library";
+import { fireEvent, render, screen } from "utils/testing-library";
 
 import { PluginManagerNavigationBar } from "./PluginManagerNavigationBar";
 
@@ -15,9 +15,9 @@ describe("PluginManagerNavigationBar", () => {
 	});
 
 	it("should render", () => {
-		const { asFragment, getByTestId } = render(<PluginManagerNavigationBar menu={menu} />);
+		const { asFragment } = render(<PluginManagerNavigationBar menu={menu} />);
 
-		expect(getByTestId("PluginManagerNavigationBar")).toBeInTheDocument();
+		expect(screen.getByTestId("PluginManagerNavigationBar")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -33,27 +33,27 @@ describe("PluginManagerNavigationBar", () => {
 			);
 		};
 
-		const { asFragment, getByTestId } = render(<Component />);
+		const { asFragment } = render(<Component />);
 
 		const navIds = ["gaming", "utility", "other", "my-plugins", "latest"];
 
 		for (const navId of navIds) {
-			const navItem = getByTestId(`tabs__tab-button-${navId}`);
+			const navItem = screen.getByTestId(`tabs__tab-button-${navId}`);
 
 			fireEvent.click(navItem);
 
-			expect(getByTestId("currentView")).toHaveTextContent(navId);
-			expect(getByTestId(`tabs__tab-button-${navId}`)).toHaveAttribute("aria-selected", "true");
+			expect(screen.getByTestId("currentView")).toHaveTextContent(navId);
+			expect(screen.getByTestId(`tabs__tab-button-${navId}`)).toHaveAttribute("aria-selected", "true");
 		}
 
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should show installed plugins count", () => {
-		const { getByTestId } = render(
+		render(
 			<PluginManagerNavigationBar menu={menu} selectedView="" installedPluginsCount={8} />,
 		);
 
-		expect(getByTestId("tabs__tab-button-my-plugins-count")).toHaveTextContent("8");
+		expect(screen.getByTestId("tabs__tab-button-my-plugins-count")).toHaveTextContent("8");
 	});
 });

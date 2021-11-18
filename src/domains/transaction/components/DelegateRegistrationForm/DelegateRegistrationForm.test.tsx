@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@payvo/sdk";
 import { Contracts as ProfilesContracts } from "@payvo/sdk-profiles";
-import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import * as useFeesHook from "app/hooks/use-fees";
 import { translations } from "domains/transaction/i18n";
@@ -16,6 +15,7 @@ import {
 	MNEMONICS,
 	render,
 	RenderResult,
+	screen,
 	syncDelegates,
 	waitFor,
 } from "utils/testing-library";
@@ -231,7 +231,7 @@ describe("DelegateRegistrationForm", () => {
 			username: () => delegateRegistrationFixture.data.asset.delegate.username,
 		} as Contracts.SignedTransactionData;
 
-		const { getByText } = render(
+		render(
 			<DelegateRegistrationForm.transactionDetails
 				transaction={transaction}
 				translations={translations}
@@ -239,8 +239,8 @@ describe("DelegateRegistrationForm", () => {
 			/>,
 		);
 
-		expect(getByText("TRANSACTION.DELEGATE_NAME")).toBeInTheDocument();
-		expect(getByText("test_delegate")).toBeInTheDocument();
+		expect(screen.getByText("TRANSACTION.DELEGATE_NAME")).toBeInTheDocument();
+		expect(screen.getByText("test_delegate")).toBeInTheDocument();
 	});
 
 	it("should sign transaction using password encryption", async () => {

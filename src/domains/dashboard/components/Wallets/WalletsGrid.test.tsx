@@ -2,7 +2,7 @@ import { Contracts } from "@payvo/sdk-profiles";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
-import { env, getDefaultProfileId, render, waitFor } from "utils/testing-library";
+import { env, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
 
 import { GridWallet } from "./Wallets.contracts";
 import { WalletsGrid } from "./WalletsGrid";
@@ -28,13 +28,13 @@ describe("WalletsGrid", () => {
 	});
 
 	it("should not render if visible prop is falsy", () => {
-		const { getByTestId } = render(<WalletsGrid wallets={[]} isVisible={false} />);
+		render(<WalletsGrid wallets={[]} isVisible={false} />);
 
-		expect(() => getByTestId("WalletsGrid")).toThrow(/Unable to find an element by/);
+		expect(() => screen.getByTestId("WalletsGrid")).toThrow(/Unable to find an element by/);
 	});
 
 	it("should render loading state", async () => {
-		const { getAllByTestId } = render(
+		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<WalletsGrid wallets={wallets} isVisible={true} isLoading={true} />,
 			</Route>,
@@ -44,11 +44,11 @@ describe("WalletsGrid", () => {
 			},
 		);
 
-		await waitFor(() => expect(getAllByTestId("WalletCard__skeleton")).toHaveLength(3));
+		await waitFor(() => expect(screen.getAllByTestId("WalletCard__skeleton")).toHaveLength(3));
 	});
 
 	it("should render wallets", async () => {
-		const { getByTestId, getAllByTestId } = render(
+		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<WalletsGrid wallets={wallets} isVisible={true} />,
 			</Route>,
@@ -58,8 +58,8 @@ describe("WalletsGrid", () => {
 			},
 		);
 
-		expect(getByTestId("WalletsGrid")).toBeInTheDocument();
+		expect(screen.getByTestId("WalletsGrid")).toBeInTheDocument();
 
-		await waitFor(() => expect(getAllByTestId("Card")).toHaveLength(2));
+		await waitFor(() => expect(screen.getAllByTestId("Card")).toHaveLength(2));
 	});
 });

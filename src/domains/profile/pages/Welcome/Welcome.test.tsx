@@ -14,6 +14,7 @@ import {
 	getDefaultProfileId,
 	getPasswordProtectedProfileId,
 	render,
+	screen,
 	waitFor,
 } from "utils/testing-library";
 
@@ -24,29 +25,29 @@ const profileDashboardUrl = `/profiles/${fixtureProfileId}/dashboard`;
 
 describe("Welcome", () => {
 	it("should render with profiles", () => {
-		const { container, getByText, asFragment, history } = render(<Welcome />);
+		const { container, asFragment, history } = render(<Welcome />);
 		const profile = env.profiles().findById(fixtureProfileId);
 
-		expect(getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
+		expect(screen.getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
 
 		expect(container).toBeInTheDocument();
 
-		fireEvent.click(getByText(profile.name()));
+		fireEvent.click(screen.getByText(profile.name()));
 
 		expect(history.location.pathname).toBe(profileDashboardUrl);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should navigate to profile dashboard", () => {
-		const { container, getByText, asFragment, history } = render(<Welcome />);
+		const { container, asFragment, history } = render(<Welcome />);
 
 		const profile = env.profiles().findById(fixtureProfileId);
 
-		expect(getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
+		expect(screen.getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
 
 		expect(container).toBeInTheDocument();
 
-		fireEvent.click(getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		fireEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
 
 		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/dashboard`);
 		expect(asFragment()).toMatchSnapshot();
@@ -56,50 +57,50 @@ describe("Welcome", () => {
 		["close", "modal__close-btn"],
 		["cancel", "SignIn__cancel-button"],
 	])("should open & close sign in modal (%s)", (_, buttonId) => {
-		const { container, getByText, getByTestId } = render(<Welcome />);
+		const { container } = render(<Welcome />);
 
 		expect(container).toBeInTheDocument();
 
 		const profile = env.profiles().findById("cba050f1-880f-45f0-9af9-cfe48f406052");
 
-		expect(getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
+		expect(screen.getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
 
-		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
-		fireEvent.click(getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		fireEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
 
-		expect(getByTestId("modal__inner")).toBeInTheDocument();
-		expect(getByTestId("modal__inner")).toHaveTextContent(profileTranslations.MODAL_SIGN_IN.TITLE);
-		expect(getByTestId("modal__inner")).toHaveTextContent(profileTranslations.MODAL_SIGN_IN.DESCRIPTION);
+		expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
+		expect(screen.getByTestId("modal__inner")).toHaveTextContent(profileTranslations.MODAL_SIGN_IN.TITLE);
+		expect(screen.getByTestId("modal__inner")).toHaveTextContent(profileTranslations.MODAL_SIGN_IN.DESCRIPTION);
 
-		fireEvent.click(getByTestId(buttonId));
+		fireEvent.click(screen.getByTestId(buttonId));
 
-		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 	});
 
 	it("should navigate to profile dashboard with correct password", async () => {
-		const { asFragment, container, getByTestId, getByText, history } = render(<Welcome />);
+		const { asFragment, container, history } = render(<Welcome />);
 
 		expect(container).toBeInTheDocument();
 
 		const profile = env.profiles().findById(getPasswordProtectedProfileId());
 		await env.profiles().restore(profile, getDefaultPassword());
 
-		expect(getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
+		expect(screen.getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
 
-		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
-		fireEvent.click(getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		fireEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
 
-		expect(getByTestId("modal__inner")).toBeInTheDocument();
+		expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
 
-		fireEvent.input(getByTestId("SignIn__input--password"), { target: { value: "password" } });
+		fireEvent.input(screen.getByTestId("SignIn__input--password"), { target: { value: "password" } });
 
 		await waitFor(() => {
-			expect(getByTestId("SignIn__submit-button")).toBeEnabled();
+			expect(screen.getByTestId("SignIn__submit-button")).toBeEnabled();
 		});
 
-		fireEvent.click(getByTestId("SignIn__submit-button"));
+		fireEvent.click(screen.getByTestId("SignIn__submit-button"));
 
 		await waitFor(() => {
 			expect(history.location.pathname).toBe(`/profiles/${profile.id()}/dashboard`);
@@ -109,7 +110,7 @@ describe("Welcome", () => {
 	});
 
 	it("should navigate to profile settings with correct password", async () => {
-		const { asFragment, container, findByTestId, getByTestId, getByText, history, getAllByTestId } = render(
+		const { asFragment, container, history } = render(
 			<Welcome />,
 		);
 
@@ -117,29 +118,29 @@ describe("Welcome", () => {
 
 		const profile = env.profiles().findById("cba050f1-880f-45f0-9af9-cfe48f406052");
 
-		expect(getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
+		expect(screen.getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
 
-		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
-		const profileCardMenu = getAllByTestId("dropdown__toggle")[1];
+		const profileCardMenu = screen.getAllByTestId("dropdown__toggle")[1];
 
 		fireEvent.click(profileCardMenu);
 
-		const settingsOption = getByTestId("dropdown__option--0");
+		const settingsOption = screen.getByTestId("dropdown__option--0");
 
 		expect(settingsOption).toBeInTheDocument();
 		expect(settingsOption).toHaveTextContent(commonTranslations.SETTINGS);
 
 		fireEvent.click(settingsOption);
 
-		await findByTestId("modal__inner");
+		await screen.findByTestId("modal__inner");
 
-		fireEvent.input(getByTestId("SignIn__input--password"), { target: { value: "password" } });
+		fireEvent.input(screen.getByTestId("SignIn__input--password"), { target: { value: "password" } });
 
 		// wait for formState.isValid to be updated
-		await findByTestId("SignIn__submit-button");
+		await screen.findByTestId("SignIn__submit-button");
 
-		fireEvent.click(getByTestId("SignIn__submit-button"));
+		fireEvent.click(screen.getByTestId("SignIn__submit-button"));
 
 		await waitFor(() => {
 			expect(history.location.pathname).toBe(`/profiles/${profile.id()}/settings`);
@@ -149,19 +150,19 @@ describe("Welcome", () => {
 	});
 
 	it("should navigate to profile settings from profile card menu", async () => {
-		const { container, getByText, asFragment, history, getByTestId, getAllByTestId } = render(<Welcome />);
+		const { container, asFragment, history } = render(<Welcome />);
 
 		expect(container).toBeInTheDocument();
 
 		const profile = env.profiles().findById(fixtureProfileId);
 
-		expect(getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
+		expect(screen.getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
 
-		const profileCardMenu = getAllByTestId("dropdown__toggle")[0];
+		const profileCardMenu = screen.getAllByTestId("dropdown__toggle")[0];
 
 		fireEvent.click(profileCardMenu);
 
-		const settingsOption = getByTestId("dropdown__option--0");
+		const settingsOption = screen.getByTestId("dropdown__option--0");
 
 		expect(settingsOption).toBeInTheDocument();
 		expect(settingsOption).toHaveTextContent(commonTranslations.SETTINGS);
@@ -176,71 +177,71 @@ describe("Welcome", () => {
 	});
 
 	it("should delete profile from profile card menu", async () => {
-		const { getByText, getAllByTestId, getByTestId, findByTestId } = render(<Welcome />);
+		render(<Welcome />);
 
-		expect(getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
+		expect(screen.getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
 
-		await waitFor(() => expect(getAllByTestId("Card")).toHaveLength(3));
+		await waitFor(() => expect(screen.getAllByTestId("Card")).toHaveLength(3));
 
-		fireEvent.click(getAllByTestId("dropdown__toggle")[0]);
+		fireEvent.click(screen.getAllByTestId("dropdown__toggle")[0]);
 
-		const deleteOption = getByTestId("dropdown__option--1");
+		const deleteOption = screen.getByTestId("dropdown__option--1");
 
 		expect(deleteOption).toHaveTextContent(commonTranslations.DELETE);
 
 		fireEvent.click(deleteOption);
 
-		await findByTestId("modal__inner");
+		await screen.findByTestId("modal__inner");
 
-		fireEvent.click(getByTestId("DeleteResource__submit-button"));
+		fireEvent.click(screen.getByTestId("DeleteResource__submit-button"));
 
-		await waitFor(() => expect(getAllByTestId("Card")).toHaveLength(2));
+		await waitFor(() => expect(screen.getAllByTestId("Card")).toHaveLength(2));
 	});
 
 	it("should not restart the timeout when closing the modal to retry the profile password", async () => {
 		jest.useFakeTimers();
 
-		const { container, getByText, findByTestId, getByTestId } = render(<Welcome />);
+		const { container } = render(<Welcome />);
 
 		expect(container).toBeInTheDocument();
 
 		const profile = env.profiles().findById("cba050f1-880f-45f0-9af9-cfe48f406052");
 
-		expect(getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
+		expect(screen.getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
 
-		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
-		fireEvent.click(getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		fireEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
 
 		for (const index of [1, 2, 3]) {
-			fireEvent.input(getByTestId("SignIn__input--password"), {
+			fireEvent.input(screen.getByTestId("SignIn__input--password"), {
 				target: { value: `wrong password ${index}` },
 			});
 
 			// wait for form to be updated
-			await findByTestId("SignIn__submit-button");
+			await screen.findByTestId("SignIn__submit-button");
 
-			fireEvent.click(getByTestId("SignIn__submit-button"));
+			fireEvent.click(screen.getByTestId("SignIn__submit-button"));
 
 			// wait for form to be updated
-			await findByTestId("SignIn__submit-button");
+			await screen.findByTestId("SignIn__submit-button");
 		}
 
-		expect(getByTestId("SignIn__submit-button")).toBeDisabled();
-		expect(getByTestId("SignIn__input--password")).toBeDisabled();
+		expect(screen.getByTestId("SignIn__submit-button")).toBeDisabled();
+		expect(screen.getByTestId("SignIn__input--password")).toBeDisabled();
 
 		act(() => {
 			jest.advanceTimersByTime(15_000);
 		});
 
 		// Close
-		fireEvent.click(getByTestId("SignIn__cancel-button"));
+		fireEvent.click(screen.getByTestId("SignIn__cancel-button"));
 
 		// Reopen
-		fireEvent.click(getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		fireEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
 
 		// Still disabled
-		expect(getByTestId("SignIn__submit-button")).toBeDisabled();
+		expect(screen.getByTestId("SignIn__submit-button")).toBeDisabled();
 
 		act(() => {
 			jest.advanceTimersByTime(50_000);
@@ -248,9 +249,9 @@ describe("Welcome", () => {
 		});
 
 		// wait for form to be updated
-		await findByTestId("SignIn__submit-button");
+		await screen.findByTestId("SignIn__submit-button");
 
-		await waitFor(() => expect(getByTestId("Input__error")).toHaveAttribute("data-errortext", "Password invalid"), {
+		await waitFor(() => expect(screen.getByTestId("Input__error")).toHaveAttribute("data-errortext", "Password invalid"), {
 			timeout: 10_000,
 		});
 
@@ -258,13 +259,13 @@ describe("Welcome", () => {
 	});
 
 	it("should change route to create profile", () => {
-		const { container, getByText, asFragment, history } = render(<Welcome />);
+		const { container, asFragment, history } = render(<Welcome />);
 
 		expect(container).toBeInTheDocument();
 
-		expect(getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
+		expect(screen.getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
 
-		fireEvent.click(getByText(profileTranslations.CREATE_PROFILE));
+		fireEvent.click(screen.getByText(profileTranslations.CREATE_PROFILE));
 
 		expect(history.location.pathname).toBe("/profiles/create");
 		expect(asFragment()).toMatchSnapshot();
@@ -273,7 +274,7 @@ describe("Welcome", () => {
 	it("should render without profiles", () => {
 		env.reset({ coins: {}, httpClient, storage: new StubStorage() });
 
-		const { container, asFragment, getByText } = render(
+		const { container, asFragment } = render(
 			<EnvironmentProvider env={env}>
 				<Welcome />
 			</EnvironmentProvider>,
@@ -281,7 +282,7 @@ describe("Welcome", () => {
 
 		expect(container).toBeInTheDocument();
 
-		expect(getByText(profileTranslations.PAGE_WELCOME.WITHOUT_PROFILES.TITLE)).toBeInTheDocument();
+		expect(screen.getByText(profileTranslations.PAGE_WELCOME.WITHOUT_PROFILES.TITLE)).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});

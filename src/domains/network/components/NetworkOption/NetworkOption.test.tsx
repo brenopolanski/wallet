@@ -1,6 +1,6 @@
 import { Networks } from "@payvo/sdk";
 import React from "react";
-import { env, fireEvent, getDefaultProfileId, MNEMONICS, render } from "utils/testing-library";
+import { env, fireEvent, getDefaultProfileId, MNEMONICS, render, screen } from "utils/testing-library";
 
 import { NetworkOption } from "./NetworkOption";
 
@@ -24,21 +24,21 @@ describe("NetworkIcon", () => {
 	});
 
 	it("should render network", () => {
-		const { getByTestId } = render(<NetworkOption network={network} />, {});
+		render(<NetworkOption network={network} />, {});
 
-		expect(getByTestId("NetworkIcon-ARK-ark.mainnet")).toHaveAttribute("aria-label", network.displayName());
-		expect(getByTestId("NetworkIcon__icon")).toBeInTheDocument();
+		expect(screen.getByTestId("NetworkIcon-ARK-ark.mainnet")).toHaveAttribute("aria-label", network.displayName());
+		expect(screen.getByTestId("NetworkIcon__icon")).toBeInTheDocument();
 	});
 
 	it("should call onClick callback", () => {
 		const onClick = jest.fn();
 
-		const { getByTestId } = render(<NetworkOption network={network} onClick={onClick} />, {});
+		render(<NetworkOption network={network} onClick={onClick} />, {});
 
-		expect(getByTestId("NetworkIcon-ARK-ark.mainnet")).toHaveAttribute("aria-label", network.displayName());
-		expect(getByTestId("NetworkIcon__icon")).toBeInTheDocument();
+		expect(screen.getByTestId("NetworkIcon-ARK-ark.mainnet")).toHaveAttribute("aria-label", network.displayName());
+		expect(screen.getByTestId("NetworkIcon__icon")).toBeInTheDocument();
 
-		fireEvent.click(getByTestId("SelectNetwork__NetworkIcon--container"));
+		fireEvent.click(screen.getByTestId("SelectNetwork__NetworkIcon--container"));
 
 		expect(onClick).toHaveBeenCalledWith();
 	});
@@ -46,21 +46,21 @@ describe("NetworkIcon", () => {
 	it("should not call onClick callback if disabled", () => {
 		const onClick = jest.fn();
 
-		const { getByTestId } = render(<NetworkOption network={network} onClick={onClick} disabled />, {});
+		render(<NetworkOption network={network} onClick={onClick} disabled />, {});
 
-		expect(getByTestId("NetworkIcon-ARK-ark.mainnet")).toHaveAttribute("aria-label", network.displayName());
-		expect(getByTestId("NetworkIcon__icon")).toBeInTheDocument();
+		expect(screen.getByTestId("NetworkIcon-ARK-ark.mainnet")).toHaveAttribute("aria-label", network.displayName());
+		expect(screen.getByTestId("NetworkIcon__icon")).toBeInTheDocument();
 
-		fireEvent.click(getByTestId("SelectNetwork__NetworkIcon--container"));
+		fireEvent.click(screen.getByTestId("SelectNetwork__NetworkIcon--container"));
 
 		expect(onClick).not.toHaveBeenCalled();
 	});
 
 	it("should not render different class for testnet network", () => {
-		const { getByTestId, asFragment } = render(<NetworkOption network={networkTestnet} />, {});
+		const { asFragment } = render(<NetworkOption network={networkTestnet} />, {});
 
-		expect(getByTestId("NetworkIcon-ARK-ark.devnet")).toHaveAttribute("aria-label", networkTestnet.displayName());
-		expect(getByTestId("NetworkIcon__icon")).toBeInTheDocument();
+		expect(screen.getByTestId("NetworkIcon-ARK-ark.devnet")).toHaveAttribute("aria-label", networkTestnet.displayName());
+		expect(screen.getByTestId("NetworkIcon__icon")).toBeInTheDocument();
 		expect(asFragment).toMatchSnapshot();
 	});
 });

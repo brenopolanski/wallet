@@ -1,7 +1,7 @@
 import { Contracts } from "@payvo/sdk-profiles";
 import { translations } from "domains/contact/i18n";
 import React from "react";
-import { env, fireEvent, getDefaultProfileId, render, waitFor } from "utils/testing-library";
+import { env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
 
 import { DeleteContact } from "./DeleteContact";
 
@@ -21,29 +21,29 @@ describe("DeleteContact", () => {
 	});
 
 	it("should not render if not open", () => {
-		const { asFragment, getByTestId } = render(
+		const { asFragment } = render(
 			<DeleteContact contact={contact} isOpen={false} onDelete={onDelete} profile={profile} />,
 		);
 
-		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render a modal", () => {
-		const { asFragment, getByTestId } = render(
+		const { asFragment } = render(
 			<DeleteContact contact={contact} isOpen={true} onDelete={onDelete} profile={profile} />,
 		);
 
-		expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_DELETE_CONTACT.TITLE);
-		expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_DELETE_CONTACT.DESCRIPTION);
+		expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_DELETE_CONTACT.TITLE);
+		expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_DELETE_CONTACT.DESCRIPTION);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should delete contact", async () => {
-		const { getByTestId } = render(
+		render(
 			<DeleteContact isOpen={true} onDelete={onDelete} profile={profile} contact={contact} />,
 		);
-		const deleteButton = getByTestId("DeleteResource__submit-button");
+		const deleteButton = screen.getByTestId("DeleteResource__submit-button");
 
 		fireEvent.click(deleteButton);
 

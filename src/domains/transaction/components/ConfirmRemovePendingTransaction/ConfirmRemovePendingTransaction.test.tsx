@@ -1,7 +1,7 @@
 import { Contracts, DTO } from "@payvo/sdk-profiles";
 import { translations } from "domains/transaction/i18n";
 import React from "react";
-import { env, fireEvent, getDefaultProfileId, render } from "utils/testing-library";
+import { env, fireEvent, getDefaultProfileId, render, screen } from "utils/testing-library";
 
 import { ConfirmRemovePendingTransaction } from "./ConfirmRemovePendingTransaction";
 
@@ -65,30 +65,30 @@ describe("ConfirmRemovePendingTransaction", () => {
 	});
 
 	it("should not render if not open", () => {
-		const { asFragment, getByTestId } = render(<ConfirmRemovePendingTransaction isOpen={false} />);
+		const { asFragment } = render(<ConfirmRemovePendingTransaction isOpen={false} />);
 
-		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should not render if transaction type is not available", () => {
-		const { asFragment, getByTestId } = render(<ConfirmRemovePendingTransaction isOpen={true} />);
+		const { asFragment } = render(<ConfirmRemovePendingTransaction isOpen={true} />);
 
-		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render multisignature transaction", () => {
-		const { asFragment, getByTestId } = render(
+		const { asFragment } = render(
 			<ConfirmRemovePendingTransaction isOpen={true} transaction={transferFixture} />,
 		);
 
-		expect(getByTestId("modal__inner")).toBeInTheDocument();
-		expect(getByTestId("ConfirmRemovePendingTransaction__remove")).toBeInTheDocument();
-		expect(getByTestId("ConfirmRemovePendingTransaction__cancel")).toBeInTheDocument();
+		expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
+		expect(screen.getByTestId("ConfirmRemovePendingTransaction__remove")).toBeInTheDocument();
+		expect(screen.getByTestId("ConfirmRemovePendingTransaction__cancel")).toBeInTheDocument();
 
 		expect(
-			getByTestId(
+			screen.getByTestId(
 				`ConfirmRemovePendingTransaction__${translations.TRANSACTION_TYPES.TRANSFER}-${translations.TRANSACTION}`,
 			),
 		).toBeInTheDocument();
@@ -97,16 +97,16 @@ describe("ConfirmRemovePendingTransaction", () => {
 	});
 
 	it("should render multisignature registration", () => {
-		const { asFragment, getByTestId } = render(
+		const { asFragment } = render(
 			<ConfirmRemovePendingTransaction isOpen={true} transaction={multiSignatureFixture} />,
 		);
 
-		expect(getByTestId("modal__inner")).toBeInTheDocument();
-		expect(getByTestId("ConfirmRemovePendingTransaction__remove")).toBeInTheDocument();
-		expect(getByTestId("ConfirmRemovePendingTransaction__cancel")).toBeInTheDocument();
+		expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
+		expect(screen.getByTestId("ConfirmRemovePendingTransaction__remove")).toBeInTheDocument();
+		expect(screen.getByTestId("ConfirmRemovePendingTransaction__cancel")).toBeInTheDocument();
 
 		expect(
-			getByTestId(
+			screen.getByTestId(
 				`ConfirmRemovePendingTransaction__${translations.TRANSACTION_TYPES.MULTI_SIGNATURE}-${translations.REGISTRATION}`,
 			),
 		).toBeInTheDocument();
@@ -116,42 +116,42 @@ describe("ConfirmRemovePendingTransaction", () => {
 
 	it("should handle close", () => {
 		const onClose = jest.fn();
-		const { getByTestId } = render(
+		render(
 			<ConfirmRemovePendingTransaction isOpen={true} transaction={multiSignatureFixture} onClose={onClose} />,
 		);
 
-		expect(getByTestId("modal__inner")).toBeInTheDocument();
-		expect(getByTestId("ConfirmRemovePendingTransaction__remove")).toBeInTheDocument();
-		expect(getByTestId("ConfirmRemovePendingTransaction__cancel")).toBeInTheDocument();
+		expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
+		expect(screen.getByTestId("ConfirmRemovePendingTransaction__remove")).toBeInTheDocument();
+		expect(screen.getByTestId("ConfirmRemovePendingTransaction__cancel")).toBeInTheDocument();
 
 		expect(
-			getByTestId(
+			screen.getByTestId(
 				`ConfirmRemovePendingTransaction__${translations.TRANSACTION_TYPES.MULTI_SIGNATURE}-${translations.REGISTRATION}`,
 			),
 		).toBeInTheDocument();
 
-		fireEvent.click(getByTestId("ConfirmRemovePendingTransaction__cancel"));
+		fireEvent.click(screen.getByTestId("ConfirmRemovePendingTransaction__cancel"));
 
 		expect(onClose).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
 
 	it("should handle remove", () => {
 		const onRemove = jest.fn();
-		const { getByTestId } = render(
+		render(
 			<ConfirmRemovePendingTransaction isOpen={true} transaction={multiSignatureFixture} onRemove={onRemove} />,
 		);
 
-		expect(getByTestId("modal__inner")).toBeInTheDocument();
-		expect(getByTestId("ConfirmRemovePendingTransaction__remove")).toBeInTheDocument();
-		expect(getByTestId("ConfirmRemovePendingTransaction__cancel")).toBeInTheDocument();
+		expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
+		expect(screen.getByTestId("ConfirmRemovePendingTransaction__remove")).toBeInTheDocument();
+		expect(screen.getByTestId("ConfirmRemovePendingTransaction__cancel")).toBeInTheDocument();
 
 		expect(
-			getByTestId(
+			screen.getByTestId(
 				`ConfirmRemovePendingTransaction__${translations.TRANSACTION_TYPES.MULTI_SIGNATURE}-${translations.REGISTRATION}`,
 			),
 		).toBeInTheDocument();
 
-		fireEvent.click(getByTestId("ConfirmRemovePendingTransaction__remove"));
+		fireEvent.click(screen.getByTestId("ConfirmRemovePendingTransaction__remove"));
 
 		expect(onRemove).toHaveBeenCalledWith(expect.any(DTO.ExtendedSignedTransactionData));
 	});

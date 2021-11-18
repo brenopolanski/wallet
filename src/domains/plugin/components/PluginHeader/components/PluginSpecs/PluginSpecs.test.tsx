@@ -9,25 +9,25 @@ describe("PluginSpecs", () => {
 	it("should render properly", async () => {
 		const ipcRendererMock = jest.spyOn(ipcRenderer, "send").mockImplementation();
 
-		const { asFragment, findByText, getByTestId } = render(
+		const { asFragment } = render(
 			<PluginSpecs
 				author="Payvo"
-				category="Utility"
+				category="utility"
 				url="https://github.com/arkecosystem/explorer"
 				version="1.3.8"
 				size="4.2 Mb"
 			/>,
 		);
 
-		fireEvent.click(getByTestId("PluginSpecs__website"));
+		fireEvent.click(screen.getByTestId("PluginSpecs__website"));
 
 		expect(ipcRendererMock).toHaveBeenLastCalledWith("open-external", "https://github.com/arkecosystem/explorer");
 
-		await findByText("Payvo");
-		await findByText("Utility");
-		await findByText("View");
-		await findByText("1.3.8");
-		await findByText("4.2 Mb");
+		await screen.findByText("Payvo");
+		await screen.findByText("Utility");
+		await screen.findByText("View");
+		await screen.findByText("1.3.8");
+		await screen.findByText("4.2 Mb");
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -35,19 +35,19 @@ describe("PluginSpecs", () => {
 	});
 
 	it("should render without url and size", async () => {
-		const { asFragment, findAllByText, findByText } = render(
-			<PluginSpecs author="Payvo" category="Utility" version="1.3.8" isOfficial />,
+		const { asFragment } = render(
+			<PluginSpecs author="Payvo" category="utility" version="1.3.8" />,
 		);
 
-		await findByText("Payvo");
-		await findByText("Utility");
+		await screen.findByText("Payvo");
+		await screen.findByText("Utility");
 
-		await expect(findAllByText("N/A")).resolves.toHaveLength(2);
+		await expect(screen.findAllByText("N/A")).resolves.toHaveLength(2);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should show loading state for size", () => {
-		const { container } = render(<PluginSpecs author="Payvo" category="Utility" version="1.3.8" isLoadingSize />);
+		const { container } = render(<PluginSpecs author="Payvo" category="utility" version="1.3.8" isLoadingSize />);
 
 		expect(screen.getByTestId("PluginSpecs__size-skeleton")).toBeInTheDocument();
 		expect(container).toMatchSnapshot();

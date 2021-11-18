@@ -3,7 +3,7 @@ import electron from "electron";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
-import { env, fireEvent, getDefaultProfileId, render } from "utils/testing-library";
+import { env, fireEvent, getDefaultProfileId, render, screen } from "utils/testing-library";
 
 import { Page } from "./Page";
 
@@ -41,7 +41,7 @@ describe("Page", () => {
 			const ipcRendererSpy = jest.spyOn(electron.ipcRenderer, "send").mockImplementation();
 			const historySpy = jest.spyOn(history, "push").mockImplementation();
 
-			const { getByTestId, findByText, findByTestId } = render(
+			render(
 				<Route path="/profiles/:profileId/dashboard">
 					<Page>{}</Page>
 				</Route>,
@@ -51,15 +51,15 @@ describe("Page", () => {
 				},
 			);
 
-			await findByTestId("navbar__useractions");
+			await screen.findByTestId("navbar__useractions");
 
-			const toggle = getByTestId("navbar__useractions");
+			const toggle = screen.getByTestId("navbar__useractions");
 
 			fireEvent.click(toggle);
 
-			await findByText(label);
+			await screen.findByText(label);
 
-			fireEvent.click(await findByText(label));
+			fireEvent.click(await screen.findByText(label));
 
 			if (label === "Support") {
 				expect(ipcRendererSpy).toHaveBeenCalledWith("open-external", "https://payvo.com/contact");
@@ -73,7 +73,7 @@ describe("Page", () => {
 	);
 
 	it("should handle 'Sign Out' click on user actions dropdown", async () => {
-		const { getByTestId, findByText, findByTestId } = render(
+		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Page>{}</Page>
 			</Route>,
@@ -85,15 +85,15 @@ describe("Page", () => {
 
 		const historySpy = jest.spyOn(history, "push").mockImplementation();
 
-		await findByTestId("navbar__useractions");
+		await screen.findByTestId("navbar__useractions");
 
-		const toggle = getByTestId("navbar__useractions");
+		const toggle = screen.getByTestId("navbar__useractions");
 
 		fireEvent.click(toggle);
 
-		await findByText("Sign Out");
+		await screen.findByText("Sign Out");
 
-		fireEvent.click(await findByText("Sign Out"));
+		fireEvent.click(await screen.findByText("Sign Out"));
 
 		expect(historySpy).toHaveBeenCalledWith("/");
 

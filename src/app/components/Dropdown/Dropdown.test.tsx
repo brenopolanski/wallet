@@ -28,10 +28,10 @@ describe("Dropdown", () => {
 	});
 
 	it("should render toggle icon", () => {
-		const { container, getByTestId } = render(<Dropdown />);
+		const { container } = render(<Dropdown />);
 
 		expect(container).toMatchSnapshot();
-		expect(getByTestId("dropdown__toggle")).toBeInTheDocument();
+		expect(screen.getByTestId("dropdown__toggle")).toBeInTheDocument();
 	});
 
 	it("should render with options", () => {
@@ -41,17 +41,17 @@ describe("Dropdown", () => {
 	});
 
 	it("should open dropdown options on icon click", () => {
-		const { getByTestId } = render(<Dropdown options={options} />);
-		const toggle = getByTestId("dropdown__toggle");
+		render(<Dropdown options={options} />);
+		const toggle = screen.getByTestId("dropdown__toggle");
 
 		fireEvent.click(toggle);
 
-		expect(getByTestId("dropdown__content")).toBeInTheDocument();
+		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
 	});
 
 	it("shouldn't open dropdown by disableToggle param on icon click", () => {
-		const { getByTestId } = render(<Dropdown options={options} disableToggle={true} />);
-		const toggle = getByTestId("dropdown__toggle");
+		render(<Dropdown options={options} disableToggle={true} />);
+		const toggle = screen.getByTestId("dropdown__toggle");
 
 		fireEvent.click(toggle);
 
@@ -60,14 +60,14 @@ describe("Dropdown", () => {
 
 	it("should select option by click", () => {
 		const onSelect = jest.fn();
-		const { getByTestId } = render(<Dropdown options={options} onSelect={onSelect} />);
-		const toggle = getByTestId("dropdown__toggle");
+		render(<Dropdown options={options} onSelect={onSelect} />);
+		const toggle = screen.getByTestId("dropdown__toggle");
 
 		fireEvent.click(toggle);
 
-		expect(getByTestId("dropdown__content")).toBeInTheDocument();
+		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
 
-		const firstOption = getByTestId("dropdown__option--0");
+		const firstOption = screen.getByTestId("dropdown__option--0");
 
 		expect(firstOption).toBeInTheDocument();
 
@@ -78,14 +78,14 @@ describe("Dropdown", () => {
 
 	it("should select option with enter key", () => {
 		const onSelect = jest.fn();
-		const { getByTestId } = render(<Dropdown options={options} onSelect={onSelect} />);
-		const toggle = getByTestId("dropdown__toggle");
+		render(<Dropdown options={options} onSelect={onSelect} />);
+		const toggle = screen.getByTestId("dropdown__toggle");
 
 		fireEvent.click(toggle);
 
-		expect(getByTestId("dropdown__content")).toBeInTheDocument();
+		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
 
-		const firstOption = getByTestId("dropdown__option--0");
+		const firstOption = screen.getByTestId("dropdown__option--0");
 
 		expect(firstOption).toBeInTheDocument();
 
@@ -96,14 +96,14 @@ describe("Dropdown", () => {
 
 	it("should select option with space key", () => {
 		const onSelect = jest.fn();
-		const { getByTestId } = render(<Dropdown options={options} onSelect={onSelect} />);
-		const toggle = getByTestId("dropdown__toggle");
+		render(<Dropdown options={options} onSelect={onSelect} />);
+		const toggle = screen.getByTestId("dropdown__toggle");
 
 		fireEvent.click(toggle);
 
-		expect(getByTestId("dropdown__content")).toBeInTheDocument();
+		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
 
-		const firstOption = getByTestId("dropdown__option--0");
+		const firstOption = screen.getByTestId("dropdown__option--0");
 
 		expect(firstOption).toBeInTheDocument();
 
@@ -113,14 +113,14 @@ describe("Dropdown", () => {
 	});
 
 	it("should ignore triggering onSelect callback if not exists", () => {
-		const { getByTestId } = render(<Dropdown options={options} />);
-		const toggle = getByTestId("dropdown__toggle");
+		render(<Dropdown options={options} />);
+		const toggle = screen.getByTestId("dropdown__toggle");
 
 		fireEvent.click(toggle);
 
-		expect(getByTestId("dropdown__content")).toBeInTheDocument();
+		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
 
-		const firstOption = getByTestId("dropdown__option--0");
+		const firstOption = screen.getByTestId("dropdown__option--0");
 
 		expect(firstOption).toBeInTheDocument();
 
@@ -131,7 +131,7 @@ describe("Dropdown", () => {
 
 	it("should close dropdown content when click outside", () => {
 		const onSelect = () => ({});
-		const { getByTestId } = render(
+		render(
 			<div>
 				<div data-testid="dropdown__outside" className="mt-16">
 					outside elememt to be clicked
@@ -141,17 +141,17 @@ describe("Dropdown", () => {
 				</div>
 			</div>,
 		);
-		const toggle = getByTestId("dropdown__toggle");
+		const toggle = screen.getByTestId("dropdown__toggle");
 
 		fireEvent.click(toggle);
 
-		expect(getByTestId("dropdown__content")).toBeInTheDocument();
+		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
 
-		const firstOption = getByTestId("dropdown__option--0");
+		const firstOption = screen.getByTestId("dropdown__option--0");
 
 		expect(firstOption).toBeInTheDocument();
 
-		const outsideElement = getByTestId("dropdown__outside");
+		const outsideElement = screen.getByTestId("dropdown__outside");
 
 		expect(outsideElement).toBeInTheDocument();
 
@@ -161,12 +161,12 @@ describe("Dropdown", () => {
 	});
 
 	it("should close dropdown with escape key", () => {
-		const { getByTestId } = render(<Dropdown options={options} />);
-		const toggle = getByTestId("dropdown__toggle");
+		render(<Dropdown options={options} />);
+		const toggle = screen.getByTestId("dropdown__toggle");
 
 		fireEvent.click(toggle);
 
-		expect(getByTestId("dropdown__content")).toBeInTheDocument();
+		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
 
 		fireEvent.keyDown(toggle, { key: "Escape", keyCode: 27 });
 
@@ -188,8 +188,8 @@ describe("Dropdown", () => {
 	});
 
 	it("should render a bottom position", () => {
-		const { getByTestId, container } = render(<Dropdown options={options} position="bottom" />);
-		const toggle = getByTestId("dropdown__toggle");
+		const { container } = render(<Dropdown options={options} position="bottom" />);
+		const toggle = screen.getByTestId("dropdown__toggle");
 
 		fireEvent.click(toggle);
 
@@ -197,8 +197,8 @@ describe("Dropdown", () => {
 	});
 
 	it("should render a bottom-left position", () => {
-		const { getByTestId, container } = render(<Dropdown options={options} position="bottom-left" />);
-		const toggle = getByTestId("dropdown__toggle");
+		const { container } = render(<Dropdown options={options} position="bottom-left" />);
+		const toggle = screen.getByTestId("dropdown__toggle");
 
 		fireEvent.click(toggle);
 
@@ -206,8 +206,8 @@ describe("Dropdown", () => {
 	});
 
 	it("should render a left position", () => {
-		const { getByTestId, container } = render(<Dropdown options={options} position="left" />);
-		const toggle = getByTestId("dropdown__toggle");
+		const { container } = render(<Dropdown options={options} position="left" />);
+		const toggle = screen.getByTestId("dropdown__toggle");
 
 		fireEvent.click(toggle);
 
@@ -215,8 +215,8 @@ describe("Dropdown", () => {
 	});
 
 	it("should render a top-left position", () => {
-		const { getByTestId, container } = render(<Dropdown options={options} position="top-left" />);
-		const toggle = getByTestId("dropdown__toggle");
+		const { container } = render(<Dropdown options={options} position="top-left" />);
+		const toggle = screen.getByTestId("dropdown__toggle");
 
 		fireEvent.click(toggle);
 
@@ -224,8 +224,8 @@ describe("Dropdown", () => {
 	});
 
 	it("should render a top", () => {
-		const { getByTestId, container } = render(<Dropdown options={options} position="top" />);
-		const toggle = getByTestId("dropdown__toggle");
+		const { container } = render(<Dropdown options={options} position="top" />);
+		const toggle = screen.getByTestId("dropdown__toggle");
 
 		fireEvent.click(toggle);
 
@@ -233,8 +233,8 @@ describe("Dropdown", () => {
 	});
 
 	it("should render a top-right", () => {
-		const { getByTestId, container } = render(<Dropdown options={options} position="top-right" />);
-		const toggle = getByTestId("dropdown__toggle");
+		const { container } = render(<Dropdown options={options} position="top-right" />);
+		const toggle = screen.getByTestId("dropdown__toggle");
 
 		fireEvent.click(toggle);
 
@@ -277,10 +277,10 @@ describe("Dropdown", () => {
 			],
 			title: "Secondary Options 1",
 		};
-		const { getByTestId, container } = render(
+		const { container } = render(
 			<Dropdown options={[primaryOptions, secondaryOptions]} position="top-right" />,
 		);
-		const toggle = getByTestId("dropdown__toggle");
+		const toggle = screen.getByTestId("dropdown__toggle");
 
 		fireEvent.click(toggle);
 
@@ -300,10 +300,10 @@ describe("Dropdown", () => {
 			options: [],
 			title: "Secondary Options 1",
 		};
-		const { getByTestId, container } = render(
+		const { container } = render(
 			<Dropdown options={[primaryOptions, secondaryOptions]} position="top-right" />,
 		);
-		const toggle = getByTestId("dropdown__toggle");
+		const toggle = screen.getByTestId("dropdown__toggle");
 
 		fireEvent.click(toggle);
 
@@ -311,15 +311,15 @@ describe("Dropdown", () => {
 	});
 
 	it("should render with a disabled option", () => {
-		const { getByTestId, container } = render(
+		const { container } = render(
 			<Dropdown options={[{ disabled: true, label: "Disabled Option", value: "disabled" }]} />,
 		);
 
-		const toggle = getByTestId("dropdown__toggle");
+		const toggle = screen.getByTestId("dropdown__toggle");
 
 		fireEvent.click(toggle);
 
-		fireEvent.click(getByTestId("dropdown__option--0"));
+		fireEvent.click(screen.getByTestId("dropdown__option--0"));
 
 		// Keep it open
 		expect(toggle).toBeInTheDocument();
@@ -367,16 +367,16 @@ describe("Dropdown positioning", () => {
 		const documentClientHeightSpy = jest.spyOn(document.body, "clientHeight", "get").mockReturnValue(50);
 		const getComputedStyleSpy = jest.spyOn(window, "getComputedStyle").mockReturnValueOnce({ marginTop: "10px" });
 
-		const { getByTestId } = render(
+		render(
 			<Dropdown>
 				<span>hello</span>
 			</Dropdown>,
 		);
-		const toggle = getByTestId("dropdown__toggle");
+		const toggle = screen.getByTestId("dropdown__toggle");
 
 		fireEvent.click(toggle);
 
-		expect(getByTestId("dropdown__content")).toHaveAttribute("style", "opacity: 1;");
+		expect(screen.getByTestId("dropdown__content")).toHaveAttribute("style", "opacity: 1;");
 
 		documentClientHeightSpy.mockRestore();
 		getComputedStyleSpy.mockRestore();
@@ -391,16 +391,16 @@ describe("Dropdown positioning", () => {
 		const documentClientHeightSpy = jest.spyOn(document.body, "clientHeight", "get").mockReturnValue(100);
 		const elementClientHeightSpy = jest.spyOn(Element.prototype, "clientHeight", "get").mockReturnValue(100);
 
-		const { getByTestId } = render(
+		render(
 			<Dropdown>
 				<span>hello</span>
 			</Dropdown>,
 		);
-		const toggle = getByTestId("dropdown__toggle");
+		const toggle = screen.getByTestId("dropdown__toggle");
 
 		fireEvent.click(toggle);
 
-		expect(getByTestId("dropdown__content")).toHaveAttribute(
+		expect(screen.getByTestId("dropdown__content")).toHaveAttribute(
 			"style",
 			"opacity: 1; height: 60px; overflow-y: scroll;",
 		);
@@ -419,16 +419,16 @@ describe("Dropdown positioning", () => {
 		const offsetHeightSpy = jest.spyOn(HTMLElement.prototype, "offsetHeight", "get").mockReturnValue(50);
 		const documentClientHeightSpy = jest.spyOn(document.body, "clientHeight", "get").mockReturnValue(150);
 
-		const { getByTestId } = render(
+		render(
 			<Dropdown>
 				<span>hello</span>
 			</Dropdown>,
 		);
-		const toggle = getByTestId("dropdown__toggle");
+		const toggle = screen.getByTestId("dropdown__toggle");
 
 		fireEvent.click(toggle);
 
-		expect(getByTestId("dropdown__content")).toHaveAttribute("style", "margin-top: -100px; opacity: 1;");
+		expect(screen.getByTestId("dropdown__content")).toHaveAttribute("style", "margin-top: -100px; opacity: 1;");
 
 		getBoundingClientRectSpy.mockRestore();
 		offsetHeightSpy.mockRestore();
@@ -445,12 +445,12 @@ describe("Dropdown positioning", () => {
 		const getBoundingClientRectSpy = jest.spyOn(Element.prototype, "getBoundingClientRect");
 		const documentClientHeightSpy = jest.spyOn(document.body, "clientHeight", "get").mockReturnValue(100);
 
-		const { getByTestId } = render(
+		render(
 			<Dropdown>
 				<span>hello</span>
 			</Dropdown>,
 		);
-		const toggle = getByTestId("dropdown__toggle");
+		const toggle = screen.getByTestId("dropdown__toggle");
 
 		fireEvent.click(toggle);
 

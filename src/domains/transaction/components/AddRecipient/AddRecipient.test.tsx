@@ -65,21 +65,21 @@ describe("AddRecipient", () => {
 			recipientAddress: "D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax",
 		};
 
-		const { getByTestId, container } = renderWithFormProvider(
+		const { container } = renderWithFormProvider(
 			<AddRecipient profile={profile} wallet={wallet} recipients={[]} onChange={jest.fn()} />,
 			values,
 		);
 
 		await waitFor(() => {
-			expect(getByTestId("AddRecipient__amount")).toHaveValue("1");
-			expect(getByTestId("SelectDropdown__input")).toHaveValue("D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax");
+			expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1");
+			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue("D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax");
 		});
 
 		expect(container).toMatchSnapshot();
 	});
 
 	it("should render with multiple recipients switch", async () => {
-		const { getByTestId, container } = renderWithFormProvider(
+		const { container } = renderWithFormProvider(
 			<AddRecipient
 				onChange={jest.fn()}
 				profile={profile}
@@ -89,7 +89,7 @@ describe("AddRecipient", () => {
 			/>,
 		);
 
-		await waitFor(() => expect(getByTestId("SelectDropdown__input")).not.toHaveValue());
+		await waitFor(() => expect(screen.getByTestId("SelectDropdown__input")).not.toHaveValue());
 
 		expect(container).toMatchSnapshot();
 	});
@@ -117,26 +117,26 @@ describe("AddRecipient", () => {
 				} as any),
 		);
 
-		const { getByTestId } = renderWithFormProvider(
+		renderWithFormProvider(
 			<AddRecipient profile={profile} wallet={wallet} onChange={onChange} recipients={[]} />,
 		);
 
-		fireEvent.input(getByTestId("AddRecipient__amount"), {
+		fireEvent.input(screen.getByTestId("AddRecipient__amount"), {
 			target: {
 				value: "1",
 			},
 		});
 
-		await waitFor(() => expect(getByTestId("AddRecipient__amount")).toHaveValue("1"));
+		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1"));
 
-		fireEvent.input(getByTestId("SelectDropdown__input"), {
+		fireEvent.input(screen.getByTestId("SelectDropdown__input"), {
 			target: {
 				value: "bP6T9GQ3kqP6T9GQ3kqP6T9GQ3kqTTTP6T9GQ3kqT",
 			},
 		});
 
 		await waitFor(() =>
-			expect(getByTestId("SelectDropdown__input")).toHaveValue("bP6T9GQ3kqP6T9GQ3kqP6T9GQ3kqTTTP6T9GQ3kqT"),
+			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue("bP6T9GQ3kqP6T9GQ3kqP6T9GQ3kqTTTP6T9GQ3kqT"),
 		);
 
 		expect(onChange).toHaveBeenCalledWith([
@@ -152,33 +152,33 @@ describe("AddRecipient", () => {
 	});
 
 	it("should select recipient", async () => {
-		const { getByTestId, findByTestId } = renderWithFormProvider(
+		renderWithFormProvider(
 			<AddRecipient profile={profile} wallet={wallet} recipients={[]} onChange={jest.fn()} />,
 		);
 
-		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
-		userEvent.click(getByTestId("SelectRecipient__select-recipient"));
+		userEvent.click(screen.getByTestId("SelectRecipient__select-recipient"));
 
-		await findByTestId("modal__inner");
+		await screen.findByTestId("modal__inner");
 
-		userEvent.click(getByTestId("RecipientListItem__select-button-0"));
+		userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
 
-		await waitFor(() => expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/));
+		await waitFor(() => expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/));
 
 		const selectedAddressValue = profile.wallets().first().address();
 
-		expect(getByTestId("SelectDropdown__input")).toHaveValue(selectedAddressValue);
+		expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(selectedAddressValue);
 	});
 
 	it("should set available amount", async () => {
-		const { getByTestId, container } = renderWithFormProvider(
+		const { container } = renderWithFormProvider(
 			<AddRecipient profile={profile} wallet={wallet} recipients={[]} onChange={jest.fn()} />,
 		);
 
-		fireEvent.click(getByTestId("AddRecipient__send-all"));
+		fireEvent.click(screen.getByTestId("AddRecipient__send-all"));
 
-		await waitFor(() => expect(getByTestId("AddRecipient__amount")).toHaveValue(`${wallet.balance()}`));
+		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue(`${wallet.balance()}`));
 
 		expect(container).toMatchSnapshot();
 	});
@@ -197,36 +197,36 @@ describe("AddRecipient", () => {
 
 		emptyProfile.wallets().push(emptyWallet);
 
-		const { getByTestId, container } = renderWithFormProvider(
+		const { container } = renderWithFormProvider(
 			<AddRecipient profile={emptyProfile} wallet={emptyWallet} recipients={[]} onChange={jest.fn()} />,
 		);
 
-		fireEvent.click(getByTestId("AddRecipient__send-all"));
+		fireEvent.click(screen.getByTestId("AddRecipient__send-all"));
 
-		await waitFor(() => expect(getByTestId("AddRecipient__amount")).not.toHaveValue());
+		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).not.toHaveValue());
 
 		expect(container).toMatchSnapshot();
 	});
 
 	it("should toggle between single and multiple recipients", async () => {
-		const { getByText, queryByText, findByText } = renderWithFormProvider(
+		renderWithFormProvider(
 			<AddRecipient profile={profile} wallet={wallet} recipients={[]} onChange={jest.fn()} />,
 		);
 
-		const singleButton = getByText(translations.TRANSACTION.SINGLE);
-		const multipleButton = getByText(translations.TRANSACTION.MULTIPLE);
+		const singleButton = screen.getByText(translations.TRANSACTION.SINGLE);
+		const multipleButton = screen.getByText(translations.TRANSACTION.MULTIPLE);
 
 		const recipientLabel = "Recipient #1";
 
-		expect(queryByText(recipientLabel)).not.toBeInTheDocument();
+		expect(screen.queryByText(recipientLabel)).not.toBeInTheDocument();
 
 		userEvent.click(multipleButton);
 
-		await findByText(recipientLabel);
+		await screen.findByText(recipientLabel);
 
 		userEvent.click(singleButton);
 
-		await waitFor(() => expect(queryByText(recipientLabel)).not.toBeInTheDocument());
+		await waitFor(() => expect(screen.queryByText(recipientLabel)).not.toBeInTheDocument());
 	});
 
 	it("should prevent adding invalid recipient address in multiple type", async () => {
@@ -321,16 +321,16 @@ describe("AddRecipient", () => {
 			network: undefined,
 		};
 
-		const { getByTestId } = renderWithFormProvider(
+		renderWithFormProvider(
 			<AddRecipient profile={profile} wallet={wallet} onChange={jest.fn()} recipients={[]} />,
 			values,
 		);
 
 		await waitFor(() => {
-			expect(getByTestId("SelectDropdown__input")).toBeDisabled();
+			expect(screen.getByTestId("SelectDropdown__input")).toBeDisabled();
 		});
 
-		expect(getByTestId("AddRecipient__amount")).toBeDisabled();
+		expect(screen.getByTestId("AddRecipient__amount")).toBeDisabled();
 	});
 
 	it("should disable recipient fields if sender address is not filled", async () => {
@@ -339,16 +339,16 @@ describe("AddRecipient", () => {
 			senderAddress: undefined,
 		};
 
-		const { getByTestId } = renderWithFormProvider(
+		renderWithFormProvider(
 			<AddRecipient profile={profile} wallet={wallet} onChange={jest.fn()} recipients={[]} />,
 			values,
 		);
 
 		await waitFor(() => {
-			expect(getByTestId("SelectDropdown__input")).toBeDisabled();
+			expect(screen.getByTestId("SelectDropdown__input")).toBeDisabled();
 		});
 
-		expect(getByTestId("AddRecipient__amount")).toBeDisabled();
+		expect(screen.getByTestId("AddRecipient__amount")).toBeDisabled();
 	});
 
 	it("should show wallet name in recipients' list for multiple type", async () => {
@@ -409,83 +409,83 @@ describe("AddRecipient", () => {
 	});
 
 	it("should show error for low balance", async () => {
-		const { getByTestId, findByTestId } = renderWithFormProvider(
+		renderWithFormProvider(
 			<AddRecipient profile={profile} wallet={wallet} onChange={jest.fn()} recipients={[]} />,
 		);
 
-		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
-		userEvent.click(getByTestId("SelectRecipient__select-recipient"));
+		userEvent.click(screen.getByTestId("SelectRecipient__select-recipient"));
 
-		await findByTestId("modal__inner");
+		await screen.findByTestId("modal__inner");
 
-		const firstAddress = getByTestId("RecipientListItem__select-button-0");
+		const firstAddress = screen.getByTestId("RecipientListItem__select-button-0");
 
 		userEvent.click(firstAddress);
 
-		await waitFor(() => expect(() => getByTestId("Input__error")).toThrow(/Unable to find an element by/));
+		await waitFor(() => expect(() => screen.getByTestId("Input__error")).toThrow(/Unable to find an element by/));
 
-		fireEvent.change(getByTestId("AddRecipient__amount"), {
+		fireEvent.change(screen.getByTestId("AddRecipient__amount"), {
 			target: {
 				value: "10000000000",
 			},
 		});
 
-		await findByTestId("Input__error");
+		await screen.findByTestId("Input__error");
 	});
 
 	it("should show error for zero balance", async () => {
 		const mockWalletBalance = jest.spyOn(wallet, "balance").mockReturnValue(0);
 
-		const { getByTestId, findByTestId } = renderWithFormProvider(
+		renderWithFormProvider(
 			<AddRecipient profile={profile} wallet={wallet} onChange={jest.fn()} recipients={[]} />,
 		);
 
-		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
-		userEvent.click(getByTestId("SelectRecipient__select-recipient"));
+		userEvent.click(screen.getByTestId("SelectRecipient__select-recipient"));
 
-		await findByTestId("modal__inner");
+		await screen.findByTestId("modal__inner");
 
-		const firstAddress = getByTestId("RecipientListItem__select-button-0");
+		const firstAddress = screen.getByTestId("RecipientListItem__select-button-0");
 
 		userEvent.click(firstAddress);
 
-		await waitFor(() => expect(() => getByTestId("Input__error")).toThrow(/Unable to find an element by/));
+		await waitFor(() => expect(() => screen.getByTestId("Input__error")).toThrow(/Unable to find an element by/));
 
-		fireEvent.change(getByTestId("AddRecipient__amount"), {
+		fireEvent.change(screen.getByTestId("AddRecipient__amount"), {
 			target: {
 				value: "0.1",
 			},
 		});
 
-		await findByTestId("Input__error");
+		await screen.findByTestId("Input__error");
 
 		mockWalletBalance.mockRestore();
 	});
 
 	it("should show error for invalid address", async () => {
-		const { getByTestId, getAllByTestId, findByTestId } = renderWithFormProvider(
+		renderWithFormProvider(
 			<AddRecipient profile={profile} wallet={wallet} onChange={jest.fn()} recipients={[]} />,
 		);
 
-		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
-		fireEvent.click(getByTestId("SelectRecipient__select-recipient"));
+		fireEvent.click(screen.getByTestId("SelectRecipient__select-recipient"));
 
-		await findByTestId("modal__inner");
-		await waitFor(() => expect(() => getByTestId("Input__error")).toThrow(/Unable to find an element by/));
+		await screen.findByTestId("modal__inner");
+		await waitFor(() => expect(() => screen.getByTestId("Input__error")).toThrow(/Unable to find an element by/));
 
-		fireEvent.click(getByTestId("RecipientListItem__select-button-0"));
+		fireEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
 
-		fireEvent.change(getByTestId("SelectDropdown__input"), {
+		fireEvent.change(screen.getByTestId("SelectDropdown__input"), {
 			target: {
 				value: "abc",
 			},
 		});
 
 		await waitFor(() =>
-			expect(getAllByTestId("Input__error")[0]).toHaveAttribute(
+			expect(screen.getAllByTestId("Input__error")[0]).toHaveAttribute(
 				"data-errortext",
 				translations.COMMON.VALIDATION.RECIPIENT_INVALID,
 			),

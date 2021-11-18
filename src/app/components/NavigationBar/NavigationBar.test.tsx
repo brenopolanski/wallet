@@ -6,7 +6,7 @@ import * as useScrollHook from "app/hooks/use-scroll";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
-import { env as mockedTestEnvironment, fireEvent, getDefaultProfileId, render, waitFor } from "utils/testing-library";
+import { env as mockedTestEnvironment, fireEvent, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
 
 import { NavigationBar } from "./NavigationBar";
 
@@ -82,9 +82,9 @@ describe("NavigationBar", () => {
 	});
 
 	it("should handle menu click", () => {
-		const { getByText, history } = render(<NavigationBar />);
+		const { history } = render(<NavigationBar />);
 
-		fireEvent.click(getByText("test"));
+		fireEvent.click(screen.getByText("test"));
 
 		expect(history.location.pathname).toBe("/test");
 	});
@@ -95,14 +95,14 @@ describe("NavigationBar", () => {
 			{ label: "Option 2", mountPath: () => "/test2", title: "test2", value: "/test2" },
 		]);
 
-		const { getByTestId, getByText, history } = render(<NavigationBar />);
-		const toggle = getByTestId("navbar__useractions");
+		const { history } = render(<NavigationBar />);
+		const toggle = screen.getByTestId("navbar__useractions");
 
 		fireEvent.click(toggle);
 
-		expect(getByText("Option 1")).toBeInTheDocument();
+		expect(screen.getByText("Option 1")).toBeInTheDocument();
 
-		fireEvent.click(getByText("Option 1"));
+		fireEvent.click(screen.getByText("Option 1"));
 
 		expect(history.location.pathname).toBe("/test");
 
@@ -111,9 +111,9 @@ describe("NavigationBar", () => {
 
 	it("should handle click to send button", () => {
 		const mockProfile = environmentHooks.useActiveProfile();
-		const { getByTestId, history } = render(<NavigationBar />);
+		const { history } = render(<NavigationBar />);
 
-		const sendButton = getByTestId("navbar__buttons--send");
+		const sendButton = screen.getByTestId("navbar__buttons--send");
 
 		fireEvent.click(sendButton);
 
@@ -121,7 +121,7 @@ describe("NavigationBar", () => {
 	});
 
 	it("should handle receive funds", async () => {
-		const { findByTestId, getAllByText, getByTestId, queryAllByTestId } = render(
+		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<NavigationBar />
 			</Route>,
@@ -131,23 +131,23 @@ describe("NavigationBar", () => {
 			},
 		);
 
-		fireEvent.click(getByTestId("navbar__buttons--receive"));
+		fireEvent.click(screen.getByTestId("navbar__buttons--receive"));
 
-		await expect(findByTestId("modal__inner")).resolves.toHaveTextContent("Select Account");
+		await expect(screen.findByTestId("modal__inner")).resolves.toHaveTextContent("Select Account");
 
-		fireEvent.click(getAllByText("Select")[0]);
+		fireEvent.click(screen.getAllByText("Select")[0]);
 
-		await findByTestId("ReceiveFunds__name");
-		await findByTestId("ReceiveFunds__address");
-		await waitFor(() => expect(queryAllByTestId("ReceiveFunds__qrcode")).toHaveLength(1));
+		await screen.findByTestId("ReceiveFunds__name");
+		await screen.findByTestId("ReceiveFunds__address");
+		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__qrcode")).toHaveLength(1));
 
-		fireEvent.click(getByTestId("modal__close-btn"));
+		fireEvent.click(screen.getByTestId("modal__close-btn"));
 
-		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 	});
 
 	it("should close the search wallet modal", async () => {
-		const { findByTestId, getByTestId } = render(
+		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<NavigationBar />
 			</Route>,
@@ -157,15 +157,15 @@ describe("NavigationBar", () => {
 			},
 		);
 
-		const receiveFundsButton = getByTestId("navbar__buttons--receive");
+		const receiveFundsButton = screen.getByTestId("navbar__buttons--receive");
 
 		fireEvent.click(receiveFundsButton);
 
-		await expect(findByTestId("modal__inner")).resolves.toHaveTextContent("Select Account");
+		await expect(screen.findByTestId("modal__inner")).resolves.toHaveTextContent("Select Account");
 
-		fireEvent.click(getByTestId("modal__close-btn"));
+		fireEvent.click(screen.getByTestId("modal__close-btn"));
 
-		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 	});
 
 	it("should disable send transfer button when no Live wallets in test network", () => {
@@ -184,10 +184,10 @@ describe("NavigationBar", () => {
 			return "";
 		});
 
-		const { container, getByTestId } = render(<NavigationBar />);
+		const { container } = render(<NavigationBar />);
 
 		expect(container).toBeInTheDocument();
-		expect(getByTestId("navbar__buttons--send")).toHaveAttribute("disabled");
+		expect(screen.getByTestId("navbar__buttons--send")).toHaveAttribute("disabled");
 
 		profileSettingsMock.mockRestore();
 	});

@@ -1,7 +1,7 @@
 import { act, renderHook } from "@testing-library/react-hooks";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
-import { render } from "utils/testing-library";
+import { render, screen } from "utils/testing-library";
 
 import { FormField } from "./FormField";
 import { FormFieldConsumer } from "./useFormField";
@@ -13,9 +13,9 @@ describe("FormField", () => {
 				<input data-testid="input" name="test" />
 			</FormField>
 		);
-		const { queryByTestId } = render(tree);
+		render(tree);
 
-		expect(queryByTestId("input")).toBeInTheDocument();
+		expect(screen.queryByTestId("input")).toBeInTheDocument();
 	});
 
 	it("should provide field context", () => {
@@ -34,8 +34,8 @@ describe("FormField", () => {
 				</FormField>
 			</FormProvider>
 		);
-		const { queryByText } = render(tree);
+		render(tree);
 
-		expect(queryByText(errorMessage)).toBeInTheDocument();
+		expect(screen.queryByText(errorMessage)).toBeInTheDocument();
 	});
 });

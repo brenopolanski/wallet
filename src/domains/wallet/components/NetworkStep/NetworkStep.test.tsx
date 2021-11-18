@@ -3,7 +3,7 @@ import { Contracts } from "@payvo/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
-import { env, fireEvent, getDefaultProfileId, render } from "utils/testing-library";
+import { env, fireEvent, getDefaultProfileId, render, screen } from "utils/testing-library";
 
 import { NetworkStep } from "./NetworkStep";
 
@@ -22,16 +22,16 @@ describe("SelectNetworkStep", () => {
 
 	it("should render", () => {
 		const { result: form } = renderHook(() => useForm());
-		const { getByTestId, asFragment } = render(
+		const { asFragment } = render(
 			<FormProvider {...form.current}>
 				<NetworkStep profile={profile} title="title" subtitle="subtitle" />
 			</FormProvider>,
 		);
 
-		expect(getByTestId("NetworkStep")).toBeInTheDocument();
+		expect(screen.getByTestId("NetworkStep")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 
-		const selectNetworkInput = getByTestId("SelectNetworkInput__input");
+		const selectNetworkInput = screen.getByTestId("SelectNetworkInput__input");
 
 		expect(selectNetworkInput).toBeInTheDocument();
 	});
@@ -40,22 +40,22 @@ describe("SelectNetworkStep", () => {
 		profile.settings().set(Contracts.ProfileSetting.UseTestNetworks, false);
 
 		const { result: form } = renderHook(() => useForm());
-		const { getByTestId, asFragment, queryByTestId } = render(
+		const { asFragment } = render(
 			<FormProvider {...form.current}>
 				<NetworkStep profile={profile} title="title" subtitle="subtitle" />
 			</FormProvider>,
 		);
 
-		expect(getByTestId("NetworkStep")).toBeInTheDocument();
+		expect(screen.getByTestId("NetworkStep")).toBeInTheDocument();
 
-		const selectNetworkInput = getByTestId("SelectNetworkInput__input");
+		const selectNetworkInput = screen.getByTestId("SelectNetworkInput__input");
 
 		expect(selectNetworkInput).toBeInTheDocument();
 
 		fireEvent.focus(selectNetworkInput);
 
-		expect(queryByTestId("NetworkIcon-ARK-ark.mainnet")).toBeInTheDocument();
-		expect(queryByTestId("NetworkIcon-ARK-ark.devnet")).toBeNull();
+		expect(screen.queryByTestId("NetworkIcon-ARK-ark.mainnet")).toBeInTheDocument();
+		expect(screen.queryByTestId("NetworkIcon-ARK-ark.devnet")).toBeNull();
 
 		expect(asFragment()).toMatchSnapshot();
 

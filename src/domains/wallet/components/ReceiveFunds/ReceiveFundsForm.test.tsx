@@ -7,6 +7,7 @@ import {
 	getDefaultProfileId,
 	getDefaultWalletId,
 	renderWithForm,
+	screen,
 	waitFor,
 } from "utils/testing-library";
 
@@ -22,20 +23,20 @@ describe("ReceiveFundsForm", () => {
 	});
 
 	it("should render", async () => {
-		const { asFragment, getByTestId } = renderWithForm(<ReceiveFundsForm network={network} />);
+		const { asFragment } = renderWithForm(<ReceiveFundsForm network={network} />);
 
-		await waitFor(() => expect(getByTestId("ReceiveFundsForm__amount")).not.toHaveValue());
-		await waitFor(() => expect(getByTestId("ReceiveFundsForm__memo")).not.toHaveValue());
+		await waitFor(() => expect(screen.getByTestId("ReceiveFundsForm__amount")).not.toHaveValue());
+		await waitFor(() => expect(screen.getByTestId("ReceiveFundsForm__memo")).not.toHaveValue());
 
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should emit amount onChange event", async () => {
-		const { asFragment, getByTestId, form } = renderWithForm(<ReceiveFundsForm network={network} />);
+		const { asFragment, form } = renderWithForm(<ReceiveFundsForm network={network} />);
 
-		await waitFor(() => expect(getByTestId("ReceiveFundsForm__amount")).not.toHaveValue());
+		await waitFor(() => expect(screen.getByTestId("ReceiveFundsForm__amount")).not.toHaveValue());
 
-		fireEvent.input(getByTestId("ReceiveFundsForm__amount"), { target: { value: "10" } });
+		fireEvent.input(screen.getByTestId("ReceiveFundsForm__amount"), { target: { value: "10" } });
 
 		await waitFor(() => expect(form()?.getValues("amount")).toBe("10"));
 
@@ -43,12 +44,12 @@ describe("ReceiveFundsForm", () => {
 	});
 
 	it("should emit memo onChange event", async () => {
-		const { asFragment, getByTestId, form } = renderWithForm(<ReceiveFundsForm network={network} />);
-		await waitFor(() => expect(getByTestId("ReceiveFundsForm__memo")).not.toHaveValue());
+		const { asFragment, form } = renderWithForm(<ReceiveFundsForm network={network} />);
+		await waitFor(() => expect(screen.getByTestId("ReceiveFundsForm__memo")).not.toHaveValue());
 
-		fireEvent.input(getByTestId("ReceiveFundsForm__memo"), { target: { value: "test" } });
+		fireEvent.input(screen.getByTestId("ReceiveFundsForm__memo"), { target: { value: "test" } });
 		await waitFor(() => expect(form()?.getValues("memo")).toBe("test"));
-		await waitFor(() => expect(getByTestId("ReceiveFundsForm__memo")).toHaveValue("test"));
+		await waitFor(() => expect(screen.getByTestId("ReceiveFundsForm__memo")).toHaveValue("test"));
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -58,11 +59,11 @@ describe("ReceiveFundsForm", () => {
 
 		const memoMock = jest.spyOn(network, "usesMemo").mockReturnValue(false);
 
-		const { asFragment, getByTestId } = renderWithForm(<ReceiveFundsForm network={network} />, {
+		const { asFragment } = renderWithForm(<ReceiveFundsForm network={network} />, {
 			defaultValues: { memo },
 		});
 
-		expect(() => getByTestId("ReceiveFundsForm__memo")).toThrow(/Unable to find an element by/);
+		expect(() => screen.getByTestId("ReceiveFundsForm__memo")).toThrow(/Unable to find an element by/);
 
 		expect(asFragment()).toMatchSnapshot();
 

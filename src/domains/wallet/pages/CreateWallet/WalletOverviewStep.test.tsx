@@ -6,7 +6,7 @@ import electron from "electron";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { Trans } from "react-i18next";
-import { env, fireEvent, getDefaultProfileId, MNEMONICS, render, waitFor } from "utils/testing-library";
+import { env, fireEvent, getDefaultProfileId, MNEMONICS, render, screen, waitFor } from "utils/testing-library";
 
 import { WalletOverviewStep } from "./WalletOverviewStep";
 
@@ -38,7 +38,7 @@ describe("WalletOverviewStep", () => {
 				filePath: "filePath",
 			}));
 
-			const { getByTestId, asFragment } = render(
+			const { asFragment } = render(
 				<FormProvider {...form.current}>
 					<WalletOverviewStep />
 				</FormProvider>,
@@ -51,7 +51,7 @@ describe("WalletOverviewStep", () => {
 			// @ts-ignore
 			navigator.clipboard = { writeText: writeTextMock };
 
-			fireEvent.click(getByTestId("CreateWallet__copy"));
+			fireEvent.click(screen.getByTestId("CreateWallet__copy"));
 
 			await waitFor(() => expect(writeTextMock).toHaveBeenCalledWith(MNEMONICS[0]));
 
@@ -77,13 +77,13 @@ describe("WalletOverviewStep", () => {
 
 			const toastSpy = jest.spyOn(toasts, "success");
 
-			const { getByTestId } = render(
+			render(
 				<FormProvider {...form.current}>
 					<WalletOverviewStep />
 				</FormProvider>,
 			);
 
-			fireEvent.click(getByTestId("CreateWallet__download"));
+			fireEvent.click(screen.getByTestId("CreateWallet__download"));
 
 			await waitFor(() => {
 				expect(toastSpy).toHaveBeenCalledWith(
@@ -116,13 +116,13 @@ describe("WalletOverviewStep", () => {
 
 			const toastSpy = jest.spyOn(toasts, "success");
 
-			const { getByTestId } = render(
+			render(
 				<FormProvider {...form.current}>
 					<WalletOverviewStep />
 				</FormProvider>,
 			);
 
-			fireEvent.click(getByTestId("CreateWallet__download"));
+			fireEvent.click(screen.getByTestId("CreateWallet__download"));
 
 			expect(toastSpy).not.toHaveBeenCalled();
 
@@ -147,13 +147,13 @@ describe("WalletOverviewStep", () => {
 
 			const toastSpy = jest.spyOn(toasts, "error");
 
-			const { getByTestId } = render(
+			render(
 				<FormProvider {...form.current}>
 					<WalletOverviewStep />
 				</FormProvider>,
 			);
 
-			fireEvent.click(getByTestId("CreateWallet__download"));
+			fireEvent.click(screen.getByTestId("CreateWallet__download"));
 
 			await waitFor(() => {
 				expect(toastSpy).toHaveBeenCalledWith(expect.stringMatching(/Could not save/));

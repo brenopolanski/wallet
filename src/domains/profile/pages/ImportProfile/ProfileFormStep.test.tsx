@@ -37,7 +37,7 @@ describe("Import Profile - Profile Form Step", () => {
 		const history = createMemoryHistory();
 		history.push(`/profiles/import`);
 
-		const { container, getByTestId } = render(
+		const { container } = render(
 			<EnvironmentProvider env={env}>
 				<ImportProfileForm
 					env={env}
@@ -49,7 +49,7 @@ describe("Import Profile - Profile Form Step", () => {
 			</EnvironmentProvider>,
 		);
 
-		await waitFor(() => expect(getByTestId("CreateProfile__submit-button")).toHaveAttribute("disabled"));
+		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).toHaveAttribute("disabled"));
 
 		expect(container).toMatchSnapshot();
 	});
@@ -58,7 +58,7 @@ describe("Import Profile - Profile Form Step", () => {
 		const history = createMemoryHistory();
 		history.push(`/profiles/import`);
 
-		const { container, getByTestId } = render(
+		const { container } = render(
 			<EnvironmentProvider env={env}>
 				<ImportProfileForm
 					env={env}
@@ -70,7 +70,7 @@ describe("Import Profile - Profile Form Step", () => {
 			</EnvironmentProvider>,
 		);
 
-		await waitFor(() => expect(getByTestId("CreateProfile__submit-button")).toHaveAttribute("disabled"));
+		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).toHaveAttribute("disabled"));
 
 		expect(container).toMatchSnapshot();
 	});
@@ -80,7 +80,7 @@ describe("Import Profile - Profile Form Step", () => {
 		const emptyProfile = env.profiles().create("test2");
 		history.push(`/profiles/import`);
 
-		const { container, getByTestId } = render(
+		const { container } = render(
 			<EnvironmentProvider env={env}>
 				<ImportProfileForm
 					env={env}
@@ -92,14 +92,14 @@ describe("Import Profile - Profile Form Step", () => {
 			</EnvironmentProvider>,
 		);
 
-		await waitFor(() => expect(getByTestId("CreateProfile__submit-button")).toHaveAttribute("disabled"));
+		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).toHaveAttribute("disabled"));
 
 		expect(container).toMatchSnapshot();
 	});
 
 	it("should store profile", async () => {
 		const emptyProfile = env.profiles().create("test3");
-		const { asFragment, getAllByTestId, getByTestId } = render(
+		const { asFragment } = render(
 			<EnvironmentProvider env={env}>
 				<ImportProfileForm
 					env={env}
@@ -111,32 +111,32 @@ describe("Import Profile - Profile Form Step", () => {
 			</EnvironmentProvider>,
 		);
 
-		await waitFor(() => expect(getByTestId("CreateProfile__submit-button")).toHaveAttribute("disabled"));
+		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).toHaveAttribute("disabled"));
 
 		// Upload avatar image
-		fireEvent.click(getByTestId("SelectProfileImage__upload-button"));
+		fireEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
 
 		expect(showOpenDialogMock).toHaveBeenCalledWith(showOpenDialogParameters);
 
-		fireEvent.input(getAllByTestId("Input")[0], { target: { value: "test profile 1" } });
+		fireEvent.input(screen.getAllByTestId("Input")[0], { target: { value: "test profile 1" } });
 
-		fireEvent.focus(getByTestId("SelectDropdown__input"));
+		fireEvent.focus(screen.getByTestId("SelectDropdown__input"));
 
-		fireEvent.click(getByTestId("SelectDropdown__option--0"));
+		fireEvent.click(screen.getByTestId("SelectDropdown__option--0"));
 
 		await waitFor(() => {
-			expect(getByTestId("CreateProfile__submit-button")).toBeEnabled();
+			expect(screen.getByTestId("CreateProfile__submit-button")).toBeEnabled();
 		});
 
-		fireEvent.click(getByTestId("CreateProfile__submit-button"));
+		fireEvent.click(screen.getByTestId("CreateProfile__submit-button"));
 
 		expect(emptyProfile.usesPassword()).toBe(false);
 
-		fireEvent.input(getAllByTestId("Input")[0], { target: { value: "test profile 2" } });
+		fireEvent.input(screen.getAllByTestId("Input")[0], { target: { value: "test profile 2" } });
 
 		fireEvent.click(screen.getByRole("checkbox"));
 
-		fireEvent.click(getByTestId("CreateProfile__submit-button"));
+		fireEvent.click(screen.getByTestId("CreateProfile__submit-button"));
 
 		const newProfile = env.profiles().findById(emptyProfile.id());
 
@@ -148,7 +148,7 @@ describe("Import Profile - Profile Form Step", () => {
 
 	it("should fail password confirmation", async () => {
 		const emptyProfile = env.profiles().create("test4");
-		const { asFragment, getAllByTestId, getByTestId } = render(
+		const { asFragment } = render(
 			<EnvironmentProvider env={env}>
 				<ImportProfileForm
 					env={env}
@@ -160,28 +160,28 @@ describe("Import Profile - Profile Form Step", () => {
 			</EnvironmentProvider>,
 		);
 
-		fireEvent.input(getAllByTestId("Input")[0], { target: { value: "asdasdas" } });
+		fireEvent.input(screen.getAllByTestId("Input")[0], { target: { value: "asdasdas" } });
 
-		const selectDropdown = getByTestId("SelectDropdown__input");
+		const selectDropdown = screen.getByTestId("SelectDropdown__input");
 		fireEvent.focus(selectDropdown);
-		fireEvent.click(getByTestId("SelectDropdown__option--0"));
+		fireEvent.click(screen.getByTestId("SelectDropdown__option--0"));
 
-		fireEvent.change(getAllByTestId("InputPassword")[0], { target: { value: "753lk6JD!&" } });
-		fireEvent.change(getAllByTestId("InputPassword")[1], { target: { value: "753lk6JD!" } });
+		fireEvent.change(screen.getAllByTestId("InputPassword")[0], { target: { value: "753lk6JD!&" } });
+		fireEvent.change(screen.getAllByTestId("InputPassword")[1], { target: { value: "753lk6JD!" } });
 
-		await waitFor(() => expect(getByTestId("CreateProfile__submit-button")).toHaveAttribute("disabled"));
+		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).toHaveAttribute("disabled"));
 
-		fireEvent.input(getAllByTestId("InputPassword")[1], { target: { value: "753lk6JD!&" } });
+		fireEvent.input(screen.getAllByTestId("InputPassword")[1], { target: { value: "753lk6JD!&" } });
 
-		await waitFor(() => expect(getByTestId("CreateProfile__submit-button")).not.toHaveAttribute("disabled"));
+		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).not.toHaveAttribute("disabled"));
 
-		fireEvent.input(getAllByTestId("InputPassword")[0], { target: { value: "753lk6JD!" } });
+		fireEvent.input(screen.getAllByTestId("InputPassword")[0], { target: { value: "753lk6JD!" } });
 
-		await waitFor(() => expect(getByTestId("CreateProfile__submit-button")).toHaveAttribute("disabled"));
+		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).toHaveAttribute("disabled"));
 
-		fireEvent.input(getAllByTestId("InputPassword")[1], { target: { value: "753lk6JD!" } });
+		fireEvent.input(screen.getAllByTestId("InputPassword")[1], { target: { value: "753lk6JD!" } });
 
-		await waitFor(() => expect(getByTestId("CreateProfile__submit-button")).not.toHaveAttribute("disabled"));
+		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).not.toHaveAttribute("disabled"));
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -190,7 +190,7 @@ describe("Import Profile - Profile Form Step", () => {
 		const emptyProfile = env.profiles().create("test6");
 		const shouldUseDarkColorsSpy = jest.spyOn(utils, "shouldUseDarkColors").mockReturnValue(false);
 
-		const { asFragment, getAllByTestId, getByTestId } = render(
+		const { asFragment } = render(
 			<EnvironmentProvider env={env}>
 				<ImportProfileForm
 					env={env}
@@ -202,63 +202,63 @@ describe("Import Profile - Profile Form Step", () => {
 			</EnvironmentProvider>,
 		);
 
-		await waitFor(() => expect(getByTestId("CreateProfile__submit-button")).toHaveAttribute("disabled"));
+		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).toHaveAttribute("disabled"));
 
-		act(() => getAllByTestId("Input")[0].focus());
-		fireEvent.blur(getAllByTestId("Input")[0]);
+		act(() => screen.getAllByTestId("Input")[0].focus());
+		fireEvent.blur(screen.getAllByTestId("Input")[0]);
 
-		fireEvent.input(getAllByTestId("Input")[0], { target: { value: "t" } });
+		fireEvent.input(screen.getAllByTestId("Input")[0], { target: { value: "t" } });
 
-		act(() => getAllByTestId("InputPassword")[1].focus());
+		act(() => screen.getAllByTestId("InputPassword")[1].focus());
 
-		expect(getByTestId("SelectProfileImage__avatar-identicon")).toBeInTheDocument();
+		expect(screen.getByTestId("SelectProfileImage__avatar-identicon")).toBeInTheDocument();
 
-		fireEvent.input(getAllByTestId("Input")[0], { target: { value: "te" } });
+		fireEvent.input(screen.getAllByTestId("Input")[0], { target: { value: "te" } });
 
-		act(() => getAllByTestId("InputPassword")[0].focus());
+		act(() => screen.getAllByTestId("InputPassword")[0].focus());
 
-		expect(getByTestId("SelectProfileImage__avatar-identicon")).toBeInTheDocument();
+		expect(screen.getByTestId("SelectProfileImage__avatar-identicon")).toBeInTheDocument();
 
-		act(() => getAllByTestId("Input")[0].focus());
+		act(() => screen.getAllByTestId("Input")[0].focus());
 
-		fireEvent.input(getAllByTestId("Input")[0], { target: { value: "test profile" } });
+		fireEvent.input(screen.getAllByTestId("Input")[0], { target: { value: "test profile" } });
 
 		await waitFor(() => {
-			expect(getAllByTestId("Input")[0]).toHaveValue("test profile");
+			expect(screen.getAllByTestId("Input")[0]).toHaveValue("test profile");
 		});
 
-		act(() => getAllByTestId("InputPassword")[0].focus());
+		act(() => screen.getAllByTestId("InputPassword")[0].focus());
 
-		expect(getByTestId("SelectProfileImage__avatar-identicon")).toBeInTheDocument();
+		expect(screen.getByTestId("SelectProfileImage__avatar-identicon")).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 
-		act(() => getAllByTestId("Input")[0].focus());
+		act(() => screen.getAllByTestId("Input")[0].focus());
 
-		fireEvent.input(getAllByTestId("Input")[0], { target: { value: "" } });
+		fireEvent.input(screen.getAllByTestId("Input")[0], { target: { value: "" } });
 
 		await waitFor(() => {
-			expect(getAllByTestId("Input")[0]).not.toHaveValue();
+			expect(screen.getAllByTestId("Input")[0]).not.toHaveValue();
 		});
 
-		act(() => getAllByTestId("InputPassword")[0].focus());
+		act(() => screen.getAllByTestId("InputPassword")[0].focus());
 
-		expect(() => getByTestId("SelectProfileImage__avatar")).toThrow(/^Unable to find an element by/);
+		expect(() => screen.getByTestId("SelectProfileImage__avatar")).toThrow(/^Unable to find an element by/);
 
 		// Upload avatar image
-		fireEvent.click(getByTestId("SelectProfileImage__upload-button"));
+		fireEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
 
-		expect(() => getByTestId("SelectProfileImage__avatar")).toBeTruthy();
+		expect(() => screen.getByTestId("SelectProfileImage__avatar")).toBeTruthy();
 
-		act(() => getAllByTestId("Input")[0].focus());
+		act(() => screen.getAllByTestId("Input")[0].focus());
 
-		fireEvent.input(getAllByTestId("Input")[0], { target: { value: "t" } });
+		fireEvent.input(screen.getAllByTestId("Input")[0], { target: { value: "t" } });
 
 		await waitFor(() => {
-			expect(getAllByTestId("Input")[0]).toHaveValue("t");
+			expect(screen.getAllByTestId("Input")[0]).toHaveValue("t");
 		});
 
-		fireEvent.blur(getAllByTestId("Input")[0]);
+		fireEvent.blur(screen.getAllByTestId("Input")[0]);
 
 		expect(asFragment()).toMatchSnapshot();
 

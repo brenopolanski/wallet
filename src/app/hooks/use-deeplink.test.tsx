@@ -3,7 +3,7 @@ import { toasts } from "app/services";
 import { ipcRenderer } from "electron";
 import React from "react";
 import { Route } from "react-router-dom";
-import { getDefaultProfileId, getDefaultWalletId, render } from "utils/testing-library";
+import { getDefaultProfileId, getDefaultWalletId, render, screen } from "utils/testing-library";
 
 import { useDeeplink } from "./use-deeplink";
 
@@ -31,13 +31,13 @@ describe("useDeeplink hook", () => {
 			),
 		);
 
-		const { getByText } = render(
+		render(
 			<Route pathname="/">
 				<TestComponent />
 			</Route>,
 		);
 
-		expect(getByText("Deeplink tester")).toBeInTheDocument();
+		expect(screen.getByText("Deeplink tester")).toBeInTheDocument();
 		expect(ipcRenderer.on).toHaveBeenCalledWith("process-url", expect.any(Function));
 	});
 
@@ -49,7 +49,7 @@ describe("useDeeplink hook", () => {
 			),
 		);
 
-		const { getByText } = render(
+		render(
 			<Route pathname="/">
 				<TestComponent />
 			</Route>,
@@ -58,7 +58,7 @@ describe("useDeeplink hook", () => {
 			},
 		);
 
-		expect(getByText("Deeplink tester")).toBeInTheDocument();
+		expect(screen.getByText("Deeplink tester")).toBeInTheDocument();
 		expect(toastWarningSpy).toHaveBeenCalledWith(translations.SELECT_A_PROFILE);
 		expect(ipcRenderer.on).toHaveBeenCalledWith("process-url", expect.any(Function));
 	});
@@ -73,7 +73,7 @@ describe("useDeeplink hook", () => {
 
 		window.history.pushState({}, "Deeplink Test", `/profiles/${getDefaultProfileId()}/dashboard`);
 
-		const { getByText } = render(
+		render(
 			<Route pathname="/profiles/:profileId">
 				<TestComponent />
 			</Route>,
@@ -82,7 +82,7 @@ describe("useDeeplink hook", () => {
 			},
 		);
 
-		expect(getByText("Deeplink tester")).toBeInTheDocument();
+		expect(screen.getByText("Deeplink tester")).toBeInTheDocument();
 		expect(toastErrorSpy).toHaveBeenLastCalledWith('Invalid URI: Coin "doge" not supported.');
 		expect(ipcRenderer.on).toHaveBeenCalledWith("process-url", expect.any(Function));
 	});
@@ -97,7 +97,7 @@ describe("useDeeplink hook", () => {
 
 		window.history.pushState({}, "Deeplink Test", `/profiles/${getDefaultProfileId()}/dashboard`);
 
-		const { getByText } = render(
+		render(
 			<Route pathname="/profiles/:profileId">
 				<TestComponent />
 			</Route>,
@@ -106,7 +106,7 @@ describe("useDeeplink hook", () => {
 			},
 		);
 
-		expect(getByText("Deeplink tester")).toBeInTheDocument();
+		expect(screen.getByText("Deeplink tester")).toBeInTheDocument();
 		expect(toastErrorSpy).toHaveBeenCalledWith('Invalid URI: Network "custom" not supported.');
 		expect(ipcRenderer.on).toHaveBeenCalledWith("process-url", expect.any(Function));
 	});
@@ -121,7 +121,7 @@ describe("useDeeplink hook", () => {
 
 		window.history.pushState({}, "Deeplink Test", `/profiles/${getDefaultProfileId()}/dashboard`);
 
-		const { getByText } = render(
+		render(
 			<Route pathname="/profiles/:profileId">
 				<TestComponent />
 			</Route>,
@@ -130,7 +130,7 @@ describe("useDeeplink hook", () => {
 			},
 		);
 
-		expect(getByText("Deeplink tester")).toBeInTheDocument();
+		expect(screen.getByText("Deeplink tester")).toBeInTheDocument();
 		expect(toastErrorSpy).toHaveBeenCalledWith(
 			'Invalid URI: The current profile has no wallets available for the "ark.mainnet" network',
 		);
@@ -151,7 +151,7 @@ describe("useDeeplink hook", () => {
 			`/profiles/${getDefaultProfileId()}/wallets/${getDefaultWalletId()}`,
 		);
 
-		const { getByText, history } = render(
+		const { history } = render(
 			<Route pathname="/profiles/:profileId/wallets/:walletId">
 				<TestComponent />
 			</Route>,
@@ -160,7 +160,7 @@ describe("useDeeplink hook", () => {
 			},
 		);
 
-		expect(getByText("Deeplink tester")).toBeInTheDocument();
+		expect(screen.getByText("Deeplink tester")).toBeInTheDocument();
 		expect(history.location.pathname).toBe(`/profiles/${getDefaultProfileId()}/send-transfer`);
 		expect(ipcRenderer.on).toHaveBeenCalledWith("process-url", expect.any(Function));
 	});
@@ -176,7 +176,7 @@ describe("useDeeplink hook", () => {
 			`/profiles/${getDefaultProfileId()}/wallets/${getDefaultWalletId()}`,
 		);
 
-		const { getByText, history } = render(
+		const { history } = render(
 			<Route pathname="/profiles/:profileId/wallets/:walletId">
 				<TestComponent />
 			</Route>,
@@ -185,7 +185,7 @@ describe("useDeeplink hook", () => {
 			},
 		);
 
-		expect(getByText("Deeplink tester")).toBeInTheDocument();
+		expect(screen.getByText("Deeplink tester")).toBeInTheDocument();
 		expect(history.location.pathname).toBe("/");
 		expect(ipcRenderer.on).toHaveBeenCalledWith("process-url", expect.any(Function));
 	});
@@ -195,7 +195,7 @@ describe("useDeeplink hook", () => {
 			callback(event, "payvo:vote?coin=ark&network=ark.devnet&delegate=alessio"),
 		);
 
-		const { getByText } = render(
+		render(
 			<Route pathname="/profiles/create">
 				<TestComponent />
 			</Route>,
@@ -204,7 +204,7 @@ describe("useDeeplink hook", () => {
 			},
 		);
 
-		expect(getByText("Deeplink tester")).toBeInTheDocument();
+		expect(screen.getByText("Deeplink tester")).toBeInTheDocument();
 		expect(ipcRenderer.on).toHaveBeenCalledWith("process-url", expect.any(Function));
 	});
 });

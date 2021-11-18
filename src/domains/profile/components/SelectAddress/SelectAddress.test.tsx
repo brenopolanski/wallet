@@ -1,6 +1,6 @@
 import { Contracts } from "@payvo/sdk-profiles";
 import React from "react";
-import { env, fireEvent, getDefaultProfileId, MNEMONICS, render, waitFor } from "utils/testing-library";
+import { env, fireEvent, getDefaultProfileId, MNEMONICS, render, screen, waitFor } from "utils/testing-library";
 
 import { SelectAddress } from "./SelectAddress";
 
@@ -35,14 +35,14 @@ describe("SelectAddress", () => {
 	});
 
 	it("should render invalid", () => {
-		const { container, getByTestId } = render(<SelectAddress isInvalid wallets={wallets} profile={profile} />);
+		const { container } = render(<SelectAddress isInvalid wallets={wallets} profile={profile} />);
 
-		expect(getByTestId("Input__error")).toBeVisible();
+		expect(screen.getByTestId("Input__error")).toBeVisible();
 		expect(container).toMatchSnapshot();
 	});
 
 	it("should render with preselected address", () => {
-		const { container, getByTestId } = render(
+		const { container } = render(
 			<SelectAddress
 				wallets={wallets}
 				wallet={{ address: wallet.address(), network: wallet.network() }}
@@ -50,13 +50,13 @@ describe("SelectAddress", () => {
 			/>,
 		);
 
-		expect(getByTestId("SelectAddress__input")).toHaveValue(wallet.address());
+		expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address());
 
 		expect(container).toMatchSnapshot();
 	});
 
 	it("should open and close wallets modal", async () => {
-		const { getByTestId } = render(
+		render(
 			<SelectAddress
 				wallets={wallets}
 				wallet={{ address: wallet.address(), network: wallet.network() }}
@@ -64,21 +64,21 @@ describe("SelectAddress", () => {
 			/>,
 		);
 
-		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
-		fireEvent.click(getByTestId("SelectAddress__wrapper"));
+		fireEvent.click(screen.getByTestId("SelectAddress__wrapper"));
 
-		expect(getByTestId("modal__inner")).toBeInTheDocument();
+		expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
 
-		fireEvent.click(getByTestId("modal__close-btn"));
+		fireEvent.click(screen.getByTestId("modal__close-btn"));
 
 		await waitFor(() => {
-			expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+			expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 		});
 	});
 
 	it("should not open if disabled", () => {
-		const { getByTestId } = render(
+		render(
 			<SelectAddress
 				wallets={wallets}
 				wallet={{ address: wallet.address(), network: wallet.network() }}
@@ -87,15 +87,15 @@ describe("SelectAddress", () => {
 			/>,
 		);
 
-		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
-		fireEvent.click(getByTestId("SelectAddress__wrapper"));
+		fireEvent.click(screen.getByTestId("SelectAddress__wrapper"));
 
-		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 	});
 
 	it("should select address from wallets modal", async () => {
-		const { getByTestId } = render(
+		render(
 			<SelectAddress
 				wallets={wallets}
 				wallet={{ address: wallet.address(), network: wallet.network() }}
@@ -103,29 +103,29 @@ describe("SelectAddress", () => {
 			/>,
 		);
 
-		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
-		fireEvent.click(getByTestId("SelectAddress__wrapper"));
+		fireEvent.click(screen.getByTestId("SelectAddress__wrapper"));
 
 		await waitFor(() => {
-			expect(getByTestId("modal__inner")).toBeInTheDocument();
+			expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
 		});
 
-		const firstAddress = getByTestId("SearchWalletListItem__select-0");
+		const firstAddress = screen.getByTestId("SearchWalletListItem__select-0");
 
 		fireEvent.click(firstAddress);
 
 		await waitFor(() => {
-			expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+			expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
 			const selectedAddressValue = wallets[0].address();
 
-			expect(getByTestId("SelectAddress__input")).toHaveValue(selectedAddressValue);
+			expect(screen.getByTestId("SelectAddress__input")).toHaveValue(selectedAddressValue);
 		});
 	});
 
 	it("should not open wallets modal if disabled", async () => {
-		const { getByTestId } = render(
+		render(
 			<SelectAddress
 				wallets={wallets}
 				disabled
@@ -134,19 +134,19 @@ describe("SelectAddress", () => {
 			/>,
 		);
 
-		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
-		fireEvent.click(getByTestId("SelectAddress__wrapper"));
+		fireEvent.click(screen.getByTestId("SelectAddress__wrapper"));
 
 		await waitFor(() => {
-			expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+			expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 		});
 	});
 
 	it("should call onChange prop if provided", async () => {
 		const onChange = jest.fn();
 
-		const { getByTestId } = render(
+		render(
 			<SelectAddress
 				wallets={wallets}
 				onChange={onChange}
@@ -155,20 +155,20 @@ describe("SelectAddress", () => {
 			/>,
 		);
 
-		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
-		fireEvent.click(getByTestId("SelectAddress__wrapper"));
+		fireEvent.click(screen.getByTestId("SelectAddress__wrapper"));
 
 		await waitFor(() => {
-			expect(getByTestId("modal__inner")).toBeInTheDocument();
+			expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
 		});
 
-		const firstAddress = getByTestId("SearchWalletListItem__select-0");
+		const firstAddress = screen.getByTestId("SearchWalletListItem__select-0");
 
 		fireEvent.click(firstAddress);
 
 		await waitFor(() => {
-			expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+			expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 		});
 
 		expect(onChange).toHaveBeenCalledWith(wallets[0].address());

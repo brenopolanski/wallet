@@ -51,16 +51,16 @@ describe("WalletHeader", () => {
 	});
 
 	it("should render", async () => {
-		const { asFragment, findByText } = render(<WalletHeader profile={profile} wallet={wallet} />);
-		await findByText(wallet.address());
+		const { asFragment } = render(<WalletHeader profile={profile} wallet={wallet} />);
+		await screen.findByText(wallet.address());
 
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should use empty string in clipboard copy if publickey is undefined", async () => {
 		const mockpublicKey = jest.spyOn(wallet, "publicKey").mockReturnValue(undefined);
-		const { asFragment, findByText } = render(<WalletHeader profile={profile} wallet={wallet} />);
-		await findByText(wallet.address());
+		const { asFragment } = render(<WalletHeader profile={profile} wallet={wallet} />);
+		await screen.findByText(wallet.address());
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -69,8 +69,8 @@ describe("WalletHeader", () => {
 
 	it("should render amount for wallet in live network", async () => {
 		const mockTestNetwork = jest.spyOn(wallet.network(), "isTest").mockReturnValue(false);
-		const { asFragment, findByText } = render(<WalletHeader profile={profile} wallet={wallet} />);
-		await findByText(wallet.address());
+		const { asFragment } = render(<WalletHeader profile={profile} wallet={wallet} />);
+		await screen.findByText(wallet.address());
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -81,14 +81,14 @@ describe("WalletHeader", () => {
 		const mockIsSecondSignature = jest.spyOn(wallet, "isSecondSignature").mockReturnValue(true);
 		const mockAllowsSecondSignature = jest.spyOn(wallet.network(), "allows").mockReturnValue(false);
 
-		const { getByTestId, findByText } = render(<WalletHeader profile={profile} wallet={wallet} />);
-		await findByText(wallet.address());
+		render(<WalletHeader profile={profile} wallet={wallet} />);
+		await screen.findByText(wallet.address());
 
-		fireEvent.click(getByTestId("dropdown__toggle"));
+		fireEvent.click(screen.getByTestId("dropdown__toggle"));
 
 		await waitFor(() =>
 			expect(() =>
-				within(getByTestId("dropdown__content")).getByText(
+				within(screen.getByTestId("dropdown__content")).getByText(
 					walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.SECOND_SIGNATURE,
 				),
 			).toThrow(/Unable to find an element/),
@@ -101,12 +101,12 @@ describe("WalletHeader", () => {
 	it("should trigger onSend callback if provided", async () => {
 		const onSend = jest.fn();
 
-		const { getByTestId, findByText } = render(<WalletHeader profile={profile} wallet={wallet} onSend={onSend} />);
-		await findByText(wallet.address());
+		render(<WalletHeader profile={profile} wallet={wallet} onSend={onSend} />);
+		await screen.findByText(wallet.address());
 
-		expect(getByTestId("WalletHeader__send-button")).toBeEnabled();
+		expect(screen.getByTestId("WalletHeader__send-button")).toBeEnabled();
 
-		fireEvent.click(getByTestId("WalletHeader__send-button"));
+		fireEvent.click(screen.getByTestId("WalletHeader__send-button"));
 
 		expect(onSend).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
@@ -114,10 +114,10 @@ describe("WalletHeader", () => {
 	it("send button should be disabled if wallet has no balance", async () => {
 		const balanceSpy = jest.spyOn(wallet, "balance").mockReturnValue(0);
 
-		const { getByTestId, findByText } = render(<WalletHeader profile={profile} wallet={wallet} />);
-		await findByText(wallet.address());
+		render(<WalletHeader profile={profile} wallet={wallet} />);
+		await screen.findByText(wallet.address());
 
-		expect(getByTestId("WalletHeader__send-button")).toBeDisabled();
+		expect(screen.getByTestId("WalletHeader__send-button")).toBeDisabled();
 
 		balanceSpy.mockRestore();
 	});
@@ -126,11 +126,11 @@ describe("WalletHeader", () => {
 		const ledgerSpy = jest.spyOn(wallet, "isLedger").mockReturnValue(true);
 		const multisigSpy = jest.spyOn(wallet, "isMultiSignature").mockReturnValue(true);
 
-		const { asFragment, getByTestId, findByText } = render(<WalletHeader profile={profile} wallet={wallet} />);
-		await findByText(wallet.address());
+		const { asFragment } = render(<WalletHeader profile={profile} wallet={wallet} />);
+		await screen.findByText(wallet.address());
 
-		expect(getByTestId("WalletIcon__Ledger")).toBeInTheDocument();
-		expect(getByTestId("WalletIcon__Multisignature")).toBeInTheDocument();
+		expect(screen.getByTestId("WalletIcon__Ledger")).toBeInTheDocument();
+		expect(screen.getByTestId("WalletIcon__Multisignature")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 
 		ledgerSpy.mockRestore();
@@ -140,26 +140,26 @@ describe("WalletHeader", () => {
 	it("should hide converted balance if wallet belongs to test network", async () => {
 		const networkSpy = jest.spyOn(wallet.network(), "isTest").mockReturnValue(true);
 
-		const { getByTestId, findByText } = render(<WalletHeader profile={profile} wallet={wallet} />);
-		await findByText(wallet.address());
+		render(<WalletHeader profile={profile} wallet={wallet} />);
+		await screen.findByText(wallet.address());
 
-		expect(() => getByTestId("WalletHeader__currency-balance")).toThrow(/Unable to find/);
+		expect(() => screen.getByTestId("WalletHeader__currency-balance")).toThrow(/Unable to find/);
 
 		networkSpy.mockRestore();
 	});
 
 	it.each([-5, 5])("should show currency delta (%s%)", (delta) => {
-		const { getByText, asFragment } = render(
+		const { asFragment } = render(
 			<WalletHeader profile={profile} wallet={wallet} currencyDelta={delta} />,
 		);
 
 		if (delta < 0) {
-			expect(getByText("chevron-down-small.svg")).toBeInTheDocument();
+			expect(screen.getByText("chevron-down-small.svg")).toBeInTheDocument();
 		} else {
-			expect(getByText("chevron-up-small.svg")).toBeInTheDocument();
+			expect(screen.getByText("chevron-up-small.svg")).toBeInTheDocument();
 		}
 
-		expect(getByText(`${delta}%`)).toBeInTheDocument();
+		expect(screen.getByText(`${delta}%`)).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -169,7 +169,7 @@ describe("WalletHeader", () => {
 
 		history.push(walletUrl);
 
-		const { getByTestId, getByText } = render(
+		render(
 			<Route path="/profiles/:profileId/wallets/:walletId">
 				<LedgerProvider transport={transport}>
 					<WalletHeader profile={profile} wallet={wallet} />
@@ -181,102 +181,102 @@ describe("WalletHeader", () => {
 			},
 		);
 
-		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
 		clickItem(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.SIGN_MESSAGE);
 
 		await waitFor(() =>
-			expect(getByTestId("modal__inner")).toHaveTextContent(
+			expect(screen.getByTestId("modal__inner")).toHaveTextContent(
 				walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE,
 			),
 		);
 
 		if (action === "close") {
-			fireEvent.click(getByTestId("modal__close-btn"));
+			fireEvent.click(screen.getByTestId("modal__close-btn"));
 		} else {
-			fireEvent.click(getByText(commonTranslations.CANCEL));
+			fireEvent.click(screen.getByText(commonTranslations.CANCEL));
 		}
 
-		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 	});
 
 	it.each(["cancel", "close"])("should open & %s verify message modal", async (action) => {
-		const { getByTestId, getByText } = render(<WalletHeader profile={profile} wallet={wallet} />);
+		render(<WalletHeader profile={profile} wallet={wallet} />);
 
 		clickItem(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.VERIFY_MESSAGE);
 
 		await waitFor(() =>
-			expect(getByTestId("modal__inner")).toHaveTextContent(walletTranslations.MODAL_VERIFY_MESSAGE.TITLE),
+			expect(screen.getByTestId("modal__inner")).toHaveTextContent(walletTranslations.MODAL_VERIFY_MESSAGE.TITLE),
 		);
 
 		if (action === "close") {
-			fireEvent.click(getByTestId("modal__close-btn"));
+			fireEvent.click(screen.getByTestId("modal__close-btn"));
 		} else {
-			fireEvent.click(getByText(commonTranslations.CANCEL));
+			fireEvent.click(screen.getByText(commonTranslations.CANCEL));
 		}
 
-		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 	});
 
 	it.each(["cancel", "close"])("should open & %s delete wallet modal", async (action) => {
-		const { getByTestId, getByText } = render(<WalletHeader profile={profile} wallet={wallet} />);
+		render(<WalletHeader profile={profile} wallet={wallet} />);
 
 		clickItem(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.DELETE);
 
 		await waitFor(() =>
-			expect(getByTestId("modal__inner")).toHaveTextContent(walletTranslations.MODAL_DELETE_WALLET.TITLE),
+			expect(screen.getByTestId("modal__inner")).toHaveTextContent(walletTranslations.MODAL_DELETE_WALLET.TITLE),
 		);
 
 		if (action === "close") {
-			fireEvent.click(getByTestId("modal__close-btn"));
+			fireEvent.click(screen.getByTestId("modal__close-btn"));
 		} else {
-			fireEvent.click(getByText(commonTranslations.CANCEL));
+			fireEvent.click(screen.getByText(commonTranslations.CANCEL));
 		}
 
-		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 	});
 
 	it.each(["cancel", "close"])("should open & %s wallet name modal", async (action) => {
-		const { getByTestId, getByText } = render(<WalletHeader profile={profile} wallet={wallet} />);
+		render(<WalletHeader profile={profile} wallet={wallet} />);
 
 		clickItem(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.WALLET_NAME);
 
 		await waitFor(() =>
-			expect(getByTestId("modal__inner")).toHaveTextContent(walletTranslations.MODAL_NAME_WALLET.TITLE),
+			expect(screen.getByTestId("modal__inner")).toHaveTextContent(walletTranslations.MODAL_NAME_WALLET.TITLE),
 		);
 
 		if (action === "close") {
-			fireEvent.click(getByTestId("modal__close-btn"));
+			fireEvent.click(screen.getByTestId("modal__close-btn"));
 		} else {
-			fireEvent.click(getByText(commonTranslations.CANCEL));
+			fireEvent.click(screen.getByText(commonTranslations.CANCEL));
 		}
 
-		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 	});
 
 	it("should open & close receive funds modal", async () => {
-		const { getByTestId, findByText } = render(<WalletHeader profile={profile} wallet={wallet} />);
-		await findByText(wallet.address());
+		render(<WalletHeader profile={profile} wallet={wallet} />);
+		await screen.findByText(wallet.address());
 
 		clickItem(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.RECEIVE_FUNDS);
 
 		await waitFor(() =>
-			expect(getByTestId("modal__inner")).toHaveTextContent(walletTranslations.MODAL_RECEIVE_FUNDS.TITLE),
+			expect(screen.getByTestId("modal__inner")).toHaveTextContent(walletTranslations.MODAL_RECEIVE_FUNDS.TITLE),
 		);
 
-		fireEvent.click(getByTestId("modal__close-btn"));
+		fireEvent.click(screen.getByTestId("modal__close-btn"));
 
-		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 	});
 
 	it("should manually sync wallet data", async () => {
-		const { getByTestId } = render(<WalletHeader profile={profile} wallet={wallet} />);
+		render(<WalletHeader profile={profile} wallet={wallet} />);
 
-		fireEvent.click(getByTestId("WalletHeader__refresh"));
+		fireEvent.click(screen.getByTestId("WalletHeader__refresh"));
 
-		expect(getByTestId("WalletHeader__refresh")).toHaveAttribute("aria-busy", "true");
+		expect(screen.getByTestId("WalletHeader__refresh")).toHaveAttribute("aria-busy", "true");
 
-		await waitFor(() => expect(getByTestId("WalletHeader__refresh")).toHaveAttribute("aria-busy", "false"));
+		await waitFor(() => expect(screen.getByTestId("WalletHeader__refresh")).toHaveAttribute("aria-busy", "false"));
 	});
 
 	it("should handle multisignature registration", () => {
@@ -406,10 +406,10 @@ describe("WalletHeader", () => {
 			throw new Error("error");
 		});
 
-		const { getByTestId, findByText } = render(<WalletHeader profile={profile} wallet={wallet} />);
-		await findByText(wallet.address());
+		render(<WalletHeader profile={profile} wallet={wallet} />);
+		await screen.findByText(wallet.address());
 
-		expect(() => getByTestId("WalletIcon__Multisignature")).toThrow(/Unable to find an element by/);
+		expect(() => screen.getByTestId("WalletIcon__Multisignature")).toThrow(/Unable to find an element by/);
 
 		multisigSpy.mockRestore();
 	});

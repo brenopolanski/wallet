@@ -9,6 +9,7 @@ import {
 	getDefaultPassword,
 	getPasswordProtectedProfileId,
 	render,
+	screen,
 	waitFor,
 } from "utils/testing-library";
 
@@ -31,29 +32,29 @@ describe("SignIn", () => {
 	});
 
 	it("should not render if not open", () => {
-		const { asFragment, getByTestId } = render(<SignIn profile={profile} isOpen={false} />);
+		const { asFragment } = render(<SignIn profile={profile} isOpen={false} />);
 
-		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render a modal", async () => {
-		const { asFragment, getByTestId } = render(<SignIn isOpen={true} profile={profile} />);
+		const { asFragment } = render(<SignIn isOpen={true} profile={profile} />);
 
 		await waitFor(() => {
-			expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SIGN_IN.TITLE);
+			expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SIGN_IN.TITLE);
 		});
 
-		expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SIGN_IN.DESCRIPTION);
+		expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SIGN_IN.DESCRIPTION);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should cancel sign in", async () => {
 		const onCancel = jest.fn();
 
-		const { getByTestId } = render(<SignIn isOpen={true} profile={profile} onCancel={onCancel} />);
+		render(<SignIn isOpen={true} profile={profile} onCancel={onCancel} />);
 
-		fireEvent.click(getByTestId("SignIn__cancel-button"));
+		fireEvent.click(screen.getByTestId("SignIn__cancel-button"));
 
 		await waitFor(() => {
 			expect(onCancel).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
@@ -63,14 +64,14 @@ describe("SignIn", () => {
 	it("should call onSuccess callback", async () => {
 		const onSuccess = jest.fn();
 
-		const { findByTestId, getByTestId } = render(<SignIn isOpen={true} profile={profile} onSuccess={onSuccess} />);
+		render(<SignIn isOpen={true} profile={profile} onSuccess={onSuccess} />);
 
-		fireEvent.input(getByTestId("SignIn__input--password"), { target: { value: getDefaultPassword() } });
+		fireEvent.input(screen.getByTestId("SignIn__input--password"), { target: { value: getDefaultPassword() } });
 
 		// wait for formState.isValid to be updated
-		await findByTestId("SignIn__submit-button");
+		await screen.findByTestId("SignIn__submit-button");
 
-		fireEvent.click(getByTestId("SignIn__submit-button"));
+		fireEvent.click(screen.getByTestId("SignIn__submit-button"));
 
 		await waitFor(() => {
 			expect(onSuccess).toHaveBeenCalledWith(getDefaultPassword());
@@ -80,43 +81,43 @@ describe("SignIn", () => {
 	it("should set an error if the password is invalid", async () => {
 		const onSuccess = jest.fn();
 
-		const { findByTestId, getByTestId } = render(<SignIn isOpen={true} profile={profile} onSuccess={onSuccess} />);
+		render(<SignIn isOpen={true} profile={profile} onSuccess={onSuccess} />);
 
-		fireEvent.input(getByTestId("SignIn__input--password"), { target: { value: "wrong password" } });
-
-		// wait for formState.isValid to be updated
-		await findByTestId("SignIn__submit-button");
-
-		fireEvent.click(getByTestId("SignIn__submit-button"));
+		fireEvent.input(screen.getByTestId("SignIn__input--password"), { target: { value: "wrong password" } });
 
 		// wait for formState.isValid to be updated
-		await findByTestId("SignIn__submit-button");
+		await screen.findByTestId("SignIn__submit-button");
 
-		expect(getByTestId("Input__error")).toBeVisible();
-		expect(getByTestId("SignIn__submit-button")).toBeDisabled();
+		fireEvent.click(screen.getByTestId("SignIn__submit-button"));
+
+		// wait for formState.isValid to be updated
+		await screen.findByTestId("SignIn__submit-button");
+
+		expect(screen.getByTestId("Input__error")).toBeVisible();
+		expect(screen.getByTestId("SignIn__submit-button")).toBeDisabled();
 	});
 
 	it("should set an error and disable the input if the password is invalid multiple times", async () => {
 		const onSuccess = jest.fn();
 
-		const { findByTestId, getByTestId } = render(<SignIn isOpen={true} profile={profile} onSuccess={onSuccess} />);
+		render(<SignIn isOpen={true} profile={profile} onSuccess={onSuccess} />);
 
 		for (const index of [1, 2, 3]) {
-			fireEvent.input(getByTestId("SignIn__input--password"), {
+			fireEvent.input(screen.getByTestId("SignIn__input--password"), {
 				target: { value: `wrong password ${index}` },
 			});
 
 			// wait for form to be updated
-			await findByTestId("SignIn__submit-button");
+			await screen.findByTestId("SignIn__submit-button");
 
-			fireEvent.click(getByTestId("SignIn__submit-button"));
+			fireEvent.click(screen.getByTestId("SignIn__submit-button"));
 
 			// wait for form to be updated
-			await findByTestId("SignIn__submit-button");
+			await screen.findByTestId("SignIn__submit-button");
 		}
 
-		expect(getByTestId("SignIn__submit-button")).toBeDisabled();
-		expect(getByTestId("SignIn__input--password")).toBeDisabled();
+		expect(screen.getByTestId("SignIn__submit-button")).toBeDisabled();
+		expect(screen.getByTestId("SignIn__input--password")).toBeDisabled();
 
 		act(() => {
 			jest.advanceTimersByTime(65_000);
@@ -124,10 +125,10 @@ describe("SignIn", () => {
 		});
 
 		// wait for form to be updated
-		await findByTestId("SignIn__submit-button");
+		await screen.findByTestId("SignIn__submit-button");
 
 		await waitFor(() =>
-			expect(getByTestId("Input__error")).toHaveAttribute(
+			expect(screen.getByTestId("Input__error")).toHaveAttribute(
 				"data-errortext",
 				expect.stringMatching(/Maximum sign in attempts/),
 			),

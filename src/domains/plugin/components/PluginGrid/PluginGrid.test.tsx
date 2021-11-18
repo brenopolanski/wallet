@@ -98,76 +98,76 @@ describe("PluginGrid", () => {
 				version: "1.3.8",
 			},
 		];
-		const { asFragment, findByText, getByTestId } = render(
+		const { asFragment } = render(
 			<PluginGrid itemsPerPage={4} plugins={[...plugins, ...morePlugins]} />,
 		);
 
 		for (const plugin of plugins) {
-			await findByText(plugin.title);
+			await screen.findByText(plugin.title);
 		}
 
-		expect(getByTestId("Pagination")).toBeInTheDocument();
+		expect(screen.getByTestId("Pagination")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render without plugins", async () => {
-		const { asFragment, findByText, getByTestId } = render(<PluginGrid plugins={[]} />);
+		const { asFragment } = render(<PluginGrid plugins={[]} />);
 
-		expect(getByTestId("PluginGrid__empty-message")).toBeInTheDocument();
+		expect(screen.getByTestId("PluginGrid__empty-message")).toBeInTheDocument();
 
-		await findByText(pluginTranslations.PAGE_PLUGIN_MANAGER.NO_PLUGINS_AVAILABLE);
+		await screen.findByText(pluginTranslations.PAGE_PLUGIN_MANAGER.NO_PLUGINS_AVAILABLE);
 
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should not render pagination", async () => {
-		const { asFragment, findByText, getByTestId } = render(<PluginGrid plugins={plugins} />);
+		const { asFragment } = render(<PluginGrid plugins={plugins} />);
 
 		for (const plugin of plugins) {
-			await findByText(plugin.title);
+			await screen.findByText(plugin.title);
 		}
 
-		expect(() => getByTestId("Pagination")).toThrow(/Unable to find an element by/);
+		expect(() => screen.getByTestId("Pagination")).toThrow(/Unable to find an element by/);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render skeletons", () => {
-		const { asFragment, getAllByTestId } = render(<PluginGrid isLoading plugins={[]} />);
+		const { asFragment } = render(<PluginGrid isLoading plugins={[]} />);
 
-		expect(getAllByTestId("PluginCardSkeleton")).toHaveLength(3);
+		expect(screen.getAllByTestId("PluginCardSkeleton")).toHaveLength(3);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render custom number of skeletons", () => {
-		const { asFragment, getAllByTestId } = render(<PluginGrid isLoading skeletonsLimit={3} plugins={[]} />);
+		const { asFragment } = render(<PluginGrid isLoading skeletonsLimit={3} plugins={[]} />);
 
-		expect(getAllByTestId("PluginCardSkeleton")).toHaveLength(3);
+		expect(screen.getAllByTestId("PluginCardSkeleton")).toHaveLength(3);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render without pagination", async () => {
-		const { asFragment, findByText, getByTestId } = render(<PluginGrid plugins={plugins} showPagination={false} />);
+		const { asFragment } = render(<PluginGrid plugins={plugins} showPagination={false} />);
 
 		for (const plugin of plugins) {
-			await findByText(plugin.title);
+			await screen.findByText(plugin.title);
 		}
 
-		expect(() => getByTestId("Pagination")).toThrow(/Unable to find an element by/);
+		expect(() => screen.getByTestId("Pagination")).toThrow(/Unable to find an element by/);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should split by page", async () => {
-		const { asFragment, findByText, getByTestId } = render(<PluginGrid plugins={plugins} itemsPerPage={1} />);
+		const { asFragment } = render(<PluginGrid plugins={plugins} itemsPerPage={1} />);
 
-		await findByText(plugins[0].title);
+		await screen.findByText(plugins[0].title);
 
-		await expect(findByText(plugins[1].title)).rejects.toThrow(/Unable to find an element/);
+		await expect(screen.findByText(plugins[1].title)).rejects.toThrow(/Unable to find an element/);
 
-		fireEvent.click(getByTestId("Pagination__next"));
+		fireEvent.click(screen.getByTestId("Pagination__next"));
 
-		await findByText(plugins[1].title);
+		await screen.findByText(plugins[1].title);
 
-		await expect(findByText(plugins[0].title)).rejects.toThrow(/Unable to find an element/);
+		await expect(screen.findByText(plugins[0].title)).rejects.toThrow(/Unable to find an element/);
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -175,9 +175,9 @@ describe("PluginGrid", () => {
 	it("should trigger select", async () => {
 		const onSelect = jest.fn();
 
-		const { findByText } = render(<PluginGrid plugins={plugins} onSelect={onSelect} />);
+		render(<PluginGrid plugins={plugins} onSelect={onSelect} />);
 
-		fireEvent.click(await findByText(plugins[0].title));
+		fireEvent.click(await screen.findByText(plugins[0].title));
 
 		expect(onSelect).toHaveBeenCalledTimes(1);
 	});

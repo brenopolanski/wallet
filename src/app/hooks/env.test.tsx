@@ -2,7 +2,7 @@ import { Contracts } from "@payvo/sdk-profiles";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
-import { env, getDefaultProfileId, render } from "utils/testing-library";
+import { env, getDefaultProfileId, render, screen } from "utils/testing-library";
 
 import { useActiveProfile, useActiveWallet, useActiveWalletWhenNeeded } from "./env";
 
@@ -28,7 +28,7 @@ describe("useActiveProfile", () => {
 	};
 
 	it("should return profile", () => {
-		const { getByText } = render(
+		render(
 			<Route path="/profiles/:profileId">
 				<TestProfile />
 			</Route>,
@@ -37,7 +37,7 @@ describe("useActiveProfile", () => {
 			},
 		);
 
-		expect(getByText(profile.name())).toBeInTheDocument();
+		expect(screen.getByText(profile.name())).toBeInTheDocument();
 	});
 
 	it("should throw error when profile is not found", () => {
@@ -74,7 +74,7 @@ describe("useActiveProfile", () => {
 	});
 
 	it("should return wallet", () => {
-		const { getByText } = render(
+		render(
 			<Route path="/profiles/:profileId/wallets/:walletId">
 				<TestWallet />
 			</Route>,
@@ -83,7 +83,7 @@ describe("useActiveProfile", () => {
 			},
 		);
 
-		expect(getByText(wallet.address())).toBeInTheDocument();
+		expect(screen.getByText(wallet.address())).toBeInTheDocument();
 	});
 
 	it("should return active wallet from url", () => {
@@ -96,7 +96,7 @@ describe("useActiveProfile", () => {
 			return <TestWallet />;
 		};
 
-		const { getByText } = render(
+		render(
 			<Route path="/profiles/:profileId/wallets/:walletId">
 				<TestActiveWallet />
 			</Route>,
@@ -106,7 +106,7 @@ describe("useActiveProfile", () => {
 		);
 
 		expect(activeWalletId).toStrictEqual(wallet.id());
-		expect(getByText(wallet.address())).toBeInTheDocument();
+		expect(screen.getByText(wallet.address())).toBeInTheDocument();
 	});
 
 	it("should return undefined if wallet id is not provided in url", () => {

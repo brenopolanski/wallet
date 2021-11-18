@@ -2,9 +2,9 @@
 import { createMemoryHistory } from "history";
 import React from "react";
 import { MemoryRouter, Router, withRouter } from "react-router-dom";
-import { render } from "utils/testing-library";
+import { render, screen } from "utils/testing-library";
 
-import { Middleware, MiddlewareParams as MiddlewareParameters } from "./interfaces";
+import { Middleware, MiddlewareParameters } from "./interfaces";
 import { RouterView } from "./RouterView";
 
 describe("RouterView", () => {
@@ -14,24 +14,24 @@ describe("RouterView", () => {
 	));
 
 	it("should render", () => {
-		const { getByTestId, asFragment } = render(
+		const { asFragment } = render(
 			<MemoryRouter>
 				<RouterView routes={[{ component: () => <h1>Test</h1>, path: "/" }]} />
 			</MemoryRouter>,
 		);
 
-		expect(getByTestId("RouterView__wrapper")).toHaveTextContent("Test");
+		expect(screen.getByTestId("RouterView__wrapper")).toHaveTextContent("Test");
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render with custom wrapper", () => {
-		const { getByTestId, asFragment } = render(
+		const { asFragment } = render(
 			<MemoryRouter>
 				<RouterView wrapper="section" routes={[{ component: () => <h1>Test</h1>, path: "/" }]} />
 			</MemoryRouter>,
 		);
 
-		expect(getByTestId("RouterView__wrapper").tagName).toBe("SECTION");
+		expect(screen.getByTestId("RouterView__wrapper").tagName).toBe("SECTION");
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -85,7 +85,7 @@ describe("RouterView", () => {
 		const history = createMemoryHistory();
 		history.push("/test");
 
-		const { getByTestId } = render(
+		render(
 			<Router history={history}>
 				<RouterView
 					routes={[{ component: () => <h1>Test</h1>, path: "/test" }, { component: () => <h1>Home</h1> }]}
@@ -95,7 +95,7 @@ describe("RouterView", () => {
 		);
 
 		expect(handler).toHaveBeenCalledTimes(2);
-		expect(getByTestId("RouterView__wrapper")).toHaveTextContent("Home");
+		expect(screen.getByTestId("RouterView__wrapper")).toHaveTextContent("Home");
 	});
 
 	it("should block /test router and redirect to a custom url", () => {
@@ -114,7 +114,7 @@ describe("RouterView", () => {
 		const history = createMemoryHistory();
 		history.push("/test");
 
-		const { getByTestId } = render(
+		render(
 			<Router history={history}>
 				<>
 					<RouterView
@@ -130,6 +130,6 @@ describe("RouterView", () => {
 		);
 
 		expect(handler).toHaveBeenCalledTimes(2);
-		expect(getByTestId("location-display")).toHaveTextContent("/custom");
+		expect(screen.getByTestId("location-display")).toHaveTextContent("/custom");
 	});
 });
