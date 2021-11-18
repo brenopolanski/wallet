@@ -225,7 +225,7 @@ exports[`MultiSignature Registration Form should render form step 1`] = `
                       role="rowgroup"
                     >
                       <tr
-                        class="flex border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+                        class="flex items-center border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
                         data-testid="recipient-list__recipient-list-item"
                       >
                         <td

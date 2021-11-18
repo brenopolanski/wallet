@@ -237,7 +237,7 @@ exports[`Add Participant should fail if cannot find the address remotely 1`] = `
               role="rowgroup"
             >
               <tr
-                class="flex border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+                class="flex items-center border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
                 data-testid="recipient-list__recipient-list-item"
               >
                 <td
@@ -569,7 +569,7 @@ exports[`Add Participant should fail to find 1`] = `
               role="rowgroup"
             >
               <tr
-                class="flex border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+                class="flex items-center border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
                 data-testid="recipient-list__recipient-list-item"
               >
                 <td
@@ -974,7 +974,7 @@ exports[`Add Participant should fail with a duplicate address 1`] = `
               role="rowgroup"
             >
               <tr
-                class="flex border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+                class="flex items-center border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
                 data-testid="recipient-list__recipient-list-item"
               >
                 <td
@@ -1295,7 +1295,7 @@ exports[`Add Participant should fail with cold wallet 1`] = `
               role="rowgroup"
             >
               <tr
-                class="flex border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+                class="flex items-center border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
                 data-testid="recipient-list__recipient-list-item"
               >
                 <td
@@ -1585,7 +1585,7 @@ exports[`Add Participant should render custom participants 1`] = `
               role="rowgroup"
             >
               <tr
-                class="flex border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+                class="flex items-center border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
                 data-testid="recipient-list__recipient-list-item"
               >
                 <td
@@ -1966,7 +1966,7 @@ exports[`Add Participant should work with an imported wallet 1`] = `
               role="rowgroup"
             >
               <tr
-                class="flex border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+                class="flex items-center border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
                 data-testid="recipient-list__recipient-list-item"
               >
                 <td
@@ -2053,7 +2053,7 @@ exports[`Add Participant should work with an imported wallet 1`] = `
                 </td>
               </tr>
               <tr
-                class="flex border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+                class="flex items-center border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
                 data-testid="recipient-list__recipient-list-item"
               >
                 <td

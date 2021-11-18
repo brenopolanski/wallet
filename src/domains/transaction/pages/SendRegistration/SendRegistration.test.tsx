@@ -81,6 +81,7 @@ const createDelegateRegistrationMock = (wallet: Contracts.IReadWriteWallet) =>
 		type: () => "delegateRegistration",
 		username: () => DelegateRegistrationFixture.data.asset.delegate.username,
 		usesMultiSignature: () => false,
+		wallet: () => wallet,
 	});
 
 const createSecondSignatureRegistrationMock = (wallet: Contracts.IReadWriteWallet) =>
@@ -95,6 +96,7 @@ const createSecondSignatureRegistrationMock = (wallet: Contracts.IReadWriteWalle
 		sender: () => SecondSignatureRegistrationFixture.data.sender,
 		type: () => "secondSignature",
 		usesMultiSignature: () => false,
+		wallet: () => wallet,
 	} as any);
 
 const createMultiSignatureRegistrationMock = (wallet: Contracts.IReadWriteWallet) =>
@@ -122,6 +124,7 @@ const createMultiSignatureRegistrationMock = (wallet: Contracts.IReadWriteWallet
 		sender: () => MultisignatureRegistrationFixture.data.sender,
 		type: () => "multiSignature",
 		usesMultiSignature: () => false,
+		wallet: () => wallet,
 	} as any);
 
 describe("Registration", () => {

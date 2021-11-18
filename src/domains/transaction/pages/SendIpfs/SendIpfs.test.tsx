@@ -162,6 +162,7 @@ describe("SendIpfs", () => {
 							publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
 						}),
 				}),
+			wallet,
 		);
 
 		const { asFragment } = renderWithForm(

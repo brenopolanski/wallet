@@ -50,6 +50,8 @@ describe("MultiSignatureDetail Helpers", () => {
 	});
 
 	it("should extract multisignature info mapping mandatoryKeys and numberOfSignatures to min and publicKeys", () => {
+		jest.spyOn(transaction.wallet().network(), "multiSignatureType").mockReturnValue("advanced");
+
 		jest.spyOn(transaction, "get").mockReturnValue({
 			mandatoryKeys: [],
 			numberOfSignatures: 2,
@@ -60,6 +62,8 @@ describe("MultiSignatureDetail Helpers", () => {
 
 		expect(min).toBe(2);
 		expect(publicKeys).toHaveLength(0);
+
+		jest.clearAllMocks();
 	});
 
 	it("should render Paginator with broadcast only button", () => {
