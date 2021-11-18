@@ -8,7 +8,7 @@ import { useGraphTooltip, useGraphWidth } from "./Graphs.shared";
 
 describe("Graphs shared hooks", () => {
 	describe("useGraphWidth", () => {
-		it("should return reference and width of the element where it is applied", async () => {
+		it("should return reference and width of the element where it is applied", () => {
 			const Component = () => {
 				const [reference, width] = useGraphWidth<HTMLDivElement>();
 

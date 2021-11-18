@@ -15,6 +15,7 @@ const LineGraphEmpty: React.VFC<LineGraphEmptyProperties> = ({ config }) => (
 		width={config.graphWidth}
 		height={config.segmentHeight}
 		rx={config.segmentHeight / 2}
+		data-testid="LineGraph__empty"
 	/>
 );
 

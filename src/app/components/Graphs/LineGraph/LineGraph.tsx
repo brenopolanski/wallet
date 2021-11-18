@@ -29,7 +29,12 @@ export const LineGraph: React.VFC<LineGraphProperties> = ({ data, renderLegend, 
 		}
 
 		return rectangles.map((rectProperties, index) => (
-			<rect key={index} {...rectProperties} {...getMouseEventProperties(data[index])}>
+			<rect
+				key={index}
+				data-testid="LineGraph__item"
+				{...rectProperties}
+				{...getMouseEventProperties(data[index])}
+			>
 				<GraphHoverAnimation
 					animations={[
 						{ attribute: "height", from: config.segmentHeight, to: config.segmentHeightHover },
@@ -45,9 +50,13 @@ export const LineGraph: React.VFC<LineGraphProperties> = ({ data, renderLegend, 
 		<div>
 			<Tooltip />
 
-			{!!renderLegend && <div className="flex justify-end mb-1">{renderLegend(data)}</div>}
+			{!!renderLegend && (
+				<div data-testid="LineGraph__legend" className="flex justify-end mb-1">
+					{renderLegend(data)}
+				</div>
+			)}
 
-			<svg ref={reference} className="w-full h-5">
+			<svg ref={reference} className="w-full h-5" data-testid="LineGraph__svg">
 				{!!graphWidth && renderSegments()}
 			</svg>
 		</div>

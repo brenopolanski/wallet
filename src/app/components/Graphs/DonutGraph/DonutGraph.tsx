@@ -22,14 +22,15 @@ export const DonutGraph: React.VFC<DonutGraphProperties> = ({
 
 			<ContentInsideCircle renderFunction={renderContentInsideCircle} size={size} />
 
-			<svg width={size} height={size}>
+			<svg width={size} height={size} data-testid="DonutGraph__svg">
 				<circle {...backgroundCircle} />
 
 				{circles.map(({ circleProperties, animations }, index) => (
-					<g key={index}>
+					<g key={index} data-testid="DonutGraph__item">
 						<circle
 							{...circleProperties}
 							id={`circleTrackLine__${index}`}
+							data-testid="DonutGraph__item-track-line"
 							className="stroke-current text-theme-secondary-300 dark:text-theme-secondary-800"
 							strokeWidth={2}
 							pointerEvents="none"
@@ -37,6 +38,7 @@ export const DonutGraph: React.VFC<DonutGraphProperties> = ({
 						<circle
 							{...circleProperties}
 							id={`circleHoverArea__${index}`}
+							data-testid="DonutGraph__item-hover-area"
 							strokeWidth={40}
 							opacity={0}
 							pointerEvents="visibleStroke"

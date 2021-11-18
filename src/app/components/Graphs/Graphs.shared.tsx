@@ -49,11 +49,7 @@ function useGraphTooltip<TDataPoint>(
 
 	const getMouseEventProperties = (dataPoint: TDataPoint) => ({
 		onMouseMove: (event: MouseEvent<SVGElement>) => {
-			const tooltipElement = tooltipReference.current;
-
-			if (!tooltipElement) {
-				return;
-			}
+			const tooltipElement = tooltipReference.current as HTMLDivElement;
 
 			setTooltipDataPoint(dataPoint);
 

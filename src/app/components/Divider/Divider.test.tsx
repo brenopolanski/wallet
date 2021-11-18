@@ -4,7 +4,7 @@ import { render } from "utils/testing-library";
 import { Divider } from "./Divider";
 
 describe("Divider", () => {
-	const sizes = ["sm", "md", "lg", "xl"];
+	const sizes = ["sm", "md", "lg", "default"];
 
 	it("should render", () => {
 		const { container, asFragment } = render(<Divider />);
