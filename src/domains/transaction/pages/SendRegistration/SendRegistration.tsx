@@ -1,6 +1,6 @@
-import { DTO } from "@payvo/profiles";
-import { WalletLedgerModel } from "@payvo/profiles/distribution/contracts";
 import { Networks } from "@payvo/sdk";
+import { DTO } from "@payvo/sdk-profiles";
+import { WalletLedgerModel } from "@payvo/sdk-profiles/distribution/contracts";
 import { Form } from "app/components/Form";
 import { Page, Section } from "app/components/Layout";
 import { StepIndicator } from "app/components/StepIndicator";
@@ -26,14 +26,14 @@ import React, { useEffect, useLayoutEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useHistory, useParams } from "react-router-dom";
 
-import { SummaryStep } from ".";
 import { SendRegistrationForm } from "./SendRegistration.models";
+import { SummaryStep } from "./SummaryStep";
 
 export const SendRegistration = () => {
 	const history = useHistory();
 
 	const [activeTab, setActiveTab] = useState(1);
-	const [transaction, setTransaction] = useState((null as unknown) as DTO.ExtendedSignedTransactionData);
+	const [transaction, setTransaction] = useState(null as unknown as DTO.ExtendedSignedTransactionData);
 	const [registrationForm, setRegistrationForm] = useState<SendRegistrationForm>();
 	const [errorMessage, setErrorMessage] = useState<string | undefined>();
 
@@ -45,7 +45,7 @@ export const SendRegistration = () => {
 	const { sendMultiSignature, abortReference } = useMultiSignatureRegistration();
 	const { common } = useValidation();
 
-	const { hasDeviceAvailable, isConnected, connect, transport, ledgerDevice } = useLedgerContext();
+	const { hasDeviceAvailable, isConnected, connect, ledgerDevice } = useLedgerContext();
 
 	const { isLedgerModelSupported } = useLedgerModelStatus({
 		connectedModel: ledgerDevice?.id,
@@ -75,13 +75,8 @@ export const SendRegistration = () => {
 		register("isLoading");
 	}, [register, activeWallet, common, fees]);
 
-	const {
-		dismissFeeWarning,
-		feeWarningVariant,
-		requireFeeConfirmation,
-		showFeeWarning,
-		setShowFeeWarning,
-	} = useFeeConfirmation(fee, fees);
+	const { dismissFeeWarning, feeWarningVariant, requireFeeConfirmation, showFeeWarning, setShowFeeWarning } =
+		useFeeConfirmation(fee, fees);
 
 	useEffect(() => {
 		setValue("senderAddress", activeWallet.address(), { shouldDirty: true, shouldValidate: true });
@@ -96,17 +91,14 @@ export const SendRegistration = () => {
 	}, [activeWallet, env, setValue]);
 
 	useLayoutEffect(() => {
-		switch (registrationType) {
-			case "secondSignature": {
-				return setRegistrationForm(SecondSignatureRegistrationForm);
-			}
-			case "multiSignature": {
-				return setRegistrationForm(MultiSignatureRegistrationForm);
-			}
-			default: {
-				return setRegistrationForm(DelegateRegistrationForm);
-			}
-		}
+		const registrations = {
+			default: () => setRegistrationForm(DelegateRegistrationForm),
+			multiSignature: () => setRegistrationForm(MultiSignatureRegistrationForm),
+			secondSignature: () => setRegistrationForm(SecondSignatureRegistrationForm),
+		};
+
+		// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+		return (registrations[registrationType as keyof typeof registrations] || registrations.default)();
 	}, [registrationType]);
 
 	// Reset ledger authentication steps after reconnecting supported ledger
@@ -148,7 +140,7 @@ export const SendRegistration = () => {
 
 			if (activeWallet.isLedger()) {
 				await connect(activeProfile, activeWallet.coinId(), activeWallet.networkId());
-				await activeWallet.ledger().connect(transport);
+				await activeWallet.ledger().connect();
 			}
 
 			const signatory = await activeWallet.signatoryFactory().make({

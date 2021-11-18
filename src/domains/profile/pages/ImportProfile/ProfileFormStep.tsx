@@ -1,4 +1,4 @@
-import { Contracts, Environment, Helpers } from "@payvo/profiles";
+import { Contracts, Environment, Helpers } from "@payvo/sdk-profiles";
 import { Button } from "app/components/Button";
 import { Divider } from "app/components/Divider";
 import { Form, FormField, FormLabel } from "app/components/Form";
@@ -52,13 +52,13 @@ const CreateProfileForm = ({
 	});
 
 	const { watch, register, formState, setValue, trigger, getValues } = form;
-	const { confirmPassword, currency, isDarkMode, name, password: watchedPassword } = watch([
-		"confirmPassword",
-		"currency",
-		"isDarkMode",
-		"name",
-		"password",
-	]);
+	const {
+		confirmPassword,
+		currency,
+		isDarkMode,
+		name,
+		password: watchedPassword,
+	} = watch(["confirmPassword", "currency", "isDarkMode", "name", "password"]);
 
 	const [avatarImage, setAvatarImage] = useState(profile.avatar());
 

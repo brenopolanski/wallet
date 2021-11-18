@@ -37,11 +37,11 @@ describe("Appearance.helpers", () => {
 				viewingMode: "light",
 			};
 
-			expect(result.current.getValues()).not.toEqual(testValues);
+			expect(result.current.getValues()).not.toStrictEqual(testValues);
 
 			result.current.setValues(testValues);
 
-			expect(result.current.getValues()).toEqual(testValues);
+			expect(result.current.getValues()).toStrictEqual(testValues);
 		});
 	});
 });

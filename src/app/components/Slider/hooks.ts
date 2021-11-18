@@ -2,6 +2,7 @@ import "swiper/swiper-bundle.css";
 
 import { useCallback, useEffect, useMemo, useRef } from "react";
 import Swiper, { Pagination } from "swiper";
+
 Swiper.use([Pagination]);
 
 interface Properties {
@@ -44,10 +45,10 @@ export const useSlider = ({ container, options, data, paginationPosition }: Prop
 		};
 	}, [data, options]);
 
-	const showPagination = useMemo(() => data.length > swiperOptions.slidesPerView * swiperOptions.slidesPerColumn, [
-		data,
-		swiperOptions,
-	]);
+	const showPagination = useMemo(
+		() => data.length > swiperOptions.slidesPerView * swiperOptions.slidesPerColumn,
+		[data, swiperOptions],
+	);
 
 	// Swiper needs container height to be defined. `slideHeight` is required.
 	const containerHeight = useMemo(() => {

@@ -1,4 +1,4 @@
-import { Contracts, Environment } from "@payvo/profiles";
+import { Contracts, Environment } from "@payvo/sdk-profiles";
 
 interface ProfileExportOptions {
 	excludeEmptyWallets: boolean;

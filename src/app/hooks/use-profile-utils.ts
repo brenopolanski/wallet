@@ -1,4 +1,4 @@
-import { Contracts, Environment } from "@payvo/profiles";
+import { Contracts, Environment } from "@payvo/sdk-profiles";
 import { useCallback, useMemo } from "react";
 import { matchPath } from "react-router-dom";
 
@@ -67,10 +67,8 @@ export const useProfileUtils = (environment: Environment) => {
 		return { erroredNetworks, hasErroredNetworks: erroredNetworks.length > 0 };
 	}, []);
 
-	return useMemo(() => ({ getErroredNetworks, getProfileById, getProfileFromUrl, getProfileStoredPassword }), [
-		getProfileFromUrl,
-		getProfileById,
-		getProfileStoredPassword,
-		getErroredNetworks,
-	]);
+	return useMemo(
+		() => ({ getErroredNetworks, getProfileById, getProfileFromUrl, getProfileStoredPassword }),
+		[getProfileFromUrl, getProfileById, getProfileStoredPassword, getErroredNetworks],
+	);
 };

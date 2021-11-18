@@ -1,10 +1,7 @@
 import { Size } from "types";
 
 export const getStyles = (size?: Size) => {
-	switch (size) {
-		case "sm":
-			return "text-xs font-medium";
-		default:
-			return "";
+	if (size === "sm") {
+		return "text-xs font-medium";
 	}
 };

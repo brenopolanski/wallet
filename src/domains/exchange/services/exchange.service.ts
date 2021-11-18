@@ -1,5 +1,5 @@
-import { upperFirst } from "@arkecosystem/utils";
-import { Contracts } from "@payvo/profiles";
+import { upperFirst } from "@payvo/sdk-helpers";
+import { Contracts } from "@payvo/sdk-profiles";
 import { HttpClient } from "app/services/HttpClient";
 import { CurrencyData, EstimateResponse, Order, OrderResponse, OrderStatusResponse } from "domains/exchange/contracts";
 

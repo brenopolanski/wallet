@@ -1,5 +1,5 @@
-import { Contracts } from "@payvo/profiles";
-import { ReadOnlyWallet } from "@payvo/profiles/distribution/read-only-wallet";
+import { Contracts } from "@payvo/sdk-profiles";
+import { ReadOnlyWallet } from "@payvo/sdk-profiles/distribution/read-only-wallet";
 import { buildTranslations } from "app/i18n/helpers";
 import { VoteDelegateProperties } from "domains/vote/components/DelegateTable/DelegateTable.models";
 import { translations as voteTranslations } from "domains/vote/i18n";

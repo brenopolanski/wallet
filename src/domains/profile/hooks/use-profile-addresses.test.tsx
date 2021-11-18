@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import { env, getDefaultProfileId, MNEMONICS } from "utils/testing-library";
 

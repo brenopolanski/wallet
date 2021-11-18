@@ -3,7 +3,7 @@
 exports[`Badge should render 1`] = `
 <div>
   <span
-    class="Badge__Wrapper-sc-w9wbbm-0 iNGskz flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent"
+    class="Badge__Wrapper-sc-w9wbbm-0 fvTsro flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent"
   >
     <span />
   </span>
@@ -13,10 +13,10 @@ exports[`Badge should render 1`] = `
 exports[`Badge should render with icon 1`] = `
 <div>
   <span
-    class="Badge__Wrapper-sc-w9wbbm-0 iNGskz flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent"
+    class="Badge__Wrapper-sc-w9wbbm-0 fvTsro flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent"
   >
     <div
-      class="sc-bdnxRM AkeAK"
+      class="sc-bdvvtL Cfvxc"
       height="10"
       width="10"
     />
@@ -28,10 +28,10 @@ exports[`Badge should render with icon 1`] = `
 exports[`Badge should render with position 'bottom' 1`] = `
 <div>
   <span
-    class="Badge__Wrapper-sc-w9wbbm-0 dpQfhp flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent"
+    class="Badge__Wrapper-sc-w9wbbm-0 khUEIG flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent"
   >
     <div
-      class="sc-bdnxRM AkeAK"
+      class="sc-bdvvtL Cfvxc"
       height="10"
       width="10"
     />
@@ -43,10 +43,10 @@ exports[`Badge should render with position 'bottom' 1`] = `
 exports[`Badge should render with position 'bottom-left' 1`] = `
 <div>
   <span
-    class="Badge__Wrapper-sc-w9wbbm-0 bSevwp flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent"
+    class="Badge__Wrapper-sc-w9wbbm-0 ohMja flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent"
   >
     <div
-      class="sc-bdnxRM AkeAK"
+      class="sc-bdvvtL Cfvxc"
       height="10"
       width="10"
     />
@@ -58,10 +58,10 @@ exports[`Badge should render with position 'bottom-left' 1`] = `
 exports[`Badge should render with position 'bottom-right' 1`] = `
 <div>
   <span
-    class="Badge__Wrapper-sc-w9wbbm-0 iNGskz flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent"
+    class="Badge__Wrapper-sc-w9wbbm-0 fvTsro flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent"
   >
     <div
-      class="sc-bdnxRM AkeAK"
+      class="sc-bdvvtL Cfvxc"
       height="10"
       width="10"
     />
@@ -73,10 +73,10 @@ exports[`Badge should render with position 'bottom-right' 1`] = `
 exports[`Badge should render with position 'left' 1`] = `
 <div>
   <span
-    class="Badge__Wrapper-sc-w9wbbm-0 gabKEB flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent"
+    class="Badge__Wrapper-sc-w9wbbm-0 eDOuDm flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent"
   >
     <div
-      class="sc-bdnxRM AkeAK"
+      class="sc-bdvvtL Cfvxc"
       height="10"
       width="10"
     />
@@ -88,10 +88,10 @@ exports[`Badge should render with position 'left' 1`] = `
 exports[`Badge should render with position 'right' 1`] = `
 <div>
   <span
-    class="Badge__Wrapper-sc-w9wbbm-0 jbGbCf flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent"
+    class="Badge__Wrapper-sc-w9wbbm-0 A-dHfY flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent"
   >
     <div
-      class="sc-bdnxRM AkeAK"
+      class="sc-bdvvtL Cfvxc"
       height="10"
       width="10"
     />
@@ -103,10 +103,10 @@ exports[`Badge should render with position 'right' 1`] = `
 exports[`Badge should render with position 'top' 1`] = `
 <div>
   <span
-    class="Badge__Wrapper-sc-w9wbbm-0 eompIQ flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent"
+    class="Badge__Wrapper-sc-w9wbbm-0 bvIWaH flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent"
   >
     <div
-      class="sc-bdnxRM AkeAK"
+      class="sc-bdvvtL Cfvxc"
       height="10"
       width="10"
     />
@@ -118,10 +118,10 @@ exports[`Badge should render with position 'top' 1`] = `
 exports[`Badge should render with position 'top-left' 1`] = `
 <div>
   <span
-    class="Badge__Wrapper-sc-w9wbbm-0 jqYKJI flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent"
+    class="Badge__Wrapper-sc-w9wbbm-0 a-DwVX flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent"
   >
     <div
-      class="sc-bdnxRM AkeAK"
+      class="sc-bdvvtL Cfvxc"
       height="10"
       width="10"
     />
@@ -133,10 +133,10 @@ exports[`Badge should render with position 'top-left' 1`] = `
 exports[`Badge should render with position 'top-right' 1`] = `
 <div>
   <span
-    class="Badge__Wrapper-sc-w9wbbm-0 iMGUIG flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent"
+    class="Badge__Wrapper-sc-w9wbbm-0 gviNFp flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent"
   >
     <div
-      class="sc-bdnxRM AkeAK"
+      class="sc-bdvvtL Cfvxc"
       height="10"
       width="10"
     />
@@ -148,10 +148,10 @@ exports[`Badge should render with position 'top-right' 1`] = `
 exports[`Badge should render with size 'lg' 1`] = `
 <div>
   <span
-    class="Badge__Wrapper-sc-w9wbbm-0 huiJhL flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent"
+    class="Badge__Wrapper-sc-w9wbbm-0 jPfUWc flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent"
   >
     <div
-      class="sc-bdnxRM AkeAK"
+      class="sc-bdvvtL Cfvxc"
       height="10"
       width="10"
     />
@@ -163,10 +163,10 @@ exports[`Badge should render with size 'lg' 1`] = `
 exports[`Badge should render with size 'md' 1`] = `
 <div>
   <span
-    class="Badge__Wrapper-sc-w9wbbm-0 iNGskz flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent"
+    class="Badge__Wrapper-sc-w9wbbm-0 fvTsro flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent"
   >
     <div
-      class="sc-bdnxRM AkeAK"
+      class="sc-bdvvtL Cfvxc"
       height="10"
       width="10"
     />

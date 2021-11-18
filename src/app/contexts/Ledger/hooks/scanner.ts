@@ -1,5 +1,5 @@
-import { uniqBy } from "@arkecosystem/utils";
-import { Contracts } from "@payvo/profiles";
+import { uniqBy } from "@payvo/sdk-helpers";
+import { Contracts } from "@payvo/sdk-profiles";
 import { LedgerData } from "app/contexts/Ledger/contracts";
 import { useLedgerContext } from "app/contexts/Ledger/Ledger";
 import { useCallback, useMemo, useReducer, useRef, useState } from "react";

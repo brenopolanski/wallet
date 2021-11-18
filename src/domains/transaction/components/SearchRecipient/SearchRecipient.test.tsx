@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { fireEvent, waitFor, within } from "@testing-library/react";
 import { translations } from "domains/transaction/i18n";
 import React from "react";

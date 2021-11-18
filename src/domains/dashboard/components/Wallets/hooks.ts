@@ -1,8 +1,8 @@
-import { chunk } from "@arkecosystem/utils";
-import { Contracts } from "@payvo/profiles";
+import { chunk } from "@payvo/sdk-helpers";
+import { Contracts } from "@payvo/sdk-profiles";
 import { useMemo } from "react";
 
-import { GridWallet, UseWalletDisplayProperties } from ".";
+import { GridWallet, UseWalletDisplayProperties } from "./Wallets.contracts";
 
 export const useWalletDisplay = ({
 	wallets = [],

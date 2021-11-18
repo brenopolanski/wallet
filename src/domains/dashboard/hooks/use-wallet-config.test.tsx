@@ -1,5 +1,5 @@
-import { uniq } from "@arkecosystem/utils";
-import { Contracts } from "@payvo/profiles";
+import { uniq } from "@payvo/sdk-helpers";
+import { Contracts } from "@payvo/sdk-profiles";
 import { act, renderHook } from "@testing-library/react-hooks";
 import { ConfigurationProvider, EnvironmentProvider } from "app/contexts";
 import React from "react";
@@ -34,7 +34,7 @@ describe("useWalletConfig", () => {
 				.map((wallet) => wallet.network().id()),
 		);
 
-		expect(current.selectedNetworkIds).toEqual(defaultNetworkIds);
+		expect(current.selectedNetworkIds).toStrictEqual(defaultNetworkIds);
 		expect(current.walletsDisplayType).toBe("all");
 		expect(current.viewType).toBe("grid");
 	});
@@ -89,7 +89,7 @@ describe("useWalletConfig", () => {
 		});
 
 		await waitFor(() => {
-			expect(result.current.selectedNetworkIds).toEqual([]);
+			expect(result.current.selectedNetworkIds).toStrictEqual([]);
 		});
 	});
 
@@ -116,7 +116,7 @@ describe("useWalletConfig", () => {
 		await waitForNextUpdate();
 
 		await waitFor(() => {
-			expect(result.current.selectedNetworkIds).toEqual(["ark.devnet"]);
+			expect(result.current.selectedNetworkIds).toStrictEqual(["ark.devnet"]);
 		});
 	});
 });

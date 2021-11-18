@@ -6,11 +6,7 @@ import React from "react";
 import { styled } from "twin.macro";
 import { ButtonVariant, Size } from "types";
 
-import { ClipboardCommonProperties } from "./Clipboard";
-
-export type ClipboardButtonProperties = ClipboardCommonProperties & {
-	variant: "button";
-} & React.ButtonHTMLAttributes<any>;
+import { ClipboardButtonProperties } from "./Clipboard.contracts";
 
 type ButtonProperties = {
 	variant?: ButtonVariant;

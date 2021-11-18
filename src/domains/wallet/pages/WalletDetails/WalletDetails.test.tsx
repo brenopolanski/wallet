@@ -1,14 +1,12 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts, DTO } from "@payvo/profiles";
+import { Contracts, DTO } from "@payvo/sdk-profiles";
 // @README: This import is fine in tests but should be avoided in production code.
-import { ReadOnlyWallet } from "@payvo/profiles/distribution/read-only-wallet";
-import { Enums } from "@payvo/sdk";
+import { ReadOnlyWallet } from "@payvo/sdk-profiles/distribution/read-only-wallet";
 import { LedgerProvider } from "app/contexts";
 import { buildTranslations } from "app/i18n/helpers";
 import { toasts } from "app/services";
 import electron from "electron";
 import { createMemoryHistory } from "history";
-import { when } from "jest-when";
 import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
@@ -22,6 +20,7 @@ import {
 	MNEMONICS,
 	render,
 	RenderResult,
+	screen,
 	syncDelegates,
 	waitFor,
 	within,
@@ -49,7 +48,7 @@ const renderPage = async ({
 	waitForTransactions = true,
 	withProfileSynchronizer = false,
 } = {}) => {
-	const rendered: RenderResult = render(
+	const utils: RenderResult = render(
 		<Route path="/profiles/:profileId/wallets/:walletId">
 			<LedgerProvider transport={getDefaultLedgerTransport()}>
 				<WalletDetails />
@@ -63,23 +62,23 @@ const renderPage = async ({
 		},
 	);
 
-	const { getByTestId, findByTestId } = rendered;
-
 	if (waitForTopSection) {
-		await findByTestId("WalletVote");
+		await screen.findByTestId("WalletVote");
 	}
 
 	if (waitForTransactions) {
 		await (withProfileSynchronizer
 			? waitFor(() =>
-					expect(within(getByTestId("TransactionTable")).queryAllByTestId("TableRow")).toHaveLength(1),
+					expect(within(screen.getByTestId("TransactionTable")).queryAllByTestId("TableRow")).toHaveLength(1),
 			  )
 			: waitFor(() =>
-					expect(within(getByTestId("TransactionTable")).queryAllByTestId("TableRow")).not.toHaveLength(0),
+					expect(
+						within(screen.getByTestId("TransactionTable")).queryAllByTestId("TableRow"),
+					).not.toHaveLength(0),
 			  ));
 	}
 
-	return rendered;
+	return utils;
 };
 
 describe("WalletDetails", () => {
@@ -280,9 +279,7 @@ describe("WalletDetails", () => {
 	});
 
 	it("should not render wallet vote when the network does not support votes", async () => {
-		const networkFeatureSpy = jest.spyOn(wallet.network(), "allowsVoting");
-
-		when(networkFeatureSpy).calledWith(Enums.FeatureFlag.TransactionVote).mockReturnValue(false);
+		const networkFeatureSpy = jest.spyOn(wallet.network(), "allowsVoting").mockReturnValue(false);
 
 		const { getByTestId } = await renderPage({ waitForTopSection: false });
 
@@ -515,7 +512,7 @@ describe("WalletDetails", () => {
 
 		await newWallet.synchroniser().identity();
 
-		const syncVotesSpy = jest.spyOn(newWallet.synchroniser(), "votes").mockReturnValue();
+		const syncVotesSpy = jest.spyOn(newWallet.synchroniser(), "votes").mockImplementation();
 
 		walletUrl = `/profiles/${profile.id()}/wallets/${newWallet.id()}`;
 		history.push(walletUrl);

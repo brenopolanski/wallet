@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { fireEvent, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { translations as commonTranslations } from "app/i18n/common/i18n";
@@ -55,7 +55,7 @@ describe("UpdateWalletName", () => {
 		await waitFor(() => expect(onAfterSave).toHaveBeenCalledWith());
 
 		expect(aliasSpy).toHaveBeenCalledWith(name);
-		expect(wallet.settings().get(Contracts.WalletSetting.Alias)).toBe(name);
+		expect(wallet.settings().get(Contracts.WalletSetting.Alias)).toStrictEqual(name);
 	});
 
 	it("should show an error message for duplicate name", async () => {

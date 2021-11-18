@@ -1,5 +1,5 @@
-import { sortByDesc } from "@arkecosystem/utils";
-import { Contracts, DTO } from "@payvo/profiles";
+import { sortByDesc } from "@payvo/sdk-helpers";
+import { Contracts, DTO } from "@payvo/sdk-profiles";
 import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import * as useRandomNumberHook from "app/hooks/use-random-number";

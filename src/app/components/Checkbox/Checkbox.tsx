@@ -6,7 +6,6 @@ import { getStyles } from "./Checkbox.styles";
 
 type CheckboxProperties = {
 	color?: Color;
-	variant?: string;
 } & React.InputHTMLAttributes<any>;
 
 export const Checkbox = styled.input.attrs<CheckboxProperties>(({ color }) => ({

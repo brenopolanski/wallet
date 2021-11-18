@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { CollapseToggleButton } from "app/components/Collapse";
 import { Dropdown, DropdownOption, DropdownOptionGroup } from "app/components/Dropdown";
 import { useTransactionTypes } from "domains/transaction/hooks/use-transaction-types";

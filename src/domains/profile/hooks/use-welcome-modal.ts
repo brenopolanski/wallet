@@ -1,4 +1,4 @@
-import { Contracts, Environment } from "@payvo/profiles";
+import { Contracts, Environment } from "@payvo/sdk-profiles";
 import { useConfiguration } from "app/contexts";
 import { WelcomeModalStep } from "domains/profile/components/WelcomeModal/WelcomeModal.models";
 import { useCallback, useEffect, useState } from "react";

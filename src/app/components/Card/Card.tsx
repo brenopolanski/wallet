@@ -1,3 +1,4 @@
+import { Contracts } from "@payvo/sdk-profiles";
 import { Dropdown, DropdownOption } from "app/components/Dropdown";
 import { Icon } from "app/components/Icon";
 import React from "react";
@@ -9,8 +10,8 @@ interface CardProperties {
 	children: React.ReactNode;
 	addonIcons?: React.ReactNode;
 	actions?: DropdownOption[];
-	onClick?: any;
-	onSelect?: any;
+	onClick?: (profile: Contracts.IProfile) => void;
+	onSelect?: (option: DropdownOption) => void;
 	isSelected?: boolean;
 	className?: string;
 }

@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { Badge } from "app/components/Badge";
 import { Card } from "app/components/Card";
 import { DropdownOption } from "app/components/Dropdown";
@@ -11,8 +11,8 @@ interface ProfileCardProperties {
 	className?: string;
 	profile: Contracts.IProfile;
 	showSettings?: boolean;
-	onClick?: any;
-	onSelect?: any;
+	onClick?: (profile: Contracts.IProfile) => void;
+	onSelect?: (option: DropdownOption) => void;
 }
 
 export const ProfileCard = ({

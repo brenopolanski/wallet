@@ -1,7 +1,7 @@
-import { Contracts } from "@payvo/profiles";
 import { Networks } from "@payvo/sdk";
 import { ARK } from "@payvo/sdk-ark";
 import { LSK } from "@payvo/sdk-lsk";
+import { Contracts } from "@payvo/sdk-profiles";
 import { screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { useValidation } from "app/hooks";

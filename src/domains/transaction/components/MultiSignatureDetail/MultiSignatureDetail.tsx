@@ -1,4 +1,4 @@
-import { Contracts, DTO } from "@payvo/profiles";
+import { Contracts, DTO } from "@payvo/sdk-profiles";
 import { Form } from "app/components/Form";
 import { Modal } from "app/components/Modal";
 import { TabPanel, Tabs } from "app/components/Tabs";
@@ -34,7 +34,7 @@ export const MultiSignatureDetail = ({
 	const [activeTransaction, setActiveTransaction] = useState<DTO.ExtendedSignedTransactionData>(transaction);
 
 	const { persist } = useEnvironmentContext();
-	const { hasDeviceAvailable, isConnected, connect, transport, ledgerDevice } = useLedgerContext();
+	const { hasDeviceAvailable, isConnected, connect, ledgerDevice } = useLedgerContext();
 
 	const { isLedgerModelSupported } = useLedgerModelStatus({
 		connectedModel: ledgerDevice?.id,
@@ -79,7 +79,7 @@ export const MultiSignatureDetail = ({
 			try {
 				if (wallet.isLedger()) {
 					await connect(profile, wallet.coinId(), wallet.networkId());
-					await wallet.ledger().connect(transport);
+					await wallet.ledger().connect();
 				}
 
 				const signatory = await wallet.signatoryFactory().make({
@@ -114,7 +114,7 @@ export const MultiSignatureDetail = ({
 				setActiveStep(MultiSignatureDetailStep.ErrorStep);
 			}
 		},
-		[transaction, wallet, addSignature, connect, profile, transport, persist, broadcast],
+		[transaction, wallet, addSignature, connect, profile, persist, broadcastMultiSignature],
 	);
 
 	const handleSend = () => {

@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
@@ -35,6 +35,6 @@ describe("ConfirmPassphraseStep", () => {
 		expect(getByTestId("CreateWallet__ConfirmPassphraseStep")).toBeInTheDocument();
 		expect(getAllByTestId("MnemonicVerificationOptions__button")).toHaveLength(6);
 
-		expect(form.current.getValues()).toEqual({ verification: undefined });
+		expect(form.current.getValues()).toStrictEqual({ verification: undefined });
 	});
 });

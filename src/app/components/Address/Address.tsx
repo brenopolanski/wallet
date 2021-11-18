@@ -28,6 +28,18 @@ const AddressWrapper = ({ children, truncateOnTable }: { children: JSX.Element; 
 		<>{children}</>
 	);
 
+const getFontSize = (size?: Size) => {
+	const fontSizes = {
+		default: "text-base",
+		lg: "text-lg",
+		sm: "text-sm",
+		xl: "text-xl",
+	};
+
+	return fontSizes[size as keyof typeof fontSizes] || fontSizes.default;
+};
+const getFontWeight = (fontWeight = "semibold") => `font-${fontWeight}`;
+
 export const Address = ({
 	address,
 	addressClass,
@@ -37,59 +49,31 @@ export const Address = ({
 	maxNameChars = 16,
 	size,
 	truncateOnTable,
-}: Properties) => {
-	const getFontSize = (size?: Size) => {
-		switch (size) {
-			case "sm":
-				return "text-sm";
-			case "lg":
-				return "text-lg";
-			case "xl":
-				return "text-xl";
-			default:
-				return "text-base";
-		}
-	};
-
-	const getFontWeight = (fontWeight?: string) => {
-		switch (fontWeight) {
-			case "normal":
-				return "font-normal";
-			default:
-				return "font-semibold";
-		}
-	};
-
-	return (
-		<div className="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures">
-			{walletName && (
-				<span
-					data-testid="Address__alias"
-					className={`${getFontWeight(fontWeight)} ${getFontSize(size)} ${
-						walletNameClass || "text-theme-text"
-					}`}
-				>
-					<TruncateEnd
-						text={walletName}
-						maxChars={maxNameChars}
-						showTooltip={!!maxNameChars && walletName.length > maxNameChars}
-					/>
-				</span>
-			)}
-			{address && (
-				<AddressWrapper truncateOnTable={truncateOnTable}>
-					<TruncateMiddleDynamic
-						data-testid="Address__address"
-						value={address}
-						className={`${
-							addressClass ||
-							(walletName ? "text-theme-secondary-500 dark:text-theme-secondary-700" : "text-theme-text")
-						} ${getFontWeight(fontWeight)} ${getFontSize(size)}${
-							truncateOnTable ? " absolute w-full" : ""
-						}`}
-					/>
-				</AddressWrapper>
-			)}
-		</div>
-	);
-};
+}: Properties) => (
+	<div className="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures">
+		{walletName && (
+			<span
+				data-testid="Address__alias"
+				className={`${getFontWeight(fontWeight)} ${getFontSize(size)} ${walletNameClass || "text-theme-text"}`}
+			>
+				<TruncateEnd
+					text={walletName}
+					maxChars={maxNameChars}
+					showTooltip={!!maxNameChars && walletName.length > maxNameChars}
+				/>
+			</span>
+		)}
+		{address && (
+			<AddressWrapper truncateOnTable={truncateOnTable}>
+				<TruncateMiddleDynamic
+					data-testid="Address__address"
+					value={address}
+					className={`${
+						addressClass ||
+						(walletName ? "text-theme-secondary-500 dark:text-theme-secondary-700" : "text-theme-text")
+					} ${getFontWeight(fontWeight)} ${getFontSize(size)}${truncateOnTable ? " absolute w-full" : ""}`}
+				/>
+			</AddressWrapper>
+		)}
+	</div>
+);

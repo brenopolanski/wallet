@@ -1,6 +1,6 @@
-import { BigNumber } from "@payvo/helpers";
-import { Contracts as ProfileContracts } from "@payvo/profiles";
 import { Contracts } from "@payvo/sdk";
+import { BigNumber } from "@payvo/sdk-helpers";
+import { Contracts as ProfileContracts } from "@payvo/sdk-profiles";
 import { act as actHook, renderHook } from "@testing-library/react-hooks";
 import { LedgerProvider } from "app/contexts";
 import React from "react";

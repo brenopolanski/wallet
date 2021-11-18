@@ -7,7 +7,7 @@ exports[`ExchangeCard should render 1`] = `
   >
     <div>
       <button
-        class="Cardstyles__CardButton-sc-ajtauu-0 DdwDL"
+        class="Cardstyles__CardButton-sc-ajtauu-0 gawQiQ"
         data-testid="Card"
         tabindex="-1"
         type="button"
@@ -50,7 +50,7 @@ exports[`ExchangeCard should render when the exchange is not active 1`] = `
   >
     <div>
       <button
-        class="Cardstyles__CardButton-sc-ajtauu-0 DdwDL"
+        class="Cardstyles__CardButton-sc-ajtauu-0 gawQiQ"
         data-testid="Card"
         tabindex="-1"
         type="button"

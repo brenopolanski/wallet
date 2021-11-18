@@ -1,5 +1,5 @@
-import { Contracts as ProfileContracts } from "@payvo/profiles";
 import { Services, Signatories } from "@payvo/sdk";
+import { Contracts as ProfileContracts } from "@payvo/sdk-profiles";
 import { useLedgerContext } from "app/contexts";
 import { Participant } from "domains/transaction/components/MultiSignatureRegistrationForm/components/AddParticipant/AddParticipant";
 import { ExtendedSignedTransactionData } from "domains/transaction/pages/SendRegistration/SendRegistration.models";

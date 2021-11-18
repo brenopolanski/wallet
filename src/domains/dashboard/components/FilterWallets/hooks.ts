@@ -1,10 +1,10 @@
-import { sortBy } from "@arkecosystem/utils";
-import { Contracts } from "@payvo/profiles";
 import { Networks } from "@payvo/sdk";
+import { sortBy } from "@payvo/sdk-helpers";
+import { Contracts } from "@payvo/sdk-profiles";
 import { useWalletConfig } from "domains/dashboard/hooks";
 import { useMemo } from "react";
 
-import { FilterWalletsHookProperties } from ".";
+import { FilterWalletsHookProperties } from "./models";
 
 export const useWalletFilters = ({ profile }: { profile: Contracts.IProfile }) => {
 	const { defaultConfiguration, setValue, walletsDisplayType, selectedNetworkIds, viewType } = useWalletConfig({

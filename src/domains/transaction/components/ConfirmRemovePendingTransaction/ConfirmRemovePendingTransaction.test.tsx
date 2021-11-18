@@ -1,4 +1,4 @@
-import { Contracts, DTO } from "@payvo/profiles";
+import { Contracts, DTO } from "@payvo/sdk-profiles";
 import { translations } from "domains/transaction/i18n";
 import React from "react";
 import { env, fireEvent, getDefaultProfileId, render } from "utils/testing-library";

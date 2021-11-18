@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { EnvironmentProvider } from "app/contexts";
 import { translations as commonTranslations } from "app/i18n/common/i18n";
 import { httpClient } from "app/services";
@@ -17,7 +17,7 @@ import {
 	waitFor,
 } from "utils/testing-library";
 
-import { Welcome } from ".";
+import { Welcome } from "./Welcome";
 
 const fixtureProfileId = getDefaultProfileId();
 const profileDashboardUrl = `/profiles/${fixtureProfileId}/dashboard`;

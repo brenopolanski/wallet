@@ -33,9 +33,10 @@ export const useNetworkOptions = (useTestNetworks?: boolean) => {
 		[networks],
 	);
 
-	const networkById = useCallback((id?: string) => env.availableNetworks().find((network) => network.id() === id), [
-		env,
-	]);
+	const networkById = useCallback(
+		(id?: string) => env.availableNetworks().find((network) => network.id() === id),
+		[env],
+	);
 
 	return {
 		networkById,

@@ -1,5 +1,5 @@
-import { Contracts as ProfilesContracts } from "@payvo/profiles";
 import { Contracts } from "@payvo/sdk";
+import { Contracts as ProfilesContracts } from "@payvo/sdk-profiles";
 import { RenderResult } from "@testing-library/react";
 import { translations } from "domains/transaction/i18n";
 import React, { useEffect } from "react";
@@ -63,7 +63,7 @@ describe("MultiSignature Registration Form", () => {
 			);
 		};
 
-		const renderResult: RenderResult = render(
+		const utils: RenderResult = render(
 			<Route path="/profiles/:profileId">
 				<Component />
 			</Route>,
@@ -72,7 +72,7 @@ describe("MultiSignature Registration Form", () => {
 			},
 		);
 
-		return { ...renderResult, form };
+		return { ...utils, form };
 	};
 
 	it("should render form step", async () => {
@@ -129,7 +129,7 @@ describe("MultiSignature Registration Form", () => {
 
 		await waitFor(() => expect(form?.getValues("minParticipants")).toBe("3"));
 		await waitFor(() =>
-			expect(form?.getValues("participants")).toEqual([
+			expect(form?.getValues("participants")).toStrictEqual([
 				{
 					address: wallet.address(),
 					alias: wallet.alias(),

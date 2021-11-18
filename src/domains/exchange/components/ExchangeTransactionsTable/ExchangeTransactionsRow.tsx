@@ -1,5 +1,5 @@
-import { DateTime } from "@payvo/intl";
-import { Contracts } from "@payvo/profiles";
+import { DateTime } from "@payvo/sdk-intl";
+import { Contracts } from "@payvo/sdk-profiles";
 import { AmountLabel } from "app/components/Amount";
 import { Circle } from "app/components/Circle";
 import { Icon } from "app/components/Icon";
@@ -131,9 +131,9 @@ const ExchangeTransactionsRowStatus: React.FC<ExchangeTransactionsRowStatusPrope
 	};
 
 	const { name, color } = getIcon(status);
-	const transactionStatus = (Contracts.ExchangeTransactionStatus[
-		status
-	] as keyof typeof Contracts.ExchangeTransactionStatus).toUpperCase();
+	const transactionStatus = (
+		Contracts.ExchangeTransactionStatus[status] as keyof typeof Contracts.ExchangeTransactionStatus
+	).toUpperCase();
 	return (
 		<Tooltip content={t(`EXCHANGE.STATUS.${transactionStatus}`)}>
 			<span>

@@ -109,14 +109,16 @@ module.exports = {
 		"jest/prefer-expect-resolves": "error",
 		"jest/prefer-hooks-on-top": "error",
 		"jest/prefer-spy-on": "error",
+		"jest/prefer-strict-equal": "error",
 		"jest/prefer-to-be": "error",
 		"jest/prefer-to-contain": "error",
 		"jest/prefer-to-have-length": "error",
 		"jest/prefer-todo": "error",
+		"jest/require-hook": "error",
 		"jest/require-to-throw-message": "error",
 		"jest/require-top-level-describe": "error",
-		"jest/valid-expect": "off",
-		"jest/valid-expect-in-promise": "off",
+		"jest/valid-expect": "error",
+		"jest/valid-expect-in-promise": "error",
 		"max-lines": ["warn", { max: 300, skipBlankLines: true, skipComments: true }],
 		"max-lines-per-function": ["warn", { max: 40, skipBlankLines: true, skipComments: true }],
 		"no-negated-condition": "error",
@@ -166,7 +168,7 @@ module.exports = {
 		"testing-library/prefer-screen-queries": "warn", // @TODO: set to error and fix
 		"testing-library/prefer-user-event": "warn", // @TODO: set to error and fix
 		"testing-library/prefer-wait-for": "error",
-		"testing-library/render-result-naming-convention": "warn", // @TODO: set to error and fix
+		"testing-library/render-result-naming-convention": "error",
 		"unicorn/consistent-destructuring": "warn", // @TODO: set to error and fix resulting issues
 		"unicorn/consistent-function-scoping": "warn", // @TODO: set to error and fix resulting issues
 		"unicorn/error-message": "warn", // @TODO: set to error and fix resulting issues
@@ -200,6 +202,15 @@ module.exports = {
 			files: ["**/e2e/*.ts", "**/cucumber/*.ts", "**/cucumber/*.feature"],
 			rules: {
 				"import/no-relative-parent-imports": "off",
+				"sort-keys-fix/sort-keys-fix": "off",
+			},
+		},
+		{
+			files: ["!**/*.test.{ts,tsx}"],
+			plugins: ["jest"],
+			rules: {
+				"jest/require-hook": "off",
+				"jest/require-top-level-describe": "off",
 			},
 		},
 	],

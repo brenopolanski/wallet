@@ -3,7 +3,7 @@
 exports[`PluginImage should render image logo 1`] = `
 <div>
   <div
-    class="PluginImage__PluginImageWrapper-sc-10kztrf-0 fyVFIH bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+    class="PluginImage__PluginImageWrapper-sc-10kztrf-0 cWrKPM bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
     data-testid="PluginImage"
   >
     <img
@@ -18,7 +18,7 @@ exports[`PluginImage should render image logo 1`] = `
 exports[`PluginImage should render image placeholder 1`] = `
 <div>
   <div
-    class="PluginImage__PluginImageWrapper-sc-10kztrf-0 fyVFIH bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+    class="PluginImage__PluginImageWrapper-sc-10kztrf-0 cWrKPM bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
     data-testid="PluginImage"
   >
     <svg>
@@ -31,7 +31,7 @@ exports[`PluginImage should render image placeholder 1`] = `
 exports[`PluginImage should render updating element in dark mode 1`] = `
 <div>
   <div
-    class="PluginImage__PluginImageWrapper-sc-10kztrf-0 capJlb bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+    class="PluginImage__PluginImageWrapper-sc-10kztrf-0 fBINnA bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
     data-testid="PluginImage"
   >
     <svg
@@ -89,7 +89,7 @@ exports[`PluginImage should render updating element in dark mode 1`] = `
 exports[`PluginImage should render updating element in light mode 1`] = `
 <div>
   <div
-    class="PluginImage__PluginImageWrapper-sc-10kztrf-0 capJlb bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+    class="PluginImage__PluginImageWrapper-sc-10kztrf-0 fBINnA bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
     data-testid="PluginImage"
   >
     <svg
@@ -147,7 +147,7 @@ exports[`PluginImage should render updating element in light mode 1`] = `
 exports[`PluginImage should render updating with label 1`] = `
 <div>
   <div
-    class="PluginImage__PluginImageWrapper-sc-10kztrf-0 capJlb bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+    class="PluginImage__PluginImageWrapper-sc-10kztrf-0 fBINnA bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
     data-testid="PluginImage"
   >
     <svg
@@ -211,7 +211,7 @@ exports[`PluginImage should render updating with label 1`] = `
 exports[`PluginImage should render with size '2xs' 1`] = `
 <div>
   <div
-    class="PluginImage__PluginImageWrapper-sc-10kztrf-0 DHVOm bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+    class="PluginImage__PluginImageWrapper-sc-10kztrf-0 gnJfJZ bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
     data-testid="PluginImage"
   >
     <svg>
@@ -224,7 +224,7 @@ exports[`PluginImage should render with size '2xs' 1`] = `
 exports[`PluginImage should render with size '3xs' 1`] = `
 <div>
   <div
-    class="PluginImage__PluginImageWrapper-sc-10kztrf-0 kHIAge bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+    class="PluginImage__PluginImageWrapper-sc-10kztrf-0 cKUSGF bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
     data-testid="PluginImage"
   >
     <svg>
@@ -237,7 +237,7 @@ exports[`PluginImage should render with size '3xs' 1`] = `
 exports[`PluginImage should render with size 'lg' 1`] = `
 <div>
   <div
-    class="PluginImage__PluginImageWrapper-sc-10kztrf-0 fBreXf bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+    class="PluginImage__PluginImageWrapper-sc-10kztrf-0 cvQNdU bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
     data-testid="PluginImage"
   >
     <svg>
@@ -250,7 +250,7 @@ exports[`PluginImage should render with size 'lg' 1`] = `
 exports[`PluginImage should render with size 'md' 1`] = `
 <div>
   <div
-    class="PluginImage__PluginImageWrapper-sc-10kztrf-0 fyVFIH bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+    class="PluginImage__PluginImageWrapper-sc-10kztrf-0 cWrKPM bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
     data-testid="PluginImage"
   >
     <svg>
@@ -263,7 +263,7 @@ exports[`PluginImage should render with size 'md' 1`] = `
 exports[`PluginImage should render with size 'sm' 1`] = `
 <div>
   <div
-    class="PluginImage__PluginImageWrapper-sc-10kztrf-0 bdbYlY bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+    class="PluginImage__PluginImageWrapper-sc-10kztrf-0 TuOfP bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
     data-testid="PluginImage"
   >
     <svg>
@@ -276,7 +276,7 @@ exports[`PluginImage should render with size 'sm' 1`] = `
 exports[`PluginImage should render with size 'xs' 1`] = `
 <div>
   <div
-    class="PluginImage__PluginImageWrapper-sc-10kztrf-0 bLfBKU bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+    class="PluginImage__PluginImageWrapper-sc-10kztrf-0 bpkNBH bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
     data-testid="PluginImage"
   >
     <svg>
@@ -289,7 +289,7 @@ exports[`PluginImage should render with size 'xs' 1`] = `
 exports[`PluginImage should show placeholder as fallback 1`] = `
 <div>
   <div
-    class="PluginImage__PluginImageWrapper-sc-10kztrf-0 fyVFIH bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+    class="PluginImage__PluginImageWrapper-sc-10kztrf-0 cWrKPM bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
     data-testid="PluginImage"
   >
     <svg>

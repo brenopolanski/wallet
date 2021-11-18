@@ -1,6 +1,6 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 // @README: This import is fine in tests but should be avoided in production code.
-import { ReadOnlyWallet } from "@payvo/profiles/distribution/read-only-wallet";
+import { ReadOnlyWallet } from "@payvo/sdk-profiles/distribution/read-only-wallet";
 import { translations } from "domains/transaction/i18n";
 import { createMemoryHistory } from "history";
 import nock from "nock";
@@ -172,7 +172,7 @@ describe("TransactionDetailModal", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render a vote modal", () => {
+	it.each(["unvote", "vote", "voteCombination"])("should render a %s modal", (transactionType) => {
 		jest.spyOn(env.delegates(), "map").mockImplementation((wallet, votes) =>
 			votes.map(
 				(vote: string, index: number) =>
@@ -191,40 +191,7 @@ describe("TransactionDetailModal", () => {
 					transactionItem={{
 						...TransactionFixture,
 						blockId: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
-						type: () => "vote",
-					}}
-				/>
-			</Route>,
-			{
-				history,
-				routes: [dashboardURL],
-			},
-		);
-
-		expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_VOTE_DETAIL.TITLE);
-		expect(asFragment()).toMatchSnapshot();
-	});
-
-	it("should render a unvote modal", () => {
-		jest.spyOn(env.delegates(), "map").mockImplementation((wallet, votes) =>
-			votes.map(
-				(vote: string, index: number) =>
-					// @ts-ignore
-					new ReadOnlyWallet({
-						address: vote,
-						username: `delegate-${index}`,
-					}),
-			),
-		);
-
-		const { asFragment, getByTestId } = render(
-			<Route path="/profiles/:profileId/dashboard">
-				<TransactionDetailModal
-					isOpen={true}
-					transactionItem={{
-						...TransactionFixture,
-						blockId: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
-						type: () => "unvote",
+						type: () => transactionType,
 					}}
 				/>
 			</Route>,

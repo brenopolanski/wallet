@@ -1,8 +1,8 @@
-import { PluginService } from "plugins/types";
+import { PluginServiceConfig } from "plugins/types";
 
-import { PluginController } from "./plugin-controller";
+import { IPluginController, IPluginServiceData, PluginService } from "./plugin.contracts";
 
-export class PluginServiceData {
+export class PluginServiceData implements IPluginServiceData {
 	#instance: PluginService;
 
 	constructor(instance: PluginService) {
@@ -13,19 +13,19 @@ export class PluginServiceData {
 		return this.#instance as T;
 	}
 
-	api(plugin: PluginController) {
+	api(plugin: IPluginController): Record<string, Function> {
 		return this.#instance.api(plugin);
 	}
 
-	config() {
+	config(): PluginServiceConfig {
 		return this.#instance.config();
 	}
 
-	id() {
+	id(): string {
 		return this.config().id;
 	}
 
-	accessor() {
+	accessor(): string {
 		return this.config().accessor;
 	}
 }

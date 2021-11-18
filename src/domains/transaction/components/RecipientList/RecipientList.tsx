@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { Table } from "app/components/Table";
 import { useActiveProfile } from "app/hooks";
 import React, { useCallback } from "react";

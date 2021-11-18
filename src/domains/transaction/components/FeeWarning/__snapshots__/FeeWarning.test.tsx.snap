@@ -9,7 +9,7 @@ exports[`FeeWarning should render a warning for a fee that is too HIGH 1`] = `
     data-testid="modal__overlay"
   >
     <div
-      class="Modal__ModalContainer-sc-5lu2mc-0 jJkazl"
+      class="Modal__ModalContainer-sc-5lu2mc-0 llpHYe"
       tabindex="-1"
     >
       <div
@@ -20,7 +20,7 @@ exports[`FeeWarning should render a warning for a fee that is too HIGH 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -28,7 +28,7 @@ exports[`FeeWarning should render a warning for a fee that is too HIGH 1`] = `
               class="flex items-center space-x-2"
             >
               <div
-                class="sc-bdnxRM AFVmm"
+                class="sc-bdvvtL fCrhkg"
                 height="16"
                 width="16"
               >
@@ -61,13 +61,13 @@ exports[`FeeWarning should render a warning for a fee that is too HIGH 1`] = `
               You have selected a high fee. Your transaction can be confirmed with a lower fee. Do you wish to continue anyway?
             </div>
             <fieldset
-              class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
+              class="FormField__FormFieldStyled-sc-q4bblx-0 dFNJMk flex flex-col space-y-2"
             >
               <label
                 class="flex items-center space-x-3 w-max cursor-pointer"
               >
                 <input
-                  class="Checkbox-sc-1aq7nos-0 drePYo"
+                  class="Checkbox-sc-1aq7nos-0 gdmzcT"
                   color="success"
                   data-testid="FeeWarning__suppressWarning-toggle"
                   name="suppressWarning"
@@ -84,7 +84,7 @@ exports[`FeeWarning should render a warning for a fee that is too HIGH 1`] = `
               class="flex justify-end mt-8 space-x-3"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                 data-testid="FeeWarning__cancel-button"
                 type="button"
               >
@@ -95,7 +95,7 @@ exports[`FeeWarning should render a warning for a fee that is too HIGH 1`] = `
                 </div>
               </button>
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
                 data-testid="FeeWarning__continue-button"
                 type="button"
               >
@@ -121,7 +121,7 @@ exports[`FeeWarning should render a warning for a fee that is too LOW 1`] = `
     data-testid="modal__overlay"
   >
     <div
-      class="Modal__ModalContainer-sc-5lu2mc-0 jJkazl"
+      class="Modal__ModalContainer-sc-5lu2mc-0 llpHYe"
       tabindex="-1"
     >
       <div
@@ -132,7 +132,7 @@ exports[`FeeWarning should render a warning for a fee that is too LOW 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -140,7 +140,7 @@ exports[`FeeWarning should render a warning for a fee that is too LOW 1`] = `
               class="flex items-center space-x-2"
             >
               <div
-                class="sc-bdnxRM AFVmm"
+                class="sc-bdvvtL fCrhkg"
                 height="16"
                 width="16"
               >
@@ -173,13 +173,13 @@ exports[`FeeWarning should render a warning for a fee that is too LOW 1`] = `
               You have selected a low fee. Your transaction may never be confirmed. Do you wish to continue anyway?
             </div>
             <fieldset
-              class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
+              class="FormField__FormFieldStyled-sc-q4bblx-0 dFNJMk flex flex-col space-y-2"
             >
               <label
                 class="flex items-center space-x-3 w-max cursor-pointer"
               >
                 <input
-                  class="Checkbox-sc-1aq7nos-0 drePYo"
+                  class="Checkbox-sc-1aq7nos-0 gdmzcT"
                   color="success"
                   data-testid="FeeWarning__suppressWarning-toggle"
                   name="suppressWarning"
@@ -196,7 +196,7 @@ exports[`FeeWarning should render a warning for a fee that is too LOW 1`] = `
               class="flex justify-end mt-8 space-x-3"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
                 data-testid="FeeWarning__cancel-button"
                 type="button"
               >
@@ -207,7 +207,7 @@ exports[`FeeWarning should render a warning for a fee that is too LOW 1`] = `
                 </div>
               </button>
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
                 data-testid="FeeWarning__continue-button"
                 type="button"
               >

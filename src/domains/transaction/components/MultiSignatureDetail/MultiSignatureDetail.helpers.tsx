@@ -1,4 +1,4 @@
-import { DTO } from "@payvo/profiles";
+import { DTO } from "@payvo/sdk-profiles";
 import { Button } from "app/components/Button";
 import React from "react";
 import { useTranslation } from "react-i18next";

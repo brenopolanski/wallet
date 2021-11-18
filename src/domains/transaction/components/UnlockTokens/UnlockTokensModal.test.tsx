@@ -1,8 +1,8 @@
-import { BigNumber } from "@payvo/helpers";
-import { DateTime } from "@payvo/intl";
-import { Contracts } from "@payvo/profiles";
 import { Signatories } from "@payvo/sdk";
+import { BigNumber } from "@payvo/sdk-helpers";
+import { DateTime } from "@payvo/sdk-intl";
 import { LSK } from "@payvo/sdk-lsk";
+import { Contracts } from "@payvo/sdk-profiles";
 import { fireEvent, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { LedgerProvider } from "app/contexts";

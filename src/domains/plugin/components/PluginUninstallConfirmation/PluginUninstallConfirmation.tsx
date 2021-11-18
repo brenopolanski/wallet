@@ -1,18 +1,18 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { Button } from "app/components/Button";
 import { Icon } from "app/components/Icon";
 import { Image } from "app/components/Image";
 import { Modal } from "app/components/Modal";
 import { useEnvironmentContext } from "app/contexts";
 import { usePluginManagerContext } from "plugins/context/PluginManagerProvider";
-import { PluginController } from "plugins/core/plugin-controller";
+import { IPluginController } from "plugins/core";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
 interface Properties {
 	isOpen: boolean;
 	profile: Contracts.IProfile;
-	plugin: PluginController;
+	plugin: IPluginController;
 	onClose?: () => void;
 	onDelete?: () => void;
 }

@@ -1,9 +1,10 @@
-import { Contracts, DTO, Profile } from "@payvo/profiles";
-import { ReadOnlyWallet } from "@payvo/profiles/distribution/read-only-wallet";
-import { Wallet } from "@payvo/profiles/distribution/wallet";
 import { Coins, Networks } from "@payvo/sdk";
+import { Contracts, DTO, Profile } from "@payvo/sdk-profiles";
+import { ReadOnlyWallet } from "@payvo/sdk-profiles/distribution/read-only-wallet";
+import { Wallet } from "@payvo/sdk-profiles/distribution/wallet";
 import { AssertionError } from "assert";
 import { PluginController } from "plugins";
+import { IPluginController } from "plugins/core";
 
 export function assertProfile(profile?: Contracts.IProfile): asserts profile is Profile {
 	if (!(profile instanceof Profile)) {
@@ -90,7 +91,7 @@ export function assertNumber(value: unknown): asserts value is NonNullable<numbe
 }
 
 export function assertPluginController(
-	pluginController?: PluginController,
+	pluginController?: IPluginController,
 ): asserts pluginController is PluginController {
 	if (!(pluginController instanceof PluginController)) {
 		throw new AssertionError({

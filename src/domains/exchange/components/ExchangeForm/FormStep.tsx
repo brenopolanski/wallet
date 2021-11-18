@@ -1,6 +1,6 @@
-import { startCase } from "@arkecosystem/utils";
-import { Contracts } from "@payvo/profiles";
 import { Networks } from "@payvo/sdk";
+import { startCase } from "@payvo/sdk-helpers";
+import { Contracts } from "@payvo/sdk-profiles";
 import { Alert } from "app/components/Alert";
 import { FormField, FormLabel } from "app/components/Form";
 import { InputCurrency, InputDefault } from "app/components/Input";

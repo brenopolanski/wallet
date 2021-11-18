@@ -1,17 +1,17 @@
-import { PluginService } from "plugins";
-import { PluginServiceIdentifier } from "plugins/types";
+import { PluginService } from "plugins/core";
+import { PluginServiceConfig, PluginServiceIdentifier } from "plugins/types";
 
 import { useSignMessageModal } from "./use-sign-message-modal";
 
 export class MessagePluginService implements PluginService {
-	config() {
+	config(): PluginServiceConfig {
 		return {
 			accessor: "message",
 			id: PluginServiceIdentifier.Message,
 		};
 	}
 
-	api() {
+	api(): Record<string, Function> {
 		return {
 			useSignMessageModal,
 		};

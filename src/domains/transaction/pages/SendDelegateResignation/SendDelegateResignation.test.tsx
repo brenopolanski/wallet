@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { translations as transactionTranslations } from "domains/transaction/i18n";
@@ -17,7 +17,7 @@ import {
 	waitFor,
 } from "utils/testing-library";
 
-import { SendDelegateResignation } from ".";
+import { SendDelegateResignation } from "./SendDelegateResignation";
 
 let wallet: Contracts.IReadWriteWallet;
 let profile: Contracts.IProfile;

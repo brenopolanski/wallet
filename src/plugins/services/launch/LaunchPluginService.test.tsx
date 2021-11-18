@@ -1,5 +1,5 @@
-import { Contracts } from "@payvo/profiles";
-import { PluginController, PluginManager } from "plugins/core";
+import { Contracts } from "@payvo/sdk-profiles";
+import { IPluginController, PluginController, PluginManager } from "plugins/core";
 import { PluginAPI } from "plugins/types";
 import React from "react";
 import { env, render } from "utils/testing-library";
@@ -17,7 +17,7 @@ const fixture = (api: PluginAPI) => api.launch().render(<h1>My Plugin</h1>);
 describe("LaunchPluginService", () => {
 	let profile: Contracts.IProfile;
 	let manager: PluginManager;
-	let ctrl: PluginController;
+	let ctrl: IPluginController;
 
 	beforeEach(() => {
 		profile = env.profiles().first();

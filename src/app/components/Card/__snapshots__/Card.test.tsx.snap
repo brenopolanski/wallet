@@ -4,7 +4,7 @@ exports[`Card should handle click 1`] = `
 <DocumentFragment>
   <div>
     <button
-      class="Cardstyles__CardButton-sc-ajtauu-0 jtRXYU"
+      class="Cardstyles__CardButton-sc-ajtauu-0 dZiOWL"
       data-testid="Card"
       type="button"
     >
@@ -21,7 +21,7 @@ exports[`Card should render 1`] = `
 <DocumentFragment>
   <div>
     <button
-      class="Cardstyles__CardButton-sc-ajtauu-0 DdwDL"
+      class="Cardstyles__CardButton-sc-ajtauu-0 gawQiQ"
       data-testid="Card"
       tabindex="-1"
       type="button"
@@ -38,7 +38,7 @@ exports[`Card should selected 1`] = `
 <DocumentFragment>
   <div>
     <button
-      class="Cardstyles__CardButton-sc-ajtauu-0 hTrnWc"
+      class="Cardstyles__CardButton-sc-ajtauu-0 gCeoSb"
       data-testid="Card"
       tabindex="-1"
       type="button"

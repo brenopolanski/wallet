@@ -1,5 +1,5 @@
-import { uniq } from "@arkecosystem/utils";
-import { Contracts } from "@payvo/profiles";
+import { uniq } from "@payvo/sdk-helpers";
+import { Contracts } from "@payvo/sdk-profiles";
 import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 

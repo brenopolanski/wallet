@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Storage } from "@payvo/profiles";
+import { Storage } from "@payvo/sdk-profiles";
 
 export class StubStorage implements Storage {
 	private storage: any;

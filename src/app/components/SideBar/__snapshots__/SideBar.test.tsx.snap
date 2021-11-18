@@ -3,7 +3,7 @@
 exports[`SideBar should render 1`] = `
 <DocumentFragment>
   <div
-    class="SideBar__SideBarContainer-sc-1wg5vvh-0 dinsck"
+    class="SideBar__SideBarContainer-sc-1wg5vvh-0 iuzvYz"
   >
     <ul>
       <div
@@ -20,7 +20,7 @@ exports[`SideBar should render 1`] = `
             class="mr-3"
           >
             <div
-              class="sc-bdnxRM NjstW"
+              class="sc-bdvvtL qGXhc"
               height="20"
               width="20"
             >
@@ -47,7 +47,7 @@ exports[`SideBar should render 1`] = `
             class="mr-3 text-theme-primary-300 dark:text-theme-secondary-600"
           >
             <div
-              class="sc-bdnxRM NjstW"
+              class="sc-bdvvtL qGXhc"
               height="20"
               width="20"
             >
@@ -74,7 +74,7 @@ exports[`SideBar should render 1`] = `
             class="mr-3 text-theme-primary-300 dark:text-theme-secondary-600"
           >
             <div
-              class="sc-bdnxRM NjstW"
+              class="sc-bdvvtL qGXhc"
               height="20"
               width="20"
             >

@@ -3,7 +3,7 @@
 exports[`Circle should render 1`] = `
 <div>
   <div
-    class="Circle__CircleWrapper-sc-d5u41q-0 egCVFn ring-theme-background"
+    class="Circle__CircleWrapper-sc-d5u41q-0 ldRxOA ring-theme-background"
   />
 </div>
 `;
@@ -11,7 +11,7 @@ exports[`Circle should render 1`] = `
 exports[`Circle should render as avatar 1`] = `
 <div>
   <div
-    class="Circle__CircleWrapper-sc-d5u41q-0 ipoTce ring-theme-background"
+    class="Circle__CircleWrapper-sc-d5u41q-0 kpHBSF ring-theme-background"
   />
 </div>
 `;
@@ -19,7 +19,7 @@ exports[`Circle should render as avatar 1`] = `
 exports[`Circle should render as blank 1`] = `
 <div>
   <div
-    class="Circle__CircleWrapper-sc-d5u41q-0 egCVFn ring-theme-background"
+    class="Circle__CircleWrapper-sc-d5u41q-0 ldRxOA ring-theme-background"
   />
 </div>
 `;
@@ -27,7 +27,7 @@ exports[`Circle should render as blank 1`] = `
 exports[`Circle should render extra-large 1`] = `
 <div>
   <div
-    class="Circle__CircleWrapper-sc-d5u41q-0 jgWpkc ring-theme-background"
+    class="Circle__CircleWrapper-sc-d5u41q-0 eEsHL ring-theme-background"
   />
 </div>
 `;
@@ -35,7 +35,7 @@ exports[`Circle should render extra-large 1`] = `
 exports[`Circle should render large 1`] = `
 <div>
   <div
-    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb ring-theme-background"
+    class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ ring-theme-background"
   />
 </div>
 `;
@@ -43,7 +43,7 @@ exports[`Circle should render large 1`] = `
 exports[`Circle should render small 1`] = `
 <div>
   <div
-    class="Circle__CircleWrapper-sc-d5u41q-0 hvLSoA ring-theme-background"
+    class="Circle__CircleWrapper-sc-d5u41q-0 jQgnJf ring-theme-background"
   />
 </div>
 `;
@@ -51,7 +51,7 @@ exports[`Circle should render small 1`] = `
 exports[`Circle should render with content 1`] = `
 <div>
   <div
-    class="Circle__CircleWrapper-sc-d5u41q-0 hvLSoA ring-theme-background"
+    class="Circle__CircleWrapper-sc-d5u41q-0 jQgnJf ring-theme-background"
   >
     <div
       data-testid="circle__content"
@@ -63,7 +63,7 @@ exports[`Circle should render with content 1`] = `
 exports[`Circle should render with no shadow 1`] = `
 <div>
   <div
-    class="Circle__CircleWrapper-sc-d5u41q-0 cPUFYC ring-theme-background"
+    class="Circle__CircleWrapper-sc-d5u41q-0 bcplCx ring-theme-background"
   />
 </div>
 `;

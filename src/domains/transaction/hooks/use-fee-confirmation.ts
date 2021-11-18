@@ -1,4 +1,4 @@
-import { Contracts as ProfileContracts } from "@payvo/profiles";
+import { Contracts as ProfileContracts } from "@payvo/sdk-profiles";
 import { useEnvironmentContext } from "app/contexts";
 import { useActiveProfile } from "app/hooks";
 import { FeeWarningVariant } from "domains/transaction/components/FeeWarning";

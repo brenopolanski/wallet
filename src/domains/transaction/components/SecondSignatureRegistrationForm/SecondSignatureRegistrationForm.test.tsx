@@ -1,6 +1,6 @@
-import { BIP39 } from "@payvo/cryptography";
-import { Contracts as ProfilesContracts } from "@payvo/profiles";
 import { Contracts } from "@payvo/sdk";
+import { BIP39 } from "@payvo/sdk-cryptography";
+import { Contracts as ProfilesContracts } from "@payvo/sdk-profiles";
 import { within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { toasts } from "app/services";

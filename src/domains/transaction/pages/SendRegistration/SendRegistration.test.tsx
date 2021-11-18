@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Observer } from "@ledgerhq/hw-transport";
-import { BIP39 } from "@payvo/cryptography";
-import { Contracts } from "@payvo/profiles";
 import { Signatories } from "@payvo/sdk";
+import { BIP39 } from "@payvo/sdk-cryptography";
+import { Contracts } from "@payvo/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { LedgerProvider, minVersionList } from "app/contexts";
 import { translations as transactionTranslations } from "domains/transaction/i18n";
@@ -30,7 +30,7 @@ import {
 	within,
 } from "utils/testing-library";
 
-import { SendRegistration } from ".";
+import { SendRegistration } from "./SendRegistration";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
@@ -47,7 +47,7 @@ const renderPage = async (wallet: Contracts.IReadWriteWallet, type = "delegateRe
 
 	history.push(registrationURL);
 
-	const rendered = render(
+	const utils = render(
 		<Route path={path}>
 			<LedgerProvider transport={ledgerTransport}>
 				<SendRegistration />
@@ -59,10 +59,10 @@ const renderPage = async (wallet: Contracts.IReadWriteWallet, type = "delegateRe
 		},
 	);
 
-	await rendered.findByTestId("Registration__form");
+	await utils.findByTestId("Registration__form");
 
 	return {
-		...rendered,
+		...utils,
 		history,
 	};
 };

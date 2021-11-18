@@ -1,5 +1,5 @@
-import { UUID } from "@payvo/cryptography";
-import { Contracts } from "@payvo/profiles";
+import { UUID } from "@payvo/sdk-cryptography";
+import { Contracts } from "@payvo/sdk-profiles";
 import { httpClient } from "app/services";
 import { OrderStatusResponse } from "domains/exchange/contracts";
 import { ExchangeService } from "domains/exchange/services/exchange.service";

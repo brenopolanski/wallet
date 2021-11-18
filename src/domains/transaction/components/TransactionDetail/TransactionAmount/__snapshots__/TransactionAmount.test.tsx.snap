@@ -3,7 +3,7 @@
 exports[`TransactionAmount should render 1`] = `
 <div>
   <div
-    class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
+    class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 hFlzIg no-ligatures"
     data-testid="TransactionAmount"
   >
     <div
@@ -18,7 +18,7 @@ exports[`TransactionAmount should render 1`] = `
         class="flex items-center font-semibold"
       >
         <div
-          class="Label-sc-4akkzw-0 bdvTBm"
+          class="Label-sc-4akkzw-0 hhvRsd"
           color="success"
         >
           <div
@@ -35,10 +35,10 @@ exports[`TransactionAmount should render 1`] = `
       </div>
     </div>
     <div
-      class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-success-300 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+      class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-theme-success-300 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
     >
       <div
-        class="sc-bdnxRM NjstW"
+        class="sc-bdvvtL qGXhc"
         height="20"
         width="20"
       >
@@ -54,7 +54,7 @@ exports[`TransactionAmount should render 1`] = `
 exports[`TransactionAmount should render currency amount 1`] = `
 <div>
   <div
-    class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
+    class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 hFlzIg no-ligatures"
     data-testid="TransactionAmount"
   >
     <div
@@ -69,7 +69,7 @@ exports[`TransactionAmount should render currency amount 1`] = `
         class="flex items-center font-semibold"
       >
         <div
-          class="Label-sc-4akkzw-0 bdvTBm"
+          class="Label-sc-4akkzw-0 hhvRsd"
           color="success"
         >
           <div
@@ -86,10 +86,10 @@ exports[`TransactionAmount should render currency amount 1`] = `
       </div>
     </div>
     <div
-      class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-success-300 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+      class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-theme-success-300 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
     >
       <div
-        class="sc-bdnxRM NjstW"
+        class="sc-bdvvtL qGXhc"
         height="20"
         width="20"
       >
@@ -105,7 +105,7 @@ exports[`TransactionAmount should render currency amount 1`] = `
 exports[`TransactionAmount should render label for multiple recipients 1`] = `
 <div>
   <div
-    class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
+    class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 hFlzIg no-ligatures"
     data-testid="TransactionAmount"
   >
     <div
@@ -120,7 +120,7 @@ exports[`TransactionAmount should render label for multiple recipients 1`] = `
         class="flex items-center font-semibold"
       >
         <div
-          class="Label-sc-4akkzw-0 bdvTBm"
+          class="Label-sc-4akkzw-0 hhvRsd"
           color="success"
         >
           <div
@@ -137,10 +137,10 @@ exports[`TransactionAmount should render label for multiple recipients 1`] = `
       </div>
     </div>
     <div
-      class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-success-300 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+      class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-theme-success-300 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
     >
       <div
-        class="sc-bdnxRM NjstW"
+        class="sc-bdvvtL qGXhc"
         height="20"
         width="20"
       >
@@ -156,7 +156,7 @@ exports[`TransactionAmount should render label for multiple recipients 1`] = `
 exports[`TransactionAmount should render label for multiple recipients 2`] = `
 <div>
   <div
-    class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
+    class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 hFlzIg no-ligatures"
     data-testid="TransactionAmount"
   >
     <div
@@ -171,7 +171,7 @@ exports[`TransactionAmount should render label for multiple recipients 2`] = `
         class="flex items-center font-semibold"
       >
         <div
-          class="Label-sc-4akkzw-0 bdvTBm"
+          class="Label-sc-4akkzw-0 hhvRsd"
           color="success"
         >
           <div
@@ -188,10 +188,10 @@ exports[`TransactionAmount should render label for multiple recipients 2`] = `
       </div>
     </div>
     <div
-      class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-success-300 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+      class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-theme-success-300 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
     >
       <div
-        class="sc-bdnxRM NjstW"
+        class="sc-bdvvtL qGXhc"
         height="20"
         width="20"
       >

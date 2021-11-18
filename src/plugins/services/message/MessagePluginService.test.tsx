@@ -1,6 +1,6 @@
-import { Profile, ReadWriteWallet } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { LedgerProvider } from "app/contexts";
-import { PluginController, PluginManager } from "plugins/core";
+import { IPluginController, PluginController, PluginManager } from "plugins/core";
 import { PluginAPI } from "plugins/types";
 import React from "react";
 import { Route } from "react-router-dom";
@@ -25,10 +25,10 @@ const pluginDescription = {
 };
 
 describe("MessagePluginService", () => {
-	let profile: Profile;
-	let wallet: ReadWriteWallet;
+	let profile: Contracts.IProfile;
+	let wallet: Contracts.IReadWriteWallet;
 	let manager: PluginManager;
-	let ctrl: PluginController;
+	let ctrl: IPluginController;
 
 	beforeEach(() => {
 		profile = env.profiles().findById(getDefaultProfileId());

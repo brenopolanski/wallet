@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { useEnvironmentContext } from "app/contexts/Environment";
 import { useMemo } from "react";
 import { useHistory, useParams } from "react-router-dom";
@@ -25,4 +25,21 @@ export const useActiveWallet = () => {
 	const { walletId } = useParams<{ walletId: string }>();
 
 	return useMemo(() => profile.wallets().findById(walletId), [profile, walletId]);
+};
+
+export const useActiveWalletWhenNeeded = (isRequired: boolean) => {
+	const profile = useActiveProfile();
+	const { walletId } = useParams<{ walletId: string }>();
+
+	return useMemo(() => {
+		try {
+			return profile.wallets().findById(walletId);
+		} catch (error) {
+			if (isRequired) {
+				throw error;
+			}
+
+			return undefined;
+		}
+	}, [isRequired, profile, walletId]);
 };

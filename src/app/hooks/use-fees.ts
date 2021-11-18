@@ -1,5 +1,5 @@
-import { Contracts } from "@payvo/profiles";
 import { Coins, Services } from "@payvo/sdk";
+import { Contracts } from "@payvo/sdk-profiles";
 import { useEnvironmentContext } from "app/contexts";
 import { formatMultiSignatureInputData } from "domains/transaction/hooks/use-multisignature-registration";
 import { useCallback } from "react";

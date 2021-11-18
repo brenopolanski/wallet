@@ -88,7 +88,8 @@ export const FormStep = ({ profile, wallet }: FormStepProperties) => {
 								content: (
 									<span
 										className={cn("pointer-events-none font-semibold text-sm", {
-											"text-theme-secondary-500 dark:text-theme-secondary-700": !errors?.minParticipants,
+											"text-theme-secondary-500 dark:text-theme-secondary-700":
+												!errors?.minParticipants,
 										})}
 									>
 										{t("TRANSACTION.MULTISIGNATURE.OUT_OF_LENGTH", {

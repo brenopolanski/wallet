@@ -7,7 +7,8 @@ import {
 } from "domains/transaction/pages/SendRegistration/SendRegistration.models";
 import React from "react";
 
-import { FormStep, ReviewStep } from ".";
+import { FormStep } from "./FormStep";
+import { ReviewStep } from "./ReviewStep";
 
 const StepsComponent = ({ activeTab, wallet, profile }: SendRegistrationComponent) => (
 	<Tabs activeId={activeTab}>

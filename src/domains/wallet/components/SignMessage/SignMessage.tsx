@@ -1,5 +1,5 @@
-import { Contracts as ProfileContracts } from "@payvo/profiles";
 import { Services } from "@payvo/sdk";
+import { Contracts as ProfileContracts } from "@payvo/sdk-profiles";
 import { OriginalButton as Button } from "app/components/Button/OriginalButton";
 import { Clipboard } from "app/components/Clipboard";
 import { Form } from "app/components/Form";
@@ -63,10 +63,10 @@ export const SignMessage = ({
 
 	const wallet = useMemo(() => profile.wallets().findById(walletId), [profile, walletId]);
 
-	const { abortConnectionRetry, connect, isConnected, hasDeviceAvailable, transport } = useLedgerContext();
+	const { abortConnectionRetry, connect, isConnected, hasDeviceAvailable } = useLedgerContext();
 
 	const abortReference = useRef(new AbortController());
-	const { sign } = useMessageSigner(transport);
+	const { sign } = useMessageSigner();
 
 	const isLedger = wallet.isLedger();
 
