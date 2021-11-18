@@ -8,11 +8,15 @@ import { useGraphTooltip, useGraphWidth } from "./Graphs.shared";
 
 describe("Graphs shared hooks", () => {
 	describe("useGraphWidth", () => {
-		it("should return reference and width of the element where it is applied", () => {
+		it("should return reference and width of the svg element where it is applied", () => {
 			const Component = () => {
-				const [reference, width] = useGraphWidth<HTMLDivElement>();
+				const [reference, width] = useGraphWidth();
 
-				return <div ref={reference}>{width}</div>;
+				return (
+					<svg ref={reference}>
+						<text>{width}</text>
+					</svg>
+				);
 			};
 
 			const { asFragment } = render(<Component />);
@@ -22,6 +26,14 @@ describe("Graphs shared hooks", () => {
 			});
 
 			expect(asFragment()).toMatchSnapshot();
+		});
+
+		it("should have 0 as default width when reference is not applied on any element", () => {
+			const { result } = renderHook(() => useGraphWidth());
+
+			const [, width] = result.current;
+
+			expect(width).toBe(0);
 		});
 	});
 

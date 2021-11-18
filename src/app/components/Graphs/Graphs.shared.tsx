@@ -6,14 +6,14 @@ const GRAPH_COLORS_DARK = ["success-600", "warning-600", "info-600", "danger-400
 const GRAPH_COLOR_EMPTY = "secondary-300";
 const GRAPH_COLOR_EMPTY_DARK = "secondary-800";
 
-function useGraphWidth<TElement>(): [MutableRefObject<TElement | null>, number] {
-	const reference = useRef<TElement | null>(null);
+const useGraphWidth = (): [MutableRefObject<SVGSVGElement | null>, number] => {
+	const reference = useRef<SVGSVGElement | null>(null);
 
 	const [value, setValue] = useState(0);
 
 	useEffect(() => {
 		const setWidth = () => {
-			setValue((reference.current as HTMLElement | null)?.clientWidth ?? 0);
+			setValue(reference.current?.clientWidth ?? 0);
 		};
 
 		setWidth();
@@ -26,11 +26,13 @@ function useGraphWidth<TElement>(): [MutableRefObject<TElement | null>, number] 
 	});
 
 	return [reference, value];
-}
+};
 
 interface UseGraphTooltipResult<TDataPoint> {
 	Tooltip: React.VFC;
-	getMouseEventProperties: (dataPoint: TDataPoint) => {
+	getMouseEventProperties: (
+		dataPoint: TDataPoint,
+	) => {
 		onMouseMove: (event: MouseEvent<SVGElement>) => void;
 		onMouseOut: (event: MouseEvent<SVGElement>) => void;
 	};

@@ -7,3 +7,13 @@ exports[`Graphs shared hooks useGraphWidth should return reference and width of 
   </div>
 </DocumentFragment>
 `;
+
+exports[`Graphs shared hooks useGraphWidth should return reference and width of the svg element where it is applied 1`] = `
+<DocumentFragment>
+  <svg>
+    <text>
+      0
+    </text>
+  </svg>
+</DocumentFragment>
+`;

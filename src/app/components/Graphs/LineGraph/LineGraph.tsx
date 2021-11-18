@@ -7,7 +7,7 @@ import { LineGraphConfig, LineGraphProperties } from "./LineGraph.contracts";
 import { useLineGraph } from "./LineGraph.helpers";
 
 export const LineGraph: React.VFC<LineGraphProperties> = ({ data, renderLegend, renderTooltip, renderAsEmpty }) => {
-	const [reference, graphWidth] = useGraphWidth<SVGSVGElement>();
+	const [reference, graphWidth] = useGraphWidth();
 
 	const { Tooltip, getMouseEventProperties } = useGraphTooltip(renderTooltip, "line");
 
