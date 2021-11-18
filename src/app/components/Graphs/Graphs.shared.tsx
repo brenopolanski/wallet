@@ -45,24 +45,29 @@ function useGraphTooltip<TDataPoint>(
 
 	const [tooltipDataPoint, setTooltipDataPoint] = useState<TDataPoint | undefined>(undefined);
 
-	const transformTooltip = useCallback((event: MouseEvent<SVGElement>) => {
-		const tooltipElement = tooltipReference.current as HTMLDivElement;
-		const targetRect = (event.target as SVGElement).getBoundingClientRect();
+	const transformTooltip = useCallback(
+		(event: MouseEvent<SVGElement>) => {
+			const tooltipElement = tooltipReference.current as HTMLDivElement;
+			const targetRect = (event.target as SVGElement).getBoundingClientRect();
 
-		if (type === "line") {
-			tooltipElement.style.left = `${event.pageX - Math.floor(tooltipElement.clientWidth / 2)}px`;
-			tooltipElement.style.top = `${targetRect.top + document.documentElement.scrollTop - 48}px`;
-		}
+			if (type === "line") {
+				tooltipElement.style.left = `${event.pageX - Math.floor(tooltipElement.clientWidth / 2)}px`;
+				tooltipElement.style.top = `${targetRect.top + document.documentElement.scrollTop - 48}px`;
+			}
 
-		if (type === "donut") {
-			tooltipElement.style.left = `${event.pageX - targetRect.left - 32}px`;
-			tooltipElement.style.top = `${event.pageY - targetRect.top - document.documentElement.scrollTop - 24}px`;
-		}
+			if (type === "donut") {
+				tooltipElement.style.left = `${event.pageX - targetRect.left - 32}px`;
+				tooltipElement.style.top = `${
+					event.pageY - targetRect.top - document.documentElement.scrollTop - 24
+				}px`;
+			}
 
-		tooltipElement.classList.remove("hidden");
-		tooltipElement.classList.remove("opacity-0");
-		tooltipElement.classList.add("opacity-100");
-	}, [type]);
+			tooltipElement.classList.remove("hidden");
+			tooltipElement.classList.remove("opacity-0");
+			tooltipElement.classList.add("opacity-100");
+		},
+		[type],
+	);
 
 	const getMouseEventProperties = (dataPoint: TDataPoint) => ({
 		onMouseEnter: (event: MouseEvent<SVGElement>) => {
