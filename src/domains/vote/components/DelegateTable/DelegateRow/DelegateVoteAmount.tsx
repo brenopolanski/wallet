@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { Divider } from "app/components/Divider";
 import { InputCurrency } from "app/components/Input";
 import { TableCell } from "app/components/Table";

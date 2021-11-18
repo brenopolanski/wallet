@@ -1,6 +1,6 @@
-import { BigNumber } from "@payvo/helpers";
-import { DateTime } from "@payvo/intl";
-import { Contracts } from "@payvo/profiles";
+import { BigNumber } from "@payvo/sdk-helpers";
+import { DateTime } from "@payvo/sdk-intl";
+import { Contracts } from "@payvo/sdk-profiles";
 import { act, renderHook } from "@testing-library/react-hooks";
 import { toasts } from "app/services";
 import { UnlockTokensFetchError } from "domains/transaction/components/UnlockTokens/blocks/UnlockTokensFetchError";

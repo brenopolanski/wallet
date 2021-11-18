@@ -1,4 +1,4 @@
-import { Contracts, DTO } from "@payvo/profiles";
+import { Contracts, DTO } from "@payvo/sdk-profiles";
 import { useWalletAlias } from "app/hooks/use-wallet-alias";
 import React, { useMemo } from "react";
 

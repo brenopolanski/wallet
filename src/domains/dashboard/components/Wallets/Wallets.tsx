@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { DropdownOption } from "app/components/Dropdown";
 import { Section } from "app/components/Layout";
 import { useEnvironmentContext } from "app/contexts";

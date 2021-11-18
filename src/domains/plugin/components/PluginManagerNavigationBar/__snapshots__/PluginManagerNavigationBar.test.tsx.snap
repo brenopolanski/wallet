@@ -3,7 +3,7 @@
 exports[`PluginManagerNavigationBar should render 1`] = `
 <DocumentFragment>
   <nav
-    class="PluginManagerNavigationBar__NavWrapper-sc-1dpfsae-0 eAgndL sticky my-4 dark:bg-black top-21 bg-theme-secondary-100"
+    class="PluginManagerNavigationBar__NavWrapper-sc-1dpfsae-0 frnXMQ sticky my-4 dark:bg-black top-21 bg-theme-secondary-100"
     data-testid="PluginManagerNavigationBar"
   >
     <div
@@ -13,7 +13,7 @@ exports[`PluginManagerNavigationBar should render 1`] = `
         class="-mx-6 w-full"
       >
         <div
-          class="Tabs__TabList-sc-1t8sbwb-1 bVYhpi w-full h-18"
+          class="Tabs__TabList-sc-1t8sbwb-1 kukgZl w-full h-18"
         >
           <button
             aria-selected="true"
@@ -103,11 +103,11 @@ exports[`PluginManagerNavigationBar should render 1`] = `
               class="group"
             >
               <button
-                class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus"
+                class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus"
                 data-testid="LayoutControls__list--icon"
               >
                 <div
-                  class="sc-bdnxRM NjstW"
+                  class="sc-bdvvtL qGXhc"
                   height="20"
                   width="20"
                 >
@@ -125,11 +125,11 @@ exports[`PluginManagerNavigationBar should render 1`] = `
               class="group"
             >
               <button
-                class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus active"
+                class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus active"
                 data-testid="LayoutControls__grid--icon"
               >
                 <div
-                  class="sc-bdnxRM NjstW"
+                  class="sc-bdvvtL qGXhc"
                   height="20"
                   width="20"
                 >
@@ -155,7 +155,7 @@ exports[`PluginManagerNavigationBar should update selected 1`] = `
     latest
   </span>
   <nav
-    class="PluginManagerNavigationBar__NavWrapper-sc-1dpfsae-0 eAgndL sticky my-4 dark:bg-black top-21 bg-theme-secondary-100"
+    class="PluginManagerNavigationBar__NavWrapper-sc-1dpfsae-0 frnXMQ sticky my-4 dark:bg-black top-21 bg-theme-secondary-100"
     data-testid="PluginManagerNavigationBar"
   >
     <div
@@ -165,7 +165,7 @@ exports[`PluginManagerNavigationBar should update selected 1`] = `
         class="-mx-6 w-full"
       >
         <div
-          class="Tabs__TabList-sc-1t8sbwb-1 bVYhpi w-full h-18"
+          class="Tabs__TabList-sc-1t8sbwb-1 kukgZl w-full h-18"
         >
           <button
             aria-selected="true"
@@ -255,11 +255,11 @@ exports[`PluginManagerNavigationBar should update selected 1`] = `
               class="group"
             >
               <button
-                class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus"
+                class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus"
                 data-testid="LayoutControls__list--icon"
               >
                 <div
-                  class="sc-bdnxRM NjstW"
+                  class="sc-bdvvtL qGXhc"
                   height="20"
                   width="20"
                 >
@@ -277,11 +277,11 @@ exports[`PluginManagerNavigationBar should update selected 1`] = `
               class="group"
             >
               <button
-                class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus active"
+                class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus active"
                 data-testid="LayoutControls__grid--icon"
               >
                 <div
-                  class="sc-bdnxRM NjstW"
+                  class="sc-bdvvtL qGXhc"
                   height="20"
                   width="20"
                 >

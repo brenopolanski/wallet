@@ -3,7 +3,7 @@
 exports[`Link should open an external link 1`] = `
 <DocumentFragment>
   <a
-    class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+    class="Link__AnchorStyled-sc-ec014t-0 eeKUfa group ring-focus"
     data-ring-focus-margin="-m-1"
     data-testid="Link"
     href="#"
@@ -11,10 +11,10 @@ exports[`Link should open an external link 1`] = `
     to="https://payvo.com/"
   >
     <span
-      class="Link__Content-sc-ec014t-1 hUiuRR"
+      class="Link__Content-sc-ec014t-1 fPOlTq"
     />
     <div
-      class="sc-bdnxRM AFVmm flex-shrink-0 duration-200"
+      class="sc-bdvvtL fCrhkg flex-shrink-0 duration-200"
       data-testid="Link__external"
       height="16"
       width="16"
@@ -30,13 +30,13 @@ exports[`Link should open an external link 1`] = `
 exports[`Link should render 1`] = `
 <DocumentFragment>
   <a
-    class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+    class="Link__AnchorStyled-sc-ec014t-0 eeKUfa group ring-focus"
     data-ring-focus-margin="-m-1"
     data-testid="Link"
     href="/test"
   >
     <span
-      class="Link__Content-sc-ec014t-1 hUiuRR"
+      class="Link__Content-sc-ec014t-1 fPOlTq"
     >
       Test
     </span>
@@ -47,7 +47,7 @@ exports[`Link should render 1`] = `
 exports[`Link should render external without children 1`] = `
 <DocumentFragment>
   <a
-    class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+    class="Link__AnchorStyled-sc-ec014t-0 eeKUfa group ring-focus"
     data-ring-focus-margin="-m-1"
     data-testid="Link"
     href="#"
@@ -55,10 +55,10 @@ exports[`Link should render external without children 1`] = `
     to="https://payvo.com"
   >
     <span
-      class="Link__Content-sc-ec014t-1 hUiuRR"
+      class="Link__Content-sc-ec014t-1 fPOlTq"
     />
     <div
-      class="sc-bdnxRM AFVmm flex-shrink-0 duration-200"
+      class="sc-bdvvtL fCrhkg flex-shrink-0 duration-200"
       data-testid="Link__external"
       height="16"
       width="16"
@@ -74,13 +74,13 @@ exports[`Link should render external without children 1`] = `
 exports[`Link should render with tooltip 1`] = `
 <DocumentFragment>
   <a
-    class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+    class="Link__AnchorStyled-sc-ec014t-0 eeKUfa group ring-focus"
     data-ring-focus-margin="-m-1"
     data-testid="Link"
     href="/test"
   >
     <span
-      class="Link__Content-sc-ec014t-1 hUiuRR"
+      class="Link__Content-sc-ec014t-1 fPOlTq"
     >
       Test
     </span>
@@ -91,7 +91,7 @@ exports[`Link should render with tooltip 1`] = `
 exports[`Link should show a toast when trying to open an invalid external link 1`] = `
 <DocumentFragment>
   <a
-    class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+    class="Link__AnchorStyled-sc-ec014t-0 eeKUfa group ring-focus"
     data-ring-focus-margin="-m-1"
     data-testid="Link"
     href="#"
@@ -99,10 +99,10 @@ exports[`Link should show a toast when trying to open an invalid external link 1
     to="invalid-url"
   >
     <span
-      class="Link__Content-sc-ec014t-1 hUiuRR"
+      class="Link__Content-sc-ec014t-1 fPOlTq"
     />
     <div
-      class="sc-bdnxRM AFVmm flex-shrink-0 duration-200"
+      class="sc-bdvvtL fCrhkg flex-shrink-0 duration-200"
       data-testid="Link__external"
       height="16"
       width="16"

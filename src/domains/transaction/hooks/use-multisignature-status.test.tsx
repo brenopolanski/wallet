@@ -1,4 +1,4 @@
-import { Contracts, DTO } from "@payvo/profiles";
+import { Contracts, DTO } from "@payvo/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import { env, getDefaultProfileId } from "utils/testing-library";
 

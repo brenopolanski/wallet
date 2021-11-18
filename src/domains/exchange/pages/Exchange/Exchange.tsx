@@ -1,5 +1,5 @@
-import { upperFirst } from "@arkecosystem/utils";
-import { Contracts } from "@payvo/profiles";
+import { upperFirst } from "@payvo/sdk-helpers";
+import { Contracts } from "@payvo/sdk-profiles";
 import { Header } from "app/components/Header";
 import { Page, Section } from "app/components/Layout";
 import { useActiveProfile } from "app/hooks";
@@ -31,10 +31,8 @@ export const Exchange = () => {
 
 	const [currentView, setCurrentView] = useState<ExchangeView>(ExchangeView.Exchanges);
 
-	const [
-		selectedExchangeTransaction,
-		setSelectedExchangeTransaction,
-	] = useState<Contracts.IExchangeTransaction | null>(null);
+	const [selectedExchangeTransaction, setSelectedExchangeTransaction] =
+		useState<Contracts.IExchangeTransaction | null>(null);
 
 	const { exchangeProviders, fetchProviders } = useExchangeContext();
 	const { checkOrderStatus, prepareParameters } = useOrderStatus();

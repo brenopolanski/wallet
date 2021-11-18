@@ -1,4 +1,4 @@
-import { sortByDesc } from "@arkecosystem/utils";
+import { sortByDesc } from "@payvo/sdk-helpers";
 import { Checkbox } from "app/components/Checkbox";
 import { Tooltip } from "app/components/Tooltip";
 import { useScheduler } from "app/hooks/use-scheduler";

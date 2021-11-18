@@ -1,4 +1,4 @@
-import { snakeCase } from "@arkecosystem/utils";
+import { snakeCase } from "@payvo/sdk-helpers";
 import { Button } from "app/components/Button";
 import { EmptyBlock } from "app/components/EmptyBlock";
 import { Header } from "app/components/Header";
@@ -273,11 +273,7 @@ export const PluginManager = () => {
 	}, [fetchPluginPackages]);
 
 	// eslint-disable-next-line react-hooks/exhaustive-deps
-	const filteredPackages = useMemo(() => pluginsByCategory[currentView] || [], [
-		currentView,
-		filters,
-		pluginsByCategory,
-	]);
+	const filteredPackages = useMemo(() => pluginsByCategory[currentView] || [], [currentView, pluginsByCategory]);
 
 	const installedPlugins = pluginManager
 		.plugins()

@@ -7,7 +7,7 @@ exports[`Splash should  render  dark theme 1`] = `
   >
     <nav
       aria-labelledby="main menu"
-      class="NavigationBarblocks__NavWrapper-sc-nciu2a-0 cAPddZ"
+      class="NavigationBarblocks__NavWrapper-sc-nciu2a-0 cxmxRW"
     >
       <div
         class="flex relative h-21"
@@ -35,7 +35,7 @@ exports[`Splash should  render  dark theme 1`] = `
       class="flex flex-col flex-1"
     >
       <div
-        class="Section__SectionWrapper-sc-plnv9l-0 efrBqv flex flex-col flex-1 justify-center text-center select-none"
+        class="Section__SectionWrapper-sc-plnv9l-0 fYoPaw flex flex-col flex-1 justify-center text-center select-none"
       >
         <div
           class="container px-10 mx-auto"
@@ -105,18 +105,18 @@ exports[`Splash should  render  dark theme 1`] = `
               2020 © ARK.io
             </div>
             <div
-              class="Divider-sc-17ehhxk-0 iLifLj border-theme-secondary-300 dark:border-theme-secondary-800"
+              class="Divider-sc-17ehhxk-0 jqFYpY border-theme-secondary-300 dark:border-theme-secondary-800"
               type="vertical"
             />
             <div>
               All Rights Reserved
             </div>
             <div
-              class="Divider-sc-17ehhxk-0 iLifLj border-theme-secondary-300 dark:border-theme-secondary-800"
+              class="Divider-sc-17ehhxk-0 jqFYpY border-theme-secondary-300 dark:border-theme-secondary-800"
               type="vertical"
             />
             <div
-              class="Splash__LogoContainer-sc-1f3o2v4-0 gutwCy"
+              class="Splash__LogoContainer-sc-1f3o2v4-0 hjuMZp"
             >
               <svg
                 height="12"
@@ -128,7 +128,7 @@ exports[`Splash should  render  dark theme 1`] = `
               An ARK.io Product
             </div>
             <div
-              class="Divider-sc-17ehhxk-0 iLifLj border-theme-secondary-300 dark:border-theme-secondary-800"
+              class="Divider-sc-17ehhxk-0 jqFYpY border-theme-secondary-300 dark:border-theme-secondary-800"
               type="vertical"
             />
             <div>
@@ -149,7 +149,7 @@ exports[`Splash should  render  light theme 1`] = `
   >
     <nav
       aria-labelledby="main menu"
-      class="NavigationBarblocks__NavWrapper-sc-nciu2a-0 cAPddZ"
+      class="NavigationBarblocks__NavWrapper-sc-nciu2a-0 cxmxRW"
     >
       <div
         class="flex relative h-21"
@@ -177,7 +177,7 @@ exports[`Splash should  render  light theme 1`] = `
       class="flex flex-col flex-1"
     >
       <div
-        class="Section__SectionWrapper-sc-plnv9l-0 efrBqv flex flex-col flex-1 justify-center text-center select-none"
+        class="Section__SectionWrapper-sc-plnv9l-0 fYoPaw flex flex-col flex-1 justify-center text-center select-none"
       >
         <div
           class="container px-10 mx-auto"
@@ -247,18 +247,18 @@ exports[`Splash should  render  light theme 1`] = `
               2020 © ARK.io
             </div>
             <div
-              class="Divider-sc-17ehhxk-0 iLifLj border-theme-secondary-300 dark:border-theme-secondary-800"
+              class="Divider-sc-17ehhxk-0 jqFYpY border-theme-secondary-300 dark:border-theme-secondary-800"
               type="vertical"
             />
             <div>
               All Rights Reserved
             </div>
             <div
-              class="Divider-sc-17ehhxk-0 iLifLj border-theme-secondary-300 dark:border-theme-secondary-800"
+              class="Divider-sc-17ehhxk-0 jqFYpY border-theme-secondary-300 dark:border-theme-secondary-800"
               type="vertical"
             />
             <div
-              class="Splash__LogoContainer-sc-1f3o2v4-0 gutwCy"
+              class="Splash__LogoContainer-sc-1f3o2v4-0 hjuMZp"
             >
               <svg
                 height="12"
@@ -270,7 +270,7 @@ exports[`Splash should  render  light theme 1`] = `
               An ARK.io Product
             </div>
             <div
-              class="Divider-sc-17ehhxk-0 iLifLj border-theme-secondary-300 dark:border-theme-secondary-800"
+              class="Divider-sc-17ehhxk-0 jqFYpY border-theme-secondary-300 dark:border-theme-secondary-800"
               type="vertical"
             />
             <div>
@@ -291,7 +291,7 @@ exports[`Splash should render without year 1`] = `
   >
     <nav
       aria-labelledby="main menu"
-      class="NavigationBarblocks__NavWrapper-sc-nciu2a-0 cAPddZ"
+      class="NavigationBarblocks__NavWrapper-sc-nciu2a-0 cxmxRW"
     >
       <div
         class="flex relative h-21"
@@ -319,7 +319,7 @@ exports[`Splash should render without year 1`] = `
       class="flex flex-col flex-1"
     >
       <div
-        class="Section__SectionWrapper-sc-plnv9l-0 efrBqv flex flex-col flex-1 justify-center text-center select-none"
+        class="Section__SectionWrapper-sc-plnv9l-0 fYoPaw flex flex-col flex-1 justify-center text-center select-none"
       >
         <div
           class="container px-10 mx-auto"
@@ -389,18 +389,18 @@ exports[`Splash should render without year 1`] = `
               2020 © ARK.io
             </div>
             <div
-              class="Divider-sc-17ehhxk-0 iLifLj border-theme-secondary-300 dark:border-theme-secondary-800"
+              class="Divider-sc-17ehhxk-0 jqFYpY border-theme-secondary-300 dark:border-theme-secondary-800"
               type="vertical"
             />
             <div>
               All Rights Reserved
             </div>
             <div
-              class="Divider-sc-17ehhxk-0 iLifLj border-theme-secondary-300 dark:border-theme-secondary-800"
+              class="Divider-sc-17ehhxk-0 jqFYpY border-theme-secondary-300 dark:border-theme-secondary-800"
               type="vertical"
             />
             <div
-              class="Splash__LogoContainer-sc-1f3o2v4-0 gutwCy"
+              class="Splash__LogoContainer-sc-1f3o2v4-0 hjuMZp"
             >
               <svg
                 height="12"
@@ -412,7 +412,7 @@ exports[`Splash should render without year 1`] = `
               An ARK.io Product
             </div>
             <div
-              class="Divider-sc-17ehhxk-0 iLifLj border-theme-secondary-300 dark:border-theme-secondary-800"
+              class="Divider-sc-17ehhxk-0 jqFYpY border-theme-secondary-300 dark:border-theme-secondary-800"
               type="vertical"
             />
             <div>

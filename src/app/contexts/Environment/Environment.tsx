@@ -1,4 +1,4 @@
-import { Environment } from "@payvo/profiles";
+import { Environment } from "@payvo/sdk-profiles";
 import React from "react";
 import { isE2E } from "utils/test-helpers";
 

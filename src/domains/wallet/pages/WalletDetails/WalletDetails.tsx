@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { DTO } from "@payvo/profiles";
+import { DTO } from "@payvo/sdk-profiles";
 import { Page, Section } from "app/components/Layout";
 import { useConfiguration, useEnvironmentContext } from "app/contexts";
 import { useActiveProfile, useActiveWallet } from "app/hooks/env";
@@ -31,12 +31,8 @@ export const WalletDetails = () => {
 	const { profileIsSyncing } = useConfiguration();
 
 	const networkAllowsVoting = useMemo(() => activeWallet.network().allowsVoting(), [activeWallet]);
-	const {
-		pendingTransactions,
-		syncPending,
-		startSyncingPendingTransactions,
-		stopSyncingPendingTransactions,
-	} = useWalletTransactions(activeWallet);
+	const { pendingTransactions, syncPending, startSyncingPendingTransactions, stopSyncingPendingTransactions } =
+		useWalletTransactions(activeWallet);
 
 	useEffect(() => {
 		syncPending();

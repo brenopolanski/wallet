@@ -1,7 +1,7 @@
 import LedgerTransportNodeHID from "@ledgerhq/hw-transport-node-hid-singleton";
-import { Contracts } from "@payvo/profiles";
-import { WalletData } from "@payvo/profiles/distribution/contracts";
 import { Coins } from "@payvo/sdk";
+import { Contracts } from "@payvo/sdk-profiles";
+import { WalletData } from "@payvo/sdk-profiles/distribution/contracts";
 import { useEnvironmentContext } from "app/contexts/Environment";
 import { LedgerData, minVersionList } from "app/contexts/Ledger/contracts";
 import { formatLedgerDerivationPath } from "app/contexts/Ledger/utils/format-ledger-derivation-path";
@@ -103,7 +103,7 @@ export const useLedgerConnection = (transport: typeof LedgerTransportNodeHID) =>
 					}
 
 					await instance.__construct();
-					await instance.ledger().connect(transport);
+					await instance.ledger().connect();
 
 					if (minVersionList[coin]) {
 						const currentVersion = await instance.ledger().getVersion();
@@ -138,7 +138,7 @@ export const useLedgerConnection = (transport: typeof LedgerTransportNodeHID) =>
 				throw connectError;
 			}
 		},
-		[t, transport],
+		[t],
 	);
 
 	const disconnect = useCallback(async (coin: Coins.Coin) => {

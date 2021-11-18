@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import electron from "electron";
 import { IPluginController, PluginController, PluginManager } from "plugins/core";
 import { PluginAPI } from "plugins/types";

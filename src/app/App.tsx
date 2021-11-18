@@ -5,10 +5,6 @@
 import "focus-visible";
 
 import LedgerTransportNodeHID from "@ledgerhq/hw-transport-node-hid-singleton";
-// import { LUNA } from "@payvo/sdk-luna";
-// import { NANO } from "@payvo/sdk-nano";
-// import { NEO } from "@payvo/sdk-neo";
-import { Environment } from "@payvo/profiles";
 // import { ADA } from "@payvo/sdk-ada";
 import { ARK } from "@payvo/sdk-ark";
 // import { ATOM } from "@payvo/sdk-atom";
@@ -18,6 +14,10 @@ import { ARK } from "@payvo/sdk-ark";
 // import { EGLD } from "@payvo/sdk-egld";
 // import { ETH } from "@payvo/sdk-eth";
 import { LSK } from "@payvo/sdk-lsk";
+// import { LUNA } from "@payvo/sdk-luna";
+// import { NANO } from "@payvo/sdk-nano";
+// import { NEO } from "@payvo/sdk-neo";
+import { Environment } from "@payvo/sdk-profiles";
 import { Offline } from "domains/error/pages";
 import { ExchangeProvider } from "domains/exchange/contexts/Exchange";
 import { Splash } from "domains/splash/pages";
@@ -135,40 +135,41 @@ const Main = () => {
 	);
 };
 
+export const initializeEnvironment = () => {
+	/* istanbul ignore next */
+	const storage = isE2E() || isUnit() ? new StubStorage() : "indexeddb";
+
+	return new Environment({
+		coins: {
+			// ADA,
+			ARK,
+			// ATOM,
+			// AVAX,
+			// BTC,
+			// DOT,
+			// ETH,
+			// EGLD,
+			LSK,
+			// NEO,
+			// NANO,
+			// LUNA,
+			// TRX,
+			// XLM,
+			// XRP,
+			// ZIL,
+		},
+		httpClient,
+		ledgerTransportFactory: async () => LedgerTransportNodeHID.open(),
+		storage,
+	});
+};
+
 export const App = () => {
 	/**
 	 * Ensure that the Environment object will not be recreated when the state changes,
 	 * as the data is stored in memory by the `DataRepository`.
 	 */
-
-	/* istanbul ignore next */
-	const storage = isE2E() || isUnit() ? new StubStorage() : "indexeddb";
-
-	const [environment] = useState(
-		() =>
-			new Environment({
-				coins: {
-					// ADA,
-					ARK,
-					// ATOM,
-					// AVAX,
-					// BTC,
-					// DOT,
-					// ETH,
-					// EGLD,
-					LSK,
-					// NEO,
-					// NANO,
-					// LUNA,
-					// TRX,
-					// XLM,
-					// XRP,
-					// ZIL,
-				},
-				httpClient,
-				storage,
-			}),
-	);
+	const [environment] = useState(() => initializeEnvironment());
 
 	return (
 		<I18nextProvider i18n={index18n}>

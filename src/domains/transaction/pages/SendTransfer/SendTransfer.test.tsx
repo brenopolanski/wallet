@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { DateTime } from "@payvo/intl";
-import { Contracts, DTO } from "@payvo/profiles";
+import { DateTime } from "@payvo/sdk-intl";
 import { LSK } from "@payvo/sdk-lsk";
+import { Contracts, DTO } from "@payvo/sdk-profiles";
 import { screen } from "@testing-library/react";
 import { act as hookAct, renderHook } from "@testing-library/react-hooks";
 import userEvent from "@testing-library/user-event";

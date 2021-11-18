@@ -1,4 +1,4 @@
-import { DTO } from "@payvo/profiles";
+import { DTO } from "@payvo/sdk-profiles";
 import { Table } from "app/components/Table";
 import { ConfirmRemovePendingTransaction } from "domains/transaction/components/ConfirmRemovePendingTransaction";
 import { PendingTransferRow } from "domains/transaction/components/TransactionTable/TransactionRow/PendingTransferRow";

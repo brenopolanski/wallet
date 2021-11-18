@@ -48,10 +48,10 @@ export const UnlockTokensSelect: FC<UnlockTokensSelectProperties> = ({
 
 	const selectableObjects = useMemo(() => items.filter((item) => item.isReady), [items]);
 
-	const isAllSelected = useMemo(() => selectableObjects.every((item) => selectedIds.includes(item.id)), [
-		selectedIds,
-		selectableObjects,
-	]);
+	const isAllSelected = useMemo(
+		() => selectableObjects.every((item) => selectedIds.includes(item.id)),
+		[selectedIds, selectableObjects],
+	);
 
 	useEffect(() => {
 		// pre-select unlockable items on first load

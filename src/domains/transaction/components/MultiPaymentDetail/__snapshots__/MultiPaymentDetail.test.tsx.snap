@@ -9,7 +9,7 @@ exports[`MultiPaymentDetail should render a modal 1`] = `
     data-testid="modal__overlay"
   >
     <div
-      class="Modal__ModalContainer-sc-5lu2mc-0 wWqtC"
+      class="Modal__ModalContainer-sc-5lu2mc-0 epQFkJ"
       tabindex="-1"
     >
       <div
@@ -20,7 +20,7 @@ exports[`MultiPaymentDetail should render a modal 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -28,7 +28,7 @@ exports[`MultiPaymentDetail should render a modal 1`] = `
               class="flex items-center space-x-2"
             >
               <div
-                class="sc-bdnxRM AFVmm"
+                class="sc-bdvvtL fCrhkg"
                 height="16"
                 width="16"
               >
@@ -51,7 +51,7 @@ exports[`MultiPaymentDetail should render a modal 1`] = `
             class="flex-1"
           >
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 kQeQRD no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 GJFVE no-ligatures"
               data-testid="TransactionDetail"
             >
               <div
@@ -72,7 +72,7 @@ exports[`MultiPaymentDetail should render a modal 1`] = `
                       class="overflow-hidden"
                     >
                       <a
-                        class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                        class="Link__AnchorStyled-sc-ec014t-0 eeKUfa group ring-focus"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href="#"
@@ -80,7 +80,7 @@ exports[`MultiPaymentDetail should render a modal 1`] = `
                         to="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                       >
                         <span
-                          class="Link__Content-sc-ec014t-1 hUiuRR"
+                          class="Link__Content-sc-ec014t-1 fPOlTq"
                         >
                           <span
                             class="inline-flex overflow-hidden"
@@ -89,7 +89,7 @@ exports[`MultiPaymentDetail should render a modal 1`] = `
                           </span>
                         </span>
                         <div
-                          class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block text-sm"
+                          class="sc-bdvvtL fCrhkg flex-shrink-0 duration-200 inline-block text-sm"
                           data-testid="Link__external"
                           height="16"
                           width="16"
@@ -110,7 +110,7 @@ exports[`MultiPaymentDetail should render a modal 1`] = `
                         type="button"
                       >
                         <div
-                          class="sc-bdnxRM AFVmm"
+                          class="sc-bdvvtL fCrhkg"
                           height="16"
                           width="16"
                         >
@@ -125,7 +125,7 @@ exports[`MultiPaymentDetail should render a modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 guMZnB no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 kUQvOC no-ligatures"
               data-testid="TransactionSender"
             >
               <div
@@ -166,7 +166,7 @@ exports[`MultiPaymentDetail should render a modal 1`] = `
                 class="flex items-center -space-x-1"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -182,7 +182,7 @@ exports[`MultiPaymentDetail should render a modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 hFlzIg no-ligatures"
               data-testid="MultiPaymentRecipients"
             >
               <div
@@ -198,11 +198,11 @@ exports[`MultiPaymentDetail should render a modal 1`] = `
                       Recipients (0)
                     </span>
                     <div
-                      class="Divider-sc-17ehhxk-0 hmyWsm border-theme-secondary-300 dark:border-theme-secondary-800"
+                      class="Divider-sc-17ehhxk-0 hhDSpl border-theme-secondary-300 dark:border-theme-secondary-800"
                       type="vertical"
                     />
                     <a
-                      class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                      class="Link__AnchorStyled-sc-ec014t-0 eeKUfa group ring-focus"
                       data-ring-focus-margin="-m-1"
                       data-testid="Link"
                       href="#"
@@ -210,12 +210,12 @@ exports[`MultiPaymentDetail should render a modal 1`] = `
                       to="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                     >
                       <span
-                        class="Link__Content-sc-ec014t-1 hUiuRR"
+                        class="Link__Content-sc-ec014t-1 fPOlTq"
                       >
                         View Full List
                       </span>
                       <div
-                        class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block text-sm"
+                        class="sc-bdvvtL fCrhkg flex-shrink-0 duration-200 inline-block text-sm"
                         data-testid="Link__external"
                         height="16"
                         width="16"
@@ -239,7 +239,7 @@ exports[`MultiPaymentDetail should render a modal 1`] = `
                 class="flex items-center -space-x-1"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -249,7 +249,7 @@ exports[`MultiPaymentDetail should render a modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 hFlzIg no-ligatures"
               data-testid="TransactionAmount"
             >
               <div
@@ -264,7 +264,7 @@ exports[`MultiPaymentDetail should render a modal 1`] = `
                   class="flex items-center font-semibold"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 dCEjSJ"
+                    class="Label-sc-4akkzw-0 iXzgUi"
                     color="danger"
                   >
                     <div
@@ -281,10 +281,10 @@ exports[`MultiPaymentDetail should render a modal 1`] = `
                 </div>
               </div>
               <div
-                class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background"
+                class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background"
               >
                 <div
-                  class="sc-bdnxRM NjstW"
+                  class="sc-bdvvtL qGXhc"
                   height="20"
                   width="20"
                 >
@@ -295,7 +295,7 @@ exports[`MultiPaymentDetail should render a modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 hFlzIg no-ligatures"
               data-testid="TransactionFee"
             >
               <div
@@ -319,7 +319,7 @@ exports[`MultiPaymentDetail should render a modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 hFlzIg no-ligatures"
               data-testid="TransactionMemo"
             >
               <div
@@ -344,7 +344,7 @@ exports[`MultiPaymentDetail should render a modal 1`] = `
                 class="flex justify-center w-11 text-theme-secondary-900 dark:text-theme-secondary-600"
               >
                 <div
-                  class="sc-bdnxRM NjstW"
+                  class="sc-bdvvtL qGXhc"
                   height="20"
                   width="20"
                 >
@@ -355,7 +355,7 @@ exports[`MultiPaymentDetail should render a modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 hFlzIg no-ligatures"
               data-testid="TransactionTimestamp"
             >
               <div
@@ -374,7 +374,7 @@ exports[`MultiPaymentDetail should render a modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 hFlzIg no-ligatures"
               data-testid="TransactionDetail"
             >
               <div
@@ -392,7 +392,7 @@ exports[`MultiPaymentDetail should render a modal 1`] = `
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="sc-bdnxRM NjstW text-theme-warning-300"
+                      class="sc-bdvvtL qGXhc text-theme-warning-300"
                       height="20"
                       width="20"
                     >
@@ -422,7 +422,7 @@ exports[`MultiPaymentDetail should render hint icon with tooltip when it's a ret
     data-testid="modal__overlay"
   >
     <div
-      class="Modal__ModalContainer-sc-5lu2mc-0 wWqtC"
+      class="Modal__ModalContainer-sc-5lu2mc-0 epQFkJ"
       tabindex="-1"
     >
       <div
@@ -433,7 +433,7 @@ exports[`MultiPaymentDetail should render hint icon with tooltip when it's a ret
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -441,7 +441,7 @@ exports[`MultiPaymentDetail should render hint icon with tooltip when it's a ret
               class="flex items-center space-x-2"
             >
               <div
-                class="sc-bdnxRM AFVmm"
+                class="sc-bdvvtL fCrhkg"
                 height="16"
                 width="16"
               >
@@ -464,7 +464,7 @@ exports[`MultiPaymentDetail should render hint icon with tooltip when it's a ret
             class="flex-1"
           >
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 kQeQRD no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 GJFVE no-ligatures"
               data-testid="TransactionDetail"
             >
               <div
@@ -485,7 +485,7 @@ exports[`MultiPaymentDetail should render hint icon with tooltip when it's a ret
                       class="overflow-hidden"
                     >
                       <a
-                        class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                        class="Link__AnchorStyled-sc-ec014t-0 eeKUfa group ring-focus"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href="#"
@@ -493,7 +493,7 @@ exports[`MultiPaymentDetail should render hint icon with tooltip when it's a ret
                         to="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                       >
                         <span
-                          class="Link__Content-sc-ec014t-1 hUiuRR"
+                          class="Link__Content-sc-ec014t-1 fPOlTq"
                         >
                           <span
                             class="inline-flex overflow-hidden"
@@ -502,7 +502,7 @@ exports[`MultiPaymentDetail should render hint icon with tooltip when it's a ret
                           </span>
                         </span>
                         <div
-                          class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block text-sm"
+                          class="sc-bdvvtL fCrhkg flex-shrink-0 duration-200 inline-block text-sm"
                           data-testid="Link__external"
                           height="16"
                           width="16"
@@ -523,7 +523,7 @@ exports[`MultiPaymentDetail should render hint icon with tooltip when it's a ret
                         type="button"
                       >
                         <div
-                          class="sc-bdnxRM AFVmm"
+                          class="sc-bdvvtL fCrhkg"
                           height="16"
                           width="16"
                         >
@@ -538,7 +538,7 @@ exports[`MultiPaymentDetail should render hint icon with tooltip when it's a ret
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 guMZnB no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 kUQvOC no-ligatures"
               data-testid="TransactionSender"
             >
               <div
@@ -579,7 +579,7 @@ exports[`MultiPaymentDetail should render hint icon with tooltip when it's a ret
                 class="flex items-center -space-x-1"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -595,7 +595,7 @@ exports[`MultiPaymentDetail should render hint icon with tooltip when it's a ret
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 hFlzIg no-ligatures"
               data-testid="MultiPaymentRecipients"
             >
               <div
@@ -611,11 +611,11 @@ exports[`MultiPaymentDetail should render hint icon with tooltip when it's a ret
                       Recipients (3)
                     </span>
                     <div
-                      class="Divider-sc-17ehhxk-0 hmyWsm border-theme-secondary-300 dark:border-theme-secondary-800"
+                      class="Divider-sc-17ehhxk-0 hhDSpl border-theme-secondary-300 dark:border-theme-secondary-800"
                       type="vertical"
                     />
                     <a
-                      class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                      class="Link__AnchorStyled-sc-ec014t-0 eeKUfa group ring-focus"
                       data-ring-focus-margin="-m-1"
                       data-testid="Link"
                       href="#"
@@ -623,12 +623,12 @@ exports[`MultiPaymentDetail should render hint icon with tooltip when it's a ret
                       to="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                     >
                       <span
-                        class="Link__Content-sc-ec014t-1 hUiuRR"
+                        class="Link__Content-sc-ec014t-1 fPOlTq"
                       >
                         View Full List
                       </span>
                       <div
-                        class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block text-sm"
+                        class="sc-bdvvtL fCrhkg flex-shrink-0 duration-200 inline-block text-sm"
                         data-testid="Link__external"
                         height="16"
                         width="16"
@@ -659,7 +659,7 @@ exports[`MultiPaymentDetail should render hint icon with tooltip when it's a ret
                 class="flex items-center -space-x-1"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -675,7 +675,7 @@ exports[`MultiPaymentDetail should render hint icon with tooltip when it's a ret
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 hFlzIg no-ligatures"
               data-testid="TransactionAmount"
             >
               <div
@@ -690,7 +690,7 @@ exports[`MultiPaymentDetail should render hint icon with tooltip when it's a ret
                   class="flex items-center font-semibold"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 dCEjSJ"
+                    class="Label-sc-4akkzw-0 iXzgUi"
                     color="danger"
                   >
                     <div
@@ -701,7 +701,7 @@ exports[`MultiPaymentDetail should render hint icon with tooltip when it's a ret
                         data-testid="AmountLabel__hint"
                       >
                         <div
-                          class="sc-bdnxRM AkeAK dark:text-white"
+                          class="sc-bdvvtL Cfvxc dark:text-white"
                           height="10"
                           width="10"
                         >
@@ -721,10 +721,10 @@ exports[`MultiPaymentDetail should render hint icon with tooltip when it's a ret
                 </div>
               </div>
               <div
-                class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background"
+                class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background"
               >
                 <div
-                  class="sc-bdnxRM NjstW"
+                  class="sc-bdvvtL qGXhc"
                   height="20"
                   width="20"
                 >
@@ -735,7 +735,7 @@ exports[`MultiPaymentDetail should render hint icon with tooltip when it's a ret
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 hFlzIg no-ligatures"
               data-testid="TransactionFee"
             >
               <div
@@ -759,7 +759,7 @@ exports[`MultiPaymentDetail should render hint icon with tooltip when it's a ret
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 hFlzIg no-ligatures"
               data-testid="TransactionMemo"
             >
               <div
@@ -784,7 +784,7 @@ exports[`MultiPaymentDetail should render hint icon with tooltip when it's a ret
                 class="flex justify-center w-11 text-theme-secondary-900 dark:text-theme-secondary-600"
               >
                 <div
-                  class="sc-bdnxRM NjstW"
+                  class="sc-bdvvtL qGXhc"
                   height="20"
                   width="20"
                 >
@@ -795,7 +795,7 @@ exports[`MultiPaymentDetail should render hint icon with tooltip when it's a ret
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 hFlzIg no-ligatures"
               data-testid="TransactionTimestamp"
             >
               <div
@@ -814,7 +814,7 @@ exports[`MultiPaymentDetail should render hint icon with tooltip when it's a ret
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 hFlzIg no-ligatures"
               data-testid="TransactionDetail"
             >
               <div
@@ -832,7 +832,7 @@ exports[`MultiPaymentDetail should render hint icon with tooltip when it's a ret
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="sc-bdnxRM NjstW text-theme-success-600"
+                      class="sc-bdvvtL qGXhc text-theme-success-600"
                       height="20"
                       width="20"
                     >
@@ -862,7 +862,7 @@ exports[`MultiPaymentDetail should render with recipients 1`] = `
     data-testid="modal__overlay"
   >
     <div
-      class="Modal__ModalContainer-sc-5lu2mc-0 wWqtC"
+      class="Modal__ModalContainer-sc-5lu2mc-0 epQFkJ"
       tabindex="-1"
     >
       <div
@@ -873,7 +873,7 @@ exports[`MultiPaymentDetail should render with recipients 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -881,7 +881,7 @@ exports[`MultiPaymentDetail should render with recipients 1`] = `
               class="flex items-center space-x-2"
             >
               <div
-                class="sc-bdnxRM AFVmm"
+                class="sc-bdvvtL fCrhkg"
                 height="16"
                 width="16"
               >
@@ -904,7 +904,7 @@ exports[`MultiPaymentDetail should render with recipients 1`] = `
             class="flex-1"
           >
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 kQeQRD no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 GJFVE no-ligatures"
               data-testid="TransactionDetail"
             >
               <div
@@ -925,7 +925,7 @@ exports[`MultiPaymentDetail should render with recipients 1`] = `
                       class="overflow-hidden"
                     >
                       <a
-                        class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                        class="Link__AnchorStyled-sc-ec014t-0 eeKUfa group ring-focus"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href="#"
@@ -933,7 +933,7 @@ exports[`MultiPaymentDetail should render with recipients 1`] = `
                         to="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                       >
                         <span
-                          class="Link__Content-sc-ec014t-1 hUiuRR"
+                          class="Link__Content-sc-ec014t-1 fPOlTq"
                         >
                           <span
                             class="inline-flex overflow-hidden"
@@ -942,7 +942,7 @@ exports[`MultiPaymentDetail should render with recipients 1`] = `
                           </span>
                         </span>
                         <div
-                          class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block text-sm"
+                          class="sc-bdvvtL fCrhkg flex-shrink-0 duration-200 inline-block text-sm"
                           data-testid="Link__external"
                           height="16"
                           width="16"
@@ -963,7 +963,7 @@ exports[`MultiPaymentDetail should render with recipients 1`] = `
                         type="button"
                       >
                         <div
-                          class="sc-bdnxRM AFVmm"
+                          class="sc-bdvvtL fCrhkg"
                           height="16"
                           width="16"
                         >
@@ -978,7 +978,7 @@ exports[`MultiPaymentDetail should render with recipients 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 guMZnB no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 kUQvOC no-ligatures"
               data-testid="TransactionSender"
             >
               <div
@@ -1019,7 +1019,7 @@ exports[`MultiPaymentDetail should render with recipients 1`] = `
                 class="flex items-center -space-x-1"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -1035,7 +1035,7 @@ exports[`MultiPaymentDetail should render with recipients 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 hFlzIg no-ligatures"
               data-testid="MultiPaymentRecipients"
             >
               <div
@@ -1051,11 +1051,11 @@ exports[`MultiPaymentDetail should render with recipients 1`] = `
                       Recipients (3)
                     </span>
                     <div
-                      class="Divider-sc-17ehhxk-0 hmyWsm border-theme-secondary-300 dark:border-theme-secondary-800"
+                      class="Divider-sc-17ehhxk-0 hhDSpl border-theme-secondary-300 dark:border-theme-secondary-800"
                       type="vertical"
                     />
                     <a
-                      class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                      class="Link__AnchorStyled-sc-ec014t-0 eeKUfa group ring-focus"
                       data-ring-focus-margin="-m-1"
                       data-testid="Link"
                       href="#"
@@ -1063,12 +1063,12 @@ exports[`MultiPaymentDetail should render with recipients 1`] = `
                       to="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                     >
                       <span
-                        class="Link__Content-sc-ec014t-1 hUiuRR"
+                        class="Link__Content-sc-ec014t-1 fPOlTq"
                       >
                         View Full List
                       </span>
                       <div
-                        class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block text-sm"
+                        class="sc-bdvvtL fCrhkg flex-shrink-0 duration-200 inline-block text-sm"
                         data-testid="Link__external"
                         height="16"
                         width="16"
@@ -1099,7 +1099,7 @@ exports[`MultiPaymentDetail should render with recipients 1`] = `
                 class="flex items-center -space-x-1"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -1115,7 +1115,7 @@ exports[`MultiPaymentDetail should render with recipients 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 hFlzIg no-ligatures"
               data-testid="TransactionAmount"
             >
               <div
@@ -1130,7 +1130,7 @@ exports[`MultiPaymentDetail should render with recipients 1`] = `
                   class="flex items-center font-semibold"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 dCEjSJ"
+                    class="Label-sc-4akkzw-0 iXzgUi"
                     color="danger"
                   >
                     <div
@@ -1147,10 +1147,10 @@ exports[`MultiPaymentDetail should render with recipients 1`] = `
                 </div>
               </div>
               <div
-                class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background"
+                class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background"
               >
                 <div
-                  class="sc-bdnxRM NjstW"
+                  class="sc-bdvvtL qGXhc"
                   height="20"
                   width="20"
                 >
@@ -1161,7 +1161,7 @@ exports[`MultiPaymentDetail should render with recipients 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 hFlzIg no-ligatures"
               data-testid="TransactionFee"
             >
               <div
@@ -1185,7 +1185,7 @@ exports[`MultiPaymentDetail should render with recipients 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 hFlzIg no-ligatures"
               data-testid="TransactionMemo"
             >
               <div
@@ -1210,7 +1210,7 @@ exports[`MultiPaymentDetail should render with recipients 1`] = `
                 class="flex justify-center w-11 text-theme-secondary-900 dark:text-theme-secondary-600"
               >
                 <div
-                  class="sc-bdnxRM NjstW"
+                  class="sc-bdvvtL qGXhc"
                   height="20"
                   width="20"
                 >
@@ -1221,7 +1221,7 @@ exports[`MultiPaymentDetail should render with recipients 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 hFlzIg no-ligatures"
               data-testid="TransactionTimestamp"
             >
               <div
@@ -1240,7 +1240,7 @@ exports[`MultiPaymentDetail should render with recipients 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 hFlzIg no-ligatures"
               data-testid="TransactionDetail"
             >
               <div
@@ -1258,7 +1258,7 @@ exports[`MultiPaymentDetail should render with recipients 1`] = `
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="sc-bdnxRM NjstW text-theme-success-600"
+                      class="sc-bdvvtL qGXhc text-theme-success-600"
                       height="20"
                       width="20"
                     >

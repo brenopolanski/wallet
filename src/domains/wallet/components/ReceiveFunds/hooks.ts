@@ -1,4 +1,4 @@
-import { QRCode, URI } from "@payvo/helpers";
+import { QRCode, URI } from "@payvo/sdk-helpers";
 import { useCallback, useEffect, useState } from "react";
 import { shouldUseDarkColors } from "utils/electron-utils";
 

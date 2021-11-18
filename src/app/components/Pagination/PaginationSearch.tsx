@@ -1,4 +1,4 @@
-import { BigNumber } from "@payvo/helpers";
+import { BigNumber } from "@payvo/sdk-helpers";
 import { Button } from "app/components/Button";
 import { Form } from "app/components/Form";
 import { Icon } from "app/components/Icon";

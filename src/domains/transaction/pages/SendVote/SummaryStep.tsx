@@ -1,4 +1,4 @@
-import { DTO } from "@payvo/profiles";
+import { DTO } from "@payvo/sdk-profiles";
 import { TransactionFee, TransactionVotes } from "domains/transaction/components/TransactionDetail";
 import { TransactionSuccessful } from "domains/transaction/components/TransactionSuccessful";
 import React from "react";

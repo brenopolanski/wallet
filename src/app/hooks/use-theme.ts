@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { Theme } from "types";
 import { setThemeSource, shouldUseDarkColors } from "utils/electron-utils";
 

@@ -1,5 +1,5 @@
-import { uniq } from "@arkecosystem/utils";
-import { Contracts } from "@payvo/profiles";
+import { uniq } from "@payvo/sdk-helpers";
+import { Contracts } from "@payvo/sdk-profiles";
 import { Button } from "app/components/Button";
 import { Form } from "app/components/Form";
 import { Page, Section } from "app/components/Layout";

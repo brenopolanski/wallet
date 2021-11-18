@@ -1,5 +1,5 @@
-import { prettyBytes, startCase, uniq } from "@arkecosystem/utils";
-import { Contracts, Repositories } from "@payvo/profiles";
+import { prettyBytes, startCase, uniq } from "@payvo/sdk-helpers";
+import { Contracts, Repositories } from "@payvo/sdk-profiles";
 import du from "du";
 import parseAuthor from "parse-author";
 import { SerializedPluginConfigurationData } from "plugins/types";

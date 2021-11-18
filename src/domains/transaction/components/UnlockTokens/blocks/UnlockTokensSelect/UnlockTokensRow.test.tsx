@@ -1,5 +1,5 @@
-import { BigNumber } from "@payvo/helpers";
-import { DateTime } from "@payvo/intl";
+import { BigNumber } from "@payvo/sdk-helpers";
+import { DateTime } from "@payvo/sdk-intl";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { buildTranslations } from "app/i18n/helpers";

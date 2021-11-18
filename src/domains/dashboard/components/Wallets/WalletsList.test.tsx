@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { screen } from "@testing-library/react";
 import { translations } from "domains/dashboard/i18n";
 import { createMemoryHistory } from "history";

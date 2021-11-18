@@ -1,5 +1,5 @@
 import Transport from "@ledgerhq/hw-transport";
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import { EnvironmentProvider, minVersionList } from "app/contexts";
 import { LedgerProvider } from "app/contexts/Ledger/Ledger";

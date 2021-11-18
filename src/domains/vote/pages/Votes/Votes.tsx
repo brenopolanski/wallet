@@ -1,8 +1,8 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { Alert } from "app/components/Alert";
 import { Page, Section } from "app/components/Layout";
 import { useEnvironmentContext } from "app/contexts";
-import { useActiveProfile, useActiveWallet, useProfileJobs, useProfileUtils } from "app/hooks";
+import { useActiveProfile, useActiveWalletWhenNeeded, useProfileJobs, useProfileUtils } from "app/hooks";
 import { DelegateTable } from "domains/vote/components/DelegateTable";
 import { VotesEmpty } from "domains/vote/components/VotesEmpty";
 import { VotesHeader } from "domains/vote/components/VotesHeader";
@@ -18,12 +18,15 @@ import { assertWallet } from "utils/assertions";
 
 export const Votes: FC = () => {
 	const history = useHistory();
+	// @TODO: the hasWalletId alias is misleading because it indicates that it
+	// is a boolean but it's just a string or undefined and you still need to
+	// do an assertion or casting to ensure it has a value other than undefined
 	const { walletId: hasWalletId } = useParams<{ walletId: string }>();
 	const { env } = useEnvironmentContext();
 
 	const activeProfile = useActiveProfile();
-	const activeWallet = useActiveWallet();
-	const [selectedWallet, setSelectedWallet] = useState<Contracts.IReadWriteWallet>(activeWallet);
+	const activeWallet = useActiveWalletWhenNeeded(!!hasWalletId);
+	const [selectedWallet, setSelectedWallet] = useState<Contracts.IReadWriteWallet | undefined>(activeWallet);
 
 	const { getErroredNetworks } = useProfileUtils(env);
 	const { syncProfileWallets } = useProfileJobs(activeProfile);
@@ -50,7 +53,7 @@ export const Votes: FC = () => {
 		filter,
 		hasWalletId: !!hasWalletId,
 		profile: activeProfile,
-		wallet: activeWallet,
+		wallet: activeWallet!, // @TODO
 	});
 
 	const {
@@ -73,7 +76,7 @@ export const Votes: FC = () => {
 		profile: activeProfile,
 		selectedAddress,
 		selectedNetwork,
-		wallet: activeWallet,
+		wallet: activeWallet!, // @TODO
 	});
 
 	useEffect(() => {
@@ -167,7 +170,7 @@ export const Votes: FC = () => {
 						resignedDelegateVotes={resignedDelegateVotes}
 						unvoteDelegates={unvoteDelegates}
 						voteDelegates={voteDelegates}
-						selectedWallet={selectedWallet}
+						selectedWallet={selectedWallet!}
 						onContinue={navigateToSendVote}
 						isCompact={useCompactTables}
 						subtitle={

@@ -3,7 +3,7 @@
 exports[`Avatar should render 1`] = `
 <DocumentFragment>
   <div
-    class="Avatar__AvatarWrapper-sc-18vw8a4-0 cquwfV flex-shrink-0"
+    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kQraiW flex-shrink-0"
     data-testid="Avatar"
   >
     <div
@@ -22,7 +22,7 @@ exports[`Avatar should render 1`] = `
 exports[`Avatar should render with custom shadow color 1`] = `
 <DocumentFragment>
   <div
-    class="Avatar__AvatarWrapper-sc-18vw8a4-0 jmShGq ring-theme-black flex-shrink-0"
+    class="Avatar__AvatarWrapper-sc-18vw8a4-0 jkbtQl ring-theme-black flex-shrink-0"
     data-testid="Avatar"
   >
     <div
@@ -41,7 +41,7 @@ exports[`Avatar should render with custom shadow color 1`] = `
 exports[`Avatar should render with highlight 1`] = `
 <DocumentFragment>
   <div
-    class="Avatar__AvatarWrapper-sc-18vw8a4-0 cquwfV flex-shrink-0"
+    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kQraiW flex-shrink-0"
     data-testid="Avatar"
   >
     <div
@@ -60,7 +60,7 @@ exports[`Avatar should render with highlight 1`] = `
 exports[`Avatar should render with highlight and custom shadow color 1`] = `
 <DocumentFragment>
   <div
-    class="Avatar__AvatarWrapper-sc-18vw8a4-0 jmShGq ring-theme-black flex-shrink-0"
+    class="Avatar__AvatarWrapper-sc-18vw8a4-0 jkbtQl ring-theme-black flex-shrink-0"
     data-testid="Avatar"
   >
     <div
@@ -79,7 +79,7 @@ exports[`Avatar should render with highlight and custom shadow color 1`] = `
 exports[`Avatar should render with size 1`] = `
 <DocumentFragment>
   <div
-    class="Avatar__AvatarWrapper-sc-18vw8a4-0 cGaooq flex-shrink-0"
+    class="Avatar__AvatarWrapper-sc-18vw8a4-0 hTXgmB flex-shrink-0"
     data-testid="Avatar"
   >
     <div
@@ -98,7 +98,7 @@ exports[`Avatar should render with size 1`] = `
 exports[`Avatar should render with size 2`] = `
 <DocumentFragment>
   <div
-    class="Avatar__AvatarWrapper-sc-18vw8a4-0 fuPYca flex-shrink-0"
+    class="Avatar__AvatarWrapper-sc-18vw8a4-0 krsvod flex-shrink-0"
     data-testid="Avatar"
   >
     <div
@@ -117,7 +117,7 @@ exports[`Avatar should render with size 2`] = `
 exports[`Avatar should render with size 3`] = `
 <DocumentFragment>
   <div
-    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
+    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
     data-testid="Avatar"
   >
     <div
@@ -136,7 +136,7 @@ exports[`Avatar should render with size 3`] = `
 exports[`Avatar should render with size 4`] = `
 <DocumentFragment>
   <div
-    class="Avatar__AvatarWrapper-sc-18vw8a4-0 cLJiNf flex-shrink-0"
+    class="Avatar__AvatarWrapper-sc-18vw8a4-0 khZUYQ flex-shrink-0"
     data-testid="Avatar"
   >
     <div
@@ -155,7 +155,7 @@ exports[`Avatar should render with size 4`] = `
 exports[`Avatar should render without shadow 1`] = `
 <DocumentFragment>
   <div
-    class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0"
+    class="Avatar__AvatarWrapper-sc-18vw8a4-0 gljhIf flex-shrink-0"
     data-testid="Avatar"
   >
     <div
