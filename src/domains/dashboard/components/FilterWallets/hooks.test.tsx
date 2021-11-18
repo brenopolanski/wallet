@@ -3,6 +3,7 @@ import { act, renderHook } from "@testing-library/react-hooks";
 import { ConfigurationProvider, EnvironmentProvider } from "app/contexts";
 import React from "react";
 import { env, getDefaultProfileId, waitFor } from "utils/testing-library";
+
 import { useWalletFilters } from "./hooks";
 
 let profile: Contracts.IProfile;
