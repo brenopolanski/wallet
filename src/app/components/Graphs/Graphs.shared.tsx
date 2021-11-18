@@ -30,9 +30,7 @@ const useGraphWidth = (): [MutableRefObject<SVGSVGElement | null>, number] => {
 
 interface UseGraphTooltipResult<TDataPoint> {
 	Tooltip: React.VFC;
-	getMouseEventProperties: (
-		dataPoint: TDataPoint,
-	) => {
+	getMouseEventProperties: (dataPoint: TDataPoint) => {
 		onMouseMove: (event: MouseEvent<SVGElement>) => void;
 		onMouseOut: (event: MouseEvent<SVGElement>) => void;
 	};
