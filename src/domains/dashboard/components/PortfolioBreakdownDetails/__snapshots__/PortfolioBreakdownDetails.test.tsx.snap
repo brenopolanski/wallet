@@ -1,0 +1,701 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PortfolioBreakdownDetails should render 1`] = `
+<DocumentFragment>
+  <div
+    class="flex fixed inset-0 z-50 py-20 w-full h-full bg-opacity-60 dark:bg-opacity-80 bg-theme-secondary-900-rgba overflow-overlay dark:bg-black-rgba"
+    data-testid="modal__overlay"
+  >
+    <div
+      class="Modal__ModalContainer-sc-5lu2mc-0 epQFkJ"
+      tabindex="-1"
+    >
+      <div
+        class="flex overflow-hidden relative flex-col p-10 shadow-2xl rounded-2.5xl bg-theme-background"
+        data-testid="modal__inner"
+      >
+        <div
+          class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
+        >
+          <button
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 h-11"
+            data-testid="modal__close-btn"
+            type="button"
+          >
+            <div
+              class="flex items-center space-x-2"
+            >
+              <div
+                class="sc-bdvvtL fCrhkg"
+                height="16"
+                width="16"
+              >
+                <svg>
+                  cross.svg
+                </svg>
+              </div>
+            </div>
+          </button>
+        </div>
+        <div
+          class="relative space-y-4"
+        >
+          <h2
+            class="mb-0 text-2xl font-bold"
+          >
+            Portfolio Breakdown
+          </h2>
+          <div
+            class="flex-1"
+          >
+            <div
+              class="space-y-4"
+            >
+              <div
+                class="flex justify-center"
+              >
+                <div
+                  class="relative"
+                >
+                  <div
+                    class="absolute duration-200 transition-opacity opacity-0"
+                  />
+                  <div
+                    class="absolute"
+                    style="left: 140px; top: 140px;"
+                  >
+                    <div
+                      class="flex flex-col items-center justify-center space-y-2"
+                    >
+                      <span
+                        class="font-semibold text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
+                      >
+                        Your Balance
+                      </span>
+                      <h3
+                        class="font-bold text-theme-secondary-900 dark:text-theme-secondary-200"
+                      >
+                        <span
+                          class="whitespace-nowrap"
+                          data-testid="Amount"
+                        >
+                          $100.00
+                        </span>
+                      </h3>
+                      <span
+                        class="font-semibold text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
+                      >
+                        USD
+                      </span>
+                    </div>
+                  </div>
+                  <svg
+                    data-testid="DonutGraph__svg"
+                    height="280"
+                    width="280"
+                  >
+                    <circle
+                      class="fill-current text-theme-secondary-200 dark:text-black"
+                      cx="140"
+                      cy="140"
+                      fill="inherit"
+                      r="92"
+                      stroke-linecap="round"
+                      stroke-width="0"
+                    />
+                    <g
+                      data-testid="DonutGraph__item"
+                    >
+                      <circle
+                        class="stroke-current text-theme-secondary-300 dark:text-theme-secondary-800"
+                        cx="140"
+                        cy="140"
+                        data-testid="DonutGraph__item-track-line"
+                        fill="transparent"
+                        id="circleTrackLine__0"
+                        pointer-events="none"
+                        r="108"
+                        stroke-dasharray="387.15040790523716 291.4336052701581"
+                        stroke-dashoffset="397.15040790523716"
+                        stroke-linecap="round"
+                        stroke-width="2"
+                      />
+                      <circle
+                        class="stroke-current text-theme-success-600"
+                        cx="140"
+                        cy="140"
+                        data-testid="DonutGraph__item-hover-area"
+                        fill="transparent"
+                        id="circleHoverArea__0"
+                        opacity="0"
+                        pointer-events="visibleStroke"
+                        r="108"
+                        stroke-dasharray="387.15040790523716 291.4336052701581"
+                        stroke-dashoffset="397.15040790523716"
+                        stroke-linecap="round"
+                        stroke-width="40"
+                      />
+                      <circle
+                        class="stroke-current text-theme-success-600"
+                        cx="140"
+                        cy="140"
+                        fill="transparent"
+                        pointer-events="none"
+                        r="108"
+                        stroke-dasharray="387.15040790523716 291.4336052701581"
+                        stroke-dashoffset="397.15040790523716"
+                        stroke-linecap="round"
+                        stroke-width="16"
+                      >
+                        <animate
+                          attributeName="r"
+                          begin="circleHoverArea__0.mouseover"
+                          dur="0.1s"
+                          fill="freeze"
+                          from="108"
+                          to="124"
+                        />
+                        <animate
+                          attributeName="r"
+                          begin="circleHoverArea__0.mouseleave"
+                          dur="0.15s"
+                          fill="freeze"
+                          from="124"
+                          to="108"
+                        />
+                        <animate
+                          attributeName="stroke-dasharray"
+                          begin="circleHoverArea__0.mouseover"
+                          dur="0.1s"
+                          fill="freeze"
+                          from="387.15040790523716 291.4336052701581"
+                          to="447.4689868541612 331.6459912361075"
+                        />
+                        <animate
+                          attributeName="stroke-dasharray"
+                          begin="circleHoverArea__0.mouseleave"
+                          dur="0.15s"
+                          fill="freeze"
+                          from="447.4689868541612 331.6459912361075"
+                          to="387.15040790523716 291.4336052701581"
+                        />
+                        <animate
+                          attributeName="stroke-dashoffset"
+                          begin="circleHoverArea__0.mouseover"
+                          dur="0.1s"
+                          fill="freeze"
+                          from="397.15040790523716"
+                          to="457.4689868541612"
+                        />
+                        <animate
+                          attributeName="stroke-dashoffset"
+                          begin="circleHoverArea__0.mouseleave"
+                          dur="0.15s"
+                          fill="freeze"
+                          from="457.4689868541612"
+                          to="397.15040790523716"
+                        />
+                      </circle>
+                    </g>
+                    <g
+                      data-testid="DonutGraph__item"
+                    >
+                      <circle
+                        class="stroke-current text-theme-secondary-300 dark:text-theme-secondary-800"
+                        cx="140"
+                        cy="140"
+                        data-testid="DonutGraph__item-track-line"
+                        fill="transparent"
+                        id="circleTrackLine__1"
+                        pointer-events="none"
+                        r="108"
+                        stroke-dasharray="183.57520395261858 495.0088092227767"
+                        stroke-dashoffset="600.7256118578557"
+                        stroke-linecap="round"
+                        stroke-width="2"
+                      />
+                      <circle
+                        class="stroke-current text-theme-warning-600"
+                        cx="140"
+                        cy="140"
+                        data-testid="DonutGraph__item-hover-area"
+                        fill="transparent"
+                        id="circleHoverArea__1"
+                        opacity="0"
+                        pointer-events="visibleStroke"
+                        r="108"
+                        stroke-dasharray="183.57520395261858 495.0088092227767"
+                        stroke-dashoffset="600.7256118578557"
+                        stroke-linecap="round"
+                        stroke-width="40"
+                      />
+                      <circle
+                        class="stroke-current text-theme-warning-600"
+                        cx="140"
+                        cy="140"
+                        fill="transparent"
+                        pointer-events="none"
+                        r="108"
+                        stroke-dasharray="183.57520395261858 495.0088092227767"
+                        stroke-dashoffset="600.7256118578557"
+                        stroke-linecap="round"
+                        stroke-width="16"
+                      >
+                        <animate
+                          attributeName="r"
+                          begin="circleHoverArea__1.mouseover"
+                          dur="0.1s"
+                          fill="freeze"
+                          from="108"
+                          to="124"
+                        />
+                        <animate
+                          attributeName="r"
+                          begin="circleHoverArea__1.mouseleave"
+                          dur="0.15s"
+                          fill="freeze"
+                          from="124"
+                          to="108"
+                        />
+                        <animate
+                          attributeName="stroke-dasharray"
+                          begin="circleHoverArea__1.mouseover"
+                          dur="0.1s"
+                          fill="freeze"
+                          from="183.57520395261858 495.0088092227767"
+                          to="213.7344934270806 565.380484663188"
+                        />
+                        <animate
+                          attributeName="stroke-dasharray"
+                          begin="circleHoverArea__1.mouseleave"
+                          dur="0.15s"
+                          fill="freeze"
+                          from="213.7344934270806 565.380484663188"
+                          to="183.57520395261858 495.0088092227767"
+                        />
+                        <animate
+                          attributeName="stroke-dashoffset"
+                          begin="circleHoverArea__1.mouseover"
+                          dur="0.1s"
+                          fill="freeze"
+                          from="600.7256118578557"
+                          to="691.2034802812418"
+                        />
+                        <animate
+                          attributeName="stroke-dashoffset"
+                          begin="circleHoverArea__1.mouseleave"
+                          dur="0.15s"
+                          fill="freeze"
+                          from="691.2034802812418"
+                          to="600.7256118578557"
+                        />
+                      </circle>
+                    </g>
+                    <g
+                      data-testid="DonutGraph__item"
+                    >
+                      <circle
+                        class="stroke-current text-theme-secondary-300 dark:text-theme-secondary-800"
+                        cx="140"
+                        cy="140"
+                        data-testid="DonutGraph__item-track-line"
+                        fill="transparent"
+                        id="circleTrackLine__2"
+                        pointer-events="none"
+                        r="108"
+                        stroke-dasharray="47.85840131753953 630.7256118578557"
+                        stroke-dashoffset="668.5840131753953"
+                        stroke-linecap="round"
+                        stroke-width="2"
+                      />
+                      <circle
+                        class="stroke-current text-theme-info-600"
+                        cx="140"
+                        cy="140"
+                        data-testid="DonutGraph__item-hover-area"
+                        fill="transparent"
+                        id="circleHoverArea__2"
+                        opacity="0"
+                        pointer-events="visibleStroke"
+                        r="108"
+                        stroke-dasharray="47.85840131753953 630.7256118578557"
+                        stroke-dashoffset="668.5840131753953"
+                        stroke-linecap="round"
+                        stroke-width="40"
+                      />
+                      <circle
+                        class="stroke-current text-theme-info-600"
+                        cx="140"
+                        cy="140"
+                        fill="transparent"
+                        pointer-events="none"
+                        r="108"
+                        stroke-dasharray="47.85840131753953 630.7256118578557"
+                        stroke-dashoffset="668.5840131753953"
+                        stroke-linecap="round"
+                        stroke-width="16"
+                      >
+                        <animate
+                          attributeName="r"
+                          begin="circleHoverArea__2.mouseover"
+                          dur="0.1s"
+                          fill="freeze"
+                          from="108"
+                          to="124"
+                        />
+                        <animate
+                          attributeName="r"
+                          begin="circleHoverArea__2.mouseleave"
+                          dur="0.15s"
+                          fill="freeze"
+                          from="124"
+                          to="108"
+                        />
+                        <animate
+                          attributeName="stroke-dasharray"
+                          begin="circleHoverArea__2.mouseover"
+                          dur="0.1s"
+                          fill="freeze"
+                          from="47.85840131753953 630.7256118578557"
+                          to="57.91149780902687 721.2034802812418"
+                        />
+                        <animate
+                          attributeName="stroke-dasharray"
+                          begin="circleHoverArea__2.mouseleave"
+                          dur="0.15s"
+                          fill="freeze"
+                          from="57.91149780902687 721.2034802812418"
+                          to="47.85840131753953 630.7256118578557"
+                        />
+                        <animate
+                          attributeName="stroke-dashoffset"
+                          begin="circleHoverArea__2.mouseover"
+                          dur="0.1s"
+                          fill="freeze"
+                          from="668.5840131753953"
+                          to="769.1149780902687"
+                        />
+                        <animate
+                          attributeName="stroke-dashoffset"
+                          begin="circleHoverArea__2.mouseleave"
+                          dur="0.15s"
+                          fill="freeze"
+                          from="769.1149780902687"
+                          to="668.5840131753953"
+                        />
+                      </circle>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="Table__TableWrapper-sc-1gcp0fb-0 jHfvAR -mt-3"
+                role="table"
+              >
+                <table
+                  cellpadding="0"
+                  class="table-auto"
+                >
+                  <thead>
+                    <tr
+                      class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
+                      role="row"
+                    >
+                      <th
+                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
+                        colspan="1"
+                        data-testid="table__th--0"
+                        role="columnheader"
+                        style="cursor: pointer;"
+                        title="Toggle SortBy"
+                      >
+                        <div
+                          class="flex flex-inline align-top"
+                        >
+                          <div>
+                            Asset
+                          </div>
+                          <div
+                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity ml-2"
+                          >
+                            <div
+                              class="sc-bdvvtL Cfvxc transition-transform transform rotate-180"
+                              height="10"
+                              role="img"
+                              width="10"
+                            >
+                              <svg>
+                                chevron-down-small.svg
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                      </th>
+                      <th
+                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
+                        colspan="1"
+                        data-testid="table__th--1"
+                        role="columnheader"
+                        style="cursor: pointer;"
+                        title="Toggle SortBy"
+                      >
+                        <div
+                          class="flex flex-inline align-top justify-end flex-row-reverse"
+                        >
+                          <div>
+                            Balance
+                          </div>
+                          <div
+                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
+                          >
+                            <div
+                              class="sc-bdvvtL Cfvxc transition-transform transform rotate-180"
+                              height="10"
+                              role="img"
+                              width="10"
+                            >
+                              <svg>
+                                chevron-down-small.svg
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                      </th>
+                      <th
+                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
+                        colspan="1"
+                        data-testid="table__th--2"
+                        role="columnheader"
+                        style="cursor: pointer;"
+                        title="Toggle SortBy"
+                      >
+                        <div
+                          class="flex flex-inline align-top justify-end flex-row-reverse"
+                        >
+                          <div>
+                            Currency
+                          </div>
+                          <div
+                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
+                          >
+                            <div
+                              class="sc-bdvvtL Cfvxc transition-transform transform rotate-180"
+                              height="10"
+                              role="img"
+                              width="10"
+                            >
+                              <svg>
+                                chevron-down-small.svg
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                      </th>
+                      <th
+                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
+                        colspan="1"
+                        data-testid="table__th--3"
+                        role="columnheader"
+                        style="cursor: pointer;"
+                        title="Toggle SortBy"
+                      >
+                        <div
+                          class="flex flex-inline align-top justify-end flex-row-reverse"
+                        >
+                          <div>
+                            %
+                          </div>
+                          <div
+                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
+                          >
+                            <div
+                              class="sc-bdvvtL Cfvxc transition-transform transform rotate-180"
+                              height="10"
+                              role="img"
+                              width="10"
+                            >
+                              <svg>
+                                chevron-down-small.svg
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody
+                    role="rowgroup"
+                  >
+                    <tr
+                      class="TableRow__TableRowStyled-sc-y9j4av-0 jRikRC"
+                      data-testid="TableRow"
+                    >
+                      <td>
+                        <div
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx space-x-3"
+                        >
+                          <div
+                            class="w-1 h-5 rounded bg-theme-success-600"
+                          />
+                          <span
+                            class="font-semibold"
+                          >
+                            ARK
+                          </span>
+                        </div>
+                      </td>
+                      <td>
+                        <div
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD justify-end"
+                        >
+                          <span
+                            class="whitespace-nowrap font-semibold"
+                            data-testid="Amount"
+                          >
+                            60 ARK
+                          </span>
+                        </div>
+                      </td>
+                      <td>
+                        <div
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD justify-end"
+                        >
+                          <span
+                            class="whitespace-nowrap text-theme-secondary-text font-semibold"
+                            data-testid="Amount"
+                          >
+                            $60.00
+                          </span>
+                        </div>
+                      </td>
+                      <td>
+                        <div
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end"
+                        >
+                          <span
+                            class="text-theme-secondary-text font-semibold"
+                          >
+                            60%
+                          </span>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr
+                      class="TableRow__TableRowStyled-sc-y9j4av-0 jRikRC"
+                      data-testid="TableRow"
+                    >
+                      <td>
+                        <div
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx space-x-3"
+                        >
+                          <div
+                            class="w-1 h-5 rounded bg-theme-warning-600"
+                          />
+                          <span
+                            class="font-semibold"
+                          >
+                            LSK
+                          </span>
+                        </div>
+                      </td>
+                      <td>
+                        <div
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD justify-end"
+                        >
+                          <span
+                            class="whitespace-nowrap font-semibold"
+                            data-testid="Amount"
+                          >
+                            30 LSK
+                          </span>
+                        </div>
+                      </td>
+                      <td>
+                        <div
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD justify-end"
+                        >
+                          <span
+                            class="whitespace-nowrap text-theme-secondary-text font-semibold"
+                            data-testid="Amount"
+                          >
+                            $30.00
+                          </span>
+                        </div>
+                      </td>
+                      <td>
+                        <div
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end"
+                        >
+                          <span
+                            class="text-theme-secondary-text font-semibold"
+                          >
+                            30%
+                          </span>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr
+                      class="TableRow__TableRowStyled-sc-y9j4av-0 jRikRC"
+                      data-testid="TableRow"
+                    >
+                      <td>
+                        <div
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx space-x-3"
+                        >
+                          <div
+                            class="w-1 h-5 rounded bg-theme-info-600"
+                          />
+                          <span
+                            class="font-semibold"
+                          >
+                            SOL
+                          </span>
+                        </div>
+                      </td>
+                      <td>
+                        <div
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD justify-end"
+                        >
+                          <span
+                            class="whitespace-nowrap font-semibold"
+                            data-testid="Amount"
+                          >
+                            10 SOL
+                          </span>
+                        </div>
+                      </td>
+                      <td>
+                        <div
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD justify-end"
+                        >
+                          <span
+                            class="whitespace-nowrap text-theme-secondary-text font-semibold"
+                            data-testid="Amount"
+                          >
+                            $10.00
+                          </span>
+                        </div>
+                      </td>
+                      <td>
+                        <div
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end"
+                        >
+                          <span
+                            class="text-theme-secondary-text font-semibold"
+                          >
+                            10%
+                          </span>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
