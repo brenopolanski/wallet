@@ -1,4 +1,12 @@
-import isIPFS from "is-ipfs";
+import { CID } from "multiformats";
+
+const isCID = (hash: string): boolean => {
+	try {
+		return Boolean(CID.parse(hash));
+	} catch {
+		return false;
+	}
+};
 
 export const sendIpfs = (t: any) => ({
 	hash: () => ({
@@ -6,7 +14,7 @@ export const sendIpfs = (t: any) => ({
 			field: t("TRANSACTION.IPFS_HASH"),
 		}),
 		validate: (value: string) =>
-			isIPFS.cid(value) ||
+			isCID(value) ||
 			t("COMMON.VALIDATION.FIELD_INVALID", {
 				field: t("TRANSACTION.IPFS_HASH"),
 			}),

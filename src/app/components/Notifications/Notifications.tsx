@@ -6,13 +6,10 @@ import { NotificationTransactionsTable } from "domains/transaction/components/Tr
 import React, { useRef } from "react";
 import { useTranslation } from "react-i18next";
 
-import {
-	NotificationItem,
-	NotificationItemProperties,
-	NotificationsProperties,
-	NotificationsWrapper,
-	useNotifications,
-} from ".";
+import { NotificationItemProperties, NotificationsProperties } from "./contracts";
+import { useNotifications } from "./hooks/use-notifications";
+import { NotificationItem } from "./NotificationItem";
+import { NotificationsWrapper } from "./styles";
 
 export const Notifications = ({ profile, onNotificationAction, onTransactionClick }: NotificationsProperties) => {
 	const { t } = useTranslation();

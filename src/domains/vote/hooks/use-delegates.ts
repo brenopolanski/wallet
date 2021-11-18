@@ -1,4 +1,4 @@
-import { Contracts, Environment } from "@payvo/profiles";
+import { Contracts, Environment } from "@payvo/sdk-profiles";
 import { FilterOption } from "domains/vote/components/VotesFilter";
 import { useCallback, useMemo, useState } from "react";
 import { assertWallet } from "utils/assertions";
@@ -80,9 +80,10 @@ export const useDelegates = ({
 		[profile],
 	);
 
-	const resignedDelegateVotes = useMemo(() => currentVotes.filter(({ wallet }) => wallet?.isResignedDelegate()), [
-		currentVotes,
-	]);
+	const resignedDelegateVotes = useMemo(
+		() => currentVotes.filter(({ wallet }) => wallet?.isResignedDelegate()),
+		[currentVotes],
+	);
 
 	return {
 		currentVotes,

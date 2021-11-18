@@ -62,7 +62,7 @@ export const PluginSpecs = ({
 }: Properties) => {
 	const { t } = useTranslation();
 
-	const { renderPluginStatus } = usePluginStatus();
+	const { getPluginStatus } = usePluginStatus();
 
 	return (
 		<div className="flex justify-between space-4">
@@ -93,7 +93,7 @@ export const PluginSpecs = ({
 
 				<GridCol padding="pl-6">
 					<GridItem label={t("COMMON.STATUS")}>
-						<span>{renderPluginStatus({ isEnabled, isInstalled })}</span>
+						<span>{getPluginStatus({ isEnabled, isInstalled })}</span>
 					</GridItem>
 				</GridCol>
 			</div>

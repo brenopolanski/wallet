@@ -1,4 +1,4 @@
-import { Contracts, DTO } from "@payvo/profiles";
+import { Contracts, DTO } from "@payvo/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { httpClient } from "app/services";
 import nock from "nock";

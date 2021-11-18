@@ -30,7 +30,9 @@ export const MultiPaymentDetail = ({ isOpen, transaction, aliases, onClose }: Tr
 
 			recipients.push({
 				...recipient,
+				// @ts-ignore
 				alias: aliases?.recipients[index].alias,
+				// @ts-ignore
 				isDelegate: aliases?.recipients[index].isDelegate,
 			});
 		}

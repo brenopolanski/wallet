@@ -1,5 +1,5 @@
-import { Contracts, DTO } from "@payvo/profiles";
 import { Services } from "@payvo/sdk";
+import { Contracts, DTO } from "@payvo/sdk-profiles";
 import { Form } from "app/components/Form";
 import { Page, Section } from "app/components/Layout";
 import { StepIndicator } from "app/components/StepIndicator";
@@ -20,8 +20,10 @@ import { useForm } from "react-hook-form";
 import { useHistory } from "react-router-dom";
 import { assertProfile, assertWallet } from "utils/assertions";
 
-import { FormStep, ReviewStep, SummaryStep } from ".";
+import { FormStep } from "./FormStep";
 import { VoteLedgerReview } from "./LedgerReview";
+import { ReviewStep } from "./ReviewStep";
+import { SummaryStep } from "./SummaryStep";
 
 enum Step {
 	FormStep = 1,
@@ -46,7 +48,7 @@ export const SendVote = () => {
 	const [activeTab, setActiveTab] = useState<Step>(Step.FormStep);
 	const [unvotes, setUnvotes] = useState<Contracts.VoteRegistryItem[]>([]);
 	const [votes, setVotes] = useState<Contracts.VoteRegistryItem[]>([]);
-	const [transaction, setTransaction] = useState((null as unknown) as DTO.ExtendedSignedTransactionData);
+	const [transaction, setTransaction] = useState(null as unknown as DTO.ExtendedSignedTransactionData);
 	const [errorMessage, setErrorMessage] = useState<string | undefined>();
 
 	const form = useForm({ mode: "onChange" });
@@ -81,13 +83,8 @@ export const SendVote = () => {
 		}
 	}, [activeWallet, networks, register, setValue, common, getValues, sendVote, fees]);
 
-	const {
-		dismissFeeWarning,
-		feeWarningVariant,
-		requireFeeConfirmation,
-		showFeeWarning,
-		setShowFeeWarning,
-	} = useFeeConfirmation(fee, fees);
+	const { dismissFeeWarning, feeWarningVariant, requireFeeConfirmation, showFeeWarning, setShowFeeWarning } =
+		useFeeConfirmation(fee, fees);
 
 	useEffect(() => {
 		if (unvoteDelegates.length > 0 && unvotes.length === 0) {

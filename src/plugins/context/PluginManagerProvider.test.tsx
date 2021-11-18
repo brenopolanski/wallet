@@ -1,13 +1,13 @@
-import { Contracts, Profile } from "@payvo/profiles";
+import { Contracts, Profile } from "@payvo/sdk-profiles";
 import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { EnvironmentProvider } from "app/contexts";
-import electron, { ipcRenderer } from "electron";
+import electron from "electron";
 import nock from "nock";
 import { PluginController, PluginManager } from "plugins/core";
 import { PluginConfigurationData } from "plugins/core/configuration";
 import React, { useState } from "react";
-import { act, env, getDefaultProfileId } from "utils/testing-library";
+import { env, getDefaultProfileId } from "utils/testing-library";
 
 import { PluginManagerProvider, usePluginManagerContext } from "./PluginManagerProvider";
 
@@ -186,24 +186,27 @@ describe("PluginManagerProvider", () => {
 	});
 
 	it("should install plugin from provider", async () => {
-		const ipcRendererSpy = jest.spyOn(ipcRenderer, "invoke").mockImplementation((channel) => {
+		const ipcRendererSpy = jest.spyOn(electron.ipcRenderer, "invoke").mockImplementation((channel: string) => {
 			if (channel === "plugin:install") {
-				return "/plugins/test-plugin";
+				return Promise.resolve("/plugins/test-plugin");
 			}
 
 			if (channel === "plugin:loader-fs.find") {
-				return {
+				return Promise.resolve({
 					config: { keywords: ["@payvo", "wallet-plugin"], name: "test-plugin", version: "0.0.1" },
 					dir: "/plugins/test-plugin",
 					source: () => void 0,
 					sourcePath: "/plugins/test-plugin/index.js",
-				};
+				});
 			}
+
+			return Promise.resolve();
 		});
 
 		const Component = () => {
 			const { fetchPluginPackages, allPlugins, installPlugin } = usePluginManagerContext();
 			const onClick = () => fetchPluginPackages();
+
 			return (
 				<div>
 					<button onClick={onClick}>Fetch</button>
@@ -253,7 +256,7 @@ describe("PluginManagerProvider", () => {
 	});
 
 	it("should download plugin from archive url", async () => {
-		const ipcRendererSpy = jest.spyOn(ipcRenderer, "invoke").mockImplementation((channel) => {
+		const ipcRendererSpy = jest.spyOn(electron.ipcRenderer, "invoke").mockImplementation((channel) => {
 			if (channel === "plugin:download") {
 				return "/plugins/test-plugin";
 			}
@@ -299,7 +302,7 @@ describe("PluginManagerProvider", () => {
 	});
 
 	it("should download plugin from custom url", async () => {
-		const ipcRendererSpy = jest.spyOn(ipcRenderer, "invoke").mockImplementation((channel) => {
+		const ipcRendererSpy = jest.spyOn(electron.ipcRenderer, "invoke").mockImplementation((channel) => {
 			if (channel === "plugin:loader-fs.find") {
 				return {
 					config: { keywords: ["@payvo", "wallet-plugin"], name: "test-plugin", version: "0.0.1" },
@@ -350,7 +353,7 @@ describe("PluginManagerProvider", () => {
 	});
 
 	it("should download plugin from custom url in subdirectory", async () => {
-		const ipcRendererSpy = jest.spyOn(ipcRenderer, "invoke").mockImplementation((channel) => {
+		const ipcRendererSpy = jest.spyOn(electron.ipcRenderer, "invoke").mockImplementation((channel) => {
 			if (channel === "plugin:loader-fs.find") {
 				return {
 					config: { keywords: ["@payvo", "wallet-plugin"], name: "test-plugin", version: "0.0.1" },
@@ -583,18 +586,20 @@ describe("PluginManagerProvider", () => {
 	});
 
 	it("should update plugin", async () => {
-		jest.useFakeTimers();
 		const plugin = new PluginController(
 			{
-				"desktop-wallet": { minimumVersion: "4.0.0" },
-				name: "@dated/delegate-calculator-wallet-plugin",
+				archiveUrl:
+					"https://registry.npmjs.org/@payvo/ark-explorer-wallet-plugin/-/ark-explorer-wallet-plugin-1.0.0.tgz",
+				"desktop-wallet": { minimumVersion: "0.0.0" },
+				name: "@payvo/ark-explorer-wallet-plugin",
 				version: "0.0.1",
 			},
 			() => void 0,
 		);
+
 		manager.plugins().push(plugin);
 
-		const onSpy = jest.spyOn(ipcRenderer, "on").mockImplementation((channel, listener) => {
+		const onSpy = jest.spyOn(electron.ipcRenderer, "on").mockImplementation((channel, listener) => {
 			if (channel === "plugin:download-progress") {
 				listener(undefined, {
 					name: plugin.config().name(),
@@ -602,11 +607,17 @@ describe("PluginManagerProvider", () => {
 					totalBytes: 200,
 					transferredBytes: 200,
 				});
-				listener(undefined, { name: "other-plugin", percent: 1, totalBytes: 200, transferredBytes: 200 });
+
+				listener(undefined, {
+					name: "other download in progress",
+					percent: 0.5,
+					totalBytes: 200,
+					transferredBytes: 100,
+				});
 			}
 		});
 
-		const ipcRendererSpy = jest.spyOn(ipcRenderer, "invoke").mockImplementation((channel) => {
+		const ipcRendererSpy = jest.spyOn(electron.ipcRenderer, "invoke").mockImplementation((channel) => {
 			if (channel === "plugin:install") {
 				return Promise.resolve("/plugins/test-plugin");
 			}
@@ -615,7 +626,7 @@ describe("PluginManagerProvider", () => {
 				return Promise.resolve({
 					config: {
 						keywords: ["@payvo", "wallet-plugin"],
-						name: "@dated/delegate-calculator-wallet-plugin",
+						name: plugin.config().name(),
 						version: "1.0.0",
 					},
 					dir: "/plugins/test-plugin",
@@ -635,33 +646,29 @@ describe("PluginManagerProvider", () => {
 			const {
 				fetchPluginPackages,
 				allPlugins,
+				mapConfigToPluginData,
 				updatePlugin,
-				checkUpdateStatus,
 				updatingStats,
 			} = usePluginManagerContext();
-			const onClick = () => fetchPluginPackages();
+			const pluginItems = allPlugins.map(mapConfigToPluginData.bind(null, profile));
 
 			return (
 				<div>
-					<button onClick={onClick}>Fetch</button>
+					<button onClick={() => fetchPluginPackages()}>Fetch</button>
 					<ul>
-						{allPlugins.map((package_) => {
-							const updateStatus = checkUpdateStatus(package_.id());
-
-							return (
-								<li key={package_.name()}>
-									<span>{package_.name()}</span>
-									{updatingStats[package_.name()]?.completed ? (
-										<span>Update Completed</span>
-									) : updateStatus.isAvailable ? (
-										<span>Update Available</span>
-									) : null}
-									<button onClick={() => updatePlugin({ id: package_.name() }, profile.id())}>
-										Update
+						{pluginItems.map((pluginItem) => (
+							<li key={pluginItem.id}>
+								{pluginItem.updateStatus.isAvailable ? (
+									<button onClick={() => updatePlugin(pluginItem, profile.id())}>
+										Status: update available. Click to update
 									</button>
-								</li>
-							);
-						})}
+								) : (
+									<span>Status: no update available</span>
+								)}
+
+								{updatingStats[pluginItem.id]?.completed && <span>Status: update completed</span>}
+							</li>
+						))}
 					</ul>
 				</div>
 			);
@@ -677,37 +684,35 @@ describe("PluginManagerProvider", () => {
 
 		userEvent.click(screen.getByText("Fetch"));
 
-		await screen.findByText("Update Available");
+		await screen.findByText("Status: update available. Click to update");
 
-		userEvent.click(screen.getAllByText("Update")[0]);
+		userEvent.click(screen.getByText("Status: update available. Click to update"));
 
 		await waitFor(() =>
 			expect(ipcRendererSpy).toHaveBeenCalledWith("plugin:download", {
-				name: "@dated/delegate-calculator-wallet-plugin",
-				url:
-					"https://registry.npmjs.org/@dated/delegate-calculator-wallet-plugin/-/delegate-calculator-wallet-plugin-1.0.0.tgz",
+				name: plugin.config().name(),
+				url: plugin.config().archiveUrl(),
 			}),
 		);
 
 		await waitFor(() =>
 			expect(ipcRendererSpy).toHaveBeenCalledWith("plugin:install", {
-				name: "@dated/delegate-calculator-wallet-plugin",
+				name: plugin.config().name(),
 				profileId: profile.id(),
 				savedPath: "/plugins/temp/test-plugin",
 			}),
 		);
 
 		await waitFor(() =>
-			expect(manager.plugins().findById("@dated/delegate-calculator-wallet-plugin")?.config().version()).toBe(
-				"1.0.0",
-			),
+			expect(manager.plugins().findById(plugin.config().name())?.config().version()).toBe("1.0.0"),
 		);
 
-		act(() => {
-			jest.runOnlyPendingTimers();
-		});
-
-		await screen.findByText("Update Completed");
+		await waitFor(
+			() => {
+				expect(screen.getByText("Status: update completed")).toBeInTheDocument();
+			},
+			{ timeout: 2000 },
+		);
 
 		ipcRendererSpy.mockRestore();
 		onSpy.mockRestore();
@@ -727,7 +732,7 @@ describe("PluginManagerProvider", () => {
 		);
 		manager.plugins().push(plugin);
 
-		const ipcRendererSpy = jest.spyOn(ipcRenderer, "invoke").mockImplementation((channel) => {
+		const ipcRendererSpy = jest.spyOn(electron.ipcRenderer, "invoke").mockImplementation((channel) => {
 			if (channel === "plugin:install") {
 				throw new Error();
 			}

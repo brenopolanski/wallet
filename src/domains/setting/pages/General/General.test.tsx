@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { useAccentColor, useTheme } from "app/hooks";

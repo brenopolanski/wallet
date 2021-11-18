@@ -1,4 +1,4 @@
-import { Currency } from "@payvo/intl";
+import { Currency } from "@payvo/sdk-intl";
 import React, { useEffect, useState } from "react";
 
 import { Input } from "./Input";

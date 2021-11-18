@@ -1,5 +1,5 @@
 /* eslint-disable max-lines-per-function */
-import { Contracts, Environment } from "@payvo/profiles";
+import { Contracts, Environment } from "@payvo/sdk-profiles";
 import { Button } from "app/components/Button";
 import { Checkbox } from "app/components/Checkbox";
 import { DotNavigation } from "app/components/DotNavigation";
@@ -26,16 +26,8 @@ const Banner = ({ step }: { step: WelcomeModalStep }) => {
 export const WelcomeModal = ({ environment, profile }: { environment: Environment; profile: Contracts.IProfile }) => {
 	const { t } = useTranslation();
 
-	const {
-		show,
-		showAgain,
-		toggleShowAgain,
-		onClose,
-		goToNextStep,
-		setStep,
-		goToPreviousStep,
-		step,
-	} = useWelcomeModal(environment, profile);
+	const { show, showAgain, toggleShowAgain, onClose, goToNextStep, setStep, goToPreviousStep, step } =
+		useWelcomeModal(environment, profile);
 
 	return (
 		<Modal

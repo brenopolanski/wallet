@@ -1,5 +1,5 @@
-import { DTO } from "@payvo/profiles";
 import { Services } from "@payvo/sdk";
+import { DTO } from "@payvo/sdk-profiles";
 import { Form } from "app/components/Form";
 import { Page, Section } from "app/components/Layout";
 import { StepIndicator } from "app/components/StepIndicator";
@@ -19,8 +19,10 @@ import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 import { assertWallet } from "utils/assertions";
 
-import { FormStep, ReviewStep, SummaryStep } from ".";
+import { FormStep } from "./FormStep";
 import { IpfsLedgerReview } from "./LedgerReview";
+import { ReviewStep } from "./ReviewStep";
+import { SummaryStep } from "./SummaryStep";
 
 enum Step {
 	FormStep = 1,
@@ -35,7 +37,7 @@ export const SendIpfs = () => {
 	const history = useHistory();
 
 	const [activeTab, setActiveTab] = useState<Step>(Step.FormStep);
-	const [transaction, setTransaction] = useState((null as unknown) as DTO.ExtendedSignedTransactionData);
+	const [transaction, setTransaction] = useState(null as unknown as DTO.ExtendedSignedTransactionData);
 	const [errorMessage, setErrorMessage] = useState<string | undefined>();
 
 	const { env, persist } = useEnvironmentContext();
@@ -46,7 +48,7 @@ export const SendIpfs = () => {
 
 	const form = useForm({ mode: "onChange" });
 
-	const { hasDeviceAvailable, isConnected, connect, transport } = useLedgerContext();
+	const { hasDeviceAvailable, isConnected, connect } = useLedgerContext();
 	const { clearErrors, formState, getValues, handleSubmit, register, setValue, watch } = form;
 	const { isDirty, isValid, isSubmitting } = formState;
 
@@ -76,13 +78,8 @@ export const SendIpfs = () => {
 		}
 	}, [activeWallet, networks, register, setValue, t, fees, sendIpfs, common]);
 
-	const {
-		dismissFeeWarning,
-		feeWarningVariant,
-		requireFeeConfirmation,
-		showFeeWarning,
-		setShowFeeWarning,
-	} = useFeeConfirmation(fee, fees);
+	const { dismissFeeWarning, feeWarningVariant, requireFeeConfirmation, showFeeWarning, setShowFeeWarning } =
+		useFeeConfirmation(fee, fees);
 
 	useKeydown("Enter", () => {
 		const isButton = (document.activeElement as any)?.type === "button";
@@ -97,17 +94,8 @@ export const SendIpfs = () => {
 	const submitForm = async () => {
 		clearErrors("mnemonic");
 
-		const {
-			fee,
-			mnemonic,
-			secondMnemonic,
-			hash,
-			encryptionPassword,
-			wif,
-			privateKey,
-			secret,
-			secondSecret,
-		} = getValues();
+		const { fee, mnemonic, secondMnemonic, hash, encryptionPassword, wif, privateKey, secret, secondSecret } =
+			getValues();
 
 		const signatory = await activeWallet.signatoryFactory().make({
 			encryptionPassword,
@@ -128,7 +116,7 @@ export const SendIpfs = () => {
 		try {
 			if (activeWallet.isLedger()) {
 				await connect(activeProfile, activeWallet.coinId(), activeWallet.networkId());
-				await activeWallet.ledger().connect(transport);
+				await activeWallet.ledger().connect();
 			}
 
 			const abortSignal = abortReference.current?.signal;

@@ -7,7 +7,7 @@ import React, { FC, useCallback, useMemo } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import { Column } from "react-table";
 
-import { GridWallet, WalletListProperties } from ".";
+import { GridWallet, WalletListProperties } from "./Wallets.contracts";
 
 export const WalletsList: FC<WalletListProperties> = ({
 	hasMore,

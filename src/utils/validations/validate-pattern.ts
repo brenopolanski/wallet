@@ -1,4 +1,4 @@
-import { sortBy, uniq } from "@arkecosystem/utils";
+import { sortBy, uniq } from "@payvo/sdk-helpers";
 
 export const validatePattern = (t: any, value: string, regexp: RegExp) => {
 	const matches = value

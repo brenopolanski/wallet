@@ -1,9 +1,9 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 import { env, getDefaultProfileId, render } from "utils/testing-library";
 
-import { FilterTransactions } from ".";
+import { FilterTransactions } from "./FilterTransactions";
 
 let profile: Contracts.IProfile;
 

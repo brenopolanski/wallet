@@ -7,7 +7,7 @@ exports[`TransactionTable loading state should render 1`] = `
     data-testid="TransactionTable"
   >
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 fDAVsO -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jHfvAR -mt-3"
       role="table"
     >
       <table
@@ -51,7 +51,7 @@ exports[`TransactionTable loading state should render 1`] = `
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity ml-2"
                 >
                   <div
-                    class="sc-bdnxRM AkeAK transition-transform"
+                    class="sc-bdvvtL Cfvxc transition-transform"
                     height="10"
                     role="img"
                     width="10"
@@ -109,7 +109,7 @@ exports[`TransactionTable loading state should render 1`] = `
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                 >
                   <div
-                    class="sc-bdnxRM AkeAK transition-transform"
+                    class="sc-bdvvtL Cfvxc transition-transform"
                     height="10"
                     role="img"
                     width="10"
@@ -127,12 +127,12 @@ exports[`TransactionTable loading state should render 1`] = `
           role="rowgroup"
         >
           <tr
-            class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 jRikRC"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx"
               >
                 <span>
                   <span
@@ -151,7 +151,7 @@ exports[`TransactionTable loading state should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD"
               >
                 <span>
                   <span
@@ -170,7 +170,7 @@ exports[`TransactionTable loading state should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD"
               >
                 <div
                   class="flex items-center mr-4 space-x-2"
@@ -219,7 +219,7 @@ exports[`TransactionTable loading state should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD"
               >
                 <div
                   class="mr-4"
@@ -255,7 +255,7 @@ exports[`TransactionTable loading state should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD justify-end"
               >
                 <span
                   class="flex items-center space-x-1 h-7"
@@ -293,7 +293,7 @@ exports[`TransactionTable loading state should render 1`] = `
               class="hidden xl:block"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end"
               >
                 <span
                   class="flex items-center space-x-1"
@@ -329,12 +329,12 @@ exports[`TransactionTable loading state should render 1`] = `
             </td>
           </tr>
           <tr
-            class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 jRikRC"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx"
               >
                 <span>
                   <span
@@ -353,7 +353,7 @@ exports[`TransactionTable loading state should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD"
               >
                 <span>
                   <span
@@ -372,7 +372,7 @@ exports[`TransactionTable loading state should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD"
               >
                 <div
                   class="flex items-center mr-4 space-x-2"
@@ -421,7 +421,7 @@ exports[`TransactionTable loading state should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD"
               >
                 <div
                   class="mr-4"
@@ -457,7 +457,7 @@ exports[`TransactionTable loading state should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD justify-end"
               >
                 <span
                   class="flex items-center space-x-1 h-7"
@@ -495,7 +495,7 @@ exports[`TransactionTable loading state should render 1`] = `
               class="hidden xl:block"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end"
               >
                 <span
                   class="flex items-center space-x-1"
@@ -531,12 +531,12 @@ exports[`TransactionTable loading state should render 1`] = `
             </td>
           </tr>
           <tr
-            class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 jRikRC"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx"
               >
                 <span>
                   <span
@@ -555,7 +555,7 @@ exports[`TransactionTable loading state should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD"
               >
                 <span>
                   <span
@@ -574,7 +574,7 @@ exports[`TransactionTable loading state should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD"
               >
                 <div
                   class="flex items-center mr-4 space-x-2"
@@ -623,7 +623,7 @@ exports[`TransactionTable loading state should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD"
               >
                 <div
                   class="mr-4"
@@ -659,7 +659,7 @@ exports[`TransactionTable loading state should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD justify-end"
               >
                 <span
                   class="flex items-center space-x-1 h-7"
@@ -697,7 +697,7 @@ exports[`TransactionTable loading state should render 1`] = `
               class="hidden xl:block"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end"
               >
                 <span
                   class="flex items-center space-x-1"
@@ -733,12 +733,12 @@ exports[`TransactionTable loading state should render 1`] = `
             </td>
           </tr>
           <tr
-            class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 jRikRC"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx"
               >
                 <span>
                   <span
@@ -757,7 +757,7 @@ exports[`TransactionTable loading state should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD"
               >
                 <span>
                   <span
@@ -776,7 +776,7 @@ exports[`TransactionTable loading state should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD"
               >
                 <div
                   class="flex items-center mr-4 space-x-2"
@@ -825,7 +825,7 @@ exports[`TransactionTable loading state should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD"
               >
                 <div
                   class="mr-4"
@@ -861,7 +861,7 @@ exports[`TransactionTable loading state should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD justify-end"
               >
                 <span
                   class="flex items-center space-x-1 h-7"
@@ -899,7 +899,7 @@ exports[`TransactionTable loading state should render 1`] = `
               class="hidden xl:block"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end"
               >
                 <span
                   class="flex items-center space-x-1"
@@ -935,12 +935,12 @@ exports[`TransactionTable loading state should render 1`] = `
             </td>
           </tr>
           <tr
-            class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 jRikRC"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx"
               >
                 <span>
                   <span
@@ -959,7 +959,7 @@ exports[`TransactionTable loading state should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD"
               >
                 <span>
                   <span
@@ -978,7 +978,7 @@ exports[`TransactionTable loading state should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD"
               >
                 <div
                   class="flex items-center mr-4 space-x-2"
@@ -1027,7 +1027,7 @@ exports[`TransactionTable loading state should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD"
               >
                 <div
                   class="mr-4"
@@ -1063,7 +1063,7 @@ exports[`TransactionTable loading state should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD justify-end"
               >
                 <span
                   class="flex items-center space-x-1 h-7"
@@ -1101,7 +1101,7 @@ exports[`TransactionTable loading state should render 1`] = `
               class="hidden xl:block"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end"
               >
                 <span
                   class="flex items-center space-x-1"
@@ -1150,7 +1150,7 @@ exports[`TransactionTable loading state should render compact 1`] = `
     data-testid="TransactionTable"
   >
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 fDAVsO -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jHfvAR -mt-3"
       role="table"
     >
       <table
@@ -1194,7 +1194,7 @@ exports[`TransactionTable loading state should render compact 1`] = `
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity ml-2"
                 >
                   <div
-                    class="sc-bdnxRM AkeAK transition-transform"
+                    class="sc-bdvvtL Cfvxc transition-transform"
                     height="10"
                     role="img"
                     width="10"
@@ -1252,7 +1252,7 @@ exports[`TransactionTable loading state should render compact 1`] = `
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                 >
                   <div
-                    class="sc-bdnxRM AkeAK transition-transform"
+                    class="sc-bdvvtL Cfvxc transition-transform"
                     height="10"
                     role="img"
                     width="10"
@@ -1270,12 +1270,12 @@ exports[`TransactionTable loading state should render compact 1`] = `
           role="rowgroup"
         >
           <tr
-            class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 jRikRC"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx"
               >
                 <span>
                   <span
@@ -1294,7 +1294,7 @@ exports[`TransactionTable loading state should render compact 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD"
               >
                 <span>
                   <span
@@ -1313,7 +1313,7 @@ exports[`TransactionTable loading state should render compact 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD"
               >
                 <div
                   class="flex items-center mr-4 space-x-2"
@@ -1362,7 +1362,7 @@ exports[`TransactionTable loading state should render compact 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD"
               >
                 <div
                   class="mr-4"
@@ -1398,7 +1398,7 @@ exports[`TransactionTable loading state should render compact 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD justify-end"
               >
                 <span
                   class="flex items-center space-x-1 h-7"
@@ -1436,7 +1436,7 @@ exports[`TransactionTable loading state should render compact 1`] = `
               class="hidden xl:block"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end"
               >
                 <span
                   class="flex items-center space-x-1"
@@ -1472,12 +1472,12 @@ exports[`TransactionTable loading state should render compact 1`] = `
             </td>
           </tr>
           <tr
-            class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 jRikRC"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx"
               >
                 <span>
                   <span
@@ -1496,7 +1496,7 @@ exports[`TransactionTable loading state should render compact 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD"
               >
                 <span>
                   <span
@@ -1515,7 +1515,7 @@ exports[`TransactionTable loading state should render compact 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD"
               >
                 <div
                   class="flex items-center mr-4 space-x-2"
@@ -1564,7 +1564,7 @@ exports[`TransactionTable loading state should render compact 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD"
               >
                 <div
                   class="mr-4"
@@ -1600,7 +1600,7 @@ exports[`TransactionTable loading state should render compact 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD justify-end"
               >
                 <span
                   class="flex items-center space-x-1 h-7"
@@ -1638,7 +1638,7 @@ exports[`TransactionTable loading state should render compact 1`] = `
               class="hidden xl:block"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end"
               >
                 <span
                   class="flex items-center space-x-1"
@@ -1674,12 +1674,12 @@ exports[`TransactionTable loading state should render compact 1`] = `
             </td>
           </tr>
           <tr
-            class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 jRikRC"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx"
               >
                 <span>
                   <span
@@ -1698,7 +1698,7 @@ exports[`TransactionTable loading state should render compact 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD"
               >
                 <span>
                   <span
@@ -1717,7 +1717,7 @@ exports[`TransactionTable loading state should render compact 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD"
               >
                 <div
                   class="flex items-center mr-4 space-x-2"
@@ -1766,7 +1766,7 @@ exports[`TransactionTable loading state should render compact 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD"
               >
                 <div
                   class="mr-4"
@@ -1802,7 +1802,7 @@ exports[`TransactionTable loading state should render compact 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD justify-end"
               >
                 <span
                   class="flex items-center space-x-1 h-7"
@@ -1840,7 +1840,7 @@ exports[`TransactionTable loading state should render compact 1`] = `
               class="hidden xl:block"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end"
               >
                 <span
                   class="flex items-center space-x-1"
@@ -1876,12 +1876,12 @@ exports[`TransactionTable loading state should render compact 1`] = `
             </td>
           </tr>
           <tr
-            class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 jRikRC"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx"
               >
                 <span>
                   <span
@@ -1900,7 +1900,7 @@ exports[`TransactionTable loading state should render compact 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD"
               >
                 <span>
                   <span
@@ -1919,7 +1919,7 @@ exports[`TransactionTable loading state should render compact 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD"
               >
                 <div
                   class="flex items-center mr-4 space-x-2"
@@ -1968,7 +1968,7 @@ exports[`TransactionTable loading state should render compact 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD"
               >
                 <div
                   class="mr-4"
@@ -2004,7 +2004,7 @@ exports[`TransactionTable loading state should render compact 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD justify-end"
               >
                 <span
                   class="flex items-center space-x-1 h-7"
@@ -2042,7 +2042,7 @@ exports[`TransactionTable loading state should render compact 1`] = `
               class="hidden xl:block"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end"
               >
                 <span
                   class="flex items-center space-x-1"
@@ -2078,12 +2078,12 @@ exports[`TransactionTable loading state should render compact 1`] = `
             </td>
           </tr>
           <tr
-            class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 jRikRC"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx"
               >
                 <span>
                   <span
@@ -2102,7 +2102,7 @@ exports[`TransactionTable loading state should render compact 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD"
               >
                 <span>
                   <span
@@ -2121,7 +2121,7 @@ exports[`TransactionTable loading state should render compact 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD"
               >
                 <div
                   class="flex items-center mr-4 space-x-2"
@@ -2170,7 +2170,7 @@ exports[`TransactionTable loading state should render compact 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD"
               >
                 <div
                   class="mr-4"
@@ -2206,7 +2206,7 @@ exports[`TransactionTable loading state should render compact 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD justify-end"
               >
                 <span
                   class="flex items-center space-x-1 h-7"
@@ -2244,7 +2244,7 @@ exports[`TransactionTable loading state should render compact 1`] = `
               class="hidden xl:block"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end"
               >
                 <span
                   class="flex items-center space-x-1"
@@ -2293,7 +2293,7 @@ exports[`TransactionTable loading state should render with currency column 1`] =
     data-testid="TransactionTable"
   >
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 fDAVsO -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jHfvAR -mt-3"
       role="table"
     >
       <table
@@ -2337,7 +2337,7 @@ exports[`TransactionTable loading state should render with currency column 1`] =
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity ml-2"
                 >
                   <div
-                    class="sc-bdnxRM AkeAK transition-transform"
+                    class="sc-bdvvtL Cfvxc transition-transform"
                     height="10"
                     role="img"
                     width="10"
@@ -2395,7 +2395,7 @@ exports[`TransactionTable loading state should render with currency column 1`] =
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                 >
                   <div
-                    class="sc-bdnxRM AkeAK transition-transform"
+                    class="sc-bdvvtL Cfvxc transition-transform"
                     height="10"
                     role="img"
                     width="10"
@@ -2427,12 +2427,12 @@ exports[`TransactionTable loading state should render with currency column 1`] =
           role="rowgroup"
         >
           <tr
-            class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 jRikRC"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx"
               >
                 <span>
                   <span
@@ -2451,7 +2451,7 @@ exports[`TransactionTable loading state should render with currency column 1`] =
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD"
               >
                 <span>
                   <span
@@ -2470,7 +2470,7 @@ exports[`TransactionTable loading state should render with currency column 1`] =
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD"
               >
                 <div
                   class="flex items-center mr-4 space-x-2"
@@ -2519,7 +2519,7 @@ exports[`TransactionTable loading state should render with currency column 1`] =
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD"
               >
                 <div
                   class="mr-4"
@@ -2555,7 +2555,7 @@ exports[`TransactionTable loading state should render with currency column 1`] =
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD justify-end"
               >
                 <span
                   class="flex items-center space-x-1 h-7"
@@ -2593,7 +2593,7 @@ exports[`TransactionTable loading state should render with currency column 1`] =
               class="hidden xl:block"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end"
               >
                 <span
                   class="flex items-center space-x-1"
@@ -2629,12 +2629,12 @@ exports[`TransactionTable loading state should render with currency column 1`] =
             </td>
           </tr>
           <tr
-            class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 jRikRC"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx"
               >
                 <span>
                   <span
@@ -2653,7 +2653,7 @@ exports[`TransactionTable loading state should render with currency column 1`] =
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD"
               >
                 <span>
                   <span
@@ -2672,7 +2672,7 @@ exports[`TransactionTable loading state should render with currency column 1`] =
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD"
               >
                 <div
                   class="flex items-center mr-4 space-x-2"
@@ -2721,7 +2721,7 @@ exports[`TransactionTable loading state should render with currency column 1`] =
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD"
               >
                 <div
                   class="mr-4"
@@ -2757,7 +2757,7 @@ exports[`TransactionTable loading state should render with currency column 1`] =
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD justify-end"
               >
                 <span
                   class="flex items-center space-x-1 h-7"
@@ -2795,7 +2795,7 @@ exports[`TransactionTable loading state should render with currency column 1`] =
               class="hidden xl:block"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end"
               >
                 <span
                   class="flex items-center space-x-1"
@@ -2831,12 +2831,12 @@ exports[`TransactionTable loading state should render with currency column 1`] =
             </td>
           </tr>
           <tr
-            class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 jRikRC"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx"
               >
                 <span>
                   <span
@@ -2855,7 +2855,7 @@ exports[`TransactionTable loading state should render with currency column 1`] =
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD"
               >
                 <span>
                   <span
@@ -2874,7 +2874,7 @@ exports[`TransactionTable loading state should render with currency column 1`] =
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD"
               >
                 <div
                   class="flex items-center mr-4 space-x-2"
@@ -2923,7 +2923,7 @@ exports[`TransactionTable loading state should render with currency column 1`] =
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD"
               >
                 <div
                   class="mr-4"
@@ -2959,7 +2959,7 @@ exports[`TransactionTable loading state should render with currency column 1`] =
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD justify-end"
               >
                 <span
                   class="flex items-center space-x-1 h-7"
@@ -2997,7 +2997,7 @@ exports[`TransactionTable loading state should render with currency column 1`] =
               class="hidden xl:block"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end"
               >
                 <span
                   class="flex items-center space-x-1"
@@ -3033,12 +3033,12 @@ exports[`TransactionTable loading state should render with currency column 1`] =
             </td>
           </tr>
           <tr
-            class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 jRikRC"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx"
               >
                 <span>
                   <span
@@ -3057,7 +3057,7 @@ exports[`TransactionTable loading state should render with currency column 1`] =
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD"
               >
                 <span>
                   <span
@@ -3076,7 +3076,7 @@ exports[`TransactionTable loading state should render with currency column 1`] =
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD"
               >
                 <div
                   class="flex items-center mr-4 space-x-2"
@@ -3125,7 +3125,7 @@ exports[`TransactionTable loading state should render with currency column 1`] =
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD"
               >
                 <div
                   class="mr-4"
@@ -3161,7 +3161,7 @@ exports[`TransactionTable loading state should render with currency column 1`] =
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD justify-end"
               >
                 <span
                   class="flex items-center space-x-1 h-7"
@@ -3199,7 +3199,7 @@ exports[`TransactionTable loading state should render with currency column 1`] =
               class="hidden xl:block"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end"
               >
                 <span
                   class="flex items-center space-x-1"
@@ -3235,12 +3235,12 @@ exports[`TransactionTable loading state should render with currency column 1`] =
             </td>
           </tr>
           <tr
-            class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 jRikRC"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx"
               >
                 <span>
                   <span
@@ -3259,7 +3259,7 @@ exports[`TransactionTable loading state should render with currency column 1`] =
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD"
               >
                 <span>
                   <span
@@ -3278,7 +3278,7 @@ exports[`TransactionTable loading state should render with currency column 1`] =
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD"
               >
                 <div
                   class="flex items-center mr-4 space-x-2"
@@ -3327,7 +3327,7 @@ exports[`TransactionTable loading state should render with currency column 1`] =
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD"
               >
                 <div
                   class="mr-4"
@@ -3363,7 +3363,7 @@ exports[`TransactionTable loading state should render with currency column 1`] =
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD justify-end"
               >
                 <span
                   class="flex items-center space-x-1 h-7"
@@ -3401,7 +3401,7 @@ exports[`TransactionTable loading state should render with currency column 1`] =
               class="hidden xl:block"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end"
               >
                 <span
                   class="flex items-center space-x-1"
@@ -3450,7 +3450,7 @@ exports[`TransactionTable should render 1`] = `
     data-testid="TransactionTable"
   >
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 fDAVsO -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jHfvAR -mt-3"
       role="table"
     >
       <table
@@ -3494,7 +3494,7 @@ exports[`TransactionTable should render 1`] = `
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity ml-2"
                 >
                   <div
-                    class="sc-bdnxRM AkeAK transition-transform"
+                    class="sc-bdvvtL Cfvxc transition-transform"
                     height="10"
                     role="img"
                     width="10"
@@ -3552,7 +3552,7 @@ exports[`TransactionTable should render 1`] = `
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                 >
                   <div
-                    class="sc-bdnxRM AkeAK transition-transform"
+                    class="sc-bdvvtL Cfvxc transition-transform"
                     height="10"
                     role="img"
                     width="10"
@@ -3570,15 +3570,15 @@ exports[`TransactionTable should render 1`] = `
           role="rowgroup"
         >
           <tr
-            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 ijbCHm group"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  class="Link__AnchorStyled-sc-ec014t-0 eeKUfa group ring-focus"
                   data-ring-focus-margin="-m-1"
                   data-testid="TransactionRow__ID"
                   href="#"
@@ -3586,10 +3586,10 @@ exports[`TransactionTable should render 1`] = `
                   to="https://dexplorer.ark.io/transaction/ea63bf9a4b3eaf75a1dfff721967c45dce64eb7facf1aef29461868681b5c79b"
                 >
                   <span
-                    class="Link__Content-sc-ec014t-1 hUiuRR"
+                    class="Link__Content-sc-ec014t-1 fPOlTq"
                   >
                     <div
-                      class="sc-bdnxRM AFVmm"
+                      class="sc-bdvvtL fCrhkg"
                       height="16"
                       width="16"
                     >
@@ -3603,7 +3603,7 @@ exports[`TransactionTable should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI text-theme-secondary-text"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD text-theme-secondary-text"
               >
                 <span
                   class="whitespace-nowrap"
@@ -3615,7 +3615,7 @@ exports[`TransactionTable should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD space-x-4"
               >
                 <div
                   class="flex items-center space-x-2"
@@ -3625,7 +3625,7 @@ exports[`TransactionTable should render 1`] = `
                     class="w-5 h-5 flex items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
                   >
                     <div
-                      class="sc-bdnxRM NjstW"
+                      class="sc-bdvvtL qGXhc"
                       height="20"
                       width="20"
                     >
@@ -3635,7 +3635,7 @@ exports[`TransactionTable should render 1`] = `
                     </div>
                   </span>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 bzZufz ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -3667,10 +3667,10 @@ exports[`TransactionTable should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD space-x-4"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 bzZufz ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -3712,10 +3712,10 @@ exports[`TransactionTable should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 OOaVy"
+                  class="Label-sc-4akkzw-0 bxfWpB"
                   color="success"
                 >
                   <div
@@ -3735,7 +3735,7 @@ exports[`TransactionTable should render 1`] = `
               class="hidden xl:block"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end"
               >
                 <span
                   class="whitespace-nowrap text-theme-secondary-text"
@@ -3747,15 +3747,15 @@ exports[`TransactionTable should render 1`] = `
             </td>
           </tr>
           <tr
-            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 ijbCHm group"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  class="Link__AnchorStyled-sc-ec014t-0 eeKUfa group ring-focus"
                   data-ring-focus-margin="-m-1"
                   data-testid="TransactionRow__ID"
                   href="#"
@@ -3763,10 +3763,10 @@ exports[`TransactionTable should render 1`] = `
                   to="https://dexplorer.ark.io/transaction/4425c04b0f0406c9a921a4c08e97251dbde5d0d11df2f20c97b08084b45cd09d"
                 >
                   <span
-                    class="Link__Content-sc-ec014t-1 hUiuRR"
+                    class="Link__Content-sc-ec014t-1 fPOlTq"
                   >
                     <div
-                      class="sc-bdnxRM AFVmm"
+                      class="sc-bdvvtL fCrhkg"
                       height="16"
                       width="16"
                     >
@@ -3780,7 +3780,7 @@ exports[`TransactionTable should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI text-theme-secondary-text"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD text-theme-secondary-text"
               >
                 <span
                   class="whitespace-nowrap"
@@ -3792,7 +3792,7 @@ exports[`TransactionTable should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD space-x-4"
               >
                 <div
                   class="flex items-center space-x-2"
@@ -3802,7 +3802,7 @@ exports[`TransactionTable should render 1`] = `
                     class="w-5 h-5 flex items-center border-0 border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400"
                   >
                     <div
-                      class="sc-bdnxRM NjstW"
+                      class="sc-bdvvtL qGXhc"
                       height="20"
                       width="20"
                     >
@@ -3812,7 +3812,7 @@ exports[`TransactionTable should render 1`] = `
                     </div>
                   </span>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 bzZufz ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -3855,10 +3855,10 @@ exports[`TransactionTable should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD space-x-4"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 bzZufz ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -3889,10 +3889,10 @@ exports[`TransactionTable should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 iUZRnl"
+                  class="Label-sc-4akkzw-0 fhDzha"
                   color="danger"
                 >
                   <div
@@ -3912,7 +3912,7 @@ exports[`TransactionTable should render 1`] = `
               class="hidden xl:block"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end"
               >
                 <span
                   class="whitespace-nowrap text-theme-secondary-text"
@@ -3924,15 +3924,15 @@ exports[`TransactionTable should render 1`] = `
             </td>
           </tr>
           <tr
-            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 ijbCHm group"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  class="Link__AnchorStyled-sc-ec014t-0 eeKUfa group ring-focus"
                   data-ring-focus-margin="-m-1"
                   data-testid="TransactionRow__ID"
                   href="#"
@@ -3940,10 +3940,10 @@ exports[`TransactionTable should render 1`] = `
                   to="https://dexplorer.ark.io/transaction/ee3739c4705393f847e41f4ccc7ba436e434a8a430cba18921b2128d6b18f0dd"
                 >
                   <span
-                    class="Link__Content-sc-ec014t-1 hUiuRR"
+                    class="Link__Content-sc-ec014t-1 fPOlTq"
                   >
                     <div
-                      class="sc-bdnxRM AFVmm"
+                      class="sc-bdvvtL fCrhkg"
                       height="16"
                       width="16"
                     >
@@ -3957,7 +3957,7 @@ exports[`TransactionTable should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI text-theme-secondary-text"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD text-theme-secondary-text"
               >
                 <span
                   class="whitespace-nowrap"
@@ -3969,7 +3969,7 @@ exports[`TransactionTable should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD space-x-4"
               >
                 <div
                   class="flex items-center space-x-2"
@@ -3979,7 +3979,7 @@ exports[`TransactionTable should render 1`] = `
                     class="w-5 h-5 flex items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
                   >
                     <div
-                      class="sc-bdnxRM NjstW"
+                      class="sc-bdvvtL qGXhc"
                       height="20"
                       width="20"
                     >
@@ -3989,7 +3989,7 @@ exports[`TransactionTable should render 1`] = `
                     </div>
                   </span>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 bzZufz ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -4021,10 +4021,10 @@ exports[`TransactionTable should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD space-x-4"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 bzZufz ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -4066,10 +4066,10 @@ exports[`TransactionTable should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 OOaVy"
+                  class="Label-sc-4akkzw-0 bxfWpB"
                   color="success"
                 >
                   <div
@@ -4089,7 +4089,7 @@ exports[`TransactionTable should render 1`] = `
               class="hidden xl:block"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end"
               >
                 <span
                   class="whitespace-nowrap text-theme-secondary-text"
@@ -4101,15 +4101,15 @@ exports[`TransactionTable should render 1`] = `
             </td>
           </tr>
           <tr
-            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 ijbCHm group"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  class="Link__AnchorStyled-sc-ec014t-0 eeKUfa group ring-focus"
                   data-ring-focus-margin="-m-1"
                   data-testid="TransactionRow__ID"
                   href="#"
@@ -4117,10 +4117,10 @@ exports[`TransactionTable should render 1`] = `
                   to="https://dexplorer.ark.io/transaction/b0b409f48ed878d98ada880b3d85ff8834f3363d4aff0b9fdcb38fd32acb5320"
                 >
                   <span
-                    class="Link__Content-sc-ec014t-1 hUiuRR"
+                    class="Link__Content-sc-ec014t-1 fPOlTq"
                   >
                     <div
-                      class="sc-bdnxRM AFVmm"
+                      class="sc-bdvvtL fCrhkg"
                       height="16"
                       width="16"
                     >
@@ -4134,7 +4134,7 @@ exports[`TransactionTable should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI text-theme-secondary-text"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD text-theme-secondary-text"
               >
                 <span
                   class="whitespace-nowrap"
@@ -4146,7 +4146,7 @@ exports[`TransactionTable should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD space-x-4"
               >
                 <div
                   class="flex items-center space-x-2"
@@ -4156,7 +4156,7 @@ exports[`TransactionTable should render 1`] = `
                     class="w-5 h-5 flex items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
                   >
                     <div
-                      class="sc-bdnxRM NjstW"
+                      class="sc-bdvvtL qGXhc"
                       height="20"
                       width="20"
                     >
@@ -4166,7 +4166,7 @@ exports[`TransactionTable should render 1`] = `
                     </div>
                   </span>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 bzZufz ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -4198,10 +4198,10 @@ exports[`TransactionTable should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD space-x-4"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 bzZufz ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -4243,10 +4243,10 @@ exports[`TransactionTable should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 OOaVy"
+                  class="Label-sc-4akkzw-0 bxfWpB"
                   color="success"
                 >
                   <div
@@ -4266,7 +4266,7 @@ exports[`TransactionTable should render 1`] = `
               class="hidden xl:block"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end"
               >
                 <span
                   class="whitespace-nowrap text-theme-secondary-text"
@@ -4278,15 +4278,15 @@ exports[`TransactionTable should render 1`] = `
             </td>
           </tr>
           <tr
-            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 ijbCHm group"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  class="Link__AnchorStyled-sc-ec014t-0 eeKUfa group ring-focus"
                   data-ring-focus-margin="-m-1"
                   data-testid="TransactionRow__ID"
                   href="#"
@@ -4294,10 +4294,10 @@ exports[`TransactionTable should render 1`] = `
                   to="https://dexplorer.ark.io/transaction/91097d212e343cb7cebc0cb34f6c7051902fe3072355514145221832bcdc6599"
                 >
                   <span
-                    class="Link__Content-sc-ec014t-1 hUiuRR"
+                    class="Link__Content-sc-ec014t-1 fPOlTq"
                   >
                     <div
-                      class="sc-bdnxRM AFVmm"
+                      class="sc-bdvvtL fCrhkg"
                       height="16"
                       width="16"
                     >
@@ -4311,7 +4311,7 @@ exports[`TransactionTable should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI text-theme-secondary-text"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD text-theme-secondary-text"
               >
                 <span
                   class="whitespace-nowrap"
@@ -4323,7 +4323,7 @@ exports[`TransactionTable should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD space-x-4"
               >
                 <div
                   class="flex items-center space-x-2"
@@ -4333,7 +4333,7 @@ exports[`TransactionTable should render 1`] = `
                     class="w-5 h-5 flex items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
                   >
                     <div
-                      class="sc-bdnxRM NjstW"
+                      class="sc-bdvvtL qGXhc"
                       height="20"
                       width="20"
                     >
@@ -4343,7 +4343,7 @@ exports[`TransactionTable should render 1`] = `
                     </div>
                   </span>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 bzZufz ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -4375,10 +4375,10 @@ exports[`TransactionTable should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD space-x-4"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 bzZufz ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -4420,10 +4420,10 @@ exports[`TransactionTable should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 OOaVy"
+                  class="Label-sc-4akkzw-0 bxfWpB"
                   color="success"
                 >
                   <div
@@ -4443,7 +4443,7 @@ exports[`TransactionTable should render 1`] = `
               class="hidden xl:block"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end"
               >
                 <span
                   class="whitespace-nowrap text-theme-secondary-text"
@@ -4455,15 +4455,15 @@ exports[`TransactionTable should render 1`] = `
             </td>
           </tr>
           <tr
-            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 ijbCHm group"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  class="Link__AnchorStyled-sc-ec014t-0 eeKUfa group ring-focus"
                   data-ring-focus-margin="-m-1"
                   data-testid="TransactionRow__ID"
                   href="#"
@@ -4471,10 +4471,10 @@ exports[`TransactionTable should render 1`] = `
                   to="https://dexplorer.ark.io/transaction/e6fcdca7c3f95f809c784ace7d360710128f2070ee95e21beee87312ba632d4b"
                 >
                   <span
-                    class="Link__Content-sc-ec014t-1 hUiuRR"
+                    class="Link__Content-sc-ec014t-1 fPOlTq"
                   >
                     <div
-                      class="sc-bdnxRM AFVmm"
+                      class="sc-bdvvtL fCrhkg"
                       height="16"
                       width="16"
                     >
@@ -4488,7 +4488,7 @@ exports[`TransactionTable should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI text-theme-secondary-text"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD text-theme-secondary-text"
               >
                 <span
                   class="whitespace-nowrap"
@@ -4500,7 +4500,7 @@ exports[`TransactionTable should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD space-x-4"
               >
                 <div
                   class="flex items-center space-x-2"
@@ -4510,7 +4510,7 @@ exports[`TransactionTable should render 1`] = `
                     class="w-5 h-5 flex items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
                   >
                     <div
-                      class="sc-bdnxRM NjstW"
+                      class="sc-bdvvtL qGXhc"
                       height="20"
                       width="20"
                     >
@@ -4520,7 +4520,7 @@ exports[`TransactionTable should render 1`] = `
                     </div>
                   </span>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 bzZufz ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -4552,10 +4552,10 @@ exports[`TransactionTable should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD space-x-4"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 bzZufz ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -4597,10 +4597,10 @@ exports[`TransactionTable should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 OOaVy"
+                  class="Label-sc-4akkzw-0 bxfWpB"
                   color="success"
                 >
                   <div
@@ -4620,7 +4620,7 @@ exports[`TransactionTable should render 1`] = `
               class="hidden xl:block"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end"
               >
                 <span
                   class="whitespace-nowrap text-theme-secondary-text"
@@ -4632,15 +4632,15 @@ exports[`TransactionTable should render 1`] = `
             </td>
           </tr>
           <tr
-            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 ijbCHm group"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  class="Link__AnchorStyled-sc-ec014t-0 eeKUfa group ring-focus"
                   data-ring-focus-margin="-m-1"
                   data-testid="TransactionRow__ID"
                   href="#"
@@ -4648,10 +4648,10 @@ exports[`TransactionTable should render 1`] = `
                   to="https://dexplorer.ark.io/transaction/59c8867267bed07b90567a6ac610a5b4dd4431e07789987b50f3804219618520"
                 >
                   <span
-                    class="Link__Content-sc-ec014t-1 hUiuRR"
+                    class="Link__Content-sc-ec014t-1 fPOlTq"
                   >
                     <div
-                      class="sc-bdnxRM AFVmm"
+                      class="sc-bdvvtL fCrhkg"
                       height="16"
                       width="16"
                     >
@@ -4665,7 +4665,7 @@ exports[`TransactionTable should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI text-theme-secondary-text"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD text-theme-secondary-text"
               >
                 <span
                   class="whitespace-nowrap"
@@ -4677,7 +4677,7 @@ exports[`TransactionTable should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD space-x-4"
               >
                 <div
                   class="flex items-center space-x-2"
@@ -4687,7 +4687,7 @@ exports[`TransactionTable should render 1`] = `
                     class="w-5 h-5 flex items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
                   >
                     <div
-                      class="sc-bdnxRM NjstW"
+                      class="sc-bdvvtL qGXhc"
                       height="20"
                       width="20"
                     >
@@ -4697,7 +4697,7 @@ exports[`TransactionTable should render 1`] = `
                     </div>
                   </span>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 bzZufz ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -4729,10 +4729,10 @@ exports[`TransactionTable should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD space-x-4"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 bzZufz ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -4774,10 +4774,10 @@ exports[`TransactionTable should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 OOaVy"
+                  class="Label-sc-4akkzw-0 bxfWpB"
                   color="success"
                 >
                   <div
@@ -4797,7 +4797,7 @@ exports[`TransactionTable should render 1`] = `
               class="hidden xl:block"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end"
               >
                 <span
                   class="whitespace-nowrap text-theme-secondary-text"
@@ -4809,15 +4809,15 @@ exports[`TransactionTable should render 1`] = `
             </td>
           </tr>
           <tr
-            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 ijbCHm group"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  class="Link__AnchorStyled-sc-ec014t-0 eeKUfa group ring-focus"
                   data-ring-focus-margin="-m-1"
                   data-testid="TransactionRow__ID"
                   href="#"
@@ -4825,10 +4825,10 @@ exports[`TransactionTable should render 1`] = `
                   to="https://dexplorer.ark.io/transaction/8c7b53e0114801a0738651d31572981dedb0b85f769fb1b84bee3724f6e63ded"
                 >
                   <span
-                    class="Link__Content-sc-ec014t-1 hUiuRR"
+                    class="Link__Content-sc-ec014t-1 fPOlTq"
                   >
                     <div
-                      class="sc-bdnxRM AFVmm"
+                      class="sc-bdvvtL fCrhkg"
                       height="16"
                       width="16"
                     >
@@ -4842,7 +4842,7 @@ exports[`TransactionTable should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI text-theme-secondary-text"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD text-theme-secondary-text"
               >
                 <span
                   class="whitespace-nowrap"
@@ -4854,7 +4854,7 @@ exports[`TransactionTable should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD space-x-4"
               >
                 <div
                   class="flex items-center space-x-2"
@@ -4864,7 +4864,7 @@ exports[`TransactionTable should render 1`] = `
                     class="w-5 h-5 flex items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
                   >
                     <div
-                      class="sc-bdnxRM NjstW"
+                      class="sc-bdvvtL qGXhc"
                       height="20"
                       width="20"
                     >
@@ -4874,7 +4874,7 @@ exports[`TransactionTable should render 1`] = `
                     </div>
                   </span>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 bzZufz ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -4906,10 +4906,10 @@ exports[`TransactionTable should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD space-x-4"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 bzZufz ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -4951,10 +4951,10 @@ exports[`TransactionTable should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 OOaVy"
+                  class="Label-sc-4akkzw-0 bxfWpB"
                   color="success"
                 >
                   <div
@@ -4974,7 +4974,7 @@ exports[`TransactionTable should render 1`] = `
               class="hidden xl:block"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end"
               >
                 <span
                   class="whitespace-nowrap text-theme-secondary-text"
@@ -4986,15 +4986,15 @@ exports[`TransactionTable should render 1`] = `
             </td>
           </tr>
           <tr
-            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 ijbCHm group"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  class="Link__AnchorStyled-sc-ec014t-0 eeKUfa group ring-focus"
                   data-ring-focus-margin="-m-1"
                   data-testid="TransactionRow__ID"
                   href="#"
@@ -5002,10 +5002,10 @@ exports[`TransactionTable should render 1`] = `
                   to="https://dexplorer.ark.io/transaction/1a767ebc0cc53246b9105a9f09b6c2ffa7baedcc7e632c8c1bac58f8f17389f6"
                 >
                   <span
-                    class="Link__Content-sc-ec014t-1 hUiuRR"
+                    class="Link__Content-sc-ec014t-1 fPOlTq"
                   >
                     <div
-                      class="sc-bdnxRM AFVmm"
+                      class="sc-bdvvtL fCrhkg"
                       height="16"
                       width="16"
                     >
@@ -5019,7 +5019,7 @@ exports[`TransactionTable should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI text-theme-secondary-text"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD text-theme-secondary-text"
               >
                 <span
                   class="whitespace-nowrap"
@@ -5031,7 +5031,7 @@ exports[`TransactionTable should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD space-x-4"
               >
                 <div
                   class="flex items-center space-x-2"
@@ -5041,7 +5041,7 @@ exports[`TransactionTable should render 1`] = `
                     class="w-5 h-5 flex items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
                   >
                     <div
-                      class="sc-bdnxRM NjstW"
+                      class="sc-bdvvtL qGXhc"
                       height="20"
                       width="20"
                     >
@@ -5051,7 +5051,7 @@ exports[`TransactionTable should render 1`] = `
                     </div>
                   </span>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 bzZufz ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -5083,10 +5083,10 @@ exports[`TransactionTable should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD space-x-4"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 bzZufz ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -5128,10 +5128,10 @@ exports[`TransactionTable should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 OOaVy"
+                  class="Label-sc-4akkzw-0 bxfWpB"
                   color="success"
                 >
                   <div
@@ -5151,7 +5151,7 @@ exports[`TransactionTable should render 1`] = `
               class="hidden xl:block"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end"
               >
                 <span
                   class="whitespace-nowrap text-theme-secondary-text"
@@ -5163,15 +5163,15 @@ exports[`TransactionTable should render 1`] = `
             </td>
           </tr>
           <tr
-            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 ijbCHm group"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  class="Link__AnchorStyled-sc-ec014t-0 eeKUfa group ring-focus"
                   data-ring-focus-margin="-m-1"
                   data-testid="TransactionRow__ID"
                   href="#"
@@ -5179,10 +5179,10 @@ exports[`TransactionTable should render 1`] = `
                   to="https://dexplorer.ark.io/transaction/b233eabb5f858e13174b13d85e0efa2a3d0e44e8a6d45e9e2518d88e56358428"
                 >
                   <span
-                    class="Link__Content-sc-ec014t-1 hUiuRR"
+                    class="Link__Content-sc-ec014t-1 fPOlTq"
                   >
                     <div
-                      class="sc-bdnxRM AFVmm"
+                      class="sc-bdvvtL fCrhkg"
                       height="16"
                       width="16"
                     >
@@ -5196,7 +5196,7 @@ exports[`TransactionTable should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI text-theme-secondary-text"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD text-theme-secondary-text"
               >
                 <span
                   class="whitespace-nowrap"
@@ -5208,7 +5208,7 @@ exports[`TransactionTable should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD space-x-4"
               >
                 <div
                   class="flex items-center space-x-2"
@@ -5218,7 +5218,7 @@ exports[`TransactionTable should render 1`] = `
                     class="w-5 h-5 flex items-center border-0 border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400"
                   >
                     <div
-                      class="sc-bdnxRM NjstW"
+                      class="sc-bdvvtL qGXhc"
                       height="20"
                       width="20"
                     >
@@ -5228,7 +5228,7 @@ exports[`TransactionTable should render 1`] = `
                     </div>
                   </span>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 bzZufz ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -5271,10 +5271,10 @@ exports[`TransactionTable should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD space-x-4"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 bzZufz ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -5305,10 +5305,10 @@ exports[`TransactionTable should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 iUZRnl"
+                  class="Label-sc-4akkzw-0 fhDzha"
                   color="danger"
                 >
                   <div
@@ -5328,7 +5328,7 @@ exports[`TransactionTable should render 1`] = `
               class="hidden xl:block"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end"
               >
                 <span
                   class="whitespace-nowrap text-theme-secondary-text"
@@ -5353,7 +5353,7 @@ exports[`TransactionTable should render compact 1`] = `
     data-testid="TransactionTable"
   >
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 fDAVsO -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jHfvAR -mt-3"
       role="table"
     >
       <table
@@ -5397,7 +5397,7 @@ exports[`TransactionTable should render compact 1`] = `
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity ml-2"
                 >
                   <div
-                    class="sc-bdnxRM AkeAK transition-transform"
+                    class="sc-bdvvtL Cfvxc transition-transform"
                     height="10"
                     role="img"
                     width="10"
@@ -5455,7 +5455,7 @@ exports[`TransactionTable should render compact 1`] = `
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                 >
                   <div
-                    class="sc-bdnxRM AkeAK transition-transform"
+                    class="sc-bdvvtL Cfvxc transition-transform"
                     height="10"
                     role="img"
                     width="10"
@@ -5473,15 +5473,15 @@ exports[`TransactionTable should render compact 1`] = `
           role="rowgroup"
         >
           <tr
-            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 ijbCHm group"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  class="Link__AnchorStyled-sc-ec014t-0 eeKUfa group ring-focus"
                   data-ring-focus-margin="-m-1"
                   data-testid="TransactionRow__ID"
                   href="#"
@@ -5489,10 +5489,10 @@ exports[`TransactionTable should render compact 1`] = `
                   to="https://dexplorer.ark.io/transaction/ea63bf9a4b3eaf75a1dfff721967c45dce64eb7facf1aef29461868681b5c79b"
                 >
                   <span
-                    class="Link__Content-sc-ec014t-1 hUiuRR"
+                    class="Link__Content-sc-ec014t-1 fPOlTq"
                   >
                     <div
-                      class="sc-bdnxRM AFVmm"
+                      class="sc-bdvvtL fCrhkg"
                       height="16"
                       width="16"
                     >
@@ -5506,7 +5506,7 @@ exports[`TransactionTable should render compact 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI text-theme-secondary-text"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD text-theme-secondary-text"
               >
                 <span
                   class="whitespace-nowrap"
@@ -5518,7 +5518,7 @@ exports[`TransactionTable should render compact 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD space-x-4"
               >
                 <div
                   class="flex items-center space-x-2"
@@ -5528,7 +5528,7 @@ exports[`TransactionTable should render compact 1`] = `
                     class="w-5 h-5 flex items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
                   >
                     <div
-                      class="sc-bdnxRM NjstW"
+                      class="sc-bdvvtL qGXhc"
                       height="20"
                       width="20"
                     >
@@ -5538,7 +5538,7 @@ exports[`TransactionTable should render compact 1`] = `
                     </div>
                   </span>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 bzZufz ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -5570,10 +5570,10 @@ exports[`TransactionTable should render compact 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD space-x-4"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 bzZufz ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -5615,10 +5615,10 @@ exports[`TransactionTable should render compact 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 OOaVy"
+                  class="Label-sc-4akkzw-0 bxfWpB"
                   color="success"
                 >
                   <div
@@ -5638,7 +5638,7 @@ exports[`TransactionTable should render compact 1`] = `
               class="hidden xl:block"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end"
               >
                 <span
                   class="whitespace-nowrap text-theme-secondary-text"
@@ -5650,15 +5650,15 @@ exports[`TransactionTable should render compact 1`] = `
             </td>
           </tr>
           <tr
-            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 ijbCHm group"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  class="Link__AnchorStyled-sc-ec014t-0 eeKUfa group ring-focus"
                   data-ring-focus-margin="-m-1"
                   data-testid="TransactionRow__ID"
                   href="#"
@@ -5666,10 +5666,10 @@ exports[`TransactionTable should render compact 1`] = `
                   to="https://dexplorer.ark.io/transaction/4425c04b0f0406c9a921a4c08e97251dbde5d0d11df2f20c97b08084b45cd09d"
                 >
                   <span
-                    class="Link__Content-sc-ec014t-1 hUiuRR"
+                    class="Link__Content-sc-ec014t-1 fPOlTq"
                   >
                     <div
-                      class="sc-bdnxRM AFVmm"
+                      class="sc-bdvvtL fCrhkg"
                       height="16"
                       width="16"
                     >
@@ -5683,7 +5683,7 @@ exports[`TransactionTable should render compact 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI text-theme-secondary-text"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD text-theme-secondary-text"
               >
                 <span
                   class="whitespace-nowrap"
@@ -5695,7 +5695,7 @@ exports[`TransactionTable should render compact 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD space-x-4"
               >
                 <div
                   class="flex items-center space-x-2"
@@ -5705,7 +5705,7 @@ exports[`TransactionTable should render compact 1`] = `
                     class="w-5 h-5 flex items-center border-0 border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400"
                   >
                     <div
-                      class="sc-bdnxRM NjstW"
+                      class="sc-bdvvtL qGXhc"
                       height="20"
                       width="20"
                     >
@@ -5715,7 +5715,7 @@ exports[`TransactionTable should render compact 1`] = `
                     </div>
                   </span>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 bzZufz ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -5758,10 +5758,10 @@ exports[`TransactionTable should render compact 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD space-x-4"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 bzZufz ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -5792,10 +5792,10 @@ exports[`TransactionTable should render compact 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 iUZRnl"
+                  class="Label-sc-4akkzw-0 fhDzha"
                   color="danger"
                 >
                   <div
@@ -5815,7 +5815,7 @@ exports[`TransactionTable should render compact 1`] = `
               class="hidden xl:block"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end"
               >
                 <span
                   class="whitespace-nowrap text-theme-secondary-text"
@@ -5827,15 +5827,15 @@ exports[`TransactionTable should render compact 1`] = `
             </td>
           </tr>
           <tr
-            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 ijbCHm group"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  class="Link__AnchorStyled-sc-ec014t-0 eeKUfa group ring-focus"
                   data-ring-focus-margin="-m-1"
                   data-testid="TransactionRow__ID"
                   href="#"
@@ -5843,10 +5843,10 @@ exports[`TransactionTable should render compact 1`] = `
                   to="https://dexplorer.ark.io/transaction/ee3739c4705393f847e41f4ccc7ba436e434a8a430cba18921b2128d6b18f0dd"
                 >
                   <span
-                    class="Link__Content-sc-ec014t-1 hUiuRR"
+                    class="Link__Content-sc-ec014t-1 fPOlTq"
                   >
                     <div
-                      class="sc-bdnxRM AFVmm"
+                      class="sc-bdvvtL fCrhkg"
                       height="16"
                       width="16"
                     >
@@ -5860,7 +5860,7 @@ exports[`TransactionTable should render compact 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI text-theme-secondary-text"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD text-theme-secondary-text"
               >
                 <span
                   class="whitespace-nowrap"
@@ -5872,7 +5872,7 @@ exports[`TransactionTable should render compact 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD space-x-4"
               >
                 <div
                   class="flex items-center space-x-2"
@@ -5882,7 +5882,7 @@ exports[`TransactionTable should render compact 1`] = `
                     class="w-5 h-5 flex items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
                   >
                     <div
-                      class="sc-bdnxRM NjstW"
+                      class="sc-bdvvtL qGXhc"
                       height="20"
                       width="20"
                     >
@@ -5892,7 +5892,7 @@ exports[`TransactionTable should render compact 1`] = `
                     </div>
                   </span>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 bzZufz ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -5924,10 +5924,10 @@ exports[`TransactionTable should render compact 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD space-x-4"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 bzZufz ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -5969,10 +5969,10 @@ exports[`TransactionTable should render compact 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 OOaVy"
+                  class="Label-sc-4akkzw-0 bxfWpB"
                   color="success"
                 >
                   <div
@@ -5992,7 +5992,7 @@ exports[`TransactionTable should render compact 1`] = `
               class="hidden xl:block"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end"
               >
                 <span
                   class="whitespace-nowrap text-theme-secondary-text"
@@ -6004,15 +6004,15 @@ exports[`TransactionTable should render compact 1`] = `
             </td>
           </tr>
           <tr
-            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 ijbCHm group"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  class="Link__AnchorStyled-sc-ec014t-0 eeKUfa group ring-focus"
                   data-ring-focus-margin="-m-1"
                   data-testid="TransactionRow__ID"
                   href="#"
@@ -6020,10 +6020,10 @@ exports[`TransactionTable should render compact 1`] = `
                   to="https://dexplorer.ark.io/transaction/b0b409f48ed878d98ada880b3d85ff8834f3363d4aff0b9fdcb38fd32acb5320"
                 >
                   <span
-                    class="Link__Content-sc-ec014t-1 hUiuRR"
+                    class="Link__Content-sc-ec014t-1 fPOlTq"
                   >
                     <div
-                      class="sc-bdnxRM AFVmm"
+                      class="sc-bdvvtL fCrhkg"
                       height="16"
                       width="16"
                     >
@@ -6037,7 +6037,7 @@ exports[`TransactionTable should render compact 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI text-theme-secondary-text"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD text-theme-secondary-text"
               >
                 <span
                   class="whitespace-nowrap"
@@ -6049,7 +6049,7 @@ exports[`TransactionTable should render compact 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD space-x-4"
               >
                 <div
                   class="flex items-center space-x-2"
@@ -6059,7 +6059,7 @@ exports[`TransactionTable should render compact 1`] = `
                     class="w-5 h-5 flex items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
                   >
                     <div
-                      class="sc-bdnxRM NjstW"
+                      class="sc-bdvvtL qGXhc"
                       height="20"
                       width="20"
                     >
@@ -6069,7 +6069,7 @@ exports[`TransactionTable should render compact 1`] = `
                     </div>
                   </span>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 bzZufz ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -6101,10 +6101,10 @@ exports[`TransactionTable should render compact 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD space-x-4"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 bzZufz ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -6146,10 +6146,10 @@ exports[`TransactionTable should render compact 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 OOaVy"
+                  class="Label-sc-4akkzw-0 bxfWpB"
                   color="success"
                 >
                   <div
@@ -6169,7 +6169,7 @@ exports[`TransactionTable should render compact 1`] = `
               class="hidden xl:block"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end"
               >
                 <span
                   class="whitespace-nowrap text-theme-secondary-text"
@@ -6181,15 +6181,15 @@ exports[`TransactionTable should render compact 1`] = `
             </td>
           </tr>
           <tr
-            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 ijbCHm group"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  class="Link__AnchorStyled-sc-ec014t-0 eeKUfa group ring-focus"
                   data-ring-focus-margin="-m-1"
                   data-testid="TransactionRow__ID"
                   href="#"
@@ -6197,10 +6197,10 @@ exports[`TransactionTable should render compact 1`] = `
                   to="https://dexplorer.ark.io/transaction/91097d212e343cb7cebc0cb34f6c7051902fe3072355514145221832bcdc6599"
                 >
                   <span
-                    class="Link__Content-sc-ec014t-1 hUiuRR"
+                    class="Link__Content-sc-ec014t-1 fPOlTq"
                   >
                     <div
-                      class="sc-bdnxRM AFVmm"
+                      class="sc-bdvvtL fCrhkg"
                       height="16"
                       width="16"
                     >
@@ -6214,7 +6214,7 @@ exports[`TransactionTable should render compact 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI text-theme-secondary-text"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD text-theme-secondary-text"
               >
                 <span
                   class="whitespace-nowrap"
@@ -6226,7 +6226,7 @@ exports[`TransactionTable should render compact 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD space-x-4"
               >
                 <div
                   class="flex items-center space-x-2"
@@ -6236,7 +6236,7 @@ exports[`TransactionTable should render compact 1`] = `
                     class="w-5 h-5 flex items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
                   >
                     <div
-                      class="sc-bdnxRM NjstW"
+                      class="sc-bdvvtL qGXhc"
                       height="20"
                       width="20"
                     >
@@ -6246,7 +6246,7 @@ exports[`TransactionTable should render compact 1`] = `
                     </div>
                   </span>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 bzZufz ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -6278,10 +6278,10 @@ exports[`TransactionTable should render compact 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD space-x-4"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 bzZufz ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -6323,10 +6323,10 @@ exports[`TransactionTable should render compact 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 OOaVy"
+                  class="Label-sc-4akkzw-0 bxfWpB"
                   color="success"
                 >
                   <div
@@ -6346,7 +6346,7 @@ exports[`TransactionTable should render compact 1`] = `
               class="hidden xl:block"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end"
               >
                 <span
                   class="whitespace-nowrap text-theme-secondary-text"
@@ -6358,15 +6358,15 @@ exports[`TransactionTable should render compact 1`] = `
             </td>
           </tr>
           <tr
-            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 ijbCHm group"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  class="Link__AnchorStyled-sc-ec014t-0 eeKUfa group ring-focus"
                   data-ring-focus-margin="-m-1"
                   data-testid="TransactionRow__ID"
                   href="#"
@@ -6374,10 +6374,10 @@ exports[`TransactionTable should render compact 1`] = `
                   to="https://dexplorer.ark.io/transaction/e6fcdca7c3f95f809c784ace7d360710128f2070ee95e21beee87312ba632d4b"
                 >
                   <span
-                    class="Link__Content-sc-ec014t-1 hUiuRR"
+                    class="Link__Content-sc-ec014t-1 fPOlTq"
                   >
                     <div
-                      class="sc-bdnxRM AFVmm"
+                      class="sc-bdvvtL fCrhkg"
                       height="16"
                       width="16"
                     >
@@ -6391,7 +6391,7 @@ exports[`TransactionTable should render compact 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI text-theme-secondary-text"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD text-theme-secondary-text"
               >
                 <span
                   class="whitespace-nowrap"
@@ -6403,7 +6403,7 @@ exports[`TransactionTable should render compact 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD space-x-4"
               >
                 <div
                   class="flex items-center space-x-2"
@@ -6413,7 +6413,7 @@ exports[`TransactionTable should render compact 1`] = `
                     class="w-5 h-5 flex items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
                   >
                     <div
-                      class="sc-bdnxRM NjstW"
+                      class="sc-bdvvtL qGXhc"
                       height="20"
                       width="20"
                     >
@@ -6423,7 +6423,7 @@ exports[`TransactionTable should render compact 1`] = `
                     </div>
                   </span>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 bzZufz ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -6455,10 +6455,10 @@ exports[`TransactionTable should render compact 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD space-x-4"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 bzZufz ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -6500,10 +6500,10 @@ exports[`TransactionTable should render compact 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 OOaVy"
+                  class="Label-sc-4akkzw-0 bxfWpB"
                   color="success"
                 >
                   <div
@@ -6523,7 +6523,7 @@ exports[`TransactionTable should render compact 1`] = `
               class="hidden xl:block"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end"
               >
                 <span
                   class="whitespace-nowrap text-theme-secondary-text"
@@ -6535,15 +6535,15 @@ exports[`TransactionTable should render compact 1`] = `
             </td>
           </tr>
           <tr
-            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 ijbCHm group"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  class="Link__AnchorStyled-sc-ec014t-0 eeKUfa group ring-focus"
                   data-ring-focus-margin="-m-1"
                   data-testid="TransactionRow__ID"
                   href="#"
@@ -6551,10 +6551,10 @@ exports[`TransactionTable should render compact 1`] = `
                   to="https://dexplorer.ark.io/transaction/59c8867267bed07b90567a6ac610a5b4dd4431e07789987b50f3804219618520"
                 >
                   <span
-                    class="Link__Content-sc-ec014t-1 hUiuRR"
+                    class="Link__Content-sc-ec014t-1 fPOlTq"
                   >
                     <div
-                      class="sc-bdnxRM AFVmm"
+                      class="sc-bdvvtL fCrhkg"
                       height="16"
                       width="16"
                     >
@@ -6568,7 +6568,7 @@ exports[`TransactionTable should render compact 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI text-theme-secondary-text"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD text-theme-secondary-text"
               >
                 <span
                   class="whitespace-nowrap"
@@ -6580,7 +6580,7 @@ exports[`TransactionTable should render compact 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD space-x-4"
               >
                 <div
                   class="flex items-center space-x-2"
@@ -6590,7 +6590,7 @@ exports[`TransactionTable should render compact 1`] = `
                     class="w-5 h-5 flex items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
                   >
                     <div
-                      class="sc-bdnxRM NjstW"
+                      class="sc-bdvvtL qGXhc"
                       height="20"
                       width="20"
                     >
@@ -6600,7 +6600,7 @@ exports[`TransactionTable should render compact 1`] = `
                     </div>
                   </span>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 bzZufz ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -6632,10 +6632,10 @@ exports[`TransactionTable should render compact 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD space-x-4"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 bzZufz ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -6677,10 +6677,10 @@ exports[`TransactionTable should render compact 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 OOaVy"
+                  class="Label-sc-4akkzw-0 bxfWpB"
                   color="success"
                 >
                   <div
@@ -6700,7 +6700,7 @@ exports[`TransactionTable should render compact 1`] = `
               class="hidden xl:block"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end"
               >
                 <span
                   class="whitespace-nowrap text-theme-secondary-text"
@@ -6712,15 +6712,15 @@ exports[`TransactionTable should render compact 1`] = `
             </td>
           </tr>
           <tr
-            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 ijbCHm group"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  class="Link__AnchorStyled-sc-ec014t-0 eeKUfa group ring-focus"
                   data-ring-focus-margin="-m-1"
                   data-testid="TransactionRow__ID"
                   href="#"
@@ -6728,10 +6728,10 @@ exports[`TransactionTable should render compact 1`] = `
                   to="https://dexplorer.ark.io/transaction/8c7b53e0114801a0738651d31572981dedb0b85f769fb1b84bee3724f6e63ded"
                 >
                   <span
-                    class="Link__Content-sc-ec014t-1 hUiuRR"
+                    class="Link__Content-sc-ec014t-1 fPOlTq"
                   >
                     <div
-                      class="sc-bdnxRM AFVmm"
+                      class="sc-bdvvtL fCrhkg"
                       height="16"
                       width="16"
                     >
@@ -6745,7 +6745,7 @@ exports[`TransactionTable should render compact 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI text-theme-secondary-text"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD text-theme-secondary-text"
               >
                 <span
                   class="whitespace-nowrap"
@@ -6757,7 +6757,7 @@ exports[`TransactionTable should render compact 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD space-x-4"
               >
                 <div
                   class="flex items-center space-x-2"
@@ -6767,7 +6767,7 @@ exports[`TransactionTable should render compact 1`] = `
                     class="w-5 h-5 flex items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
                   >
                     <div
-                      class="sc-bdnxRM NjstW"
+                      class="sc-bdvvtL qGXhc"
                       height="20"
                       width="20"
                     >
@@ -6777,7 +6777,7 @@ exports[`TransactionTable should render compact 1`] = `
                     </div>
                   </span>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 bzZufz ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -6809,10 +6809,10 @@ exports[`TransactionTable should render compact 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD space-x-4"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 bzZufz ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -6854,10 +6854,10 @@ exports[`TransactionTable should render compact 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 OOaVy"
+                  class="Label-sc-4akkzw-0 bxfWpB"
                   color="success"
                 >
                   <div
@@ -6877,7 +6877,7 @@ exports[`TransactionTable should render compact 1`] = `
               class="hidden xl:block"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end"
               >
                 <span
                   class="whitespace-nowrap text-theme-secondary-text"
@@ -6889,15 +6889,15 @@ exports[`TransactionTable should render compact 1`] = `
             </td>
           </tr>
           <tr
-            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 ijbCHm group"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  class="Link__AnchorStyled-sc-ec014t-0 eeKUfa group ring-focus"
                   data-ring-focus-margin="-m-1"
                   data-testid="TransactionRow__ID"
                   href="#"
@@ -6905,10 +6905,10 @@ exports[`TransactionTable should render compact 1`] = `
                   to="https://dexplorer.ark.io/transaction/1a767ebc0cc53246b9105a9f09b6c2ffa7baedcc7e632c8c1bac58f8f17389f6"
                 >
                   <span
-                    class="Link__Content-sc-ec014t-1 hUiuRR"
+                    class="Link__Content-sc-ec014t-1 fPOlTq"
                   >
                     <div
-                      class="sc-bdnxRM AFVmm"
+                      class="sc-bdvvtL fCrhkg"
                       height="16"
                       width="16"
                     >
@@ -6922,7 +6922,7 @@ exports[`TransactionTable should render compact 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI text-theme-secondary-text"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD text-theme-secondary-text"
               >
                 <span
                   class="whitespace-nowrap"
@@ -6934,7 +6934,7 @@ exports[`TransactionTable should render compact 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD space-x-4"
               >
                 <div
                   class="flex items-center space-x-2"
@@ -6944,7 +6944,7 @@ exports[`TransactionTable should render compact 1`] = `
                     class="w-5 h-5 flex items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
                   >
                     <div
-                      class="sc-bdnxRM NjstW"
+                      class="sc-bdvvtL qGXhc"
                       height="20"
                       width="20"
                     >
@@ -6954,7 +6954,7 @@ exports[`TransactionTable should render compact 1`] = `
                     </div>
                   </span>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 bzZufz ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -6986,10 +6986,10 @@ exports[`TransactionTable should render compact 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD space-x-4"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 bzZufz ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -7031,10 +7031,10 @@ exports[`TransactionTable should render compact 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 OOaVy"
+                  class="Label-sc-4akkzw-0 bxfWpB"
                   color="success"
                 >
                   <div
@@ -7054,7 +7054,7 @@ exports[`TransactionTable should render compact 1`] = `
               class="hidden xl:block"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end"
               >
                 <span
                   class="whitespace-nowrap text-theme-secondary-text"
@@ -7066,15 +7066,15 @@ exports[`TransactionTable should render compact 1`] = `
             </td>
           </tr>
           <tr
-            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 ijbCHm group"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  class="Link__AnchorStyled-sc-ec014t-0 eeKUfa group ring-focus"
                   data-ring-focus-margin="-m-1"
                   data-testid="TransactionRow__ID"
                   href="#"
@@ -7082,10 +7082,10 @@ exports[`TransactionTable should render compact 1`] = `
                   to="https://dexplorer.ark.io/transaction/b233eabb5f858e13174b13d85e0efa2a3d0e44e8a6d45e9e2518d88e56358428"
                 >
                   <span
-                    class="Link__Content-sc-ec014t-1 hUiuRR"
+                    class="Link__Content-sc-ec014t-1 fPOlTq"
                   >
                     <div
-                      class="sc-bdnxRM AFVmm"
+                      class="sc-bdvvtL fCrhkg"
                       height="16"
                       width="16"
                     >
@@ -7099,7 +7099,7 @@ exports[`TransactionTable should render compact 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI text-theme-secondary-text"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD text-theme-secondary-text"
               >
                 <span
                   class="whitespace-nowrap"
@@ -7111,7 +7111,7 @@ exports[`TransactionTable should render compact 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD space-x-4"
               >
                 <div
                   class="flex items-center space-x-2"
@@ -7121,7 +7121,7 @@ exports[`TransactionTable should render compact 1`] = `
                     class="w-5 h-5 flex items-center border-0 border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400"
                   >
                     <div
-                      class="sc-bdnxRM NjstW"
+                      class="sc-bdvvtL qGXhc"
                       height="20"
                       width="20"
                     >
@@ -7131,7 +7131,7 @@ exports[`TransactionTable should render compact 1`] = `
                     </div>
                   </span>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 bzZufz ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -7174,10 +7174,10 @@ exports[`TransactionTable should render compact 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD space-x-4"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 bzZufz ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -7208,10 +7208,10 @@ exports[`TransactionTable should render compact 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 iUZRnl"
+                  class="Label-sc-4akkzw-0 fhDzha"
                   color="danger"
                 >
                   <div
@@ -7231,7 +7231,7 @@ exports[`TransactionTable should render compact 1`] = `
               class="hidden xl:block"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end"
               >
                 <span
                   class="whitespace-nowrap text-theme-secondary-text"

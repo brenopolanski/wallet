@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts as ProfilesContracts } from "@payvo/profiles";
 import { Contracts } from "@payvo/sdk";
+import { Contracts as ProfilesContracts } from "@payvo/sdk-profiles";
 import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import * as useFeesHook from "app/hooks/use-fees";
@@ -51,7 +51,7 @@ const renderComponent = (properties?: any) => {
 		);
 	};
 
-	const renderResult: RenderResult = render(
+	const utils: RenderResult = render(
 		<Route path="/profiles/:profileId">
 			<Component />
 		</Route>,
@@ -60,7 +60,7 @@ const renderComponent = (properties?: any) => {
 		},
 	);
 
-	return { ...renderResult, form };
+	return { ...utils, form };
 };
 
 const createTransactionMock = (wallet: ProfilesContracts.IReadWriteWallet) =>

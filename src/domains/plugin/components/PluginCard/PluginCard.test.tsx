@@ -118,7 +118,7 @@ describe("PluginCard", () => {
 
 		userEvent.click(screen.getByText("arrows-rotate.svg"));
 
-		expect(onSelect).toHaveBeenCalledWith({ value: "update" });
+		expect(onSelect).toHaveBeenCalledWith({ label: "Update", value: "update" });
 	});
 
 	it.each([
@@ -140,7 +140,7 @@ describe("PluginCard", () => {
 
 		fireEvent.keyDown(screen.getByText("arrows-rotate.svg"), key);
 
-		expect(onSelect).toHaveBeenCalledWith({ value: "update" });
+		expect(onSelect).toHaveBeenCalledWith({ label: "Update", value: "update" });
 	});
 
 	it("should not call onSelect callback on update icon keypress", () => {

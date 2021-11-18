@@ -1,5 +1,5 @@
-import { Contracts } from "@payvo/profiles";
 import { LSK } from "@payvo/sdk-lsk";
+import { Contracts } from "@payvo/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { LedgerProvider } from "app/contexts/Ledger/Ledger";
 import * as useRandomNumberHook from "app/hooks/use-random-number";

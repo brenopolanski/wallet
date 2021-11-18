@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { FilterOption } from "app/components/FilterNetwork";
 import { DashboardConfiguration } from "domains/dashboard/pages/Dashboard";

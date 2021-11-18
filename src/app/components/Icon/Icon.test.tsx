@@ -14,7 +14,7 @@ describe("Icon", () => {
 	it("should render fallback", () => {
 		const { asFragment } = render(<Icon name="unknown" fallback={<span>Not found</span>} />);
 
-		expect(screen.getByText("Not found"));
+		expect(screen.getByText("Not found")).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});

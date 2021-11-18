@@ -100,7 +100,7 @@ describe("Plugin Configuration", () => {
 			name: "plugin-test",
 		});
 
-		expect(subject.keywords()).toEqual(["Desktop", "Plugin", "Desktop Wallet"]);
+		expect(subject.keywords()).toStrictEqual(["Desktop", "Plugin", "Desktop Wallet"]);
 	});
 
 	it("should return permissions", () => {
@@ -109,7 +109,7 @@ describe("Plugin Configuration", () => {
 			name: "plugin-test",
 		});
 
-		expect(subject.permissions()).toEqual(["LAUNCH", "HTTP"]);
+		expect(subject.permissions()).toStrictEqual(["LAUNCH", "HTTP"]);
 	});
 
 	it("should return only valid permissions", () => {
@@ -118,7 +118,7 @@ describe("Plugin Configuration", () => {
 			name: "plugin-test",
 		});
 
-		expect(subject.permissions()).toEqual(["LAUNCH", "HTTP"]);
+		expect(subject.permissions()).toStrictEqual(["LAUNCH", "HTTP"]);
 	});
 
 	it("should return urls", () => {
@@ -127,13 +127,13 @@ describe("Plugin Configuration", () => {
 			name: "plugin-test",
 		});
 
-		expect(subject.urls()).toEqual(["http://github.com"]);
+		expect(subject.urls()).toStrictEqual(["http://github.com"]);
 	});
 
 	it("should return default category array if not defined", () => {
 		const subject = PluginConfigurationData.make({ name: "plugin-test" });
 
-		expect(subject.categories()).toEqual(["other"]);
+		expect(subject.categories()).toStrictEqual(["other"]);
 	});
 
 	it("should return valid categories", () => {
@@ -142,7 +142,7 @@ describe("Plugin Configuration", () => {
 			name: "plugin-test",
 		});
 
-		expect(subject.categories()).toEqual(["other"]);
+		expect(subject.categories()).toStrictEqual(["other"]);
 	});
 
 	it("should return default category array if empty", () => {
@@ -151,7 +151,7 @@ describe("Plugin Configuration", () => {
 			name: "plugin-test",
 		});
 
-		expect(subject.categories()).toEqual(["other"]);
+		expect(subject.categories()).toStrictEqual(["other"]);
 	});
 
 	it("should return the first categoriy", () => {
@@ -162,7 +162,7 @@ describe("Plugin Configuration", () => {
 			name: "plugin-test",
 		});
 
-		expect(subject.category()).toBe(categories[0]);
+		expect(subject.category()).toStrictEqual(categories[0]);
 	});
 
 	it("should return plugin size from fs", async () => {
@@ -200,8 +200,7 @@ describe("Plugin Configuration", () => {
 	it("should return logo from manifest", () => {
 		const subject = PluginConfigurationData.make({
 			"desktop-wallet": {
-				logo:
-					"https://raw.githubusercontent.com/ark-ecosystem-desktop-plugins/sound-notifications/master/logo.png",
+				logo: "https://raw.githubusercontent.com/ark-ecosystem-desktop-plugins/sound-notifications/master/logo.png",
 			},
 			name: "plugin-test",
 		});

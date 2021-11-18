@@ -3,7 +3,10 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 import { env, render, waitFor, within } from "utils/testing-library";
 
-import { FilterNetwork, FilterNetworks, FilterOption, NetworkOptions, ToggleAllOption } from ".";
+import { FilterNetwork, FilterNetworks } from "./FilterNetwork";
+import { FilterOption } from "./models";
+import { NetworkOptions } from "./NetworkOptions";
+import { ToggleAllOption } from "./ToggleAllOption";
 
 let networkOptions: FilterOption[];
 

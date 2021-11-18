@@ -16,11 +16,11 @@ describe("useProfileUtils", () => {
 			result: { current },
 		} = renderHook(() => useProfileUtils(env), { wrapper });
 
-		expect(current.getProfileById(profile.id())).toEqual(profile);
+		expect(current.getProfileById(profile.id())).toStrictEqual(profile);
 
 		//@ts-ignore
-		expect(current.getProfileById()).not.toEqual(profile);
-		expect(current.getProfileById("wrong id")).not.toEqual(profile);
+		expect(current.getProfileById()).not.toStrictEqual(profile);
+		expect(current.getProfileById("wrong id")).not.toStrictEqual(profile);
 	});
 
 	it("#getProfileFromUrl", async () => {
@@ -31,7 +31,7 @@ describe("useProfileUtils", () => {
 			result: { current },
 		} = renderHook(() => useProfileUtils(env), { wrapper });
 
-		expect(current.getProfileFromUrl(`/profiles/${profile.id()}`)).toEqual(profile);
+		expect(current.getProfileFromUrl(`/profiles/${profile.id()}`)).toStrictEqual(profile);
 	});
 
 	it("#getProfileStoredPassword", async () => {

@@ -1,4 +1,3 @@
-/* eslint-disable jest/require-top-level-describe */
 import { createFixture, getLocation } from "../../../utils/e2e-utils";
 import { goToProfile } from "../../profile/e2e/common";
 

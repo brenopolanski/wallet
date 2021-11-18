@@ -15,7 +15,7 @@ exports[`TotalAmountBox should render with amount of 0.1 and fee of 0.01 1`] = `
           class="flex flex-col justify-center py-2 px-4 w-1/2"
         >
           <span
-            class="TotalAmountBox__AmountLabel-sc-aeus64-0 fOdPzL"
+            class="TotalAmountBox__AmountLabel-sc-aeus64-0 kwOhOA"
           >
             Transaction Amount
           </span>
@@ -30,7 +30,7 @@ exports[`TotalAmountBox should render with amount of 0.1 and fee of 0.01 1`] = `
           class="flex flex-col justify-center py-2 px-4 w-1/2 text-right"
         >
           <span
-            class="TotalAmountBox__AmountLabel-sc-aeus64-0 fOdPzL"
+            class="TotalAmountBox__AmountLabel-sc-aeus64-0 kwOhOA"
           >
             Transaction Fee
           </span>
@@ -49,7 +49,7 @@ exports[`TotalAmountBox should render with amount of 0.1 and fee of 0.01 1`] = `
           class="py-2 ml-px bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600"
         >
           <div
-            class="sc-bdnxRM AFVmm"
+            class="sc-bdvvtL fCrhkg"
             height="16"
             width="16"
           >
@@ -64,7 +64,7 @@ exports[`TotalAmountBox should render with amount of 0.1 and fee of 0.01 1`] = `
       class="flex flex-col items-center py-6 rounded-b-lg border-t border-theme-secondary-300 justfiy-center bg-theme-secondary-100 dark:border-theme-secondary-800 dark:bg-theme-secondary-800"
     >
       <span
-        class="TotalAmountBox__AmountLabel-sc-aeus64-0 fOdPzL"
+        class="TotalAmountBox__AmountLabel-sc-aeus64-0 kwOhOA"
       >
         Total Amount
       </span>
@@ -94,7 +94,7 @@ exports[`TotalAmountBox should render with amount of 0.1 and fee of 0.01 2`] = `
           class="flex flex-col justify-center py-2 px-4 w-1/2"
         >
           <span
-            class="TotalAmountBox__AmountLabel-sc-aeus64-0 fOdPzL"
+            class="TotalAmountBox__AmountLabel-sc-aeus64-0 kwOhOA"
           >
             Transaction Amount
           </span>
@@ -109,7 +109,7 @@ exports[`TotalAmountBox should render with amount of 0.1 and fee of 0.01 2`] = `
           class="flex flex-col justify-center py-2 px-4 w-1/2 text-right"
         >
           <span
-            class="TotalAmountBox__AmountLabel-sc-aeus64-0 fOdPzL"
+            class="TotalAmountBox__AmountLabel-sc-aeus64-0 kwOhOA"
           >
             Transaction Fee
           </span>
@@ -128,7 +128,7 @@ exports[`TotalAmountBox should render with amount of 0.1 and fee of 0.01 2`] = `
           class="py-2 ml-px bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600"
         >
           <div
-            class="sc-bdnxRM AFVmm"
+            class="sc-bdvvtL fCrhkg"
             height="16"
             width="16"
           >
@@ -143,7 +143,7 @@ exports[`TotalAmountBox should render with amount of 0.1 and fee of 0.01 2`] = `
       class="flex flex-col items-center py-6 rounded-b-lg border-t border-theme-secondary-300 justfiy-center bg-theme-secondary-100 dark:border-theme-secondary-800 dark:bg-theme-secondary-800"
     >
       <span
-        class="TotalAmountBox__AmountLabel-sc-aeus64-0 fOdPzL"
+        class="TotalAmountBox__AmountLabel-sc-aeus64-0 kwOhOA"
       >
         Total Amount
       </span>
@@ -173,7 +173,7 @@ exports[`TotalAmountBox should render with amount of 0.1 and fee of 0.01 3`] = `
           class="flex flex-col justify-center py-2 px-4 w-1/2"
         >
           <span
-            class="TotalAmountBox__AmountLabel-sc-aeus64-0 fOdPzL"
+            class="TotalAmountBox__AmountLabel-sc-aeus64-0 kwOhOA"
           >
             Transaction Amount
           </span>
@@ -188,7 +188,7 @@ exports[`TotalAmountBox should render with amount of 0.1 and fee of 0.01 3`] = `
           class="flex flex-col justify-center py-2 px-4 w-1/2 text-right"
         >
           <span
-            class="TotalAmountBox__AmountLabel-sc-aeus64-0 fOdPzL"
+            class="TotalAmountBox__AmountLabel-sc-aeus64-0 kwOhOA"
           >
             Transaction Fee
           </span>
@@ -207,7 +207,7 @@ exports[`TotalAmountBox should render with amount of 0.1 and fee of 0.01 3`] = `
           class="py-2 ml-px bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600"
         >
           <div
-            class="sc-bdnxRM AFVmm"
+            class="sc-bdvvtL fCrhkg"
             height="16"
             width="16"
           >
@@ -222,7 +222,7 @@ exports[`TotalAmountBox should render with amount of 0.1 and fee of 0.01 3`] = `
       class="flex flex-col items-center py-6 rounded-b-lg border-t border-theme-secondary-300 justfiy-center bg-theme-secondary-100 dark:border-theme-secondary-800 dark:bg-theme-secondary-800"
     >
       <span
-        class="TotalAmountBox__AmountLabel-sc-aeus64-0 fOdPzL"
+        class="TotalAmountBox__AmountLabel-sc-aeus64-0 kwOhOA"
       >
         Total Amount
       </span>
@@ -252,7 +252,7 @@ exports[`TotalAmountBox should render with amount of 0.1 and fee of 0.01 4`] = `
           class="flex flex-col justify-center py-2 px-4 w-1/2"
         >
           <span
-            class="TotalAmountBox__AmountLabel-sc-aeus64-0 fOdPzL"
+            class="TotalAmountBox__AmountLabel-sc-aeus64-0 kwOhOA"
           >
             Transaction Amount
           </span>
@@ -267,7 +267,7 @@ exports[`TotalAmountBox should render with amount of 0.1 and fee of 0.01 4`] = `
           class="flex flex-col justify-center py-2 px-4 w-1/2 text-right"
         >
           <span
-            class="TotalAmountBox__AmountLabel-sc-aeus64-0 fOdPzL"
+            class="TotalAmountBox__AmountLabel-sc-aeus64-0 kwOhOA"
           >
             Transaction Fee
           </span>
@@ -286,7 +286,7 @@ exports[`TotalAmountBox should render with amount of 0.1 and fee of 0.01 4`] = `
           class="py-2 ml-px bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600"
         >
           <div
-            class="sc-bdnxRM AFVmm"
+            class="sc-bdvvtL fCrhkg"
             height="16"
             width="16"
           >
@@ -301,7 +301,7 @@ exports[`TotalAmountBox should render with amount of 0.1 and fee of 0.01 4`] = `
       class="flex flex-col items-center py-6 rounded-b-lg border-t border-theme-secondary-300 justfiy-center bg-theme-secondary-100 dark:border-theme-secondary-800 dark:bg-theme-secondary-800"
     >
       <span
-        class="TotalAmountBox__AmountLabel-sc-aeus64-0 fOdPzL"
+        class="TotalAmountBox__AmountLabel-sc-aeus64-0 kwOhOA"
       >
         Total Amount
       </span>

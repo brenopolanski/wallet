@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { AccentColorType, ViewingModeType } from "app/hooks";
 import React from "react";
 import { useTranslation } from "react-i18next";

@@ -1,4 +1,4 @@
-import { DateTime } from "@payvo/intl";
+import { DateTime } from "@payvo/sdk-intl";
 import { useEnvironmentContext } from "app/contexts";
 import { useCallback } from "react";
 

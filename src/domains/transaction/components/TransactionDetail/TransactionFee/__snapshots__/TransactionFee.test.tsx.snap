@@ -3,7 +3,7 @@
 exports[`TransactionFee should render 1`] = `
 <div>
   <div
-    class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
+    class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 hFlzIg no-ligatures"
     data-testid="TransactionFee"
   >
     <div

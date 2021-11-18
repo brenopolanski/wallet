@@ -1,4 +1,4 @@
-import { Profile } from "@payvo/profiles";
+import { Profile } from "@payvo/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { ProcessingImport } from "domains/profile/pages/ImportProfile/ProcessingImportStep";
 import fs from "fs";

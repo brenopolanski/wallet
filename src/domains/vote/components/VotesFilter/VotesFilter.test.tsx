@@ -2,7 +2,7 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 import { render, waitFor } from "utils/testing-library";
 
-import { VotesFilter } from ".";
+import { VotesFilter } from "./VotesFilter";
 
 describe("VotesFilter", () => {
 	it("should render", () => {

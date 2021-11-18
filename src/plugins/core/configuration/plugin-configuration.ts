@@ -1,17 +1,19 @@
-import { prettyBytes, startCase, uniq } from "@arkecosystem/utils";
-import { Contracts, Repositories } from "@payvo/profiles";
+import { prettyBytes, startCase, uniq } from "@payvo/sdk-helpers";
+import { Contracts, Repositories } from "@payvo/sdk-profiles";
 import du from "du";
 import parseAuthor from "parse-author";
 import { SerializedPluginConfigurationData } from "plugins/types";
 import semver from "semver";
 import { assertString } from "utils/assertions";
+import { Asserts } from "yup";
 
 // eslint-disable-next-line import/no-relative-parent-imports
 import appPackage from "../../../../package.json";
 import { allPermissions } from "./permissions";
+import { IPluginConfigurationData } from "./plugin-configuration.contracts";
 import { schema } from "./schema";
 
-export class PluginConfigurationData {
+export class PluginConfigurationData implements IPluginConfigurationData {
 	readonly #config: Contracts.IDataRepository;
 	readonly #manifest: Contracts.IDataRepository;
 
@@ -42,7 +44,7 @@ export class PluginConfigurationData {
 		return plugin;
 	}
 
-	validate() {
+	validate(): Asserts<typeof schema> {
 		return schema.validateSync(this.#config.toJSON());
 	}
 
@@ -87,7 +89,7 @@ export class PluginConfigurationData {
 
 		if (contributors?.length) {
 			// @ts-ignore
-			return parseAuthor(contributors?.[0]?.name || contributors?.[0]).name;
+			return parseAuthor(contributors[0].name || contributors[0]).name;
 		}
 
 		return "Unknown";

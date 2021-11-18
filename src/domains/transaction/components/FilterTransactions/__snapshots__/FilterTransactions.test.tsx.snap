@@ -30,10 +30,10 @@ exports[`FilterTransactions should open dropdown list with all transaction types
             </span>
           </span>
           <span
-            class="CollapseToggleButton__ToggleIcon-sc-1wkp6k4-0 kGKoXe"
+            class="CollapseToggleButton__ToggleIcon-sc-1wkp6k4-0 dRgKUd"
           >
             <div
-              class="sc-bdnxRM AkeAK p-1"
+              class="sc-bdvvtL Cfvxc p-1"
               height="10"
               width="10"
             >
@@ -45,7 +45,7 @@ exports[`FilterTransactions should open dropdown list with all transaction types
         </button>
       </span>
       <div
-        class="Dropdown__Wrapper-sc-4ty2ol-0 fCdAih opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl w-80 max-h-128 overflow-y-auto"
+        class="Dropdown__Wrapper-sc-4ty2ol-0 ihNlLq opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl w-80 max-h-128 overflow-y-auto"
         data-testid="dropdown__content"
         style="opacity: 1; height: -30px; overflow-y: scroll;"
       >
@@ -60,7 +60,7 @@ exports[`FilterTransactions should open dropdown list with all transaction types
                 data-testid="dropdown__options"
               >
                 <li
-                  class="sc-gtsrHT hZLfuI group"
+                  class="sc-gsDKAQ bwZfGu group"
                   data-testid="dropdown__option--all-0"
                   tabindex="0"
                 >
@@ -78,7 +78,7 @@ exports[`FilterTransactions should open dropdown list with all transaction types
               class="mx-8 -my-2"
             >
               <div
-                class="Divider-sc-17ehhxk-0 lgtApE border-theme-secondary-300 dark:border-theme-secondary-600"
+                class="Divider-sc-17ehhxk-0 hoeInf border-theme-secondary-300 dark:border-theme-secondary-600"
                 type="horizontal"
               />
             </div>
@@ -92,7 +92,7 @@ exports[`FilterTransactions should open dropdown list with all transaction types
                 data-testid="dropdown__options"
               >
                 <li
-                  class="sc-gtsrHT hZLfuI group"
+                  class="sc-gsDKAQ bwZfGu group"
                   data-testid="dropdown__option--core-0"
                   tabindex="0"
                 >
@@ -101,7 +101,7 @@ exports[`FilterTransactions should open dropdown list with all transaction types
                   </span>
                 </li>
                 <li
-                  class="sc-gtsrHT hZLfuI group"
+                  class="sc-gsDKAQ bwZfGu group"
                   data-testid="dropdown__option--core-1"
                   tabindex="0"
                 >
@@ -110,7 +110,7 @@ exports[`FilterTransactions should open dropdown list with all transaction types
                   </span>
                 </li>
                 <li
-                  class="sc-gtsrHT hZLfuI group"
+                  class="sc-gsDKAQ bwZfGu group"
                   data-testid="dropdown__option--core-2"
                   tabindex="0"
                 >
@@ -119,7 +119,7 @@ exports[`FilterTransactions should open dropdown list with all transaction types
                   </span>
                 </li>
                 <li
-                  class="sc-gtsrHT hZLfuI group"
+                  class="sc-gsDKAQ bwZfGu group"
                   data-testid="dropdown__option--core-3"
                   tabindex="0"
                 >
@@ -128,7 +128,7 @@ exports[`FilterTransactions should open dropdown list with all transaction types
                   </span>
                 </li>
                 <li
-                  class="sc-gtsrHT hZLfuI group"
+                  class="sc-gsDKAQ bwZfGu group"
                   data-testid="dropdown__option--core-4"
                   tabindex="0"
                 >
@@ -137,7 +137,7 @@ exports[`FilterTransactions should open dropdown list with all transaction types
                   </span>
                 </li>
                 <li
-                  class="sc-gtsrHT hZLfuI group"
+                  class="sc-gsDKAQ bwZfGu group"
                   data-testid="dropdown__option--core-5"
                   tabindex="0"
                 >
@@ -146,7 +146,7 @@ exports[`FilterTransactions should open dropdown list with all transaction types
                   </span>
                 </li>
                 <li
-                  class="sc-gtsrHT hZLfuI group"
+                  class="sc-gsDKAQ bwZfGu group"
                   data-testid="dropdown__option--core-6"
                   tabindex="0"
                 >
@@ -155,7 +155,7 @@ exports[`FilterTransactions should open dropdown list with all transaction types
                   </span>
                 </li>
                 <li
-                  class="sc-gtsrHT hZLfuI group"
+                  class="sc-gsDKAQ bwZfGu group"
                   data-testid="dropdown__option--core-7"
                   tabindex="0"
                 >
@@ -164,7 +164,7 @@ exports[`FilterTransactions should open dropdown list with all transaction types
                   </span>
                 </li>
                 <li
-                  class="sc-gtsrHT hZLfuI group"
+                  class="sc-gsDKAQ bwZfGu group"
                   data-testid="dropdown__option--core-8"
                   tabindex="0"
                 >
@@ -173,7 +173,7 @@ exports[`FilterTransactions should open dropdown list with all transaction types
                   </span>
                 </li>
                 <li
-                  class="sc-gtsrHT hZLfuI group"
+                  class="sc-gsDKAQ bwZfGu group"
                   data-testid="dropdown__option--core-9"
                   tabindex="0"
                 >
@@ -182,7 +182,7 @@ exports[`FilterTransactions should open dropdown list with all transaction types
                   </span>
                 </li>
                 <li
-                  class="sc-gtsrHT hZLfuI group"
+                  class="sc-gsDKAQ bwZfGu group"
                   data-testid="dropdown__option--core-10"
                   tabindex="0"
                 >
@@ -200,7 +200,7 @@ exports[`FilterTransactions should open dropdown list with all transaction types
               class="mx-8 -my-2"
             >
               <div
-                class="Divider-sc-17ehhxk-0 lgtApE border-theme-secondary-300 dark:border-theme-secondary-600"
+                class="Divider-sc-17ehhxk-0 hoeInf border-theme-secondary-300 dark:border-theme-secondary-600"
                 type="horizontal"
               />
             </div>
@@ -209,7 +209,7 @@ exports[`FilterTransactions should open dropdown list with all transaction types
                 data-testid="dropdown__options"
               >
                 <li
-                  class="sc-gtsrHT hZLfuI group"
+                  class="sc-gsDKAQ bwZfGu group"
                   data-testid="dropdown__option--magistrate-0"
                   tabindex="0"
                 >
@@ -257,10 +257,10 @@ exports[`FilterTransactions should render 1`] = `
             </span>
           </span>
           <span
-            class="CollapseToggleButton__ToggleIcon-sc-1wkp6k4-0 bJlGcn"
+            class="CollapseToggleButton__ToggleIcon-sc-1wkp6k4-0 hkBhyg"
           >
             <div
-              class="sc-bdnxRM AkeAK p-1"
+              class="sc-bdvvtL Cfvxc p-1"
               height="10"
               width="10"
             >
@@ -306,10 +306,10 @@ exports[`FilterTransactions should render with default selected option 1`] = `
             </span>
           </span>
           <span
-            class="CollapseToggleButton__ToggleIcon-sc-1wkp6k4-0 bJlGcn"
+            class="CollapseToggleButton__ToggleIcon-sc-1wkp6k4-0 hkBhyg"
           >
             <div
-              class="sc-bdnxRM AkeAK p-1"
+              class="sc-bdvvtL Cfvxc p-1"
               height="10"
               width="10"
             >

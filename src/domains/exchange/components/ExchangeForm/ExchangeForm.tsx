@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { Button } from "app/components/Button";
 import { Form } from "app/components/Form";
 import { StepIndicator } from "app/components/StepIndicator";
@@ -55,15 +55,8 @@ const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => v
 	const { clearErrors, formState, getValues, handleSubmit, register, trigger, setValue, watch } = form;
 	const { isDirty, isSubmitting, isValid } = formState;
 
-	const {
-		currencies,
-		fromCurrency,
-		toCurrency,
-		minPayinAmount,
-		minPayoutAmount,
-		recipientWallet,
-		refundWallet,
-	} = watch();
+	const { currencies, fromCurrency, toCurrency, minPayinAmount, minPayoutAmount, recipientWallet, refundWallet } =
+		watch();
 
 	useEffect(() => {
 		const fetchCurrencies = async () => {
@@ -169,15 +162,8 @@ const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => v
 	]);
 
 	const submitForm = useCallback(async () => {
-		const {
-			fromCurrency,
-			toCurrency,
-			recipientWallet,
-			refundWallet,
-			payinAmount,
-			externalId,
-			refundExternalId,
-		} = getValues();
+		const { fromCurrency, toCurrency, recipientWallet, refundWallet, payinAmount, externalId, refundExternalId } =
+			getValues();
 
 		const orderParameters: Order = {
 			address: recipientWallet,

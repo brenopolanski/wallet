@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/require-await */
 /* eslint-disable testing-library/no-unnecessary-act */ // @TODO remove and fix test
-import { Contracts } from "@payvo/profiles";
-// @README: This import is fine in tests but should be avoided in production code.
-import { ReadOnlyWallet } from "@payvo/profiles/distribution/read-only-wallet";
 import { Signatories } from "@payvo/sdk";
+import { Contracts } from "@payvo/sdk-profiles";
+// @README: This import is fine in tests but should be avoided in production code.
+import { ReadOnlyWallet } from "@payvo/sdk-profiles/distribution/read-only-wallet";
 import { screen, within } from "@testing-library/react";
 import { renderHook } from "@testing-library/react-hooks";
 import userEvent from "@testing-library/user-event";
@@ -33,7 +33,7 @@ import {
 	waitFor,
 } from "utils/testing-library";
 
-import { SendVote } from ".";
+import { SendVote } from "./SendVote";
 
 const fixtureProfileId = getDefaultProfileId();
 

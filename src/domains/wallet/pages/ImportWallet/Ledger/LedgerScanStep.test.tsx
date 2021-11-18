@@ -1,5 +1,5 @@
 import Transport from "@ledgerhq/hw-transport";
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { LedgerProvider } from "app/contexts/Ledger/Ledger";
 import nock from "nock";
@@ -13,9 +13,11 @@ describe("LedgerScanStep", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
 	let transport: typeof Transport;
-	let publicKeyPaths = new Map();
+	let publicKeyPaths: Map<string, string>;
 
 	beforeAll(() => {
+		publicKeyPaths = new Map<string, string>();
+
 		nock("https://ark-test.payvo.com/api")
 			.get("/wallets")
 			.query((parameters) => !!parameters.address)

@@ -13,7 +13,7 @@ exports[`UserInfo should render with regular image 1`] = `
         data-testid="navbar__useractions"
       >
         <div
-          class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
+          class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
           data-testid="Avatar"
         >
           <div
@@ -45,7 +45,7 @@ exports[`UserInfo should render with svg image 1`] = `
         data-testid="navbar__useractions"
       >
         <div
-          class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
+          class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
           data-testid="Avatar"
         >
           <div

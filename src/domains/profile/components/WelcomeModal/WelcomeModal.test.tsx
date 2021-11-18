@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { ConfigurationProvider } from "app/contexts";
 import { translations as commonTranslations } from "app/i18n/common/i18n";

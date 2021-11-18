@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createMemoryHistory } from "history";
 import nock from "nock";
@@ -6,7 +6,8 @@ import React from "react";
 import { Route } from "react-router-dom";
 import { env, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
 
-import { NotificationsDropdown } from ".";
+import { NotificationsDropdown } from "./NotificationsDropdown";
+
 const NotificationTransactionsFixtures = require("tests/fixtures/coins/ark/devnet/notification-transactions.json");
 const TransactionsFixture = require("tests/fixtures/coins/ark/devnet/transactions.json");
 

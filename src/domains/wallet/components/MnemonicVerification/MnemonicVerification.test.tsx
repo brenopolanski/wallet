@@ -1,6 +1,6 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
-import { render, screen } from "utils/testing-library";
+import { cleanup, render, screen } from "utils/testing-library";
 
 import { MnemonicVerification } from "./MnemonicVerification";
 
@@ -60,12 +60,12 @@ describe("MnemonicVerification", () => {
 		const wrongButton = getByText(mnemonicWords[4]);
 		userEvent.click(wrongButton);
 
-		expect(firstTab).toEqual(asFragment());
+		expect(firstTab).toStrictEqual(asFragment());
 
 		const firstButton = getByText(mnemonicWords[wordPositions[0] - 1]);
 		userEvent.click(firstButton);
 
-		expect(firstTab).not.toEqual(asFragment());
+		expect(firstTab).not.toStrictEqual(asFragment());
 
 		const secondButton = getByText(mnemonicWords[wordPositions[1] - 1]);
 		userEvent.click(secondButton);
@@ -77,21 +77,21 @@ describe("MnemonicVerification", () => {
 	});
 
 	it("should ask for random words", () => {
-		const firstElement = render(
-			<MnemonicVerification mnemonic={mnemonic} optionsLimit={limit} handleComplete={handleComplete} />,
-		);
-		const firstOptions = firstElement
+		render(<MnemonicVerification mnemonic={mnemonic} optionsLimit={limit} handleComplete={handleComplete} />);
+
+		const firstOptions = screen
 			.getAllByTestId("MnemonicVerificationProgress__Tab")
 			.map((element: any) => element.innerHTML);
 
-		const secondElement = render(
-			<MnemonicVerification mnemonic={mnemonic} optionsLimit={limit} handleComplete={handleComplete} />,
-		);
-		const secondOptions = secondElement
+		cleanup();
+
+		render(<MnemonicVerification mnemonic={mnemonic} optionsLimit={limit} handleComplete={handleComplete} />);
+
+		const secondOptions = screen
 			.getAllByTestId("MnemonicVerificationProgress__Tab")
 			.map((element: any) => element.innerHTML);
 
-		expect(firstOptions).not.toEqual(secondOptions);
+		expect(firstOptions).not.toStrictEqual(secondOptions);
 	});
 
 	it("should ask for unique words", () => {

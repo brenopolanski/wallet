@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { Alert } from "app/components/Alert";
 import { Icon } from "app/components/Icon";
 import { Spinner } from "app/components/Spinner";

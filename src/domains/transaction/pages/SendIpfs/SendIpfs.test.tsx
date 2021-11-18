@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts, DTO } from "@payvo/profiles";
+import { Contracts, DTO } from "@payvo/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { LedgerProvider, minVersionList } from "app/contexts";
 import { translations } from "domains/transaction/i18n";
@@ -24,7 +24,10 @@ import {
 	within,
 } from "utils/testing-library";
 
-import { FormStep, ReviewStep, SendIpfs, SummaryStep } from ".";
+import { FormStep } from "./FormStep";
+import { ReviewStep } from "./ReviewStep";
+import { SendIpfs } from "./SendIpfs";
+import { SummaryStep } from "./SummaryStep";
 
 const passphrase = getDefaultWalletMnemonic();
 const fixtureProfileId = getDefaultProfileId();

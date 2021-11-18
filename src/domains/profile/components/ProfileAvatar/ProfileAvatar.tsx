@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { Avatar } from "app/components/Avatar";
 import React from "react";
 import { Size } from "types";

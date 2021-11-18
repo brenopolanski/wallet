@@ -1,4 +1,4 @@
-import { Helpers } from "@payvo/profiles";
+import { Helpers } from "@payvo/sdk-profiles";
 import cn from "classnames";
 import React from "react";
 import tw, { styled } from "twin.macro";
@@ -18,18 +18,16 @@ const AvatarWrapper = styled.div<Properties>`
 	${tw`transition-all duration-100 relative inline-flex items-center justify-center align-middle rounded-full`}
 
 	${({ size }) => {
-		switch (size) {
-			case "xs":
-				return tw`w-5 h-5 text-sm`;
-			case "sm":
-				return tw`w-8 h-8 text-sm`;
-			case "lg":
-				return tw`w-11 h-11 text-sm`;
-			case "xl":
-				return tw`w-16 h-16 text-xl`;
-			default:
-				return tw`w-10 h-10`;
-		}
+		const sizes = {
+			default: () => tw`w-10 h-10`,
+			lg: () => tw`w-11 h-11 text-sm`,
+			sm: () => tw`w-8 h-8 text-sm`,
+			xl: () => tw`w-16 h-16 text-xl`,
+			xs: () => tw`w-5 h-5 text-sm`,
+		};
+
+		// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+		return (sizes[size as keyof typeof sizes] || sizes.default)();
 	}}
 
 	${({ noShadow, shadowClassName }) => {

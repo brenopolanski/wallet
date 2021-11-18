@@ -1,4 +1,4 @@
-import { Contracts, DTO } from "@payvo/profiles";
+import { Contracts, DTO } from "@payvo/sdk-profiles";
 import { Address } from "app/components/Address";
 import { useEnvironmentContext } from "app/contexts";
 import { useTransactionTypes } from "domains/transaction/hooks/use-transaction-types";

@@ -1,6 +1,6 @@
-import { truncate } from "@arkecosystem/utils";
-import { Contracts } from "@payvo/profiles";
 import { Coins, Networks } from "@payvo/sdk";
+import { truncate } from "@payvo/sdk-helpers";
+import { Contracts } from "@payvo/sdk-profiles";
 import { Divider } from "app/components/Divider";
 import { FormField, FormLabel } from "app/components/Form";
 import { Header } from "app/components/Header";

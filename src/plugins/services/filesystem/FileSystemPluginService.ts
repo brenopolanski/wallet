@@ -1,16 +1,17 @@
 import electron from "electron";
 import fs from "fs";
-import { PluginService, PluginServiceIdentifier } from "plugins/types";
+import { PluginService } from "plugins/core";
+import { PluginServiceConfig, PluginServiceIdentifier } from "plugins/types";
 
 export class FileSystemPluginService implements PluginService {
-	config() {
+	config(): PluginServiceConfig {
 		return {
 			accessor: "filesystem",
 			id: PluginServiceIdentifier.FileSystem,
 		};
 	}
 
-	api() {
+	api(): Record<string, Function> {
 		return {
 			askUserToOpenFile: this.askUserToOpenFile.bind(undefined),
 			askUserToSaveFile: this.askUserToSaveFile.bind(undefined),

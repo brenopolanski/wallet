@@ -6,13 +6,13 @@ exports[`SelectDropdown should render disabled option base 1`] = `
     class="relative w-full"
   >
     <div
-      class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
+      class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR sr-only"
     >
       <div
         class="relative flex flex-1 h-full"
       >
         <input
-          class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+          class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -34,7 +34,7 @@ exports[`SelectDropdown should render disabled option base 1`] = `
           id="downshift-18-label"
         />
         <div
-          class="Input__InputWrapperStyled-sc-1i8sd1r-0 iqZIWh"
+          class="Input__InputWrapperStyled-sc-1i8sd1r-0 ktoJbG"
           disabled=""
         >
           <div
@@ -45,7 +45,7 @@ exports[`SelectDropdown should render disabled option base 1`] = `
               aria-controls="downshift-18-menu"
               aria-labelledby="downshift-18-label"
               autocomplete="off"
-              class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full cursor-default text-theme-secondary-text"
+              class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full cursor-default text-theme-secondary-text"
               data-testid="SelectDropdown__input"
               disabled=""
               id="downshift-18-input"
@@ -64,7 +64,7 @@ exports[`SelectDropdown should render disabled option base 1`] = `
                 data-testid="SelectDropdown__caret"
               >
                 <div
-                  class="sc-bdnxRM AkeAK transition-transform text-theme-secondary-500"
+                  class="sc-bdvvtL Cfvxc transition-transform text-theme-secondary-500"
                   height="10"
                   width="10"
                 >
@@ -78,7 +78,7 @@ exports[`SelectDropdown should render disabled option base 1`] = `
         </div>
         <ul
           aria-labelledby="downshift-18-label"
-          class="styles__SelectOptionsList-sc-120rtxy-0 eqsPyr"
+          class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc"
           id="downshift-18-menu"
           role="listbox"
         />
@@ -94,13 +94,13 @@ exports[`SelectDropdown should render disabled option group 1`] = `
     class="relative w-full"
   >
     <div
-      class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
+      class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR sr-only"
     >
       <div
         class="relative flex flex-1 h-full"
       >
         <input
-          class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+          class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -122,7 +122,7 @@ exports[`SelectDropdown should render disabled option group 1`] = `
           id="downshift-20-label"
         />
         <div
-          class="Input__InputWrapperStyled-sc-1i8sd1r-0 iqZIWh"
+          class="Input__InputWrapperStyled-sc-1i8sd1r-0 ktoJbG"
           disabled=""
         >
           <div
@@ -133,7 +133,7 @@ exports[`SelectDropdown should render disabled option group 1`] = `
               aria-controls="downshift-20-menu"
               aria-labelledby="downshift-20-label"
               autocomplete="off"
-              class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full cursor-default text-theme-secondary-text"
+              class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full cursor-default text-theme-secondary-text"
               data-testid="SelectDropdown__input"
               disabled=""
               id="downshift-20-input"
@@ -152,7 +152,7 @@ exports[`SelectDropdown should render disabled option group 1`] = `
                 data-testid="SelectDropdown__caret"
               >
                 <div
-                  class="sc-bdnxRM AkeAK transition-transform text-theme-secondary-500"
+                  class="sc-bdvvtL Cfvxc transition-transform text-theme-secondary-500"
                   height="10"
                   width="10"
                 >
@@ -166,7 +166,7 @@ exports[`SelectDropdown should render disabled option group 1`] = `
         </div>
         <ul
           aria-labelledby="downshift-20-label"
-          class="styles__SelectOptionsList-sc-120rtxy-0 eqsPyr"
+          class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc"
           id="downshift-20-menu"
           role="listbox"
         />
@@ -182,14 +182,14 @@ exports[`SelectDropdown should render invalid option base 1`] = `
     class="relative w-full"
   >
     <div
-      class="Input__InputWrapperStyled-sc-1i8sd1r-0 kzbxct sr-only"
+      class="Input__InputWrapperStyled-sc-1i8sd1r-0 lnWRPe sr-only"
     >
       <div
         class="relative flex flex-1 h-full"
       >
         <input
           aria-invalid="true"
-          class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+          class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -203,7 +203,7 @@ exports[`SelectDropdown should render invalid option base 1`] = `
           data-testid="Input__error"
         >
           <div
-            class="sc-bdnxRM NjstW text-theme-danger-500"
+            class="sc-bdvvtL qGXhc text-theme-danger-500"
             height="20"
             width="20"
           >
@@ -228,7 +228,7 @@ exports[`SelectDropdown should render invalid option base 1`] = `
           id="downshift-14-label"
         />
         <div
-          class="Input__InputWrapperStyled-sc-1i8sd1r-0 kzbxct"
+          class="Input__InputWrapperStyled-sc-1i8sd1r-0 lnWRPe"
         >
           <div
             class="relative flex flex-1 h-full"
@@ -239,7 +239,7 @@ exports[`SelectDropdown should render invalid option base 1`] = `
               aria-invalid="true"
               aria-labelledby="downshift-14-label"
               autocomplete="off"
-              class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full cursor-default"
+              class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full cursor-default"
               data-testid="SelectDropdown__input"
               id="downshift-14-input"
               placeholder="Select option"
@@ -253,7 +253,7 @@ exports[`SelectDropdown should render invalid option base 1`] = `
               data-testid="Input__error"
             >
               <div
-                class="sc-bdnxRM NjstW text-theme-danger-500"
+                class="sc-bdvvtL qGXhc text-theme-danger-500"
                 height="20"
                 width="20"
               >
@@ -270,7 +270,7 @@ exports[`SelectDropdown should render invalid option base 1`] = `
                 data-testid="SelectDropdown__caret"
               >
                 <div
-                  class="sc-bdnxRM AkeAK transition-transform text-theme-danger-500"
+                  class="sc-bdvvtL Cfvxc transition-transform text-theme-danger-500"
                   height="10"
                   width="10"
                 >
@@ -284,7 +284,7 @@ exports[`SelectDropdown should render invalid option base 1`] = `
         </div>
         <ul
           aria-labelledby="downshift-14-label"
-          class="styles__SelectOptionsList-sc-120rtxy-0 eqsPyr"
+          class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc"
           id="downshift-14-menu"
           role="listbox"
         />
@@ -300,14 +300,14 @@ exports[`SelectDropdown should render invalid option group 1`] = `
     class="relative w-full"
   >
     <div
-      class="Input__InputWrapperStyled-sc-1i8sd1r-0 kzbxct sr-only"
+      class="Input__InputWrapperStyled-sc-1i8sd1r-0 lnWRPe sr-only"
     >
       <div
         class="relative flex flex-1 h-full"
       >
         <input
           aria-invalid="true"
-          class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+          class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -321,7 +321,7 @@ exports[`SelectDropdown should render invalid option group 1`] = `
           data-testid="Input__error"
         >
           <div
-            class="sc-bdnxRM NjstW text-theme-danger-500"
+            class="sc-bdvvtL qGXhc text-theme-danger-500"
             height="20"
             width="20"
           >
@@ -346,7 +346,7 @@ exports[`SelectDropdown should render invalid option group 1`] = `
           id="downshift-16-label"
         />
         <div
-          class="Input__InputWrapperStyled-sc-1i8sd1r-0 kzbxct"
+          class="Input__InputWrapperStyled-sc-1i8sd1r-0 lnWRPe"
         >
           <div
             class="relative flex flex-1 h-full"
@@ -357,7 +357,7 @@ exports[`SelectDropdown should render invalid option group 1`] = `
               aria-invalid="true"
               aria-labelledby="downshift-16-label"
               autocomplete="off"
-              class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full cursor-default"
+              class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full cursor-default"
               data-testid="SelectDropdown__input"
               id="downshift-16-input"
               placeholder="Select option"
@@ -371,7 +371,7 @@ exports[`SelectDropdown should render invalid option group 1`] = `
               data-testid="Input__error"
             >
               <div
-                class="sc-bdnxRM NjstW text-theme-danger-500"
+                class="sc-bdvvtL qGXhc text-theme-danger-500"
                 height="20"
                 width="20"
               >
@@ -388,7 +388,7 @@ exports[`SelectDropdown should render invalid option group 1`] = `
                 data-testid="SelectDropdown__caret"
               >
                 <div
-                  class="sc-bdnxRM AkeAK transition-transform text-theme-danger-500"
+                  class="sc-bdvvtL Cfvxc transition-transform text-theme-danger-500"
                   height="10"
                   width="10"
                 >
@@ -402,7 +402,7 @@ exports[`SelectDropdown should render invalid option group 1`] = `
         </div>
         <ul
           aria-labelledby="downshift-16-label"
-          class="styles__SelectOptionsList-sc-120rtxy-0 eqsPyr"
+          class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc"
           id="downshift-16-menu"
           role="listbox"
         />
@@ -418,13 +418,13 @@ exports[`SelectDropdown should render option base 1`] = `
     class="relative w-full"
   >
     <div
-      class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
+      class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR sr-only"
     >
       <div
         class="relative flex flex-1 h-full"
       >
         <input
-          class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+          class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -446,7 +446,7 @@ exports[`SelectDropdown should render option base 1`] = `
           id="downshift-0-label"
         />
         <div
-          class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
+          class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
         >
           <div
             class="relative flex flex-1 h-full"
@@ -456,7 +456,7 @@ exports[`SelectDropdown should render option base 1`] = `
               aria-controls="downshift-0-menu"
               aria-labelledby="downshift-0-label"
               autocomplete="off"
-              class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full cursor-default"
+              class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full cursor-default"
               data-testid="SelectDropdown__input"
               id="downshift-0-input"
               placeholder="Select option"
@@ -474,7 +474,7 @@ exports[`SelectDropdown should render option base 1`] = `
                 data-testid="SelectDropdown__caret"
               >
                 <div
-                  class="sc-bdnxRM AkeAK transition-transform text-theme-secondary-500"
+                  class="sc-bdvvtL Cfvxc transition-transform text-theme-secondary-500"
                   height="10"
                   width="10"
                 >
@@ -488,7 +488,7 @@ exports[`SelectDropdown should render option base 1`] = `
         </div>
         <ul
           aria-labelledby="downshift-0-label"
-          class="styles__SelectOptionsList-sc-120rtxy-0 eqsPyr"
+          class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc"
           id="downshift-0-menu"
           role="listbox"
         />
@@ -504,13 +504,13 @@ exports[`SelectDropdown should render option base with custom label 1`] = `
     class="relative w-full"
   >
     <div
-      class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
+      class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR sr-only"
     >
       <div
         class="relative flex flex-1 h-full"
       >
         <input
-          class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+          class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -538,7 +538,7 @@ exports[`SelectDropdown should render option base with custom label 1`] = `
           …
         </div>
         <div
-          class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
+          class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
         >
           <div
             class="relative flex flex-1 h-full"
@@ -548,7 +548,7 @@ exports[`SelectDropdown should render option base with custom label 1`] = `
               aria-controls="downshift-4-menu"
               aria-labelledby="downshift-4-label"
               autocomplete="off"
-              class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+              class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
               data-testid="SelectDropdown__input"
               id="downshift-4-input"
               placeholder="Select option"
@@ -576,7 +576,7 @@ exports[`SelectDropdown should render option base with custom label 1`] = `
                 data-testid="SelectDropdown__caret"
               >
                 <div
-                  class="sc-bdnxRM AkeAK transition-transform text-theme-secondary-500 transform rotate-180"
+                  class="sc-bdvvtL Cfvxc transition-transform text-theme-secondary-500 transform rotate-180"
                   height="10"
                   width="10"
                 >
@@ -590,7 +590,7 @@ exports[`SelectDropdown should render option base with custom label 1`] = `
         </div>
         <ul
           aria-labelledby="downshift-4-label"
-          class="styles__SelectOptionsList-sc-120rtxy-0 eqsPyr is-open"
+          class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc is-open"
           id="downshift-4-menu"
           role="listbox"
         >
@@ -652,13 +652,13 @@ exports[`SelectDropdown should render option base with default value when free t
     class="relative w-full"
   >
     <div
-      class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
+      class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR sr-only"
     >
       <div
         class="relative flex flex-1 h-full"
       >
         <input
-          class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+          class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -680,7 +680,7 @@ exports[`SelectDropdown should render option base with default value when free t
           id="downshift-338-label"
         />
         <div
-          class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
+          class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
         >
           <div
             class="relative flex flex-1 h-full"
@@ -690,7 +690,7 @@ exports[`SelectDropdown should render option base with default value when free t
               aria-controls="downshift-338-menu"
               aria-labelledby="downshift-338-label"
               autocomplete="off"
-              class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+              class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
               data-testid="SelectDropdown__input"
               id="downshift-338-input"
               placeholder="Select option"
@@ -708,7 +708,7 @@ exports[`SelectDropdown should render option base with default value when free t
                 data-testid="SelectDropdown__caret"
               >
                 <div
-                  class="sc-bdnxRM AkeAK transition-transform text-theme-secondary-500"
+                  class="sc-bdvvtL Cfvxc transition-transform text-theme-secondary-500"
                   height="10"
                   width="10"
                 >
@@ -722,7 +722,7 @@ exports[`SelectDropdown should render option base with default value when free t
         </div>
         <ul
           aria-labelledby="downshift-338-label"
-          class="styles__SelectOptionsList-sc-120rtxy-0 eqsPyr"
+          class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc"
           id="downshift-338-menu"
           role="listbox"
         />
@@ -738,13 +738,13 @@ exports[`SelectDropdown should render option base with initial default value 1`]
     class="relative w-full"
   >
     <div
-      class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
+      class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR sr-only"
     >
       <div
         class="relative flex flex-1 h-full"
       >
         <input
-          class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+          class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -772,7 +772,7 @@ exports[`SelectDropdown should render option base with initial default value 1`]
           …
         </div>
         <div
-          class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
+          class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
         >
           <div
             class="relative flex flex-1 h-full"
@@ -782,7 +782,7 @@ exports[`SelectDropdown should render option base with initial default value 1`]
               aria-controls="downshift-34-menu"
               aria-labelledby="downshift-34-label"
               autocomplete="off"
-              class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+              class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
               data-testid="SelectDropdown__input"
               id="downshift-34-input"
               placeholder="Select option"
@@ -810,7 +810,7 @@ exports[`SelectDropdown should render option base with initial default value 1`]
                 data-testid="SelectDropdown__caret"
               >
                 <div
-                  class="sc-bdnxRM AkeAK transition-transform text-theme-secondary-500"
+                  class="sc-bdvvtL Cfvxc transition-transform text-theme-secondary-500"
                   height="10"
                   width="10"
                 >
@@ -824,7 +824,7 @@ exports[`SelectDropdown should render option base with initial default value 1`]
         </div>
         <ul
           aria-labelledby="downshift-34-label"
-          class="styles__SelectOptionsList-sc-120rtxy-0 eqsPyr"
+          class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc"
           id="downshift-34-menu"
           role="listbox"
         />
@@ -840,13 +840,13 @@ exports[`SelectDropdown should render option base with wrong default value 1`] =
     class="relative w-full"
   >
     <div
-      class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
+      class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR sr-only"
     >
       <div
         class="relative flex flex-1 h-full"
       >
         <input
-          class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+          class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -868,7 +868,7 @@ exports[`SelectDropdown should render option base with wrong default value 1`] =
           id="downshift-40-label"
         />
         <div
-          class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
+          class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
         >
           <div
             class="relative flex flex-1 h-full"
@@ -878,7 +878,7 @@ exports[`SelectDropdown should render option base with wrong default value 1`] =
               aria-controls="downshift-40-menu"
               aria-labelledby="downshift-40-label"
               autocomplete="off"
-              class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full cursor-default"
+              class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full cursor-default"
               data-testid="SelectDropdown__input"
               id="downshift-40-input"
               placeholder="Select option"
@@ -896,7 +896,7 @@ exports[`SelectDropdown should render option base with wrong default value 1`] =
                 data-testid="SelectDropdown__caret"
               >
                 <div
-                  class="sc-bdnxRM AkeAK transition-transform text-theme-secondary-500"
+                  class="sc-bdvvtL Cfvxc transition-transform text-theme-secondary-500"
                   height="10"
                   width="10"
                 >
@@ -910,7 +910,7 @@ exports[`SelectDropdown should render option base with wrong default value 1`] =
         </div>
         <ul
           aria-labelledby="downshift-40-label"
-          class="styles__SelectOptionsList-sc-120rtxy-0 eqsPyr"
+          class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc"
           id="downshift-40-menu"
           role="listbox"
         />
@@ -926,13 +926,13 @@ exports[`SelectDropdown should render option base without caret 1`] = `
     class="relative w-full"
   >
     <div
-      class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
+      class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR sr-only"
     >
       <div
         class="relative flex flex-1 h-full"
       >
         <input
-          class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+          class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -954,7 +954,7 @@ exports[`SelectDropdown should render option base without caret 1`] = `
           id="downshift-22-label"
         />
         <div
-          class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
+          class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
         >
           <div
             class="relative flex flex-1 h-full"
@@ -964,7 +964,7 @@ exports[`SelectDropdown should render option base without caret 1`] = `
               aria-controls="downshift-22-menu"
               aria-labelledby="downshift-22-label"
               autocomplete="off"
-              class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full cursor-default"
+              class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full cursor-default"
               data-testid="SelectDropdown__input"
               id="downshift-22-input"
               placeholder="Select option"
@@ -974,7 +974,7 @@ exports[`SelectDropdown should render option base without caret 1`] = `
         </div>
         <ul
           aria-labelledby="downshift-22-label"
-          class="styles__SelectOptionsList-sc-120rtxy-0 eqsPyr"
+          class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc"
           id="downshift-22-menu"
           role="listbox"
         />
@@ -990,13 +990,13 @@ exports[`SelectDropdown should render option group 1`] = `
     class="relative w-full"
   >
     <div
-      class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
+      class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR sr-only"
     >
       <div
         class="relative flex flex-1 h-full"
       >
         <input
-          class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+          class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -1018,7 +1018,7 @@ exports[`SelectDropdown should render option group 1`] = `
           id="downshift-2-label"
         />
         <div
-          class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
+          class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
         >
           <div
             class="relative flex flex-1 h-full"
@@ -1028,7 +1028,7 @@ exports[`SelectDropdown should render option group 1`] = `
               aria-controls="downshift-2-menu"
               aria-labelledby="downshift-2-label"
               autocomplete="off"
-              class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full cursor-default"
+              class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full cursor-default"
               data-testid="SelectDropdown__input"
               id="downshift-2-input"
               placeholder="Select option"
@@ -1046,7 +1046,7 @@ exports[`SelectDropdown should render option group 1`] = `
                 data-testid="SelectDropdown__caret"
               >
                 <div
-                  class="sc-bdnxRM AkeAK transition-transform text-theme-secondary-500"
+                  class="sc-bdvvtL Cfvxc transition-transform text-theme-secondary-500"
                   height="10"
                   width="10"
                 >
@@ -1060,7 +1060,7 @@ exports[`SelectDropdown should render option group 1`] = `
         </div>
         <ul
           aria-labelledby="downshift-2-label"
-          class="styles__SelectOptionsList-sc-120rtxy-0 eqsPyr"
+          class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc"
           id="downshift-2-menu"
           role="listbox"
         />
@@ -1076,13 +1076,13 @@ exports[`SelectDropdown should render option group with custom label 1`] = `
     class="relative w-full"
   >
     <div
-      class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
+      class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR sr-only"
     >
       <div
         class="relative flex flex-1 h-full"
       >
         <input
-          class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+          class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -1110,7 +1110,7 @@ exports[`SelectDropdown should render option group with custom label 1`] = `
           …
         </div>
         <div
-          class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
+          class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
         >
           <div
             class="relative flex flex-1 h-full"
@@ -1120,7 +1120,7 @@ exports[`SelectDropdown should render option group with custom label 1`] = `
               aria-controls="downshift-9-menu"
               aria-labelledby="downshift-9-label"
               autocomplete="off"
-              class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+              class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
               data-testid="SelectDropdown__input"
               id="downshift-9-input"
               placeholder="Select option"
@@ -1148,7 +1148,7 @@ exports[`SelectDropdown should render option group with custom label 1`] = `
                 data-testid="SelectDropdown__caret"
               >
                 <div
-                  class="sc-bdnxRM AkeAK transition-transform text-theme-secondary-500 transform rotate-180"
+                  class="sc-bdvvtL Cfvxc transition-transform text-theme-secondary-500 transform rotate-180"
                   height="10"
                   width="10"
                 >
@@ -1162,7 +1162,7 @@ exports[`SelectDropdown should render option group with custom label 1`] = `
         </div>
         <ul
           aria-labelledby="downshift-9-label"
-          class="styles__SelectOptionsList-sc-120rtxy-0 eqsPyr is-open"
+          class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc is-open"
           id="downshift-9-menu"
           role="listbox"
         >
@@ -1223,13 +1223,13 @@ exports[`SelectDropdown should render option group with default value when free 
     class="relative w-full"
   >
     <div
-      class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
+      class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR sr-only"
     >
       <div
         class="relative flex flex-1 h-full"
       >
         <input
-          class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+          class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -1251,7 +1251,7 @@ exports[`SelectDropdown should render option group with default value when free 
           id="downshift-341-label"
         />
         <div
-          class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
+          class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
         >
           <div
             class="relative flex flex-1 h-full"
@@ -1261,7 +1261,7 @@ exports[`SelectDropdown should render option group with default value when free 
               aria-controls="downshift-341-menu"
               aria-labelledby="downshift-341-label"
               autocomplete="off"
-              class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+              class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
               data-testid="SelectDropdown__input"
               id="downshift-341-input"
               placeholder="Select option"
@@ -1279,7 +1279,7 @@ exports[`SelectDropdown should render option group with default value when free 
                 data-testid="SelectDropdown__caret"
               >
                 <div
-                  class="sc-bdnxRM AkeAK transition-transform text-theme-secondary-500"
+                  class="sc-bdvvtL Cfvxc transition-transform text-theme-secondary-500"
                   height="10"
                   width="10"
                 >
@@ -1293,7 +1293,7 @@ exports[`SelectDropdown should render option group with default value when free 
         </div>
         <ul
           aria-labelledby="downshift-341-label"
-          class="styles__SelectOptionsList-sc-120rtxy-0 eqsPyr"
+          class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc"
           id="downshift-341-menu"
           role="listbox"
         />
@@ -1309,13 +1309,13 @@ exports[`SelectDropdown should render option group with initial default value 1`
     class="relative w-full"
   >
     <div
-      class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
+      class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR sr-only"
     >
       <div
         class="relative flex flex-1 h-full"
       >
         <input
-          class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+          class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -1343,7 +1343,7 @@ exports[`SelectDropdown should render option group with initial default value 1`
           …
         </div>
         <div
-          class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
+          class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
         >
           <div
             class="relative flex flex-1 h-full"
@@ -1353,7 +1353,7 @@ exports[`SelectDropdown should render option group with initial default value 1`
               aria-controls="downshift-37-menu"
               aria-labelledby="downshift-37-label"
               autocomplete="off"
-              class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+              class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
               data-testid="SelectDropdown__input"
               id="downshift-37-input"
               placeholder="Select option"
@@ -1381,7 +1381,7 @@ exports[`SelectDropdown should render option group with initial default value 1`
                 data-testid="SelectDropdown__caret"
               >
                 <div
-                  class="sc-bdnxRM AkeAK transition-transform text-theme-secondary-500"
+                  class="sc-bdvvtL Cfvxc transition-transform text-theme-secondary-500"
                   height="10"
                   width="10"
                 >
@@ -1395,7 +1395,7 @@ exports[`SelectDropdown should render option group with initial default value 1`
         </div>
         <ul
           aria-labelledby="downshift-37-label"
-          class="styles__SelectOptionsList-sc-120rtxy-0 eqsPyr"
+          class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc"
           id="downshift-37-menu"
           role="listbox"
         />
@@ -1411,13 +1411,13 @@ exports[`SelectDropdown should render option group with wrong default value 1`] 
     class="relative w-full"
   >
     <div
-      class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
+      class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR sr-only"
     >
       <div
         class="relative flex flex-1 h-full"
       >
         <input
-          class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+          class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -1439,7 +1439,7 @@ exports[`SelectDropdown should render option group with wrong default value 1`] 
           id="downshift-42-label"
         />
         <div
-          class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
+          class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
         >
           <div
             class="relative flex flex-1 h-full"
@@ -1449,7 +1449,7 @@ exports[`SelectDropdown should render option group with wrong default value 1`] 
               aria-controls="downshift-42-menu"
               aria-labelledby="downshift-42-label"
               autocomplete="off"
-              class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full cursor-default"
+              class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full cursor-default"
               data-testid="SelectDropdown__input"
               id="downshift-42-input"
               placeholder="Select option"
@@ -1467,7 +1467,7 @@ exports[`SelectDropdown should render option group with wrong default value 1`] 
                 data-testid="SelectDropdown__caret"
               >
                 <div
-                  class="sc-bdnxRM AkeAK transition-transform text-theme-secondary-500"
+                  class="sc-bdvvtL Cfvxc transition-transform text-theme-secondary-500"
                   height="10"
                   width="10"
                 >
@@ -1481,7 +1481,7 @@ exports[`SelectDropdown should render option group with wrong default value 1`] 
         </div>
         <ul
           aria-labelledby="downshift-42-label"
-          class="styles__SelectOptionsList-sc-120rtxy-0 eqsPyr"
+          class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc"
           id="downshift-42-menu"
           role="listbox"
         />
@@ -1497,13 +1497,13 @@ exports[`SelectDropdown should render option group without caret 1`] = `
     class="relative w-full"
   >
     <div
-      class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
+      class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR sr-only"
     >
       <div
         class="relative flex flex-1 h-full"
       >
         <input
-          class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+          class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -1525,7 +1525,7 @@ exports[`SelectDropdown should render option group without caret 1`] = `
           id="downshift-24-label"
         />
         <div
-          class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
+          class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
         >
           <div
             class="relative flex flex-1 h-full"
@@ -1535,7 +1535,7 @@ exports[`SelectDropdown should render option group without caret 1`] = `
               aria-controls="downshift-24-menu"
               aria-labelledby="downshift-24-label"
               autocomplete="off"
-              class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full cursor-default"
+              class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full cursor-default"
               data-testid="SelectDropdown__input"
               id="downshift-24-input"
               placeholder="Select option"
@@ -1545,7 +1545,7 @@ exports[`SelectDropdown should render option group without caret 1`] = `
         </div>
         <ul
           aria-labelledby="downshift-24-label"
-          class="styles__SelectOptionsList-sc-120rtxy-0 eqsPyr"
+          class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc"
           id="downshift-24-menu"
           role="listbox"
         />
@@ -1561,13 +1561,13 @@ exports[`SelectDropdown should render with empty options 1`] = `
     class="relative w-full"
   >
     <div
-      class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
+      class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR sr-only"
     >
       <div
         class="relative flex flex-1 h-full"
       >
         <input
-          class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+          class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -1589,7 +1589,7 @@ exports[`SelectDropdown should render with empty options 1`] = `
           id="downshift-44-label"
         />
         <div
-          class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
+          class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
         >
           <div
             class="relative flex flex-1 h-full"
@@ -1599,7 +1599,7 @@ exports[`SelectDropdown should render with empty options 1`] = `
               aria-controls="downshift-44-menu"
               aria-labelledby="downshift-44-label"
               autocomplete="off"
-              class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full cursor-default"
+              class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full cursor-default"
               data-testid="SelectDropdown__input"
               id="downshift-44-input"
               placeholder="Select option"
@@ -1617,7 +1617,7 @@ exports[`SelectDropdown should render with empty options 1`] = `
                 data-testid="SelectDropdown__caret"
               >
                 <div
-                  class="sc-bdnxRM AkeAK transition-transform text-theme-secondary-500"
+                  class="sc-bdvvtL Cfvxc transition-transform text-theme-secondary-500"
                   height="10"
                   width="10"
                 >
@@ -1631,7 +1631,7 @@ exports[`SelectDropdown should render with empty options 1`] = `
         </div>
         <ul
           aria-labelledby="downshift-44-label"
-          class="styles__SelectOptionsList-sc-120rtxy-0 eqsPyr"
+          class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc"
           id="downshift-44-menu"
           role="listbox"
         />
@@ -1647,13 +1647,13 @@ exports[`SelectDropdown should render with options values as numbers 1`] = `
     class="relative w-full"
   >
     <div
-      class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
+      class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR sr-only"
     >
       <div
         class="relative flex flex-1 h-full"
       >
         <input
-          class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+          class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -1675,7 +1675,7 @@ exports[`SelectDropdown should render with options values as numbers 1`] = `
           id="downshift-46-label"
         />
         <div
-          class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
+          class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
         >
           <div
             class="relative flex flex-1 h-full"
@@ -1685,7 +1685,7 @@ exports[`SelectDropdown should render with options values as numbers 1`] = `
               aria-controls="downshift-46-menu"
               aria-labelledby="downshift-46-label"
               autocomplete="off"
-              class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full cursor-default"
+              class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full cursor-default"
               data-testid="SelectDropdown__input"
               id="downshift-46-input"
               placeholder="Select option"
@@ -1703,7 +1703,7 @@ exports[`SelectDropdown should render with options values as numbers 1`] = `
                 data-testid="SelectDropdown__caret"
               >
                 <div
-                  class="sc-bdnxRM AkeAK transition-transform text-theme-secondary-500"
+                  class="sc-bdvvtL Cfvxc transition-transform text-theme-secondary-500"
                   height="10"
                   width="10"
                 >
@@ -1717,7 +1717,7 @@ exports[`SelectDropdown should render with options values as numbers 1`] = `
         </div>
         <ul
           aria-labelledby="downshift-46-label"
-          class="styles__SelectOptionsList-sc-120rtxy-0 eqsPyr"
+          class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc"
           id="downshift-46-menu"
           role="listbox"
         />

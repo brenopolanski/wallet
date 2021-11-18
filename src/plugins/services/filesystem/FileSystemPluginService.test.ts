@@ -1,6 +1,6 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import electron from "electron";
-import { PluginController, PluginManager } from "plugins/core";
+import { IPluginController, PluginController, PluginManager } from "plugins/core";
 import { PluginAPI } from "plugins/types";
 import { env } from "utils/testing-library";
 
@@ -15,7 +15,7 @@ const config = {
 describe("FileSystemPluginService", () => {
 	let profile: Contracts.IProfile;
 	let manager: PluginManager;
-	let ctrl: PluginController;
+	let ctrl: IPluginController;
 
 	beforeEach(() => {
 		profile = env.profiles().first();

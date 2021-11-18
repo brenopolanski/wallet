@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 import { env, fireEvent, getDefaultProfileId, MNEMONICS, render, screen, waitFor } from "utils/testing-library";
@@ -32,7 +32,7 @@ describe("VerifyMessage", () => {
 		profileId = profile.id(),
 		...properties
 	}: any) => {
-		const result = render(
+		const utils = render(
 			<VerifyMessage isOpen={isOpen} walletId={walletId} profileId={profileId} {...properties} />,
 		);
 
@@ -42,7 +42,7 @@ describe("VerifyMessage", () => {
 			expect(submitButton).toBeDisabled();
 		});
 
-		return result;
+		return utils;
 	};
 
 	it("should render", async () => {

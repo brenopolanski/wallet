@@ -1,5 +1,5 @@
-import { BigNumber } from "@payvo/helpers";
 import { ARK } from "@payvo/sdk-ark";
+import { BigNumber } from "@payvo/sdk-helpers";
 import { LSK } from "@payvo/sdk-lsk";
 import { renderHook } from "@testing-library/react-hooks";
 import { EnvironmentProvider } from "app/contexts";
@@ -24,7 +24,7 @@ describe("useFees", () => {
 
 		await env.fees().sync(profile, "ARK", "ark.devnet");
 
-		await expect(current.calculate({ coin: "ARK", network: "ark.devnet", type: "ipfs" })).resolves.toEqual({
+		await expect(current.calculate({ coin: "ARK", network: "ark.devnet", type: "ipfs" })).resolves.toStrictEqual({
 			avg: 5,
 			isDynamic: true,
 			max: 5,
@@ -34,7 +34,12 @@ describe("useFees", () => {
 	});
 
 	it("should ensure fees are synced before find", async () => {
-		env.reset({ coins: { ARK }, httpClient, storage: new StubStorage() });
+		env.reset({
+			coins: { ARK },
+			httpClient,
+			ledgerTransportFactory: async () => {},
+			storage: new StubStorage(),
+		});
 
 		const profile = env.profiles().create("John Doe");
 		await env.profiles().restore(profile);
@@ -51,7 +56,7 @@ describe("useFees", () => {
 
 		await env.fees().sync(profile, "ARK", "ark.devnet");
 
-		await expect(current.calculate({ coin: "ARK", network: "ark.devnet", type: "ipfs" })).resolves.toEqual({
+		await expect(current.calculate({ coin: "ARK", network: "ark.devnet", type: "ipfs" })).resolves.toStrictEqual({
 			avg: 5,
 			isDynamic: true,
 			max: 5,
@@ -61,7 +66,12 @@ describe("useFees", () => {
 	});
 
 	it("should retry find fees by type", async () => {
-		env.reset({ coins: { ARK }, httpClient, storage: new StubStorage() });
+		env.reset({
+			coins: { ARK },
+			httpClient,
+			ledgerTransportFactory: async () => {},
+			storage: new StubStorage(),
+		});
 
 		const mockFind = jest.spyOn(env.fees(), "findByType").mockImplementationOnce(() => {
 			throw new Error("test");
@@ -82,7 +92,7 @@ describe("useFees", () => {
 
 		await env.fees().sync(profile, "ARK", "ark.devnet");
 
-		await expect(current.calculate({ coin: "ARK", network: "ark.devnet", type: "ipfs" })).resolves.toEqual({
+		await expect(current.calculate({ coin: "ARK", network: "ark.devnet", type: "ipfs" })).resolves.toStrictEqual({
 			avg: 5,
 			isDynamic: true,
 			max: 5,
@@ -94,7 +104,12 @@ describe("useFees", () => {
 	});
 
 	it("should calculate and return multisignature fees with one participant", async () => {
-		env.reset({ coins: { ARK }, httpClient, storage: new StubStorage() });
+		env.reset({
+			coins: { ARK },
+			httpClient,
+			ledgerTransportFactory: async () => {},
+			storage: new StubStorage(),
+		});
 
 		const profile = env.profiles().create("John Doe");
 		await env.profiles().restore(profile);
@@ -118,7 +133,7 @@ describe("useFees", () => {
 				network: "ark.devnet",
 				type: "multiSignature",
 			}),
-		).resolves.toEqual({
+		).resolves.toStrictEqual({
 			avg: 10,
 			isDynamic: false,
 			max: 10,
@@ -128,7 +143,12 @@ describe("useFees", () => {
 	});
 
 	it("should calculate and return multisignature fees with two participants", async () => {
-		env.reset({ coins: { ARK }, httpClient, storage: new StubStorage() });
+		env.reset({
+			coins: { ARK },
+			httpClient,
+			ledgerTransportFactory: async () => {},
+			storage: new StubStorage(),
+		});
 
 		const profile = env.profiles().create("John Doe");
 		await env.profiles().restore(profile);
@@ -166,7 +186,7 @@ describe("useFees", () => {
 				network: wallet.network().id(),
 				type: "multiSignature",
 			}),
-		).resolves.toEqual({
+		).resolves.toStrictEqual({
 			avg: 15,
 			isDynamic: false,
 			max: 15,
@@ -176,7 +196,12 @@ describe("useFees", () => {
 	});
 
 	it("should calculate and return fees when feeType is size", async () => {
-		env.reset({ coins: { LSK }, httpClient, storage: new StubStorage() });
+		env.reset({
+			coins: { LSK },
+			httpClient,
+			ledgerTransportFactory: async () => {},
+			storage: new StubStorage(),
+		});
 
 		const profile = env.profiles().create("John Doe");
 		await env.profiles().restore(profile);
@@ -210,7 +235,13 @@ describe("useFees", () => {
 				network: wallet.network().id(),
 				type: "transfer",
 			}),
-		).resolves.toEqual({ avg: 1, max: 1, min: 1, static: 1 });
+		).resolves.toStrictEqual({
+			avg: 1,
+			isDynamic: undefined,
+			max: 1,
+			min: 1,
+			static: 1,
+		});
 
 		mockFind.mockRestore();
 		transferMock.mockRestore();
@@ -218,7 +249,12 @@ describe("useFees", () => {
 	});
 
 	it("should return a default value when error is thrown in the calculation", async () => {
-		env.reset({ coins: { LSK }, httpClient, storage: new StubStorage() });
+		env.reset({
+			coins: { LSK },
+			httpClient,
+			ledgerTransportFactory: async () => {},
+			storage: new StubStorage(),
+		});
 
 		const profile = env.profiles().create("John Doe");
 		await env.profiles().restore(profile);
@@ -251,8 +287,9 @@ describe("useFees", () => {
 				network: wallet.network().id(),
 				type: "transfer",
 			}),
-		).resolves.toEqual({
+		).resolves.toStrictEqual({
 			avg: 0,
+			isDynamic: undefined,
 			max: 0,
 			min: 0,
 			static: 0,

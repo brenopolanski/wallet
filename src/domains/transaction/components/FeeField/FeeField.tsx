@@ -1,6 +1,6 @@
-import { isEqual } from "@arkecosystem/utils";
-import { Contracts } from "@payvo/profiles";
 import { Networks } from "@payvo/sdk";
+import { isEqual } from "@payvo/sdk-helpers";
+import { Contracts } from "@payvo/sdk-profiles";
 import { useDebounce, useFees } from "app/hooks";
 import { toasts } from "app/services";
 import { InputFee } from "domains/transaction/components/InputFee";

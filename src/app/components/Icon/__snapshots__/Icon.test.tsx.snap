@@ -3,7 +3,7 @@
 exports[`Icon should render 1`] = `
 <DocumentFragment>
   <div
-    class="sc-bdnxRM AFVmm"
+    class="sc-bdvvtL fCrhkg"
     height="16"
     width="16"
   >
@@ -17,7 +17,7 @@ exports[`Icon should render 1`] = `
 exports[`Icon should render fallback 1`] = `
 <DocumentFragment>
   <div
-    class="sc-bdnxRM AFVmm"
+    class="sc-bdvvtL fCrhkg"
     height="16"
     width="16"
   >

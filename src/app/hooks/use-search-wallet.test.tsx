@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { act, renderHook } from "@testing-library/react-hooks";
 import { EnvironmentProvider } from "app/contexts/Environment";
 import { RecipientProperties } from "domains/transaction/components/SearchRecipient/SearchRecipient.contracts";

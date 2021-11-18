@@ -1,4 +1,4 @@
-import { WalletLedgerModel } from "@payvo/profiles/distribution/contracts";
+import { WalletLedgerModel } from "@payvo/sdk-profiles/distribution/contracts";
 import { useMemo } from "react";
 
 export type LedgerModel = WalletLedgerModel.NanoS | WalletLedgerModel.NanoX;

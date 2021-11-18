@@ -1,4 +1,4 @@
-import { Contracts, DTO } from "@payvo/profiles";
+import { Contracts, DTO } from "@payvo/sdk-profiles";
 import { Button } from "app/components/Button";
 import { Dropdown } from "app/components/Dropdown";
 import { Icon } from "app/components/Icon";
@@ -21,11 +21,11 @@ export const NotificationsDropdown = ({ profile }: { profile: Contracts.IProfile
 		const notification = profile.notifications().get(id);
 		const action = `${notification.type}.${notification.action}`;
 
-		switch (action) {
-			case "release.update":
-				setWalletUpdateVersion(notification?.meta?.version);
-				setIsWalletUpdateOpen(true);
-				break;
+		// TODO: need to implement plugin notifications https://cryptoarkproject.slack.com/archives/CJFKZSV61/p1636975388100900
+		/* istanbul ignore else */
+		if (action === "release.update") {
+			setWalletUpdateVersion(notification.meta.version);
+			setIsWalletUpdateOpen(true);
 		}
 	};
 

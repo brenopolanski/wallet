@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/await-thenable */
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts, Wallet } from "@payvo/profiles";
+import { Contracts, Wallet } from "@payvo/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { EnvironmentProvider, LedgerProvider } from "app/contexts";
 import { translations as commonTranslations } from "app/i18n/common/i18n";

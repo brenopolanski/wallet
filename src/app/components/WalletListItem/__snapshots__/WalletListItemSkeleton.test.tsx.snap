@@ -7,18 +7,18 @@ exports[`WalletListItemSkeleton should render wallet list skeleton when isCompac
       data-testid="WalletListSkeleton"
     >
       <tr
-        class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
+        class="TableRow__TableRowStyled-sc-y9j4av-0 jRikRC"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY space-x-4"
           >
             <div
               class="flex items-center -space-x-1"
             >
               <div
-                class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-transparent ring-theme-background"
+                class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-transparent ring-theme-background"
               >
                 <span>
                   <span
@@ -30,7 +30,7 @@ exports[`WalletListItemSkeleton should render wallet list skeleton when isCompac
                 </span>
               </div>
               <div
-                class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-transparent ring-theme-background"
+                class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-transparent ring-theme-background"
               >
                 <span>
                   <span
@@ -54,7 +54,7 @@ exports[`WalletListItemSkeleton should render wallet list skeleton when isCompac
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center text-sm font-bold text-center align-middle"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq justify-center text-sm font-bold text-center align-middle"
           >
             <span>
               <span
@@ -68,7 +68,7 @@ exports[`WalletListItemSkeleton should render wallet list skeleton when isCompac
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh font-semibold justify-end"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq font-semibold justify-end"
           >
             <span>
               <span
@@ -82,7 +82,7 @@ exports[`WalletListItemSkeleton should render wallet list skeleton when isCompac
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end text-theme-secondary-400"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end text-theme-secondary-400"
           >
             <span>
               <span
@@ -107,18 +107,18 @@ exports[`WalletListItemSkeleton should render wallet list skeleton when isCompac
       data-testid="WalletListSkeleton"
     >
       <tr
-        class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
+        class="TableRow__TableRowStyled-sc-y9j4av-0 jRikRC"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC space-x-4"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx space-x-4"
           >
             <div
               class="flex items-center space-x-4"
             >
               <div
-                class="Circle__CircleWrapper-sc-d5u41q-0 ctbTNr border-transparent ring-theme-background"
+                class="Circle__CircleWrapper-sc-d5u41q-0 csrTuU border-transparent ring-theme-background"
               >
                 <span>
                   <span
@@ -130,7 +130,7 @@ exports[`WalletListItemSkeleton should render wallet list skeleton when isCompac
                 </span>
               </div>
               <div
-                class="Circle__CircleWrapper-sc-d5u41q-0 ctbTNr border-transparent ring-theme-background"
+                class="Circle__CircleWrapper-sc-d5u41q-0 csrTuU border-transparent ring-theme-background"
               >
                 <span>
                   <span
@@ -154,7 +154,7 @@ exports[`WalletListItemSkeleton should render wallet list skeleton when isCompac
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center text-sm font-bold text-center align-middle"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD justify-center text-sm font-bold text-center align-middle"
           >
             <span>
               <span
@@ -168,7 +168,7 @@ exports[`WalletListItemSkeleton should render wallet list skeleton when isCompac
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI font-semibold justify-end"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD font-semibold justify-end"
           >
             <span>
               <span
@@ -182,7 +182,7 @@ exports[`WalletListItemSkeleton should render wallet list skeleton when isCompac
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end text-theme-secondary-400"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end text-theme-secondary-400"
           >
             <span>
               <span
