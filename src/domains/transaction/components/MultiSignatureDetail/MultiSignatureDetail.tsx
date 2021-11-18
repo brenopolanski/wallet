@@ -114,7 +114,7 @@ export const MultiSignatureDetail = ({
 				setActiveStep(MultiSignatureDetailStep.ErrorStep);
 			}
 		},
-		[transaction, wallet, addSignature, connect, profile, persist, broadcastMultiSignature],
+		[transaction, wallet, addSignature, connect, profile, persist, broadcast],
 	);
 
 	const handleSend = () => {
