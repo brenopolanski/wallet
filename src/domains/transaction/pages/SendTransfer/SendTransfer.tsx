@@ -32,7 +32,7 @@ export const SendTransfer: VFC = () => {
 	const history = useHistory();
 	const activeWallet = useActiveWalletWhenNeeded(false);
 	const activeProfile = useActiveProfile();
-	const networks = useNetworks();
+	const networks = useNetworks(activeProfile);
 	const { fetchWalletUnconfirmedTransactions } = useTransaction();
 	const { hasDeviceAvailable, isConnected } = useLedgerContext();
 	const {
