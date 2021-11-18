@@ -4,6 +4,7 @@ import { ConfigurationProvider, EnvironmentProvider } from "app/contexts";
 import React from "react";
 import * as reactRouterDom from "react-router-dom";
 import { env, getDefaultProfileId, waitFor } from "utils/testing-library";
+
 import { useWalletFilters } from "./hooks";
 
 jest.mock("react-router-dom", () => ({
