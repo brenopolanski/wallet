@@ -1,4 +1,4 @@
-import { LineGraphDataPoint } from "app/components/Graphs/LineGraph/LineGraph.contracts";
+import { GraphDataPoint } from "app/components/Graphs/Graphs.contracts";
 
 interface AssetItem {
 	amount: number;
@@ -8,7 +8,7 @@ interface AssetItem {
 }
 
 interface LegendProperties {
-	dataPoints: LineGraphDataPoint[];
+	dataPoints: GraphDataPoint[];
 	hasZeroBalance: boolean;
 	onMoreDetailsClick: () => void;
 }
@@ -19,7 +19,7 @@ interface LabelledTextProperties {
 }
 
 interface TooltipProperties {
-	dataPoint: LineGraphDataPoint;
+	dataPoint: GraphDataPoint;
 }
 
 export type { AssetItem, LabelledTextProperties, LegendProperties, TooltipProperties };

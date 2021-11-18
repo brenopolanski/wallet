@@ -1,4 +1,4 @@
-import { DonutGraphDataPoint } from "app/components/Graphs/DonutGraph/DonutGraph.contracts";
+import { GraphDataPoint } from "app/components/Graphs/Graphs.contracts";
 import { AssetItem } from "domains/dashboard/components/PortfolioBreakdown/PortfolioBreakdown.contracts";
 
 interface PortfolioBreakdownDetailsProperties {
@@ -21,7 +21,7 @@ interface AssetListProperties {
 }
 
 interface TooltipProperties {
-	dataPoint: DonutGraphDataPoint;
+	dataPoint: GraphDataPoint;
 }
 
 interface BalanceProperties {

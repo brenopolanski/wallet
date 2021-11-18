@@ -1,8 +1,9 @@
+import { GraphDataPoint } from "app/components/Graphs/Graphs.contracts";
 import React, { useMemo } from "react";
 
-import { LineGraphConfig, LineGraphDataPoint } from "./LineGraph.contracts";
+import { LineGraphConfig } from "./LineGraph.contracts";
 
-const useLineGraph = (data: LineGraphDataPoint[], config: LineGraphConfig): React.SVGProps<SVGRectElement>[] => {
+const useLineGraph = (data: GraphDataPoint[], config: LineGraphConfig): React.SVGProps<SVGRectElement>[] => {
 	const { graphWidth, segmentSpacing, segmentHeight } = config;
 
 	return useMemo<React.SVGProps<SVGRectElement>[]>(() => {

@@ -1,6 +1,6 @@
 import { useDonutGraph } from "app/components/Graphs/DonutGraph/DonutGraph.helpers";
 import { GraphHoverAnimation } from "app/components/Graphs/GraphHoverAnimation";
-import { useGraphTooltip } from "app/components/Graphs/Graphs.shared";
+import { useGraphData, useGraphTooltip } from "app/components/Graphs/Graphs.shared";
 import React from "react";
 
 import { ContentInsideCircle } from "./DonutGraph.blocks";
@@ -12,9 +12,11 @@ export const DonutGraph: React.VFC<DonutGraphProperties> = ({
 	renderTooltip,
 	renderContentInsideCircle,
 }) => {
-	const { circles, backgroundCircle } = useDonutGraph(data, size);
-
+	const { normalizeData } = useGraphData("donut");
 	const { Tooltip, getMouseEventProperties } = useGraphTooltip(renderTooltip, "donut");
+
+	const normalizedData = normalizeData(data);
+	const { circles, backgroundCircle } = useDonutGraph(normalizedData, size);
 
 	return (
 		<div className="relative">

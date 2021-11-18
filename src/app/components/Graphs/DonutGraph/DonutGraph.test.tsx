@@ -1,12 +1,12 @@
 import userEvent from "@testing-library/user-event";
+import { GraphDataPoint } from "app/components/Graphs/Graphs.contracts";
 import React from "react";
 import { render, screen, waitFor } from "utils/testing-library";
 
 import { DonutGraph } from "./DonutGraph";
-import { DonutGraphDataPoint } from "./DonutGraph.contracts";
 
 describe("DonutGraph", () => {
-	let data: DonutGraphDataPoint[];
+	let data: GraphDataPoint[];
 
 	beforeAll(() => {
 		data = [

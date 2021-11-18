@@ -1,14 +1,10 @@
-interface DonutGraphDataPoint {
-	color: string;
-	data: Record<string, any>;
-	value: number;
-}
+import { GraphDataPoint } from "app/components/Graphs/Graphs.contracts";
 
 interface DonutGraphProperties {
-	data: DonutGraphDataPoint[];
+	data: GraphDataPoint[];
 	size: number;
-	renderTooltip?: (dataPoint: DonutGraphDataPoint) => JSX.Element;
+	renderTooltip?: (dataPoint: GraphDataPoint) => JSX.Element;
 	renderContentInsideCircle?: () => JSX.Element;
 }
 
-export type { DonutGraphDataPoint, DonutGraphProperties };
+export type { DonutGraphProperties };

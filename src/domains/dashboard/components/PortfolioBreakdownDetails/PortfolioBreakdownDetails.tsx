@@ -1,5 +1,5 @@
 import { DonutGraph } from "app/components/Graphs/DonutGraph";
-import { DonutGraphDataPoint } from "app/components/Graphs/DonutGraph/DonutGraph.contracts";
+import { GraphDataPoint } from "app/components/Graphs/Graphs.contracts";
 import { Modal } from "app/components/Modal";
 import { useTheme } from "app/hooks";
 import { formatPercentage, getColor } from "domains/dashboard/components/PortfolioBreakdown/PortfolioBreakdown.helpers";
@@ -19,7 +19,7 @@ export const PortfolioBreakdownDetails: React.VFC<PortfolioBreakdownDetailsPrope
 	const { t } = useTranslation();
 	const { isDarkMode } = useTheme();
 
-	const donutGraphData = useMemo<DonutGraphDataPoint[]>(
+	const donutGraphData = useMemo<GraphDataPoint[]>(
 		() =>
 			assets.map((asset, index) => ({
 				color: getColor(index, isDarkMode),

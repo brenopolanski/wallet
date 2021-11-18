@@ -1,5 +1,5 @@
 import { GraphHoverAnimation } from "app/components/Graphs/GraphHoverAnimation";
-import { useGraphTooltip, useGraphWidth } from "app/components/Graphs/Graphs.shared";
+import { useGraphData, useGraphTooltip, useGraphWidth } from "app/components/Graphs/Graphs.shared";
 import React, { useCallback, useMemo } from "react";
 
 import { LineGraphEmpty } from "./LineGraph.blocks";
@@ -8,7 +8,7 @@ import { useLineGraph } from "./LineGraph.helpers";
 
 export const LineGraph: React.VFC<LineGraphProperties> = ({ data, renderLegend, renderTooltip, renderAsEmpty }) => {
 	const [reference, graphWidth] = useGraphWidth();
-
+	const { normalizeData } = useGraphData("line");
 	const { Tooltip, getMouseEventProperties } = useGraphTooltip(renderTooltip, "line");
 
 	const config = useMemo<LineGraphConfig>(
@@ -21,7 +21,8 @@ export const LineGraph: React.VFC<LineGraphProperties> = ({ data, renderLegend, 
 		[graphWidth],
 	);
 
-	const rectangles = useLineGraph(data, config);
+	const normalizedData = normalizeData(data);
+	const rectangles = useLineGraph(normalizedData, config);
 
 	const renderSegments = useCallback(() => {
 		if (renderAsEmpty) {

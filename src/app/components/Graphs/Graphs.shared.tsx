@@ -1,10 +1,55 @@
 import React, { MouseEvent, MutableRefObject, useCallback, useEffect, useRef, useState } from "react";
 
+import { GraphDataPoint, GraphType } from "./Graphs.contracts";
+
 const GRAPH_COLORS = ["success-600", "warning-600", "info-600", "danger-400", "hint-400", "secondary-400"];
 const GRAPH_COLORS_DARK = ["success-600", "warning-600", "info-600", "danger-400", "hint-400", "secondary-600"];
 
 const GRAPH_COLOR_EMPTY = "secondary-300";
 const GRAPH_COLOR_EMPTY_DARK = "secondary-800";
+
+const MIN_VALUE = 1;
+const MIN_DISPLAY_VALUE_LINE = 2.5;
+const MIN_DISPLAY_VALUE_DONUT = 5;
+
+const useGraphData = (graphType: GraphType) => {
+	const normalizeData = useCallback(
+		(data: GraphDataPoint[]) => {
+			let overflow = 0;
+			let count = 0;
+
+			const minValue = graphType === "line" ? MIN_DISPLAY_VALUE_LINE : MIN_DISPLAY_VALUE_DONUT;
+
+			const normalized: GraphDataPoint[] = [];
+
+			for (const entry of data) {
+				if (entry.value < MIN_VALUE) {
+					continue;
+				}
+
+				if (entry.value < minValue) {
+					overflow = overflow + (minValue - entry.value);
+					entry.value = minValue;
+				} else if (entry.value > minValue * 1.25) {
+					count++;
+				}
+
+				normalized.push(entry);
+			}
+
+			for (const entry of normalized) {
+				if (entry.value > minValue * 1.25) {
+					entry.value = entry.value - overflow / count;
+				}
+			}
+
+			return normalized;
+		},
+		[graphType],
+	);
+
+	return { normalizeData };
+};
 
 const useGraphWidth = (): [MutableRefObject<SVGSVGElement | null>, number] => {
 	const reference = useRef<SVGSVGElement | null>(null);
@@ -38,7 +83,7 @@ interface UseGraphTooltipResult<TDataPoint> {
 
 function useGraphTooltip<TDataPoint>(
 	renderFunction: ((dataPoint: TDataPoint) => JSX.Element) | undefined,
-	type: "line" | "donut",
+	type: GraphType,
 ): UseGraphTooltipResult<TDataPoint> {
 	const timeout = useRef<number>();
 	const tooltipReference = useRef<HTMLDivElement | null>(null);
@@ -106,4 +151,12 @@ function useGraphTooltip<TDataPoint>(
 	return { Tooltip, getMouseEventProperties };
 }
 
-export { GRAPH_COLOR_EMPTY, GRAPH_COLOR_EMPTY_DARK, GRAPH_COLORS, GRAPH_COLORS_DARK, useGraphTooltip, useGraphWidth };
+export {
+	GRAPH_COLOR_EMPTY,
+	GRAPH_COLOR_EMPTY_DARK,
+	GRAPH_COLORS,
+	GRAPH_COLORS_DARK,
+	useGraphData,
+	useGraphTooltip,
+	useGraphWidth,
+};

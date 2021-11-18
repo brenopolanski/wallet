@@ -4,7 +4,7 @@ import { Amount } from "app/components/Amount";
 import { EmptyBlock } from "app/components/EmptyBlock";
 import { GRAPH_COLOR_EMPTY, GRAPH_COLOR_EMPTY_DARK } from "app/components/Graphs/Graphs.shared";
 import { LineGraph } from "app/components/Graphs/LineGraph";
-import { LineGraphDataPoint } from "app/components/Graphs/LineGraph/LineGraph.contracts";
+import { GraphDataPoint } from "app/components/Graphs/Graphs.contracts";
 import { useTheme } from "app/hooks";
 import { PortfolioBreakdownDetails } from "domains/dashboard/components/PortfolioBreakdownDetails";
 import { usePortfolioBreakdown } from "domains/dashboard/hooks/use-portfolio-breakdown";
@@ -35,7 +35,7 @@ export const PortfolioBreakdown: React.VFC<PortfolioBreakdownProperties> = ({
 
 	const hasZeroBalance = useMemo(() => balance === 0, [balance]);
 
-	const lineGraphData = useMemo<LineGraphDataPoint[]>(() => {
+	const lineGraphData = useMemo<GraphDataPoint[]>(() => {
 		if (hasZeroBalance) {
 			return assets.map((asset) => ({
 				color: isDarkMode ? GRAPH_COLOR_EMPTY_DARK : GRAPH_COLOR_EMPTY,

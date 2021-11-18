@@ -1,13 +1,13 @@
 import userEvent from "@testing-library/user-event";
+import { GraphDataPoint } from "app/components/Graphs/Graphs.contracts";
 import * as sharedGraphUtils from "app/components/Graphs/Graphs.shared";
 import React from "react";
 import { render, screen, waitFor } from "utils/testing-library";
 
 import { LineGraph } from "./LineGraph";
-import { LineGraphDataPoint } from "./LineGraph.contracts";
 
 describe("LineGraph", () => {
-	let data: LineGraphDataPoint[];
+	let data: GraphDataPoint[];
 	let useWidthMock: jest.SpyInstance;
 
 	beforeAll(() => {

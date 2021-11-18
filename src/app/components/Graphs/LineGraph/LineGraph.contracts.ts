@@ -1,8 +1,4 @@
-interface LineGraphDataPoint {
-	color: string;
-	data: Record<string, any>;
-	value: number;
-}
+import { GraphDataPoint } from "app/components/Graphs/Graphs.contracts";
 
 interface LineGraphConfig {
 	graphWidth: number;
@@ -12,10 +8,10 @@ interface LineGraphConfig {
 }
 
 interface LineGraphProperties {
-	data: LineGraphDataPoint[];
-	renderLegend?: (dataPoints: LineGraphDataPoint[]) => JSX.Element;
-	renderTooltip?: (dataPoint: LineGraphDataPoint) => JSX.Element;
+	data: GraphDataPoint[];
+	renderLegend?: (dataPoints: GraphDataPoint[]) => JSX.Element;
+	renderTooltip?: (dataPoint: GraphDataPoint) => JSX.Element;
 	renderAsEmpty?: boolean;
 }
 
-export type { LineGraphConfig, LineGraphDataPoint, LineGraphProperties };
+export type { LineGraphConfig, LineGraphProperties };
