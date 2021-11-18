@@ -1,0 +1,784 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PortfolioBreakdown should render empty with dark mode = false 1`] = `
+<DocumentFragment>
+  <div
+    class="border border-solid border-theme-secondary-300 dark:border-theme-secondary-800 rounded-lg text-theme-secondary-text text-center leading-5 p-6"
+    data-testid="EmptyBlock"
+  >
+    <div>
+      Your portfolio is currently empty. 
+      <strong>
+        Create
+      </strong>
+       or 
+      <strong>
+        Import
+      </strong>
+       a wallet to get started.
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`PortfolioBreakdown should render empty with dark mode = true 1`] = `
+<DocumentFragment>
+  <div
+    class="border border-solid border-theme-secondary-300 dark:border-theme-secondary-800 rounded-lg text-theme-secondary-text text-center leading-5 p-6"
+    data-testid="EmptyBlock"
+  >
+    <div>
+      Your portfolio is currently empty. 
+      <strong>
+        Create
+      </strong>
+       or 
+      <strong>
+        Import
+      </strong>
+       a wallet to get started.
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`PortfolioBreakdown should render loading 1`] = `
+<DocumentFragment>
+  <div
+    class="py-4 px-6 bg-theme-secondary-100 dark:bg-black rounded-xl flex"
+    data-testid="PortfolioBreakdownSkeleton"
+  >
+    <div
+      class="flex space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
+    >
+      <div
+        class="flex flex-col font-semibold space-y-1 pl-3 first:pl-0"
+      >
+        <span
+          class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700 whitespace-nowrap"
+        >
+          Your Balance
+        </span>
+        <div
+          class="flex items-center h-7"
+        >
+          <span>
+            <span
+              class="flex items-center leading-none"
+            >
+              <span
+                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                style="width: 100px; height: 18px;"
+              >
+                ‌
+              </span>
+              ‌
+            </span>
+          </span>
+        </div>
+      </div>
+      <div
+        class="flex flex-col font-semibold space-y-1 pl-3 first:pl-0"
+      >
+        <span
+          class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700 whitespace-nowrap"
+        >
+          Assets
+        </span>
+        <div
+          class="flex items-center h-7"
+        >
+          <span>
+            <span
+              class="flex items-center leading-none"
+            >
+              <span
+                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                style="width: 20px; height: 18px;"
+              >
+                ‌
+              </span>
+              ‌
+            </span>
+          </span>
+        </div>
+      </div>
+      <div
+        class="flex flex-col font-semibold space-y-1 pl-3 first:pl-0"
+      >
+        <span
+          class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700 whitespace-nowrap"
+        >
+          Wallets
+        </span>
+        <div
+          class="flex items-center h-7"
+        >
+          <span>
+            <span
+              class="flex items-center leading-none"
+            >
+              <span
+                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                style="width: 20px; height: 18px;"
+              >
+                ‌
+              </span>
+              ‌
+            </span>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex-1 ml-4 self-end"
+    >
+      <span>
+        <span
+          class="flex items-center leading-none"
+        >
+          <span
+            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+            style="width: 0px; height: 8px;"
+          >
+            ‌
+          </span>
+          ‌
+        </span>
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`PortfolioBreakdown should render with dark mode = false 1`] = `
+<DocumentFragment>
+  <div
+    class="py-4 px-6 bg-theme-secondary-100 dark:bg-black rounded-xl flex"
+    data-testid="PortfolioBreakdown"
+  >
+    <div
+      class="flex space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
+    >
+      <div
+        class="flex flex-col font-semibold space-y-1 pl-3 first:pl-0"
+      >
+        <span
+          class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700 whitespace-nowrap"
+        >
+          Your Balance
+        </span>
+        <span
+          class="whitespace-nowrap text-lg text-theme-secondary-900 dark:text-theme-secondary-200"
+          data-testid="Amount"
+        >
+          $100.00
+        </span>
+      </div>
+      <div
+        class="flex flex-col font-semibold space-y-1 pl-3 first:pl-0"
+      >
+        <span
+          class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700 whitespace-nowrap"
+        >
+          Assets
+        </span>
+        <span
+          class="text-lg text-theme-secondary-900 dark:text-theme-secondary-200"
+          data-testid="PortfolioBreakdown__assets"
+        >
+          2
+        </span>
+      </div>
+      <div
+        class="flex flex-col font-semibold space-y-1 pl-3 first:pl-0"
+      >
+        <span
+          class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700 whitespace-nowrap"
+        >
+          Wallets
+        </span>
+        <span
+          class="text-lg text-theme-secondary-900 dark:text-theme-secondary-200"
+          data-testid="PortfolioBreakdown__wallets"
+        >
+          2
+        </span>
+      </div>
+    </div>
+    <div
+      class="flex-1 ml-6"
+    >
+      <div>
+        <div
+          class="absolute duration-200 transition-opacity opacity-0"
+        />
+        <div
+          class="flex justify-end mb-1"
+          data-testid="LineGraph__legend"
+        >
+          <div
+            class="flex justify-end mb-1"
+          >
+            <div
+              class="flex space-x-4"
+            >
+              <div
+                class="flex items-center space-x-1 text-sm font-semibold"
+              >
+                <span
+                  class="h-3 w-1 rounded bg-theme-success-600"
+                />
+                <span
+                  class="text-theme-secondary-700 dark:text-theme-secondary-200"
+                >
+                  ARK
+                </span>
+                <span
+                  class="text-theme-secondary-500 dark:text-theme-secondary-700"
+                >
+                  85%
+                </span>
+              </div>
+              <div
+                class="flex items-center space-x-1 text-sm font-semibold"
+              >
+                <span
+                  class="h-3 w-1 rounded bg-theme-warning-600"
+                />
+                <span
+                  class="text-theme-secondary-700 dark:text-theme-secondary-200"
+                >
+                  LSK
+                </span>
+                <span
+                  class="text-theme-secondary-500 dark:text-theme-secondary-700"
+                >
+                  15%
+                </span>
+              </div>
+            </div>
+            <div
+              class="border-l border-theme-secondary-300 dark:border-theme-secondary-800 ml-4 pl-4"
+            >
+              <button
+                class="font-semibold text-sm link"
+                type="button"
+              >
+                More Details
+              </button>
+            </div>
+          </div>
+        </div>
+        <svg
+          class="w-full h-5"
+          data-testid="LineGraph__svg"
+        >
+          <rect
+            class="fill-current text-theme-success-600"
+            data-testid="LineGraph__item"
+            height="8"
+            rx="4"
+            width="77"
+            x="0"
+            y="8"
+          >
+            <animate
+              attributeName="height"
+              begin="mouseover"
+              dur="0.1s"
+              fill="freeze"
+              from="8"
+              to="16"
+            />
+            <animate
+              attributeName="height"
+              begin="mouseleave"
+              dur="0.15s"
+              fill="freeze"
+              from="16"
+              to="8"
+            />
+            <animate
+              attributeName="rx"
+              begin="mouseover"
+              dur="0.1s"
+              fill="freeze"
+              from="4"
+              to="8"
+            />
+            <animate
+              attributeName="rx"
+              begin="mouseleave"
+              dur="0.15s"
+              fill="freeze"
+              from="8"
+              to="4"
+            />
+            <animate
+              attributeName="y"
+              begin="mouseover"
+              dur="0.1s"
+              fill="freeze"
+              from="8"
+              to="0"
+            />
+            <animate
+              attributeName="y"
+              begin="mouseleave"
+              dur="0.15s"
+              fill="freeze"
+              from="0"
+              to="8"
+            />
+          </rect>
+          <rect
+            class="fill-current text-theme-warning-600"
+            data-testid="LineGraph__item"
+            height="8"
+            rx="4"
+            width="15"
+            x="85"
+            y="8"
+          >
+            <animate
+              attributeName="height"
+              begin="mouseover"
+              dur="0.1s"
+              fill="freeze"
+              from="8"
+              to="16"
+            />
+            <animate
+              attributeName="height"
+              begin="mouseleave"
+              dur="0.15s"
+              fill="freeze"
+              from="16"
+              to="8"
+            />
+            <animate
+              attributeName="rx"
+              begin="mouseover"
+              dur="0.1s"
+              fill="freeze"
+              from="4"
+              to="8"
+            />
+            <animate
+              attributeName="rx"
+              begin="mouseleave"
+              dur="0.15s"
+              fill="freeze"
+              from="8"
+              to="4"
+            />
+            <animate
+              attributeName="y"
+              begin="mouseover"
+              dur="0.1s"
+              fill="freeze"
+              from="8"
+              to="0"
+            />
+            <animate
+              attributeName="y"
+              begin="mouseleave"
+              dur="0.15s"
+              fill="freeze"
+              from="0"
+              to="8"
+            />
+          </rect>
+        </svg>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`PortfolioBreakdown should render with dark mode = true 1`] = `
+<DocumentFragment>
+  <div
+    class="py-4 px-6 bg-theme-secondary-100 dark:bg-black rounded-xl flex"
+    data-testid="PortfolioBreakdown"
+  >
+    <div
+      class="flex space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
+    >
+      <div
+        class="flex flex-col font-semibold space-y-1 pl-3 first:pl-0"
+      >
+        <span
+          class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700 whitespace-nowrap"
+        >
+          Your Balance
+        </span>
+        <span
+          class="whitespace-nowrap text-lg text-theme-secondary-900 dark:text-theme-secondary-200"
+          data-testid="Amount"
+        >
+          $100.00
+        </span>
+      </div>
+      <div
+        class="flex flex-col font-semibold space-y-1 pl-3 first:pl-0"
+      >
+        <span
+          class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700 whitespace-nowrap"
+        >
+          Assets
+        </span>
+        <span
+          class="text-lg text-theme-secondary-900 dark:text-theme-secondary-200"
+          data-testid="PortfolioBreakdown__assets"
+        >
+          2
+        </span>
+      </div>
+      <div
+        class="flex flex-col font-semibold space-y-1 pl-3 first:pl-0"
+      >
+        <span
+          class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700 whitespace-nowrap"
+        >
+          Wallets
+        </span>
+        <span
+          class="text-lg text-theme-secondary-900 dark:text-theme-secondary-200"
+          data-testid="PortfolioBreakdown__wallets"
+        >
+          2
+        </span>
+      </div>
+    </div>
+    <div
+      class="flex-1 ml-6"
+    >
+      <div>
+        <div
+          class="absolute duration-200 transition-opacity opacity-0"
+        />
+        <div
+          class="flex justify-end mb-1"
+          data-testid="LineGraph__legend"
+        >
+          <div
+            class="flex justify-end mb-1"
+          >
+            <div
+              class="flex space-x-4"
+            >
+              <div
+                class="flex items-center space-x-1 text-sm font-semibold"
+              >
+                <span
+                  class="h-3 w-1 rounded bg-theme-success-600"
+                />
+                <span
+                  class="text-theme-secondary-700 dark:text-theme-secondary-200"
+                >
+                  ARK
+                </span>
+                <span
+                  class="text-theme-secondary-500 dark:text-theme-secondary-700"
+                >
+                  85%
+                </span>
+              </div>
+              <div
+                class="flex items-center space-x-1 text-sm font-semibold"
+              >
+                <span
+                  class="h-3 w-1 rounded bg-theme-warning-600"
+                />
+                <span
+                  class="text-theme-secondary-700 dark:text-theme-secondary-200"
+                >
+                  LSK
+                </span>
+                <span
+                  class="text-theme-secondary-500 dark:text-theme-secondary-700"
+                >
+                  15%
+                </span>
+              </div>
+            </div>
+            <div
+              class="border-l border-theme-secondary-300 dark:border-theme-secondary-800 ml-4 pl-4"
+            >
+              <button
+                class="font-semibold text-sm link"
+                type="button"
+              >
+                More Details
+              </button>
+            </div>
+          </div>
+        </div>
+        <svg
+          class="w-full h-5"
+          data-testid="LineGraph__svg"
+        >
+          <rect
+            class="fill-current text-theme-success-600"
+            data-testid="LineGraph__item"
+            height="8"
+            rx="4"
+            width="77"
+            x="0"
+            y="8"
+          >
+            <animate
+              attributeName="height"
+              begin="mouseover"
+              dur="0.1s"
+              fill="freeze"
+              from="8"
+              to="16"
+            />
+            <animate
+              attributeName="height"
+              begin="mouseleave"
+              dur="0.15s"
+              fill="freeze"
+              from="16"
+              to="8"
+            />
+            <animate
+              attributeName="rx"
+              begin="mouseover"
+              dur="0.1s"
+              fill="freeze"
+              from="4"
+              to="8"
+            />
+            <animate
+              attributeName="rx"
+              begin="mouseleave"
+              dur="0.15s"
+              fill="freeze"
+              from="8"
+              to="4"
+            />
+            <animate
+              attributeName="y"
+              begin="mouseover"
+              dur="0.1s"
+              fill="freeze"
+              from="8"
+              to="0"
+            />
+            <animate
+              attributeName="y"
+              begin="mouseleave"
+              dur="0.15s"
+              fill="freeze"
+              from="0"
+              to="8"
+            />
+          </rect>
+          <rect
+            class="fill-current text-theme-warning-600"
+            data-testid="LineGraph__item"
+            height="8"
+            rx="4"
+            width="15"
+            x="85"
+            y="8"
+          >
+            <animate
+              attributeName="height"
+              begin="mouseover"
+              dur="0.1s"
+              fill="freeze"
+              from="8"
+              to="16"
+            />
+            <animate
+              attributeName="height"
+              begin="mouseleave"
+              dur="0.15s"
+              fill="freeze"
+              from="16"
+              to="8"
+            />
+            <animate
+              attributeName="rx"
+              begin="mouseover"
+              dur="0.1s"
+              fill="freeze"
+              from="4"
+              to="8"
+            />
+            <animate
+              attributeName="rx"
+              begin="mouseleave"
+              dur="0.15s"
+              fill="freeze"
+              from="8"
+              to="4"
+            />
+            <animate
+              attributeName="y"
+              begin="mouseover"
+              dur="0.1s"
+              fill="freeze"
+              from="8"
+              to="0"
+            />
+            <animate
+              attributeName="y"
+              begin="mouseleave"
+              dur="0.15s"
+              fill="freeze"
+              from="0"
+              to="8"
+            />
+          </rect>
+        </svg>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`PortfolioBreakdown should render zero balance state 1`] = `
+<DocumentFragment>
+  <div
+    class="py-4 px-6 bg-theme-secondary-100 dark:bg-black rounded-xl flex"
+    data-testid="PortfolioBreakdown"
+  >
+    <div
+      class="flex space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
+    >
+      <div
+        class="flex flex-col font-semibold space-y-1 pl-3 first:pl-0"
+      >
+        <span
+          class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700 whitespace-nowrap"
+        >
+          Your Balance
+        </span>
+        <span
+          class="whitespace-nowrap text-lg text-theme-secondary-900 dark:text-theme-secondary-200"
+          data-testid="Amount"
+        >
+          $0.00
+        </span>
+      </div>
+      <div
+        class="flex flex-col font-semibold space-y-1 pl-3 first:pl-0"
+      >
+        <span
+          class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700 whitespace-nowrap"
+        >
+          Assets
+        </span>
+        <span
+          class="text-lg text-theme-secondary-900 dark:text-theme-secondary-200"
+          data-testid="PortfolioBreakdown__assets"
+        >
+          2
+        </span>
+      </div>
+      <div
+        class="flex flex-col font-semibold space-y-1 pl-3 first:pl-0"
+      >
+        <span
+          class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700 whitespace-nowrap"
+        >
+          Wallets
+        </span>
+        <span
+          class="text-lg text-theme-secondary-900 dark:text-theme-secondary-200"
+          data-testid="PortfolioBreakdown__wallets"
+        >
+          2
+        </span>
+      </div>
+    </div>
+    <div
+      class="flex-1 ml-6"
+    >
+      <div>
+        <div
+          class="absolute duration-200 transition-opacity opacity-0"
+        />
+        <div
+          class="flex justify-end mb-1"
+          data-testid="LineGraph__legend"
+        >
+          <div
+            class="flex justify-end mb-1"
+          >
+            <div
+              class="flex space-x-4"
+            >
+              <div
+                class="flex items-center space-x-1 text-sm font-semibold"
+              >
+                <span
+                  class="h-3 w-1 rounded bg-theme-secondary-800"
+                />
+                <span
+                  class="text-theme-secondary-700 dark:text-theme-secondary-200"
+                >
+                  ARK
+                </span>
+                <span
+                  class="text-theme-secondary-500 dark:text-theme-secondary-700"
+                >
+                  0%
+                </span>
+              </div>
+              <div
+                class="flex items-center space-x-1 text-sm font-semibold"
+              >
+                <span
+                  class="h-3 w-1 rounded bg-theme-secondary-800"
+                />
+                <span
+                  class="text-theme-secondary-700 dark:text-theme-secondary-200"
+                >
+                  LSK
+                </span>
+                <span
+                  class="text-theme-secondary-500 dark:text-theme-secondary-700"
+                >
+                  0%
+                </span>
+              </div>
+            </div>
+            <div
+              class="border-l border-theme-secondary-300 dark:border-theme-secondary-800 ml-4 pl-4"
+            >
+              <button
+                class="font-semibold text-sm cursor-not-allowed text-theme-secondary-500 dark:text-theme-secondary-700"
+                disabled=""
+                type="button"
+              >
+                More Details
+              </button>
+            </div>
+          </div>
+        </div>
+        <svg
+          class="w-full h-5"
+          data-testid="LineGraph__svg"
+        >
+          <rect
+            class="fill-current text-theme-secondary-300 dark:text-theme-secondary-800"
+            data-testid="LineGraph__empty"
+            height="8"
+            rx="4"
+            width="100"
+            x="0"
+            y="8"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,5 +1,5 @@
-import { sortByDesc } from "@arkecosystem/utils";
-import { Contracts, Helpers } from "@payvo/profiles";
+import { sortByDesc } from "@payvo/sdk-helpers";
+import { Contracts, Helpers } from "@payvo/sdk-profiles";
 import { Amount } from "app/components/Amount";
 import { EmptyBlock } from "app/components/EmptyBlock";
 import { GRAPH_COLOR_EMPTY, GRAPH_COLOR_EMPTY_DARK } from "app/components/Graphs/Graphs.shared";
@@ -73,18 +73,29 @@ export const PortfolioBreakdown: React.VFC<PortfolioBreakdownProperties> = ({
 
 	return (
 		<>
-			<div className="py-4 px-6 bg-theme-secondary-100 dark:bg-black rounded-xl flex">
+			<div
+				className="py-4 px-6 bg-theme-secondary-100 dark:bg-black rounded-xl flex"
+				data-testid="PortfolioBreakdown"
+			>
 				<div className="flex space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800">
 					<LabelledText label={t("COMMON.YOUR_BALANCE")}>
 						{(textClassName) => <Amount className={textClassName} ticker={ticker} value={balance} />}
 					</LabelledText>
 
 					<LabelledText label={t("COMMON.ASSETS")}>
-						{(textClassName) => <span className={textClassName}>{assets.length}</span>}
+						{(textClassName) => (
+							<span data-testid="PortfolioBreakdown__assets" className={textClassName}>
+								{assets.length}
+							</span>
+						)}
 					</LabelledText>
 
 					<LabelledText label={t("COMMON.WALLETS")}>
-						{(textClassName) => <span className={textClassName}>{walletsCount}</span>}
+						{(textClassName) => (
+							<span data-testid="PortfolioBreakdown__wallets" className={textClassName}>
+								{walletsCount}
+							</span>
+						)}
 					</LabelledText>
 				</div>
 

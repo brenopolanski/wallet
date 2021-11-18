@@ -20,7 +20,7 @@ describe("useTheme", () => {
 		});
 	});
 
-	describe("isDarkMode", () => {
+	describe("@isDarkMode", () => {
 		it("should return true if dark mode", () => {
 			jest.spyOn(utils, "shouldUseDarkColors").mockImplementation(() => true);
 

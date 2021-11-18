@@ -1,6 +1,7 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { AssetItem } from "domains/dashboard/components/PortfolioBreakdown/PortfolioBreakdown.contracts";
 import { useMemo } from "react";
+import { assertString } from "utils/assertions";
 
 type UsePortfolioBreakdownHook = (input: {
 	profile: Contracts.IProfile;
@@ -23,7 +24,16 @@ export const usePortfolioBreakdown: UsePortfolioBreakdownHook = ({ profile, prof
 	]);
 
 	const ticker = useMemo<string>(
-		() => profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency) ?? "",
+		() => {
+			if (!isRestored) {
+				return "";
+			}
+
+			const exchangeCurrency = profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency);
+			assertString(exchangeCurrency);
+
+			return exchangeCurrency;
+		},
 		[profile, isRestored], // eslint-disable-line react-hooks/exhaustive-deps
 	);
 

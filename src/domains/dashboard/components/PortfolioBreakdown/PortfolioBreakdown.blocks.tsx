@@ -85,7 +85,10 @@ const PortfolioBreakdownSkeleton: React.VFC = () => {
 	const lineGraphSkeletonReference = useRef<HTMLDivElement | null>(null);
 
 	return (
-		<div className="py-4 px-6 bg-theme-secondary-100 dark:bg-black rounded-xl flex">
+		<div
+			className="py-4 px-6 bg-theme-secondary-100 dark:bg-black rounded-xl flex"
+			data-testid="PortfolioBreakdownSkeleton"
+		>
 			<div className="flex space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800">
 				<LabelledText label={t("COMMON.YOUR_BALANCE")}>
 					{() => (
