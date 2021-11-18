@@ -29,11 +29,11 @@ export const useActiveWallet = (): Contracts.IReadWriteWallet => {
 	return useMemo(() => profile.wallets().findById(walletId), [profile, walletId]);
 };
 
-export const useNetworks = () => {
+export const useNetworks = (profile?: Contracts.IProfile) => {
 	const activeProfile = useActiveProfile();
 
 	return useMemo(() => {
-		const results = activeProfile
+		const results = (profile || activeProfile)
 			.wallets()
 			.values()
 			.reduce<Record<string, Networks.Network>>(
@@ -45,7 +45,7 @@ export const useNetworks = () => {
 			);
 
 		return sortBy(Object.values(results), (network) => network.displayName());
-	}, [activeProfile]);
+	}, [profile, activeProfile]);
 };
 
 export const useActiveWalletWhenNeeded = (isRequired: boolean) => {

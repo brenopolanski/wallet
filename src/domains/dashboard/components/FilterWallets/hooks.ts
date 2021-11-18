@@ -1,6 +1,5 @@
-import { Networks } from "@payvo/sdk";
-import { sortBy } from "@payvo/sdk-helpers";
 import { Contracts } from "@payvo/sdk-profiles";
+import { useNetworks } from "app/hooks";
 import { useWalletConfig } from "domains/dashboard/hooks";
 import { useMemo } from "react";
 
@@ -11,23 +10,17 @@ export const useWalletFilters = ({ profile }: { profile: Contracts.IProfile }) =
 		profile,
 	});
 
+	const basicNetworks = useNetworks(profile);
 	const allWalletsLength = profile.wallets().values().length;
-	const networks = useMemo(() => {
-		const networks: Record<string, { network: Networks.Network; isSelected: boolean }> = {};
-
-		for (const wallet of profile.wallets().values()) {
-			const networkId = wallet.networkId();
-
-			if (!networks[networkId]) {
-				networks[networkId] = {
-					isSelected: selectedNetworkIds.includes(networkId),
-					network: wallet.network(),
-				};
-			}
-		}
-
-		return sortBy(Object.values(networks), ({ network }) => network.displayName());
-	}, [profile, selectedNetworkIds, allWalletsLength]); // eslint-disable-line react-hooks/exhaustive-deps
+	const networks = useMemo(
+		() =>
+			basicNetworks.map((network) => ({
+				isSelected: selectedNetworkIds.includes(network.id()),
+				network,
+			})),
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+		[basicNetworks, selectedNetworkIds, allWalletsLength],
+	);
 
 	const isFilterChanged = useMemo(() => {
 		if (walletsDisplayType !== defaultConfiguration.walletsDisplayType) {
