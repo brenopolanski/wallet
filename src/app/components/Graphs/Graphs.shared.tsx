@@ -61,21 +61,21 @@ function useGraphTooltip<TDataPoint>(
 					event.pageY - targetRect.top - document.documentElement.scrollTop - 24
 				}px`;
 			}
+
+			tooltipElement.classList.remove("hidden");
+			tooltipElement.classList.remove("opacity-0");
+			tooltipElement.classList.add("opacity-100");
 		},
 		[type],
 	);
 
 	const getMouseEventProperties = (dataPoint: TDataPoint) => ({
 		onMouseEnter: (event: MouseEvent<SVGElement>) => {
+			window.clearTimeout(timeout.current);
+
 			setTooltipDataPoint(dataPoint);
 
 			transformTooltip(event);
-
-			tooltipReference.current?.classList.remove("hidden");
-			tooltipReference.current?.classList.remove("opacity-0");
-			tooltipReference.current?.classList.add("opacity-100");
-
-			window.clearTimeout(timeout.current);
 		},
 		onMouseMove: (event: MouseEvent<SVGElement>) => {
 			transformTooltip(event);
