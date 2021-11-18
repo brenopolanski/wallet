@@ -1,10 +1,11 @@
 import { Networks } from "@payvo/sdk";
 import { Contracts } from "@payvo/sdk-profiles";
+import { renderHook } from "@testing-library/react-hooks";
+import { useEnvironmentContext } from "app/contexts";
 import { createMemoryHistory } from "history";
-import React from "react";
-import { Route } from "react-router-dom";
-import { env, getDefaultProfileId, render } from "utils/testing-library";
-
+import React, { useCallback } from "react";
+import { Route, Router } from "react-router-dom";
+import { env, getDefaultProfileId, render, WithProviders } from "utils/testing-library";
 import { useActiveProfile, useActiveWallet, useActiveWalletWhenNeeded, useNetworks } from "./env";
 
 let profile: Contracts.IProfile;
@@ -179,8 +180,8 @@ let networks: Networks.Network[];
 let wallets: Contracts.IReadWriteWallet[];
 
 describe("useNetworks", () => {
-	const TestNetworks = () => {
-		const networks = useNetworks();
+	const TestNetworks = ({ profile }: { profile: Contracts.IProfile }) => {
+		const networks = useNetworks(profile);
 		return (
 			<ul>
 				{networks.map((network, index) => (
@@ -202,7 +203,7 @@ describe("useNetworks", () => {
 
 			const { getByText } = render(
 				<Route path="/profiles/:profileId">
-					<TestNetworks />
+					<TestNetworks profile={profile} />
 				</Route>,
 				{
 					routes: [`/profiles/${profile.id()}`],
@@ -221,13 +222,13 @@ describe("useNetworks", () => {
 		expect(() =>
 			render(
 				<Route path="/profiles/:profileId/wallets/:walletId">
-					<TestNetworks />
+					<TestNetworks profile={undefined} />
 				</Route>,
 				{
 					routes: [`/profiles/${"undefined"}/wallets/${"undefined"}`],
 				},
 			),
-		).toThrow("No profile found for [undefined].");
+		).toThrow("Cannot read property 'wallets' of undefined");
 
 		consoleErrorSpy.mockRestore();
 	});

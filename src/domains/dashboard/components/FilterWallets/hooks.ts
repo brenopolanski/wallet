@@ -10,7 +10,7 @@ export const useWalletFilters = ({ profile }: { profile: Contracts.IProfile }) =
 		profile,
 	});
 
-	const basicNetworks = useNetworks();
+	const basicNetworks = useNetworks(profile);
 	const allWalletsLength = profile.wallets().values().length;
 	const networks = useMemo(
 		() =>

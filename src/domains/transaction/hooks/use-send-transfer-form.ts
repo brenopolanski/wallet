@@ -17,7 +17,7 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 	const [lastEstimatedExpiration, setLastEstimatedExpiration] = useState<number | undefined>();
 
 	const activeProfile = useActiveProfile();
-	const networks = useNetworks();
+	const networks = useNetworks(activeProfile);
 	const transactionBuilder = useTransactionBuilder();
 	const { connect } = useLedgerContext();
 	const { persist } = useEnvironmentContext();

@@ -2,21 +2,14 @@ import { Contracts } from "@payvo/sdk-profiles";
 import { act, renderHook } from "@testing-library/react-hooks";
 import { ConfigurationProvider, EnvironmentProvider } from "app/contexts";
 import React from "react";
-import * as reactRouterDom from "react-router-dom";
 import { env, getDefaultProfileId, waitFor } from "utils/testing-library";
-
 import { useWalletFilters } from "./hooks";
-
-jest.mock("react-router-dom", () => ({
-	useParams: jest.fn(),
-}));
 
 let profile: Contracts.IProfile;
 
 describe("useWalletFilters", () => {
 	beforeAll(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
-		jest.spyOn(reactRouterDom, "useParams").mockImplementation(() => ({ profileId: profile.id() }));
 	});
 
 	it("should match default filters", () => {
