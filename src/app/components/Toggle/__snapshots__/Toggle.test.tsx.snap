@@ -13,7 +13,7 @@ exports[`Toggle should render 1`] = `
       class="Toggle__Handle-sc-6s3wfu-2 cobHFC"
     >
       <span
-        class="Toggle__HandleInner-sc-6s3wfu-3 ddepvC"
+        class="Toggle__HandleInner-sc-6s3wfu-3 klclKD"
       />
     </div>
   </label>
@@ -33,7 +33,7 @@ exports[`Toggle should render always on 1`] = `
       class="Toggle__Handle-sc-6s3wfu-2 cobHFC"
     >
       <span
-        class="Toggle__HandleInner-sc-6s3wfu-3 cIyTyk"
+        class="Toggle__HandleInner-sc-6s3wfu-3 dJOehR"
       />
     </div>
   </label>
@@ -55,7 +55,7 @@ exports[`Toggle should render disabled 1`] = `
       class="Toggle__Handle-sc-6s3wfu-2 cobHFC"
     >
       <span
-        class="Toggle__HandleInner-sc-6s3wfu-3 kaYzOJ"
+        class="Toggle__HandleInner-sc-6s3wfu-3 eOWqHH"
         disabled=""
       />
     </div>
@@ -76,7 +76,7 @@ exports[`Toggle should render small 1`] = `
       class="Toggle__Handle-sc-6s3wfu-2 jRjdQR"
     >
       <span
-        class="Toggle__HandleInner-sc-6s3wfu-3 enZLFu"
+        class="Toggle__HandleInner-sc-6s3wfu-3 fuFLZr"
       />
     </div>
   </label>
@@ -96,7 +96,7 @@ exports[`Toggle should toggle checked 1`] = `
       class="Toggle__Handle-sc-6s3wfu-2 cobHFC"
     >
       <span
-        class="Toggle__HandleInner-sc-6s3wfu-3 ddepvC"
+        class="Toggle__HandleInner-sc-6s3wfu-3 klclKD"
       />
     </div>
   </label>

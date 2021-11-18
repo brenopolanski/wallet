@@ -11,7 +11,7 @@ exports[`Link should open an external link 1`] = `
     to="https://payvo.com/"
   >
     <span
-      class="Link__Content-sc-ec014t-1 fPOlTq"
+      class="Link__Content-sc-ec014t-1 jGLnf"
     />
     <div
       class="sc-bdvvtL fCrhkg flex-shrink-0 duration-200"
@@ -36,7 +36,7 @@ exports[`Link should render 1`] = `
     href="/test"
   >
     <span
-      class="Link__Content-sc-ec014t-1 fPOlTq"
+      class="Link__Content-sc-ec014t-1 jGLnf"
     >
       Test
     </span>
@@ -55,7 +55,7 @@ exports[`Link should render external without children 1`] = `
     to="https://payvo.com"
   >
     <span
-      class="Link__Content-sc-ec014t-1 fPOlTq"
+      class="Link__Content-sc-ec014t-1 jGLnf"
     />
     <div
       class="sc-bdvvtL fCrhkg flex-shrink-0 duration-200"
@@ -80,7 +80,7 @@ exports[`Link should render with tooltip 1`] = `
     href="/test"
   >
     <span
-      class="Link__Content-sc-ec014t-1 fPOlTq"
+      class="Link__Content-sc-ec014t-1 jGLnf"
     >
       Test
     </span>
@@ -99,7 +99,7 @@ exports[`Link should show a toast when trying to open an invalid external link 1
     to="invalid-url"
   >
     <span
-      class="Link__Content-sc-ec014t-1 fPOlTq"
+      class="Link__Content-sc-ec014t-1 jGLnf"
     />
     <div
       class="sc-bdvvtL fCrhkg flex-shrink-0 duration-200"

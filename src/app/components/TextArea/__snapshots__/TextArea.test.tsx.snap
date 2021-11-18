@@ -3,7 +3,7 @@
 exports[`TextArea should render 1`] = `
 <DocumentFragment>
   <div
-    class="Input__InputWrapperStyled-sc-1i8sd1r-0 dSwlYC"
+    class="Input__InputWrapperStyled-sc-1i8sd1r-0 juVWzy"
   >
     <div
       class="relative flex flex-1 h-full"
@@ -40,7 +40,7 @@ exports[`TextArea should render as disabled 1`] = `
 exports[`TextArea should render as invalid 1`] = `
 <DocumentFragment>
   <div
-    class="Input__InputWrapperStyled-sc-1i8sd1r-0 fJkkgN"
+    class="Input__InputWrapperStyled-sc-1i8sd1r-0 csxqdl"
   >
     <div
       class="relative flex flex-1 h-full"

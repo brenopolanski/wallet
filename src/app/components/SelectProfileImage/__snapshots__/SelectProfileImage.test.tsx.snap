@@ -17,7 +17,7 @@ exports[`SelectProfileImage should handle upload file 1`] = `
         class="relative w-20 h-20"
       >
         <div
-          class="SelectProfileImage__ProfileImageStyled-sc-vg16mg-1 bTAoWK"
+          class="SelectProfileImage__ProfileImageStyled-sc-vg16mg-1 ekoikq"
         >
           <img
             alt="Avatar"
@@ -91,7 +91,7 @@ exports[`SelectProfileImage should not allow to upload an invalid file image 1`]
         class="relative w-20 h-20"
       >
         <div
-          class="SelectProfileImage__ProfileImageStyled-sc-vg16mg-1 bTAoWK"
+          class="SelectProfileImage__ProfileImageStyled-sc-vg16mg-1 ekoikq"
         >
           <img
             alt="Avatar"
@@ -165,7 +165,7 @@ exports[`SelectProfileImage should not handle upload file 1`] = `
         class="relative w-20 h-20"
       >
         <div
-          class="SelectProfileImage__ProfileImageStyled-sc-vg16mg-1 bTAoWK"
+          class="SelectProfileImage__ProfileImageStyled-sc-vg16mg-1 ekoikq"
         >
           <img
             alt="Avatar"
@@ -288,7 +288,7 @@ exports[`SelectProfileImage should render with value svg 1`] = `
         class="relative w-20 h-20"
       >
         <div
-          class="SelectProfileImage__ProfileImageStyled-sc-vg16mg-1 bTAoWK"
+          class="SelectProfileImage__ProfileImageStyled-sc-vg16mg-1 ekoikq"
         >
           <img
             alt="Avatar"
@@ -342,7 +342,7 @@ exports[`SelectProfileImage should render without value svg 1`] = `
         class="relative w-20 h-20"
       >
         <div
-          class="SelectProfileImage__ProfileImageStyled-sc-vg16mg-1 bTAoWK"
+          class="SelectProfileImage__ProfileImageStyled-sc-vg16mg-1 ekoikq"
         >
           <img
             alt="Avatar"
