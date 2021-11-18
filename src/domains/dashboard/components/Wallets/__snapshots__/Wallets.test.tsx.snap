@@ -254,7 +254,7 @@ exports[`Wallets should load more wallets 1`] = `
           >
             <div>
               <div
-                class="absolute duration-200 transition-opacity opacity-0"
+                class="absolute z-10 duration-200 transition-opacity opacity-0"
               />
               <div
                 class="flex justify-end mb-1"
@@ -1055,7 +1055,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
           >
             <div>
               <div
-                class="absolute duration-200 transition-opacity opacity-0"
+                class="absolute z-10 duration-200 transition-opacity opacity-0"
               />
               <div
                 class="flex justify-end mb-1"
@@ -2176,7 +2176,7 @@ exports[`Wallets should render grid 1`] = `
           >
             <div>
               <div
-                class="absolute duration-200 transition-opacity opacity-0"
+                class="absolute z-10 duration-200 transition-opacity opacity-0"
               />
               <div
                 class="flex justify-end mb-1"
@@ -2870,7 +2870,7 @@ exports[`Wallets should render grid in loading state 1`] = `
           >
             <div>
               <div
-                class="absolute duration-200 transition-opacity opacity-0"
+                class="absolute z-10 duration-200 transition-opacity opacity-0"
               />
               <div
                 class="flex justify-end mb-1"
@@ -3564,7 +3564,7 @@ exports[`Wallets should render list 1`] = `
           >
             <div>
               <div
-                class="absolute duration-200 transition-opacity opacity-0"
+                class="absolute z-10 duration-200 transition-opacity opacity-0"
               />
               <div
                 class="flex justify-end mb-1"
@@ -4365,7 +4365,7 @@ exports[`Wallets should render without testnet wallets 1`] = `
           >
             <div>
               <div
-                class="absolute duration-200 transition-opacity opacity-0"
+                class="absolute z-10 duration-200 transition-opacity opacity-0"
               />
               <div
                 class="flex justify-end mb-1"
@@ -4907,7 +4907,7 @@ exports[`Wallets should toggle between grid and list view 1`] = `
           >
             <div>
               <div
-                class="absolute duration-200 transition-opacity opacity-0"
+                class="absolute z-10 duration-200 transition-opacity opacity-0"
               />
               <div
                 class="flex justify-end mb-1"

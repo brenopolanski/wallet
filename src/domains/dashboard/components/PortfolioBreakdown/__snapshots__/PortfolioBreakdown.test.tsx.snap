@@ -190,7 +190,7 @@ exports[`PortfolioBreakdown should render with dark mode = false 1`] = `
     >
       <div>
         <div
-          class="absolute duration-200 transition-opacity opacity-0"
+          class="absolute z-10 duration-200 transition-opacity opacity-0"
         />
         <div
           class="flex justify-end mb-1"
@@ -436,7 +436,7 @@ exports[`PortfolioBreakdown should render with dark mode = true 1`] = `
     >
       <div>
         <div
-          class="absolute duration-200 transition-opacity opacity-0"
+          class="absolute z-10 duration-200 transition-opacity opacity-0"
         />
         <div
           class="flex justify-end mb-1"
@@ -682,7 +682,7 @@ exports[`PortfolioBreakdown should render zero balance state with dark mode = fa
     >
       <div>
         <div
-          class="absolute duration-200 transition-opacity opacity-0"
+          class="absolute z-10 duration-200 transition-opacity opacity-0"
         />
         <div
           class="flex justify-end mb-1"
@@ -822,7 +822,7 @@ exports[`PortfolioBreakdown should render zero balance state with dark mode = tr
     >
       <div>
         <div
-          class="absolute duration-200 transition-opacity opacity-0"
+          class="absolute z-10 duration-200 transition-opacity opacity-0"
         />
         <div
           class="flex justify-end mb-1"

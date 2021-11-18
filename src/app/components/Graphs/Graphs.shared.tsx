@@ -1,4 +1,4 @@
-import React, { MouseEvent, MutableRefObject, useEffect, useRef, useState } from "react";
+import React, { MouseEvent, MutableRefObject, useCallback, useEffect, useRef, useState } from "react";
 
 const GRAPH_COLORS = ["success-600", "warning-600", "info-600", "danger-400", "hint-400", "secondary-400"];
 const GRAPH_COLORS_DARK = ["success-600", "warning-600", "info-600", "danger-400", "hint-400", "secondary-600"];
@@ -45,29 +45,35 @@ function useGraphTooltip<TDataPoint>(
 
 	const [tooltipDataPoint, setTooltipDataPoint] = useState<TDataPoint | undefined>(undefined);
 
-	const getMouseEventProperties = (dataPoint: TDataPoint) => ({
-		onMouseMove: (event: MouseEvent<SVGElement>) => {
-			const tooltipElement = tooltipReference.current as HTMLDivElement;
+	const transformTooltip = useCallback((event: MouseEvent<SVGElement>) => {
+		const tooltipElement = tooltipReference.current as HTMLDivElement;
+		const targetRect = (event.target as SVGElement).getBoundingClientRect();
 
+		if (type === "line") {
+			tooltipElement.style.left = `${event.pageX - Math.floor(tooltipElement.clientWidth / 2)}px`;
+			tooltipElement.style.top = `${targetRect.top + document.documentElement.scrollTop - 48}px`;
+		}
+
+		if (type === "donut") {
+			tooltipElement.style.left = `${event.pageX - targetRect.left - 32}px`;
+			tooltipElement.style.top = `${event.pageY - targetRect.top - document.documentElement.scrollTop - 24}px`;
+		}
+
+		tooltipElement.classList.remove("hidden");
+		tooltipElement.classList.remove("opacity-0");
+		tooltipElement.classList.add("opacity-100");
+	}, [type]);
+
+	const getMouseEventProperties = (dataPoint: TDataPoint) => ({
+		onMouseEnter: (event: MouseEvent<SVGElement>) => {
 			setTooltipDataPoint(dataPoint);
 
-			const targetRect = (event.target as SVGElement).getBoundingClientRect();
-
-			if (type === "line") {
-				tooltipElement.style.left = `${event.pageX - Math.floor(tooltipElement.clientWidth / 2)}px`;
-				tooltipElement.style.top = `${targetRect.top - 48}px`;
-			}
-
-			if (type === "donut") {
-				tooltipElement.style.left = `${event.pageX - targetRect.left - 32}px`;
-				tooltipElement.style.top = `${event.pageY - targetRect.top - 24}px`;
-			}
+			transformTooltip(event);
 
 			window.clearTimeout(timeout.current);
-
-			tooltipElement.classList.remove("hidden");
-			tooltipElement.classList.remove("opacity-0");
-			tooltipElement.classList.add("opacity-100");
+		},
+		onMouseMove: (event: MouseEvent<SVGElement>) => {
+			transformTooltip(event);
 		},
 		onMouseOut: () => {
 			tooltipReference.current?.classList.add("opacity-0");
@@ -87,7 +93,7 @@ function useGraphTooltip<TDataPoint>(
 	}
 
 	const Tooltip: React.VFC = () => (
-		<div ref={tooltipReference} className="absolute duration-200 transition-opacity opacity-0">
+		<div ref={tooltipReference} className="absolute z-10 duration-200 transition-opacity opacity-0">
 			{!!tooltipDataPoint && renderFunction(tooltipDataPoint)}
 		</div>
 	);

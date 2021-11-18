@@ -413,7 +413,7 @@ exports[`LineGraph should render tooltip on hover 1`] = `
 <DocumentFragment>
   <div>
     <div
-      class="absolute duration-200 transition-opacity opacity-0 hidden"
+      class="absolute z-10 duration-200 transition-opacity opacity-0 hidden"
       style="top: -48px;"
     >
       <div
