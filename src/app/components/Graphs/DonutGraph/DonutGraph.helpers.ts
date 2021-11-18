@@ -27,34 +27,29 @@ interface UseDonutGraphResult {
 }
 
 const useDonutGraph = (data: DonutGraphDataPoint[], size: number): UseDonutGraphResult => {
-	const {
-		circleCommonProperties,
-		circumference,
-		circumferenceHover,
-		radius,
-		radiusHover,
-	} = useMemo<DonutGraphConfig>(() => {
-		const diameter = size - GRAPH_MARGIN * 2;
-		const center = size / 2;
+	const { circleCommonProperties, circumference, circumferenceHover, radius, radiusHover } =
+		useMemo<DonutGraphConfig>(() => {
+			const diameter = size - GRAPH_MARGIN * 2;
+			const center = size / 2;
 
-		const radius = diameter / 2;
-		const radiusHover = radius + RADIUS_HOVER_INCREMENT;
+			const radius = diameter / 2;
+			const radiusHover = radius + RADIUS_HOVER_INCREMENT;
 
-		return {
-			circleCommonProperties: {
-				cx: center,
-				cy: center,
-				fill: "transparent",
-				r: radius,
-				strokeLinecap: "round",
-				strokeWidth: 16,
-			},
-			circumference: diameter * Math.PI,
-			circumferenceHover: radiusHover * 2 * Math.PI,
-			radius,
-			radiusHover,
-		};
-	}, [size]);
+			return {
+				circleCommonProperties: {
+					cx: center,
+					cy: center,
+					fill: "transparent",
+					r: radius,
+					strokeLinecap: "round",
+					strokeWidth: 16,
+				},
+				circumference: diameter * Math.PI,
+				circumferenceHover: radiusHover * 2 * Math.PI,
+				radius,
+				radiusHover,
+			};
+		}, [size]);
 
 	const backgroundCircle = useMemo<React.SVGProps<SVGCircleElement>>(
 		() => ({

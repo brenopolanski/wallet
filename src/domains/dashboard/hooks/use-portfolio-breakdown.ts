@@ -3,10 +3,7 @@ import { AssetItem } from "domains/dashboard/components/PortfolioBreakdown/Portf
 import { useMemo } from "react";
 import { assertString } from "utils/assertions";
 
-type UsePortfolioBreakdownHook = (input: {
-	profile: Contracts.IProfile;
-	profileIsSyncingExchangeRates: boolean;
-}) => {
+type UsePortfolioBreakdownHook = (input: { profile: Contracts.IProfile; profileIsSyncingExchangeRates: boolean }) => {
 	assets: AssetItem[];
 	balance: number;
 	loading: boolean;
@@ -18,10 +15,10 @@ export const usePortfolioBreakdown: UsePortfolioBreakdownHook = ({ profile, prof
 	const isRestored = profile.status().isRestored();
 	const balance = profile.convertedBalance();
 
-	const loading = useMemo<boolean>(() => !isRestored || profileIsSyncingExchangeRates, [
-		isRestored,
-		profileIsSyncingExchangeRates,
-	]);
+	const loading = useMemo<boolean>(
+		() => !isRestored || profileIsSyncingExchangeRates,
+		[isRestored, profileIsSyncingExchangeRates],
+	);
 
 	const ticker = useMemo<string>(
 		() => {

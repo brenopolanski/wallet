@@ -1,14 +1,14 @@
 import { LSK } from "@payvo/sdk-lsk";
 import { Contracts } from "@payvo/sdk-profiles";
+import userEvent from "@testing-library/user-event";
 import * as sharedGraphUtils from "app/components/Graphs/Graphs.shared";
 import * as useThemeHook from "app/hooks/use-theme";
 import { buildTranslations } from "app/i18n/helpers";
 import nock from "nock";
 import React from "react";
-import { env, render, screen, waitFor } from "utils/testing-library";
+import { env, render, screen } from "utils/testing-library";
 
 import { PortfolioBreakdown } from "./PortfolioBreakdown";
-import userEvent from "@testing-library/user-event";
 
 const translations = buildTranslations();
 
