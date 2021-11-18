@@ -4,6 +4,7 @@ import { renderHook } from "@testing-library/react-hooks";
 import { translations as transactionTranslations } from "domains/transaction/i18n";
 import nock from "nock";
 import React from "react";
+import { act } from "react-dom/test-utils";
 import { useTranslation } from "react-i18next";
 import { Route } from "react-router-dom";
 import walletFixture from "tests/fixtures/coins/ark/devnet/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib.json";
@@ -18,6 +19,7 @@ describe("Add Participant", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
 	let wallet2: Contracts.IReadWriteWallet;
+	let wallet3: Contracts.IReadWriteWallet;
 
 	beforeEach(async () => {
 		const { result } = renderHook(() => useTranslation());
@@ -26,6 +28,10 @@ describe("Add Participant", () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 		wallet = profile.wallets().first();
 		wallet2 = profile.wallets().last();
+
+		wallet3 = await profile
+			.walletFactory()
+			.fromSecret({ coin: wallet.coinId(), network: wallet.networkId(), secret: "passphrase" });
 
 		await profile.sync();
 	});
@@ -391,5 +397,129 @@ describe("Add Participant", () => {
 		fireEvent.click(screen.getByTestId("recipient-list__remove-recipient"));
 
 		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(1));
+	});
+
+	it("should set a participant as mandatory", async () => {
+		const onChangeMandatoryKeys = jest.fn();
+		const advancedMultiSignatureTypeMock = jest
+			.spyOn(wallet.network(), "multiSignatureType")
+			.mockReturnValue("advanced");
+
+		render(
+			<Route path="/profiles/:profileId">
+				<AddParticipant
+					profile={profile}
+					wallet={wallet}
+					onChangeMandatoryKeys={onChangeMandatoryKeys}
+					minRequiredSignatures={2}
+					defaultParticipants={[
+						{
+							address: wallet.address(),
+							publicKey: wallet.publicKey()!,
+						},
+						{
+							address: wallet2.address(),
+							publicKey: wallet2.publicKey()!,
+						},
+					]}
+				/>
+			</Route>,
+			{
+				routes: [`/profiles/${profile.id()}`],
+			},
+		);
+
+		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(2));
+
+		fireEvent.click(screen.getAllByTestId("RecipientListItem__mandatory-toggle")[0]);
+
+		expect(onChangeMandatoryKeys).toHaveBeenCalledWith([wallet.publicKey()]);
+
+		advancedMultiSignatureTypeMock.mockRestore();
+	});
+
+	it("should not set a participant as mandatory if min signatures are not provided", async () => {
+		const onChangeMandatoryKeys = jest.fn();
+		const advancedMultiSignatureTypeMock = jest
+			.spyOn(wallet.network(), "multiSignatureType")
+			.mockReturnValue("advanced");
+
+		render(
+			<Route path="/profiles/:profileId">
+				<AddParticipant
+					profile={profile}
+					wallet={wallet}
+					mandatoryKeys={[]}
+					onChangeMandatoryKeys={onChangeMandatoryKeys}
+					defaultParticipants={[
+						{
+							address: wallet.address(),
+							publicKey: wallet.publicKey()!,
+						},
+						{
+							address: wallet2.address(),
+							publicKey: wallet2.publicKey()!,
+						},
+					]}
+				/>
+			</Route>,
+			{
+				routes: [`/profiles/${profile.id()}`],
+			},
+		);
+
+		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(2));
+
+		fireEvent.click(screen.getAllByTestId("RecipientListItem__mandatory-toggle")[0]);
+
+		expect(onChangeMandatoryKeys).toHaveBeenCalledWith([]);
+
+		advancedMultiSignatureTypeMock.mockRestore();
+	});
+
+	it("should not add more mandatory keys than min signatures", async () => {
+		const onChangeMandatoryKeys = jest.fn();
+		const advancedMultiSignatureTypeMock = jest
+			.spyOn(wallet.network(), "multiSignatureType")
+			.mockReturnValue("advanced");
+
+		profile.wallets().push(wallet3);
+
+		render(
+			<Route path="/profiles/:profileId">
+				<AddParticipant
+					profile={profile}
+					wallet={wallet}
+					mandatoryKeys={[wallet2.publicKey()!, wallet3.publicKey()!]}
+					onChangeMandatoryKeys={onChangeMandatoryKeys}
+					minRequiredSignatures={2}
+					defaultParticipants={[
+						{
+							address: wallet.address(),
+							publicKey: wallet.publicKey()!,
+						},
+						{
+							address: wallet2.address(),
+							publicKey: wallet2.publicKey()!,
+						},
+						{
+							address: wallet3.address(),
+							publicKey: wallet3.publicKey()!,
+						},
+					]}
+				/>
+			</Route>,
+			{
+				routes: [`/profiles/${profile.id()}`],
+			},
+		);
+
+		expect(onChangeMandatoryKeys).toHaveBeenCalledTimes(1);
+
+		fireEvent.click(screen.getAllByTestId("RecipientListItem__mandatory-toggle")[0]);
+
+		expect(onChangeMandatoryKeys).not.toHaveBeenCalledTimes(2);
+
+		advancedMultiSignatureTypeMock.mockRestore();
 	});
 });

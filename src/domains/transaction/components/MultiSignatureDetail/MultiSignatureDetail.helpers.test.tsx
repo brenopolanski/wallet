@@ -66,6 +66,14 @@ describe("MultiSignatureDetail Helpers", () => {
 		jest.clearAllMocks();
 	});
 
+	it("should render Paginator with send and broadcast button", () => {
+		const { getByTestId } = render(
+			<Paginator canBeBroadcasted canBeSigned isCreator activeStep={MultiSignatureDetailStep.SummaryStep} />,
+		);
+
+		expect(getByTestId("MultiSignatureDetail__broadcast")).toBeInTheDocument();
+	});
+
 	it("should render Paginator with broadcast only button", () => {
 		const { getByTestId } = render(
 			<Paginator
@@ -77,5 +85,18 @@ describe("MultiSignatureDetail Helpers", () => {
 		);
 
 		expect(getByTestId("MultiSignatureDetail__broadcast")).toBeInTheDocument();
+	});
+
+	it("should render Paginator with sign button", () => {
+		const { getByTestId } = render(
+			<Paginator
+				canBeBroadcasted={false}
+				canBeSigned
+				isCreator
+				activeStep={MultiSignatureDetailStep.SummaryStep}
+			/>,
+		);
+
+		expect(getByTestId("Paginator__sign")).toBeInTheDocument();
 	});
 });

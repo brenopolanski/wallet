@@ -40,6 +40,7 @@ export const Paginator = ({
 	isCreator,
 }: PaginatorProperties) => {
 	const { t } = useTranslation();
+
 	const canAddFinalSignatureAndSend =
 		canBeBroadcasted && canBeSigned && activeStep === MultiSignatureDetailStep.SummaryStep;
 	const canSign = canBeSigned && !canBeBroadcasted && activeStep === MultiSignatureDetailStep.SummaryStep;
