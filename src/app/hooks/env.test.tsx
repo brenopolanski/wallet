@@ -215,39 +215,6 @@ describe("useNetworks", () => {
 		},
 	);
 
-	it("should be called with another profile", () => {
-		profile = env.profiles().findById(getDefaultProfileId());
-		wallets = profile.wallets().values();
-		networks = wallets
-			.map((wallet) => wallet.network())
-			.sort((a, b) => a.displayName().localeCompare(b.displayName()));
-		networks = [...new Set(networks)];
-
-		const TestNetworks = () => {
-			const networks = useNetworks(profile);
-			return (
-				<ul data-testid="Networks_List">
-					{networks.map((network, index) => (
-						<li key={network.id()}>{`${index}:${network.displayName()}`}</li>
-					))}
-				</ul>
-			);
-		};
-
-		const { getByText } = render(
-			<Route path="/profiles/:profileId">
-				<TestNetworks />
-			</Route>,
-			{
-				routes: [`/profiles/${profile.id()}`],
-			},
-		);
-
-		networks.map((network, index) => {
-			expect(getByText(`${index}:${network.displayName()}`)).toBeInTheDocument();
-		});
-	});
-
 	it("should throw error with no profile", () => {
 		const consoleErrorSpy = jest.spyOn(console, "error").mockImplementation();
 

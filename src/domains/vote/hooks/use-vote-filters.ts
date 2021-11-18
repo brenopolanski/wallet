@@ -17,7 +17,7 @@ export const useVoteFilters = ({
 	hasWalletId: boolean;
 }) => {
 	const { defaultConfiguration, useTestNetworks } = useWalletFilters({ profile });
-	const basicNetworks = useNetworks(profile);
+	const basicNetworks = useNetworks();
 	const { getWalletAlias } = useWalletAlias();
 	const walletAddress = hasWalletId ? wallet.address() : "";
 	const walletNetwork = hasWalletId ? wallet.network().id() : "";
