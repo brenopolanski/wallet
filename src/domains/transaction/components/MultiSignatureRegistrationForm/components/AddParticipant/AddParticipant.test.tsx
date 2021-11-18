@@ -4,7 +4,6 @@ import { renderHook } from "@testing-library/react-hooks";
 import { translations as transactionTranslations } from "domains/transaction/i18n";
 import nock from "nock";
 import React from "react";
-import { act } from "react-dom/test-utils";
 import { useTranslation } from "react-i18next";
 import { Route } from "react-router-dom";
 import walletFixture from "tests/fixtures/coins/ark/devnet/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib.json";
