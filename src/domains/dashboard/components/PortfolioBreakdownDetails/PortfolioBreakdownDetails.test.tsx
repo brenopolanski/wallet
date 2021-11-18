@@ -4,7 +4,6 @@ import React from "react";
 import { render, screen } from "utils/testing-library";
 
 import { PortfolioBreakdownDetails } from "./PortfolioBreakdownDetails";
-import { PortfolioBreakdown } from "domains/dashboard/components/PortfolioBreakdown";
 
 const translations = buildTranslations();
 
