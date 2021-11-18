@@ -1689,7 +1689,7 @@ describe("SendTransfer", () => {
 		fireEvent.click(getByTestId("StepNavigation__continue-button"));
 
 		// Auto broadcast
-		await findByTestId("TransactionSuccessful");
+		await waitFor(() => expect(findByTestId("TransactionSuccessful")), { timeout: 5000 });
 
 		jest.restoreAllMocks();
 	});
@@ -1827,7 +1827,9 @@ describe("SendTransfer", () => {
 			// Review Step
 			await findByTestId("SendTransfer__review-step");
 
-			expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
+			await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled(), {
+				timeout: 3000,
+			});
 
 			fireEvent.click(getByTestId("StepNavigation__continue-button"));
 
@@ -1904,7 +1906,9 @@ describe("SendTransfer", () => {
 		// Review Step
 		await findByTestId("SendTransfer__review-step");
 
-		expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
+		await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled(), {
+			timeout: 3000,
+		});
 
 		fireEvent.click(getByTestId("StepNavigation__continue-button"));
 
@@ -2084,7 +2088,9 @@ describe("SendTransfer", () => {
 		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.00357");
 
 		// Step 2
-		expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
+		await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled(), {
+			timeout: 3000,
+		});
 
 		fireEvent.click(getByTestId("StepNavigation__continue-button"));
 		await findByTestId("SendTransfer__review-step");
@@ -2201,7 +2207,9 @@ describe("SendTransfer", () => {
 		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.1");
 
 		// Step 2
-		expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
+		await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled(), {
+			timeout: 3000,
+		});
 
 		fireEvent.click(getByTestId("StepNavigation__continue-button"));
 		await findByTestId("SendTransfer__review-step");
@@ -2380,7 +2388,9 @@ describe("SendTransfer", () => {
 		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.00357");
 
 		// Step 2
-		await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
+		await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled(), {
+			timeout: 3000,
+		});
 		fireEvent.click(getByTestId("StepNavigation__continue-button"));
 		await findByTestId("SendTransfer__review-step");
 
@@ -2517,7 +2527,9 @@ describe("SendTransfer", () => {
 
 		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.00357");
 
-		await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
+		await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled(), {
+			timeout: 3000,
+		});
 
 		// proceed to step 2
 		fireEvent.click(getByTestId("StepNavigation__continue-button"));
@@ -2618,7 +2630,9 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.00357"));
 
 		// Step 2
-		await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
+		await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled(), {
+			timeout: 3000,
+		});
 		fireEvent.click(getByTestId("StepNavigation__continue-button"));
 		await findByTestId("SendTransfer__review-step");
 
