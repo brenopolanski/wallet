@@ -416,7 +416,7 @@ exports[`PortfolioBreakdownDetails should render 1`] = `
                             Asset
                           </div>
                           <div
-                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity ml-2"
+                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                           >
                             <div
                               class="sc-bdvvtL Cfvxc transition-transform transform rotate-180"
@@ -506,10 +506,10 @@ exports[`PortfolioBreakdownDetails should render 1`] = `
                             %
                           </div>
                           <div
-                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
+                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity ml-auto mr-2"
                           >
                             <div
-                              class="sc-bdvvtL Cfvxc transition-transform transform rotate-180"
+                              class="sc-bdvvtL Cfvxc transition-transform"
                               height="10"
                               role="img"
                               width="10"

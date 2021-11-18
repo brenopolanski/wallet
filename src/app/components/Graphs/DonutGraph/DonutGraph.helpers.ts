@@ -8,6 +8,9 @@ const GRAPH_MARGIN = 32;
 const RADIUS_HOVER_INCREMENT = 16;
 const SEGMENT_SPACING = 20;
 
+const MIN_VALUE = 1;
+const MIN_DISPLAY_VALUE = 5;
+
 interface DonutGraphConfig {
 	circleCommonProperties: React.SVGProps<SVGCircleElement>;
 	circumference: number;
@@ -62,17 +65,47 @@ const useDonutGraph = (data: DonutGraphDataPoint[], size: number): UseDonutGraph
 		[size], // eslint-disable-line react-hooks/exhaustive-deps
 	);
 
+	const normalizedData = useMemo(() => {
+		let overflow = 0;
+		let count = 0;
+
+		const normalized: DonutGraphDataPoint[] = [];
+
+		for (const entry of data) {
+			if (entry.value < MIN_VALUE) {
+				continue;
+			}
+
+			if (entry.value < MIN_DISPLAY_VALUE) {
+				overflow = overflow + (MIN_DISPLAY_VALUE - entry.value);
+				entry.value = MIN_DISPLAY_VALUE;
+			} else if (entry.value > MIN_DISPLAY_VALUE * 1.25) {
+				count++;
+			}
+
+			normalized.push(entry);
+		}
+
+		for (const entry of normalized) {
+			if (entry.value > MIN_DISPLAY_VALUE * 1.25) {
+				entry.value = entry.value - overflow / count;
+			}
+		}
+
+		return normalized;
+	}, [data]);
+
 	const circles = useMemo<DonutGraphCircle[]>(() => {
 		const items: DonutGraphCircle[] = [];
 
 		// When there is only 1 segment avoid showing
 		// the space between start and end of it.
-		const spacing = data.length > 1 ? SEGMENT_SPACING : 0;
+		const spacing = normalizedData.length > 1 ? SEGMENT_SPACING : 0;
 
 		let strokeDashoffset = (spacing / 2) * -1;
 		let strokeDashoffsetHover = strokeDashoffset;
 
-		for (const { color, value } of data) {
+		for (const { color, value } of normalizedData) {
 			const dash = (circumference * value) / 100;
 			const dashHover = (circumferenceHover * value) / 100;
 
@@ -103,7 +136,7 @@ const useDonutGraph = (data: DonutGraphDataPoint[], size: number): UseDonutGraph
 		}
 
 		return items;
-	}, [circumference, data]); // eslint-disable-line react-hooks/exhaustive-deps
+	}, [circumference, normalizedData]); // eslint-disable-line react-hooks/exhaustive-deps
 
 	return {
 		backgroundCircle,

@@ -51,7 +51,8 @@ const AssetList: React.VFC<AssetListProperties> = ({ assets, exchangeCurrency })
 		() => ({
 			sortBy: [
 				{
-					id: "label",
+					desc: true,
+					id: "percent",
 				},
 			],
 		}),
