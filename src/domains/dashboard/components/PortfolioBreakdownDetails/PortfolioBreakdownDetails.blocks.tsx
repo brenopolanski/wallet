@@ -98,7 +98,10 @@ const AssetList: React.VFC<AssetListProperties> = ({ assets, exchangeCurrency })
 };
 
 const Tooltip: React.VFC<TooltipProperties> = ({ dataPoint: { color, data } }) => (
-	<div className="flex items-center bg-theme-secondary-900 dark:bg-theme-secondary-800 rounded px-3 py-2 space-x-3 divide-x divide-theme-secondary-700 text-sm font-semibold">
+	<div
+		data-testid="PortfolioBreakdownDetails__tooltip"
+		className="flex items-center bg-theme-secondary-900 dark:bg-theme-secondary-800 rounded px-3 py-2 space-x-3 divide-x divide-theme-secondary-700 text-sm font-semibold"
+	>
 		<div className="flex items-center space-x-2">
 			<div className={`h-3 w-1 rounded bg-theme-${color}`} />
 			<span className="text-white">{data.label}</span>

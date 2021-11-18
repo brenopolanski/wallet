@@ -65,7 +65,7 @@ const TooltipWrapper = styled.div`
 `;
 
 const Tooltip: React.VFC<TooltipProperties> = ({ dataPoint: { color, data } }) => (
-	<TooltipWrapper>
+	<TooltipWrapper data-testid="PortfolioBreakdown__tooltip">
 		<div className="flex space-x-3 divide-x divide-theme-secondary-700 text-sm font-semibold">
 			<div className="flex items-center space-x-2">
 				<div className={`h-3 w-1 rounded bg-theme-${color}`} />

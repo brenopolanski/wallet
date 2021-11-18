@@ -106,9 +106,7 @@ describe("PortfolioBreakdown", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it.each([true, false])("should render empty with dark mode = %s", (isDarkMode) => {
-		const useThemeMock = jest.spyOn(useThemeHook, "useTheme").mockReturnValue({ isDarkMode } as never);
-
+	it("should render empty", () => {
 		portfolioBreakdownMock.mockReturnValue([]);
 
 		const { asFragment } = render(<PortfolioBreakdown profile={profile} profileIsSyncingExchangeRates={false} />);
@@ -117,11 +115,11 @@ describe("PortfolioBreakdown", () => {
 		expect(screen.getByTestId("EmptyBlock")).toHaveTextContent(/Your portfolio is currently empty/);
 
 		expect(asFragment()).toMatchSnapshot();
-
-		useThemeMock.mockRestore();
 	});
 
-	it("should render zero balance state", () => {
+	it.each([true, false])("should render zero balance state with dark mode = %s", (isDarkMode) => {
+		const useThemeMock = jest.spyOn(useThemeHook, "useTheme").mockReturnValue({ isDarkMode } as never);
+
 		balanceMock.mockReturnValue(0);
 
 		const { asFragment } = render(<PortfolioBreakdown profile={profile} profileIsSyncingExchangeRates={false} />);
@@ -132,6 +130,8 @@ describe("PortfolioBreakdown", () => {
 		expect(screen.getByText(translations.COMMON.MORE_DETAILS)).toBeDisabled();
 
 		expect(asFragment()).toMatchSnapshot();
+
+		useThemeMock.mockRestore();
 	});
 
 	it("should have a button to open detail modal", () => {
@@ -147,5 +147,28 @@ describe("PortfolioBreakdown", () => {
 		userEvent.click(screen.getByTestId("modal__close-btn"));
 
 		expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
+	});
+
+	it("should show tooltip when hovering graph elements", () => {
+		render(<PortfolioBreakdown profile={profile} profileIsSyncingExchangeRates={false} />);
+
+		expect(screen.getByTestId("LineGraph__svg")).toBeInTheDocument();
+		expect(screen.getAllByTestId("LineGraph__item")).toHaveLength(2);
+
+		expect(screen.queryByTestId("PortfolioBreakdown__tooltip")).not.toBeInTheDocument();
+
+		userEvent.hover(screen.getAllByTestId("LineGraph__item")[0]);
+
+		expect(screen.getByTestId("PortfolioBreakdown__tooltip")).toBeInTheDocument();
+		expect(screen.getByTestId("PortfolioBreakdown__tooltip")).toHaveTextContent(/ARK/);
+		expect(screen.getByTestId("PortfolioBreakdown__tooltip")).toHaveTextContent(/\$85.00/);
+		expect(screen.getByTestId("PortfolioBreakdown__tooltip")).toHaveTextContent(/85%/);
+
+		userEvent.unhover(screen.getAllByTestId("LineGraph__item")[0]);
+		userEvent.hover(screen.getAllByTestId("LineGraph__item")[1]);
+
+		expect(screen.getByTestId("PortfolioBreakdown__tooltip")).toHaveTextContent(/LSK/);
+		expect(screen.getByTestId("PortfolioBreakdown__tooltip")).toHaveTextContent(/\$15.00/);
+		expect(screen.getByTestId("PortfolioBreakdown__tooltip")).toHaveTextContent(/15%/);
 	});
 });

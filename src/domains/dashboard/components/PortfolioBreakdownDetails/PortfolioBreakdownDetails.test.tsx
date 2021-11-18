@@ -4,6 +4,7 @@ import React from "react";
 import { render, screen } from "utils/testing-library";
 
 import { PortfolioBreakdownDetails } from "./PortfolioBreakdownDetails";
+import { PortfolioBreakdown } from "domains/dashboard/components/PortfolioBreakdown";
 
 const translations = buildTranslations();
 
@@ -33,5 +34,37 @@ describe("PortfolioBreakdownDetails", () => {
 		userEvent.click(screen.getByTestId("modal__close-btn"));
 
 		expect(onClose).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
+	});
+
+	it("should show tooltip when hovering graph elements", () => {
+		render(
+			<PortfolioBreakdownDetails
+				assets={[
+					{ amount: 85, convertedAmount: 85, label: "ARK", percent: 85 },
+					{ amount: 15, convertedAmount: 15, label: "LSK", percent: 15 },
+				]}
+				balance={100}
+				onClose={jest.fn()}
+				exchangeCurrency="USD"
+				isOpen={true}
+			/>,
+		);
+
+		expect(screen.getByTestId("DonutGraph__svg")).toBeInTheDocument();
+		expect(screen.getAllByTestId("DonutGraph__item")).toHaveLength(2);
+
+		expect(screen.queryByTestId("PortfolioBreakdownDetails__tooltip")).not.toBeInTheDocument();
+
+		userEvent.hover(screen.getAllByTestId("DonutGraph__item-hover-area")[0]);
+
+		expect(screen.getByTestId("PortfolioBreakdownDetails__tooltip")).toBeInTheDocument();
+		expect(screen.getByTestId("PortfolioBreakdownDetails__tooltip")).toHaveTextContent(/ARK/);
+		expect(screen.getByTestId("PortfolioBreakdownDetails__tooltip")).toHaveTextContent(/85%/);
+
+		userEvent.unhover(screen.getAllByTestId("DonutGraph__item-hover-area")[0]);
+		userEvent.hover(screen.getAllByTestId("DonutGraph__item-hover-area")[1]);
+
+		expect(screen.getByTestId("PortfolioBreakdownDetails__tooltip")).toHaveTextContent(/LSK/);
+		expect(screen.getByTestId("PortfolioBreakdownDetails__tooltip")).toHaveTextContent(/15%/);
 	});
 });
