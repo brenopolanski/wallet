@@ -6,7 +6,7 @@ describe("Use MultiSignature Registration Hook", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
 
-	beforeAll(async () => {
+	beforeAll(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
 		wallet = profile.wallets().first();
 	});
@@ -14,7 +14,7 @@ describe("Use MultiSignature Registration Hook", () => {
 	it("should format transaction data based on multisignature type", () => {
 		const result = formatMultiSignatureInputData({ wallet, min: 2, publicKeys: ["1", "2"], mandatoryKeys: [] });
 
-		expect(result).toEqual({ publicKeys: ["1", "2"], min: 2 });
+		expect(result).toStrictEqual({ publicKeys: ["1", "2"], min: 2 });
 
 		// Advanced type
 		jest.spyOn(wallet.network(), "multiSignatureType").mockReturnValue("advanced");
@@ -25,7 +25,7 @@ describe("Use MultiSignature Registration Hook", () => {
 			mandatoryKeys: ["1"],
 		});
 
-		expect(advanced).toEqual({ mandatoryKeys: ["1"], numberOfSignatures: 2, optionalKeys: ["2"] });
+		expect(advanced).toStrictEqual({ mandatoryKeys: ["1"], numberOfSignatures: 2, optionalKeys: ["2"] });
 
 		jest.clearAllMocks();
 	});
