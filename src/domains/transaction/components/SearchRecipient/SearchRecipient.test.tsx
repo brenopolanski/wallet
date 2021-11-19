@@ -1,5 +1,5 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { fireEvent, waitFor, within } from "@testing-library/react";
+import { waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { translations } from "domains/transaction/i18n";
 import React from "react";
@@ -111,7 +111,7 @@ describe("SearchRecipient", () => {
 		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
-		fireEvent.change(searchInput, { target: { value: "D8rr7B1d6TL6pf1" } });
+		userEvent.paste(searchInput, "D8rr7B1d6TL6pf1");
 
 		act(() => {
 			jest.advanceTimersByTime(100);
@@ -143,7 +143,7 @@ describe("SearchRecipient", () => {
 		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
-		fireEvent.change(searchInput, { target: { value: "Ark Wallet 1" } });
+		userEvent.paste(searchInput, "Ark Wallet 1");
 
 		act(() => {
 			jest.advanceTimersByTime(100);
@@ -175,7 +175,7 @@ describe("SearchRecipient", () => {
 		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
-		fireEvent.change(searchInput, { target: { value: "Ark Wallet 1" } });
+		userEvent.paste(searchInput, "Ark Wallet 1");
 
 		act(() => {
 			jest.advanceTimersByTime(100);
@@ -214,7 +214,7 @@ describe("SearchRecipient", () => {
 		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
-		fireEvent.change(searchInput, { target: { value: "non-existent recipient address" } });
+		userEvent.paste(searchInput, "non-existent recipient address");
 
 		act(() => {
 			jest.advanceTimersByTime(100);

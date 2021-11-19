@@ -1,6 +1,7 @@
+import userEvent from "@testing-library/user-event";
 import { translations } from "domains/transaction/i18n";
 import React from "react";
-import { fireEvent, render, screen } from "utils/testing-library";
+import { render, screen } from "utils/testing-library";
 
 import { TransactionAmount } from "./TransactionAmount";
 
@@ -48,7 +49,7 @@ describe("TransactionAmount", () => {
 		expect(screen.getByTestId("AmountLabel__hint")).toBeInTheDocument();
 		expect(screen.getByText("hint-small.svg")).toBeInTheDocument();
 
-		fireEvent.mouseEnter(screen.getByTestId("AmountLabel__hint"));
+		userEvent.hover(screen.getByTestId("AmountLabel__hint"));
 
 		expect(screen.getByText("Including 1 DARK sent to itself")).toBeInTheDocument();
 	});

@@ -5,7 +5,7 @@ import { PendingTransactions } from "domains/transaction/components/TransactionT
 import nock from "nock";
 import React from "react";
 import * as utils from "utils/electron-utils";
-import { env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
+import { env, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
 
 import { PendingTransaction } from "./PendingTransactionsTable.contracts";
 
@@ -524,11 +524,11 @@ describe("Signed Transaction Table", () => {
 
 		const canBeSignedMock = jest.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(true);
 		render(<PendingTransactions isCompact={false} wallet={wallet} pendingTransactions={pendingTransactions} />);
-		fireEvent.mouseEnter(screen.getAllByRole("row")[1]);
+		userEvent.hover(screen.getAllByRole("row")[1]);
 
 		await waitFor(() => expect(screen.getAllByRole("row")[1]).toBeInTheDocument());
 
-		fireEvent.mouseLeave(screen.getAllByRole("row")[1]);
+		userEvent.unhover(screen.getAllByRole("row")[1]);
 
 		await waitFor(() => expect(screen.getAllByRole("row")[1]).toBeInTheDocument());
 		canBeSignedMock.mockRestore();

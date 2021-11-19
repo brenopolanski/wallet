@@ -97,13 +97,7 @@ describe("MultiSignature Registration Form", () => {
 
 		await waitFor(() => expect(screen.getByTestId("InputCurrency")).toBeVisible());
 
-		fireEvent.change(screen.getByTestId("InputCurrency"), {
-			target: {
-				value: "9",
-			},
-		});
-
-		await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("9"));
+		await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("10"));
 	});
 
 	it("should fill form", async () => {
@@ -111,20 +105,15 @@ describe("MultiSignature Registration Form", () => {
 
 		userEvent.click(screen.getByText(translations.FEES.AVERAGE));
 
-		fireEvent.input(screen.getByTestId("MultiSignatureRegistrationForm__min-participants"), {
-			target: {
-				value: 3,
-			},
-		});
+		const inputElement: HTMLInputElement = screen.getByTestId("MultiSignatureRegistrationForm__min-participants");
+
+		userEvent.clear(inputElement);
+		userEvent.paste(inputElement, "3");
 
 		await waitFor(() => expect(form?.getValues("fee")).toBe(String(fees.avg)));
 		await waitFor(() => expect(form?.getValues("minParticipants")).toBe("3"));
 
-		fireEvent.input(screen.getByTestId("SelectDropdown__input"), {
-			target: {
-				value: wallet2.address(),
-			},
-		});
+		userEvent.paste(screen.getByTestId("SelectDropdown__input"), wallet2.address());
 
 		userEvent.click(screen.getByText(translations.MULTISIGNATURE.ADD_PARTICIPANT));
 
@@ -150,11 +139,7 @@ describe("MultiSignature Registration Form", () => {
 
 		await waitFor(() => expect(screen.getAllByTestId("Address__alias")).toHaveLength(1));
 
-		fireEvent.input(screen.getByTestId("SelectDropdown__input"), {
-			target: {
-				value: wallet2.address(),
-			},
-		});
+		userEvent.paste(screen.getByTestId("SelectDropdown__input"), wallet2.address());
 
 		userEvent.click(screen.getByText(translations.MULTISIGNATURE.ADD_PARTICIPANT));
 

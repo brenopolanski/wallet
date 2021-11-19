@@ -6,7 +6,7 @@ import { buildTranslations } from "app/i18n/helpers";
 import React, { useEffect } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { Route } from "react-router-dom";
-import { env, fireEvent, getDefaultProfileId, MNEMONICS, render, screen, waitFor, within } from "utils/testing-library";
+import { env, getDefaultProfileId, MNEMONICS, render, screen, waitFor, within } from "utils/testing-library";
 
 import { AddRecipient } from "./AddRecipient";
 
@@ -121,19 +121,11 @@ describe("AddRecipient", () => {
 			<AddRecipient profile={profile} wallet={wallet} onChange={onChange} recipients={[]} />,
 		);
 
-		fireEvent.input(getByTestId("AddRecipient__amount"), {
-			target: {
-				value: "1",
-			},
-		});
+		userEvent.paste(getByTestId("AddRecipient__amount"), "1");
 
 		await waitFor(() => expect(getByTestId("AddRecipient__amount")).toHaveValue("1"));
 
-		fireEvent.input(getByTestId("SelectDropdown__input"), {
-			target: {
-				value: "bP6T9GQ3kqP6T9GQ3kqP6T9GQ3kqTTTP6T9GQ3kqT",
-			},
-		});
+		userEvent.paste(getByTestId("SelectDropdown__input"), "bP6T9GQ3kqP6T9GQ3kqP6T9GQ3kqTTTP6T9GQ3kqT");
 
 		await waitFor(() =>
 			expect(getByTestId("SelectDropdown__input")).toHaveValue("bP6T9GQ3kqP6T9GQ3kqP6T9GQ3kqTTTP6T9GQ3kqT"),
@@ -282,18 +274,11 @@ describe("AddRecipient", () => {
 			routes: [`/profiles/${profile.id()}`],
 		});
 
-		fireEvent.input(screen.getByTestId("AddRecipient__amount"), {
-			target: {
-				value: values.amount,
-			},
-		});
+		userEvent.paste(screen.getByTestId("AddRecipient__amount"), values.amount.toString());
 
 		// Invalid address
-		fireEvent.input(screen.getByTestId("SelectDropdown__input"), {
-			target: {
-				value: values.recipientAddress,
-			},
-		});
+		userEvent.clear(screen.getByTestId("SelectDropdown__input"));
+		userEvent.paste(screen.getByTestId("SelectDropdown__input"), values.recipientAddress);
 
 		await waitFor(() => {
 			expect(+form.getValues("amount")).toBe(values.amount);
@@ -302,13 +287,10 @@ describe("AddRecipient", () => {
 		});
 
 		// Valid address
-		fireEvent.input(screen.getByTestId("SelectDropdown__input"), {
-			target: {
-				value: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
-			},
-		});
+		userEvent.clear(screen.getByTestId("SelectDropdown__input"));
+		userEvent.paste(screen.getByTestId("SelectDropdown__input"), "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD");
 
-		await waitFor(() => expect(screen.getByTestId("AddRecipient__add-button")).not.toBeDisabled());
+		await waitFor(() => expect(screen.getByTestId("AddRecipient__add-button")).toBeEnabled());
 
 		userEvent.click(screen.getByTestId("AddRecipient__add-button"));
 
@@ -394,11 +376,7 @@ describe("AddRecipient", () => {
 			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue("D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"),
 		);
 
-		fireEvent.input(screen.getByTestId("AddRecipient__amount"), {
-			target: {
-				value: 1,
-			},
-		});
+		userEvent.paste(screen.getByTestId("AddRecipient__amount"), "1");
 
 		userEvent.click(screen.getByTestId("AddRecipient__add-button"));
 
@@ -425,11 +403,7 @@ describe("AddRecipient", () => {
 
 		await waitFor(() => expect(() => getByTestId("Input__error")).toThrow(/Unable to find an element by/));
 
-		fireEvent.change(getByTestId("AddRecipient__amount"), {
-			target: {
-				value: "10000000000",
-			},
-		});
+		userEvent.paste(getByTestId("AddRecipient__amount"), "10000000000");
 
 		await findByTestId("Input__error");
 	});
@@ -453,11 +427,7 @@ describe("AddRecipient", () => {
 
 		await waitFor(() => expect(() => getByTestId("Input__error")).toThrow(/Unable to find an element by/));
 
-		fireEvent.change(getByTestId("AddRecipient__amount"), {
-			target: {
-				value: "0.1",
-			},
-		});
+		userEvent.paste(getByTestId("AddRecipient__amount"), "0.1");
 
 		await findByTestId("Input__error");
 
@@ -478,11 +448,7 @@ describe("AddRecipient", () => {
 
 		userEvent.click(getByTestId("RecipientListItem__select-button-0"));
 
-		fireEvent.change(getByTestId("SelectDropdown__input"), {
-			target: {
-				value: "abc",
-			},
-		});
+		userEvent.paste(getByTestId("SelectDropdown__input"), "abc");
 
 		await waitFor(() =>
 			expect(getAllByTestId("Input__error")[0]).toHaveAttribute(
@@ -538,11 +504,7 @@ describe("AddRecipient", () => {
 			routes: [`/profiles/${profile.id()}`],
 		});
 
-		fireEvent.input(screen.getByTestId("AddRecipient__amount"), {
-			target: {
-				value: values.amount,
-			},
-		});
+		userEvent.paste(screen.getByTestId("AddRecipient__amount"), values.amount.toString());
 
 		await waitFor(() => expect(screen.getAllByTestId("recipient-list__recipient-list-item")).toHaveLength(2));
 
@@ -622,17 +584,9 @@ describe("AddRecipient", () => {
 
 		userEvent.click(screen.getByText(translations.TRANSACTION.MULTIPLE));
 
-		fireEvent.input(screen.getByTestId("SelectDropdown__input"), {
-			target: {
-				value: values.recipientAddress,
-			},
-		});
+		userEvent.paste(screen.getByTestId("SelectDropdown__input"), values.recipientAddress);
 
-		fireEvent.input(screen.getByTestId("AddRecipient__amount"), {
-			target: {
-				value: values.amount,
-			},
-		});
+		userEvent.paste(screen.getByTestId("AddRecipient__amount"), values.amount.toString());
 
 		userEvent.click(screen.getByTestId("AddRecipient__add-button"));
 
@@ -670,11 +624,7 @@ describe("AddRecipient", () => {
 
 		userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
 
-		fireEvent.change(screen.getByTestId("AddRecipient__amount"), {
-			target: {
-				value: "1",
-			},
-		});
+		userEvent.paste(screen.getByTestId("AddRecipient__amount"), "1");
 
 		await waitFor(() => expect(screen.getByTestId("AddRecipient__add-button")).toBeDisabled());
 

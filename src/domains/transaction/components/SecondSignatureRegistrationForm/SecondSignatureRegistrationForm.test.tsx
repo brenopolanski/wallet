@@ -13,7 +13,6 @@ import secondSignatureFixture from "tests/fixtures/coins/ark/devnet/transactions
 import * as utils from "utils/electron-utils";
 import {
 	env,
-	fireEvent,
 	getDefaultProfileId,
 	MNEMONICS,
 	render,
@@ -143,11 +142,8 @@ describe("SecondSignatureRegistrationForm", () => {
 
 		await waitFor(() => expect(screen.getByTestId("InputCurrency")).toBeVisible());
 
-		fireEvent.change(screen.getByTestId("InputCurrency"), {
-			target: {
-				value: "9",
-			},
-		});
+		userEvent.clear(screen.getByTestId("InputCurrency"));
+		userEvent.paste(screen.getByTestId("InputCurrency"), "9");
 
 		await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("9"));
 	});

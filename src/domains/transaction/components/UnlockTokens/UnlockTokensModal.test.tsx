@@ -3,7 +3,7 @@ import { BigNumber } from "@payvo/sdk-helpers";
 import { DateTime } from "@payvo/sdk-intl";
 import { LSK } from "@payvo/sdk-lsk";
 import { Contracts } from "@payvo/sdk-profiles";
-import { fireEvent, screen, waitFor, within } from "@testing-library/react";
+import { screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { LedgerProvider } from "app/contexts";
 import * as useFeesHook from "app/hooks/use-fees";
@@ -183,7 +183,7 @@ describe("UnlockTokensModal", () => {
 
 		// enter signing key
 
-		fireEvent.input(screen.getByTestId("AuthenticationStep__mnemonic"), { target: { value: mnemonic } });
+		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), mnemonic);
 
 		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(mnemonic));
 

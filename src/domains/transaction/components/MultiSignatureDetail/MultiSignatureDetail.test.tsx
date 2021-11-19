@@ -9,7 +9,6 @@ import MultisignatureRegistrationFixture from "tests/fixtures/coins/ark/devnet/t
 import {
 	act,
 	env,
-	fireEvent,
 	getDefaultLedgerTransport,
 	getDefaultProfileId,
 	getDefaultWalletMnemonic,
@@ -633,11 +632,7 @@ describe("MultiSignatureDetail", () => {
 
 		jest.spyOn(wallet.transaction(), "canBeBroadcasted").mockImplementation(() => true);
 
-		fireEvent.input(screen.getByTestId("AuthenticationStep__mnemonic"), {
-			target: {
-				value: passphrase,
-			},
-		});
+		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
 
 		await waitFor(() => expect(screen.getByTestId("Paginator__continue")).not.toBeDisabled(), { timeout: 1000 });
 
@@ -692,11 +687,7 @@ describe("MultiSignatureDetail", () => {
 
 		await screen.findByTestId("AuthenticationStep");
 
-		fireEvent.input(screen.getByTestId("AuthenticationStep__mnemonic"), {
-			target: {
-				value: passphrase,
-			},
-		});
+		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
 
 		await waitFor(() => expect(screen.getByTestId("Paginator__continue")).not.toBeDisabled(), { timeout: 1000 });
 
@@ -755,11 +746,7 @@ describe("MultiSignatureDetail", () => {
 
 		await screen.findByTestId("AuthenticationStep");
 
-		fireEvent.input(screen.getByTestId("AuthenticationStep__mnemonic"), {
-			target: {
-				value: passphrase,
-			},
-		});
+		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
 
 		await waitFor(() => expect(screen.getByTestId("Paginator__continue")).not.toBeDisabled(), { timeout: 1000 });
 
@@ -818,11 +805,7 @@ describe("MultiSignatureDetail", () => {
 
 		await screen.findByTestId("AuthenticationStep");
 
-		fireEvent.input(screen.getByTestId("AuthenticationStep__mnemonic"), {
-			target: {
-				value: passphrase,
-			},
-		});
+		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
 
 		await waitFor(() => expect(screen.getByTestId("Paginator__continue")).not.toBeDisabled(), { timeout: 1000 });
 

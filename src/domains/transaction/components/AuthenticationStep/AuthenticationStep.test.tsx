@@ -1,9 +1,9 @@
 import { PBKDF2 } from "@payvo/sdk-cryptography";
 import { Contracts } from "@payvo/sdk-profiles";
+import userEvent from "@testing-library/user-event";
 import React from "react";
 import {
 	env,
-	fireEvent,
 	getDefaultProfileId,
 	getDefaultWalletMnemonic,
 	MNEMONICS,
@@ -38,19 +38,12 @@ describe("AuthenticationStep", () => {
 			withProviders: true,
 		});
 
-		fireEvent.input(screen.getByTestId("AuthenticationStep__mnemonic"), {
-			target: {
-				value: "wrong passphrase",
-			},
-		});
+		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), "wrong passphrase");
 
 		await waitFor(() => expect(form()?.formState.isValid).toBe(false));
 
-		fireEvent.input(screen.getByTestId("AuthenticationStep__mnemonic"), {
-			target: {
-				value: MNEMONICS[0],
-			},
-		});
+		userEvent.clear(screen.getByTestId("AuthenticationStep__mnemonic"));
+		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), MNEMONICS[0]);
 
 		await waitFor(() => expect(form()?.formState.isValid).toBeTruthy());
 
@@ -77,25 +70,14 @@ describe("AuthenticationStep", () => {
 			withProviders: true,
 		});
 
-		fireEvent.input(screen.getByTestId("AuthenticationStep__mnemonic"), {
-			target: {
-				value: MNEMONICS[0],
-			},
-		});
+		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), MNEMONICS[0]);
 
-		fireEvent.input(screen.getByTestId("AuthenticationStep__second-mnemonic"), {
-			target: {
-				value: "wrong second mnemonic",
-			},
-		});
+		userEvent.paste(screen.getByTestId("AuthenticationStep__second-mnemonic"), "wrong second mnemonic");
 
 		await waitFor(() => expect(form()?.formState.isValid).toBeFalsy());
 
-		fireEvent.input(screen.getByTestId("AuthenticationStep__second-mnemonic"), {
-			target: {
-				value: secondMnemonic,
-			},
-		});
+		userEvent.clear(screen.getByTestId("AuthenticationStep__second-mnemonic"));
+		userEvent.paste(screen.getByTestId("AuthenticationStep__second-mnemonic"), secondMnemonic);
 
 		await waitFor(() => expect(form()?.formState.isValid).toBeTruthy());
 
@@ -114,25 +96,14 @@ describe("AuthenticationStep", () => {
 			withProviders: true,
 		});
 
-		fireEvent.input(screen.getByTestId("AuthenticationStep__secret"), {
-			target: {
-				value: "abc",
-			},
-		});
+		userEvent.paste(screen.getByTestId("AuthenticationStep__secret"), "abc");
 
-		fireEvent.input(screen.getByTestId("AuthenticationStep__second-secret"), {
-			target: {
-				value: "wrong second secret",
-			},
-		});
+		userEvent.paste(screen.getByTestId("AuthenticationStep__second-secret"), "wrong second secret");
 
 		await waitFor(() => expect(form()?.formState.isValid).toBeFalsy());
 
-		fireEvent.input(screen.getByTestId("AuthenticationStep__second-secret"), {
-			target: {
-				value: "abc",
-			},
-		});
+		userEvent.clear(screen.getByTestId("AuthenticationStep__second-secret"));
+		userEvent.paste(screen.getByTestId("AuthenticationStep__second-secret"), "abc");
 
 		await waitFor(() => expect(form()?.formState.isValid).toBeTruthy());
 	});
@@ -154,11 +125,7 @@ describe("AuthenticationStep", () => {
 
 		expect(screen.queryByTestId("AuthenticationStep__mnemonic")).toBeInTheDocument();
 
-		fireEvent.change(screen.getByTestId("AuthenticationStep__mnemonic"), {
-			target: {
-				value: MNEMONICS[0],
-			},
-		});
+		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), MNEMONICS[0]);
 
 		await waitFor(() => expect(form()?.getValues()).toStrictEqual({ mnemonic: MNEMONICS[0] }));
 
@@ -184,11 +151,7 @@ describe("AuthenticationStep", () => {
 
 		expect(screen.queryByTestId("AuthenticationStep__secret")).toBeInTheDocument();
 
-		fireEvent.change(screen.getByTestId("AuthenticationStep__secret"), {
-			target: {
-				value: "secret",
-			},
-		});
+		userEvent.paste(screen.getByTestId("AuthenticationStep__secret"), "secret");
 
 		await waitFor(() => expect(form()?.getValues()).toStrictEqual({ secret: "secret" }));
 
@@ -214,11 +177,7 @@ describe("AuthenticationStep", () => {
 
 		expect(screen.queryByTestId("AuthenticationStep__mnemonic")).toBeInTheDocument();
 
-		fireEvent.change(screen.getByTestId("AuthenticationStep__mnemonic"), {
-			target: {
-				value: MNEMONICS[0],
-			},
-		});
+		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), MNEMONICS[0]);
 
 		await waitFor(() => expect(form()?.getValues()).toStrictEqual({ mnemonic: MNEMONICS[0] }));
 
@@ -267,36 +226,33 @@ describe("AuthenticationStep", () => {
 
 	it("should request mnemonic and second mnemonic", async () => {
 		await wallet.synchroniser().identity();
-		jest.spyOn(wallet, "isSecondSignature").mockReturnValueOnce(true);
+		const secondSignatureMock = jest.spyOn(wallet, "isSecondSignature").mockReturnValue(true);
 
 		const { form, asFragment } = renderWithForm(<AuthenticationStep wallet={wallet} />, {
 			withProviders: true,
 		});
 
 		await screen.findByTestId("AuthenticationStep__mnemonic");
+		await screen.findByTestId("AuthenticationStep__second-mnemonic");
 
-		expect(screen.queryByTestId("AuthenticationStep__second-mnemonic")).toBeInTheDocument();
+		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), getDefaultWalletMnemonic());
 
-		fireEvent.change(screen.getByTestId("AuthenticationStep__mnemonic"), {
-			target: {
-				value: MNEMONICS[0],
-			},
+		await waitFor(() => {
+			expect(screen.getByTestId("AuthenticationStep__second-mnemonic")).toBeEnabled();
 		});
 
-		fireEvent.change(screen.getByTestId("AuthenticationStep__second-mnemonic"), {
-			target: {
-				value: MNEMONICS[1],
-			},
-		});
+		userEvent.paste(screen.getByTestId("AuthenticationStep__second-mnemonic"), MNEMONICS[1]);
 
 		await waitFor(() =>
 			expect(form()?.getValues()).toStrictEqual({
-				mnemonic: MNEMONICS[0],
+				mnemonic: getDefaultWalletMnemonic(),
 				secondMnemonic: MNEMONICS[1],
 			}),
 		);
 
 		expect(asFragment()).toMatchSnapshot();
+
+		secondSignatureMock.mockRestore();
 	});
 
 	it("should request secret and second secret", async () => {
@@ -311,20 +267,15 @@ describe("AuthenticationStep", () => {
 		});
 
 		await screen.findByTestId("AuthenticationStep__secret");
+		await screen.findByTestId("AuthenticationStep__second-secret");
 
-		expect(screen.queryByTestId("AuthenticationStep__second-secret")).toBeInTheDocument();
+		userEvent.paste(screen.getByTestId("AuthenticationStep__secret"), "abc");
 
-		fireEvent.change(screen.getByTestId("AuthenticationStep__secret"), {
-			target: {
-				value: "abc",
-			},
+		await waitFor(() => {
+			expect(screen.getByTestId("AuthenticationStep__second-secret")).toBeEnabled();
 		});
 
-		fireEvent.change(screen.getByTestId("AuthenticationStep__second-secret"), {
-			target: {
-				value: "abc",
-			},
-		});
+		userEvent.paste(screen.getByTestId("AuthenticationStep__second-secret"), "abc");
 
 		await waitFor(() =>
 			expect(form()?.getValues()).toStrictEqual({

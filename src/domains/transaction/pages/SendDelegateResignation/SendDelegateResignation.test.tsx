@@ -1,5 +1,5 @@
+import { UserRefusedDeviceNameChange } from "@ledgerhq/hw-transport/node_modules/@ledgerhq/errors";
 import { Contracts } from "@payvo/sdk-profiles";
-import { screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { translations as transactionTranslations } from "domains/transaction/i18n";
 import { createMemoryHistory } from "history";
@@ -8,13 +8,14 @@ import { Route } from "react-router-dom";
 import transactionFixture from "tests/fixtures/coins/ark/devnet/transactions/transfer.json";
 import {
 	env,
-	fireEvent,
 	getDefaultProfileId,
 	MNEMONICS,
 	render,
+	screen,
 	syncDelegates,
 	syncFees,
 	waitFor,
+	within,
 } from "utils/testing-library";
 
 import { SendDelegateResignation } from "./SendDelegateResignation";
@@ -105,8 +106,13 @@ describe("SendDelegateResignation", () => {
 
 			// Fee (advanced)
 			userEvent.click(getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
-			fireEvent.input(getByTestId("InputCurrency"), { target: { value: "1" } });
-			await waitFor(() => expect(getByTestId("InputCurrency")).toHaveValue("1"));
+
+			const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
+
+			inputElement.select();
+			userEvent.paste(inputElement, "1");
+
+			await waitFor(() => expect(inputElement).toHaveValue("1"));
 
 			expect(asFragment()).toMatchSnapshot();
 		});
@@ -169,8 +175,13 @@ describe("SendDelegateResignation", () => {
 
 			// Fee
 			userEvent.click(getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
-			fireEvent.change(getByTestId("InputCurrency"), { target: { value: "30" } });
-			await waitFor(() => expect(getByTestId("InputCurrency")).toHaveValue("30"));
+
+			const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
+
+			inputElement.select();
+			userEvent.paste(inputElement, "30");
+
+			await waitFor(() => expect(inputElement).toHaveValue("30"));
 
 			await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
 
@@ -191,8 +202,13 @@ describe("SendDelegateResignation", () => {
 
 			// Fee
 			userEvent.click(getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
-			fireEvent.change(getByTestId("InputCurrency"), { target: { value: "30" } });
-			await waitFor(() => expect(getByTestId("InputCurrency")).toHaveValue("30"));
+
+			const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
+
+			inputElement.select();
+			userEvent.paste(inputElement, "30");
+
+			await waitFor(() => expect(inputElement).toHaveValue("30"));
 
 			await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
 
@@ -221,18 +237,10 @@ describe("SendDelegateResignation", () => {
 			userEvent.click(getByTestId("StepNavigation__continue-button"));
 			await findByTestId("AuthenticationStep");
 
-			fireEvent.input(getByTestId("AuthenticationStep__mnemonic"), {
-				target: {
-					value: passphrase,
-				},
-			});
+			userEvent.paste(getByTestId("AuthenticationStep__mnemonic"), passphrase);
 			await waitFor(() => expect(getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
 
-			fireEvent.input(getByTestId("AuthenticationStep__second-mnemonic"), {
-				target: {
-					value: MNEMONICS[2],
-				},
-			});
+			userEvent.paste(getByTestId("AuthenticationStep__second-mnemonic"), MNEMONICS[2]);
 			await waitFor(() => expect(getByTestId("AuthenticationStep__second-mnemonic")).toHaveValue(MNEMONICS[2]));
 
 			expect(getByTestId("AuthenticationStep__second-mnemonic")).toHaveAttribute("aria-invalid");
@@ -262,18 +270,10 @@ describe("SendDelegateResignation", () => {
 			userEvent.click(getByTestId("StepNavigation__continue-button"));
 			await findByTestId("AuthenticationStep");
 
-			fireEvent.input(getByTestId("AuthenticationStep__mnemonic"), {
-				target: {
-					value: passphrase,
-				},
-			});
+			userEvent.paste(getByTestId("AuthenticationStep__mnemonic"), passphrase);
 			await waitFor(() => expect(getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
 
-			fireEvent.input(getByTestId("AuthenticationStep__second-mnemonic"), {
-				target: {
-					value: MNEMONICS[1],
-				},
-			});
+			userEvent.paste(getByTestId("AuthenticationStep__second-mnemonic"), MNEMONICS[1]);
 			await waitFor(() => expect(getByTestId("AuthenticationStep__second-mnemonic")).toHaveValue(MNEMONICS[1]));
 
 			userEvent.click(getByTestId("StepNavigation__send-button"));
@@ -320,18 +320,10 @@ describe("SendDelegateResignation", () => {
 			userEvent.click(getByTestId("StepNavigation__continue-button"));
 			await findByTestId("AuthenticationStep");
 
-			fireEvent.input(getByTestId("AuthenticationStep__mnemonic"), {
-				target: {
-					value: passphrase,
-				},
-			});
+			userEvent.paste(getByTestId("AuthenticationStep__mnemonic"), passphrase);
 			await waitFor(() => expect(getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
 
-			fireEvent.input(getByTestId("AuthenticationStep__second-mnemonic"), {
-				target: {
-					value: MNEMONICS[1],
-				},
-			});
+			userEvent.paste(getByTestId("AuthenticationStep__second-mnemonic"), MNEMONICS[1]);
 			await waitFor(() => expect(getByTestId("AuthenticationStep__second-mnemonic")).toHaveValue(MNEMONICS[1]));
 
 			userEvent.click(getByTestId("StepNavigation__send-button"));
@@ -369,18 +361,10 @@ describe("SendDelegateResignation", () => {
 			userEvent.keyboard("{enter}");
 			await findByTestId("AuthenticationStep");
 
-			fireEvent.input(getByTestId("AuthenticationStep__mnemonic"), {
-				target: {
-					value: passphrase,
-				},
-			});
+			userEvent.paste(getByTestId("AuthenticationStep__mnemonic"), passphrase);
 			await waitFor(() => expect(getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
 
-			fireEvent.input(getByTestId("AuthenticationStep__second-mnemonic"), {
-				target: {
-					value: MNEMONICS[1],
-				},
-			});
+			userEvent.paste(getByTestId("AuthenticationStep__second-mnemonic"), MNEMONICS[1]);
 			await waitFor(() => expect(getByTestId("AuthenticationStep__second-mnemonic")).toHaveValue(MNEMONICS[1]));
 
 			userEvent.keyboard("{enter}");
@@ -419,18 +403,10 @@ describe("SendDelegateResignation", () => {
 			userEvent.click(getByTestId("StepNavigation__continue-button"));
 			await findByTestId("AuthenticationStep");
 
-			fireEvent.input(getByTestId("AuthenticationStep__mnemonic"), {
-				target: {
-					value: passphrase,
-				},
-			});
+			userEvent.paste(getByTestId("AuthenticationStep__mnemonic"), passphrase);
 			await waitFor(() => expect(getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
 
-			fireEvent.input(getByTestId("AuthenticationStep__second-mnemonic"), {
-				target: {
-					value: MNEMONICS[1],
-				},
-			});
+			userEvent.paste(getByTestId("AuthenticationStep__second-mnemonic"), MNEMONICS[1]);
 			await waitFor(() => expect(getByTestId("AuthenticationStep__second-mnemonic")).toHaveValue(MNEMONICS[1]));
 
 			userEvent.click(getByTestId("StepNavigation__send-button"));
@@ -488,11 +464,7 @@ describe("SendDelegateResignation", () => {
 			userEvent.click(getByTestId("StepNavigation__continue-button"));
 			await findByTestId("AuthenticationStep");
 
-			fireEvent.input(getByTestId("AuthenticationStep__encryption-password"), {
-				target: {
-					value: "password",
-				},
-			});
+			userEvent.paste(getByTestId("AuthenticationStep__encryption-password"), "password");
 			await waitFor(() => expect(getByTestId("AuthenticationStep__encryption-password")).toHaveValue("password"));
 
 			await waitFor(() => expect(getByTestId("StepNavigation__send-button")).not.toBeDisabled());

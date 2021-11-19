@@ -10,7 +10,6 @@ import { Route, Router } from "react-router-dom";
 import ipfsFixture from "tests/fixtures/coins/ark/devnet/transactions/ipfs.json";
 import {
 	env,
-	fireEvent,
 	getDefaultLedgerTransport,
 	getDefaultProfileId,
 	getDefaultWalletId,
@@ -206,16 +205,19 @@ describe("SendIpfs", () => {
 		await waitFor(() => expect(screen.getByTestId("TransactionNetwork")).toHaveTextContent(networkLabel));
 		await waitFor(() => expect(screen.getByTestId("TransactionSender")).toHaveTextContent(wallet.address()));
 
-		fireEvent.input(screen.getByTestId("Input__hash"), {
-			target: { value: "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco" },
-		});
+		userEvent.paste(screen.getByTestId("Input__hash"), "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco");
 		await waitFor(() =>
 			expect(screen.getByTestId("Input__hash")).toHaveValue("QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco"),
 		);
 
 		userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
-		fireEvent.change(screen.getByTestId("InputCurrency"), { target: { value: "10" } });
-		await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("10"));
+
+		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
+
+		inputElement.select();
+		userEvent.paste(inputElement, "10");
+
+		await waitFor(() => expect(inputElement).toHaveValue("10"));
 
 		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 		await screen.findByTestId("SendIpfs__review-step");
@@ -260,9 +262,7 @@ describe("SendIpfs", () => {
 		await waitFor(() => expect(screen.getByTestId("TransactionNetwork")).toHaveTextContent(networkLabel));
 		await waitFor(() => expect(screen.getByTestId("TransactionSender")).toHaveTextContent(wallet.address()));
 
-		fireEvent.input(screen.getByTestId("Input__hash"), {
-			target: { value: "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco" },
-		});
+		userEvent.paste(screen.getByTestId("Input__hash"), "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco");
 		await waitFor(() =>
 			expect(screen.getByTestId("Input__hash")).toHaveValue("QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco"),
 		);
@@ -273,8 +273,13 @@ describe("SendIpfs", () => {
 		await waitFor(() => expect(within(screen.getByTestId("InputFee")).getAllByRole("radio")[2]).toBeChecked());
 
 		userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
-		fireEvent.change(screen.getByTestId("InputCurrency"), { target: { value: "10" } });
-		await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("10"));
+
+		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
+
+		inputElement.select();
+		userEvent.paste(inputElement, "10");
+
+		await waitFor(() => expect(inputElement).toHaveValue("10"));
 
 		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 		await screen.findByTestId("SendIpfs__review-step");
@@ -288,7 +293,7 @@ describe("SendIpfs", () => {
 
 		await screen.findByTestId("AuthenticationStep");
 
-		fireEvent.input(screen.getByTestId("AuthenticationStep__mnemonic"), { target: { value: passphrase } });
+		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
 		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
 
 		// Step 4
@@ -353,9 +358,7 @@ describe("SendIpfs", () => {
 		await waitFor(() => expect(screen.getByTestId("TransactionNetwork")).toHaveTextContent(networkLabel));
 		await waitFor(() => expect(screen.getByTestId("TransactionSender")).toHaveTextContent(wallet.address()));
 
-		fireEvent.input(screen.getByTestId("Input__hash"), {
-			target: { value: "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco" },
-		});
+		userEvent.paste(screen.getByTestId("Input__hash"), "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco");
 		await waitFor(() =>
 			expect(screen.getByTestId("Input__hash")).toHaveValue("QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco"),
 		);
@@ -366,8 +369,13 @@ describe("SendIpfs", () => {
 		await waitFor(() => expect(within(screen.getByTestId("InputFee")).getAllByRole("radio")[2]).toBeChecked());
 
 		userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
-		fireEvent.change(screen.getByTestId("InputCurrency"), { target: { value: "10" } });
-		await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("10"));
+
+		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
+
+		inputElement.select();
+		userEvent.paste(inputElement, "10");
+
+		await waitFor(() => expect(inputElement).toHaveValue("10"));
 
 		userEvent.keyboard("{enter}");
 		await screen.findByTestId("SendIpfs__review-step");
@@ -381,7 +389,7 @@ describe("SendIpfs", () => {
 
 		await screen.findByTestId("AuthenticationStep");
 
-		fireEvent.input(screen.getByTestId("AuthenticationStep__mnemonic"), { target: { value: passphrase } });
+		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
 		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
 
 		// Step 4
@@ -434,16 +442,19 @@ describe("SendIpfs", () => {
 		await waitFor(() => expect(screen.getByTestId("TransactionNetwork")).toHaveTextContent(networkLabel));
 		await waitFor(() => expect(screen.getByTestId("TransactionSender")).toHaveTextContent(wallet.address()));
 
-		fireEvent.input(screen.getByTestId("Input__hash"), {
-			target: { value: "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco" },
-		});
+		userEvent.paste(screen.getByTestId("Input__hash"), "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco");
 		await waitFor(() =>
 			expect(screen.getByTestId("Input__hash")).toHaveValue("QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco"),
 		);
 
 		userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
-		fireEvent.change(screen.getByTestId("InputCurrency"), { target: { value: "10" } });
-		await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("10"));
+
+		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
+
+		inputElement.select();
+		userEvent.paste(inputElement, "10");
+
+		await waitFor(() => expect(inputElement).toHaveValue("10"));
 
 		expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
 
@@ -482,17 +493,20 @@ describe("SendIpfs", () => {
 		await waitFor(() => expect(screen.getByTestId("TransactionNetwork")).toHaveTextContent(networkLabel));
 		await waitFor(() => expect(screen.getByTestId("TransactionSender")).toHaveTextContent(wallet.address()));
 
-		fireEvent.input(screen.getByTestId("Input__hash"), {
-			target: { value: "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco" },
-		});
+		userEvent.paste(screen.getByTestId("Input__hash"), "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco");
 		await waitFor(() =>
 			expect(screen.getByTestId("Input__hash")).toHaveValue("QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco"),
 		);
 
 		// Fee
 		userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
-		fireEvent.change(screen.getByTestId("InputCurrency"), { target: { value: "10" } });
-		await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("10"));
+
+		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
+
+		inputElement.select();
+		userEvent.paste(inputElement, "10");
+
+		await waitFor(() => expect(inputElement).toHaveValue("10"));
 
 		expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
 
@@ -530,17 +544,20 @@ describe("SendIpfs", () => {
 		await waitFor(() => expect(screen.getByTestId("TransactionNetwork")).toHaveTextContent(networkLabel));
 		await waitFor(() => expect(screen.getByTestId("TransactionSender")).toHaveTextContent(wallet.address()));
 
-		fireEvent.input(screen.getByTestId("Input__hash"), {
-			target: { value: "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco" },
-		});
+		userEvent.paste(screen.getByTestId("Input__hash"), "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco");
 		await waitFor(() =>
 			expect(screen.getByTestId("Input__hash")).toHaveValue("QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco"),
 		);
 
 		// Fee
 		userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
-		fireEvent.change(screen.getByTestId("InputCurrency"), { target: { value: "10" } });
-		await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("10"));
+
+		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
+
+		inputElement.select();
+		userEvent.paste(inputElement, "10");
+
+		await waitFor(() => expect(inputElement).toHaveValue("10"));
 
 		expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
 
@@ -557,13 +574,16 @@ describe("SendIpfs", () => {
 		// Auth Step
 		await screen.findByTestId("AuthenticationStep");
 
-		fireEvent.input(screen.getByTestId("AuthenticationStep__mnemonic"), { target: { value: passphrase } });
-		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
+		const mnemonicInput: HTMLInputElement = screen.getByTestId("AuthenticationStep__mnemonic");
+
+		userEvent.paste(mnemonicInput, passphrase);
+		await waitFor(() => expect(mnemonicInput).toHaveValue(passphrase));
 
 		expect(screen.getByTestId("StepNavigation__send-button")).not.toBeDisabled();
 
-		fireEvent.input(screen.getByTestId("AuthenticationStep__mnemonic"), { target: { value: MNEMONICS[0] } });
-		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(MNEMONICS[0]));
+		mnemonicInput.select();
+		userEvent.paste(mnemonicInput, MNEMONICS[0]);
+		await waitFor(() => expect(mnemonicInput).toHaveValue(MNEMONICS[0]));
 
 		expect(screen.getByTestId("StepNavigation__send-button")).toBeDisabled();
 
@@ -629,16 +649,19 @@ describe("SendIpfs", () => {
 		await waitFor(() => expect(screen.getByTestId("TransactionNetwork")).toHaveTextContent(networkLabel));
 		await waitFor(() => expect(screen.getByTestId("TransactionSender")).toHaveTextContent(wallet.address()));
 
-		fireEvent.input(screen.getByTestId("Input__hash"), {
-			target: { value: "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco" },
-		});
+		userEvent.paste(screen.getByTestId("Input__hash"), "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco");
 		await waitFor(() =>
 			expect(screen.getByTestId("Input__hash")).toHaveValue("QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco"),
 		);
 
 		userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
-		fireEvent.change(screen.getByTestId("InputCurrency"), { target: { value: "10" } });
-		await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("10"));
+
+		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
+
+		inputElement.select();
+		userEvent.paste(inputElement, "10");
+
+		await waitFor(() => expect(inputElement).toHaveValue("10"));
 
 		expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
 
@@ -654,7 +677,7 @@ describe("SendIpfs", () => {
 
 		await screen.findByTestId("AuthenticationStep");
 
-		fireEvent.input(screen.getByTestId("AuthenticationStep__mnemonic"), { target: { value: passphrase } });
+		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
 		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
 
 		// Step 5 (skip step 4 for now - ledger confirmation)
@@ -697,9 +720,7 @@ describe("SendIpfs", () => {
 			},
 		);
 
-		fireEvent.input(screen.getByTestId("Input__hash"), {
-			target: { value: "invalid-ipfs-hash" },
-		});
+		userEvent.paste(screen.getByTestId("Input__hash"), "invalid-ipfs-hash");
 		await waitFor(() => expect(screen.getByTestId("Input__hash")).toHaveValue("invalid-ipfs-hash"));
 
 		expect(screen.getByTestId("Input__error")).toBeVisible();
@@ -736,16 +757,19 @@ describe("SendIpfs", () => {
 		await waitFor(() => expect(screen.getByTestId("TransactionNetwork")).toHaveTextContent(networkLabel));
 		await waitFor(() => expect(screen.getByTestId("TransactionSender")).toHaveTextContent(wallet.address()));
 
-		fireEvent.input(screen.getByTestId("Input__hash"), {
-			target: { value: "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco" },
-		});
+		userEvent.paste(screen.getByTestId("Input__hash"), "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco");
 		await waitFor(() =>
 			expect(screen.getByTestId("Input__hash")).toHaveValue("QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco"),
 		);
 
 		userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
-		fireEvent.change(screen.getByTestId("InputCurrency"), { target: { value: "10" } });
-		await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("10"));
+
+		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
+
+		inputElement.select();
+		userEvent.paste(inputElement, "10");
+
+		await waitFor(() => expect(inputElement).toHaveValue("10"));
 
 		expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
 
@@ -841,16 +865,19 @@ describe("SendIpfs", () => {
 		await waitFor(() => expect(screen.getByTestId("TransactionNetwork")).toHaveTextContent(networkLabel));
 		await waitFor(() => expect(screen.getByTestId("TransactionSender")).toHaveTextContent(wallet.address()));
 
-		fireEvent.input(screen.getByTestId("Input__hash"), {
-			target: { value: "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco" },
-		});
+		userEvent.paste(screen.getByTestId("Input__hash"), "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco");
 		await waitFor(() =>
 			expect(screen.getByTestId("Input__hash")).toHaveValue("QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco"),
 		);
 
 		userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
-		fireEvent.change(screen.getByTestId("InputCurrency"), { target: { value: "10" } });
-		await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("10"));
+
+		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
+
+		inputElement.select();
+		userEvent.paste(inputElement, "10");
+
+		await waitFor(() => expect(inputElement).toHaveValue("10"));
 
 		const address = wallet.address();
 		const balance = wallet.balance();
@@ -942,16 +969,19 @@ describe("SendIpfs", () => {
 			expect(screen.getByTestId("TransactionSender")).toHaveTextContent(encryptedWallet.address()),
 		);
 
-		fireEvent.input(screen.getByTestId("Input__hash"), {
-			target: { value: "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco" },
-		});
+		userEvent.paste(screen.getByTestId("Input__hash"), "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco");
 		await waitFor(() =>
 			expect(screen.getByTestId("Input__hash")).toHaveValue("QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco"),
 		);
 
 		userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
-		fireEvent.change(screen.getByTestId("InputCurrency"), { target: { value: "10" } });
-		await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("10"));
+
+		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
+
+		inputElement.select();
+		userEvent.paste(inputElement, "10");
+
+		await waitFor(() => expect(inputElement).toHaveValue("10"));
 
 		expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
 
@@ -967,9 +997,7 @@ describe("SendIpfs", () => {
 
 		await screen.findByTestId("AuthenticationStep");
 
-		fireEvent.input(screen.getByTestId("AuthenticationStep__encryption-password"), {
-			target: { value: "password" },
-		});
+		userEvent.paste(screen.getByTestId("AuthenticationStep__encryption-password"), "password");
 		await waitFor(() =>
 			expect(screen.getByTestId("AuthenticationStep__encryption-password")).toHaveValue("password"),
 		);

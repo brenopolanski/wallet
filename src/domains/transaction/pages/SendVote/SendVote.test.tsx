@@ -22,7 +22,6 @@ import voteFixture from "tests/fixtures/coins/ark/devnet/transactions/vote.json"
 import {
 	act,
 	env,
-	fireEvent,
 	getDefaultLedgerTransport,
 	getDefaultProfileId,
 	getDefaultWalletId,
@@ -345,7 +344,7 @@ describe("SendVote", () => {
 		const transactionVoteMock = createVoteTransactionMock(wallet);
 
 		const passwordInput = getByTestId("AuthenticationStep__mnemonic");
-		fireEvent.input(passwordInput, { target: { value: passphrase } });
+		userEvent.paste(passwordInput, passphrase);
 
 		expect(passwordInput).toHaveValue(passphrase);
 
@@ -486,7 +485,7 @@ describe("SendVote", () => {
 		const transactionVoteMock = createVoteTransactionMock(wallet);
 
 		const passwordInput = getByTestId("AuthenticationStep__mnemonic");
-		fireEvent.input(passwordInput, { target: { value: passphrase } });
+		userEvent.paste(passwordInput, passphrase);
 
 		expect(passwordInput).toHaveValue(passphrase);
 
@@ -639,19 +638,24 @@ describe("SendVote", () => {
 		const transactionMock = createVoteTransactionMock(wallet);
 
 		const passwordInput = getByTestId("AuthenticationStep__mnemonic");
-		fireEvent.input(passwordInput, { target: { value: passphrase } });
+		userEvent.paste(passwordInput, passphrase);
 
-		expect(passwordInput).toHaveValue(passphrase);
-
-		userEvent.keyboard("{enter}");
-		await waitFor(() => expect(getByTestId("StepNavigation__send-button")).not.toBeDisabled());
-
-		await act(async () => {
-			userEvent.click(getByTestId("StepNavigation__send-button"));
+		await waitFor(() => {
+			expect(passwordInput).toHaveValue(passphrase);
 		});
 
 		act(() => {
 			jest.advanceTimersByTime(1000);
+		});
+
+		await waitFor(() => expect(getByTestId("StepNavigation__send-button")).not.toBeDisabled());
+
+		await act(async () => {
+			if (inputMethod === "with keyboard") {
+				userEvent.keyboard("{enter}");
+			} else {
+				userEvent.click(getByTestId("StepNavigation__send-button"));
+			}
 		});
 
 		await findByTestId("TransactionSuccessful");
@@ -700,7 +704,12 @@ describe("SendVote", () => {
 
 		userEvent.click(getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
 
-		fireEvent.input(getByTestId("InputCurrency"), { target: { value: "0.02" } });
+		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
+
+		inputElement.select();
+		userEvent.paste(inputElement, "0.02");
+
+		await waitFor(() => expect(inputElement).toHaveValue("0.02"));
 
 		await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
 		userEvent.click(getByTestId("StepNavigation__continue-button"));
@@ -760,7 +769,12 @@ describe("SendVote", () => {
 
 		userEvent.click(getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
 
-		fireEvent.input(getByTestId("InputCurrency"), { target: { value: "0.02" } });
+		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
+
+		inputElement.select();
+		userEvent.paste(inputElement, "0.02");
+
+		await waitFor(() => expect(inputElement).toHaveValue("0.02"));
 
 		await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
 		userEvent.click(getByTestId("StepNavigation__continue-button"));
@@ -793,7 +807,7 @@ describe("SendVote", () => {
 		expect(getByTestId("AuthenticationStep")).toBeInTheDocument();
 
 		const passwordInput = getByTestId("AuthenticationStep__mnemonic");
-		fireEvent.input(passwordInput, { target: { value: passphrase } });
+		userEvent.paste(passwordInput, passphrase);
 		await waitFor(() => expect(passwordInput).toHaveValue(passphrase));
 	});
 
@@ -855,7 +869,7 @@ describe("SendVote", () => {
 		const transactionMock = createUnvoteTransactionMock(wallet);
 
 		const passwordInput = getByTestId("AuthenticationStep__mnemonic");
-		fireEvent.input(passwordInput, { target: { value: passphrase } });
+		userEvent.paste(passwordInput, passphrase);
 
 		expect(passwordInput).toHaveValue(passphrase);
 
@@ -915,9 +929,13 @@ describe("SendVote", () => {
 
 		// Fee
 		userEvent.click(getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
-		fireEvent.change(getByTestId("InputCurrency"), { target: { value: "10" } });
 
-		expect(getByTestId("InputCurrency")).toHaveValue("10");
+		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
+
+		inputElement.select();
+		userEvent.paste(inputElement, "10");
+
+		await waitFor(() => expect(inputElement).toHaveValue("10"));
 
 		await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
 		userEvent.click(getByTestId("StepNavigation__continue-button"));
@@ -973,9 +991,13 @@ describe("SendVote", () => {
 
 		// Fee
 		userEvent.click(getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
-		fireEvent.change(getByTestId("InputCurrency"), { target: { value: "10" } });
 
-		expect(getByTestId("InputCurrency")).toHaveValue("10");
+		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
+
+		inputElement.select();
+		userEvent.paste(inputElement, "10");
+
+		await waitFor(() => expect(inputElement).toHaveValue("10"));
 
 		await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
 		userEvent.click(getByTestId("StepNavigation__continue-button"));
@@ -1045,7 +1067,7 @@ describe("SendVote", () => {
 		expect(getByTestId("AuthenticationStep")).toBeInTheDocument();
 
 		const passwordInput = getByTestId("AuthenticationStep__mnemonic");
-		fireEvent.input(passwordInput, { target: { value: "wrong passphrase" } });
+		userEvent.paste(passwordInput, "wrong passphrase");
 		await waitFor(() => expect(passwordInput).toHaveValue("wrong passphrase"));
 
 		await waitFor(() => expect(getByTestId("StepNavigation__send-button")).toBeDisabled());
@@ -1113,7 +1135,7 @@ describe("SendVote", () => {
 		});
 
 		const passwordInput = getByTestId("AuthenticationStep__mnemonic");
-		fireEvent.input(passwordInput, { target: { value: passphrase } });
+		userEvent.paste(passwordInput, passphrase);
 		await waitFor(() => expect(passwordInput).toHaveValue(passphrase));
 
 		const historyMock = jest.spyOn(history, "push").mockReturnValue();
@@ -1406,7 +1428,7 @@ describe("SendVote", () => {
 		const transactionMock = createVoteTransactionMock(wallet);
 
 		const passwordInput = getByTestId("AuthenticationStep__encryption-password");
-		fireEvent.input(passwordInput, { target: { value: "password" } });
+		userEvent.paste(passwordInput, "password");
 
 		await waitFor(() => expect(passwordInput).toHaveValue("password"));
 

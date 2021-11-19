@@ -5,15 +5,15 @@ import userEvent from "@testing-library/user-event";
 import { translations as transactionTranslations } from "domains/transaction/i18n";
 import nock from "nock";
 import React from "react";
-import { useTranslation } from "react-i18next";
+import { TFunction, useTranslation } from "react-i18next";
 import { Route } from "react-router-dom";
 import walletFixture from "tests/fixtures/coins/ark/devnet/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib.json";
 import coldWalletFixture from "tests/fixtures/coins/ark/devnet/wallets/DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P.json";
-import { env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
+import { env, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
 
 import { AddParticipant } from "./AddParticipant";
 
-let t: any;
+let t: TFunction;
 
 describe("Add Participant", () => {
 	let profile: Contracts.IProfile;
@@ -46,11 +46,7 @@ describe("Add Participant", () => {
 			},
 		);
 
-		fireEvent.input(screen.getByTestId("SelectDropdown__input"), {
-			target: {
-				value: "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyiba",
-			},
-		});
+		userEvent.paste(screen.getByTestId("SelectDropdown__input"), "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyiba");
 
 		await waitFor(() => {
 			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue("D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyiba");
@@ -87,11 +83,7 @@ describe("Add Participant", () => {
 			},
 		);
 
-		fireEvent.input(screen.getByTestId("SelectDropdown__input"), {
-			target: {
-				value: "DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P",
-			},
-		});
+		userEvent.paste(screen.getByTestId("SelectDropdown__input"), "DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P");
 
 		await waitFor(() => {
 			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue("DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P");
@@ -129,11 +121,7 @@ describe("Add Participant", () => {
 			},
 		);
 
-		fireEvent.input(screen.getByTestId("SelectDropdown__input"), {
-			target: {
-				value: wallet.address(),
-			},
-		});
+		userEvent.paste(screen.getByTestId("SelectDropdown__input"), wallet.address());
 
 		await waitFor(() => {
 			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(wallet.address());
@@ -170,11 +158,7 @@ describe("Add Participant", () => {
 			},
 		);
 
-		fireEvent.input(screen.getByTestId("SelectDropdown__input"), {
-			target: {
-				value: "DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq20",
-			},
-		});
+		userEvent.paste(screen.getByTestId("SelectDropdown__input"), "DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq20");
 
 		await waitFor(() => {
 			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue("DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq20");
@@ -204,11 +188,7 @@ describe("Add Participant", () => {
 			},
 		);
 
-		fireEvent.input(screen.getByTestId("SelectDropdown__input"), {
-			target: {
-				value: profile.wallets().last().address(),
-			},
-		});
+		userEvent.paste(screen.getByTestId("SelectDropdown__input"), profile.wallets().last().address());
 
 		userEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
 
@@ -247,11 +227,7 @@ describe("Add Participant", () => {
 			},
 		);
 
-		fireEvent.input(screen.getByTestId("SelectDropdown__input"), {
-			target: {
-				value: walletFixture.data.address,
-			},
-		});
+		userEvent.paste(screen.getByTestId("SelectDropdown__input"), walletFixture.data.address);
 
 		await waitFor(() =>
 			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(walletFixture.data.address),
@@ -309,11 +285,7 @@ describe("Add Participant", () => {
 		expect(screen.getByTestId("SelectDropdown__input")).not.toHaveValue();
 
 		// add participant
-		fireEvent.input(screen.getByTestId("SelectDropdown__input"), {
-			target: {
-				value: wallet2.address(),
-			},
-		});
+		userEvent.paste(screen.getByTestId("SelectDropdown__input"), wallet2.address());
 
 		userEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
 
@@ -322,11 +294,7 @@ describe("Add Participant", () => {
 		await waitFor(() => expect(screen.getByTestId("SelectDropdown__input")).not.toHaveValue());
 
 		// add participant
-		fireEvent.input(screen.getByTestId("SelectDropdown__input"), {
-			target: {
-				value: walletFixture.data.address,
-			},
-		});
+		userEvent.paste(screen.getByTestId("SelectDropdown__input"), walletFixture.data.address);
 
 		userEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
 

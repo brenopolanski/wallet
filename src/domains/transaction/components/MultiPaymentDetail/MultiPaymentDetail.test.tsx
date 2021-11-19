@@ -1,8 +1,9 @@
+import userEvent from "@testing-library/user-event";
 import { translations } from "domains/transaction/i18n";
 import React from "react";
 import { Route } from "react-router-dom";
 import { TransactionFixture } from "tests/fixtures/transactions";
-import { fireEvent, getDefaultProfileId, render, screen } from "utils/testing-library";
+import { getDefaultProfileId, render, screen } from "utils/testing-library";
 
 import { MultiPaymentDetail } from "./MultiPaymentDetail";
 
@@ -117,7 +118,7 @@ describe("MultiPaymentDetail", () => {
 
 		expect(screen.getByTestId("AmountLabel__hint")).toBeInTheDocument();
 
-		fireEvent.mouseEnter(screen.getByTestId("AmountLabel__hint"));
+		userEvent.hover(screen.getByTestId("AmountLabel__hint"));
 
 		expect(screen.getByText("Including 99 ARK sent to itself")).toBeInTheDocument();
 
