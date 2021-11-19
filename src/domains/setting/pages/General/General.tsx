@@ -176,8 +176,7 @@ export const GeneralSettings: React.FC = () => {
 						})}
 						ref={register()}
 						options={[1, 5, 10, 15, 30, 60].map((count) => ({
-							// TODO: waiting for i18next.TS will support plurals https://github.com/i18next/i18next/issues/1683
-							label: t("COMMON.DATETIME.MINUTES" as any, { count }),
+							label: t("COMMON.DATETIME.MINUTES", { count }),
 							value: `${count}`,
 						}))}
 						defaultValue={`${getDefaultValues().automaticSignOutPeriod}`}

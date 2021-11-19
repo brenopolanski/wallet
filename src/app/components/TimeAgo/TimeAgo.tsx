@@ -25,6 +25,5 @@ export const TimeAgo = ({ date }: { date: string }) => {
 
 	const { count, key } = dateDifference(date);
 
-	// TODO: waiting for i18next.TS will support plurals https://github.com/i18next/i18next/issues/1683
-	return <span data-testid="TimeAgo">{t(`COMMON.DATETIME.${key}_AGO` as any, { count })}</span>;
+	return <span data-testid="TimeAgo">{t(`COMMON.DATETIME.${key}_AGO`, { count })}</span>;
 };

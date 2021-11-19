@@ -162,14 +162,10 @@ const UpdateAllBanner = ({
 
 	const renderText = () => {
 		if (!hasCompatibleUpdateAvailableCount) {
-			// TODO: waiting for i18next.TS will support plurals https://github.com/i18next/i18next/issues/1683
-			return (
-				<span>{t("PLUGINS.UPDATE_ALL_NOTICE_INCOMPATIBLE" as any, { count: hasUpdateAvailableCount })}</span>
-			);
+			return <span>{t("PLUGINS.UPDATE_ALL_NOTICE_INCOMPATIBLE", { count: hasUpdateAvailableCount })}</span>;
 		}
 
-		// TODO: waiting for i18next.TS will support plurals https://github.com/i18next/i18next/issues/1683
-		return <span>{t("PLUGINS.UPDATE_ALL_NOTICE" as any, { count: hasUpdateAvailableCount })}</span>;
+		return <span>{t("PLUGINS.UPDATE_ALL_NOTICE", { count: hasUpdateAvailableCount })}</span>;
 	};
 
 	return (
