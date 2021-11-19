@@ -1,4 +1,3 @@
-import { sortByDesc } from "@payvo/sdk-helpers";
 import { Contracts, Helpers } from "@payvo/sdk-profiles";
 import { Amount } from "app/components/Amount";
 import { EmptyBlock } from "app/components/EmptyBlock";
@@ -48,7 +47,7 @@ export const PortfolioBreakdown: React.VFC<PortfolioBreakdownProperties> = ({
 			}));
 		}
 
-		return sortByDesc(assets, "percent").map((asset, index) => ({
+		return assets.map((asset, index) => ({
 			color: getColor(index, isDarkMode),
 			data: {
 				amountFormatted: Helpers.Currency.format(asset.convertedAmount, ticker),

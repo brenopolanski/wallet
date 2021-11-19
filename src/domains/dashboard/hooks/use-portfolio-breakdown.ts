@@ -1,3 +1,4 @@
+import { sortByDesc } from "@payvo/sdk-helpers";
 import { Contracts } from "@payvo/sdk-profiles";
 import { AssetItem } from "domains/dashboard/components/PortfolioBreakdown/PortfolioBreakdown.contracts";
 import { useMemo } from "react";
@@ -45,15 +46,18 @@ export const usePortfolioBreakdown: UsePortfolioBreakdownHook = ({ profile, prof
 
 	const assets = useMemo<AssetItem[]>(
 		() =>
-			profile
-				.portfolio()
-				.breakdown()
-				.map((asset) => ({
-					amount: asset.source,
-					convertedAmount: asset.target,
-					label: asset.coin.network().ticker(),
-					percent: asset.shares,
-				})),
+			sortByDesc(
+				profile
+					.portfolio()
+					.breakdown()
+					.map((asset) => ({
+						amount: asset.source,
+						convertedAmount: asset.target,
+						label: asset.coin.network().ticker(),
+						percent: asset.shares,
+					})),
+				(item) => item.percent,
+			),
 		[profile, loading], // eslint-disable-line react-hooks/exhaustive-deps
 	);
 
