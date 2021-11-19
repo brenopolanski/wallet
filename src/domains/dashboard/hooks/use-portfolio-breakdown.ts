@@ -35,14 +35,10 @@ export const usePortfolioBreakdown: UsePortfolioBreakdownHook = ({ profile, prof
 		[profile, isRestored], // eslint-disable-line react-hooks/exhaustive-deps
 	);
 
-	const walletsCount = useMemo<number>(
-		() =>
-			profile
-				.wallets()
-				.values()
-				.filter((wallet) => wallet.network().isLive()).length,
-		[profile, isRestored], // eslint-disable-line react-hooks/exhaustive-deps
-	);
+	const walletsCount = profile
+		.wallets()
+		.values()
+		.filter((wallet) => wallet.network().isLive()).length;
 
 	const assets = useMemo<AssetItem[]>(
 		() =>
