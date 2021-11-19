@@ -1,5 +1,5 @@
-import { GraphDataPoint } from "app/components/Graphs/Graphs.contracts";
 import { Contracts } from "@payvo/sdk-profiles";
+import { GraphDataPoint } from "app/components/Graphs/Graphs.contracts";
 
 interface AssetItem {
 	amount: number;
