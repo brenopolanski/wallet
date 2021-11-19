@@ -1,18 +1,16 @@
-import React, { MouseEvent, MutableRefObject, useCallback, useEffect, useRef, useState } from "react";
+import React, { MouseEvent, useCallback, useEffect, useRef, useState } from "react";
 
-import { GraphDataPoint, GraphType } from "./Graphs.contracts";
+import {
+	GraphDataPoint,
+	MIN_DISPLAY_VALUE_DONUT,
+	MIN_DISPLAY_VALUE_LINE,
+	MIN_VALUE,
+	UseGraphDataHook,
+	UseGraphTooltipHook,
+	UseGraphWidthHook,
+} from "./Graphs.contracts";
 
-const GRAPH_COLORS = ["success-600", "warning-600", "info-600", "danger-400", "hint-400", "secondary-400"];
-const GRAPH_COLORS_DARK = ["success-600", "warning-600", "info-600", "danger-400", "hint-400", "secondary-600"];
-
-const GRAPH_COLOR_EMPTY = "secondary-300";
-const GRAPH_COLOR_EMPTY_DARK = "secondary-800";
-
-const MIN_VALUE = 1;
-const MIN_DISPLAY_VALUE_LINE = 2.5;
-const MIN_DISPLAY_VALUE_DONUT = 5;
-
-const useGraphData = (graphType: GraphType) => {
+const useGraphData: UseGraphDataHook = (graphType) => {
 	const normalizeData = useCallback(
 		(data: GraphDataPoint[]) => {
 			let overflow = 0;
@@ -51,7 +49,7 @@ const useGraphData = (graphType: GraphType) => {
 	return { normalizeData };
 };
 
-const useGraphWidth = (): [MutableRefObject<SVGSVGElement | null>, number] => {
+const useGraphWidth: UseGraphWidthHook = () => {
 	const reference = useRef<SVGSVGElement | null>(null);
 
 	const [value, setValue] = useState(0);
@@ -73,22 +71,11 @@ const useGraphWidth = (): [MutableRefObject<SVGSVGElement | null>, number] => {
 	return [reference, value];
 };
 
-interface UseGraphTooltipResult<TDataPoint> {
-	Tooltip: React.VFC;
-	getMouseEventProperties: (dataPoint: TDataPoint) => {
-		onMouseMove: (event: MouseEvent<SVGElement>) => void;
-		onMouseOut: (event: MouseEvent<SVGElement>) => void;
-	};
-}
-
-function useGraphTooltip<TDataPoint>(
-	renderFunction: ((dataPoint: TDataPoint) => JSX.Element) | undefined,
-	type: GraphType,
-): UseGraphTooltipResult<TDataPoint> {
+const useGraphTooltip: UseGraphTooltipHook = (renderFunction, type) => {
 	const timeout = useRef<number>();
 	const tooltipReference = useRef<HTMLDivElement | null>(null);
 
-	const [tooltipDataPoint, setTooltipDataPoint] = useState<TDataPoint | undefined>(undefined);
+	const [tooltipDataPoint, setTooltipDataPoint] = useState<GraphDataPoint | undefined>(undefined);
 
 	const transformTooltip = useCallback(
 		(event: MouseEvent<SVGElement>) => {
@@ -114,7 +101,7 @@ function useGraphTooltip<TDataPoint>(
 		[type],
 	);
 
-	const getMouseEventProperties = (dataPoint: TDataPoint) => ({
+	const getMouseEventProperties = (dataPoint: GraphDataPoint) => ({
 		onMouseEnter: (event: MouseEvent<SVGElement>) => {
 			window.clearTimeout(timeout.current);
 
@@ -149,14 +136,6 @@ function useGraphTooltip<TDataPoint>(
 	);
 
 	return { Tooltip, getMouseEventProperties };
-}
-
-export {
-	GRAPH_COLOR_EMPTY,
-	GRAPH_COLOR_EMPTY_DARK,
-	GRAPH_COLORS,
-	GRAPH_COLORS_DARK,
-	useGraphData,
-	useGraphTooltip,
-	useGraphWidth,
 };
+
+export { useGraphData, useGraphTooltip, useGraphWidth };

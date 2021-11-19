@@ -1,4 +1,4 @@
-import { GRAPH_COLOR_EMPTY, GRAPH_COLOR_EMPTY_DARK } from "app/components/Graphs/Graphs.shared";
+import { GRAPH_COLOR_EMPTY, GRAPH_COLOR_EMPTY_DARK } from "app/components/Graphs/Graphs.contracts";
 import React from "react";
 
 import { LineGraphConfig } from "./LineGraph.contracts";
