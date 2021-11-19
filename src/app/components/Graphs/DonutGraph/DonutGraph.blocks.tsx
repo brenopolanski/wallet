@@ -24,7 +24,7 @@ export const ContentInsideCircle: React.VFC<ContentInsideCircleProperties> = ({ 
 	}
 
 	return (
-		<div className="absolute" ref={reference}>
+		<div className="absolute pointer-events-none" ref={reference}>
 			{renderFunction()}
 		</div>
 	);

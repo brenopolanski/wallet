@@ -35,10 +35,13 @@ export const usePortfolioBreakdown: UsePortfolioBreakdownHook = ({ profile, prof
 		[profile, isRestored], // eslint-disable-line react-hooks/exhaustive-deps
 	);
 
-	const walletsCount = profile
+	const walletIds = profile
 		.wallets()
 		.values()
-		.filter((wallet) => wallet.network().isLive()).length;
+		.filter((wallet) => wallet.network().isLive())
+		.map((wallet) => wallet.id())
+		.sort()
+		.join(".");
 
 	const assets = useMemo<AssetItem[]>(
 		() =>
@@ -54,7 +57,7 @@ export const usePortfolioBreakdown: UsePortfolioBreakdownHook = ({ profile, prof
 					})),
 				(item) => item.percent,
 			),
-		[profile, loading], // eslint-disable-line react-hooks/exhaustive-deps
+		[profile, loading, walletIds], // eslint-disable-line react-hooks/exhaustive-deps
 	);
 
 	return {
@@ -62,6 +65,6 @@ export const usePortfolioBreakdown: UsePortfolioBreakdownHook = ({ profile, prof
 		balance,
 		loading,
 		ticker,
-		walletsCount,
+		walletsCount: walletIds.split(".").length,
 	};
 };

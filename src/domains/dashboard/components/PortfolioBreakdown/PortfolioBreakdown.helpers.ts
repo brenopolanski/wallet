@@ -17,6 +17,6 @@ const getColor = (index: number, isDarkMode: boolean): string => {
 
 const getOtherGroupColor = (isDarkMode: boolean): string => (isDarkMode ? GRAPH_COLOR_OTHER_DARK : GRAPH_COLOR_OTHER);
 
-const formatPercentage = (value: number): string => `${Math.round(((value || 0) + Number.EPSILON) * 100) / 100}%`;
+const formatPercentage = (value: number): string => `${Math.round(((value || 0) + Number.EPSILON) * 10) / 10}%`;
 
 export { formatPercentage, getColor, getOtherGroupColor };

@@ -8,16 +8,17 @@ import {
 	UseGraphWidthHook,
 } from "./Graphs.contracts";
 
-const MIN_VALUE_SIZE_RATIO: Record<GraphType, number> = {
-	// Calculated as [minimum visible value / size] on a donut
-	// that had size of 280 and a minimum visible value of 3%.
-	donut: 0.0108,
-	line: 0, // @TODO: value to be found
+// Values calculated as [size * minimum visible value].
+// The bigger the value, the higher the chance for
+// smallest data points to end up in the "other" group.
+const MIN_VALUE: Record<GraphType, number> = {
+	donut: 1120,
+	line: 3200,
 };
 
 const useGraphData: UseGraphDataHook = (graphType, addToOtherGroup) => {
 	const isTooSmallToBeVisible = useCallback(
-		(value: number, size: number) => value < size * MIN_VALUE_SIZE_RATIO[graphType],
+		(value: number, size: number) => value * size < MIN_VALUE[graphType],
 		[graphType],
 	);
 
@@ -32,28 +33,21 @@ const useGraphData: UseGraphDataHook = (graphType, addToOtherGroup) => {
 
 			let otherGroup: GraphDataPoint | undefined = undefined;
 
-			for (let index = 0; index < data.length; index++) {
-				const entry = data[index];
+			let itemCount = 0;
 
-				if (isTooSmallToBeVisible(entry.value, size) || index > 5) {
-					otherGroup = addToOtherGroup(otherGroup, entry);
-					continue;
-				}
+			for (const entry of data) {
+				itemCount++;
 
-				if (index > 5) {
+				if (isTooSmallToBeVisible(entry.value, size) || itemCount > 6) {
 					otherGroup = addToOtherGroup(otherGroup, entry);
 					continue;
 				}
 
 				result.push(entry);
+			}
 
-				if (index === data.length - 1) {
-					if (otherGroup === undefined || isTooSmallToBeVisible(otherGroup.value, size)) {
-						continue;
-					}
-
-					result.push(otherGroup);
-				}
+			if (otherGroup !== undefined && !isTooSmallToBeVisible(otherGroup.value, size)) {
+				result.push(otherGroup);
 			}
 
 			return result;
