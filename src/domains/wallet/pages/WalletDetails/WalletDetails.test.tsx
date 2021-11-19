@@ -15,7 +15,6 @@ import walletMock from "tests/fixtures/coins/ark/devnet/wallets/D8rr7B1d6TL6pf14
 import {
 	defaultNetMocks,
 	env,
-	fireEvent,
 	getDefaultLedgerTransport,
 	getDefaultProfileId,
 	MNEMONICS,
@@ -372,7 +371,8 @@ describe("WalletDetails", () => {
 
 		const name = "Sample label name";
 
-		fireEvent.input(getByTestId("UpdateWalletName__input"), { target: { value: name } });
+		userEvent.clear(getByTestId("UpdateWalletName__input"));
+		userEvent.paste(getByTestId("UpdateWalletName__input"), name);
 
 		await waitFor(() => expect(getByTestId("UpdateWalletName__submit")).toBeEnabled());
 

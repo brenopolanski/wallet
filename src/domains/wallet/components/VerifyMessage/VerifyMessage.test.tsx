@@ -2,7 +2,7 @@
 import { Contracts } from "@payvo/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
-import { env, fireEvent, getDefaultProfileId, MNEMONICS, render, screen, waitFor } from "utils/testing-library";
+import { env, getDefaultProfileId, MNEMONICS, render, screen, waitFor } from "utils/testing-library";
 
 import { VerifyMessage } from "./VerifyMessage";
 
@@ -100,9 +100,9 @@ describe("VerifyMessage", () => {
 		const messageInput = screen.getByTestId("VerifyMessage__manual-message");
 		const signatureInput = screen.getByTestId("VerifyMessage__manual-signature");
 
-		fireEvent.input(signatoryInput, { target: { value: signedMessage.signatory } });
-		fireEvent.input(messageInput, { target: { value: signedMessage.message } });
-		fireEvent.input(signatureInput, { target: { value: signedMessage.signature } });
+		userEvent.paste(signatoryInput, signedMessage.signatory);
+		userEvent.paste(messageInput, signedMessage.message);
+		userEvent.paste(signatureInput, signedMessage.signature);
 
 		const submitButton = screen.getByTestId("VerifyMessage__submit");
 
@@ -132,7 +132,7 @@ describe("VerifyMessage", () => {
 
 		const jsonStringInput = screen.getByTestId("VerifyMessage__json-jsonString");
 
-		fireEvent.input(jsonStringInput, { target: { value: JSON.stringify(signedMessage) } });
+		userEvent.paste(jsonStringInput, JSON.stringify(signedMessage));
 
 		expect(jsonStringInput).toHaveValue(JSON.stringify(signedMessage));
 
@@ -163,9 +163,9 @@ describe("VerifyMessage", () => {
 		const messageInput = screen.getByTestId("VerifyMessage__manual-message");
 		const signatureInput = screen.getByTestId("VerifyMessage__manual-signature");
 
-		fireEvent.input(signatoryInput, { target: { value: signedMessage.signatory } });
-		fireEvent.input(messageInput, { target: { value: signedMessage.message } });
-		fireEvent.input(signatureInput, { target: { value: "fake-signature" } });
+		userEvent.paste(signatoryInput, signedMessage.signatory);
+		userEvent.paste(messageInput, signedMessage.message);
+		userEvent.paste(signatureInput, "fake-signature");
 
 		await waitFor(() => {
 			expect(screen.getByTestId("VerifyMessage__submit")).not.toBeDisabled();
@@ -200,9 +200,9 @@ describe("VerifyMessage", () => {
 
 		const messageSpy = jest.spyOn(wallet.message(), "verify").mockRejectedValue(new Error());
 
-		fireEvent.input(signatoryInput, { target: { value: signedMessage.signatory } });
-		fireEvent.input(messageInput, { target: { value: signedMessage.message } });
-		fireEvent.input(signatureInput, { target: { value: "fake-signature" } });
+		userEvent.paste(signatoryInput, signedMessage.signatory);
+		userEvent.paste(messageInput, signedMessage.message);
+		userEvent.paste(signatureInput, "fake-signature");
 
 		const submitButton = screen.getByTestId("VerifyMessage__submit");
 

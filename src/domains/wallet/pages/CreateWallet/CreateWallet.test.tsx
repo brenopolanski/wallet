@@ -6,7 +6,7 @@ import { translations as walletTranslations } from "domains/wallet/i18n";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
-import { env, fireEvent, getDefaultProfileId, render, screen, waitFor, within } from "utils/testing-library";
+import { env, getDefaultProfileId, render, screen, waitFor, within } from "utils/testing-library";
 
 import { CreateWallet } from "./CreateWallet";
 
@@ -72,19 +72,22 @@ describe("CreateWallet", () => {
 
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${fixtureProfileId}/dashboard`);
 
-		fireEvent.change(selectNetworkInput, { target: { value: "ARK Dev" } });
-		fireEvent.keyDown(selectNetworkInput, { code: 13, key: "Enter" });
+		userEvent.paste(selectNetworkInput, "ARK Dev");
+		userEvent.keyboard("{enter}");
+
 		await waitFor(() => expect(selectNetworkInput).toHaveValue("ARK Devnet"));
 
 		expect(continueButton).toBeEnabled();
 
-		fireEvent.change(selectNetworkInput, { target: { value: "" } });
+		userEvent.clear(selectNetworkInput);
+
 		await waitFor(() => expect(selectNetworkInput).not.toHaveValue());
 
 		expect(continueButton).toBeDisabled();
 
-		fireEvent.change(selectNetworkInput, { target: { value: "ARK Dev" } });
-		fireEvent.keyDown(selectNetworkInput, { code: 13, key: "Enter" });
+		userEvent.paste(selectNetworkInput, "ARK Dev");
+		userEvent.keyboard("{enter}");
+
 		await waitFor(() => expect(selectNetworkInput).toHaveValue("ARK Devnet"));
 
 		expect(continueButton).toBeEnabled();
@@ -134,7 +137,8 @@ describe("CreateWallet", () => {
 
 		await screen.findByTestId("modal__inner");
 
-		fireEvent.input(screen.getByTestId("UpdateWalletName__input"), { target: { value: "test alias" } });
+		userEvent.clear(screen.getByTestId("UpdateWalletName__input"));
+		userEvent.paste(screen.getByTestId("UpdateWalletName__input"), "test alias");
 
 		await waitFor(() => expect(screen.getByTestId("UpdateWalletName__submit")).toBeEnabled());
 
@@ -188,19 +192,22 @@ describe("CreateWallet", () => {
 
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${fixtureProfileId}/dashboard`);
 
-		fireEvent.change(selectNetworkInput, { target: { value: "ARK Dev" } });
-		fireEvent.keyDown(selectNetworkInput, { code: 13, key: "Enter" });
+		userEvent.paste(selectNetworkInput, "ARK Dev");
+		userEvent.keyboard("{enter}");
+
 		await waitFor(() => expect(selectNetworkInput).toHaveValue("ARK Devnet"));
 
 		expect(continueButton).toBeEnabled();
 
-		fireEvent.change(selectNetworkInput, { target: { value: "" } });
+		userEvent.clear(selectNetworkInput);
+
 		await waitFor(() => expect(selectNetworkInput).not.toHaveValue());
 
 		expect(continueButton).toBeDisabled();
 
-		fireEvent.change(selectNetworkInput, { target: { value: "ARK Dev" } });
-		fireEvent.keyDown(selectNetworkInput, { code: 13, key: "Enter" });
+		userEvent.paste(selectNetworkInput, "ARK Dev");
+		userEvent.keyboard("{enter}");
+
 		await waitFor(() => expect(selectNetworkInput).toHaveValue("ARK Devnet"));
 
 		expect(continueButton).toBeEnabled();
@@ -252,17 +259,8 @@ describe("CreateWallet", () => {
 
 		expect(screen.getAllByTestId("InputPassword")).toHaveLength(2);
 
-		fireEvent.input(screen.getAllByTestId("InputPassword")[0], {
-			target: {
-				value: "S3cUrePa$sword",
-			},
-		});
-
-		fireEvent.input(screen.getAllByTestId("InputPassword")[1], {
-			target: {
-				value: "S3cUrePa$sword",
-			},
-		});
+		userEvent.paste(screen.getAllByTestId("InputPassword")[0], "S3cUrePa$sword");
+		userEvent.paste(screen.getAllByTestId("InputPassword")[1], "S3cUrePa$sword");
 
 		const continueEncryptionButton = screen.getByTestId("CreateWallet__continue-encryption-button");
 
@@ -332,8 +330,8 @@ describe("CreateWallet", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 
-		fireEvent.change(selectNetworkInput, { target: { value: "Ark Dev" } });
-		fireEvent.keyDown(selectNetworkInput, { code: 13, key: "Enter" });
+		userEvent.paste(selectNetworkInput, "ARK Dev");
+		userEvent.keyboard("{enter}");
 
 		await waitFor(() => expect(continueButton).toBeEnabled());
 
@@ -380,8 +378,8 @@ describe("CreateWallet", () => {
 
 		const selectNetworkInput = screen.getByTestId("SelectNetworkInput__input");
 
-		fireEvent.change(selectNetworkInput, { target: { value: "ARK D" } });
-		fireEvent.keyDown(selectNetworkInput, { code: 13, key: "Enter" });
+		userEvent.paste(selectNetworkInput, "ARK Dev");
+		userEvent.keyboard("{enter}");
 
 		expect(selectNetworkInput).toHaveValue("ARK Devnet");
 
@@ -431,17 +429,17 @@ describe("CreateWallet", () => {
 		const selectNetworkInput = screen.getByTestId("SelectNetworkInput__input");
 		const continueButton = screen.getByTestId("CreateWallet__continue-button");
 
-		fireEvent.change(selectNetworkInput, { target: { value: "Ark Dev" } });
-		fireEvent.keyDown(selectNetworkInput, { code: 13, key: "Enter" });
+		userEvent.paste(selectNetworkInput, "ARK Dev");
+		userEvent.keyboard("{enter}");
 
 		await waitFor(() => expect(continueButton).toBeEnabled());
 
-		fireEvent.change(selectNetworkInput, { target: { value: "" } });
+		userEvent.clear(selectNetworkInput);
 
 		await waitFor(() => expect(continueButton).toBeDisabled());
 
-		fireEvent.change(selectNetworkInput, { target: { value: "Ark Dev" } });
-		fireEvent.keyDown(selectNetworkInput, { code: 13, key: "Enter" });
+		userEvent.paste(selectNetworkInput, "ARK Dev");
+		userEvent.keyboard("{enter}");
 
 		await waitFor(() => expect(continueButton).toBeEnabled());
 
@@ -472,7 +470,7 @@ describe("CreateWallet", () => {
 
 		await screen.findByTestId("modal__inner");
 
-		fireEvent.input(screen.getByTestId("UpdateWalletName__input"), { target: { value: "Test" } });
+		userEvent.paste(screen.getByTestId("UpdateWalletName__input"), "Test");
 
 		await waitFor(() => expect(screen.getByTestId("UpdateWalletName__submit")).toBeDisabled());
 

@@ -5,7 +5,7 @@ import userEvent from "@testing-library/user-event";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
-import { env, fireEvent, getDefaultProfileId, MNEMONICS, render, screen, waitFor } from "utils/testing-library";
+import { env, getDefaultProfileId, MNEMONICS, render, screen, waitFor } from "utils/testing-library";
 
 import { CreateWallet } from "./CreateWallet";
 
@@ -59,15 +59,17 @@ describe("EncryptionPasswordStep", () => {
 
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${fixtureProfileId}/dashboard`);
 
-		fireEvent.change(selectNetworkInput, { target: { value: "Ark Dev" } });
-		fireEvent.keyDown(selectNetworkInput, { code: 13, key: "Enter" });
+		userEvent.paste(selectNetworkInput, "ARK Dev");
+		userEvent.keyboard("{enter}");
+
 		await waitFor(() => expect(continueButton).toBeEnabled());
 
-		fireEvent.change(selectNetworkInput, { target: { value: "" } });
+		userEvent.clear(selectNetworkInput);
+
 		await waitFor(() => expect(continueButton).toBeDisabled());
 
-		fireEvent.change(selectNetworkInput, { target: { value: "Ark Dev" } });
-		fireEvent.keyDown(selectNetworkInput, { code: 13, key: "Enter" });
+		userEvent.paste(selectNetworkInput, "ARK Dev");
+		userEvent.keyboard("{enter}");
 
 		await waitFor(() => expect(continueButton).toBeEnabled());
 
@@ -122,11 +124,11 @@ describe("EncryptionPasswordStep", () => {
 		const passwordInput = screen.getAllByTestId("InputPassword")[0];
 		const confirmPassword = screen.getAllByTestId("InputPassword")[1];
 
-		fireEvent.input(passwordInput, { target: { value: "S3cUrePa$sword" } });
+		userEvent.paste(passwordInput, "S3cUrePa$sword");
 
 		await waitFor(() => expect(passwordInput).toHaveValue("S3cUrePa$sword"));
 
-		fireEvent.input(confirmPassword, { target: { value: "S3cUrePa$sword" } });
+		userEvent.paste(confirmPassword, "S3cUrePa$sword");
 
 		await waitFor(() => expect(confirmPassword).toHaveValue("S3cUrePa$sword"));
 
@@ -169,15 +171,17 @@ describe("EncryptionPasswordStep", () => {
 
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${fixtureProfileId}/dashboard`);
 
-		fireEvent.change(selectNetworkInput, { target: { value: "Ark Dev" } });
-		fireEvent.keyDown(selectNetworkInput, { code: 13, key: "Enter" });
+		userEvent.paste(selectNetworkInput, "ARK Dev");
+		userEvent.keyboard("{enter}");
+
 		await waitFor(() => expect(continueButton).toBeEnabled());
 
-		fireEvent.change(selectNetworkInput, { target: { value: "" } });
+		userEvent.clear(selectNetworkInput);
+
 		await waitFor(() => expect(continueButton).toBeDisabled());
 
-		fireEvent.change(selectNetworkInput, { target: { value: "Ark Dev" } });
-		fireEvent.keyDown(selectNetworkInput, { code: 13, key: "Enter" });
+		userEvent.paste(selectNetworkInput, "ARK Dev");
+		userEvent.keyboard("{enter}");
 
 		await waitFor(() => expect(continueButton).toBeEnabled());
 
@@ -236,11 +240,11 @@ describe("EncryptionPasswordStep", () => {
 		const passwordInput = screen.getAllByTestId("InputPassword")[0];
 		const confirmPassword = screen.getAllByTestId("InputPassword")[1];
 
-		fireEvent.input(passwordInput, { target: { value: "S3cUrePa$sword" } });
+		userEvent.paste(passwordInput, "S3cUrePa$sword");
 
 		await waitFor(() => expect(passwordInput).toHaveValue("S3cUrePa$sword"));
 
-		fireEvent.input(confirmPassword, { target: { value: "S3cUrePa$sword" } });
+		userEvent.paste(confirmPassword, "S3cUrePa$sword");
 
 		await waitFor(() => expect(confirmPassword).toHaveValue("S3cUrePa$sword"));
 

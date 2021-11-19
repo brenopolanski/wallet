@@ -11,7 +11,6 @@ import { Route } from "react-router-dom";
 import {
 	act,
 	env,
-	fireEvent,
 	getDefaultLedgerTransport,
 	getDefaultProfileId,
 	ledgerObserverSpy,
@@ -168,11 +167,11 @@ describe("SignMessage", () => {
 
 		const messageInput = screen.getByTestId("SignMessage__message-input");
 
-		fireEvent.input(messageInput, { target: { value: "Hello World" } });
+		userEvent.paste(messageInput, "Hello World");
 
 		const mnemonicInput = screen.getByTestId("SignMessage__mnemonic-input");
 
-		fireEvent.input(mnemonicInput, { target: { value: mnemonic } });
+		userEvent.paste(mnemonicInput, mnemonic);
 
 		await waitFor(() => expect(screen.getByTestId("SignMessage__submit-button")).toBeEnabled());
 
@@ -213,11 +212,11 @@ describe("SignMessage", () => {
 
 		const messageInput = screen.getByTestId("SignMessage__message-input");
 
-		fireEvent.input(messageInput, { target: { value: "Hello World" } });
+		userEvent.paste(messageInput, "Hello World");
 
 		const mnemonicInput = screen.getByTestId("SignMessage__mnemonic-input");
 
-		fireEvent.input(mnemonicInput, { target: { value: mnemonic } });
+		userEvent.paste(mnemonicInput, mnemonic);
 
 		await waitFor(() => expect(screen.getByTestId("SignMessage__submit-button")).toBeEnabled());
 
@@ -263,11 +262,11 @@ describe("SignMessage", () => {
 
 		const messageInput = screen.getByTestId("SignMessage__message-input");
 
-		fireEvent.input(messageInput, { target: { value: "Hello World" } });
+		userEvent.paste(messageInput, "Hello World");
 
 		const passwordInput = screen.getByTestId("SignMessage__encryption-password");
 
-		fireEvent.input(passwordInput, { target: { value: "password" } });
+		userEvent.paste(passwordInput, "password");
 
 		await waitFor(() => expect(screen.getByTestId("SignMessage__submit-button")).toBeEnabled());
 
@@ -319,11 +318,11 @@ describe("SignMessage", () => {
 
 		const messageInput = screen.getByTestId("SignMessage__message-input");
 
-		fireEvent.input(messageInput, { target: { value: "Hello World" } });
+		userEvent.paste(messageInput, "Hello World");
 
 		const secretInput = screen.getByTestId("SignMessage__secret-input");
 
-		fireEvent.input(secretInput, { target: { value: "secret" } });
+		userEvent.paste(secretInput, "secret");
 
 		await waitFor(() => expect(screen.getByTestId("SignMessage__submit-button")).toBeEnabled());
 
@@ -381,7 +380,7 @@ describe("SignMessage", () => {
 
 		const messageInput = screen.getByTestId("SignMessage__message-input");
 
-		fireEvent.input(messageInput, { target: { value: "Hello World" } });
+		userEvent.paste(messageInput, "Hello World");
 
 		await waitFor(() => expect(screen.getByTestId("SignMessage__submit-button")).toBeEnabled());
 
@@ -435,7 +434,7 @@ describe("SignMessage", () => {
 
 		const messageInput = screen.getByTestId("SignMessage__message-input");
 
-		fireEvent.input(messageInput, { target: { value: "Hello World" } });
+		userEvent.paste(messageInput, "Hello World");
 
 		await waitFor(() => expect(screen.getByTestId("SignMessage__submit-button")).toBeEnabled());
 
@@ -487,7 +486,7 @@ describe("SignMessage", () => {
 
 		const messageInput = screen.getByTestId("SignMessage__message-input");
 
-		fireEvent.input(messageInput, { target: { value: "Hello World" } });
+		userEvent.paste(messageInput, "Hello World");
 
 		await waitFor(() => expect(screen.getByTestId("SignMessage__submit-button")).toBeEnabled());
 
