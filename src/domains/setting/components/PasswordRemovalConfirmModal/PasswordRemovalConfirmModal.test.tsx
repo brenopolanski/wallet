@@ -1,4 +1,4 @@
-import { fireEvent, screen, waitFor } from "@testing-library/react";
+import { screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { buildTranslations } from "app/i18n/helpers";
 import React from "react";
@@ -38,9 +38,7 @@ describe("PasswordRemovalConfirmModal", () => {
 
 		expect(screen.getByTestId("PasswordRemovalConfirmModal__confirm")).toBeDisabled();
 
-		fireEvent.input(screen.getByTestId("PasswordRemovalConfirmModal__input-password"), {
-			target: { value: "password" },
-		});
+		userEvent.paste(screen.getByTestId("PasswordRemovalConfirmModal__input-password"), "password");
 
 		await waitFor(() => expect(screen.getByTestId("PasswordRemovalConfirmModal__confirm")).not.toBeDisabled());
 

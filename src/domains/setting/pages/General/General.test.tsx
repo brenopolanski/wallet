@@ -11,7 +11,7 @@ import { createHashHistory } from "history";
 import os from "os";
 import React from "react";
 import { Route } from "react-router-dom";
-import { act, env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
+import { act, env, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
 
 const translations = buildTranslations();
 
@@ -62,7 +62,7 @@ describe("General Settings", () => {
 		// Idle
 		history.push(`/profiles/${profile.id()}/dashboard`);
 
-		fireEvent.input(screen.getByTestId("General-settings__input--name"), { target: { value: "My Profile" } });
+		userEvent.paste(screen.getByTestId("General-settings__input--name"), "My Profile");
 
 		await waitFor(() => expect(screen.getByTestId("General-settings__submit-button")).toBeEnabled());
 
@@ -125,11 +125,11 @@ describe("General Settings", () => {
 
 		act(() => screen.getByTestId("General-settings__input--name").focus());
 
-		fireEvent.input(screen.getByTestId("General-settings__input--name"), { target: { value: "" } });
-		fireEvent.blur(screen.getByTestId("General-settings__input--name"));
+		userEvent.clear(screen.getByTestId("General-settings__input--name"));
+		userEvent.click(document.body);
 
-		fireEvent.input(screen.getByTestId("General-settings__input--name"), { target: { value: "t" } });
-		fireEvent.blur(screen.getByTestId("General-settings__input--name"));
+		userEvent.paste(screen.getByTestId("General-settings__input--name"), "t");
+		userEvent.click(document.body);
 
 		expect(screen.getByTestId("SelectProfileImage__avatar-identicon")).toBeInTheDocument();
 
@@ -137,7 +137,7 @@ describe("General Settings", () => {
 
 		act(() => screen.getByTestId("General-settings__input--name").focus());
 
-		fireEvent.input(screen.getByTestId("General-settings__input--name"), { target: { value: "" } });
+		userEvent.clear(screen.getByTestId("General-settings__input--name"));
 
 		await waitFor(() => expect(screen.getByTestId("General-settings__input--name")).not.toHaveValue());
 
@@ -145,7 +145,7 @@ describe("General Settings", () => {
 
 		act(() => screen.getByTestId("General-settings__input--name").focus());
 
-		fireEvent.input(screen.getByTestId("General-settings__input--name"), { target: { value: "" } });
+		userEvent.clear(screen.getByTestId("General-settings__input--name"));
 
 		await waitFor(() => expect(screen.getByTestId("General-settings__input--name")).not.toHaveValue());
 
@@ -209,25 +209,25 @@ describe("General Settings", () => {
 
 		act(() => screen.getByTestId("General-settings__input--name").focus());
 
-		fireEvent.input(screen.getByTestId("General-settings__input--name"), { target: { value: "" } });
+		userEvent.clear(screen.getByTestId("General-settings__input--name"));
 
 		await waitFor(() => {
 			expect(screen.getByTestId("General-settings__input--name")).not.toHaveValue();
 		});
 
-		fireEvent.blur(screen.getByTestId("General-settings__input--name"));
+		userEvent.click(document.body);
 
 		expect(screen.getByTestId("SelectProfileImage__avatar-image")).toBeInTheDocument();
 
 		act(() => screen.getByTestId("General-settings__input--name").focus());
 
-		fireEvent.input(screen.getByTestId("General-settings__input--name"), { target: { value: "t" } });
+		userEvent.paste(screen.getByTestId("General-settings__input--name"), "t");
 
 		await waitFor(() => {
 			expect(screen.getByTestId("General-settings__input--name")).toHaveValue("t");
 		});
 
-		fireEvent.blur(screen.getByTestId("General-settings__input--name"));
+		userEvent.click(document.body);
 
 		expect(screen.getByTestId("SelectProfileImage__avatar-image")).toBeInTheDocument();
 
@@ -261,7 +261,7 @@ describe("General Settings", () => {
 			expect(showOpenDialogMock).toHaveBeenCalledWith(showOpenDialogParameters);
 		});
 
-		fireEvent.input(screen.getByTestId("General-settings__input--name"), { target: { value: "test profile" } });
+		userEvent.paste(screen.getByTestId("General-settings__input--name"), "test profile");
 
 		// Toggle Screenshot Protection
 		userEvent.click(screen.getByTestId("General-settings__toggle--screenshotProtection"));
@@ -281,7 +281,7 @@ describe("General Settings", () => {
 
 		expect(firstOption).toBeInTheDocument();
 
-		fireEvent.mouseDown(firstOption);
+		userEvent.click(firstOption);
 
 		expect(
 			within(screen.getByTestId("General-settings__auto-signout")).getByTestId("select-list__input"),
@@ -317,11 +317,11 @@ describe("General Settings", () => {
 
 		expect(showOpenDialogMock).toHaveBeenCalledWith(showOpenDialogParameters);
 
-		fireEvent.input(screen.getByTestId("General-settings__input--name"), { target: { value: "t" } });
+		userEvent.paste(screen.getByTestId("General-settings__input--name"), "t");
 		await waitFor(() => expect(screen.getByTestId("General-settings__submit-button")).toBeEnabled());
-		fireEvent.input(screen.getByTestId("General-settings__input--name"), { target: { value: "" } });
+		userEvent.clear(screen.getByTestId("General-settings__input--name"));
 		await waitFor(() => expect(screen.getByTestId("General-settings__submit-button")).toBeDisabled());
-		fireEvent.input(screen.getByTestId("General-settings__input--name"), { target: { value: "test profile 2" } });
+		userEvent.paste(screen.getByTestId("General-settings__input--name"), "test profile 2");
 
 		await waitFor(() => expect(screen.getByTestId("General-settings__submit-button")).toBeEnabled());
 
@@ -354,10 +354,12 @@ describe("General Settings", () => {
 			},
 		);
 
-		await waitFor(() => expect(screen.getByTestId("General-settings__input--name")).toHaveValue(profile.name()));
-		fireEvent.input(screen.getByTestId("General-settings__input--name"), {
-			target: { value: "     " },
-		});
+		const nameInput: HTMLInputElement = screen.getByTestId("General-settings__input--name");
+
+		await waitFor(() => expect(nameInput).toHaveValue(profile.name()));
+
+		nameInput.select();
+		userEvent.paste(nameInput, "     ");
 
 		await waitFor(() => {
 			expect(screen.getByTestId("Input__error")).toBeVisible();
@@ -376,16 +378,17 @@ describe("General Settings", () => {
 			},
 		);
 
-		await waitFor(() => expect(screen.getByTestId("General-settings__input--name")).toHaveValue(profile.name()));
+		const nameInput: HTMLInputElement = screen.getByTestId("General-settings__input--name");
+
+		await waitFor(() => expect(nameInput).toHaveValue(profile.name()));
 
 		const otherProfile = env
 			.profiles()
 			.values()
 			.find((element: Contracts.IProfile) => element.id() !== profile.id());
 
-		fireEvent.input(screen.getByTestId("General-settings__input--name"), {
-			target: { value: otherProfile.settings().get(Contracts.ProfileSetting.Name) },
-		});
+		nameInput.select()
+		userEvent.paste(nameInput, otherProfile.settings().get(Contracts.ProfileSetting.Name));
 
 		await waitFor(() => {
 			expect(screen.getByTestId("Input__error")).toBeVisible();
@@ -393,9 +396,8 @@ describe("General Settings", () => {
 
 		await waitFor(() => expect(screen.getByTestId("General-settings__submit-button")).toBeDisabled());
 
-		fireEvent.input(screen.getByTestId("General-settings__input--name"), {
-			target: { value: "unique profile name" },
-		});
+		nameInput.select()
+		userEvent.paste(nameInput, "unique profile name");
 
 		await waitFor(() => expect(screen.getByTestId("General-settings__submit-button")).toBeEnabled());
 	});
@@ -410,21 +412,21 @@ describe("General Settings", () => {
 			},
 		);
 
-		await waitFor(() => expect(screen.getByTestId("General-settings__input--name")).toHaveValue(profile.name()));
+		const nameInput: HTMLInputElement = screen.getByTestId("General-settings__input--name");
+
+		await waitFor(() => expect(nameInput).toHaveValue(profile.name()));
 		const otherProfile = env
 			.profiles()
 			.values()
 			.find((element: Contracts.IProfile) => element.id() !== profile.id());
 
-		fireEvent.input(screen.getByTestId("General-settings__input--name"), {
-			target: { value: otherProfile.settings().get(Contracts.ProfileSetting.Name).toUpperCase() },
-		});
+		nameInput.select();
+		userEvent.paste(nameInput, otherProfile.settings().get(Contracts.ProfileSetting.Name).toUpperCase());
 
 		await waitFor(() => expect(screen.getByTestId("General-settings__submit-button")).toBeDisabled());
 
-		fireEvent.input(screen.getByTestId("General-settings__input--name"), {
-			target: { value: "unique profile name" },
-		});
+		nameInput.select();
+		userEvent.paste(nameInput, "unique profile name");
 
 		await waitFor(() => expect(screen.getByTestId("General-settings__submit-button")).toBeEnabled());
 	});
@@ -439,16 +441,17 @@ describe("General Settings", () => {
 			},
 		);
 
-		await waitFor(() => expect(screen.getByTestId("General-settings__input--name")).toHaveValue(profile.name()));
-		fireEvent.input(screen.getByTestId("General-settings__input--name"), {
-			target: { value: "test profile".repeat(10) },
-		});
+		const nameInput: HTMLInputElement = screen.getByTestId("General-settings__input--name");
+
+		await waitFor(() => expect(nameInput).toHaveValue(profile.name()));
+
+		nameInput.select();
+		userEvent.paste(nameInput, "test profile".repeat(10));
 
 		await waitFor(() => expect(screen.getByTestId("General-settings__submit-button")).toBeDisabled());
 
-		fireEvent.input(screen.getByTestId("General-settings__input--name"), {
-			target: { value: "unique profile name" },
-		});
+		nameInput.select();
+		userEvent.paste(nameInput, "unique profile name");
 
 		await waitFor(() => expect(screen.getByTestId("General-settings__submit-button")).toBeEnabled());
 	});
@@ -463,21 +466,21 @@ describe("General Settings", () => {
 			},
 		);
 
-		await waitFor(() => expect(screen.getByTestId("General-settings__input--name")).toHaveValue(profile.name()));
+		const nameInput: HTMLInputElement = screen.getByTestId("General-settings__input--name");
+
+		await waitFor(() => expect(nameInput).toHaveValue(profile.name()));
 		const otherProfile = env
 			.profiles()
 			.values()
 			.find((element: Contracts.IProfile) => element.id() !== profile.id());
 
-		fireEvent.input(screen.getByTestId("General-settings__input--name"), {
-			target: { value: `  ${otherProfile.settings().get(Contracts.ProfileSetting.Name)}  ` },
-		});
+		nameInput.select();
+		userEvent.paste(nameInput, `  ${otherProfile.settings().get(Contracts.ProfileSetting.Name)}  `);
 
 		await waitFor(() => expect(screen.getByTestId("General-settings__submit-button")).toBeDisabled());
 
-		fireEvent.input(screen.getByTestId("General-settings__input--name"), {
-			target: { value: "unique profile name" },
-		});
+		nameInput.select();
+		userEvent.paste(nameInput, "unique profile name");
 
 		await waitFor(() => expect(screen.getByTestId("General-settings__submit-button")).toBeEnabled());
 	});
