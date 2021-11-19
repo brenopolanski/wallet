@@ -8,8 +8,15 @@ interface GraphDataPoint {
 	value: number;
 }
 
-const GRAPH_COLORS = ["success-600", "warning-600", "info-600", "danger-400", "hint-400", "secondary-400"];
-const GRAPH_COLORS_DARK = ["success-600", "warning-600", "info-600", "danger-400", "hint-400", "secondary-600"];
+const GRAPH_COLORS = ["success-600", "warning-600", "info-600", "danger-400", "hint-400", "secondary-400"] as const;
+const GRAPH_COLORS_DARK = [
+	"success-600",
+	"warning-600",
+	"info-600",
+	"danger-400",
+	"hint-400",
+	"secondary-600",
+] as const;
 
 const GRAPH_COLOR_EMPTY = "secondary-300";
 const GRAPH_COLOR_EMPTY_DARK = "secondary-800";

@@ -1,9 +1,6 @@
 import React, { useEffect, useRef } from "react";
 
-interface ContentInsideCircleProperties {
-	renderFunction: (() => JSX.Element) | undefined;
-	size: number;
-}
+import { ContentInsideCircleProperties } from "./DonutGraph.contracts";
 
 export const ContentInsideCircle: React.VFC<ContentInsideCircleProperties> = ({ renderFunction, size }) => {
 	const reference = useRef<HTMLDivElement | null>(null);

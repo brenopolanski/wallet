@@ -1,11 +1,7 @@
 import { GRAPH_COLOR_EMPTY, GRAPH_COLOR_EMPTY_DARK } from "app/components/Graphs/Graphs.contracts";
 import React from "react";
 
-import { LineGraphConfig } from "./LineGraph.contracts";
-
-interface LineGraphEmptyProperties {
-	config: LineGraphConfig;
-}
+import { LineGraphEmptyProperties } from "./LineGraph.contracts";
 
 const LineGraphEmpty: React.VFC<LineGraphEmptyProperties> = ({ config }) => (
 	<rect

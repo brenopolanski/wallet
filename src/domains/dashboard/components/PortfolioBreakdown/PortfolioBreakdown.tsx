@@ -1,21 +1,17 @@
-import { Contracts, Helpers } from "@payvo/sdk-profiles";
+import { Helpers } from "@payvo/sdk-profiles";
 import { Amount } from "app/components/Amount";
 import { EmptyBlock } from "app/components/EmptyBlock";
-import { GraphDataPoint, GRAPH_COLOR_EMPTY, GRAPH_COLOR_EMPTY_DARK } from "app/components/Graphs/Graphs.contracts";
+import { GRAPH_COLOR_EMPTY, GRAPH_COLOR_EMPTY_DARK, GraphDataPoint } from "app/components/Graphs/Graphs.contracts";
 import { LineGraph } from "app/components/Graphs/LineGraph";
 import { useTheme } from "app/hooks";
 import { PortfolioBreakdownDetails } from "domains/dashboard/components/PortfolioBreakdownDetails";
 import { usePortfolioBreakdown } from "domains/dashboard/hooks/use-portfolio-breakdown";
-import React, { useMemo, useState } from "react";
+import React, { useCallback, useMemo, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
 
 import { LabelledText, Legend, PortfolioBreakdownSkeleton, Tooltip } from "./PortfolioBreakdown.blocks";
+import { PortfolioBreakdownProperties } from "./PortfolioBreakdown.contracts";
 import { formatPercentage, getColor } from "./PortfolioBreakdown.helpers";
-
-interface PortfolioBreakdownProperties {
-	profile: Contracts.IProfile;
-	profileIsSyncingExchangeRates: boolean;
-}
 
 export const PortfolioBreakdown: React.VFC<PortfolioBreakdownProperties> = ({
 	profile,
@@ -31,7 +27,9 @@ export const PortfolioBreakdown: React.VFC<PortfolioBreakdownProperties> = ({
 		profileIsSyncingExchangeRates,
 	});
 
-	const hasZeroBalance = useMemo(() => balance === 0, [balance]);
+	const hasZeroBalance = balance === 0;
+
+	const setDetailsModalVisibility = useCallback((isOpen: boolean) => setIsDetailsOpen(isOpen), []);
 
 	const lineGraphData = useMemo<GraphDataPoint[]>(() => {
 		if (hasZeroBalance) {
@@ -106,7 +104,7 @@ export const PortfolioBreakdown: React.VFC<PortfolioBreakdownProperties> = ({
 							<Legend
 								dataPoints={dataPoints}
 								hasZeroBalance={hasZeroBalance}
-								onMoreDetailsClick={() => setIsDetailsOpen(true)}
+								onMoreDetailsClick={() => setDetailsModalVisibility(true)}
 							/>
 						)}
 					/>
@@ -118,7 +116,7 @@ export const PortfolioBreakdown: React.VFC<PortfolioBreakdownProperties> = ({
 				assets={assets}
 				balance={balance}
 				exchangeCurrency={ticker}
-				onClose={() => setIsDetailsOpen(false)}
+				onClose={() => setDetailsModalVisibility(false)}
 			/>
 		</>
 	);

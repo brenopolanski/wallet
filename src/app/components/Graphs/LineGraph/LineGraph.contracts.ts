@@ -2,6 +2,7 @@ import { GraphDataPoint } from "app/components/Graphs/Graphs.contracts";
 
 interface LineGraphConfig {
 	graphWidth: number;
+	hoverAreaHeight: number;
 	segmentHeight: number;
 	segmentHeightHover: number;
 	segmentSpacing: number;
@@ -14,4 +15,17 @@ interface LineGraphProperties {
 	renderAsEmpty?: boolean;
 }
 
-export type { LineGraphConfig, LineGraphProperties };
+interface LineGraphEmptyProperties {
+	config: LineGraphConfig;
+}
+
+const BASE_CONFIG: Omit<LineGraphConfig, "graphWidth"> = {
+	hoverAreaHeight: 20,
+	segmentHeight: 8,
+	segmentHeightHover: 16,
+	segmentSpacing: 8,
+};
+
+export { BASE_CONFIG };
+
+export type { LineGraphConfig, LineGraphEmptyProperties, LineGraphProperties };

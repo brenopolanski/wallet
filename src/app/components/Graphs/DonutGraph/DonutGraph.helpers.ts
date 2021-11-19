@@ -1,31 +1,16 @@
-import { GraphAnimation } from "app/components/Graphs/GraphHoverAnimation/GraphHoverAnimation.contract";
-import { GraphDataPoint } from "app/components/Graphs/Graphs.contracts";
 import React, { useMemo } from "react";
 
-const BACKGROUND_CIRCLE_SPACING = 16;
-const GRAPH_MARGIN = 32;
-const RADIUS_HOVER_INCREMENT = 16;
-const SEGMENT_SPACING = 20;
+import {
+	BACKGROUND_CIRCLE_SPACING,
+	DonutGraphCircle,
+	DonutGraphConfig,
+	GRAPH_MARGIN,
+	RADIUS_HOVER_INCREMENT,
+	SEGMENT_SPACING,
+	UseDonutGraphHook,
+} from "./DonutGraph.contracts";
 
-interface DonutGraphConfig {
-	circleCommonProperties: React.SVGProps<SVGCircleElement>;
-	circumference: number;
-	circumferenceHover: number;
-	radius: number;
-	radiusHover: number;
-}
-
-interface DonutGraphCircle {
-	circleProperties: React.SVGProps<SVGCircleElement>;
-	animations: GraphAnimation[];
-}
-
-interface UseDonutGraphResult {
-	backgroundCircle: React.SVGProps<SVGCircleElement>;
-	circles: DonutGraphCircle[];
-}
-
-const useDonutGraph = (data: GraphDataPoint[], size: number): UseDonutGraphResult => {
+const useDonutGraph: UseDonutGraphHook = (data, size) => {
 	const { circleCommonProperties, circumference, circumferenceHover, radius, radiusHover } =
 		useMemo<DonutGraphConfig>(() => {
 			const diameter = size - GRAPH_MARGIN * 2;

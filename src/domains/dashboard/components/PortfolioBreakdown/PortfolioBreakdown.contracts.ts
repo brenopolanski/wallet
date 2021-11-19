@@ -1,4 +1,5 @@
 import { GraphDataPoint } from "app/components/Graphs/Graphs.contracts";
+import { Contracts } from "@payvo/sdk-profiles";
 
 interface AssetItem {
 	amount: number;
@@ -22,4 +23,9 @@ interface TooltipProperties {
 	dataPoint: GraphDataPoint;
 }
 
-export type { AssetItem, LabelledTextProperties, LegendProperties, TooltipProperties };
+interface PortfolioBreakdownProperties {
+	profile: Contracts.IProfile;
+	profileIsSyncingExchangeRates: boolean;
+}
+
+export type { AssetItem, LabelledTextProperties, LegendProperties, PortfolioBreakdownProperties, TooltipProperties };
