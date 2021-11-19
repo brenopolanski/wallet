@@ -21,6 +21,8 @@ export const PortfolioBreakdown: React.VFC<PortfolioBreakdownProperties> = ({
 	const { isDarkMode } = useTheme();
 
 	const [isDetailsOpen, setIsDetailsOpen] = useState(false);
+	const showDetailsModal = useCallback(() => setIsDetailsOpen(true), []);
+	const hideDetailsModal = useCallback(() => setIsDetailsOpen(false), []);
 
 	const { loading, balance, assets, walletsCount, ticker } = usePortfolioBreakdown({
 		profile,
@@ -28,8 +30,6 @@ export const PortfolioBreakdown: React.VFC<PortfolioBreakdownProperties> = ({
 	});
 
 	const hasZeroBalance = balance === 0;
-
-	const setDetailsModalVisibility = useCallback((isOpen: boolean) => setIsDetailsOpen(isOpen), []);
 
 	const lineGraphData = useMemo<GraphDataPoint[]>(() => {
 		if (hasZeroBalance) {
@@ -104,7 +104,7 @@ export const PortfolioBreakdown: React.VFC<PortfolioBreakdownProperties> = ({
 							<Legend
 								dataPoints={dataPoints}
 								hasZeroBalance={hasZeroBalance}
-								onMoreDetailsClick={() => setDetailsModalVisibility(true)}
+								onMoreDetailsClick={showDetailsModal}
 							/>
 						)}
 					/>
@@ -116,7 +116,7 @@ export const PortfolioBreakdown: React.VFC<PortfolioBreakdownProperties> = ({
 				assets={assets}
 				balance={balance}
 				exchangeCurrency={ticker}
-				onClose={() => setDetailsModalVisibility(false)}
+				onClose={hideDetailsModal}
 			/>
 		</>
 	);
