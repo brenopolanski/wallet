@@ -1,5 +1,5 @@
 // @README: This import is fine in tests but should be avoided in production code.
-import { ReadOnlyWallet } from "@payvo/sdk-profiles/distribution/read-only-wallet";
+import { Contracts } from "@payvo/sdk-profiles";
 import React from "react";
 import { render, waitFor } from "utils/testing-library";
 
@@ -7,7 +7,7 @@ import { TransactionVotes } from "./TransactionVotes";
 
 const votes = [
 	// @ts-ignore
-	new ReadOnlyWallet({
+	new Contracts.ReadOnlyWallet({
 		address: "test-address",
 		username: "test-username",
 	}),

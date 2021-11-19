@@ -1,7 +1,6 @@
 import { Observer } from "@ledgerhq/hw-transport";
 import { LSK } from "@payvo/sdk-lsk";
 import { Contracts } from "@payvo/sdk-profiles";
-import { WalletData, WalletLedgerModel } from "@payvo/sdk-profiles/distribution/contracts";
 import { renderHook } from "@testing-library/react-hooks";
 import { minVersionList } from "app/contexts/Ledger/contracts";
 import { toasts } from "app/services";
@@ -167,7 +166,7 @@ describe("Use Ledger Connection", () => {
 			.findByAddressWithNetwork("DQx1w8KE7nEW1nX9gj9iWjMXnp8Q3xyn3y", "ark.devnet");
 
 		expect(importedWallet?.isLedgerNanoX()).toBe(true);
-		expect(importedWallet?.data().get(WalletData.LedgerModel)).toBe(WalletLedgerModel.NanoX);
+		expect(importedWallet?.data().get(Contracts.WalletData.LedgerModel)).toBe(Contracts.WalletLedgerModel.NanoX);
 
 		profile.wallets().forget("DQx1w8KE7nEW1nX9gj9iWjMXnp8Q3xyn3y");
 		env.persist();

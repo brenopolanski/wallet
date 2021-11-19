@@ -1,8 +1,7 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { LSK } from "@payvo/sdk-lsk";
 import { Contracts } from "@payvo/sdk-profiles";
-import { ProfileSetting } from "@payvo/sdk-profiles/distribution/contracts";
-import { ReadOnlyWallet } from "@payvo/sdk-profiles/distribution/read-only-wallet";
+import { ReadOnlyWallet } from "@payvo/sdk-profiles/distribution/cjs/read-only-wallet";
 import { useProfileStatusWatcher } from "app/hooks";
 import { createMemoryHistory } from "history";
 import nock from "nock";
@@ -567,7 +566,7 @@ describe("Votes", () => {
 	});
 
 	it("should hide testnet wallet if disabled from profile setting", async () => {
-		profile.settings().set(ProfileSetting.UseTestNetworks, false);
+		profile.settings().set(Contracts.ProfileSetting.UseTestNetworks, false);
 
 		const mainnetWallet = await profile.walletFactory().fromAddress({
 			address: "AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX",
@@ -587,7 +586,7 @@ describe("Votes", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 
-		profile.settings().set(ProfileSetting.UseTestNetworks, true);
+		profile.settings().set(Contracts.ProfileSetting.UseTestNetworks, true);
 
 		// cleanup
 		profile.wallets().forget(mainnetWallet.id());
@@ -630,7 +629,7 @@ describe("Votes", () => {
 	});
 
 	it("should reset wallet search", async () => {
-		profile.settings().set(ProfileSetting.UseTestNetworks, true);
+		profile.settings().set(Contracts.ProfileSetting.UseTestNetworks, true);
 
 		const route = `/profiles/${profile.id()}/votes`;
 		const routePath = "/profiles/:profileId/votes";

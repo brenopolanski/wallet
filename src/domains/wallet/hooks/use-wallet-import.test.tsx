@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Networks } from "@payvo/sdk";
 import { Contracts } from "@payvo/sdk-profiles";
-import { Wallet } from "@payvo/sdk-profiles/distribution/wallet";
+import { Wallet } from "@payvo/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import { env, MNEMONICS } from "utils/testing-library";
 

@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@payvo/sdk-profiles";
-import { ProfileSetting } from "@payvo/sdk-profiles/distribution/contracts";
 import { translations as commonTranslations } from "app/i18n/common/i18n";
 import { translations } from "domains/contact/i18n";
 import { createMemoryHistory } from "history";
@@ -47,7 +46,7 @@ describe("Contacts", () => {
 	});
 
 	it("should render with contacts of live networks only", () => {
-		profile.settings().set(ProfileSetting.UseTestNetworks, false);
+		profile.settings().set(Contracts.ProfileSetting.UseTestNetworks, false);
 
 		const contact = profile.contacts().first();
 		const address = contact.addresses().create({
@@ -68,7 +67,7 @@ describe("Contacts", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 
-		profile.settings().set(ProfileSetting.UseTestNetworks, true);
+		profile.settings().set(Contracts.ProfileSetting.UseTestNetworks, true);
 
 		contact.addresses().forget(address.id());
 	});
@@ -379,7 +378,7 @@ describe("Contacts", () => {
 	});
 
 	it("should not include addresses of test networks in search if not enabled", async () => {
-		profile.settings().set(ProfileSetting.UseTestNetworks, false);
+		profile.settings().set(Contracts.ProfileSetting.UseTestNetworks, false);
 
 		const contact = profile.contacts().first();
 
@@ -417,7 +416,7 @@ describe("Contacts", () => {
 
 		await screen.findByTestId("Contacts--empty-results");
 
-		profile.settings().set(ProfileSetting.UseTestNetworks, true);
+		profile.settings().set(Contracts.ProfileSetting.UseTestNetworks, true);
 
 		contact.addresses().forget(addressLive.id());
 		contact.addresses().forget(addressTest.id());

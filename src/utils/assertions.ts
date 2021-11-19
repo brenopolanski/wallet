@@ -1,7 +1,6 @@
 import { Coins, Networks } from "@payvo/sdk";
-import { Contracts, DTO, Profile } from "@payvo/sdk-profiles";
-import { ReadOnlyWallet } from "@payvo/sdk-profiles/distribution/read-only-wallet";
-import { Wallet } from "@payvo/sdk-profiles/distribution/wallet";
+import { Contracts, DTO, Profile, Wallet } from "@payvo/sdk-profiles";
+import { ReadOnlyWallet } from "@payvo/sdk-profiles/distribution/cjs/read-only-wallet";
 import { AssertionError } from "assert";
 import { PluginController } from "plugins";
 import { IPluginController } from "plugins/core";

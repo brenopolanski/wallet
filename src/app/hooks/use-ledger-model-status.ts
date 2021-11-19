@@ -1,7 +1,7 @@
-import { WalletLedgerModel } from "@payvo/sdk-profiles/distribution/contracts";
+import { Contracts } from "@payvo/sdk-profiles";
 import { useMemo } from "react";
 
-export type LedgerModel = WalletLedgerModel.NanoS | WalletLedgerModel.NanoX;
+export type LedgerModel = Contracts.WalletLedgerModel.NanoS | Contracts.WalletLedgerModel.NanoX;
 
 interface ModelStatusProperties {
 	connectedModel?: LedgerModel;
@@ -10,7 +10,7 @@ interface ModelStatusProperties {
 
 export const useLedgerModelStatus = ({
 	connectedModel,
-	supportedModels = [WalletLedgerModel.NanoS, WalletLedgerModel.NanoX],
+	supportedModels = [Contracts.WalletLedgerModel.NanoS, Contracts.WalletLedgerModel.NanoX],
 }: ModelStatusProperties) => {
 	const isLedgerModelSupported = useMemo(() => {
 		if (!connectedModel) {

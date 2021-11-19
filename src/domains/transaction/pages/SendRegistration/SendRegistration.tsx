@@ -1,6 +1,5 @@
 import { Networks } from "@payvo/sdk";
-import { DTO } from "@payvo/sdk-profiles";
-import { WalletLedgerModel } from "@payvo/sdk-profiles/distribution/contracts";
+import { Contracts, DTO } from "@payvo/sdk-profiles";
 import { Form } from "app/components/Form";
 import { Page, Section } from "app/components/Layout";
 import { StepIndicator } from "app/components/StepIndicator";
@@ -49,7 +48,7 @@ export const SendRegistration = () => {
 
 	const { isLedgerModelSupported } = useLedgerModelStatus({
 		connectedModel: ledgerDevice?.id,
-		supportedModels: [WalletLedgerModel.NanoX],
+		supportedModels: [Contracts.WalletLedgerModel.NanoX],
 	});
 
 	const form = useForm({ mode: "onChange" });
@@ -267,7 +266,7 @@ export const SendRegistration = () => {
 											wallet={activeWallet}
 											ledgerIsAwaitingDevice={!hasDeviceAvailable}
 											ledgerIsAwaitingApp={!isConnected}
-											ledgerSupportedModels={[WalletLedgerModel.NanoX]}
+											ledgerSupportedModels={[Contracts.WalletLedgerModel.NanoX]}
 											ledgerConnectedModel={ledgerDevice?.id}
 										/>
 									</TabPanel>

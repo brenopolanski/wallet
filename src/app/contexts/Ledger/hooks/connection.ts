@@ -1,7 +1,6 @@
 import LedgerTransportNodeHID from "@ledgerhq/hw-transport-node-hid-singleton";
 import { Coins } from "@payvo/sdk";
 import { Contracts } from "@payvo/sdk-profiles";
-import { WalletData } from "@payvo/sdk-profiles/distribution/contracts";
 import { useEnvironmentContext } from "app/contexts/Environment";
 import { LedgerData, minVersionList } from "app/contexts/Ledger/contracts";
 import { formatLedgerDerivationPath } from "app/contexts/Ledger/utils/format-ledger-derivation-path";
@@ -75,7 +74,7 @@ export const useLedgerConnection = (transport: typeof LedgerTransportNodeHID) =>
 					}),
 				);
 
-				wallet.data().set(WalletData.LedgerModel, state.device?.id);
+				wallet.data().set(Contracts.WalletData.LedgerModel, state.device?.id);
 			}
 			await persist();
 		},
