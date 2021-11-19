@@ -264,9 +264,7 @@ export const DelegateVoteAmount = ({
 					ref={input}
 					disabled={isInputDisabled}
 					placeholder="0"
-					innerClassName={cn(
-						{ "text-left": isFocused },
-						{ "text-right": !isFocused },
+					innerClassName={cn("text-right focus:text-left",
 						{ "pr-8": !errorMessage },
 						{ "pr-12": !!errorMessage },
 					)}

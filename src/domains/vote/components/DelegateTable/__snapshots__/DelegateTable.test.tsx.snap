@@ -5699,7 +5699,7 @@ exports[`DelegateTable should render vote amount column 1`] = `
                       >
                         <input
                           aria-invalid="false"
-                          class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full text-right pr-8 text-theme-secondary-text"
+                          class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full text-right focus:text-left pr-8 text-theme-secondary-text"
                           data-testid="InputCurrency"
                           disabled=""
                           name="amount"
@@ -5826,7 +5826,7 @@ exports[`DelegateTable should render vote amount column 1`] = `
                       >
                         <input
                           aria-invalid="false"
-                          class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full text-right pr-8 text-theme-secondary-text"
+                          class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full text-right focus:text-left pr-8 text-theme-secondary-text"
                           data-testid="InputCurrency"
                           disabled=""
                           name="amount"
@@ -5953,7 +5953,7 @@ exports[`DelegateTable should render vote amount column 1`] = `
                       >
                         <input
                           aria-invalid="false"
-                          class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full text-right pr-8 text-theme-secondary-text"
+                          class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full text-right focus:text-left pr-8 text-theme-secondary-text"
                           data-testid="InputCurrency"
                           disabled=""
                           name="amount"
@@ -8474,7 +8474,7 @@ exports[`DelegateTable should select a changed delegate to unvote 1`] = `
                       >
                         <input
                           aria-invalid="false"
-                          class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full text-right pr-8"
+                          class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full text-right focus:text-left pr-8"
                           data-testid="InputCurrency"
                           name="amount"
                           placeholder="0"
@@ -8600,7 +8600,7 @@ exports[`DelegateTable should select a changed delegate to unvote 1`] = `
                       >
                         <input
                           aria-invalid="false"
-                          class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full text-right pr-8 text-theme-secondary-text"
+                          class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full text-right focus:text-left pr-8 text-theme-secondary-text"
                           data-testid="InputCurrency"
                           disabled=""
                           name="amount"
@@ -8727,7 +8727,7 @@ exports[`DelegateTable should select a changed delegate to unvote 1`] = `
                       >
                         <input
                           aria-invalid="false"
-                          class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full text-right pr-8 text-theme-secondary-text"
+                          class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full text-right focus:text-left pr-8 text-theme-secondary-text"
                           data-testid="InputCurrency"
                           disabled=""
                           name="amount"
@@ -10713,7 +10713,7 @@ exports[`DelegateTable should select a delegate with vote amount and make it unv
                       >
                         <input
                           aria-invalid="false"
-                          class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full text-right pr-8"
+                          class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full text-right focus:text-left pr-8"
                           data-testid="InputCurrency"
                           name="amount"
                           placeholder="0"
@@ -10839,7 +10839,7 @@ exports[`DelegateTable should select a delegate with vote amount and make it unv
                       >
                         <input
                           aria-invalid="false"
-                          class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full text-right pr-8 text-theme-secondary-text"
+                          class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full text-right focus:text-left pr-8 text-theme-secondary-text"
                           data-testid="InputCurrency"
                           disabled=""
                           name="amount"
@@ -10966,7 +10966,7 @@ exports[`DelegateTable should select a delegate with vote amount and make it unv
                       >
                         <input
                           aria-invalid="false"
-                          class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full text-right pr-8 text-theme-secondary-text"
+                          class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full text-right focus:text-left pr-8 text-theme-secondary-text"
                           data-testid="InputCurrency"
                           disabled=""
                           name="amount"

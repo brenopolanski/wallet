@@ -11,7 +11,6 @@ import React from "react";
 import { Route } from "react-router-dom";
 import {
 	env,
-	fireEvent,
 	getDefaultProfileId,
 	render,
 	screen,
@@ -607,7 +606,7 @@ describe("Votes", () => {
 		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
-		fireEvent.change(searchInput, { target: { value: "D8rr7B1d6TL6pf1" } });
+		userEvent.paste(searchInput, "D8rr7B1d6TL6pf1");
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(1));
 	});
@@ -625,7 +624,7 @@ describe("Votes", () => {
 		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
-		fireEvent.change(searchInput, { target: { value: "ARK Wallet 2" } });
+		userEvent.paste(searchInput, "ARK Wallet 2");
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(1));
 	});
@@ -646,7 +645,7 @@ describe("Votes", () => {
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
 		// Search by wallet alias
-		fireEvent.change(searchInput, { target: { value: "non existent wallet name" } });
+		userEvent.paste(searchInput, "non existent wallet name");
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(0));
 
@@ -699,7 +698,7 @@ describe("Votes", () => {
 		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
-		fireEvent.change(searchInput, { target: { value: "DBk4cPYpqp7EBc" } });
+		userEvent.paste(searchInput, "DBk4cPYpqp7EBc");
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(1));
 	});
@@ -717,7 +716,7 @@ describe("Votes", () => {
 		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
-		fireEvent.change(searchInput, { target: { value: "itsanametoo" } });
+		userEvent.paste(searchInput, "itsanametoo");
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(1));
 	});

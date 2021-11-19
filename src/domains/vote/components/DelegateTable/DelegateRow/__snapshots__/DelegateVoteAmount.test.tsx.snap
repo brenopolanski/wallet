@@ -1,62 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DelegateVoteAmount should change alignment of input by focus 1`] = `
-<DocumentFragment>
-  <table>
-    <tbody>
-      <tr>
-        <td
-          class="w-68"
-          data-testid="DelegateVoteAmount"
-        >
-          <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq justify-center border-t-2 border-b-2 border-transparent"
-          >
-            <div
-              class="relative flex-1 px-3"
-            >
-              <div
-                class="relative"
-              >
-                <div
-                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 haNJFI"
-                  disabled=""
-                >
-                  <div
-                    class="relative flex flex-1 h-full"
-                  >
-                    <input
-                      aria-invalid="false"
-                      class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full text-right pr-8 text-theme-secondary-text"
-                      data-testid="InputCurrency"
-                      disabled=""
-                      name="amount"
-                      placeholder="0"
-                      type="text"
-                      value=""
-                    />
-                  </div>
-                </div>
-              </div>
-              <span
-                class="absolute inset-y-0 flex items-center space-x-3 right-7 cursor-default"
-                data-testid="DelegateVoteAmount__ticker"
-              >
-                <span
-                  class="text-theme-secondary-400 dark:text-theme-secondary-700"
-                >
-                  ARK
-                </span>
-              </span>
-            </div>
-          </div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</DocumentFragment>
-`;
-
 exports[`DelegateVoteAmount should render when isCompact = false 1`] = `
 <DocumentFragment>
   <table>
@@ -83,7 +26,7 @@ exports[`DelegateVoteAmount should render when isCompact = false 1`] = `
                   >
                     <input
                       aria-invalid="false"
-                      class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full text-right pr-8"
+                      class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full text-right focus:text-left pr-8"
                       data-testid="InputCurrency"
                       name="amount"
                       placeholder="0"
@@ -138,7 +81,7 @@ exports[`DelegateVoteAmount should render when isCompact = true 1`] = `
                   >
                     <input
                       aria-invalid="false"
-                      class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full text-right pr-8"
+                      class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full text-right focus:text-left pr-8"
                       data-testid="InputCurrency"
                       name="amount"
                       placeholder="0"

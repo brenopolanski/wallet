@@ -1,11 +1,12 @@
 import { Contracts } from "@payvo/sdk-profiles";
 import { ReadOnlyWallet } from "@payvo/sdk-profiles/distribution/read-only-wallet";
+import userEvent from "@testing-library/user-event";
 import { buildTranslations } from "app/i18n/helpers";
 import { VoteDelegateProperties } from "domains/vote/components/DelegateTable/DelegateTable.models";
 import { translations as voteTranslations } from "domains/vote/i18n";
 import React from "react";
 import { data } from "tests/fixtures/coins/ark/devnet/delegates.json";
-import { env, fireEvent, getDefaultProfileId, render, screen } from "utils/testing-library";
+import { env, getDefaultProfileId, render, screen } from "utils/testing-library";
 
 import { DelegateFooter } from "./DelegateFooter";
 
@@ -125,7 +126,7 @@ describe("DelegateFooter", () => {
 
 		expect(continueButton).toBeDisabled();
 
-		fireEvent.mouseEnter(continueWrapper);
+		userEvent.hover(continueWrapper);
 
 		expect(baseElement).toHaveTextContent(voteTranslations.DELEGATE_TABLE.TOOLTIP.SELECTED_DELEGATE);
 
@@ -153,7 +154,7 @@ describe("DelegateFooter", () => {
 
 		expect(continueButton).not.toBeDisabled();
 
-		fireEvent.mouseEnter(continueWrapper);
+		userEvent.hover(continueWrapper);
 
 		expect(baseElement).not.toHaveTextContent(voteTranslations.DELEGATE_TABLE.TOOLTIP.SELECTED_DELEGATE);
 	});
@@ -184,7 +185,7 @@ describe("DelegateFooter", () => {
 
 		expect(continueButton).toBeDisabled();
 
-		fireEvent.mouseEnter(continueWrapper);
+		userEvent.hover(continueWrapper);
 
 		expect(baseElement).toHaveTextContent(voteTranslations.DELEGATE_TABLE.TOOLTIP.ZERO_AMOUNT);
 

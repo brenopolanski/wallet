@@ -264,6 +264,7 @@ module.exports = {
 			opacity: ["group-hover"],
 			padding: ["first", "last"],
 			ringColor: ["dark", "group-hover"],
+			textAlign: ["focus"],
 			visibility: ["group-hover"],
 		},
 	},

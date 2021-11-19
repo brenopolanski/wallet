@@ -6,7 +6,7 @@ import * as useRandomNumberHook from "app/hooks/use-random-number";
 import { translations } from "app/i18n/common/i18n";
 import React from "react";
 import { data } from "tests/fixtures/coins/ark/devnet/delegates.json";
-import { env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
+import { env, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
 
 import { DelegateTable } from "./DelegateTable";
 import { VoteDelegateProperties } from "./DelegateTable.models";
@@ -278,7 +278,8 @@ describe("DelegateTable", () => {
 		const selectButton = screen.getByTestId("DelegateRow__toggle-0");
 		const amountField = screen.getAllByTestId("InputCurrency")[0];
 
-		fireEvent.input(amountField, { target: { value: 30 } });
+		userEvent.clear(amountField);
+		userEvent.paste(amountField, "30");
 
 		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
 
@@ -300,7 +301,8 @@ describe("DelegateTable", () => {
 
 		rerender(<Table />);
 
-		fireEvent.input(amountField, { target: { value: 10 } });
+		userEvent.clear(amountField);
+		userEvent.paste(amountField, "10");
 
 		await waitFor(() => {
 			expect(screen.getByTestId("DelegateTable__footer--unvote")).toHaveTextContent("1");
