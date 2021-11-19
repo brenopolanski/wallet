@@ -235,7 +235,9 @@ describe("Wallets", () => {
 		fireEvent.click(screen.getByTestId("filter-wallets__wallets"));
 		fireEvent.click(screen.getByTestId("dropdown__option--0"));
 
-		await waitFor(() => expect(screen.getByTestId("filter-wallets__wallets")).toHaveTextContent(commonTranslations.ALL));
+		await waitFor(() =>
+			expect(screen.getByTestId("filter-wallets__wallets")).toHaveTextContent(commonTranslations.ALL),
+		);
 	});
 
 	it("should render network selection with sorted network filters", async () => {

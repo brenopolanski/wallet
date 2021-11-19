@@ -149,9 +149,7 @@ describe("WalletHeader", () => {
 	});
 
 	it.each([-5, 5])("should show currency delta (%s%)", (delta) => {
-		const { asFragment } = render(
-			<WalletHeader profile={profile} wallet={wallet} currencyDelta={delta} />,
-		);
+		const { asFragment } = render(<WalletHeader profile={profile} wallet={wallet} currencyDelta={delta} />);
 
 		if (delta < 0) {
 			expect(screen.getByText("chevron-down-small.svg")).toBeInTheDocument();

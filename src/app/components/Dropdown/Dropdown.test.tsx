@@ -277,9 +277,7 @@ describe("Dropdown", () => {
 			],
 			title: "Secondary Options 1",
 		};
-		const { container } = render(
-			<Dropdown options={[primaryOptions, secondaryOptions]} position="top-right" />,
-		);
+		const { container } = render(<Dropdown options={[primaryOptions, secondaryOptions]} position="top-right" />);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
 		fireEvent.click(toggle);
@@ -300,9 +298,7 @@ describe("Dropdown", () => {
 			options: [],
 			title: "Secondary Options 1",
 		};
-		const { container } = render(
-			<Dropdown options={[primaryOptions, secondaryOptions]} position="top-right" />,
-		);
+		const { container } = render(<Dropdown options={[primaryOptions, secondaryOptions]} position="top-right" />);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
 		fireEvent.click(toggle);

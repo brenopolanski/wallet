@@ -46,9 +46,7 @@ describe("SelectRecipient", () => {
 	});
 
 	it("should open and close contacts modal", async () => {
-		render(
-			<SelectRecipient profile={profile} address="bP6T9GQ3kqP6T9GQ3kqP6T9GQ3kqTTTP6T9GQ3kqT" />,
-		);
+		render(<SelectRecipient profile={profile} address="bP6T9GQ3kqP6T9GQ3kqP6T9GQ3kqTTTP6T9GQ3kqT" />);
 
 		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
@@ -90,9 +88,7 @@ describe("SelectRecipient", () => {
 	});
 
 	it("should not open contacts modal if disabled", async () => {
-		render(
-			<SelectRecipient profile={profile} address="bP6T9GQ3kqP6T9GQ3kqP6T9GQ3kqTTTP6T9GQ3kqT" disabled />,
-		);
+		render(<SelectRecipient profile={profile} address="bP6T9GQ3kqP6T9GQ3kqP6T9GQ3kqTTTP6T9GQ3kqT" disabled />);
 
 		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
@@ -155,9 +151,7 @@ describe("SelectRecipient", () => {
 	it("should call onChange prop only when values change", async () => {
 		const onChange = jest.fn();
 
-		render(
-			<SelectRecipient profile={profile} onChange={onChange} address="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib" />,
-		);
+		render(<SelectRecipient profile={profile} onChange={onChange} address="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib" />);
 
 		const selectedAddressValue = profile.contacts().values()[0].addresses().values()[0].address();
 
@@ -196,7 +190,9 @@ describe("SelectRecipient", () => {
 		fireEvent.click(screen.getByTestId("SelectRecipient__select-recipient"));
 
 		await waitFor(() =>
-			expect(() => screen.getAllByTestId("RecipientListItem__select-button")).toThrow(/Unable to find an element by/),
+			expect(() => screen.getAllByTestId("RecipientListItem__select-button")).toThrow(
+				/Unable to find an element by/,
+			),
 		);
 	});
 

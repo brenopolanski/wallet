@@ -6,7 +6,14 @@ import * as useScrollHook from "app/hooks/use-scroll";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
-import { env as mockedTestEnvironment, fireEvent, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
+import {
+	env as mockedTestEnvironment,
+	fireEvent,
+	getDefaultProfileId,
+	render,
+	screen,
+	waitFor,
+} from "utils/testing-library";
 
 import { NavigationBar } from "./NavigationBar";
 

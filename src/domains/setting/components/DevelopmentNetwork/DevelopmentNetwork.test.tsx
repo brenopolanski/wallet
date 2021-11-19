@@ -16,7 +16,9 @@ describe("DevelopmentNetwork", () => {
 		const { asFragment } = render(<DevelopmentNetwork isOpen={true} />);
 
 		expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_DEVELOPMENT_NETWORK.TITLE);
-		expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_DEVELOPMENT_NETWORK.DESCRIPTION);
+		expect(screen.getByTestId("modal__inner")).toHaveTextContent(
+			translations.MODAL_DEVELOPMENT_NETWORK.DESCRIPTION,
+		);
 		expect(asFragment()).toMatchSnapshot();
 	});
 });

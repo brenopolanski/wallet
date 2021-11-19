@@ -50,9 +50,7 @@ describe("PluginManagerNavigationBar", () => {
 	});
 
 	it("should show installed plugins count", () => {
-		render(
-			<PluginManagerNavigationBar menu={menu} selectedView="" installedPluginsCount={8} />,
-		);
+		render(<PluginManagerNavigationBar menu={menu} selectedView="" installedPluginsCount={8} />);
 
 		expect(screen.getByTestId("tabs__tab-button-my-plugins-count")).toHaveTextContent("8");
 	});

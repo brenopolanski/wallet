@@ -158,7 +158,9 @@ describe("Transactions", () => {
 
 		fireEvent.click(screen.getByTestId("dropdown__option--core-0"));
 
-		await waitFor(() => expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4));
+		await waitFor(() =>
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4),
+		);
 	});
 
 	it("should filter by type and see empty results text", async () => {
@@ -277,7 +279,9 @@ describe("Transactions", () => {
 		);
 
 		await waitFor(() => {
-			expect(screen.getByTestId("transactions__fetch-more-button")).toHaveTextContent(commonTranslations.VIEW_MORE);
+			expect(screen.getByTestId("transactions__fetch-more-button")).toHaveTextContent(
+				commonTranslations.VIEW_MORE,
+			);
 			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4);
 		});
 
@@ -286,7 +290,9 @@ describe("Transactions", () => {
 		expect(screen.getByTestId("transactions__fetch-more-button")).toHaveTextContent(commonTranslations.LOADING);
 
 		await waitFor(() => {
-			expect(screen.getByTestId("transactions__fetch-more-button")).toHaveTextContent(commonTranslations.VIEW_MORE);
+			expect(screen.getByTestId("transactions__fetch-more-button")).toHaveTextContent(
+				commonTranslations.VIEW_MORE,
+			);
 		});
 
 		expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8);
@@ -394,11 +400,15 @@ describe("Transactions", () => {
 			},
 		);
 
-		await waitFor(() => expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4));
+		await waitFor(() =>
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4),
+		);
 
 		fireEvent.click(screen.getByTestId("tabs__tab-button-sent"));
 
-		await waitFor(() => expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(1));
+		await waitFor(() =>
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(1),
+		);
 	});
 
 	it("should ignore tab change on loading state", async () => {
@@ -412,11 +422,15 @@ describe("Transactions", () => {
 			},
 		);
 
-		await waitFor(() => expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8));
+		await waitFor(() =>
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8),
+		);
 
 		fireEvent.click(screen.getByTestId("tabs__tab-button-sent"));
 
-		await waitFor(() => expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8));
+		await waitFor(() =>
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8),
+		);
 	});
 
 	it("should show empty message", async () => {

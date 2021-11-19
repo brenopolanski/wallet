@@ -159,9 +159,7 @@ describe("Pagination", () => {
 	});
 
 	it("should handle page selection from pagination search properly", async () => {
-		render(
-			<Pagination totalCount={10} itemsPerPage={1} onSelectPage={handleSelectPage} currentPage={1} />,
-		);
+		render(<Pagination totalCount={10} itemsPerPage={1} onSelectPage={handleSelectPage} currentPage={1} />);
 
 		fireEvent.click(screen.getByTestId("PaginationSearchButton"));
 
@@ -179,9 +177,7 @@ describe("Pagination", () => {
 	});
 
 	it("should handle close button from pagination search properly", async () => {
-		render(
-			<Pagination totalCount={10} itemsPerPage={1} onSelectPage={handleSelectPage} currentPage={1} />,
-		);
+		render(<Pagination totalCount={10} itemsPerPage={1} onSelectPage={handleSelectPage} currentPage={1} />);
 
 		fireEvent.click(screen.getByTestId("PaginationSearchButton"));
 

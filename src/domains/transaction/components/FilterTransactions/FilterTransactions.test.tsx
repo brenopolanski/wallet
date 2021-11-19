@@ -20,18 +20,14 @@ describe("FilterTransactions", () => {
 	});
 
 	it("should render with default selected option", () => {
-		const { container } = render(
-			<FilterTransactions defaultSelected={{ label: "All", value: "all" }} />,
-		);
+		const { container } = render(<FilterTransactions defaultSelected={{ label: "All", value: "all" }} />);
 
 		expect(screen.getByRole("button", { name: /Type/ })).toBeInTheDocument();
 		expect(container).toMatchSnapshot();
 	});
 
 	it("should open dropdown list with all transaction types", async () => {
-		const { container } = render(
-			<FilterTransactions wallets={profile.wallets().values()} />,
-		);
+		const { container } = render(<FilterTransactions wallets={profile.wallets().values()} />);
 
 		expect(screen.getByRole("button", { name: /Type/ })).toBeInTheDocument();
 
@@ -45,9 +41,7 @@ describe("FilterTransactions", () => {
 	it("should emit onChange", async () => {
 		const onSelect = jest.fn();
 
-		render(
-			<FilterTransactions wallets={profile.wallets().values()} onSelect={onSelect} />,
-		);
+		render(<FilterTransactions wallets={profile.wallets().values()} onSelect={onSelect} />);
 
 		expect(screen.getByRole("button", { name: /Type/ })).toBeInTheDocument();
 

@@ -69,9 +69,7 @@ describe("Modal", () => {
 	});
 
 	it("should render a modal with description", () => {
-		const { asFragment } = render(
-			<Modal title="ark" description="This is the Modal description" isOpen={true} />,
-		);
+		const { asFragment } = render(<Modal title="ark" description="This is the Modal description" isOpen={true} />);
 
 		expect(asFragment()).toMatchSnapshot();
 		expect(screen.getByTestId("modal__inner")).toHaveTextContent("This is the Modal description");

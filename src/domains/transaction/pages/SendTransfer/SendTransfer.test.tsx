@@ -28,7 +28,7 @@ import {
 	screen,
 	syncFees,
 	waitFor,
-	within
+	within,
 } from "utils/testing-library";
 
 import { FormStep } from "./FormStep";
@@ -175,12 +175,10 @@ describe("SendTransfer", () => {
 	it("should render network step without test networks", async () => {
 		const useNetworksMock = jest.spyOn(profile.settings(), "get").mockReturnValue(false);
 
-		const { asFragment } = renderWithForm(
-			<NetworkStep networks={env.availableNetworks()} profile={profile} />
-		);
+		const { asFragment } = renderWithForm(<NetworkStep networks={env.availableNetworks()} profile={profile} />);
 
 		expect(screen.getByTestId("SendTransfer__network-step")).toBeInTheDocument();
-		expect(screen.getAllByRole('listbox')[1]).toHaveClass("hidden");
+		expect(screen.getAllByRole("listbox")[1]).toHaveClass("hidden");
 		expect(asFragment()).toMatchSnapshot();
 
 		useNetworksMock.mockRestore();
@@ -848,7 +846,9 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
 
 		// Select recipient
-		fireEvent.click(within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"));
+		fireEvent.click(
+			within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"),
+		);
 		await screen.findByTestId("modal__inner");
 
 		fireEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
@@ -908,7 +908,9 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
 
 		// Select recipient
-		fireEvent.click(within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"));
+		fireEvent.click(
+			within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"),
+		);
 
 		expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
 
@@ -989,7 +991,9 @@ describe("SendTransfer", () => {
 		expect(goSpy).toHaveBeenCalledWith(-1);
 
 		// Select recipient
-		fireEvent.click(within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"));
+		fireEvent.click(
+			within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"),
+		);
 		await screen.findByTestId("modal__inner");
 
 		// Amount
@@ -1061,7 +1065,9 @@ describe("SendTransfer", () => {
 		expect(goSpy).toHaveBeenCalledWith(-1);
 
 		// Select recipient
-		fireEvent.click(within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"));
+		fireEvent.click(
+			within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"),
+		);
 
 		expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
 
@@ -1294,7 +1300,9 @@ describe("SendTransfer", () => {
 		expect(goSpy).toHaveBeenCalledWith(-1);
 
 		// Select recipient
-		fireEvent.click(within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"));
+		fireEvent.click(
+			within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"),
+		);
 
 		expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
 
@@ -1400,7 +1408,9 @@ describe("SendTransfer", () => {
 		expect(goSpy).toHaveBeenCalledWith(-1);
 
 		// Select recipient
-		fireEvent.click(within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"));
+		fireEvent.click(
+			within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"),
+		);
 
 		expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
 
@@ -1509,7 +1519,9 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
 
 		// Select recipient
-		fireEvent.click(within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"));
+		fireEvent.click(
+			within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"),
+		);
 
 		expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
 
@@ -1610,7 +1622,9 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
 
 		// Select recipient
-		fireEvent.click(within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"));
+		fireEvent.click(
+			within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"),
+		);
 
 		expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
 
@@ -1691,7 +1705,9 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
 
 		// Select recipient
-		fireEvent.click(within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"));
+		fireEvent.click(
+			within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"),
+		);
 		await screen.findByTestId("modal__inner");
 
 		fireEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
@@ -1767,7 +1783,9 @@ describe("SendTransfer", () => {
 			await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
 
 			// Select recipient
-			fireEvent.click(within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"));
+			fireEvent.click(
+				within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"),
+			);
 
 			expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
 
@@ -1846,7 +1864,9 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
 
 		// Select recipient
-		fireEvent.click(within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"));
+		fireEvent.click(
+			within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"),
+		);
 
 		expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
 
@@ -1951,7 +1971,9 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
 
 		// Select recipient
-		fireEvent.click(within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"));
+		fireEvent.click(
+			within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"),
+		);
 
 		expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
 
@@ -2032,7 +2054,9 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
 
 		// Select recipient
-		fireEvent.click(within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"));
+		fireEvent.click(
+			within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"),
+		);
 
 		expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
 
@@ -2132,7 +2156,9 @@ describe("SendTransfer", () => {
 		fireEvent.click(screen.getByText(transactionTranslations.MULTIPLE));
 
 		// Select recipient
-		fireEvent.click(within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"));
+		fireEvent.click(
+			within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"),
+		);
 		await screen.findByTestId("modal__inner");
 
 		fireEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
@@ -2147,7 +2173,9 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(screen.getAllByTestId("recipient-list__recipient-list-item")).toHaveLength(1));
 
 		// Select recipient #2
-		fireEvent.click(within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"));
+		fireEvent.click(
+			within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"),
+		);
 		await screen.findByTestId("modal__inner");
 
 		fireEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
@@ -2238,7 +2266,9 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
 
 		// Select recipient
-		fireEvent.click(within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"));
+		fireEvent.click(
+			within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"),
+		);
 
 		expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
 
@@ -2328,7 +2358,9 @@ describe("SendTransfer", () => {
 		expect(goSpy).toHaveBeenCalledWith(-1);
 
 		// Select recipient
-		fireEvent.click(within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"));
+		fireEvent.click(
+			within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"),
+		);
 
 		expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
 
@@ -2470,7 +2502,9 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
 
 		// select recipient
-		fireEvent.click(within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"));
+		fireEvent.click(
+			within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"),
+		);
 
 		expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
 
@@ -2566,7 +2600,9 @@ describe("SendTransfer", () => {
 		expect(goSpy).toHaveBeenCalledWith(-1);
 
 		// Select recipient
-		fireEvent.click(within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"));
+		fireEvent.click(
+			within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"),
+		);
 
 		expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
 
@@ -2600,8 +2636,12 @@ describe("SendTransfer", () => {
 		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 		await screen.findByTestId("AuthenticationStep");
 
-		fireEvent.input(screen.getByTestId("AuthenticationStep__encryption-password"), { target: { value: "password" } });
-		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__encryption-password")).toHaveValue("password"));
+		fireEvent.input(screen.getByTestId("AuthenticationStep__encryption-password"), {
+			target: { value: "password" },
+		});
+		await waitFor(() =>
+			expect(screen.getByTestId("AuthenticationStep__encryption-password")).toHaveValue("password"),
+		);
 
 		// Step 5 (skip step 4 for now - ledger confirmation)
 		const signMock = jest

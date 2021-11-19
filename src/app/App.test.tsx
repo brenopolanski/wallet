@@ -190,7 +190,9 @@ describe("App", () => {
 			expect(screen.getByTestId("ApplicationError__text")).toHaveTextContent(errorTranslations.APPLICATION.TITLE);
 		});
 
-		expect(screen.getByTestId("ApplicationError__text")).toHaveTextContent(errorTranslations.APPLICATION.DESCRIPTION);
+		expect(screen.getByTestId("ApplicationError__text")).toHaveTextContent(
+			errorTranslations.APPLICATION.DESCRIPTION,
+		);
 		expect(asFragment()).toMatchSnapshot();
 
 		consoleSpy.mockRestore();

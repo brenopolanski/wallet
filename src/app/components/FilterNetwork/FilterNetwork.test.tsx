@@ -133,9 +133,7 @@ describe("FilterNetworks", () => {
 	});
 
 	it("should render public and testnet networks", () => {
-		const { container } = render(
-			<FilterNetworks useTestNetworks={true} options={networkOptions} />,
-		);
+		const { container } = render(<FilterNetworks useTestNetworks={true} options={networkOptions} />);
 
 		expect(screen.getAllByTestId("FilterNetwork")).toHaveLength(2);
 		expect(container).toMatchSnapshot();
@@ -157,7 +155,9 @@ describe("FilterNetworks", () => {
 		fireEvent.click(within(screen.getAllByTestId("FilterNetwork")[0]).getByTestId("network__viewall"));
 
 		await waitFor(() =>
-			expect(() => screen.getByTestId("FilterNetwork__select-all-checkbox")).toThrow(/Unable to find an element by/),
+			expect(() => screen.getByTestId("FilterNetwork__select-all-checkbox")).toThrow(
+				/Unable to find an element by/,
+			),
 		);
 
 		expect(container).toMatchSnapshot();
@@ -206,9 +206,7 @@ describe("FilterNetworks", () => {
 
 	it("should toggle a testnet network option", () => {
 		const onChange = jest.fn();
-		const { container } = render(
-			<FilterNetworks options={networkOptions} onChange={onChange} useTestNetworks />,
-		);
+		const { container } = render(<FilterNetworks options={networkOptions} onChange={onChange} useTestNetworks />);
 
 		expect(container).toMatchSnapshot();
 		expect(screen.getAllByTestId("FilterNetwork")).toHaveLength(2);

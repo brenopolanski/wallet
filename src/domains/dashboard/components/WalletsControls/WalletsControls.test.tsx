@@ -27,9 +27,7 @@ describe("WalletsControls", () => {
 
 	it("should emit event for grid view selection and call callback if provided", () => {
 		const function_ = jest.fn();
-		render(
-			<WalletsControls filterProperties={filterProperties as any} onSelectGridView={function_} />,
-		);
+		render(<WalletsControls filterProperties={filterProperties as any} onSelectGridView={function_} />);
 		const toggle = screen.getByTestId("LayoutControls__grid--icon");
 
 		fireEvent.click(toggle);

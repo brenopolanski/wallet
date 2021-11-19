@@ -83,9 +83,7 @@ describe("FilterWallets", () => {
 	it("should not emit onChange for wallet display type change", () => {
 		const onChange = jest.fn();
 
-		render(
-			<FilterWallets networks={networkOptions} defaultConfiguration={defaultConfiguration} />,
-		);
+		render(<FilterWallets networks={networkOptions} defaultConfiguration={defaultConfiguration} />);
 
 		fireEvent.click(screen.getByTestId("filter-wallets__wallets"));
 

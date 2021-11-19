@@ -16,9 +16,7 @@ describe("NewsOptions", () => {
 	});
 
 	it("should select category", () => {
-		render(
-			<NewsOptions selectedCategories={categories} selectedCoins={coins} onSubmit={jest.fn()} />,
-		);
+		render(<NewsOptions selectedCategories={categories} selectedCoins={coins} onSubmit={jest.fn()} />);
 
 		fireEvent.click(screen.getByTestId("NewsOptions__category-Technical"));
 	});
@@ -33,9 +31,7 @@ describe("NewsOptions", () => {
 	it("should emit onSubmit with all selected filters", async () => {
 		const onSubmit = jest.fn();
 
-		render(
-			<NewsOptions selectedCategories={categories} selectedCoins={coins} onSubmit={onSubmit} />,
-		);
+		render(<NewsOptions selectedCategories={categories} selectedCoins={coins} onSubmit={onSubmit} />);
 
 		fireEvent.click(screen.getByTestId("NewsOptions__category-Technical"));
 		fireEvent.click(screen.getByTestId("NetworkOption__ark.mainnet"));

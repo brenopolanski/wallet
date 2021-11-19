@@ -77,9 +77,7 @@ describe("PluginList", () => {
 				version: "1.3.8",
 			},
 		];
-		const { asFragment } = render(
-			<PluginList itemsPerPage={4} plugins={[...plugins, ...morePlugins]} />,
-		);
+		const { asFragment } = render(<PluginList itemsPerPage={4} plugins={[...plugins, ...morePlugins]} />);
 
 		expect(screen.getAllByTestId("TableRow")).toHaveLength(4);
 		expect(screen.getByTestId("Pagination")).toBeInTheDocument();
@@ -97,9 +95,7 @@ describe("PluginList", () => {
 	});
 
 	it("should render without pagination", () => {
-		const { asFragment } = render(
-			<PluginList plugins={plugins} showPagination={false} />,
-		);
+		const { asFragment } = render(<PluginList plugins={plugins} showPagination={false} />);
 
 		expect(screen.getAllByTestId("TableRow")).toHaveLength(2);
 		expect(() => screen.getByTestId("Pagination")).toThrow(/Unable to find an element by/);
@@ -108,9 +104,7 @@ describe("PluginList", () => {
 	});
 
 	it("should split by page", () => {
-		const { asFragment } = render(
-			<PluginList plugins={plugins} itemsPerPage={1} />,
-		);
+		const { asFragment } = render(<PluginList plugins={plugins} itemsPerPage={1} />);
 
 		expect(screen.getAllByTestId("TableRow")).toHaveLength(1);
 

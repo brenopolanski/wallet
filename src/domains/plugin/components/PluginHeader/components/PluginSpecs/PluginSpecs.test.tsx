@@ -35,9 +35,7 @@ describe("PluginSpecs", () => {
 	});
 
 	it("should render without url and size", async () => {
-		const { asFragment } = render(
-			<PluginSpecs author="Payvo" category="utility" version="1.3.8" />,
-		);
+		const { asFragment } = render(<PluginSpecs author="Payvo" category="utility" version="1.3.8" />);
 
 		await screen.findByText("Payvo");
 		await screen.findByText("Utility");

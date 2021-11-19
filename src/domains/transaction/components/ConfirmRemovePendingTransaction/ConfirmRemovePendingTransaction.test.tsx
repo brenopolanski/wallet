@@ -79,9 +79,7 @@ describe("ConfirmRemovePendingTransaction", () => {
 	});
 
 	it("should render multisignature transaction", () => {
-		const { asFragment } = render(
-			<ConfirmRemovePendingTransaction isOpen={true} transaction={transferFixture} />,
-		);
+		const { asFragment } = render(<ConfirmRemovePendingTransaction isOpen={true} transaction={transferFixture} />);
 
 		expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
 		expect(screen.getByTestId("ConfirmRemovePendingTransaction__remove")).toBeInTheDocument();
@@ -116,9 +114,7 @@ describe("ConfirmRemovePendingTransaction", () => {
 
 	it("should handle close", () => {
 		const onClose = jest.fn();
-		render(
-			<ConfirmRemovePendingTransaction isOpen={true} transaction={multiSignatureFixture} onClose={onClose} />,
-		);
+		render(<ConfirmRemovePendingTransaction isOpen={true} transaction={multiSignatureFixture} onClose={onClose} />);
 
 		expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
 		expect(screen.getByTestId("ConfirmRemovePendingTransaction__remove")).toBeInTheDocument();

@@ -46,7 +46,9 @@ describe("DelegateResignationDetail", () => {
 			},
 		);
 
-		expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_DELEGATE_RESIGNATION_DETAIL.TITLE);
+		expect(screen.getByTestId("modal__inner")).toHaveTextContent(
+			translations.MODAL_DELEGATE_RESIGNATION_DETAIL.TITLE,
+		);
 		expect(asFragment()).toMatchSnapshot();
 	});
 });

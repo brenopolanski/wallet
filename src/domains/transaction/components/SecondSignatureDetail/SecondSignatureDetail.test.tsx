@@ -10,9 +10,7 @@ const fixtureProfileId = getDefaultProfileId();
 
 describe("SecondSignatureDetail", () => {
 	it("should not render if not open", () => {
-		const { asFragment } = render(
-			<SecondSignatureDetail isOpen={false} transaction={TransactionFixture} />,
-		);
+		const { asFragment } = render(<SecondSignatureDetail isOpen={false} transaction={TransactionFixture} />);
 
 		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 		expect(asFragment()).toMatchSnapshot();

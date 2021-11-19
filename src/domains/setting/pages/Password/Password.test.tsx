@@ -261,7 +261,9 @@ describe("Password Settings", () => {
 			target: { value: password },
 		});
 
-		await waitFor(() => expect(screen.getByTestId("Password-settings__input--currentPassword")).toHaveValue(password));
+		await waitFor(() =>
+			expect(screen.getByTestId("Password-settings__input--currentPassword")).toHaveValue(password),
+		);
 
 		fireEvent.input(screen.getByTestId("Password-settings__input--password_1"), {
 			target: { value: password },

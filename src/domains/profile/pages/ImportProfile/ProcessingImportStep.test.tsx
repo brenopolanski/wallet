@@ -71,9 +71,7 @@ describe("Import Profile - Processing import", () => {
 
 	it("should call back when password modal is closed", async () => {
 		const onBack = jest.fn();
-		render(
-			<ProcessingImport env={env} file={passwordProtectedDwe} onBack={onBack} password="test" />,
-		);
+		render(<ProcessingImport env={env} file={passwordProtectedDwe} onBack={onBack} password="test" />);
 		await screen.findByTestId("modal__inner");
 
 		fireEvent.click(screen.getByTestId("modal__close-btn"));

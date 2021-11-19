@@ -23,9 +23,7 @@ describe("InputAddress", () => {
 	);
 
 	it("should render", () => {
-		const { asFragment } = render(
-			<TestInputAddress coin="ARK" network="ark.devnet" profile={profile} />,
-		);
+		const { asFragment } = render(<TestInputAddress coin="ARK" network="ark.devnet" profile={profile} />);
 
 		expect(screen.getByTestId("InputAddress__input")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
@@ -35,9 +33,7 @@ describe("InputAddress", () => {
 		const { result, waitForNextUpdate } = renderHook(() => useForm({ mode: "onChange" }));
 		const { register, errors } = result.current;
 
-		render(
-			<TestInputAddress coin="ARK" network="ark.devnet" registerRef={register} profile={profile} />,
-		);
+		render(<TestInputAddress coin="ARK" network="ark.devnet" registerRef={register} profile={profile} />);
 
 		fireEvent.input(screen.getByTestId("InputAddress__input"), { target: { value: "Abc" } });
 

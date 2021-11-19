@@ -88,9 +88,7 @@ describe("Switch", () => {
 	});
 
 	it("should not select option by clicking the option text when disabled", () => {
-		render(
-			<Switch disabled value="a" onChange={onChange} leftOption={leftOption} rightOption={rightOption} />,
-		);
+		render(<Switch disabled value="a" onChange={onChange} leftOption={leftOption} rightOption={rightOption} />);
 
 		expect(screen.getByRole("checkbox")).not.toBeChecked();
 

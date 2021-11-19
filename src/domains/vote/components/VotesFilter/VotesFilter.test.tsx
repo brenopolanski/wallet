@@ -21,9 +21,7 @@ describe("VotesFilter", () => {
 	});
 
 	it("should render with current option selected", async () => {
-		const { asFragment } = render(
-			<VotesFilter totalCurrentVotes={1} selectedOption="current" />,
-		);
+		const { asFragment } = render(<VotesFilter totalCurrentVotes={1} selectedOption="current" />);
 
 		fireEvent.click(screen.getByTestId("dropdown__toggle"));
 

@@ -59,7 +59,10 @@ describe("NetworkIcon", () => {
 	it("should not render different class for testnet network", () => {
 		const { asFragment } = render(<NetworkOption network={networkTestnet} />, {});
 
-		expect(screen.getByTestId("NetworkIcon-ARK-ark.devnet")).toHaveAttribute("aria-label", networkTestnet.displayName());
+		expect(screen.getByTestId("NetworkIcon-ARK-ark.devnet")).toHaveAttribute(
+			"aria-label",
+			networkTestnet.displayName(),
+		);
 		expect(screen.getByTestId("NetworkIcon__icon")).toBeInTheDocument();
 		expect(asFragment).toMatchSnapshot();
 	});

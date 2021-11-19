@@ -357,7 +357,9 @@ describe("WalletVote", () => {
 			await screen.findByTestId("WalletVote");
 
 			expect(screen.getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE"))).toBeInTheDocument();
-			expect(screen.getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.ACTIVE_COUNT", { count: 1 }))).toBeInTheDocument();
+			expect(
+				screen.getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.ACTIVE_COUNT", { count: 1 })),
+			).toBeInTheDocument();
 			expect(
 				screen.getByText(`/ ${t("WALLETS.PAGE_WALLET_DETAILS.VOTES.STANDBY_COUNT", { count: 1 })}`),
 			).toBeInTheDocument();
@@ -516,9 +518,7 @@ describe("WalletVote", () => {
 
 		const onButtonClick = jest.fn();
 
-		render(
-			<WalletVote profile={profile} wallet={wallet} onButtonClick={onButtonClick} env={env} />,
-		);
+		render(<WalletVote profile={profile} wallet={wallet} onButtonClick={onButtonClick} env={env} />);
 
 		await screen.findByTestId("WalletVote");
 		fireEvent.click(screen.getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE")));
@@ -536,9 +536,7 @@ describe("WalletVote", () => {
 
 		const onButtonClick = jest.fn();
 
-		render(
-			<WalletVote profile={profile} wallet={wallet} onButtonClick={onButtonClick} env={env} />,
-		);
+		render(<WalletVote profile={profile} wallet={wallet} onButtonClick={onButtonClick} env={env} />);
 
 		await screen.findByTestId("WalletVote");
 		await waitFor(() => expect(screen.getByTestId("WalletVote")).not.toBeDisabled());

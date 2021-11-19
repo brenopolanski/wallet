@@ -26,9 +26,7 @@ describe("Formatted Address", () => {
 	});
 
 	it.each(["sm", "lg", "xl"])("should render with size %s", (size) => {
-		render(
-			<Address address={sampleAddress} walletName="Sample Wallet" size={size as Size} />,
-		);
+		render(<Address address={sampleAddress} walletName="Sample Wallet" size={size as Size} />);
 
 		expect(screen.getByTestId("Address__alias")).toHaveClass(`text-${size}`);
 	});

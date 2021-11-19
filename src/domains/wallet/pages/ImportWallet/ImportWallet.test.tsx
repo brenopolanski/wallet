@@ -68,9 +68,7 @@ describe("ImportWallet", () => {
 	});
 
 	it("should render network step", async () => {
-		const { asFragment } = renderWithForm(
-			<NetworkStep profile={profile} title="title" subtitle="subtitle" />,
-		);
+		const { asFragment } = renderWithForm(<NetworkStep profile={profile} title="title" subtitle="subtitle" />);
 
 		expect(screen.getByTestId("NetworkStep")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
@@ -89,9 +87,7 @@ describe("ImportWallet", () => {
 	it("should render network step without test networks", async () => {
 		profile.settings().set(Contracts.ProfileSetting.UseTestNetworks, false);
 
-		const { asFragment } = renderWithForm(
-			<NetworkStep profile={profile} title="title" subtitle="subtitle" />,
-		);
+		const { asFragment } = renderWithForm(<NetworkStep profile={profile} title="title" subtitle="subtitle" />);
 
 		expect(screen.getByTestId("NetworkStep")).toBeInTheDocument();
 
@@ -654,7 +650,9 @@ describe("ImportWallet", () => {
 		fireEvent.mouseDown(screen.getByText(commonTranslations.PUBLIC_KEY));
 
 		await screen.findByTestId("ImportWallet__publicKey-input");
-		fireEvent.input(screen.getByTestId("ImportWallet__publicKey-input"), { target: { value: randomPublicKeyInvalid } });
+		fireEvent.input(screen.getByTestId("ImportWallet__publicKey-input"), {
+			target: { value: randomPublicKeyInvalid },
+		});
 
 		await waitFor(() => expect(screen.getByTestId("ImportWallet__continue-button")).toBeDisabled());
 	});
@@ -1113,7 +1111,9 @@ describe("ImportWallet", () => {
 		await screen.findByTestId("ImportWallet__address-input");
 		fireEvent.input(screen.getByTestId("ImportWallet__address-input"), { target: { value: randomNewAddress } });
 
-		await waitFor(() => expect(screen.getByTestId("ImportWallet__continue-button")).toBeEnabled(), { timeout: 4000 });
+		await waitFor(() => expect(screen.getByTestId("ImportWallet__continue-button")).toBeEnabled(), {
+			timeout: 4000,
+		});
 		fireEvent.click(screen.getByTestId("ImportWallet__continue-button"));
 
 		await waitFor(() => {
@@ -1184,7 +1184,9 @@ describe("ImportWallet", () => {
 		await screen.findByTestId("ImportWallet__address-input");
 		fireEvent.input(screen.getByTestId("ImportWallet__address-input"), { target: { value: randomNewAddress } });
 
-		await waitFor(() => expect(screen.getByTestId("ImportWallet__continue-button")).toBeEnabled(), { timeout: 4000 });
+		await waitFor(() => expect(screen.getByTestId("ImportWallet__continue-button")).toBeEnabled(), {
+			timeout: 4000,
+		});
 		fireEvent.click(screen.getByTestId("ImportWallet__continue-button"));
 
 		await waitFor(() => {

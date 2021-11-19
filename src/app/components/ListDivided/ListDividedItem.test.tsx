@@ -47,9 +47,7 @@ describe("ListDividedItem", () => {
 	});
 
 	it("should render with labelAddon", () => {
-		const { asFragment } = render(
-			<ListDividedItem labelAddon={<span>Test</span>} content="Content" />,
-		);
+		const { asFragment } = render(<ListDividedItem labelAddon={<span>Test</span>} content="Content" />);
 
 		expect(screen.getByTestId("list-divided-item__content")).toHaveTextContent("Content");
 		expect(asFragment()).toMatchSnapshot();

@@ -1,7 +1,15 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Networks } from "@payvo/sdk";
 import React from "react";
-import { env, fireEvent, getDefaultProfileId, getDefaultWalletId, render, screen, waitFor } from "utils/testing-library";
+import {
+	env,
+	fireEvent,
+	getDefaultProfileId,
+	getDefaultWalletId,
+	render,
+	screen,
+	waitFor,
+} from "utils/testing-library";
 
 import { ReceiveFunds } from "./ReceiveFunds";
 
@@ -36,9 +44,7 @@ describe("ReceiveFunds", () => {
 	});
 
 	it("should render with a wallet name", async () => {
-		const { asFragment } = render(
-			<ReceiveFunds address="abc" name="My Wallet" network={network} />,
-		);
+		const { asFragment } = render(<ReceiveFunds address="abc" name="My Wallet" network={network} />);
 
 		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__name")).toHaveLength(1));
 		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__address")).toHaveLength(1));
@@ -50,9 +56,7 @@ describe("ReceiveFunds", () => {
 	it("should handle close", async () => {
 		const onClose = jest.fn();
 
-		render(
-			<ReceiveFunds address="abc" name="My Wallet" network={network} onClose={onClose} />,
-		);
+		render(<ReceiveFunds address="abc" name="My Wallet" network={network} onClose={onClose} />);
 
 		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__name")).toHaveLength(1));
 		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__address")).toHaveLength(1));
@@ -64,9 +68,7 @@ describe("ReceiveFunds", () => {
 	});
 
 	it("should open qr code form", async () => {
-		render(
-			<ReceiveFunds address="abc" name="My Wallet" network={network} />,
-		);
+		render(<ReceiveFunds address="abc" name="My Wallet" network={network} />);
 
 		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__name")).toHaveLength(1));
 		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__address")).toHaveLength(1));

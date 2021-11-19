@@ -240,7 +240,9 @@ describe("WalletDetails", () => {
 
 		fireEvent.click(screen.getByTestId("ConfirmRemovePendingTransaction__remove"));
 
-		await waitFor(() => expect(() => screen.getByTestId("PendingTransactions")).toThrow(/Unable to find an element by/));
+		await waitFor(() =>
+			expect(() => screen.getByTestId("PendingTransactions")).toThrow(/Unable to find an element by/),
+		);
 
 		expect(toastsMock).toHaveBeenCalledWith(translations.TRANSACTION.TRANSACTION_REMOVED);
 

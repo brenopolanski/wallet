@@ -234,7 +234,9 @@ describe("SendDelegateResignation", () => {
 					value: MNEMONICS[2],
 				},
 			});
-			await waitFor(() => expect(screen.getByTestId("AuthenticationStep__second-mnemonic")).toHaveValue(MNEMONICS[2]));
+			await waitFor(() =>
+				expect(screen.getByTestId("AuthenticationStep__second-mnemonic")).toHaveValue(MNEMONICS[2]),
+			);
 
 			expect(screen.getByTestId("AuthenticationStep__second-mnemonic")).toHaveAttribute("aria-invalid");
 			expect(screen.getByTestId("StepNavigation__send-button")).toBeDisabled();
@@ -275,7 +277,9 @@ describe("SendDelegateResignation", () => {
 					value: MNEMONICS[1],
 				},
 			});
-			await waitFor(() => expect(screen.getByTestId("AuthenticationStep__second-mnemonic")).toHaveValue(MNEMONICS[1]));
+			await waitFor(() =>
+				expect(screen.getByTestId("AuthenticationStep__second-mnemonic")).toHaveValue(MNEMONICS[1]),
+			);
 
 			fireEvent.click(screen.getByTestId("StepNavigation__send-button"));
 
@@ -333,7 +337,9 @@ describe("SendDelegateResignation", () => {
 					value: MNEMONICS[1],
 				},
 			});
-			await waitFor(() => expect(screen.getByTestId("AuthenticationStep__second-mnemonic")).toHaveValue(MNEMONICS[1]));
+			await waitFor(() =>
+				expect(screen.getByTestId("AuthenticationStep__second-mnemonic")).toHaveValue(MNEMONICS[1]),
+			);
 
 			fireEvent.click(screen.getByTestId("StepNavigation__send-button"));
 			await screen.findByTestId("TransactionSuccessful");
@@ -382,7 +388,9 @@ describe("SendDelegateResignation", () => {
 					value: MNEMONICS[1],
 				},
 			});
-			await waitFor(() => expect(screen.getByTestId("AuthenticationStep__second-mnemonic")).toHaveValue(MNEMONICS[1]));
+			await waitFor(() =>
+				expect(screen.getByTestId("AuthenticationStep__second-mnemonic")).toHaveValue(MNEMONICS[1]),
+			);
 
 			userEvent.keyboard("{enter}");
 			fireEvent.click(screen.getByTestId("StepNavigation__send-button"));
@@ -432,7 +440,9 @@ describe("SendDelegateResignation", () => {
 					value: MNEMONICS[1],
 				},
 			});
-			await waitFor(() => expect(screen.getByTestId("AuthenticationStep__second-mnemonic")).toHaveValue(MNEMONICS[1]));
+			await waitFor(() =>
+				expect(screen.getByTestId("AuthenticationStep__second-mnemonic")).toHaveValue(MNEMONICS[1]),
+			);
 
 			fireEvent.click(screen.getByTestId("StepNavigation__send-button"));
 			await screen.findByTestId("TransactionSuccessful");
@@ -494,7 +504,9 @@ describe("SendDelegateResignation", () => {
 					value: "password",
 				},
 			});
-			await waitFor(() => expect(screen.getByTestId("AuthenticationStep__encryption-password")).toHaveValue("password"));
+			await waitFor(() =>
+				expect(screen.getByTestId("AuthenticationStep__encryption-password")).toHaveValue("password"),
+			);
 
 			await waitFor(() => expect(screen.getByTestId("StepNavigation__send-button")).not.toBeDisabled());
 

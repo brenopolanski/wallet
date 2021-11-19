@@ -144,7 +144,9 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId("SendVote__form-step")).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[0].username));
+		await waitFor(() =>
+			expect(screen.getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[0].username),
+		);
 
 		// Back to select a delegate page
 		await waitFor(() => expect(screen.getByTestId("StepNavigation__back-button")).not.toBeDisabled());
@@ -188,7 +190,9 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId("SendVote__form-step")).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[1].username));
+		await waitFor(() =>
+			expect(screen.getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[1].username),
+		);
 
 		// Back to select a delegate page
 		await waitFor(() => expect(screen.getByTestId("StepNavigation__back-button")).not.toBeDisabled());
@@ -241,7 +245,9 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId("SendVote__form-step")).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[0].username));
+		await waitFor(() =>
+			expect(screen.getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[0].username),
+		);
 
 		// Back to select a delegate page
 		await waitFor(() => expect(screen.getByTestId("StepNavigation__back-button")).not.toBeDisabled());
@@ -310,7 +316,9 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId("SendVote__form-step")).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[0].username));
+		await waitFor(() =>
+			expect(screen.getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[0].username),
+		);
 
 		expect(screen.getAllByRole("radio")[1]).toBeChecked();
 
@@ -448,7 +456,9 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId("SendVote__form-step")).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[0].username));
+		await waitFor(() =>
+			expect(screen.getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[0].username),
+		);
 
 		expect(screen.getAllByRole("radio")[1]).toBeChecked();
 
@@ -597,7 +607,9 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId("SendVote__form-step")).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[0].username));
+		await waitFor(() =>
+			expect(screen.getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[0].username),
+		);
 
 		// Fee
 		expect(screen.getAllByRole("radio")[1]).toBeChecked();
@@ -693,7 +705,9 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId("SendVote__form-step")).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[1].username));
+		await waitFor(() =>
+			expect(screen.getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[1].username),
+		);
 
 		fireEvent.click(screen.getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
 
@@ -753,7 +767,9 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId("SendVote__form-step")).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[1].username));
+		await waitFor(() =>
+			expect(screen.getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[1].username),
+		);
 
 		fireEvent.click(screen.getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
 
@@ -828,7 +844,9 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId("SendVote__form-step")).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[1].username));
+		await waitFor(() =>
+			expect(screen.getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[1].username),
+		);
 
 		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
 		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
@@ -908,7 +926,9 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId("SendVote__form-step")).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[0].username));
+		await waitFor(() =>
+			expect(screen.getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[0].username),
+		);
 
 		// Fee
 		fireEvent.click(screen.getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
@@ -966,7 +986,9 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId("SendVote__form-step")).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[0].username));
+		await waitFor(() =>
+			expect(screen.getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[0].username),
+		);
 
 		// Fee
 		fireEvent.click(screen.getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
@@ -1024,11 +1046,15 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId("SendVote__form-step")).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[0].username));
+		await waitFor(() =>
+			expect(screen.getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[0].username),
+		);
 
 		expect(screen.getByTestId("SendVote__form-step")).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[0].username));
+		await waitFor(() =>
+			expect(screen.getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[0].username),
+		);
 
 		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
 		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
@@ -1088,11 +1114,15 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId("SendVote__form-step")).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[0].username));
+		await waitFor(() =>
+			expect(screen.getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[0].username),
+		);
 
 		expect(screen.getByTestId("SendVote__form-step")).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[0].username));
+		await waitFor(() =>
+			expect(screen.getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[0].username),
+		);
 
 		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
 		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
@@ -1170,7 +1200,9 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId("SendVote__form-step")).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[1].username));
+		await waitFor(() =>
+			expect(screen.getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[1].username),
+		);
 
 		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
 		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
@@ -1270,7 +1302,9 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId("SendVote__form-step")).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[1].username));
+		await waitFor(() =>
+			expect(screen.getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[1].username),
+		);
 
 		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
 		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
@@ -1379,7 +1413,9 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId("SendVote__form-step")).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[0].username));
+		await waitFor(() =>
+			expect(screen.getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[0].username),
+		);
 
 		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
 		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));

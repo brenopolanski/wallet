@@ -79,7 +79,9 @@ describe("AddressTable", () => {
 
 		expect(container).toBeInTheDocument();
 
-		await waitFor(() => expect(() => screen.getByTestId("StatusIcon__icon")).toThrow(/Unable to find an element by/));
+		await waitFor(() =>
+			expect(() => screen.getByTestId("StatusIcon__icon")).toThrow(/Unable to find an element by/),
+		);
 
 		expect(asFragment()).toMatchSnapshot();
 

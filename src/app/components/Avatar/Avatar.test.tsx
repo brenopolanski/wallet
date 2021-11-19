@@ -27,9 +27,7 @@ describe("Avatar", () => {
 	});
 
 	it("should render with highlight and custom shadow color", () => {
-		const { asFragment } = render(
-			<Avatar address="abc" shadowClassName="ring-theme-black" highlight />,
-		);
+		const { asFragment } = render(<Avatar address="abc" shadowClassName="ring-theme-black" highlight />);
 
 		expect(screen.getByTestId("Avatar")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();

@@ -98,9 +98,7 @@ describe("PluginGrid", () => {
 				version: "1.3.8",
 			},
 		];
-		const { asFragment } = render(
-			<PluginGrid itemsPerPage={4} plugins={[...plugins, ...morePlugins]} />,
-		);
+		const { asFragment } = render(<PluginGrid itemsPerPage={4} plugins={[...plugins, ...morePlugins]} />);
 
 		for (const plugin of plugins) {
 			await screen.findByText(plugin.title);

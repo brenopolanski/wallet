@@ -117,9 +117,7 @@ describe("AddRecipient", () => {
 				} as any),
 		);
 
-		renderWithFormProvider(
-			<AddRecipient profile={profile} wallet={wallet} onChange={onChange} recipients={[]} />,
-		);
+		renderWithFormProvider(<AddRecipient profile={profile} wallet={wallet} onChange={onChange} recipients={[]} />);
 
 		fireEvent.input(screen.getByTestId("AddRecipient__amount"), {
 			target: {
@@ -136,7 +134,9 @@ describe("AddRecipient", () => {
 		});
 
 		await waitFor(() =>
-			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue("bP6T9GQ3kqP6T9GQ3kqP6T9GQ3kqTTTP6T9GQ3kqT"),
+			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(
+				"bP6T9GQ3kqP6T9GQ3kqP6T9GQ3kqTTTP6T9GQ3kqT",
+			),
 		);
 
 		expect(onChange).toHaveBeenCalledWith([
@@ -152,9 +152,7 @@ describe("AddRecipient", () => {
 	});
 
 	it("should select recipient", async () => {
-		renderWithFormProvider(
-			<AddRecipient profile={profile} wallet={wallet} recipients={[]} onChange={jest.fn()} />,
-		);
+		renderWithFormProvider(<AddRecipient profile={profile} wallet={wallet} recipients={[]} onChange={jest.fn()} />);
 
 		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
@@ -209,9 +207,7 @@ describe("AddRecipient", () => {
 	});
 
 	it("should toggle between single and multiple recipients", async () => {
-		renderWithFormProvider(
-			<AddRecipient profile={profile} wallet={wallet} recipients={[]} onChange={jest.fn()} />,
-		);
+		renderWithFormProvider(<AddRecipient profile={profile} wallet={wallet} recipients={[]} onChange={jest.fn()} />);
 
 		const singleButton = screen.getByText(translations.TRANSACTION.SINGLE);
 		const multipleButton = screen.getByText(translations.TRANSACTION.MULTIPLE);
@@ -409,9 +405,7 @@ describe("AddRecipient", () => {
 	});
 
 	it("should show error for low balance", async () => {
-		renderWithFormProvider(
-			<AddRecipient profile={profile} wallet={wallet} onChange={jest.fn()} recipients={[]} />,
-		);
+		renderWithFormProvider(<AddRecipient profile={profile} wallet={wallet} onChange={jest.fn()} recipients={[]} />);
 
 		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
@@ -437,9 +431,7 @@ describe("AddRecipient", () => {
 	it("should show error for zero balance", async () => {
 		const mockWalletBalance = jest.spyOn(wallet, "balance").mockReturnValue(0);
 
-		renderWithFormProvider(
-			<AddRecipient profile={profile} wallet={wallet} onChange={jest.fn()} recipients={[]} />,
-		);
+		renderWithFormProvider(<AddRecipient profile={profile} wallet={wallet} onChange={jest.fn()} recipients={[]} />);
 
 		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
@@ -465,9 +457,7 @@ describe("AddRecipient", () => {
 	});
 
 	it("should show error for invalid address", async () => {
-		renderWithFormProvider(
-			<AddRecipient profile={profile} wallet={wallet} onChange={jest.fn()} recipients={[]} />,
-		);
+		renderWithFormProvider(<AddRecipient profile={profile} wallet={wallet} onChange={jest.fn()} recipients={[]} />);
 
 		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 

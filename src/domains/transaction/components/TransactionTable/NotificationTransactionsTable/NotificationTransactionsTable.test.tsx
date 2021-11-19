@@ -1,7 +1,15 @@
 import { Contracts, DTO } from "@payvo/sdk-profiles";
 import nock from "nock";
 import React from "react";
-import { env, fireEvent, getDefaultProfileId, getDefaultWalletId, render, screen, waitFor } from "utils/testing-library";
+import {
+	env,
+	fireEvent,
+	getDefaultProfileId,
+	getDefaultWalletId,
+	render,
+	screen,
+	waitFor,
+} from "utils/testing-library";
 
 import { NotificationTransactionsTable } from "./NotificationTransactionsTable";
 
@@ -26,17 +34,13 @@ describe("NotificationsTransactionTable", () => {
 	});
 
 	it("should render", () => {
-		render(
-			<NotificationTransactionsTable transactions={transactions} profile={profile} isLoading={false} />,
-		);
+		render(<NotificationTransactionsTable transactions={transactions} profile={profile} isLoading={false} />);
 
 		expect(screen.getAllByTestId("TableRow")).toHaveLength(transactions.length);
 	});
 
 	it("should render loading state", () => {
-		render(
-			<NotificationTransactionsTable transactions={transactions} profile={profile} />,
-		);
+		render(<NotificationTransactionsTable transactions={transactions} profile={profile} />);
 
 		expect(screen.getAllByTestId("TableRow")).toHaveLength(10);
 	});

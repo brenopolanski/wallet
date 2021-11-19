@@ -15,9 +15,7 @@ describe("TransactionRowRecipientLabel", () => {
 	});
 
 	it("should show label", () => {
-		render(
-			<TransactionRowRecipientLabel transaction={{ ...TransactionFixture, type: () => "secondSignature" }} />,
-		);
+		render(<TransactionRowRecipientLabel transaction={{ ...TransactionFixture, type: () => "secondSignature" }} />);
 
 		expect(screen.getByText(translations.TRANSACTION_TYPES.SECOND_SIGNATURE)).toBeInTheDocument();
 	});
@@ -75,7 +73,9 @@ describe("TransactionRowRecipientLabel", () => {
 				/>,
 			);
 
-			expect(screen.getByTestId("TransactionRowVoteLabel")).toHaveTextContent(translations.TRANSACTION_TYPES.VOTE);
+			expect(screen.getByTestId("TransactionRowVoteLabel")).toHaveTextContent(
+				translations.TRANSACTION_TYPES.VOTE,
+			);
 			expect(screen.getByTestId("TransactionRowVoteLabel")).toHaveTextContent("delegate-0");
 		});
 
@@ -92,7 +92,9 @@ describe("TransactionRowRecipientLabel", () => {
 				/>,
 			);
 
-			expect(screen.getByTestId("TransactionRowVoteLabel")).toHaveTextContent(translations.TRANSACTION_TYPES.VOTE);
+			expect(screen.getByTestId("TransactionRowVoteLabel")).toHaveTextContent(
+				translations.TRANSACTION_TYPES.VOTE,
+			);
 			expect(screen.getByTestId("TransactionRowVoteLabel")).toHaveTextContent("delegate-0");
 			expect(screen.getByTestId("TransactionRowVoteLabel")).toHaveTextContent("+1");
 		});
@@ -110,7 +112,9 @@ describe("TransactionRowRecipientLabel", () => {
 				/>,
 			);
 
-			expect(screen.getByTestId("TransactionRowVoteLabel")).toHaveTextContent(translations.TRANSACTION_TYPES.UNVOTE);
+			expect(screen.getByTestId("TransactionRowVoteLabel")).toHaveTextContent(
+				translations.TRANSACTION_TYPES.UNVOTE,
+			);
 			expect(screen.getByTestId("TransactionRowVoteLabel")).toHaveTextContent("delegate-0");
 		});
 
@@ -127,7 +131,9 @@ describe("TransactionRowRecipientLabel", () => {
 				/>,
 			);
 
-			expect(screen.getByTestId("TransactionRowVoteLabel")).toHaveTextContent(translations.TRANSACTION_TYPES.UNVOTE);
+			expect(screen.getByTestId("TransactionRowVoteLabel")).toHaveTextContent(
+				translations.TRANSACTION_TYPES.UNVOTE,
+			);
 			expect(screen.getByTestId("TransactionRowVoteLabel")).toHaveTextContent("delegate-0");
 			expect(screen.getByTestId("TransactionRowVoteLabel")).toHaveTextContent("+1");
 		});

@@ -110,9 +110,7 @@ describe("Welcome", () => {
 	});
 
 	it("should navigate to profile settings with correct password", async () => {
-		const { asFragment, container, history } = render(
-			<Welcome />,
-		);
+		const { asFragment, container, history } = render(<Welcome />);
 
 		expect(container).toBeInTheDocument();
 
@@ -251,9 +249,12 @@ describe("Welcome", () => {
 		// wait for form to be updated
 		await screen.findByTestId("SignIn__submit-button");
 
-		await waitFor(() => expect(screen.getByTestId("Input__error")).toHaveAttribute("data-errortext", "Password invalid"), {
-			timeout: 10_000,
-		});
+		await waitFor(
+			() => expect(screen.getByTestId("Input__error")).toHaveAttribute("data-errortext", "Password invalid"),
+			{
+				timeout: 10_000,
+			},
+		);
 
 		jest.useRealTimers();
 	});

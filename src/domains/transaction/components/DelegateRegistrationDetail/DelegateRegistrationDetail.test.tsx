@@ -34,7 +34,9 @@ describe("DelegateRegistrationDetail", () => {
 			},
 		);
 
-		expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_DELEGATE_REGISTRATION_DETAIL.TITLE);
+		expect(screen.getByTestId("modal__inner")).toHaveTextContent(
+			translations.MODAL_DELEGATE_REGISTRATION_DETAIL.TITLE,
+		);
 		expect(asFragment()).toMatchSnapshot();
 	});
 });

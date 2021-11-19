@@ -8,9 +8,7 @@ describe("FormHelperText", () => {
 	it("should render hint text", () => {
 		const hintMessage = "Test Message";
 		const errorMessage = "Error Message";
-		const { asFragment } = render(
-			<FormHelperText errorMessage={errorMessage}>{hintMessage}</FormHelperText>,
-		);
+		const { asFragment } = render(<FormHelperText errorMessage={errorMessage}>{hintMessage}</FormHelperText>);
 
 		expect(screen.queryByText(hintMessage)).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();

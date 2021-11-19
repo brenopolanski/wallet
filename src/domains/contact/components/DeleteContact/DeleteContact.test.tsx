@@ -40,9 +40,7 @@ describe("DeleteContact", () => {
 	});
 
 	it("should delete contact", async () => {
-		render(
-			<DeleteContact isOpen={true} onDelete={onDelete} profile={profile} contact={contact} />,
-		);
+		render(<DeleteContact isOpen={true} onDelete={onDelete} profile={profile} contact={contact} />);
 		const deleteButton = screen.getByTestId("DeleteResource__submit-button");
 
 		fireEvent.click(deleteButton);

@@ -220,7 +220,9 @@ describe("Registration", () => {
 
 		await waitFor(() => expect(screen.getByTestId("InputCurrency")).not.toHaveValue("0"));
 
-		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toHaveAttribute("disabled"));
+		await waitFor(() =>
+			expect(screen.getByTestId("StepNavigation__continue-button")).not.toHaveAttribute("disabled"),
+		);
 
 		if (inputMethod === "with keyboard") {
 			userEvent.keyboard("{enter}");
@@ -232,7 +234,9 @@ describe("Registration", () => {
 		fireEvent.click(screen.getByTestId("StepNavigation__back-button"));
 		await screen.findByTestId("DelegateRegistrationForm__form-step");
 
-		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toHaveAttribute("disabled"));
+		await waitFor(() =>
+			expect(screen.getByTestId("StepNavigation__continue-button")).not.toHaveAttribute("disabled"),
+		);
 		if (inputMethod === "with keyboard") {
 			userEvent.keyboard("{enter}");
 		} else {
@@ -395,7 +399,9 @@ describe("Registration", () => {
 		const wallet2 = profile.wallets().last();
 
 		await screen.findByTestId("Registration__form");
-		await waitFor(() => expect(screen.getByTestId("header__title")).toHaveTextContent("Multisignature Registration"));
+		await waitFor(() =>
+			expect(screen.getByTestId("header__title")).toHaveTextContent("Multisignature Registration"),
+		);
 
 		fireEvent.input(screen.getByTestId("SelectDropdown__input"), {
 			target: {
@@ -406,10 +412,14 @@ describe("Registration", () => {
 		fireEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
 
 		await waitFor(() => expect(screen.getAllByTestId("recipient-list__recipient-list-item")).toHaveLength(2));
-		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toHaveAttribute("disabled"));
+		await waitFor(() =>
+			expect(screen.getByTestId("StepNavigation__continue-button")).not.toHaveAttribute("disabled"),
+		);
 
 		// Step 2
-		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toHaveAttribute("disabled"));
+		await waitFor(() =>
+			expect(screen.getByTestId("StepNavigation__continue-button")).not.toHaveAttribute("disabled"),
+		);
 		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 
 		// Review step
@@ -469,7 +479,9 @@ describe("Registration", () => {
 		const wallet2 = profile.wallets().last();
 
 		await screen.findByTestId("Registration__form");
-		await waitFor(() => expect(screen.getByTestId("header__title")).toHaveTextContent("Multisignature Registration"));
+		await waitFor(() =>
+			expect(screen.getByTestId("header__title")).toHaveTextContent("Multisignature Registration"),
+		);
 
 		fireEvent.input(screen.getByTestId("SelectDropdown__input"), {
 			target: {
@@ -480,7 +492,9 @@ describe("Registration", () => {
 		fireEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
 
 		await waitFor(() => expect(screen.getAllByTestId("recipient-list__recipient-list-item")).toHaveLength(2));
-		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toHaveAttribute("disabled"));
+		await waitFor(() =>
+			expect(screen.getByTestId("StepNavigation__continue-button")).not.toHaveAttribute("disabled"),
+		);
 
 		// Step 2
 		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
@@ -539,7 +553,9 @@ describe("Registration", () => {
 		const wallet2 = profile.wallets().last();
 
 		await screen.findByTestId("Registration__form");
-		await waitFor(() => expect(screen.getByTestId("header__title")).toHaveTextContent("Multisignature Registration"));
+		await waitFor(() =>
+			expect(screen.getByTestId("header__title")).toHaveTextContent("Multisignature Registration"),
+		);
 
 		fireEvent.input(screen.getByTestId("SelectDropdown__input"), {
 			target: {
@@ -550,7 +566,9 @@ describe("Registration", () => {
 		fireEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
 
 		await waitFor(() => expect(screen.getAllByTestId("recipient-list__recipient-list-item")).toHaveLength(2));
-		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toHaveAttribute("disabled"));
+		await waitFor(() =>
+			expect(screen.getByTestId("StepNavigation__continue-button")).not.toHaveAttribute("disabled"),
+		);
 
 		// Step 2
 		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
@@ -608,7 +626,9 @@ describe("Registration", () => {
 		const wallet2 = profile.wallets().last();
 
 		await screen.findByTestId("Registration__form");
-		await waitFor(() => expect(screen.getByTestId("header__title")).toHaveTextContent("Multisignature Registration"));
+		await waitFor(() =>
+			expect(screen.getByTestId("header__title")).toHaveTextContent("Multisignature Registration"),
+		);
 
 		fireEvent.input(screen.getByTestId("SelectDropdown__input"), {
 			target: {
@@ -619,7 +639,9 @@ describe("Registration", () => {
 		fireEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
 
 		await waitFor(() => expect(screen.getAllByTestId("recipient-list__recipient-list-item")).toHaveLength(2));
-		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toHaveAttribute("disabled"));
+		await waitFor(() =>
+			expect(screen.getByTestId("StepNavigation__continue-button")).not.toHaveAttribute("disabled"),
+		);
 
 		// Step 2
 		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
@@ -656,7 +678,9 @@ describe("Registration", () => {
 		);
 		await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("25"));
 
-		fireEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.SIMPLE));
+		fireEvent.click(
+			within(screen.getByTestId("InputFee")).getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.SIMPLE),
+		);
 
 		expect(() => screen.getByTestId("InputCurrency")).toThrow(/Unable to find an element by/);
 	});

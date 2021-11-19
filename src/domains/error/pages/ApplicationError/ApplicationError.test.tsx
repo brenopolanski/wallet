@@ -7,9 +7,7 @@ import { ApplicationError } from "./ApplicationError";
 describe("ApplicationError", () => {
 	it("should render", () => {
 		const onResetErrorBoundary = jest.fn();
-		const { asFragment, container } = render(
-			<ApplicationError resetErrorBoundary={onResetErrorBoundary} />,
-		);
+		const { asFragment, container } = render(<ApplicationError resetErrorBoundary={onResetErrorBoundary} />);
 
 		expect(container).toBeInTheDocument();
 		expect(screen.getByTestId("ApplicationError__text")).toHaveTextContent(translations.APPLICATION.TITLE);
