@@ -1,5 +1,5 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { ExchangeTransaction } from "@payvo/sdk-profiles/distribution/exchange-transaction";
+import { ExchangeTransaction } from "@payvo/sdk-profiles/distribution/cjs/exchange-transaction";
 import { AssertionError } from "assert";
 import { CurrencyData } from "domains/exchange/contracts";
 import { ExchangeService } from "domains/exchange/services/exchange.service";

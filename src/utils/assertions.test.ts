@@ -1,8 +1,7 @@
 /* eslint-disable unicorn/no-null */
 import { Coins, Networks } from "@payvo/sdk";
-import { Profile } from "@payvo/sdk-profiles";
+import { Profile, Wallet } from "@payvo/sdk-profiles";
 import { ReadOnlyWallet } from "@payvo/sdk-profiles/distribution/cjs/read-only-wallet";
-import { Wallet } from "@payvo/sdk-profiles/distribution/wallet";
 import { PluginController } from "plugins";
 
 import {

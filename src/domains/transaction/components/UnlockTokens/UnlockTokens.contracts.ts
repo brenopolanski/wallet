@@ -1,4 +1,4 @@
-import { UnlockableBalance as SDKUnlockableBalance } from "@payvo/sdk/distribution/services"; // @TODO: refactor export path in sdk
+import { UnlockableBalance as SDKUnlockableBalance } from "@payvo/sdk/distribution/cjs/services"; // @TODO: refactor export path in sdk
 import { Contracts } from "@payvo/sdk-profiles";
 
 const POLLING_INTERVAL = 1000 * 60; // 1 min
