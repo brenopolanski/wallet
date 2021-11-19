@@ -1,7 +1,7 @@
 import { Contracts, Helpers } from "@payvo/sdk-profiles";
 import { Amount } from "app/components/Amount";
 import { EmptyBlock } from "app/components/EmptyBlock";
-import { GraphDataPoint, GRAPH_COLOR_EMPTY, GRAPH_COLOR_EMPTY_DARK } from "app/components/Graphs/Graphs.contracts";
+import { GRAPH_COLOR_EMPTY, GRAPH_COLOR_EMPTY_DARK, GraphDataPoint } from "app/components/Graphs/Graphs.contracts";
 import { LineGraph } from "app/components/Graphs/LineGraph";
 import { useTheme } from "app/hooks";
 import { PortfolioBreakdownDetails } from "domains/dashboard/components/PortfolioBreakdownDetails";
