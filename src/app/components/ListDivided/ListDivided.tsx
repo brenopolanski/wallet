@@ -5,7 +5,7 @@ import tw from "twin.macro";
 import { ListDividedItem } from "./ListDividedItem";
 
 interface Properties {
-	items: any;
+	items?: any;
 }
 
 const StyledList = styled.ul({

@@ -5,7 +5,7 @@ import { ListDivided } from "./ListDivided";
 
 describe("ListDivided", () => {
 	it("should render an empty list divided", () => {
-		const { asFragment } = render(<ListDivided items={[]} />);
+		const { asFragment } = render(<ListDivided />);
 
 		expect(screen.getByTestId("list-divided__empty")).toHaveTextContent("empty");
 		expect(asFragment()).toMatchSnapshot();

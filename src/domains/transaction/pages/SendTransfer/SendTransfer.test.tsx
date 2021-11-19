@@ -2,7 +2,7 @@
 import { DateTime } from "@payvo/sdk-intl";
 import { LSK } from "@payvo/sdk-lsk";
 import { Contracts, DTO } from "@payvo/sdk-profiles";
-import { act as hookAct, renderHook } from "@testing-library/react-hooks";
+import { renderHook } from "@testing-library/react-hooks";
 import userEvent from "@testing-library/user-event";
 import { LedgerProvider, minVersionList } from "app/contexts";
 import { useProfileStatusWatcher } from "app/hooks";
@@ -24,7 +24,6 @@ import {
 	getDefaultWalletMnemonic,
 	MNEMONICS,
 	render,
-	RenderResult,
 	renderWithForm,
 	screen,
 	syncFees,
@@ -174,41 +173,14 @@ describe("SendTransfer", () => {
 	});
 
 	it("should render network step without test networks", async () => {
-		const transferURL = `/profiles/${fixtureProfileId}/send-transfer`;
-
-		const history = createMemoryHistory();
-		history.push(transferURL);
-
-		const { result: form } = renderHook(() =>
-			useForm({
-				defaultValues: {
-					network: wallet.network(),
-					senderAddress: wallet.address(),
-				},
-			}),
-		);
-
 		const useNetworksMock = jest.spyOn(profile.settings(), "get").mockReturnValue(false);
 
-		let rendered: RenderResult;
-
-		await hookAct(async () => {
-			rendered = render(
-				<Route path="/profiles/:profileId/send-transfer">
-					<FormProvider {...form.current}>
-						<NetworkStep networks={env.availableNetworks()} profile={profile} />
-					</FormProvider>
-				</Route>,
-				{
-					history,
-					routes: [transferURL],
-				},
-			);
-		});
-
-		const { asFragment } = rendered;
+		const { asFragment } = renderWithForm(
+			<NetworkStep networks={env.availableNetworks()} profile={profile} />
+		);
 
 		expect(screen.getByTestId("SendTransfer__network-step")).toBeInTheDocument();
+		expect(screen.getAllByRole('listbox')[1]).toHaveClass("hidden");
 		expect(asFragment()).toMatchSnapshot();
 
 		useNetworksMock.mockRestore();
