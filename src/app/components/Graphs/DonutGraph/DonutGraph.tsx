@@ -11,11 +11,12 @@ export const DonutGraph: React.VFC<DonutGraphProperties> = ({
 	size,
 	renderTooltip,
 	renderContentInsideCircle,
+	addToOtherGroup,
 }) => {
-	const { normalizeData } = useGraphData("donut");
+	const { group } = useGraphData("donut", addToOtherGroup);
 	const { Tooltip, getMouseEventProperties } = useGraphTooltip(renderTooltip, "donut");
 
-	const normalizedData = normalizeData(data);
+	const normalizedData = group(data, size);
 	const { circles, backgroundCircle } = useDonutGraph(normalizedData, size);
 
 	const renderCircles = () =>
@@ -36,7 +37,7 @@ export const DonutGraph: React.VFC<DonutGraphProperties> = ({
 					strokeWidth={40}
 					opacity={0}
 					pointerEvents="visibleStroke"
-					{...getMouseEventProperties(data[index])}
+					{...getMouseEventProperties(normalizedData[index])}
 				/>
 				<circle {...circleProperties} pointerEvents="none">
 					<GraphHoverAnimation targetElementId={`circleHoverArea__${index}`} animations={animations} />

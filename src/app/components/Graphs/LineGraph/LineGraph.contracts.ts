@@ -1,4 +1,4 @@
-import { GraphDataPoint } from "app/components/Graphs/Graphs.contracts";
+import { AddToOtherGroupFunction, GraphDataPoint } from "app/components/Graphs/Graphs.contracts";
 
 interface LineGraphConfig {
 	graphWidth: number;
@@ -13,6 +13,7 @@ interface LineGraphProperties {
 	renderLegend?: (dataPoints: GraphDataPoint[]) => JSX.Element;
 	renderTooltip?: (dataPoint: GraphDataPoint) => JSX.Element;
 	renderAsEmpty?: boolean;
+	addToOtherGroup?: AddToOtherGroupFunction;
 }
 
 interface LineGraphEmptyProperties {

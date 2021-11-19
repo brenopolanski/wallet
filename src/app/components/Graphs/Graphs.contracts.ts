@@ -8,25 +8,29 @@ interface GraphDataPoint {
 	value: number;
 }
 
-const GRAPH_COLORS = ["success-600", "warning-600", "info-600", "danger-400", "hint-400", "secondary-400"] as const;
+const GRAPH_COLOR_EMPTY = "secondary-300";
+const GRAPH_COLOR_EMPTY_DARK = "secondary-800";
+
+const GRAPH_COLOR_OTHER = "secondary-400";
+const GRAPH_COLOR_OTHER_DARK = "secondary-600";
+
+const GRAPH_COLORS = ["success-600", "warning-600", "info-600", "danger-400", "hint-400", GRAPH_COLOR_OTHER] as const;
 const GRAPH_COLORS_DARK = [
 	"success-600",
 	"warning-600",
 	"info-600",
 	"danger-400",
 	"hint-400",
-	"secondary-600",
+	GRAPH_COLOR_OTHER_DARK,
 ] as const;
 
-const GRAPH_COLOR_EMPTY = "secondary-300";
-const GRAPH_COLOR_EMPTY_DARK = "secondary-800";
+type AddToOtherGroupFunction = (otherGroup: GraphDataPoint | undefined, entry: GraphDataPoint) => GraphDataPoint;
 
-const MIN_VALUE = 1;
-const MIN_DISPLAY_VALUE_LINE = 2.5;
-const MIN_DISPLAY_VALUE_DONUT = 5;
-
-type UseGraphDataHook = (graphType: GraphType) => {
-	normalizeData: (data: GraphDataPoint[]) => GraphDataPoint[];
+type UseGraphDataHook = (
+	graphType: GraphType,
+	addToOtherGroup: AddToOtherGroupFunction | undefined,
+) => {
+	group: (data: GraphDataPoint[], size: number) => GraphDataPoint[];
 };
 
 type UseGraphWidthHook = () => [MutableRefObject<SVGSVGElement | null>, number];
@@ -42,14 +46,20 @@ type UseGraphTooltipHook = (
 	};
 };
 
-export type { GraphDataPoint, GraphType, UseGraphDataHook, UseGraphTooltipHook, UseGraphWidthHook };
+export type {
+	AddToOtherGroupFunction,
+	GraphDataPoint,
+	GraphType,
+	UseGraphDataHook,
+	UseGraphTooltipHook,
+	UseGraphWidthHook,
+};
 
 export {
 	GRAPH_COLOR_EMPTY,
 	GRAPH_COLOR_EMPTY_DARK,
+	GRAPH_COLOR_OTHER,
+	GRAPH_COLOR_OTHER_DARK,
 	GRAPH_COLORS,
 	GRAPH_COLORS_DARK,
-	MIN_DISPLAY_VALUE_DONUT,
-	MIN_DISPLAY_VALUE_LINE,
-	MIN_VALUE,
 };

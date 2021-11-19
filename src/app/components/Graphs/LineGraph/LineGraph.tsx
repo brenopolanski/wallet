@@ -6,14 +6,20 @@ import { LineGraphEmpty } from "./LineGraph.blocks";
 import { BASE_CONFIG, LineGraphConfig, LineGraphProperties } from "./LineGraph.contracts";
 import { useLineGraph } from "./LineGraph.helpers";
 
-export const LineGraph: React.VFC<LineGraphProperties> = ({ data, renderLegend, renderTooltip, renderAsEmpty }) => {
+export const LineGraph: React.VFC<LineGraphProperties> = ({
+	data,
+	renderLegend,
+	renderTooltip,
+	renderAsEmpty,
+	addToOtherGroup,
+}) => {
 	const [reference, graphWidth] = useGraphWidth();
-	const { normalizeData } = useGraphData("line");
+	const { group } = useGraphData("line", addToOtherGroup);
 	const { Tooltip, getMouseEventProperties } = useGraphTooltip(renderTooltip, "line");
 
 	const config = useMemo<LineGraphConfig>(() => ({ ...BASE_CONFIG, graphWidth }), [graphWidth]);
 
-	const normalizedData = normalizeData(data);
+	const normalizedData = group(data, config.graphWidth);
 	const rectangles = useLineGraph(normalizedData, config);
 
 	const renderSegments = () => {
@@ -25,7 +31,7 @@ export const LineGraph: React.VFC<LineGraphProperties> = ({ data, renderLegend, 
 			<g key={index} data-testid="LineGraph__item">
 				<rect
 					{...rectProperties}
-					{...getMouseEventProperties(data[index])}
+					{...getMouseEventProperties(normalizedData[index])}
 					y={0}
 					rx={0}
 					opacity={0}
@@ -54,7 +60,7 @@ export const LineGraph: React.VFC<LineGraphProperties> = ({ data, renderLegend, 
 
 			{!!renderLegend && (
 				<div data-testid="LineGraph__legend" className="flex justify-end mb-1">
-					{renderLegend(data)}
+					{renderLegend(normalizedData)}
 				</div>
 			)}
 

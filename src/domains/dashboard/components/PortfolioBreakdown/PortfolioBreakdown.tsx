@@ -1,17 +1,23 @@
 import { Helpers } from "@payvo/sdk-profiles";
 import { Amount } from "app/components/Amount";
 import { EmptyBlock } from "app/components/EmptyBlock";
-import { GRAPH_COLOR_EMPTY, GRAPH_COLOR_EMPTY_DARK, GraphDataPoint } from "app/components/Graphs/Graphs.contracts";
+import {
+	AddToOtherGroupFunction,
+	GRAPH_COLOR_EMPTY,
+	GRAPH_COLOR_EMPTY_DARK,
+	GraphDataPoint,
+} from "app/components/Graphs/Graphs.contracts";
 import { LineGraph } from "app/components/Graphs/LineGraph";
 import { useTheme } from "app/hooks";
 import { PortfolioBreakdownDetails } from "domains/dashboard/components/PortfolioBreakdownDetails";
 import { usePortfolioBreakdown } from "domains/dashboard/hooks/use-portfolio-breakdown";
 import React, { useCallback, useMemo, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
+import { assertNumber } from "utils/assertions";
 
 import { LabelledText, Legend, PortfolioBreakdownSkeleton, Tooltip } from "./PortfolioBreakdown.blocks";
 import { PortfolioBreakdownProperties } from "./PortfolioBreakdown.contracts";
-import { formatPercentage, getColor } from "./PortfolioBreakdown.helpers";
+import { formatPercentage, getColor, getOtherGroupColor } from "./PortfolioBreakdown.helpers";
 
 export const PortfolioBreakdown: React.VFC<PortfolioBreakdownProperties> = ({
 	profile,
@@ -36,6 +42,7 @@ export const PortfolioBreakdown: React.VFC<PortfolioBreakdownProperties> = ({
 			return assets.map((asset) => ({
 				color: isDarkMode ? GRAPH_COLOR_EMPTY_DARK : GRAPH_COLOR_EMPTY,
 				data: {
+					amount: 0,
 					amountFormatted: Helpers.Currency.format(0, ticker),
 					label: asset.label,
 					percentFormatted: `0%`,
@@ -47,6 +54,7 @@ export const PortfolioBreakdown: React.VFC<PortfolioBreakdownProperties> = ({
 		return assets.map((asset, index) => ({
 			color: getColor(index, isDarkMode),
 			data: {
+				amount: asset.convertedAmount,
 				amountFormatted: Helpers.Currency.format(asset.convertedAmount, ticker),
 				label: asset.label,
 				percentFormatted: formatPercentage(asset.percent),
@@ -54,6 +62,27 @@ export const PortfolioBreakdown: React.VFC<PortfolioBreakdownProperties> = ({
 			value: asset.percent,
 		}));
 	}, [assets, hasZeroBalance, isDarkMode, ticker]);
+
+	const addToOtherGroup = useCallback<AddToOtherGroupFunction>(
+		(otherGroup, entry) => {
+			const amount = (otherGroup?.data.amount ?? 0) + entry.data.amount;
+			assertNumber(amount);
+
+			const value = (otherGroup?.value ?? 0) + entry.value;
+
+			return {
+				color: getOtherGroupColor(isDarkMode),
+				data: {
+					amount,
+					amountFormatted: Helpers.Currency.format(amount, ticker),
+					label: t("COMMON.OTHER"),
+					percentFormatted: formatPercentage(value),
+				},
+				value,
+			};
+		},
+		[isDarkMode, t, ticker],
+	);
 
 	if (loading && assets.length === 0) {
 		return <PortfolioBreakdownSkeleton />;
@@ -98,6 +127,7 @@ export const PortfolioBreakdown: React.VFC<PortfolioBreakdownProperties> = ({
 				<div className="flex-1 ml-6">
 					<LineGraph
 						data={lineGraphData}
+						addToOtherGroup={addToOtherGroup}
 						renderAsEmpty={hasZeroBalance}
 						renderTooltip={(dataPoint) => <Tooltip dataPoint={dataPoint} />}
 						renderLegend={(dataPoints) => (

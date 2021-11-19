@@ -2,51 +2,66 @@ import React, { MouseEvent, useCallback, useEffect, useRef, useState } from "rea
 
 import {
 	GraphDataPoint,
-	MIN_DISPLAY_VALUE_DONUT,
-	MIN_DISPLAY_VALUE_LINE,
-	MIN_VALUE,
+	GraphType,
 	UseGraphDataHook,
 	UseGraphTooltipHook,
 	UseGraphWidthHook,
 } from "./Graphs.contracts";
 
-const useGraphData: UseGraphDataHook = (graphType) => {
-	const normalizeData = useCallback(
-		(data: GraphDataPoint[]) => {
-			let overflow = 0;
-			let count = 0;
+const MIN_VALUE_SIZE_RATIO: Record<GraphType, number> = {
+	// Calculated as [minimum visible value / size] on a donut
+	// that had size of 280 and a minimum visible value of 3%.
+	donut: 0.0108,
+	line: 0, // @TODO: value to be found
+};
 
-			const minValue = graphType === "line" ? MIN_DISPLAY_VALUE_LINE : MIN_DISPLAY_VALUE_DONUT;
-
-			const normalized: GraphDataPoint[] = [];
-
-			for (const entry of data) {
-				if (entry.value < MIN_VALUE) {
-					continue;
-				}
-
-				if (entry.value < minValue) {
-					overflow = overflow + (minValue - entry.value);
-					entry.value = minValue;
-				} else if (entry.value > minValue * 1.25) {
-					count++;
-				}
-
-				normalized.push(entry);
-			}
-
-			for (const entry of normalized) {
-				if (entry.value > minValue * 1.25) {
-					entry.value = entry.value - overflow / count;
-				}
-			}
-
-			return normalized;
-		},
+const useGraphData: UseGraphDataHook = (graphType, addToOtherGroup) => {
+	const isTooSmallToBeVisible = useCallback(
+		(value: number, size: number) => value < size * MIN_VALUE_SIZE_RATIO[graphType],
 		[graphType],
 	);
 
-	return { normalizeData };
+	const group = useCallback(
+		(data: GraphDataPoint[], size: number) => {
+			// Skip grouping data if the sum function is not specified.
+			if (!addToOtherGroup) {
+				return data;
+			}
+
+			const result: GraphDataPoint[] = [];
+
+			let otherGroup: GraphDataPoint | undefined = undefined;
+
+			for (let index = 0; index < data.length; index++) {
+				const entry = data[index];
+
+				if (isTooSmallToBeVisible(entry.value, size) || index > 5) {
+					otherGroup = addToOtherGroup(otherGroup, entry);
+					continue;
+				}
+
+				if (index > 5) {
+					otherGroup = addToOtherGroup(otherGroup, entry);
+					continue;
+				}
+
+				result.push(entry);
+
+				if (index === data.length - 1) {
+					if (otherGroup === undefined || isTooSmallToBeVisible(otherGroup.value, size)) {
+						continue;
+					}
+
+					result.push(otherGroup);
+				}
+			}
+
+			return result;
+		},
+		[addToOtherGroup, isTooSmallToBeVisible],
+	);
+
+	return { group };
 };
 
 const useGraphWidth: UseGraphWidthHook = () => {

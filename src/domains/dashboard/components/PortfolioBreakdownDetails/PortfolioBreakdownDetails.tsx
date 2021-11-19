@@ -1,9 +1,13 @@
 import { DonutGraph } from "app/components/Graphs/DonutGraph";
-import { GraphDataPoint } from "app/components/Graphs/Graphs.contracts";
+import { AddToOtherGroupFunction, GraphDataPoint } from "app/components/Graphs/Graphs.contracts";
 import { Modal } from "app/components/Modal";
 import { useTheme } from "app/hooks";
-import { formatPercentage, getColor } from "domains/dashboard/components/PortfolioBreakdown/PortfolioBreakdown.helpers";
-import React, { useMemo } from "react";
+import {
+	formatPercentage,
+	getColor,
+	getOtherGroupColor,
+} from "domains/dashboard/components/PortfolioBreakdown/PortfolioBreakdown.helpers";
+import React, { useCallback, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
 import { AssetList, Balance, Tooltip } from "./PortfolioBreakdownDetails.blocks";
@@ -32,6 +36,22 @@ export const PortfolioBreakdownDetails: React.VFC<PortfolioBreakdownDetailsPrope
 		[assets, isDarkMode],
 	);
 
+	const addToOtherGroup = useCallback<AddToOtherGroupFunction>(
+		(otherGroup, entry) => {
+			const value = (otherGroup?.value ?? 0) + entry.value;
+
+			return {
+				color: getOtherGroupColor(isDarkMode),
+				data: {
+					label: t("COMMON.OTHER"),
+					percentFormatted: formatPercentage(value),
+				},
+				value,
+			};
+		},
+		[isDarkMode, t],
+	);
+
 	return (
 		<Modal isOpen={isOpen} title={t("DASHBOARD.PORTFOLIO_BREAKDOWN_DETAILS.TITLE")} onClose={onClose}>
 			<div className="space-y-4">
@@ -41,6 +61,7 @@ export const PortfolioBreakdownDetails: React.VFC<PortfolioBreakdownDetailsPrope
 						size={280}
 						renderTooltip={(dataPoint) => <Tooltip dataPoint={dataPoint} />}
 						renderContentInsideCircle={() => <Balance value={balance} ticker={exchangeCurrency} />}
+						addToOtherGroup={addToOtherGroup}
 					/>
 				</div>
 

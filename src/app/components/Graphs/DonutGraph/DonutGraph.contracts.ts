@@ -1,5 +1,5 @@
 import { GraphAnimation } from "app/components/Graphs/GraphHoverAnimation/GraphHoverAnimation.contract";
-import { GraphDataPoint } from "app/components/Graphs/Graphs.contracts";
+import { AddToOtherGroupFunction, GraphDataPoint } from "app/components/Graphs/Graphs.contracts";
 import React from "react";
 
 const BACKGROUND_CIRCLE_SPACING = 16;
@@ -12,6 +12,7 @@ interface DonutGraphProperties {
 	size: number;
 	renderTooltip?: (dataPoint: GraphDataPoint) => JSX.Element;
 	renderContentInsideCircle?: () => JSX.Element;
+	addToOtherGroup?: AddToOtherGroupFunction;
 }
 
 interface DonutGraphConfig {
